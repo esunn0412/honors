@@ -23,11 +23,15 @@ state_ccss_mapping/
                                         curate this themselves.
   states/
     ga/
-      georgia_math_0.json ... _5.json           GA's own K-5 standards.
-      georgia_math_guidance_0.json ... _5.json  GA's per-standard teaching guidance.
+      georgia_standards/
+        georgia_math_0.json ... _5.json           GA's own K-5 standards.
+        georgia_math_guidance_0.json ... _5.json  GA's per-standard teaching guidance.
       mapping_final.json      THE adopted GA <-> CCSS mapping (150 codes, 11 corrections applied).
       mapping_llm.json        The script's original, unedited output.
       human_review.json       Every reviewed code: original output, verdict, correction.
+      coverage_gap_proposed_corrections.json  Candidate corrections found while writing up
+                               the coverage-loss discussion below -- pending your verdict,
+                               not yet applied to mapping_final.json.
       verification_report.json
     va/
       mapping_llm.json         21 distinct VA SOL codes, classified fresh.
@@ -209,18 +213,33 @@ GA-covered standard** — checking each against its siblings:
 | `4.NF.4b`, `4.NF.4c` | **a** is cited, b and c are not | reverse shape: the definition (a — "a multiple of a/b as a multiple of 1/b") is covered; the two application clauses (scale a fraction by a whole number; solve word problems) are not |
 | `5.NF.4b` | a cited | the application clause (find area of a rectangle with fractional side lengths) — the definition (a) is covered |
 | `5.MD.5c` | a, b cited | the composite-shapes application clause ("volume is additive... find volumes of composite figures") — the basic volume-formula clauses (a, b) are covered |
-| `5.MD.3a`, `5.MD.3b` | (each other) both uncited | neither half of this standard's own definition is cited by any GA code — a genuine full-standard gap, like the 14 above, just expressed at the lettered level |
+| `5.MD.3a`, `5.MD.3b` | (each other) both uncited | looked like a full-standard gap at first — **but see the follow-up below: likely a mapping omission, not a true gap** |
 
 So it's not a single clean rule ("GA always skips the definition" or "always
 skips the last clause") — it goes both ways. What's consistent is *shape*:
-in 8 of these 10 codes (the other 2, `5.MD.3a`/`3b`, are a full gap — see
-above), GA cites most of a CCSS standard's sub-parts but leaves one or two
+in most of these 10 codes, GA cites most of a CCSS standard's sub-parts but leaves one or two
 out, and the one left out is either the standalone conceptual
 definition (`3.NF.3a`, `4.NF.3a`, `K.CC.4a`, `3.MD.5a`) or a narrower
 real-world/composite application that extends past what any single GA code
 was anchored to (`4.NF.4b/c`, `5.NF.4b`, `5.MD.5c`). Worth a closer look
 per-code before treating any of these 10 as truly uncovered by GA — several
 are plausibly implicit in the sibling clause GA *did* cite.
+
+**Follow-up: checked each of the 10 against the actual text of the GA code
+that already cites its sibling(s), looking for whether that code's own
+description already states the "missing" content.** Findings, and 4
+candidate corrections to `mapping_final.json`, are in
+`states/ga/coverage_gap_proposed_corrections.json` — pending review, not yet
+applied:
+
+| code | verdict | why |
+|---|---|---|
+| `5.MD.3a`/`3b` | **likely mapping omission** | `5.GSR.8.3`'s own text ("packing... with unit cubes without gaps or overlaps... determine total volume") already states this definition — it's currently merged to `5.MD.4`/`5.MD.5a` only |
+| `4.NF.4b`/`4c` | **likely mapping omission** | GA doesn't skip this content — it teaches it one grade later, at `5.NR.3.4` ("multiplication of a fraction and a whole number"), which should probably carry `4.NF.4b/4c` as `different_grade` |
+| `3.MD.5a` | **likely mapping omission** | same shape as `5.MD.3a/3b` — `3.GSR.7.1`'s text already states the unit-square definition |
+| `3.NF.3a` | **weaker candidate** | `3.NR.4.4` ("recognize and generate simple equivalent fractions") presupposes the definition but doesn't state it |
+| `5.NF.4b`, `5.MD.5c` | **confirmed genuine gaps** | searched every GA standard for the relevant content (fraction-side-length area; composite-figure volume) — neither exists anywhere in GA K-5 |
+| `K.CC.4a` | **ambiguous** | plausibly an implicit prerequisite skill for `K.NR.1.1` rather than the same content point; already modeled as a real prerequisite edge in `../progression_mapping/ccss_progressions.json` |
 
 **Discussion, for the thesis writeup:** the 9.3% GA-side figure is the more
 load-bearing number, since it identifies content Georgia teaches that has
@@ -309,7 +328,7 @@ Same total per-type usage overall, but shifted heavily toward `state_superset`/`
 
 ## Adding a new state
 
-1. Get standards into `state_math_{grade}.json` files (grades 0-5), matching `states/ga/georgia_math_{grade}.json`'s schema: `domains[].standards[].sub_standards[]`, each leaf with `code` + `description`. Guidance content (optional, improves accuracy), matching `states/ga/georgia_math_guidance_{grade}.json`, goes in a parallel `state_math_guidance_{grade}.json` and is passed via `taxonomy.build_classification_prompt`'s `state_guidance` argument.
+1. Get standards into `state_math_{grade}.json` files (grades 0-5), matching `states/ga/georgia_standards/georgia_math_{grade}.json`'s schema: `domains[].standards[].sub_standards[]`, each leaf with `code` + `description`. Guidance content (optional, improves accuracy), matching `states/ga/georgia_standards/georgia_math_guidance_{grade}.json`, goes in a parallel `state_math_guidance_{grade}.json` and is passed via `taxonomy.build_classification_prompt`'s `state_guidance` argument.
 2. Run `map_state_to_ccss.py` (with a key) or classify by hand following `taxonomy.py` (without one).
 3. Run `verify_mapping.py` — automatic if using the API script.
 4. Review every non-obvious code by hand, same as the GA process above. This pipeline produces a strong first pass, not a substitute for review.

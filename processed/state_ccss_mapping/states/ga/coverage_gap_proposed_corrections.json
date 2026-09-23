@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "description": "Candidate corrections to mapping_final.json, found while writing up the coverage-loss discussion in ../../README.md (the 24 CCSS K-5 leaf codes with no GA citation at all). For each of the 10 codes that are a single missing lettered clause of an otherwise GA-covered CCSS standard, checked whether the GA code(s) that already cite the sibling clause(s) already describe the missing clause's content in their own text -- i.e. whether mapping_final.json under-cited rather than GA genuinely lacking the content. These are proposals only, not applied to mapping_final.json. Pending Taeeun's verdict per item, same as human_review.json's review process.",
+    "n_proposed": 4,
+    "n_pending": 4,
+    "verdict_options": ["accept", "reject", "accept_modified"]
+  },
+  "items": [
+    {
+      "missing_ccss_code": "5.MD.3a",
+      "missing_ccss_description": "A cube with side length 1 unit, called a \"unit cube,\" is said to have \"one cubic unit\" of volume, and can be used to measure volume.",
+      "missing_ccss_code_2": "5.MD.3b",
+      "missing_ccss_description_2": "A solid figure which can be packed without gaps or overlaps using n unit cubes is said to have a volume of n cubic units.",
+      "candidate_ga_code": "5.GSR.8.3",
+      "candidate_ga_description": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
+      "current_citation": {
+        "relationship": "merge",
+        "ccss_codes": ["5.MD.4", "5.MD.5a"],
+        "note": "Investigating volume by packing unit cubes spans counting unit cubes (5.MD.4) and the packing-based volume-formula justification (5.MD.5a)."
+      },
+      "evidence": "5.GSR.8.3's own description -- 'packing them with unit cubes without gaps or overlaps... determine the total volume' -- is close to a paraphrase of 5.MD.3a (unit cube = 1 cubic unit) and 5.MD.3b (packing n unit cubes without gaps/overlaps = n cubic units of volume) combined. The concept these two CCSS sub-clauses define is the same thing 5.GSR.8.3 already performs.",
+      "proposed_correction": {
+        "relationship": "merge",
+        "ccss_codes": ["5.MD.3a", "5.MD.3b", "5.MD.4", "5.MD.5a"],
+        "note": "Investigating volume by packing unit cubes without gaps or overlaps IS the unit-cube/volume-by-packing definition (5.MD.3a/3b), not just a downstream application of it -- extending the existing merge."
+      },
+      "confidence": "high",
+      "verdict": "pending"
+    },
+    {
+      "missing_ccss_code": "4.NF.4b",
+      "missing_ccss_description": "Understand a multiple of a/b as a multiple of 1/b, and use this understanding to multiply a fraction by a whole number.",
+      "missing_ccss_code_2": "4.NF.4c",
+      "missing_ccss_description_2": "Solve word problems involving multiplication of a fraction by a whole number.",
+      "candidate_ga_code": "5.NR.3.4",
+      "candidate_ga_description": "Model and solve problems involving multiplication of a fraction and a whole number.",
+      "current_citation": {
+        "relationship": "merge",
+        "ccss_codes": ["5.NF.4a", "5.NF.6"],
+        "note": "Multiplying a fraction and whole number spans the conceptual interpretation (5.NF.4a) and its real-world problem-solving application (5.NF.6)."
+      },
+      "evidence": "GA does not appear to teach 'multiply a fraction by a whole number' at grade 4 at all -- no other GA code in 4.NR.4 covers this content (4.NR.4.1-4.6 cover equivalence, comparison, decomposition, and like-denominator addition/subtraction only). GA teaches this content one grade later, at 5.NR.3.4, which is a near-verbatim match to CCSS's 4.NF.4b/4c framing. This is the same cross-grade pattern the mapping already tags as different_grade elsewhere (e.g. 4.G.3, 4.NBT.2).",
+      "proposed_correction": {
+        "relationship": "different_grade",
+        "ccss_codes": ["4.NF.4b", "4.NF.4c", "5.NF.4a", "5.NF.6"],
+        "note": "GA teaches fraction-times-whole-number multiplication and its word-problem application one grade later than CCSS (grade 5 vs grade 4) -- add 4.NF.4b/4c as different_grade alongside the existing 5.NF.4a/5.NF.6 merge."
+      },
+      "confidence": "high",
+      "verdict": "pending"
+    },
+    {
+      "missing_ccss_code": "3.MD.5a",
+      "missing_ccss_description": "A square with side length 1 unit, called \"a unit square,\" is said to have \"one square unit\" of area, and can be used to measure area.",
+      "candidate_ga_code": "3.GSR.7.1",
+      "candidate_ga_description": "Investigate area by covering the space of rectangles presented in realistic situations using multiple copies of the same unit, with no gaps or overlaps, and determine the total area (total number of units that covered the space).",
+      "current_citation": {
+        "relationship": "merge",
+        "ccss_codes": ["3.MD.5b", "3.MD.6"],
+        "note": "Investigating area via unit-square tiling spans the unit-square definition (3.MD.5b) and counting unit squares (3.MD.6)."
+      },
+      "evidence": "Same shape as the 5.MD.3a/b case above: 3.GSR.7.1's own description -- 'covering... using multiple copies of the same unit, with no gaps or overlaps' -- already states the definition 3.MD.5a gives (a unit square = one square unit of area), not just 3.MD.5b's counting step. Note the current citation's own note already calls 3.MD.5b 'the unit-square definition' -- 3.MD.5a is the more literal source of that definition.",
+      "proposed_correction": {
+        "relationship": "merge",
+        "ccss_codes": ["3.MD.5a", "3.MD.5b", "3.MD.6"],
+        "note": "'Multiple copies of the same unit, with no gaps or overlaps' is 3.MD.5a's own definition of a unit square as well as 3.MD.5b's counting step -- extending the existing merge."
+      },
+      "confidence": "high",
+      "verdict": "pending"
+    },
+    {
+      "missing_ccss_code": "3.NF.3a",
+      "missing_ccss_description": "Understand two fractions as equivalent (equal) if they are the same size, or the same point on a number line.",
+      "candidate_ga_code": "3.NR.4.4",
+      "candidate_ga_description": "Recognize and generate simple equivalent fractions.",
+      "current_citation": {
+        "relationship": "exact",
+        "ccss_codes": ["3.NF.3b"],
+        "note": "Recognize/generate simple equivalent fractions matches verbatim."
+      },
+      "evidence": "Weaker than the two above: 3.NR.4.4's text doesn't state the same-size/same-point definition explicitly the way the other two candidates do -- it only uses the verb 'recognize,' which arguably presupposes understanding what equivalence means, but doesn't say so in as many words. Worth a second look, but this one could reasonably go either way.",
+      "proposed_correction": {
+        "relationship": "merge",
+        "ccss_codes": ["3.NF.3a", "3.NF.3b"],
+        "note": "'Recognize... equivalent fractions' presupposes the same-size/same-point definition (3.NF.3a), not just the generate-examples step (3.NF.3b) -- changes relationship from exact to merge."
+      },
+      "confidence": "medium",
+      "verdict": "pending"
+    }
+  ],
+  "checked_and_rejected": [
+    {
+      "ccss_code": "5.NF.4b",
+      "ccss_description": "Find the area of a rectangle with fractional side lengths by tiling it with unit squares of the appropriate unit fraction side lengths.",
+      "searched": "every K-5 GA standard mentioning both 'fraction' and 'area'/'tile'/'side length'",
+      "result": "Only 3.NR.4.1 (unit fractions on area models, unrelated content) came up. No GA standard anywhere covers area of a rectangle with fractional side lengths.",
+      "conclusion": "genuine gap, not a mapping omission"
+    },
+    {
+      "ccss_code": "5.MD.5c",
+      "ccss_description": "Recognize volume as additive. Find volumes of solid figures composed of two non-overlapping right rectangular prisms.",
+      "searched": "every K-5 GA standard mentioning 'volume'",
+      "result": "GA's volume standards (5.GSR.8.3, 5.GSR.8.4) stop at a single right rectangular prism -- no composite/combined-figure extension anywhere.",
+      "conclusion": "genuine gap, not a mapping omission"
+    },
+    {
+      "ccss_code": "K.CC.4a",
+      "ccss_description": "When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.",
+      "searched": "K.NR.1.1 (cites K.CC.5, the 'count to answer how many' skill this is an enabling prerequisite for)",
+      "result": "K.NR.1.1's text ('count up to 20 objects...') doesn't state one-to-one correspondence or stable order explicitly -- it's an implicit prerequisite skill for performing K.NR.1.1, not the same content point. Also already modeled as a real prerequisite edge in ../../../progression_mapping/ccss_progressions.json (K.CC.4a -> K.CC.4b), consistent with treating it as a separate developmental skill rather than folded-in content.",
+      "conclusion": "ambiguous -- leaning genuine gap / GA leaves it implicit, but noted for awareness rather than checked_and_rejected with full confidence"
+    }
+  ]
+}

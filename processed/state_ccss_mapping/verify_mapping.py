@@ -26,7 +26,7 @@ Checks:
 
 Usage as a script:
     python3 verify_mapping.py path/to/mapping.json
-        [--state-standards "states/ga/georgia_math_*.json"]
+        [--state-standards "states/ga/georgia_standards/georgia_math_*.json"]
     CCSS's full 175-code list is always loaded automatically from
     ccss_standards/ccss_math_*.json, bundled locally (fixed, not state-specific).
     Pass --state-standards (a glob, same convention as map_state_to_ccss.py)
@@ -184,7 +184,7 @@ def _load_leaf_codes(glob_pattern):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("mapping_path")
-    ap.add_argument("--state-standards", default=None, help='glob, e.g. "states/ga/georgia_math_*.json"')
+    ap.add_argument("--state-standards", default=None, help='glob, e.g. "states/ga/georgia_standards/georgia_math_*.json"')
     ap.add_argument("--code-field", default="state_code",
                      help='the mapping\'s own code field name -- "state_code" (default, map_state_to_ccss.py '
                           'schema) or "ga_code" (the original ccss_ga_skill_map*.json schema)')
