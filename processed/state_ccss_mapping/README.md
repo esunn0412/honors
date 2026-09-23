@@ -99,6 +99,21 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 
 **8 of 150 codes corrected (142/150, 95%, needed no change).** Full trail: `states/ga/human_review.json`.
 
+**Relationship-type breakdown (`states/ga/mapping_final.json`, 150 codes):**
+
+| Relationship | Count |
+|---|---|
+| `exact` | 56 |
+| `merge` | 32 |
+| `split` | 18 |
+| `state_superset` | 12 |
+| `none` | 12 |
+| `different_grade` | 7 |
+| `state_subset` | 7 |
+| `partial` | 6 |
+
+**Corrections by error type:**
+
 | Error type | Count | Codes |
 |---|---|---|
 | Invalid split | 3 | `K.GSR.8.2`, `3.GSR.7.2`, `3.GSR.7.3` — claimed sibling never actually cited the same CCSS code |
@@ -125,6 +140,18 @@ There's no independently-verified "gold" mapping for GA — the thesis author is
 | Agreement | 19/21 (90%), domain-level only |
 | Disagreements | `3.NS.4`, `4.NS.3` — both resolved, see below |
 
+**Relationship-type breakdown (`states/va/mapping_llm.json`, 21 codes — identical for the hierarchical run too):**
+
+| Relationship | Count |
+|---|---|
+| `merge` | 8 |
+| `exact` | 5 |
+| `different_grade` | 2 |
+| `state_superset` | 2 |
+| `partial` | 2 |
+| `split` | 1 |
+| `state_subset` | 1 |
+
 **Why domain-level only, and why GA uses sub-standard-level:** GA's own codes are sub-standard-level by construction (one code per lettered teaching point). VA's SOL codes aren't — one code covers several lettered bullets with no separate ID per bullet, and no available source breaks VA's text into complete per-bullet form. So this pipeline classifies VA at the whole-standard level, while EDUMath cites one specific bullet per row.
 
 | Code | This pipeline (whole standard) | EDUMath (one bullet) | Resolution |
@@ -137,6 +164,21 @@ Full detail: `states/va/unmatched_review.json`.
 ## Hierarchical method: tested, not adopted
 
 Alternative to the flat method: stage the search (pick domain family → pick cluster → classify against just those leaves) instead of showing all ~175 CCSS codes at once. *Kept local, not in this repo yet* — findings summarized here regardless.
+
+**Relationship-type breakdown, GA hierarchical run (150 codes) vs. the adopted mapping:**
+
+| Relationship | Hierarchical | Adopted |
+|---|---|---|
+| `exact` | 56 | 56 |
+| `merge` | 31 | 32 |
+| `state_superset` | 18 | 12 |
+| `state_subset` | 16 | 7 |
+| `different_grade` | 11 | 7 |
+| `none` | 9 | 12 |
+| `split` | 8 | 18 |
+| `partial` | 1 | 6 |
+
+Same total per-type usage overall, but shifted heavily toward `state_superset`/`state_subset` and away from `split`/`partial` — consistent with the error-type finding below (narrower candidate view → more scope/label judgment calls, less recognition that a code is jointly split with siblings).
 
 | Dataset | Relationship agreement | Code-set agreement |
 |---|---|---|
