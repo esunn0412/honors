@@ -1,0 +1,206 @@
+{
+  "subject": "Mathematics",
+  "grade": "2",
+  "source": "Georgia K-12 Mathematics Standards (SY2023-2024)",
+  "case_document_id": "e9dd7229-3558-4df2-85c6-57b8938f6180",
+  "domains": [
+    {
+      "code": "2.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "standards": [
+        {
+          "code": "2.MP.1",
+          "description": "Make sense of problems and persevere in solving them."
+        },
+        {
+          "code": "2.MP.2",
+          "description": "Reason abstractly and quantitatively."
+        },
+        {
+          "code": "2.MP.3",
+          "description": "Construct viable arguments and critique the reasoning of others."
+        },
+        {
+          "code": "2.MP.4",
+          "description": "Model with mathematics."
+        },
+        {
+          "code": "2.MP.5",
+          "description": "Use appropriate tools strategically."
+        },
+        {
+          "code": "2.MP.6",
+          "description": "Attend to precision."
+        },
+        {
+          "code": "2.MP.7",
+          "description": "Look for and make use of structure."
+        },
+        {
+          "code": "2.MP.8",
+          "description": "Look for and express regularity in repeated reasoning."
+        }
+      ]
+    },
+    {
+      "code": "2.NR",
+      "name": "Number Relations",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "2.NR.1",
+          "description": "Using the place value structure, explore the count sequences to represent, read, write, and compare numerical values to 1000 and describe basic place-value relationships and structures.",
+          "sub_standards": [
+            {
+              "code": "2.NR.1.1",
+              "description": "Explain the value of a three-digit number using hundreds, tens, and ones in a variety of ways."
+            },
+            {
+              "code": "2.NR.1.2",
+              "description": "Count forward and backward by ones from any number within 1000. Count forward by fives from multiples of 5 within 1000. Count forward and backward by 10s and 100s from any number within 1000. Count forward by 25s from 0."
+            },
+            {
+              "code": "2.NR.1.3",
+              "description": "Represent, compare, and order whole numbers to 1000 with an emphasis on place value and equality. Use >, =, and < symbols to record the results of comparisons."
+            }
+          ]
+        },
+        {
+          "code": "2.NR.2",
+          "description": "Apply multiple part-whole strategies, properties of operations and place value understanding to solve real-life, mathematical problems involving addition and subtraction within 1,000.",
+          "sub_standards": [
+            {
+              "code": "2.NR.2.1",
+              "description": "Fluently add and subtract within 20 using a variety of mental, part-whole strategies."
+            },
+            {
+              "code": "2.NR.2.2",
+              "description": "Find 10 more or 10 less than a given three-digit number and find 100 more or 100 less than a given three-digit number."
+            },
+            {
+              "code": "2.NR.2.3",
+              "description": "Solve problems involving the addition and subtraction of two-digit numbers using part-whole strategies."
+            },
+            {
+              "code": "2.NR.2.4",
+              "description": "Fluently add and subtract within 100 using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction."
+            }
+          ]
+        },
+        {
+          "code": "2.NR.3",
+          "description": "Work with equal groups to gain foundations for multiplication through real-life, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "2.NR.3.1",
+              "description": "Determine whether a group (up to 20) has an odd or even number of objects. Write an equation to express an even number as a sum of two equal addends."
+            },
+            {
+              "code": "2.NR.3.2",
+              "description": "Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.PAR",
+      "name": "Patterns and Algebraic Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "2.PAR.4",
+          "description": "Identify, describe, extend, and create repeating patterns, growing patterns, and shrinking patterns.",
+          "sub_standards": [
+            {
+              "code": "2.PAR.4.1",
+              "description": "Identify, describe, and create a numerical pattern resulting from repeating an operation such as addition and subtraction."
+            },
+            {
+              "code": "2.PAR.4.2",
+              "description": "Identify, describe, and create growing patterns and shrinking patterns involving addition and subtraction up to 20."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.MDR",
+      "name": "Measurement, Data, and Results",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "2.MDR.5",
+          "description": "Estimate and measure the lengths of objects and distance to solve problems found in real-life using standard units of measurement, including inches, feet, and yards and analyze graphical displays of data to answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "2.MDR.5.1",
+              "description": "Construct simple measuring instruments using unit models. Compare unit models to rulers."
+            },
+            {
+              "code": "2.MDR.5.2",
+              "description": "Estimate and measure the length of an object or distance to the nearest whole unit using appropriate units and standard measuring tools."
+            },
+            {
+              "code": "2.MDR.5.3",
+              "description": "Measure to determine how much longer one object is than another and express the length difference in terms of a standard-length unit."
+            },
+            {
+              "code": "2.MDR.5.4",
+              "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life."
+            },
+            {
+              "code": "2.MDR.5.5",
+              "description": "Represent whole-number sums and differences within a standard unit of measurement on a number line diagram."
+            }
+          ]
+        },
+        {
+          "code": "2.MDR.6",
+          "description": "Solve real-life problems involving time and money.",
+          "sub_standards": [
+            {
+              "code": "2.MDR.6.1",
+              "description": "Tell and write time from analog and digital clocks to the nearest five minutes, and estimate and measure elapsed time using a timeline, to the hour or half hour on the hour or half hour."
+            },
+            {
+              "code": "2.MDR.6.2",
+              "description": "Find the value of a group of coins and determine combinations of coins that equal a given amount that is less than one hundred cents, and solve problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and ¢ symbols appropriately."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.GSR",
+      "name": "Geometry and Spatial Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "2.GSR.7",
+          "description": "Draw and partition shapes and other objects with specific attributes, and conduct observations of everyday items and structures to identify how shapes exist in the world.",
+          "sub_standards": [
+            {
+              "code": "2.GSR.7.1",
+              "description": "Describe, compare and sort 2-D shapes including polygons, triangles, quadrilaterals, pentagons, hexagons, and 3-D shapes including rectangular prisms and cones, given a set of attributes."
+            },
+            {
+              "code": "2.GSR.7.2",
+              "description": "Identify at least one line of symmetry in everyday objects to describe each object as a whole."
+            },
+            {
+              "code": "2.GSR.7.3",
+              "description": "Partition circles and rectangles into two, three, or four equal shares. Identify and describe equal-sized parts of the whole using fractional names (“halves,” “thirds,” “fourths”, “half of,” “third of,” “quarter of,” etc.)."
+            },
+            {
+              "code": "2.GSR.7.4",
+              "description": "Recognize that equal shares of identical wholes may be different shapes within the same whole."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

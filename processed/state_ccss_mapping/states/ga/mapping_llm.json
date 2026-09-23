@@ -1,0 +1,2042 @@
+{
+  "metadata": {
+    "description": "Georgia standards mapped to CCSS K-5, in the same schema map_state_to_ccss.py's API script produces. This is a fresh, independent classification of all 150 GA sub-standards against the bare CCSS K-5 candidate set, following taxonomy.py's rules -- NOT a reformat of the existing verified gold mapping, which was deliberately not consulted while producing this file.",
+    "state_leaf_count": 150
+  },
+  "mappings": [
+    {
+      "state_code": "K.NR.1.1",
+      "state_description": "Count up to 20 objects in a variety of structured arrangements and up to 10 objects in a scattered arrangement.",
+      "ccss_codes": [
+        {
+          "code": "K.CC.5",
+          "description": "Count to answer \"how many?\" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1-20, count out that many objects."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Same counting-arrangement bounds (up to 20 structured, up to 10 scattered)."
+    },
+    {
+      "state_code": "K.NR.1.2",
+      "state_description": "When counting objects, explain that the last number counted represents the total quantity in a set (cardinality), regardless of the arrangement and order.",
+      "ccss_codes": [
+        {
+          "code": "K.CC.4b",
+          "description": "Understand that the last number name said tells the number of objects counted. The number of objects is the same regardless of their arrangement or the order in which they were counted."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Cardinality statement matches verbatim."
+    },
+    {
+      "state_code": "K.NR.1.3",
+      "state_description": "Given a number from 1-20, identify the number that is one more or one less.",
+      "ccss_codes": [
+        {
+          "code": "K.CC.4c",
+          "description": "Understand that each successive number name refers to a quantity that is one larger."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS states only 'one larger' (successor); GA adds 'one less' (predecessor), not stated in K.CC.4c."
+    },
+    {
+      "state_code": "K.NR.1.4",
+      "state_description": "Identify pennies, nickels, and dimes and know their name and value.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Coin name/value identification is a different operation from CCSS's only money standard (2.MD.8, compute totals). No CCSS equivalent for bare identification at any grade."
+    },
+    {
+      "state_code": "K.NR.2.1",
+      "state_description": "Count forward to 100 by tens and ones and backward from 20 by ones.",
+      "ccss_codes": [
+        {
+          "code": "K.CC.1",
+          "description": "Count to 100 by ones and by tens."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS K.CC.1 is forward-only. GA adds backward counting from 20, not stated in K.CC.1."
+    },
+    {
+      "state_code": "K.NR.2.2",
+      "state_description": "Count forward beginning from any number within 100 and count backward from any number within 20.",
+      "ccss_codes": [
+        {
+          "code": "K.CC.2",
+          "description": "Count forward beginning from a given number within the known sequence (instead of having to begin at 1)."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS K.CC.2 is forward-only from a given number. GA adds backward counting."
+    },
+    {
+      "state_code": "K.NR.3.1",
+      "state_description": "Describe numbers from 11 to 19 by composing (putting together) and decomposing (breaking apart) the numbers into ten ones and some more ones.",
+      "ccss_codes": [
+        {
+          "code": "K.NBT.1",
+          "description": "Compose and decompose numbers from 11 to 19 into ten ones and some further ones, e.g., by using objects or drawings, and record each composition or decomposition by a drawing or equation (e.g., 18 = 10 + 8); understand that these numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Compose/decompose 11-19 into ten ones + more ones matches verbatim."
+    },
+    {
+      "state_code": "K.NR.4.1",
+      "state_description": "Identify written numerals 0- 20 and represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects).",
+      "ccss_codes": [
+        {
+          "code": "K.CC.3",
+          "description": "Write numbers from 0 to 20. Represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects)."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Identify/represent numerals 0-20 matches K.CC.3's write/represent requirement."
+    },
+    {
+      "state_code": "K.NR.4.2",
+      "state_description": "Compare two sets of up to 10 objects and identify whether the number of objects in one group is more or less than the other group, using the words \u201cgreater than,\u201d \u201cless than,\u201d or \u201cthe same as\u201d.",
+      "ccss_codes": [
+        {
+          "code": "K.CC.6",
+          "description": "Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group, e.g., by using matching and counting strategies (include groups with up to ten objects)."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Compare two sets, greater/less/equal, matches verbatim."
+    },
+    {
+      "state_code": "K.NR.5.1",
+      "state_description": "Compose (put together) and decompose (break apart) numbers up to 10 using objects and drawings.",
+      "ccss_codes": [
+        {
+          "code": "K.OA.3",
+          "description": "Decompose numbers less than or equal to 10 into pairs in more than one way, e.g., by using objects or drawings, and record each decomposition by a drawing or equation (e.g., 5 = 2 + 3 and 5 = 4 + 1)."
+        },
+        {
+          "code": "K.OA.4",
+          "description": "For any number from 1 to 9, find the number that makes 10 when added to the given number, e.g., by using objects or drawings, and record the answer with a drawing or equation."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Cardinality first: GA's general 'compose up to 10' statement requires both K.OA.3 (decompose) and K.OA.4 (find the number that makes 10, a specific composing-to-10 case not otherwise stated) -- two CCSS codes, merge."
+    },
+    {
+      "state_code": "K.NR.5.2",
+      "state_description": "Represent addition and subtraction within 10 from a given authentic situation using a variety of representations and strategies.",
+      "ccss_codes": [
+        {
+          "code": "K.OA.1",
+          "description": "Represent addition and subtraction with objects, fingers, mental images, drawings, sounds (e.g., claps), acting out situations, verbal explanations, expressions, or equations (drawings need not show details, but should show the mathematics in the problem; this applies wherever drawings are mentioned in the Standards)."
+        },
+        {
+          "code": "K.OA.2",
+          "description": "Solve addition and subtraction word problems, and add and subtract within 10, e.g., by using objects or drawings to represent the problem."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "GA's 'represent...from an authentic situation' spans K.OA.1 (represent with objects/drawings) and K.OA.2 (word problems within 10) -- merge."
+    },
+    {
+      "state_code": "K.NR.5.3",
+      "state_description": "Use a variety of strategies to solve addition and subtraction problems within 10.",
+      "ccss_codes": [
+        {
+          "code": "K.OA.2",
+          "description": "Solve addition and subtraction word problems, and add and subtract within 10, e.g., by using objects or drawings to represent the problem."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The strategies-for-solving half of K.OA.2 (K.NR.5.2 covers the represent half) -- split."
+    },
+    {
+      "state_code": "K.NR.5.4",
+      "state_description": "Fluently add and subtract within 5 using a variety of strategies to solve practical, mathematical problems.",
+      "ccss_codes": [
+        {
+          "code": "K.OA.5",
+          "description": "Fluently add and subtract within 5."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Fluently add/subtract within 5 matches verbatim."
+    },
+    {
+      "state_code": "K.PAR.6.1",
+      "state_description": "Create, extend, and describe repeating patterns with numbers and shapes, and explain the rationale for the pattern.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Direct pattern creation is a different operation from CCSS's only pattern standard (4.OA.5, rule-based generation), and at a different grade. No K-5 CCSS equivalent for direct pattern creation."
+    },
+    {
+      "state_code": "K.PAR.6.2",
+      "state_description": "Describe patterns involving the passage of time using words and phrases related to actual events.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "No CCSS standard at any grade covers patterns involving the passage of time."
+    },
+    {
+      "state_code": "K.MDR.7.1",
+      "state_description": "Directly compare, describe, and order common objects, using measurable attributes (length, height, width, or weight) and describe the difference.",
+      "ccss_codes": [
+        {
+          "code": "K.MD.1",
+          "description": "Describe measurable attributes of objects, such as length or weight. Describe several measurable attributes of a single object."
+        },
+        {
+          "code": "K.MD.2",
+          "description": "Directly compare two objects with a measurable attribute in common, to see which object has \"more of\"/\"less of\" the attribute, and describe the difference. For example, directly compare the heights of two children and describe one child as taller/shorter."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "GA's compare/describe/order using measurable attributes spans K.MD.1 (describe attributes) and K.MD.2 (directly compare two objects) -- merge."
+    },
+    {
+      "state_code": "K.MDR.7.2",
+      "state_description": "Classify and sort up to ten objects into categories by an attribute; count the number of objects in each category and sort the categories by count.",
+      "ccss_codes": [
+        {
+          "code": "K.MD.3",
+          "description": "Classify objects into given categories; count the numbers of objects in each category and sort the categories by count (limit category counts to be less than or equal to 10)."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Classify/sort into categories, count, sort by count, matches verbatim (both cap at 10)."
+    },
+    {
+      "state_code": "K.MDR.7.3",
+      "state_description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "No K CCSS standard covers asking/answering questions from graphical displays. The wording-identical grade-1 standard (1.MDR.6.4) is the real match for CCSS's next-grade analog (1.MD.4); citing it here would borrow an already-claimed label."
+    },
+    {
+      "state_code": "K.GSR.8.1",
+      "state_description": "Identify, sort, classify, analyze, and compare two- dimensional shapes and three-dimensional figures, in different sizes and orientations, using informal language to describe their similarities, differences, number of sides and vertices, and other attributes.",
+      "ccss_codes": [
+        {
+          "code": "K.G.4",
+          "description": "Analyze and compare two- and three-dimensional shapes, in different sizes and orientations, using informal language to describe their similarities, differences, parts (e.g., number of sides and vertices/\"corners\") and other attributes (e.g., having sides of equal length)."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Near-verbatim match to similarities/differences/attributes language."
+    },
+    {
+      "state_code": "K.GSR.8.2",
+      "state_description": "Describe the relative location of an object using positional words.",
+      "ccss_codes": [
+        {
+          "code": "K.G.1",
+          "description": "Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The positional-words half of K.G.1 (shape-naming half is K.GSR.8.1, via K.G.4) -- split."
+    },
+    {
+      "state_code": "K.GSR.8.3",
+      "state_description": "Use basic shapes to represent specific shapes found in the environment by creating models and drawings.",
+      "ccss_codes": [
+        {
+          "code": "K.G.5",
+          "description": "Model shapes in the world by building shapes from components (e.g., sticks and clay balls) and drawing shapes."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Model shapes from components / drawing shapes matches verbatim."
+    },
+    {
+      "state_code": "K.GSR.8.4",
+      "state_description": "Use two or more basic shapes to form larger shapes.",
+      "ccss_codes": [
+        {
+          "code": "K.G.6",
+          "description": "Compose simple shapes to form larger shapes. For example, \"Can you join these two triangles with full sides touching to make a rectangle?\""
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Compose simple shapes into larger shapes matches verbatim."
+    },
+    {
+      "state_code": "1.NR.1.1",
+      "state_description": "Count within 120, forward and backward, starting at any number. In this range, read and write numerals and represent a number of objects with a written numeral.",
+      "ccss_codes": [
+        {
+          "code": "1.NBT.1",
+          "description": "Count to 120, starting at any number less than 120. In this range, read and write numerals and represent a number of objects with a written numeral."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS 1.NBT.1 is forward-only to 120. GA adds backward counting."
+    },
+    {
+      "state_code": "1.NR.1.2",
+      "state_description": "Explain that the two digits of a 2-digit number represent the amounts of tens and ones.",
+      "ccss_codes": [
+        {
+          "code": "1.NBT.2a",
+          "description": "10 can be thought of as a bundle of ten ones \u2014 called a \"ten.\""
+        },
+        {
+          "code": "1.NBT.2b",
+          "description": "The numbers from 11 to 19 are composed of a ten and one, two, three, four, five, six, seven, eight, or nine ones."
+        },
+        {
+          "code": "1.NBT.2c",
+          "description": "The numbers 10, 20, 30, 40, 50, 60, 70, 80, 90 refer to one, two, three, four, five, six, seven, eight, or nine tens (and 0 ones)."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "GA's general tens/ones statement subsumes all three lettered CCSS sub-cases -- merge."
+    },
+    {
+      "state_code": "1.NR.1.3",
+      "state_description": "Compare and order whole numbers up to 100 using concrete models, drawings, and the symbols >, =, and <.",
+      "ccss_codes": [
+        {
+          "code": "1.NBT.3",
+          "description": "Compare two two-digit numbers based on meanings of the tens and ones digits, recording the results of comparisons with the symbols >, =, and <."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS is pairwise-compare only. GA adds 'order' (multiple numbers)."
+    },
+    {
+      "state_code": "1.NR.2.1",
+      "state_description": "Use a variety of strategies to solve addition and subtraction problems within 20.",
+      "ccss_codes": [
+        {
+          "code": "1.OA.1",
+          "description": "Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem."
+        },
+        {
+          "code": "1.OA.2",
+          "description": "Solve word problems that call for addition of three whole numbers whose sum is less than or equal to 20, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem."
+        },
+        {
+          "code": "1.OA.6",
+          "description": "Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten (e.g., 8 + 6 = 8 + 2 + 4 = 10 + 4 = 14); decomposing a number leading to a ten (e.g., 13 - 4 = 13 - 3 - 1 = 10 - 1 = 9); using the relationship between addition and subtraction (e.g., knowing that 8 + 4 = 12, one knows 12 - 8 = 4); and creating equivalent but easier or known sums (e.g., adding 6 + 7 by creating the known equivalent 6 + 6 + 1 = 12 + 1 = 13)."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Broad 'variety of strategies within 20' umbrella spans word problems (1.OA.1), three-addend problems (1.OA.2), and the strategy list (1.OA.6) -- merge."
+    },
+    {
+      "state_code": "1.NR.2.2",
+      "state_description": "Use pictures, drawings, and equations to develop strategies for addition and subtraction within 20 by exploring strings of related problems.",
+      "ccss_codes": [
+        {
+          "code": "1.OA.6",
+          "description": "Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten (e.g., 8 + 6 = 8 + 2 + 4 = 10 + 4 = 14); decomposing a number leading to a ten (e.g., 13 - 4 = 13 - 3 - 1 = 10 - 1 = 9); using the relationship between addition and subtraction (e.g., knowing that 8 + 4 = 12, one knows 12 - 8 = 4); and creating equivalent but easier or known sums (e.g., adding 6 + 7 by creating the known equivalent 6 + 6 + 1 = 12 + 1 = 13)."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "Strategy-development-through-related-problems is part of 1.OA.6's own strategy list, joined by 1.NR.2.1/1.NR.2.4 -- split."
+    },
+    {
+      "state_code": "1.NR.2.3",
+      "state_description": "Recognize the inverse relationship between subtraction and addition within 20 and use this inverse relationship to solve authentic problems.",
+      "ccss_codes": [
+        {
+          "code": "1.OA.4",
+          "description": "Understand subtraction as an unknown-addend problem. For example, subtract 10 - 8 by finding the number that makes 10 when added to 8."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Inverse relationship between subtraction and addition matches 1.OA.4's unknown-addend framing."
+    },
+    {
+      "state_code": "1.NR.2.4",
+      "state_description": "Fluently add and subtract within 10 using a variety of strategies.",
+      "ccss_codes": [
+        {
+          "code": "1.OA.6",
+          "description": "Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten (e.g., 8 + 6 = 8 + 2 + 4 = 10 + 4 = 14); decomposing a number leading to a ten (e.g., 13 - 4 = 13 - 3 - 1 = 10 - 1 = 9); using the relationship between addition and subtraction (e.g., knowing that 8 + 4 = 12, one knows 12 - 8 = 4); and creating equivalent but easier or known sums (e.g., adding 6 + 7 by creating the known equivalent 6 + 6 + 1 = 12 + 1 = 13)."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The fluency-within-10 clause specifically of 1.OA.6 -- split."
+    },
+    {
+      "state_code": "1.NR.2.5",
+      "state_description": "Use the meaning of the equal sign to determine whether equations involving addition and subtraction are true or false.",
+      "ccss_codes": [
+        {
+          "code": "1.OA.7",
+          "description": "Understand the meaning of the equal sign, and determine if equations involving addition and subtraction are true or false. For example, which of the following equations are true and which are false? 6 = 6, 7 = 8 - 1, 5 + 2 = 2 + 5, 4 + 1 = 5 + 2."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Equal-sign true/false reasoning matches verbatim."
+    },
+    {
+      "state_code": "1.NR.2.6",
+      "state_description": "Determine the unknown whole number in an addition or subtraction equation relating to three whole numbers.",
+      "ccss_codes": [
+        {
+          "code": "1.OA.8",
+          "description": "Determine the unknown whole number in an addition or subtraction equation relating three whole numbers. For example, determine the unknown number that makes the equation true in each of the equations 8 + ? = 11, 5 = _ - 3, 6 + 6 = _."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Unknown whole number in a three-number equation matches verbatim."
+    },
+    {
+      "state_code": "1.NR.2.7",
+      "state_description": "Apply properties of operations as strategies to solve addition and subtraction problem situations within 20.",
+      "ccss_codes": [
+        {
+          "code": "1.OA.3",
+          "description": "Apply properties of operations as strategies to add and subtract (students need not use formal terms for these properties). Examples: If 8 + 3 = 11 is known, then 3 + 8 = 11 is also known. (Commutative property of addition.) To add 2 + 6 + 4, the second two numbers can be added to make a ten, so 2 + 6 + 4 = 2 + 10 = 12. (Associative property of addition.)"
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Properties of operations as addition/subtraction strategies matches verbatim."
+    },
+    {
+      "state_code": "1.NR.5.1",
+      "state_description": "Use a variety of strategies to solve applicable, mathematical addition and subtraction problems with one- and two-digit whole numbers.",
+      "ccss_codes": [
+        {
+          "code": "1.NBT.4",
+          "description": "Add within 100, including adding a two-digit number and a one-digit number, and adding a two-digit number and a multiple of 10, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. Understand that in adding two-digit numbers, one adds tens and tens, ones and ones; and sometimes it is necessary to compose a ten."
+        },
+        {
+          "code": "1.NBT.6",
+          "description": "Subtract multiples of 10 in the range 10-90 from multiples of 10 in the range 10-90 (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "GA's general one/two-digit addition/subtraction strategy statement spans 1.NBT.4 (add within 100) and 1.NBT.6 (subtract multiples of 10) -- merge."
+    },
+    {
+      "state_code": "1.NR.5.2",
+      "state_description": "Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used.",
+      "ccss_codes": [
+        {
+          "code": "1.NBT.5",
+          "description": "Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Mentally find 10 more/less matches verbatim."
+    },
+    {
+      "state_code": "1.NR.5.3",
+      "state_description": "Add and subtract multiples of 10 within 100.",
+      "ccss_codes": [
+        {
+          "code": "1.NBT.6",
+          "description": "Subtract multiples of 10 in the range 10-90 from multiples of 10 in the range 10-90 (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS 1.NBT.6 is subtract-only, multiples-from-multiples. GA is add-and-subtract, more general."
+    },
+    {
+      "state_code": "1.PAR.3.1",
+      "state_description": "Investigate, create, and make predictions about repeating patterns with a core of up to 3 elements resulting from repeating an operation, as a series of shapes, or a number string.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Direct pattern investigation/creation is a different operation from CCSS 4.OA.5's rule-based generation. No K-5 CCSS equivalent for direct creation."
+    },
+    {
+      "state_code": "1.PAR.3.2",
+      "state_description": "Identify, describe, and create growing, shrinking, and repeating patterns based on the repeated addition or subtraction of 1s, 2s, 5s, and 10s.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Same mismatch as 1.PAR.3.1 -- growing/shrinking pattern creation is not CCSS 4.OA.5's rule-based-generation skill."
+    },
+    {
+      "state_code": "1.GSR.4.1",
+      "state_description": "Identify common two-dimensional shapes and three-dimensional figures, sort and classify them by their attributes and build and draw shapes that possess defining attributes.",
+      "ccss_codes": [
+        {
+          "code": "1.G.1",
+          "description": "Distinguish between defining attributes (e.g., triangles are closed and three-sided) versus non-defining attributes (e.g., color, orientation, overall size); build and draw shapes to possess defining attributes."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Identify/sort/classify by attributes, build/draw shapes with defining attributes, matches the defining-attributes framing of 1.G.1."
+    },
+    {
+      "state_code": "1.GSR.4.2",
+      "state_description": "Compose two-dimensional shapes (rectangles, squares, triangles, half-circles, and quarter-circles) and three-dimensional figures (cubes, rectangular prisms, cones, and cylinders) to create a shape formed of two or more common shapes and compose new shapes from the composite shape.",
+      "ccss_codes": [
+        {
+          "code": "1.G.2",
+          "description": "Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape (students do not need to learn formal names such as \"right rectangular prism\")."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Near-verbatim match on composing 2D/3D shapes into a composite and composing new shapes from it."
+    },
+    {
+      "state_code": "1.GSR.4.3",
+      "state_description": "Partition circles and rectangles into two and four equal shares.",
+      "ccss_codes": [
+        {
+          "code": "1.G.3",
+          "description": "Partition circles and rectangles into two and four equal shares, describe the shares using the words halves, fourths, and quarters, and use the phrases half of, fourth of, and quarter of. Describe the whole as two of, or four of the shares. Understand for these examples that decomposing into more equal shares creates smaller shares."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Partition circles/rectangles into two/four equal shares matches the core partition skill."
+    },
+    {
+      "state_code": "1.MDR.6.1",
+      "state_description": "Estimate, measure, and record lengths of objects using non-standard units, and compare and order up to three objects using the recorded measurements. Describe the objects compared.",
+      "ccss_codes": [
+        {
+          "code": "1.MD.1",
+          "description": "Order three objects by length; compare the lengths of two objects indirectly by using a third object."
+        },
+        {
+          "code": "1.MD.2",
+          "description": "Express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end; understand that the length measurement of an object is the number of same-size length units that span it with no gaps or overlaps. Limit to contexts where the object being measured is spanned by a whole number of length units with no gaps or overlaps."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "GA's estimate/measure/compare/order statement spans 1.MD.1 (order three objects by length) and 1.MD.2 (measure length via non-standard unit iteration) -- merge."
+    },
+    {
+      "state_code": "1.MDR.6.2",
+      "state_description": "Tell and write time in hours and half-hours using analog and digital clocks, and measure elapsed time to the hour on the hour using a predetermined number line.",
+      "ccss_codes": [
+        {
+          "code": "1.MD.3",
+          "description": "Tell and write time in hours and half-hours using analog and digital clocks."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "Verbatim match on telling time in hours/half-hours; GA adds elapsed-time-via-number-line, which is CCSS Grade 3 content (3.MD.1), not stated in 1.MD.3."
+    },
+    {
+      "state_code": "1.MDR.6.3",
+      "state_description": "Identify the value of quarters and compare the values of pennies, nickels, dimes, and quarters.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Coin-value identification/comparison is a different operation from CCSS's only money standard (2.MD.8, compute totals)."
+    },
+    {
+      "state_code": "1.MDR.6.4",
+      "state_description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to compare and order whole numbers.",
+      "ccss_codes": [
+        {
+          "code": "1.MD.4",
+          "description": "Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Ask/answer questions from graphical displays to compare/order whole numbers matches verbatim."
+    },
+    {
+      "state_code": "2.NR.1.1",
+      "state_description": "Explain the value of a three-digit number using hundreds, tens, and ones in a variety of ways.",
+      "ccss_codes": [
+        {
+          "code": "2.NBT.1a",
+          "description": "100 can be thought of as a bundle of ten tens \u2014 called a \"hundred.\""
+        },
+        {
+          "code": "2.NBT.1b",
+          "description": "The numbers 100, 200, 300, 400, 500, 600, 700, 800, 900 refer to one, two, three, four, five, six, seven, eight, or nine hundreds (and 0 tens and 0 ones)."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "GA's general hundreds/tens/ones statement subsumes both lettered CCSS sub-cases -- merge."
+    },
+    {
+      "state_code": "2.NR.1.2",
+      "state_description": "Count forward and backward by ones from any number within 1000. Count forward by fives from multiples of 5 within 1000. Count forward and backward by 10s and 100s from any number within 1000. Count forward by 25s from 0.",
+      "ccss_codes": [
+        {
+          "code": "2.NBT.2",
+          "description": "Count within 1000; skip-count by 5s, 10s, and 100s."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS is forward-only skip-counting by 5s/10s/100s. GA adds backward counting and 25s skip-counting."
+    },
+    {
+      "state_code": "2.NR.1.3",
+      "state_description": "Represent, compare, and order whole numbers to 1000 with an emphasis on place value and equality. Use >, =, and < symbols to record the results of comparisons.",
+      "ccss_codes": [
+        {
+          "code": "2.NBT.3",
+          "description": "Read and write numbers to 1000 using base-ten numerals, number names, and expanded form."
+        },
+        {
+          "code": "2.NBT.4",
+          "description": "Compare two three-digit numbers based on meanings of the hundreds, tens, and ones digits, using >, =, and < symbols to record the results of comparisons."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "GA merges 'represent' (2.NBT.3) and 'compare' (2.NBT.4), and adds 'order' -- merge."
+    },
+    {
+      "state_code": "2.NR.2.1",
+      "state_description": "Fluently add and subtract within 20 using a variety of mental, part-whole strategies.",
+      "ccss_codes": [
+        {
+          "code": "2.OA.2",
+          "description": "Fluently add and subtract within 20 using mental strategies (see standard 1.OA.6 for a list of mental strategies). By end of Grade 2, know from memory all sums of two one-digit numbers."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Fluent mental addition/subtraction within 20 matches verbatim."
+    },
+    {
+      "state_code": "2.NR.2.2",
+      "state_description": "Find 10 more or 10 less than a given three-digit number and find 100 more or 100 less than a given three-digit number.",
+      "ccss_codes": [
+        {
+          "code": "2.NBT.8",
+          "description": "Mentally add 10 or 100 to a given number 100-900, and mentally subtract 10 or 100 from a given number 100-900."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "10/100 more-or-less mental math matches verbatim."
+    },
+    {
+      "state_code": "2.NR.2.3",
+      "state_description": "Solve problems involving the addition and subtraction of two-digit numbers using part-whole strategies.",
+      "ccss_codes": [
+        {
+          "code": "2.OA.1",
+          "description": "Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem."
+        },
+        {
+          "code": "2.NBT.6",
+          "description": "Add up to four two-digit numbers using strategies based on place value and properties of operations."
+        },
+        {
+          "code": "2.NBT.7",
+          "description": "Add and subtract within 1000, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method. Understand that in adding or subtracting three-digit numbers, one adds or subtracts hundreds and hundreds, tens and tens, ones and ones; and sometimes it is necessary to compose or decompose tens or hundreds."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Broad part-whole addition/subtraction umbrella spans word problems (2.OA.1), multi-addend addition (2.NBT.6), and within-1000 computation (2.NBT.7) -- merge."
+    },
+    {
+      "state_code": "2.NR.2.4",
+      "state_description": "Fluently add and subtract within 100 using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction.",
+      "ccss_codes": [
+        {
+          "code": "2.NBT.5",
+          "description": "Fluently add and subtract within 100 using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Fluent addition/subtraction within 100 matches verbatim."
+    },
+    {
+      "state_code": "2.NR.3.1",
+      "state_description": "Determine whether a group (up to 20) has an odd or even number of objects. Write an equation to express an even number as a sum of two equal addends.",
+      "ccss_codes": [
+        {
+          "code": "2.OA.3",
+          "description": "Determine whether a group of objects (up to 20) has an odd or even number of members, e.g., by pairing objects or counting them by 2s; write an equation to express an even number as a sum of two equal addends."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Odd/even determination via equal addends matches verbatim."
+    },
+    {
+      "state_code": "2.NR.3.2",
+      "state_description": "Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends.",
+      "ccss_codes": [
+        {
+          "code": "2.OA.4",
+          "description": "Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Rectangular-array addition, up to 5x5, matches verbatim."
+    },
+    {
+      "state_code": "2.PAR.4.1",
+      "state_description": "Identify, describe, and create a numerical pattern resulting from repeating an operation such as addition and subtraction.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Direct pattern creation is a different operation from CCSS 4.OA.5's rule-based generation."
+    },
+    {
+      "state_code": "2.PAR.4.2",
+      "state_description": "Identify, describe, and create growing patterns and shrinking patterns involving addition and subtraction up to 20.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Same mismatch -- growing/shrinking pattern creation, not rule-based generation."
+    },
+    {
+      "state_code": "2.MDR.5.1",
+      "state_description": "Construct simple measuring instruments using unit models. Compare unit models to rulers.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Constructing a measuring instrument is a distinct constructive activity not described anywhere in CCSS K-5."
+    },
+    {
+      "state_code": "2.MDR.5.2",
+      "state_description": "Estimate and measure the length of an object or distance to the nearest whole unit using appropriate units and standard measuring tools.",
+      "ccss_codes": [
+        {
+          "code": "2.MD.1",
+          "description": "Measure the length of an object by selecting and using appropriate tools such as rulers, yardsticks, meter sticks, and measuring tapes."
+        },
+        {
+          "code": "2.MD.3",
+          "description": "Estimate lengths using units of inches, feet, centimeters, and meters."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "GA's estimate-and-measure statement spans measuring with tools (2.MD.1) and estimating length (2.MD.3) -- merge."
+    },
+    {
+      "state_code": "2.MDR.5.3",
+      "state_description": "Measure to determine how much longer one object is than another and express the length difference in terms of a standard-length unit.",
+      "ccss_codes": [
+        {
+          "code": "2.MD.4",
+          "description": "Measure to determine how much longer one object is than another, expressing the length difference in terms of a standard length unit."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Length-difference measurement matches verbatim."
+    },
+    {
+      "state_code": "2.MDR.5.4",
+      "state_description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+      "ccss_codes": [
+        {
+          "code": "2.MD.9",
+          "description": "Generate measurement data by measuring lengths of several objects to the nearest whole unit, or by making repeated measurements of the same object. Show the measurements by making a line plot, where the horizontal scale is marked off in whole-number units."
+        },
+        {
+          "code": "2.MD.10",
+          "description": "Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put-together, take-apart, and compare problems using information presented in a bar graph."
+        }
+      ],
+      "relationship": "partial",
+      "needs_review": true,
+      "note": "GA's generic 'ask questions using graphical displays' is vaguer than CCSS's specific line-plot (2.MD.9) and bar-graph (2.MD.10) requirements."
+    },
+    {
+      "state_code": "2.MDR.5.5",
+      "state_description": "Represent whole-number sums and differences within a standard unit of measurement on a number line diagram.",
+      "ccss_codes": [
+        {
+          "code": "2.MD.6",
+          "description": "Represent whole numbers as lengths from 0 on a number line diagram with equally spaced points corresponding to the numbers 0, 1, 2, ..., and represent whole-number sums and differences within 100 on a number line diagram."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Representing sums/differences on a number line matches verbatim."
+    },
+    {
+      "state_code": "2.MDR.6.1",
+      "state_description": "Tell and write time from analog and digital clocks to the nearest five minutes, and estimate and measure elapsed time using a timeline, to the hour or half hour on the hour or half hour.",
+      "ccss_codes": [
+        {
+          "code": "2.MD.7",
+          "description": "Tell and write time from analog and digital clocks to the nearest five minutes, using a.m. and p.m."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS 2.MD.7 doesn't mention elapsed time. GA adds elapsed-time estimation/measurement."
+    },
+    {
+      "state_code": "2.MDR.6.2",
+      "state_description": "Find the value of a group of coins and determine combinations of coins that equal a given amount that is less than one hundred cents, and solve problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and \u00a2 symbols appropriately.",
+      "ccss_codes": [
+        {
+          "code": "2.MD.8",
+          "description": "Solve word problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and \u00a2 symbols appropriately. Example: If you have 2 dimes and 3 pennies, how many cents do you have?"
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Coin-value computation and dollar/coin word problems match verbatim."
+    },
+    {
+      "state_code": "2.GSR.7.1",
+      "state_description": "Describe, compare and sort 2-D shapes including polygons, triangles, quadrilaterals, pentagons, hexagons, and 3-D shapes including rectangular prisms and cones, given a set of attributes.",
+      "ccss_codes": [
+        {
+          "code": "2.G.1",
+          "description": "Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces. Identify triangles, quadrilaterals, pentagons, hexagons, and cubes (sizes are compared directly or visually, not compared by measuring)."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Describe/compare/sort named 2D/3D shapes by attributes matches verbatim."
+    },
+    {
+      "state_code": "2.GSR.7.2",
+      "state_description": "Identify at least one line of symmetry in everyday objects to describe each object as a whole.",
+      "ccss_codes": [
+        {
+          "code": "4.G.3",
+          "description": "Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded along the line into matching parts. Identify line-symmetric figures and draw lines of symmetry."
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "Same operation (identify a line of symmetry) as CCSS 4.G.3, applied to everyday objects rather than 2D figures, two grades earlier."
+    },
+    {
+      "state_code": "2.GSR.7.3",
+      "state_description": "Partition circles and rectangles into two, three, or four equal shares. Identify and describe equal-sized parts of the whole using fractional names (\u201chalves,\u201d \u201cthirds,\u201d \u201cfourths\u201d, \u201chalf of,\u201d \u201cthird of,\u201d \u201cquarter of,\u201d etc.).",
+      "ccss_codes": [
+        {
+          "code": "2.G.3",
+          "description": "Partition circles and rectangles into two, three, or four equal shares, describe the shares using the words halves, thirds, half of, a third of, etc., and describe the whole as two halves, three thirds, four fourths. Recognize that equal shares of identical wholes need not have the same shape."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "CCSS 2.G.3 itself bundles the fractional-naming half (this standard) with a 'shapes need not match' clause GA states separately as 2.GSR.7.4 -- split."
+    },
+    {
+      "state_code": "2.GSR.7.4",
+      "state_description": "Recognize that equal shares of identical wholes may be different shapes within the same whole.",
+      "ccss_codes": [
+        {
+          "code": "2.G.3",
+          "description": "Partition circles and rectangles into two, three, or four equal shares, describe the shares using the words halves, thirds, half of, a third of, etc., and describe the whole as two halves, three thirds, four fourths. Recognize that equal shares of identical wholes need not have the same shape."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The 'equal shares of identical wholes may be different shapes' clause is part of CCSS 2.G.3's own text, split from 2.GSR.7.3 above."
+    },
+    {
+      "state_code": "3.NR.1.1",
+      "state_description": "Read and write multi-digit whole numbers up to 10,000 to the thousands using base-ten numerals and expanded form.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.2",
+          "description": "Read and write multi-digit whole numbers using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based on meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons."
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "CCSS has no explicit 'to 10,000' milestone at Grade 3 (jumps from 1,000 at Grade 2 to unbounded at Grade 4). Same operation, nearest anchor is 4.NBT.2."
+    },
+    {
+      "state_code": "3.NR.1.2",
+      "state_description": "Use place value reasoning to compare multi-digit numbers up to 10,000, using >, =, and < symbols to record the results of comparisons.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.2",
+          "description": "Read and write multi-digit whole numbers using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based on meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons."
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "Same gap-filling pattern as 3.NR.1.1 -- no explicit multi-digit comparison standard at Grade 3."
+    },
+    {
+      "state_code": "3.NR.1.3",
+      "state_description": "Use place value understanding to round whole numbers within up to 1000 to the nearest 10 or 100.",
+      "ccss_codes": [
+        {
+          "code": "3.NBT.1",
+          "description": "Use place value understanding to round whole numbers to the nearest 10 or 100."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Round whole numbers to nearest 10/100 matches verbatim."
+    },
+    {
+      "state_code": "3.NR.4.1",
+      "state_description": "Describe a unit fraction and explain how multiple copies of a unit fraction form a non-unit fraction. Use parts of a whole, parts of a set, points on a number line, distances on a number line and area models.",
+      "ccss_codes": [
+        {
+          "code": "3.NF.1",
+          "description": "Understand a fraction 1/b as the quantity formed by 1 part when a whole is partitioned into b equal parts; understand a fraction a/b as the quantity formed by a parts of size 1/b."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Unit fraction concept and multiple-copies framing matches verbatim."
+    },
+    {
+      "state_code": "3.NR.4.2",
+      "state_description": "Compare two unit fractions by flexibly using a variety of tools and strategies.",
+      "ccss_codes": [
+        {
+          "code": "3.NF.3d",
+          "description": "Compare two fractions with the same numerator or the same denominator by reasoning about their size. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with the symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Comparing fractions with the same numerator (unit fractions) matches 3.NF.3d's same-numerator-or-denominator scope."
+    },
+    {
+      "state_code": "3.NR.4.3",
+      "state_description": "Represent fractions, including fractions greater than one, in multiple ways.",
+      "ccss_codes": [
+        {
+          "code": "3.NF.2a",
+          "description": "Represent a fraction 1/b on a number line diagram by defining the interval from 0 to 1 as the whole and partitioning it into b equal parts. Recognize that each part has size 1/b and that the endpoint of the part based at 0 locates the number 1/b on the number line."
+        },
+        {
+          "code": "3.NF.2b",
+          "description": "Represent a fraction a/b on a number line diagram by marking off a lengths 1/b from 0. Recognize that the resulting interval has size a/b and that its endpoint locates the number a/b on the number line."
+        },
+        {
+          "code": "3.NF.3c",
+          "description": "Express whole numbers as fractions, and recognize fractions that are equivalent to whole numbers. Examples: Express 3 in the form 3 = 3/1; recognize that 6/1 = 6; locate 4/4 and 1 at the same point of a number line diagram."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Representing fractions 'in multiple ways' spans number-line representation (3.NF.2a/2b) and whole-numbers-as-fractions (3.NF.3c) -- merge."
+    },
+    {
+      "state_code": "3.NR.4.4",
+      "state_description": "Recognize and generate simple equivalent fractions.",
+      "ccss_codes": [
+        {
+          "code": "3.NF.3b",
+          "description": "Recognize and generate simple equivalent fractions, e.g., 1/2 = 2/4, 4/6 = 2/3. Explain why the fractions are equivalent, e.g., by using a visual fraction model."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Recognize/generate simple equivalent fractions matches verbatim."
+    },
+    {
+      "state_code": "3.PAR.2.1",
+      "state_description": "Fluently add and subtract within 1000 to solve problems.",
+      "ccss_codes": [
+        {
+          "code": "3.NBT.2",
+          "description": "Fluently add and subtract within 1000 using strategies and algorithms based on place value, properties of operations, and/or the relationship between addition and subtraction."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Fluent addition/subtraction within 1000 matches verbatim."
+    },
+    {
+      "state_code": "3.PAR.2.2",
+      "state_description": "Apply part-whole strategies, properties of operations and place value understanding, to solve problems involving addition and subtraction within 10,000. Represent these problems using equations with a letter standing for the unknown quantity. Justify solutions.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.4",
+          "description": "Fluently add and subtract multi-digit whole numbers using the standard algorithm."
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "CCSS's own fluency standard (3.NBT.2) caps at 1,000; extending to 10,000 is Grade 4 content (4.NBT.4)."
+    },
+    {
+      "state_code": "3.PAR.3.1",
+      "state_description": "Describe, extend, and create numeric patterns related to multiplication. Make predictions related to the patterns.",
+      "ccss_codes": [
+        {
+          "code": "3.OA.9",
+          "description": "Identify arithmetic patterns (including patterns in the addition table or multiplication table), and explain them using properties of operations. For example, observe that 4 times a number is always even, and explain why 4 times a number can be decomposed into two equal addends."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Patterns related to multiplication, with predictions, matches 3.OA.9's arithmetic-patterns-from-properties-of-operations framing."
+    },
+    {
+      "state_code": "3.PAR.3.2",
+      "state_description": "Represent single digit multiplication and division facts using a variety of strategies. Explain the relationship between multiplication and division.",
+      "ccss_codes": [
+        {
+          "code": "3.OA.6",
+          "description": "Understand division as an unknown-factor problem. For example, find 32 / 8 by finding the number that makes 32 when multiplied by 8."
+        },
+        {
+          "code": "3.OA.7",
+          "description": "Fluently multiply and divide within 100, using strategies such as the relationship between multiplication and division (e.g., knowing that 8 x 5 = 40, one knows 40 / 5 = 8) or properties of operations. By the end of Grade 3, know from memory all products of two one-digit numbers."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Representing facts with strategies and explaining the mult/div relationship spans 3.OA.6 (division as unknown-factor) and 3.OA.7 (fluency using that relationship) -- merge."
+    },
+    {
+      "state_code": "3.PAR.3.3",
+      "state_description": "Apply properties of operations (i.e., commutative property, associative property, distributive property) to multiply and divide within 100.",
+      "ccss_codes": [
+        {
+          "code": "3.OA.5",
+          "description": "Apply properties of operations as strategies to multiply and divide (students need not use formal terms for these properties). Examples: If 6 x 4 = 24 is known, then 4 x 6 = 24 is also known. (Commutative property of multiplication.) 3 x 5 x 2 can be found by 3 x 5 = 15, then 15 x 2 = 30, or by 5 x 2 = 10, then 3 x 10 = 30. (Associative property of multiplication.) Knowing that 8 x 5 = 40 and 8 x 2 = 16, one can find 8 x 7 as 8 x (5 + 2) = (8 x 5) + (8 x 2) = 40 + 16 = 56. (Distributive property.)"
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Properties of operations as multiply/divide strategies matches verbatim."
+    },
+    {
+      "state_code": "3.PAR.3.4",
+      "state_description": "Use the meaning of the equal sign to determine whether expressions involving addition, subtraction, and multiplication are equivalent.",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "Equal-sign/equivalence reasoning across addition, subtraction, and multiplication is a different kind of skill (relational thinking) than parent standard 3.PAR.3's other CCSS matches (multiplication/division computation). No CCSS standard names this specific reasoning at Grade 3."
+    },
+    {
+      "state_code": "3.PAR.3.5",
+      "state_description": "Use place value reasoning and properties of operations to multiply one-digit whole numbers by multiples of 10, in the range 10-90.",
+      "ccss_codes": [
+        {
+          "code": "3.NBT.3",
+          "description": "Multiply one-digit whole numbers by multiples of 10 in the range 10-90 (e.g., 9 x 80, 5 x 60) using strategies based on place value and properties of operations."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Multiply one-digit numbers by multiples of 10 (10-90) matches verbatim."
+    },
+    {
+      "state_code": "3.PAR.3.6",
+      "state_description": "Solve practical, relevant problems involving multiplication and division within 100 using part-whole strategies, visual representations, and/or concrete models.",
+      "ccss_codes": [
+        {
+          "code": "3.OA.3",
+          "description": "Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Solve multiplication/division word problems within 100 matches verbatim."
+    },
+    {
+      "state_code": "3.PAR.3.7",
+      "state_description": "Use multiplication and division to solve problems involving whole numbers to 100. Represent these problems using equations with a letter standing for the unknown quantity. Justify solutions.",
+      "ccss_codes": [
+        {
+          "code": "3.OA.4",
+          "description": "Determine the unknown whole number in a multiplication or division equation relating three whole numbers. For example, determine the unknown number that makes the equation true in each of the equations 8 x ? = 48, 5 = [] / 3, 6 x 6 = ?."
+        },
+        {
+          "code": "3.OA.8",
+          "description": "Solve two-step word problems using the four operations. Represent these problems using equations with a letter standing for the unknown quantity. Assess the reasonableness of answers using mental computation and estimation strategies including rounding (this standard is limited to problems posed with whole numbers and having whole-number answers; students should know how to perform operations in the conventional order when there are no parentheses to specify a particular order, i.e. Order of Operations)."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Using equations with a letter for the unknown spans unknown-number equations (3.OA.4) and two-step word problems (3.OA.8) -- merge."
+    },
+    {
+      "state_code": "3.MDR.5.1",
+      "state_description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.3",
+          "description": "Draw a scaled picture graph and a scaled bar graph to represent a data set with several categories. Solve one- and two-step \"how many more\" and \"how many less\" problems using information presented in scaled bar graphs. For example, draw a bar graph in which each square in the bar graph might represent 5 pets."
+        },
+        {
+          "code": "3.MD.4",
+          "description": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units\u2014whole numbers, halves, or quarters."
+        }
+      ],
+      "relationship": "partial",
+      "needs_review": true,
+      "note": "Generic 'ask questions using graphical displays' is vaguer than CCSS's specific scaled-graph (3.MD.3) and line-plot (3.MD.4) requirements."
+    },
+    {
+      "state_code": "3.MDR.5.2",
+      "state_description": "Tell and write time to the nearest minute and estimate time to the nearest fifteen minutes (quarter hour) from the analysis of an analog clock.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.1",
+          "description": "Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by representing the problem on a number line diagram."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The tell/write-time half of 3.MD.1 (elapsed-time problem-solving is 3.MDR.5.3) -- split."
+    },
+    {
+      "state_code": "3.MDR.5.3",
+      "state_description": "Solve meaningful problems involving elapsed time, including intervals of time to the hour, half hour, and quarter hour where the times presented are only on the hour, half hour, or quarter hour within a.m. or p.m. only.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.1",
+          "description": "Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by representing the problem on a number line diagram."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The elapsed-time-problem-solving half of 3.MD.1, joined by 3.MDR.5.2 -- split."
+    },
+    {
+      "state_code": "3.MDR.5.4",
+      "state_description": "Use rulers to measure lengths in halves and fourths (quarters) of an inch and a whole inch.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.4",
+          "description": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units\u2014whole numbers, halves, or quarters."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The ruler-measurement half of 3.MD.4 (the line-plot-display half is covered under 3.MDR.5.1's data-display language) -- split."
+    },
+    {
+      "state_code": "3.MDR.5.5",
+      "state_description": "Estimate and measure liquid volumes, lengths and masses of objects using customary units. Solve problems involving mass, length, and volume given in the same unit, and reason about the relative sizes of measurement units within the customary system.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.2",
+          "description": "Measure and estimate liquid volumes and masses of objects using standard units of grams (g), kilograms (kg), and liters (l) (excludes compound units such as cm3 and finding the geometric volume of a container). Add, subtract, multiply, or divide to solve one-step word problems involving masses or volumes that are given in the same units, e.g., by using drawings (such as a beaker with a measurement scale) to represent the problem (excludes multiplicative comparison problems, i.e. problems involving notions of \"times as much\")."
+        }
+      ],
+      "relationship": "partial",
+      "needs_review": true,
+      "note": "CCSS 3.MD.2 specifies METRIC units (grams, kilograms, liters) for volume/mass; GA specifies CUSTOMARY units -- same skill (estimate/measure volume and mass), different unit system, not a clean match."
+    },
+    {
+      "state_code": "3.GSR.6.1",
+      "state_description": "Identify perpendicular line segments, parallel line segments, and right angles, identify these in polygons, and solve problems involving parallel line segments, perpendicular line segments, and right angles.",
+      "ccss_codes": [
+        {
+          "code": "4.G.1",
+          "description": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures."
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "Same operation (identify perpendicular/parallel lines, right angles) as CCSS 4.G.1's identify-half, one grade earlier, without the drawing requirement."
+    },
+    {
+      "state_code": "3.GSR.6.2",
+      "state_description": "Classify, compare, and contrast polygons, with a focus on quadrilaterals, based on properties. Analyze specific 3-dimensional figures to identify and describe quadrilaterals as faces of these figures.",
+      "ccss_codes": [
+        {
+          "code": "3.G.1",
+          "description": "Understand that shapes in different categories (e.g., rhombuses, rectangles, and others) may share attributes (e.g., having four sides), and that the shared attributes can define a larger category (e.g., quadrilaterals). Recognize rhombuses, rectangles, and squares as examples of quadrilaterals, and draw examples of quadrilaterals that do not belong to any of these subcategories."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Classifying quadrilaterals hierarchically by shared attributes matches 3.G.1."
+    },
+    {
+      "state_code": "3.GSR.6.3",
+      "state_description": "Identify lines of symmetry in polygons.",
+      "ccss_codes": [
+        {
+          "code": "4.G.3",
+          "description": "Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded along the line into matching parts. Identify line-symmetric figures and draw lines of symmetry."
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "Same operation (identify lines of symmetry) as CCSS 4.G.3, one grade earlier, on polygons specifically."
+    },
+    {
+      "state_code": "3.GSR.7.1",
+      "state_description": "Investigate area by covering the space of rectangles presented in realistic situations using multiple copies of the same unit, with no gaps or overlaps, and determine the total area (total number of units that covered the space).",
+      "ccss_codes": [
+        {
+          "code": "3.MD.5b",
+          "description": "A plane figure which can be covered without gaps or overlaps by n unit squares is said to have an area of n square units."
+        },
+        {
+          "code": "3.MD.6",
+          "description": "Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units)."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Investigating area via unit-square tiling spans the unit-square definition (3.MD.5b) and counting unit squares (3.MD.6) -- merge."
+    },
+    {
+      "state_code": "3.GSR.7.2",
+      "state_description": "Determine the area of rectangles (or shapes composed of rectangles) presented in relevant problems by tiling and counting.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.7a",
+          "description": "Find the area of a rectangle with whole-number side lengths by tiling it, and show that the area is the same as would be found by multiplying the side lengths."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The tiling-to-find-area half of 3.MD.7a (the multiplication-equivalence insight is 3.GSR.7.3) -- split."
+    },
+    {
+      "state_code": "3.GSR.7.3",
+      "state_description": "Discover and explain how area can be found by multiplying the dimensions of a rectangle.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.7b",
+          "description": "Multiply side lengths to find areas of rectangles with whole-number side lengths in the context of solving real world and mathematical problems, and represent whole-number products as rectangular areas in mathematical reasoning."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The multiply-side-lengths half, joined by 3.GSR.7.2's tiling half -- split."
+    },
+    {
+      "state_code": "3.GSR.8.1",
+      "state_description": "Determine the perimeter of a polygon and explain that the perimeter represents the distance around a polygon. Solve problems involving perimeters of polygons.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.8",
+          "description": "Solve real world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, and exhibiting rectangles with the same perimeter and different areas or with the same area and different perimeters."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The perimeter-computation half of 3.MD.8 (the same-perimeter-different-area exploration is 3.GSR.8.2) -- split."
+    },
+    {
+      "state_code": "3.GSR.8.2",
+      "state_description": "Investigate and describe how rectangles with the same perimeter can have different areas or how rectangles with the same area can have different perimeters.",
+      "ccss_codes": [
+        {
+          "code": "3.MD.8",
+          "description": "Solve real world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, and exhibiting rectangles with the same perimeter and different areas or with the same area and different perimeters."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The same-perimeter/different-area (and vice versa) exploration is part of CCSS 3.MD.8's own text, joined by 3.GSR.8.1 -- split."
+    },
+    {
+      "state_code": "4.NR.1.1",
+      "state_description": "Read and write multi-digit whole numbers to the hundred-thousands place using base-ten numerals and expanded form.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.2",
+          "description": "Read and write multi-digit whole numbers using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based on meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The read/write half of 4.NBT.2 (the compare half is 4.NR.1.3) -- split."
+    },
+    {
+      "state_code": "4.NR.1.2",
+      "state_description": "Recognize and show that a digit in one place has a value ten times greater than what it represents in the place to its right and extend this understanding to determine the value of a digit when it is shifted to the left or right, based on the relationship between multiplication and division.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.1",
+          "description": "Recognize that in a multi-digit whole number, a digit in one place represents ten times what it represents in the place to its right. For example, recognize that 700 / 70 = 10 by applying concepts of place value and division."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Digit-value-ten-times-greater statement matches verbatim."
+    },
+    {
+      "state_code": "4.NR.1.3",
+      "state_description": "Use place value reasoning to represent, compare, and order multi-digit numbers, using >, =, and < symbols to record the results of comparisons.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.2",
+          "description": "Read and write multi-digit whole numbers using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based on meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The compare half of 4.NBT.2, joined by 4.NR.1.1's read/write half -- split."
+    },
+    {
+      "state_code": "4.NR.1.4",
+      "state_description": "Use place value understanding to round multi-digit whole numbers.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.3",
+          "description": "Use place value understanding to round multi-digit whole numbers to any place."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Round multi-digit whole numbers to any place matches verbatim."
+    },
+    {
+      "state_code": "4.NR.2.1",
+      "state_description": "Fluently add and subtract multi-digit numbers to solve practical, mathematical problems using place value understanding, properties of operations, and relationships between operations.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.4",
+          "description": "Fluently add and subtract multi-digit whole numbers using the standard algorithm."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Fluent multi-digit addition/subtraction using the standard algorithm matches verbatim."
+    },
+    {
+      "state_code": "4.NR.2.2",
+      "state_description": "Interpret, model, and solve problems involving multiplicative comparison.",
+      "ccss_codes": [
+        {
+          "code": "4.OA.1",
+          "description": "Interpret a multiplication equation as a comparison, e.g., interpret 35 = 5 x 7 as a statement that 35 is 5 times as many as 7 and 7 times as many as 5. Represent verbal statements of multiplicative comparisons as multiplication equations."
+        },
+        {
+          "code": "4.OA.2",
+          "description": "Multiply or divide to solve word problems involving multiplicative comparison, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem, distinguishing multiplicative comparison from additive comparison."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Multiplicative-comparison interpretation and problem-solving spans 4.OA.1 (interpret as comparison) and 4.OA.2 (solve word problems) -- merge."
+    },
+    {
+      "state_code": "4.NR.2.3",
+      "state_description": "Solve relevant problems involving multiplication of a number with up to four digits by a 1-digit whole number or involving multiplication of two two-digit numbers using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.5",
+          "description": "Multiply a whole number of up to four digits by a one-digit whole number, and multiply two two-digit numbers, using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Multi-digit multiplication using place-value strategies matches verbatim."
+    },
+    {
+      "state_code": "4.NR.2.4",
+      "state_description": "Solve authentic division problems involving up to 4-digit dividends and 1- digit divisors (including whole number quotients with remainders) using strategies based on place-value understanding, properties of operations, and the relationships between operations.",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.6",
+          "description": "Find whole-number quotients and remainders with up to four-digit dividends and one-digit divisors, using strategies based on place value, the properties of operations, and/or the relationship between multiplication and division. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Division with up to 4-digit dividends, 1-digit divisors, matches verbatim."
+    },
+    {
+      "state_code": "4.NR.2.5",
+      "state_description": "Solve multi-step problems using addition, subtraction, multiplication, and division involving whole numbers. Use mental computation and estimation strategies to justify the reasonableness of solutions.",
+      "ccss_codes": [
+        {
+          "code": "4.OA.3",
+          "description": "Solve multistep word problems posed with whole numbers and having whole-number answers using the four operations, including problems in which remainders must be interpreted. Represent these problems using equations with a letter standing for the unknown quantity. Assess the reasonableness of answers using mental computation and estimation strategies including rounding."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Multi-step word problems using four operations, assessing reasonableness, matches verbatim."
+    },
+    {
+      "state_code": "4.NR.4.1",
+      "state_description": "Using concrete materials, drawings, and number lines, demonstrate and explain the relationship between equivalent fractions, including fractions greater than one, and explain the identity property of multiplication as it relates to equivalent fractions. Generate equivalent fractions using these relationships.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.1",
+          "description": "Explain why a fraction a/b is equivalent to a fraction (n x a)/(n x b) by using visual fraction models, with attention to how the number and size of the parts differ even though the two fractions themselves are the same size. Use this principle to recognize and generate equivalent fractions."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Equivalent-fractions reasoning via visual models matches verbatim."
+    },
+    {
+      "state_code": "4.NR.4.2",
+      "state_description": "Compare two fractions with the same numerator or the same denominator by reasoning about their size and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+      "ccss_codes": [
+        {
+          "code": "3.NF.3d",
+          "description": "Compare two fractions with the same numerator or the same denominator by reasoning about their size. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with the symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "Comparing fractions with the same numerator or denominator is Grade 3 CCSS content (3.NF.3d); GA restates it a grade later as a stepping stone toward the general case (4.NR.4.3)."
+    },
+    {
+      "state_code": "4.NR.4.3",
+      "state_description": "Compare two fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.2",
+          "description": "Compare two fractions with different numerators and different denominators, e.g., by creating common denominators or numerators, or by comparing to a benchmark fraction such as 1/2. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "General fraction comparison, different numerators and denominators, matches verbatim."
+    },
+    {
+      "state_code": "4.NR.4.4",
+      "state_description": "Represent whole numbers and fractions as the sum of unit fractions.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.4a",
+          "description": "Understand a fraction a/b as a multiple of 1/b. For example, use a visual fraction model to represent 5/4 as the product 5 x (1/4), recording the conclusion by the equation 5/4 = 5 x (1/4)."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Representing a fraction as a multiple of a unit fraction matches 4.NF.4a's framing."
+    },
+    {
+      "state_code": "4.NR.4.5",
+      "state_description": "Represent a fraction as a sum of fractions with the same denominator in more than one way, recording with an equation.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.3b",
+          "description": "Decompose a fraction into a sum of fractions with the same denominator in more than one way, recording each decomposition by an equation. Justify decompositions, e.g., by using a visual fraction model. Examples: 3/8 = 1/8 + 1/8 + 1/8; 3/8 = 1/8 + 2/8; 2 1/8 = 1 + 1 + 1/8 = 8/8 + 8/8 + 1/8."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Decomposing a fraction into a same-denominator sum 'in more than one way' matches 4.NF.3b verbatim."
+    },
+    {
+      "state_code": "4.NR.4.6",
+      "state_description": "Add and subtract fractions and mixed numbers with like denominators using a variety of tools.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.3c",
+          "description": "Add and subtract mixed numbers with like denominators, e.g., by replacing each mixed number with an equivalent fraction, and/or by using properties of operations and the relationship between addition and subtraction."
+        },
+        {
+          "code": "4.NF.3d",
+          "description": "Solve word problems involving addition and subtraction of fractions referring to the same whole and having like denominators, e.g., by using visual fraction models and equations to represent the problem."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Adding/subtracting fractions and mixed numbers with like denominators spans 4.NF.3c (mixed numbers) and 4.NF.3d (word problems) -- merge."
+    },
+    {
+      "state_code": "4.NR.5.1",
+      "state_description": "Demonstrate and explain the concept of equivalent fractions with denominators of 10 and 100, using concrete materials and visual models. Add two fractions with denominators of 10 and 100.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.5",
+          "description": "Express a fraction with denominator 10 as an equivalent fraction with denominator 100, and use this technique to add two fractions with respective denominators 10 and 100. For example, express 3/10 as 30/100, and add 3/10 + 4/100 = 34/100. (Students who can generate equivalent fractions can develop strategies for adding fractions with unlike denominators in general. But addition and subtraction with unlike denominators in general is not a requirement at this grade.)"
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Equivalent fractions with denominators 10/100, adding two such fractions, matches verbatim."
+    },
+    {
+      "state_code": "4.NR.5.2",
+      "state_description": "Represent, read, and write fractions with denominators of 10 or 100 using decimal notation, and decimal numbers to the hundredths place as fractions, using concrete materials and drawings.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.6",
+          "description": "Use decimal notation for fractions with denominators 10 or 100. For example, rewrite 0.62 as 62/100; describe a length as 0.62 meters; locate 0.62 on a number line diagram."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Decimal notation for fractions with denominators 10/100 matches verbatim."
+    },
+    {
+      "state_code": "4.NR.5.3",
+      "state_description": "Compare two decimal numbers to the hundredths place by reasoning about their size. Record the results of comparisons with the symbols >, =, or <, and justify the conclusions.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.7",
+          "description": "Compare two decimals to hundredths by reasoning about their size. Recognize that comparisons are valid only when the two decimals refer to the same whole. Record the results of comparisons with the symbols >, =, or <, and justify the conclusions, e.g., by using a visual model."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Comparing two decimals to hundredths matches verbatim."
+    },
+    {
+      "state_code": "4.PAR.3.1",
+      "state_description": "Generate both number and shape patterns that follow a provided rule.",
+      "ccss_codes": [
+        {
+          "code": "4.OA.5",
+          "description": "Generate a number or shape pattern that follows a given rule. Identify apparent features of the pattern that were not explicit in the rule itself. For example, given the rule \"Add 3\" and the starting number 1, generate terms in the resulting sequence and observe that the terms appear to alternate between odd and even numbers. Explain informally why the numbers will continue to alternate in this way."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The generate-a-pattern-from-a-rule half of 4.OA.5 (the identify-emergent-features half is represented via 4.PAR.3.2's tables) -- split."
+    },
+    {
+      "state_code": "4.PAR.3.2",
+      "state_description": "Use input-output rules, tables, and charts to represent and describe patterns, find relationships, and solve problems.",
+      "ccss_codes": [
+        {
+          "code": "4.OA.5",
+          "description": "Generate a number or shape pattern that follows a given rule. Identify apparent features of the pattern that were not explicit in the rule itself. For example, given the rule \"Add 3\" and the starting number 1, generate terms in the resulting sequence and observe that the terms appear to alternate between odd and even numbers. Explain informally why the numbers will continue to alternate in this way."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The relationship/table-based analysis half of 4.OA.5, joined by 4.PAR.3.1 -- split."
+    },
+    {
+      "state_code": "4.PAR.3.3",
+      "state_description": "Find factor pairs in the range 1\u2013100 and find multiples of single-digit numbers up to 100.",
+      "ccss_codes": [
+        {
+          "code": "4.OA.4",
+          "description": "Find all factor pairs for a whole number in the range 1-100. Recognize that a whole number is a multiple of each of its factors. Determine whether a given whole number in the range 1-100 is a multiple of a given one-digit number. Determine whether a given whole number in the range 1-100 is prime or composite."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The factor-pairs/multiples half of 4.OA.4 (the prime/composite half is 4.PAR.3.4) -- split."
+    },
+    {
+      "state_code": "4.PAR.3.4",
+      "state_description": "Identify composite numbers and prime numbers and explain the relationship with the factor pairs.",
+      "ccss_codes": [
+        {
+          "code": "4.OA.4",
+          "description": "Find all factor pairs for a whole number in the range 1-100. Recognize that a whole number is a multiple of each of its factors. Determine whether a given whole number in the range 1-100 is a multiple of a given one-digit number. Determine whether a given whole number in the range 1-100 is prime or composite."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The prime/composite half of 4.OA.4, joined by 4.PAR.3.3 -- split."
+    },
+    {
+      "state_code": "4.MDR.6.1",
+      "state_description": "Use the four operations to solve problems involving elapsed time to the nearest minute, intervals of time, metric measurements of liquid volumes, lengths, distances, and masses of objects, including problems involving fractions with like denominators, and also problems that require expressing measurements given in a larger unit in terms of a smaller unit, and expressing a smaller unit in terms of a larger unit based on the idea of equivalence.",
+      "ccss_codes": [
+        {
+          "code": "4.MD.1",
+          "description": "Know relative sizes of measurement units within one system of units including km, m, cm; kg, g; lb, oz.; l, ml; hr, min, sec. Within a single system of measurement, express measurements in a larger unit in terms of a smaller unit. Record measurement equivalents in a two-column table. For example, know that 1 ft is 12 times as long as 1 in. Express the length of a 4 ft snake as 48 in. Generate a conversion table for feet and inches listing the number pairs (1, 12), (2, 24), (3, 36), ..."
+        },
+        {
+          "code": "4.MD.2",
+          "description": "Use the four operations to solve word problems involving distances, intervals of time, liquid volumes, masses of objects, and money, including problems involving simple fractions or decimals, and problems that require expressing measurements given in a larger unit in terms of a smaller unit. Represent measurement quantities using diagrams such as number line diagrams that feature a measurement scale."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Four-operations measurement problem-solving spans unit-conversion knowledge (4.MD.1) and measurement word problems (4.MD.2) -- merge."
+    },
+    {
+      "state_code": "4.MDR.6.2",
+      "state_description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+      "ccss_codes": [
+        {
+          "code": "4.MD.4",
+          "description": "Make a line plot to display a data set of measurements in fractions of a unit (1/2, 1/4, 1/8). Solve problems involving addition and subtraction of fractions by using information presented in line plots. For example, from a line plot find and interpret the difference in length between the longest and shortest specimens in an insect collection."
+        }
+      ],
+      "relationship": "partial",
+      "needs_review": true,
+      "note": "Generic 'ask questions using graphical displays' is vaguer than CCSS's specific fractional-line-plot requirement (4.MD.4)."
+    },
+    {
+      "state_code": "4.MDR.6.3",
+      "state_description": "Create dot plots to display a distribution of numerical (quantitative) measurement data.",
+      "ccss_codes": [
+        {
+          "code": "4.MD.4",
+          "description": "Make a line plot to display a data set of measurements in fractions of a unit (1/2, 1/4, 1/8). Solve problems involving addition and subtraction of fractions by using information presented in line plots. For example, from a line plot find and interpret the difference in length between the longest and shortest specimens in an insect collection."
+        }
+      ],
+      "relationship": "state_subset",
+      "needs_review": true,
+      "note": "GA's bare 'create dot plots' statement omits 4.MD.4's fraction-of-a-unit data requirement and its solve-problems-using-the-plot component -- narrower than its one CCSS match."
+    },
+    {
+      "state_code": "4.GSR.7.1",
+      "state_description": "Recognize angles as geometric shapes formed when two rays share a common endpoint. Draw right, acute, and obtuse angles based on the relationship of the angle measure to 90 degrees.",
+      "ccss_codes": [
+        {
+          "code": "4.G.1",
+          "description": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures."
+        },
+        {
+          "code": "4.MD.5a",
+          "description": "An angle is measured with reference to a circle with its center at the common endpoint of the rays, by considering the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns through 1/360 of a circle is called a \"one-degree angle,\" and can be used to measure angles."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Recognizing angles as ray-pairs sharing an endpoint (4.MD.5a's conceptual framing) and drawing right/acute/obtuse angles (4.G.1's drawing skill) span two CCSS codes -- merge."
+    },
+    {
+      "state_code": "4.GSR.7.2",
+      "state_description": "Measure angles in reference to a circle with the center at the common endpoint of two rays. Determine an angle\u2019s measure in relation to the 360 degrees in a circle through division or as a missing factor problem.",
+      "ccss_codes": [
+        {
+          "code": "4.MD.5a",
+          "description": "An angle is measured with reference to a circle with its center at the common endpoint of the rays, by considering the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns through 1/360 of a circle is called a \"one-degree angle,\" and can be used to measure angles."
+        },
+        {
+          "code": "4.MD.5b",
+          "description": "An angle that turns through n one-degree angles is said to have an angle measure of n degrees."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Measuring an angle in reference to a circle (4.MD.5a) and determining measure via degree-counting or missing-factor reasoning (4.MD.5b) span two CCSS codes -- merge."
+    },
+    {
+      "state_code": "4.GSR.8.1",
+      "state_description": "Explore, investigate, and draw points, lines, line segments, rays, angles (right, acute, obtuse), perpendicular lines, parallel lines, and lines of symmetry. Identify these in two-dimensional figures.",
+      "ccss_codes": [
+        {
+          "code": "4.G.1",
+          "description": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures."
+        },
+        {
+          "code": "4.G.3",
+          "description": "Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded along the line into matching parts. Identify line-symmetric figures and draw lines of symmetry."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Drawing points/lines/rays/angles/perpendicular/parallel lines (4.G.1) plus lines of symmetry (4.G.3) span two CCSS codes -- merge."
+    },
+    {
+      "state_code": "4.GSR.8.2",
+      "state_description": "Classify, compare, and contrast polygons based on lines of symmetry, the presence or absence of parallel or perpendicular line segments, or the presence or absence of angles of a specified size and based on side lengths.",
+      "ccss_codes": [
+        {
+          "code": "4.G.2",
+          "description": "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "GA additionally classifies by lines of symmetry and side lengths, not stated in 4.G.2's angle/parallel/perpendicular-only framing."
+    },
+    {
+      "state_code": "4.GSR.8.3",
+      "state_description": "Solve problems involving area and perimeter of composite rectangles involving whole numbers with known side lengths.",
+      "ccss_codes": [
+        {
+          "code": "4.MD.3",
+          "description": "Apply the area and perimeter formulas for rectangles in real world and mathematical problems. For example, find the width of a rectangular room given the area of the flooring and the length, by viewing the area formula as a multiplication equation with an unknown factor."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "GA extends CCSS 4.MD.3's rectangle area/perimeter formulas to composite rectangles, not stated in 4.MD.3."
+    },
+    {
+      "state_code": "5.NR.1.1",
+      "state_description": "Explain that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and $\\frac{1}{10}$ of what it represents in the place to its left.",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.1",
+          "description": "Recognize that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and 1/10 of what it represents in the place to its left."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "10x/one-tenth place-value relationship statement matches verbatim."
+    },
+    {
+      "state_code": "5.NR.1.2",
+      "state_description": "Explain patterns in the placement of digits when multiplied or divided by a power of 10. Use whole-number exponents to denote powers of 10, up to $10^3$.",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.2",
+          "description": "Explain patterns in the number of zeros of the product when multiplying a number by powers of 10, and explain patterns in the placement of the decimal point when a decimal is multiplied or divided by a power of 10. Use whole-number exponents to denote powers of 10."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Patterns when multiplying/dividing by powers of 10 matches verbatim."
+    },
+    {
+      "state_code": "5.NR.2.1",
+      "state_description": "Fluently multiply multi-digit (up to 3- digit by 2-digit) whole numbers to solve authentic problems.",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.5",
+          "description": "Fluently multiply multi-digit whole numbers using the standard algorithm."
+        }
+      ],
+      "relationship": "state_subset",
+      "needs_review": true,
+      "note": "CCSS 5.NBT.5 is general multi-digit multiplication; GA restricts to 'up to 3-digit by 2-digit', a real size cap CCSS doesn't state."
+    },
+    {
+      "state_code": "5.NR.2.2",
+      "state_description": "Fluently divide multi-digit whole numbers (up to 4-digit dividends and 2-digit divisors no greater than 25) to solve practical problems.",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.6",
+          "description": "Find whole-number quotients of whole numbers with up to four-digit dividends and two-digit divisors, using strategies based on place value, the properties of operations, and/or the relationship between multiplication and division. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models."
+        }
+      ],
+      "relationship": "state_subset",
+      "needs_review": true,
+      "note": "CCSS allows any 2-digit divisor; GA further restricts divisors to 25 or less."
+    },
+    {
+      "state_code": "5.NR.3.1",
+      "state_description": "Explain the meaning of a fraction as division of the numerator by the denominator ($\\frac{a}{b}$ = a \u00f7 b). Solve problems involving division of whole numbers leading to answers in the form of fractions or mixed numbers.",
+      "ccss_codes": [
+        {
+          "code": "5.NF.3",
+          "description": "Interpret a fraction as division of the numerator by the denominator (a/b = a / b). Solve word problems involving division of whole numbers leading to answers in the form of fractions or mixed numbers, e.g., by using visual fraction models or equations to represent the problem. For example, interpret 3/4 as the result of dividing 3 by 4, noting that 3/4 multiplied by 4 equals 3, and that when 3 wholes are shared equally among 4 people each person has a share of size 3/4. If 9 people want to share a 50-pound sack of rice equally by weight, how many pounds of rice should each person get? Between what two whole numbers does your answer lie?"
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Fraction as division of numerator by denominator matches verbatim."
+    },
+    {
+      "state_code": "5.NR.3.2",
+      "state_description": "Compare and order up to three fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies.",
+      "ccss_codes": [
+        {
+          "code": "4.NF.2",
+          "description": "Compare two fractions with different numerators and different denominators, e.g., by creating common denominators or numerators, or by comparing to a benchmark fraction such as 1/2. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
+        }
+      ],
+      "relationship": "partial",
+      "needs_review": true,
+      "note": "Extends CCSS 4.NF.2's two-fraction comparison to three fractions -- a scope extension beyond the nearest anchor, not a clean grade shift."
+    },
+    {
+      "state_code": "5.NR.3.3",
+      "state_description": "Model and solve problems involving addition and subtraction of fractions and mixed numbers with unlike denominators.",
+      "ccss_codes": [
+        {
+          "code": "5.NF.1",
+          "description": "Add and subtract fractions with unlike denominators (including mixed numbers) by replacing given fractions with equivalent fractions in such a way as to produce an equivalent sum or difference of fractions with like denominators. For example, 2/3 + 5/4 = 8/12 + 15/12 = 23/12. (In general, a/b + c/d = (ad + bc)/bd.)"
+        },
+        {
+          "code": "5.NF.2",
+          "description": "Solve word problems involving addition and subtraction of fractions referring to the same whole, including cases of unlike denominators, e.g., by using visual fraction models or equations to represent the problem. Use benchmark fractions and number sense of fractions to estimate mentally and assess the reasonableness of answers. For example, recognize an incorrect result 2/5 + 1/2 = 3/7, by observing that 3/7 < 1/2."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Add/subtract fractions unlike denominators spans the computation standard (5.NF.1) and its word-problem application (5.NF.2) -- merge."
+    },
+    {
+      "state_code": "5.NR.3.4",
+      "state_description": "Model and solve problems involving multiplication of a fraction and a whole number.",
+      "ccss_codes": [
+        {
+          "code": "5.NF.4a",
+          "description": "Interpret the product (a/b) x q as a parts of a partition of q into b equal parts; equivalently, as the result of a sequence of operations a x q / b. For example, use a visual fraction model to show (2/3) x 4 = 8/3, and create a story context for this equation. Do the same with (2/3) x (4/5) = 8/15. (In general, (a/b) x (c/d) = ac/bd.)"
+        },
+        {
+          "code": "5.NF.6",
+          "description": "Solve real world problems involving multiplication of fractions and mixed numbers, e.g., by using visual fraction models or equations to represent the problem."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Multiplying a fraction and whole number spans the conceptual interpretation (5.NF.4a) and its real-world problem-solving application (5.NF.6) -- merge."
+    },
+    {
+      "state_code": "5.NR.3.5",
+      "state_description": "Explain why multiplying a whole number by a fraction greater than one results in a product greater than the whole number, and why multiplying a whole number by a fraction less than one results in a product less than the whole number and multiplying a whole number by a fraction equal to one results in a product equal to the whole number.",
+      "ccss_codes": [
+        {
+          "code": "5.NF.5a",
+          "description": "Comparing the size of a product to the size of one factor on the basis of the size of the other factor, without performing the indicated multiplication."
+        },
+        {
+          "code": "5.NF.5b",
+          "description": "Explaining why multiplying a given number by a fraction greater than 1 results in a product greater than the given number (recognizing multiplication by whole numbers greater than 1 as a familiar case); explaining why multiplying a given number by a fraction less than 1 results in a product smaller than the given number; and relating the principle of fraction equivalence a/b = (n x a)/(n x b) to the effect of multiplying a/b by 1."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Explaining product-size relative to factors spans comparing product size without multiplying (5.NF.5a) and explaining why (5.NF.5b) -- merge."
+    },
+    {
+      "state_code": "5.NR.3.6",
+      "state_description": "Model and solve problems involving division of a unit fraction by a whole number and a whole number by a unit fraction.",
+      "ccss_codes": [
+        {
+          "code": "5.NF.7a",
+          "description": "Interpret division of a unit fraction by a non-zero whole number, and compute such quotients. For example, create a story context for (1/3) / 4, and use a visual fraction model to show the quotient. Use the relationship between multiplication and division to explain that (1/3) / 4 = 1/12 because (1/12) x 4 = 1/3."
+        },
+        {
+          "code": "5.NF.7b",
+          "description": "Interpret division of a whole number by a unit fraction, and compute such quotients. For example, create a story context for 4 / (1/5), and use a visual fraction model to show the quotient. Use the relationship between multiplication and division to explain that 4 / (1/5) = 20 because 20 x (1/5) = 4."
+        },
+        {
+          "code": "5.NF.7c",
+          "description": "Solve real world problems involving division of unit fractions by non-zero whole numbers and division of whole numbers by unit fractions, e.g., by using visual fraction models and equations to represent the problem. For example, how much chocolate will each person get if 3 people share 1/2 lb of chocolate equally? How many 1/3-cup servings are in 2 cups of raisins?"
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Dividing unit fraction by whole number and whole number by unit fraction spans both interpretation standards and their word-problem application -- merge."
+    },
+    {
+      "state_code": "5.NR.4.1",
+      "state_description": "Read and write decimal numbers to the thousandths place using base-ten numerals written in standard form and expanded form.",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.3a",
+          "description": "Read and write decimals to thousandths using base-ten numerals, number names, and expanded form, e.g., 347.392 = 3 x 100 + 4 x 10 + 7 x 1 + 3 x (1/10) + 9 x (1/100) + 2 x (1/1000)."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Read/write decimals to thousandths matches verbatim."
+    },
+    {
+      "state_code": "5.NR.4.2",
+      "state_description": "Represent, compare, and order decimal numbers to the thousandths place based on the meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons.",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.3b",
+          "description": "Compare two decimals to thousandths based on meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "CCSS 5.NBT.3b is compare-only; GA adds 'represent' and 'order' (multiple numbers)."
+    },
+    {
+      "state_code": "5.NR.4.3",
+      "state_description": "Use place value understanding to round decimal numbers to the hundredths place.",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.4",
+          "description": "Use place value understanding to round decimals to any place."
+        }
+      ],
+      "relationship": "state_subset",
+      "needs_review": true,
+      "note": "CCSS allows rounding decimals to any place; GA restricts to hundredths only."
+    },
+    {
+      "state_code": "5.NR.4.4",
+      "state_description": "Solve problems involving addition and subtraction of decimal numbers to the hundredths place using a variety of strategies.",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.7",
+          "description": "Add, subtract, multiply, and divide decimals to hundredths, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used."
+        }
+      ],
+      "relationship": "state_subset",
+      "needs_review": true,
+      "note": "CCSS 5.NBT.7 covers add/subtract/multiply/divide decimals to hundredths; GA covers only add/subtract."
+    },
+    {
+      "state_code": "5.NR.5.1",
+      "state_description": "Write, interpret, and evaluate simple numerical expressions involving whole numbers with or without grouping symbols to represent actual situations.",
+      "ccss_codes": [
+        {
+          "code": "5.OA.1",
+          "description": "Use parentheses, brackets, or braces in numerical expressions, and evaluate expressions with these symbols."
+        },
+        {
+          "code": "5.OA.2",
+          "description": "Write simple expressions that record calculations with numbers, and interpret numerical expressions without evaluating them. For example, express the calculation \"add 8 and 7, then multiply by 2\" as 2 x (8 + 7). Recognize that 3 x (18932 + 921) is three times as large as 18932 + 921, without having to calculate the indicated sum or product."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Write/interpret/evaluate expressions spans using grouping symbols to evaluate (5.OA.1) and writing/interpreting expressions (5.OA.2) -- merge."
+    },
+    {
+      "state_code": "5.PAR.6.1",
+      "state_description": "Generate two numerical patterns using two given rules. Identify apparent relationships between corresponding terms by completing a table.",
+      "ccss_codes": [
+        {
+          "code": "5.OA.3",
+          "description": "Generate two numerical patterns using two given rules. Identify apparent relationships between corresponding terms. Form ordered pairs consisting of corresponding terms from the two patterns, and graph the ordered pairs on a coordinate plane. For example, given the rule \"Add 3\" and the starting number 0, and given the rule \"Add 6\" and the starting number 0, generate terms in the resulting sequences, and observe that the terms in one sequence are twice the corresponding terms in the other sequence. Explain informally why this is so."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The generate-two-patterns/table half of 5.OA.3 (the ordered-pairs/graphing half is 5.PAR.6.2) -- split."
+    },
+    {
+      "state_code": "5.PAR.6.2",
+      "state_description": "Represent problems by plotting ordered pairs and explain coordinate values of points in the first quadrant of the coordinate plane.",
+      "ccss_codes": [
+        {
+          "code": "5.OA.3",
+          "description": "Generate two numerical patterns using two given rules. Identify apparent relationships between corresponding terms. Form ordered pairs consisting of corresponding terms from the two patterns, and graph the ordered pairs on a coordinate plane. For example, given the rule \"Add 3\" and the starting number 0, and given the rule \"Add 6\" and the starting number 0, generate terms in the resulting sequences, and observe that the terms in one sequence are twice the corresponding terms in the other sequence. Explain informally why this is so."
+        },
+        {
+          "code": "5.G.1",
+          "description": "Use a pair of perpendicular number lines, called axes, to define a coordinate system, with the intersection of the lines (the origin) arranged to coincide with the 0 on each line and a given point in the plane located by using an ordered pair of numbers, called its coordinates. Understand that the first number indicates how far to travel from the origin in the direction of one axis, and the second number indicates how far to travel in the direction of the second axis, with the convention that the names of the two axes and the coordinates correspond (e.g., x-axis and x-coordinate, y-axis and y-coordinate)."
+        },
+        {
+          "code": "5.G.2",
+          "description": "Represent real world and mathematical problems by graphing points in the first quadrant of the coordinate plane, and interpret coordinate values of points in the context of the situation."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Plotting ordered pairs and explaining coordinate values spans 5.OA.3's ordered-pairs half plus the coordinate-system (5.G.1) and graphing-in-context (5.G.2) standards -- merge."
+    },
+    {
+      "state_code": "5.MDR.7.1",
+      "state_description": "Explore realistic problems involving different units of measurement, including distance, mass, weight, volume, and time.",
+      "ccss_codes": [
+        {
+          "code": "5.MD.1",
+          "description": "Convert among different-sized standard measurement units within a given measurement system (e.g., convert 5 cm to 0.05 m), and use these conversions in solving multi-step, real world problems."
+        }
+      ],
+      "relationship": "partial",
+      "needs_review": true,
+      "note": "Generic 'explore problems involving different units' is vaguer than CCSS 5.MD.1's specific unit-conversion-and-problem-solving requirement."
+    },
+    {
+      "state_code": "5.MDR.7.2",
+      "state_description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life",
+      "ccss_codes": [],
+      "relationship": "none",
+      "needs_review": true,
+      "note": "No Grade 5 CCSS standard covers generic ask-and-answer-questions-from-graphical-displays; Grade 5 CCSS measurement/data content is about conversion and volume, not generic data display."
+    },
+    {
+      "state_code": "5.MDR.7.3",
+      "state_description": "Convert among units within the metric system and then apply these conversions to solve multistep, practical problems.",
+      "ccss_codes": [
+        {
+          "code": "5.MD.1",
+          "description": "Convert among different-sized standard measurement units within a given measurement system (e.g., convert 5 cm to 0.05 m), and use these conversions in solving multi-step, real world problems."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The metric-system-conversion half of 5.MD.1 (the customary-system half is 5.MDR.7.4) -- split."
+    },
+    {
+      "state_code": "5.MDR.7.4",
+      "state_description": "Convert among units within relative sizes of measurement units within the customary measurement system.",
+      "ccss_codes": [
+        {
+          "code": "5.MD.1",
+          "description": "Convert among different-sized standard measurement units within a given measurement system (e.g., convert 5 cm to 0.05 m), and use these conversions in solving multi-step, real world problems."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "The customary-system-conversion half of 5.MD.1, joined by 5.MDR.7.3 -- split."
+    },
+    {
+      "state_code": "5.GSR.8.1",
+      "state_description": "Classify, compare, and contrast polygons based on properties.",
+      "ccss_codes": [
+        {
+          "code": "5.G.4",
+          "description": "Classify two-dimensional figures in a hierarchy based on properties."
+        }
+      ],
+      "relationship": "state_subset",
+      "needs_review": true,
+      "note": "GA's bare 'classify based on properties' omits 5.G.4's specific hierarchy-classification requirement."
+    },
+    {
+      "state_code": "5.GSR.8.2",
+      "state_description": "Determine, through exploration and investigation, that attributes belonging to a category of two-dimensional figures also belong to all subcategories of that category.",
+      "ccss_codes": [
+        {
+          "code": "5.G.3",
+          "description": "Understand that attributes belonging to a category of two-dimensional figures also belong to all subcategories of that category. For example, all rectangles have four right angles and squares are rectangles, so all squares have four right angles."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Attributes-belong-to-subcategories statement matches verbatim."
+    },
+    {
+      "state_code": "5.GSR.8.3",
+      "state_description": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
+      "ccss_codes": [
+        {
+          "code": "5.MD.4",
+          "description": "Measure volumes by counting unit cubes, using cubic cm, cubic in, cubic ft, and improvised units."
+        },
+        {
+          "code": "5.MD.5a",
+          "description": "Find the volume of a right rectangular prism with whole-number side lengths by packing it with unit cubes, and show that the volume is the same as would be found by multiplying the edge lengths, equivalently by multiplying the height by the area of the base. Represent threefold whole-number products as volumes, e.g., to represent the associative property of multiplication."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Investigating volume by packing unit cubes spans counting unit cubes (5.MD.4) and the packing-based volume-formula justification (5.MD.5a) -- merge."
+    },
+    {
+      "state_code": "5.GSR.8.4",
+      "state_description": "Discover and explain how the volume of a right rectangular prism can be found by multiplying the area of the base times the height to solve authentic, mathematical problems.",
+      "ccss_codes": [
+        {
+          "code": "5.MD.5b",
+          "description": "Apply the formulas V = l x w x h and V = b x h for rectangular prisms to find volumes of right rectangular prisms with whole-number edge lengths in the context of solving real world and mathematical problems."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Volume via base-area-times-height matches the V=lwh/V=Bxh formula standard verbatim."
+    }
+  ]
+}

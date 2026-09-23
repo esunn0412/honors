@@ -1,0 +1,609 @@
+{
+  "subject": "Mathematics",
+  "grade": "4",
+  "source": "Georgia's K-12 Mathematics Standards, 2021, Georgia Department of Education (GaDOE)",
+  "source_document": "dat/ga_k8_math_standards.pdf",
+  "source_pages": "pp. 45-60",
+  "notes": {
+    "what_this_is": "See processed/standards/georgia_math_guidance_0.json notes.what_this_is.",
+    "verbatim_policy": "Every bullet is a verbatim transcription checked against the source page images, not paraphrased.",
+    "excluded_content": "No photograph exclusions this grade -- all diagrams found are clean instructional graphics (patterns, bar/grid fraction models, number lines, dot plots, shape sets), kept in full.",
+    "diagrams": "This is the largest diagram set so far (17 files). Most were clean embedded image objects extracted directly via pdfimages. One exception: 4.PAR.3.2's growing red/blue block-tower figure is vector-drawn rather than a raster image, so it was salvaged by rendering the page at 300dpi and cropping the diagram region, same technique used for Grade 2's 2.NR.2.3."
+  },
+  "domains": [
+    {
+      "code": "4.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "note": "No Evidence of Student Learning breakdown in the source, same as prior grades."
+    },
+    {
+      "code": "4.NR",
+      "name": "Numerical Reasoning",
+      "standards": [
+        {
+          "code": "4.NR.1",
+          "big_idea_note": "NUMERICAL REASONING -- place value, rounding, comparisons with multi-digit numbers, addition and subtraction, multiplicative comparisons, multiplication, and division involving whole numbers",
+          "description": "Recognize patterns within the base ten place value system with quantities presented in real-life situations to compare and round multi-digit whole numbers through the hundred-thousands place.",
+          "sub_standards": [
+            {
+              "code": "4.NR.1.1",
+              "expectation": "Read and write multi-digit whole numbers to the hundred-thousands place using base-ten numerals and expanded form.",
+              "age_developmentally_appropriate": [
+                "Students are not expected to write numbers in word form."
+              ]
+            },
+            {
+              "code": "4.NR.1.2",
+              "expectation": "Recognize and show that a digit in one place has a value ten times greater than what it represents in the place to its right and extend this understanding to determine the value of a digit when it is shifted to the left or right, based on the relationship between multiplication and division.",
+              "fundamentals": [
+                "Students should be able to use numerical reasoning to represent and explain using concrete materials, the relationship among the numbers 1, 10, 100, and 1,000.  Students should be able to extend the pattern to the hundred-thousands place.",
+                "Students should be able to recognize the relationship of same digits located in different places in a whole number."
+              ],
+              "examples": [
+                "The population of Atlanta is about 500,000 people and the population of Valdosta is about 50,000 people.  How many times greater is the population of Atlanta than Valdosta?"
+              ]
+            },
+            {
+              "code": "4.NR.1.3",
+              "expectation": "Use place value reasoning to represent, compare, and order multi-digit numbers, using >, =, and < symbols to record the results of comparisons.",
+              "fundamentals": [
+                "Students should be able to order up to 5 whole numbers less than 1,000,000 through the hundred-thousands place."
+              ],
+              "age_developmentally_appropriate": [
+                "Students are not expected to use more than two inequality symbols when recording comparisons (< or >)."
+              ]
+            },
+            {
+              "code": "4.NR.1.4",
+              "expectation": "Use place value understanding to round multi-digit whole numbers.",
+              "age_developmentally_appropriate": [
+                "Grade 4 students should explore rounding within multiple authentic situations.",
+                "Students should be able to round whole numbers to the 1,000s, 10,000s and 100,000s."
+              ],
+              "strategies_and_methods": [
+                "Students should locate numbers on a number line to determine the nearest multiple of 1,000s, 10,000s or 100,000s."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "4.NR.2",
+          "description": "Using part-whole strategies, solve problems involving addition and subtraction through the hundred-thousands place, as well as multiplication and division of multi-digit whole numbers presented in real-life, mathematical situations.",
+          "sub_standards": [
+            {
+              "code": "4.NR.2.1",
+              "expectation": "Fluently add and subtract multi-digit numbers to solve practical, mathematical problems using place value understanding, properties of operations, and relationships between operations.",
+              "fundamentals": [
+                "Students should fluently (flexibly, accurately, and efficiently) add and subtract multi-digit whole numbers, to solve relevant, mathematical problems using efficient and flexible procedures, based on knowledge of place value and properties of operations.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "terminology": [
+                "Efficiency in mathematics is the ability to produce answers relatively easily with a minimal number of steps.",
+                "Flexibility is the ability to think about a problem in more than one way and to adapt or adjust thinking, if necessary.",
+                "Accuracy is the ability to produce mathematically precise answers.",
+                "Appropriateness is the ability to select and apply a strategy that is appropriate for solving a given problem efficiently."
+              ],
+              "age_developmentally_appropriate": [
+                "Efficiency means the student is able to flexibly use strategies appropriate for the given problem with ease.",
+                "Efficiency does not mean students should be timed."
+              ],
+              "strategies_and_methods": [
+                "An efficient strategy is one that the student can carry out easily, keeping track of sub-problems and making use of intermediate results to solve the problem.  Efficiency means the student is able to flexibly use strategies appropriate for the given problem with ease.",
+                "Students should be given the choice of which procedure they can use.",
+                "Students should add and subtract multi-digit whole numbers within 100,000, to solve relevant, mathematical problems using efficient and generalizable procedures, based on knowledge of place value and properties of operations."
+              ]
+            },
+            {
+              "code": "4.NR.2.2",
+              "expectation": "Interpret, model, and solve problems involving multiplicative comparison.",
+              "fundamentals": [
+                "Students should be able to solve relevant, mathematical problems involving multiplicative comparison.",
+                "Students should be able to distinguish multiplicative comparison from additive comparison."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be able to demonstrate an understanding of simple multiplicative relationships by using concrete materials, drawings, and equations with a variable for the unknown number to represent the problem."
+              ],
+              "terminology": [
+                "The terms below are used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Multiplicative comparison – a comparison situation based on one set of a quantity being a particular multiple of the other set within the comparison.",
+                "Additive comparison – involves two distinct quantities and the difference between them."
+              ],
+              "examples": [
+                "Mara has four pencils. Josh has three times as many pencils as Mara. How many pencils does Josh have?"
+              ]
+            },
+            {
+              "code": "4.NR.2.3",
+              "expectation": "Solve relevant problems involving multiplication of a number with up to four digits by a 1-digit whole number or involving multiplication of two two-digit numbers using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models.",
+              "strategies_and_methods": [
+                "Students should be able to solve relevant, mathematical problems involving the multiplication of a number with up to four digits by a 1-digit whole number.",
+                "Students should be able to illustrate and explain their calculations using equations, rectangular arrays, and/or area models for all numbers included in the learning objective.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "examples": [
+                "There are 7 boxes of chocolates. Each box contains 16 chocolates. How many chocolates are there all together?",
+                "The school bought thirty-nine cases of popcorn for the school carnival.  Each case contained 15 bags of popcorn.  How many bags of popcorn is that all together?"
+              ]
+            },
+            {
+              "code": "4.NR.2.4",
+              "expectation": "Solve authentic division problems involving up to 4-digit dividends and 1-digit divisors (including whole number quotients with remainders) using strategies based on place-value understanding, properties of the operations, and the relationships between operations.",
+              "fundamentals": [
+                "Students should be able to solve mathematical problems related to everyday life involving division of whole numbers.",
+                "Authentic problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be able to illustrate and explain their calculations using equations, rectangular arrays, and/or area models.",
+                "Examples of different strategies and representations can be found within the Computational Strategies for Whole Numbers document found in the appendices."
+              ],
+              "age_developmentally_appropriate": [
+                "Long division is not an expectation at this grade level."
+              ],
+              "examples": [
+                "Antonio won a jar of 373 jellybeans in a school contest. He wants to share them.  He and his 7 friends will share them.  How many jellybeans will each of the friends get?",
+                "Possible solution:  373 / 8 = (320 / 8) + (40 / 8) + (13 / 8) = 46 with 5 jellybeans left over."
+              ]
+            },
+            {
+              "code": "4.NR.2.5",
+              "expectation": "Solve multi-step problems using addition, subtraction, multiplication, and division involving whole numbers.  Use mental computation and estimation strategies to justify the reasonableness of solutions.",
+              "fundamentals": [
+                "Students should be able to use the four operations to solve authentic, mathematical problems."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should represent and model problems using equations and diagrams with a variable for the unknown quantity."
+              ],
+              "age_developmentally_appropriate": [
+                "Problems should include solutions in which remainders must be interpreted."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "4.NR.4",
+          "big_idea_note": "NUMERICAL REASONING -- fraction equivalence, comparison of fractions, and addition and subtraction of fractions with like denominators",
+          "description": "Solve real-life problems involving addition, subtraction, equivalence, and comparison of fractions with denominators of 2, 3, 4, 5, 6, 8, 10, 12, and 100 using part-whole strategies and visual models.",
+          "sub_standards": [
+            {
+              "code": "4.NR.4.1",
+              "expectation": "Using concrete materials, drawings, and number lines, demonstrate and explain the relationship between equivalent fractions, including fractions greater than one, and explain the identity property of multiplication as it relates to equivalent fractions. Generate equivalent fractions using these relationships.",
+              "age_developmentally_appropriate": [
+                "This expectation includes fractions greater than 1.",
+                "Fractions should be limited to denominators of 2, 3, 4, 5, 6, 8, 10, 12, and 100."
+              ],
+              "strategies_and_methods": [
+                "Students should be provided with opportunities to demonstrate mastery of this expectation through solving and discussing genuine, mathematical problems related to everyday life.",
+                "Concrete materials may include fraction circles, fraction strips, pattern blocks.",
+                "Students may represent their problems and explain their reasoning with drawing and number lines.",
+                "Students should be able to discover, explain, and generalize the relationship between the identity property of multiplication and equivalent fractions (i.e., paper folding activities, number lines, etc.)."
+              ],
+              "fundamentals": [
+                "Students should be able to describe how the number and size of the parts differ even though the fractions themselves are the same size. Use this principle to recognize and generate equivalent fractions.",
+                "Students should be able to explain fraction equivalence as a multiplicative relationship, not additive.",
+                "Students should be able to explain why a/b = (n x a)/(n x b) is a true mathematical statement, whereas a/b = (n+a)/(n+b) is NOT a true mathematical statement."
+              ],
+              "examples": [
+                "Peter is giving half of his candy bar to four friends. Provide a mathematical representation to show this scenario.",
+                "Possible student response: 1/2 = (4 x 1)/(4 x 2) = 4/8"
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.NR.4.1_bar_half_eighths.png", "caption": "Two bars of equal length stacked: the top bar split into 2 equal sections with the first shaded pink; the bottom bar split into 8 equal sections with the first 4 shaded pink, illustrating 1/2 = 4/8." }
+              ]
+            },
+            {
+              "code": "4.NR.4.2",
+              "expectation": "Compare two fractions with the same numerator or the same denominator by reasoning about their size and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+              "fundamentals": [
+                "Students should be able to recognize that comparisons are valid only when the two fractions refer to the same whole.",
+                "Students should record the results of comparisons with symbols >, =, or <, and justify the conclusions."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be given fractions with common numerators to compare."
+              ],
+              "examples": [
+                "Jamie and Kendra each had the same grid to color using any pattern they wished. Jamie colored 2/3 of her grid pattern and Kendra colored 2/5 of her grid pattern.  Who colored more? Jamie colored more because thirds are bigger than fifths and since they both colored two parts, 2/3 has to be bigger than 2/5. Each third (yellow) is larger than each fifth (green)",
+                "Kennedy ran 5/8 of a mile during practice and Alice ran 7/8 of a mile.  Who ran farther? Alice ran farther because the distances they ran were both the same unit (eighths), so whoever had more eighths ran the greatest distance. Each section above represents one-eighth of a mile. All 8 pieces represent the whole mile. Kennedy ran the length of 5 pieces and Alice ran the length of 7 pieces, so Alice ran the greater distance."
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.NR.4.2_bars_thirds_fifths.png", "caption": "Two bars of equal length: a yellow bar split into 3 equal sections (thirds) and a green bar split into 5 equal sections (fifths), illustrating that each third is larger than each fifth." },
+                { "image": "diagrams/4.NR.4.2_bar_eighths.png", "caption": "A pink/red bar split into 8 equal sections, representing eighths of a mile for the Kennedy/Alice running comparison." }
+              ]
+            },
+            {
+              "code": "4.NR.4.3",
+              "expectation": "Compare two fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+              "fundamentals": [
+                "Students should be able to reason with the fractional parts to make decisions involving comparisons.",
+                "Students should record the results of comparisons with symbols >, =, or <, and justify the conclusions.",
+                "Students should be able to recognize that comparisons are valid only when the two fractions refer to the same whole."
+              ],
+              "strategies_and_methods": [
+                "Tools and strategies could include visual fraction models, create common denominators or numerators, or compare to benchmarks such as 0, 1/2 and 1 or missing parts to a whole."
+              ],
+              "examples": [
+                "Compare 5/6 and 7/8. Possible student response:  When comparing 5/6 and 7/8, each are one part away from a whole, and 1/8 is a smaller piece so 7/8 is greater than 5/6.  Students should be able to reason with the fractional parts to make decisions involving comparisons."
+              ]
+            },
+            {
+              "code": "4.NR.4.4",
+              "expectation": "Represent whole numbers and fractions as the sum of unit fractions.",
+              "fundamentals": [
+                "Students should be able to break apart (decompose) whole numbers and fractions as the sum of unit fractions."
+              ],
+              "strategies_and_methods": [
+                "Students can justify their work using a visual fraction representation.",
+                "Students may solve problems in different ways and have the flexibility to choose a mathematical strategy that allows them to make sense of and strategically solve problems using efficient methods that are most comfortable for and makes sense to them."
+              ],
+              "examples": [
+                "Alex has a whole pizza. How can it be cut so that it can be shared with (4, 6, 8, 12) people? What fraction of the whole pizza will each person get?",
+                "Express 1 in the form 1 = 4/4 (1 whole is equal to four fourths 1/4+1/4+1/4+1/4 = 4/4 = 1) recognize that additional wholes cut into fourths can also be written as the sum of unit fractions (2 wholes is equal to eight fourths 1/4+1/4+1/4+1/4+1/4+1/4+1/4+1/4 = 4/4+4/4 = 8/4); recognize that 4/4 = 4 because 4 = 1/1+1/1+1/1+1/1 = 4/1",
+                "Locate 4/4 and 1 at the same point of a number line diagram.",
+                "Express 5/4 as the sum of unit fractions. 5/4 = 1/4+1/4+1/4+1/4+1/4"
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.NR.4.4_number_line_fourths.png", "caption": "A number line from 0 to 1 with tick marks at 1/4, 2/4, 3/4, and 4/4, with 0 and 1 labeled above and below the line, illustrating that 4/4 and 1 locate the same point." }
+              ]
+            },
+            {
+              "code": "4.NR.4.5",
+              "expectation": "Represent a fraction as a sum of fractions with the same denominator in more than one way, recording with an equation.",
+              "fundamentals": [
+                "Break apart (decompose) a fraction into a sum of fractions with the same denominator in more than one way, recording each decomposition by an equation."
+              ],
+              "strategies_and_methods": [
+                "Students can justify their work using a visual fraction representation.",
+                "Students may solve problems in different ways and have the flexibility to choose a mathematical strategy that allows them to make sense of and strategically solve problems using efficient methods that are most comfortable for and makes sense to them."
+              ],
+              "examples": [
+                "A piece of ribbon was cut into eighths for a classroom art project. Three pieces were left at the end of the day. Show a mathematical representation of the ribbon that is left. Possible student response: 3/8 = 1/8+1/8+1/8; 3/8 = 1/8+2/8",
+                "Three pans of brownies were cut into eighths to sell at a school function.  7/8 of one pan were sold. How many eighths are left to sell?  Show a mathematical representation of the brownies that are left. Possible student response: 2 1/8 = 1 + 1 + 1/8 = 8/8+8/8+1/8"
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.NR.4.5_bar_ribbon_eighths.png", "caption": "A bar split into 8 equal sections with the first 3 shaded green, illustrating the ribbon example (3/8 of the ribbon remaining)." },
+                { "image": "diagrams/4.NR.4.5_brownie_pans.png", "caption": "Two full gray 2x4-section pans and a third pan with only the first of 8 sections shaded, illustrating 2 whole pans plus 1/8 of a third pan (2 1/8 pans of brownies left to sell)." }
+              ]
+            },
+            {
+              "code": "4.NR.4.6",
+              "expectation": "Add and subtract fractions and mixed numbers with like denominators using a variety of tools.",
+              "fundamentals": [
+                "Students should be able to add and subtract fractions and mixed numbers with the same (like) denominators by joining and separating parts referring to the same whole while solving genuine, mathematical problems related to everyday life."
+              ],
+              "strategies_and_methods": [
+                "Tools include fraction concrete materials, such as Cuisenaire rods, drawings, and number lines.",
+                "Students should be flexible in their choice of strategy when subtracting fractions. Reasoning about the sizes of the fractions and their relationships is the expectation here rather than memorizing regrouping procedures.",
+                "Students may solve problems in different ways and have the flexibility to choose a mathematical strategy that allows them to make sense of and strategically solve problems using efficient methods that are most comfortable for and makes sense to them."
+              ],
+              "examples": [
+                "Luisa needs to know how much bigger her 2 1/4 inch piece of cardstock is than her 1 3/4 inch piece of cardstock in order to finish her project.",
+                "Possible student response: The 2 1/4 inch piece is 2/4 inch bigger than the 1 3/4 inch piece."
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.NR.4.6_number_line_mixed_numbers.png", "caption": "A number line with 1 3/4, 2, and 2 1/4 marked, with two red arcs each labeled 1/4 jumping from 1 3/4 to 2 and from 2 to 2 1/4." }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "4.NR.5",
+          "description": "Solve real-life problems involving addition, equivalence, comparison of fractions with denominators of 10 and 100, and comparison of decimal numbers as tenths and hundredths using part-whole strategies and visual models.",
+          "sub_standards": [
+            {
+              "code": "4.NR.5.1",
+              "expectation": "Demonstrate and explain the concept of equivalent fractions with denominators of 10 and 100, using concrete materials and visual models. Add two fractions with denominators of 10 and 100.",
+              "fundamentals": [
+                "Students should also use mixed numbers and fractions greater than 1.",
+                "Students should express fractions such as 3/10 as 30/100, and add fractions such as 3/10 + 4/100 = 34/100."
+              ],
+              "strategies_and_methods": [
+                "Students should be able to solve authentic, mathematical problems involving the addition of two fractions with denominators of 10 and 100.",
+                "Students should be given multiple opportunities to use visual models to develop part-whole reasoning when building an understanding of equivalent fractions."
+              ],
+              "examples": [
+                "Colin wants to use 5/10 of a board for a project.  He is wondering how he can cut his whole board into pieces that are equivalent to 5/10. What fraction(s) of the whole board can Colin cut the board that are equivalent to 5/10? Use visual models to support your reasoning.",
+                "Possible student response: I know that 5/10 is the same as 50/100 because they both take up the same amount of space in the decimal squares below.  So, 5/10 = 50/100.  I also notice that half of each square is shaded, so I think that 5/10 = 50/100 = 1/2."
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.NR.5.1_grid_5_10_50_100.png", "caption": "A 10x10 grid, the left half (5 of 10 columns) shaded green, illustrating 5/10 = 50/100." },
+                { "image": "diagrams/4.NR.5.1_bar_5_10_50_100.png", "caption": "A bar split into 10 equal sections with the first 5 shaded red, illustrating 5/10." }
+              ]
+            },
+            {
+              "code": "4.NR.5.2",
+              "expectation": "Represent, read, and write fractions with denominators of 10 or 100 using decimal notation, and decimal numbers to the hundredths place as fractions, using concrete materials and drawings.",
+              "fundamentals": [
+                "Represent decimal number values on a place value chart."
+              ],
+              "age_developmentally_appropriate": [
+                "Students are not expected to write word names of decimal numbers at this grade level."
+              ],
+              "strategies_and_methods": [
+                "Concrete materials could include base ten block where the \"flat\" or hundred square is considered one whole where the whole frame is considered one whole."
+              ],
+              "examples": [
+                "Eric overpaid his medical bill by $0.62. When businesses write refund checks, they often write the cents as a fraction. What fraction will the doctor's office use to represent the $0.62 on the check?",
+                "Possible student response: I wrote 62 cents ($0.62) as 62/100 because $0.62 is sixty-two hundredths of a dollar. If I place $0.62 on a number line, it would be between $0.60 and $0.70."
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.NR.5.2_number_line_dollar.png", "caption": "A number line from $0 to $1.00 in increments of $0.10, with $0.62 marked above the line between $0.60 and $0.70." }
+              ]
+            },
+            {
+              "code": "4.NR.5.3",
+              "expectation": "Compare two decimal numbers to the hundredths place by reasoning about their size.  Record the results of comparisons with the symbols >, =, or <, and justify the conclusions.",
+              "fundamentals": [
+                "Recognize that comparisons are valid only when the two decimal numbers refer to the same whole."
+              ],
+              "strategies_and_methods": [
+                "Decimal quantities should be presented within an authentic situation.",
+                "Students should be given multiple opportunities to use visual models to develop part-whole reasoning when comparing decimal numbers.",
+                "Students should be able to determine and explain, through investigation, the relationship between decimal numbers, using a variety of tools (e.g., concrete materials, drawings, number lines) and strategies."
+              ],
+              "examples": [
+                "What do you notice about the fractions 2/10 and 10/100? Write a comparison statement about the two fractions and use visual models to support your reasoning.",
+                "Possible student response: I know that 2/10 is greater than 10/100 because 2/10 takes up more space in the decimal squares below. So, 2/10 > 10/100."
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.NR.5.3_bar_2_10.png", "caption": "A bar split into 10 equal sections with the first 2 shaded red, illustrating 2/10." },
+                { "image": "diagrams/4.NR.5.3_grid_10_100.png", "caption": "A 10x10 grid with 10 of the 100 squares shaded green (one column), illustrating 10/100, for visual comparison against the 2/10 bar." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4.PAR",
+      "name": "Patterning and Algebraic Reasoning",
+      "big_idea_note": "PATTERNING & ALGEBRAIC REASONING -- patterns, input-output tables, factors, multiples, composite numbers, prime numbers",
+      "standards": [
+        {
+          "code": "4.PAR.3",
+          "description": "Generate and analyze patterns, including those involving shapes, input/output diagrams, factors, multiples, prime numbers, and composite numbers.",
+          "sub_standards": [
+            {
+              "code": "4.PAR.3.1",
+              "expectation": "Generate both number and shape patterns that follow a provided rule.",
+              "fundamentals": [
+                "Within numeric patterns, students should be able to connect each term in a growing or shrinking pattern with its term number (e.g., in the sequence 1, 4, 7, 10, ..., the first term is 1, the second term is 4, the third term is 7, and so on), and record the patterns in a table of values that shows the term number.",
+                "Students should be provided with opportunities to explore and extend growing patterns using shapes.",
+                "Students should be provided with opportunities to explore and extend numerical patterns using a given rule.",
+                "Students should be able to identify features of the pattern that were not explicit in the rule itself.",
+                "Students should be able to explain, informally, why a pattern will continue to develop as it does."
+              ],
+              "age_developmentally_appropriate": [
+                "Students are not expected to determine the rule but instead are expected to extend the pattern or complete a pattern.",
+                "Patterns are limited to 8 elements."
+              ],
+              "examples": [
+                "Given the rule \"Add 3\" and a starting number of 1, generate terms in the resulting sequence and observe that the terms appear to alternate between odd and even numbers.",
+                "Use square tiles to generate a growing pattern that shows multiples of four.",
+                "Use the rule, multiply by 3 and add 1 to find the next two stages in the following growing pattern: Where does the pattern multiply by 3?  Where is the \"1\" that is being added as this pattern grows?  Create a different growing pattern using this rule.  Identify where it multiplies by three and where one is added."
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.PAR.3.1_growing_pattern_squares.png", "caption": "A growing pattern of blue plus-sign shapes made of square tiles across three stages, labeled Stage 1, Stage 2, Stage 3, each adding more tiles at multiples of four." },
+                { "image": "diagrams/4.PAR.3.1_growing_pattern_triangles.png", "caption": "A growing pattern of green triangles arranged in a larger triangular shape with one red-outlined triangle at the center, across three stages labeled Stage 1, Stage 2, Stage 3, illustrating the 'multiply by 3 and add 1' rule." }
+              ]
+            },
+            {
+              "code": "4.PAR.3.2",
+              "expectation": "Use input-output rules, tables, and charts to represent and describe patterns, find relationships, and solve problems.",
+              "strategies_and_methods": [
+                "Students should be able to analyze numerical patterns and use input-output tables and charts to represent patterns, find relationships and solve authentic problems."
+              ],
+              "examples": [
+                "A growing L-shaped block pattern with 1 red block and a growing number of blue blocks across stages, tabulated as Stage/Red/Blue/Total: (1,1,2,3), (2,1,4,5), (3,1,6,7), (4,1,8,9), (5,1,10,11), ..., (9,1,18,19)."
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.PAR.3.2_growing_blocks.png", "caption": "Three L-shaped block towers, each with one red block at the base-right and a growing column of blue blocks, illustrating stages 1, 2, and 3 of the Red/Blue/Total pattern table." }
+              ]
+            },
+            {
+              "code": "4.PAR.3.3",
+              "expectation": "Find factor pairs in the range 1-100 and find multiples of single-digit numbers up to 100.",
+              "fundamentals": [
+                "Students should be able to recognize that a whole number is a multiple of each of its factors."
+              ],
+              "examples": [
+                "If there are 24 students in a class, how many unique ways can they be arranged into equal-sized groups?",
+                "Every 8th person of the first hundred people in line for a concert will get a free T-shirt.  Which places in the line will get a T-shirt?"
+              ]
+            },
+            {
+              "code": "4.PAR.3.4",
+              "expectation": "Identify composite numbers and prime numbers and explain the relationship with the factor pairs.",
+              "fundamentals": [
+                "Determine whether a given whole number in the range 1-100 is prime or composite or neither.",
+                "Students should be able to describe the relationship between the numbers related to the factor pairs."
+              ],
+              "terminology": [
+                "Prime number – A whole number greater than 1 that with two unique factors, 1 and itself.",
+                "Composite number – A whole number greater than 1 that has at least one whole-number factor other than 1 and itself."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4.MDR",
+      "name": "Measurement and Data Reasoning",
+      "big_idea_note": "MEASUREMENT & DATA REASONING -- time, metric measurements, distance, elapsed time, liquid volume, mass, and length",
+      "standards": [
+        {
+          "code": "4.MDR.6",
+          "description": "Measure time and objects that exist in the world to solve real-life, mathematical problems and analyze graphical displays of data to answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "4.MDR.6.1",
+              "expectation": "Use the four operations to solve problems involving elapsed time to the nearest minute, intervals of time, metric measurements of liquid volumes, lengths, distances, and masses of objects, including problems involving fractions with like denominators, and also problems that require expressing measurements given in a larger unit in terms of a smaller unit, and expressing a smaller unit in terms of a larger unit based on the idea of equivalence.",
+              "strategies_and_methods": [
+                "Represent measurement quantities, such as time, using number line diagrams that feature a measurement scale.",
+                "Students should reason about the relative sizes of measurement units within the metric system.",
+                "Students should be able to accurately record measurement equivalents in a two-column table."
+              ],
+              "fundamentals": [
+                "Students should express larger units in terms of smaller units within the same measurement system and smaller units in terms of larger units within the same measurement system.",
+                "When expressing measurements given in a smaller unit in terms of a larger unit and expressing a smaller unit in terms of a larger unit, students should be able to explain this conceptually without being expected to use decimal notation."
+              ],
+              "age_developmentally_appropriate": [
+                "Fractions should be limited to denominators of 2, 3, 4, 5, 6, 8, 10, 12, and 100.",
+                "Time measurement should be to the nearest minute.",
+                "Multiplication and division of fractions is not a requirement of this grade level.",
+                "Conversions are not expected in this grade level. The focus here should be on helping learners see the equivalence between quantities represented in different measurement units."
+              ],
+              "terminology": [
+                "Metric measurement units include weight (grams and kilograms), capacity (milliliters and liters), and length (centimeter, meter, and kilometer)."
+              ],
+              "examples": [
+                "What time does Eric have to leave his house to get to the concert by quarter after nine, if the trip takes 90 minutes?",
+                "If you have a prescription for 5,000 mg of medicine, and upon getting it filled, the dosage reads 5 g of medicine, did the pharmacist make a mistake?"
+              ]
+            },
+            {
+              "code": "4.MDR.6.2",
+              "expectation": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+              "fundamentals": [
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "strategies_and_methods": [
+                "Questions should be student generated."
+              ]
+            },
+            {
+              "code": "4.MDR.6.3",
+              "expectation": "Create dot plots to display a distribution of numerical (quantitative) measurement data.",
+              "age_developmentally_appropriate": [
+                "Students should only use rulers marked to the nearest 1/8 of an inch."
+              ],
+              "fundamentals": [
+                "Students should be able to ask and answer questions involving addition and subtraction of fractions with common denominators by using the information presented in dot plots and find the range of the data.",
+                "Dot plots and line plots can be used interchangeably."
+              ],
+              "strategies_and_methods": [
+                "Use rulers to measure lengths and record numerical measurement data to the nearest 1/2, 1/4 and 1/8 of an inch.",
+                "Students should be able to create dot plots to display a distribution of measurements in fractions of a unit (1/2, 1/4, 1/8)."
+              ],
+              "examples": [
+                "Heights of Tomato Plants in Class Garden -- a dot plot of plant heights in inches at 3 1/4, 3 3/4, 4, 4 1/4, 4 1/2, 4 3/4."
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.MDR.6.3_dot_plot_tomato_heights.png", "caption": "A dot plot titled 'Heights of Tomato Plants in Class Garden', x-axis 'Heights, in Inches' marked 3 to 5 in quarter-inch increments, with dots stacked above 3 1/4 (2), 3 3/4 (1), 4 (3), 4 1/4 (2), 4 1/2 (1), 4 3/4 (2), and 5 (1)." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4.GSR",
+      "name": "Geometric and Spatial Reasoning",
+      "big_idea_note": "GEOMETRIC & SPATIAL REASONING -- polygons, points, lines, line segments, rays, angles, perpendicular lines, area, perimeter",
+      "standards": [
+        {
+          "code": "4.GSR.7",
+          "description": "Investigate the concepts of angles and angle measurement to estimate and measure angles.",
+          "sub_standards": [
+            {
+              "code": "4.GSR.7.1",
+              "expectation": "Recognize angles as geometric shapes formed when two rays share a common endpoint.  Draw right, acute, and obtuse angles based on the relationship of the angle measure to 90 degrees.",
+              "age_developmentally_appropriate": [
+                "Students should have opportunities to measure right angles using non-standard units of measurement, such as wedges and unit angles, and standard units of measurement, such as protractors.",
+                "Students at this grade level are not expected to know that straight lines represent 180° angles."
+              ],
+              "fundamentals": [
+                "Students at this grade level should determine whether an angle is acute, obtuse, or right using a known right angle.",
+                "Students should also be able to explore this learning objective by investigating angles within circles.",
+                "Students should be able to represent angle measures using the degree symbol."
+              ]
+            },
+            {
+              "code": "4.GSR.7.2",
+              "expectation": "Measure angles in reference to a circle with the center at the common endpoint of two rays.  Determine an angle's measure in relation to the 360 degrees in a circle through division or as a missing factor problem.",
+              "age_developmentally_appropriate": [
+                "Students should be provided opportunities to explore angle measurement using non-standard units (wedges of a circle) to make sense of how angles are measured.",
+                "Students at this grade level should determine an angle's measure through problem solving using multiplication or division and the fact that a circle has 360 degrees.",
+                "Students can but are not expected to use 180° protractors."
+              ],
+              "fundamentals": [
+                "Angle measurement should be introduced with non-standard tools such as pattern blocks, unit angles, and/or wedges prior to introducing protractors. 360-degree protractors would make an explicit connection to the degrees of a circle and builds conceptual understanding of angles."
+              ],
+              "examples": [
+                "The student can place four squares around the center of a circle.  Since there are 360 degrees in a circle, 360 / 4 = 90, so each square has 90-degree angles."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "4.GSR.8",
+          "description": "Identify and draw geometric objects, classify polygons based on properties, and solve problems involving area and perimeter of rectangular figures.",
+          "sub_standards": [
+            {
+              "code": "4.GSR.8.1",
+              "expectation": "Explore, investigate, and draw points, lines, line segments, rays, angles (right, acute, obtuse), perpendicular lines, parallel lines, and lines of symmetry. Identify these in two-dimensional figures.",
+              "age_developmentally_appropriate": [
+                "Students should explore these concepts using visual tools."
+              ],
+              "fundamentals": [
+                "The intent of this learning objective is for students to investigate specific properties such as perpendicular line segments, lines of symmetry, etc. as they work with two-dimensional figures.",
+                "Students should draw points, lines, line segments, rays, angles (right, acute, and obtuse), and perpendicular lines."
+              ],
+              "terminology": [
+                "Right angle – An angle measuring exactly 90°.",
+                "Acute angle – An angle larger than 0° and smaller than 90°.",
+                "Obtuse angle – An angle larger than 90° and smaller than 180°.",
+                "Perpendicular lines – Two lines that meet to form an intersection at a right angle"
+              ],
+              "strategies_and_methods": [
+                "Students should investigate lines of symmetry in two dimensional figures as a property. This is an extension from work in third grade."
+              ],
+              "examples": [
+                "How many lines of symmetry do each of the quadrilaterals below have? (Kite, Square, Parallelogram, Rhombus, Trapezoid, Isosceles Trapezoid, Rectangle)"
+              ],
+              "diagrams": [
+                { "image": "diagrams/4.GSR.8.1_quadrilaterals.png", "caption": "Seven labeled quadrilateral shapes in blue: Kite, Square, Parallelogram, Rhombus, Trapezoid, Isosceles Trapezoid, and Rectangle, for identifying lines of symmetry." }
+              ]
+            },
+            {
+              "code": "4.GSR.8.2",
+              "expectation": "Classify, compare, and contrast polygons based on lines of symmetry, the presence or absence of parallel or perpendicular line segments, or the presence or absence of angles of a specified size and based on side lengths.",
+              "age_developmentally_appropriate": [
+                "The intent of this learning objective is for students to classify shapes based on specific properties such as perpendicular line segments, lines of symmetry, congruent angles or sides, or a lack of these attributes. The focus should not be on having students memorize terminology.",
+                "This objective does not require students to create a hierarchy."
+              ],
+              "fundamentals": [
+                "Right angles should be indicated with a square symbol.",
+                "Polygons should include triangles, quadrilaterals including kites, trapezoids, rectangles, squares, rhombuses, and other parallelograms and pentagons."
+              ],
+              "strategies_and_methods": [
+                "Students should investigate lines of symmetry in two dimensional figures as a property.  This is an extension from work in third grade."
+              ],
+              "terminology": [
+                "A polygon is a closed figure with at least three straight sides and angles; a polygon is regular only when all sides are equal and all angles are equal; and a polygon is irregular when all sides are not equal or all angles are not equal.",
+                "Isosceles triangle – A triangle containing at least two equal length sides and two equal interior angle measures. Sub-class includes equilateral triangles.",
+                "Equilateral triangle – A triangle with three equal-length sides and three 60-degree interior angles. Also known as an equiangular triangle.",
+                "Scalene triangle – A triangle containing three unequal side lengths and three unequal angle measures.",
+                "Right triangle – a triangle with one right angle.",
+                "Acute triangle – a triangle containing three acute angles.",
+                "Obtuse triangle – a triangle containing one obtuse angle.",
+                "In Georgia resources and assessments, the inclusive definitions for the classification of shapes are used. Therefore, trapezoids are defined using the inclusive definition: at least one pair of parallel sides."
+              ]
+            },
+            {
+              "code": "4.GSR.8.3",
+              "expectation": "Solve problems involving area and perimeter of composite rectangles involving whole numbers with known side lengths.",
+              "age_developmentally_appropriate": [
+                "Students should not be expected to find unknown side lengths when exploring composite rectangles."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,652 @@
+{
+  "metadata": {
+    "description": "Full human review of the flat classification script's (map_state_to_ccss.py) output against every code it did NOT trivially agree on with a prior hand-built mapping -- 25 of the script's 150 GA codes, each independently re-examined against the actual GA and CCSS standard text. 8 verdicts came back 'error' (the script's own classification was wrong; `human_corrected_to` gives the corrected relationship/codes, now baked into runs/ga/mapping_final.json). The other 17 came back 'okay' -- a defensible judgment call, or the script's answer stands as the better one; the script's original output was kept unchanged for those. Combined with 142 codes that needed no review at all, this means 142/150 (95%) of the script's raw output required no correction whatsoever.",
+    "n_reviewed": 25,
+    "n_error": 7,
+    "n_okay": 18
+  },
+  "items": [
+    {
+      "ga_code": "K.NR.1.1",
+      "ga_description": "Count up to 20 objects in a variety of structured arrangements and up to 10 objects in a scattered arrangement.",
+      "error_type": "Merge under-claimed -- reference requires 2+ CCSS codes, flat gave a single-code relationship (exact/state_superset/state_subset), missing one or more codes entirely",
+      "error_type_key": "merge_under_claimed",
+      "flat_script_original": {
+        "relationship": "exact",
+        "ccss_codes": [
+          {
+            "code": "K.CC.5",
+            "description": "Count to answer \"how many?\" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1-20, count out that many objects."
+          }
+        ],
+        "note": "Same counting-arrangement bounds (up to 20 structured, up to 10 scattered)."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "1.NR.2.2",
+      "ga_description": "Use pictures, drawings, and equations to develop strategies for addition and subtraction within 20 by exploring strings of related problems.",
+      "error_type": "Merge vs. split disagreement -- one side says this GA code alone covers multiple CCSS codes (merge), the other says it's one of several GA codes jointly covering a single CCSS code (split)",
+      "error_type_key": "merge_vs_split_disagreement",
+      "flat_script_original": {
+        "relationship": "split",
+        "ccss_codes": [
+          {
+            "code": "1.OA.6",
+            "description": "Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten (e.g., 8 + 6 = 8 + 2 + 4 = 10 + 4 = 14); decomposing a number leading to a ten (e.g., 13 - 4 = 13 - 3 - 1 = 10 - 1 = 9); using the relationship between addition and subtraction (e.g., knowing that 8 + 4 = 12, one knows 12 - 8 = 4); and creating equivalent but easier or known sums (e.g., adding 6 + 7 by creating the known equivalent 6 + 6 + 1 = 12 + 1 = 13)."
+          }
+        ],
+        "note": "Strategy-development-through-related-problems is part of 1.OA.6's own strategy list, joined by 1.NR.2.1/1.NR.2.4 -- split.",
+        "split_siblings": {
+          "1.OA.6": [
+            {
+              "ga_code": "1.NR.2.1",
+              "ga_description": "Use a variety of strategies to solve addition and subtraction problems within 20.",
+              "relationship": "merge"
+            },
+            {
+              "ga_code": "1.NR.2.2",
+              "ga_description": "Use pictures, drawings, and equations to develop strategies for addition and subtraction within 20 by exploring strings of related problems.",
+              "relationship": "split"
+            },
+            {
+              "ga_code": "1.NR.2.4",
+              "ga_description": "Fluently add and subtract within 10 using a variety of strategies.",
+              "relationship": "split"
+            }
+          ]
+        }
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "3.NR.4.1",
+      "ga_description": "Describe a unit fraction and explain how multiple copies of a unit fraction form a non-unit fraction. Use parts of a whole, parts of a set, points on a number line, distances on a number line and area models.",
+      "error_type": "Merge under-claimed -- reference requires 2+ CCSS codes, flat gave a single-code relationship (exact/state_superset/state_subset), missing one or more codes entirely",
+      "error_type_key": "merge_under_claimed",
+      "flat_script_original": {
+        "relationship": "exact",
+        "ccss_codes": [
+          {
+            "code": "3.NF.1",
+            "description": "Understand a fraction 1/b as the quantity formed by 1 part when a whole is partitioned into b equal parts; understand a fraction a/b as the quantity formed by a parts of size 1/b."
+          }
+        ],
+        "note": "Unit fraction concept and multiple-copies framing matches verbatim."
+      },
+      "verdict": "error",
+      "human_corrected_to": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "3.NF.1",
+            "description": "Understand a fraction 1/b as the quantity formed by 1 part when a whole is partitioned into b equal parts; understand a fraction a/b as the quantity formed by a parts of size 1/b."
+          },
+          {
+            "code": "3.NF.2a",
+            "description": "Represent a fraction 1/b on a number line diagram by defining the interval from 0 to 1 as the whole and partitioning it into b equal parts. Recognize that each part has size 1/b and that the endpoint of the part based at 0 locates the number 1/b on the number line."
+          },
+          {
+            "code": "3.NF.2b",
+            "description": "Represent a fraction a/b on a number line diagram by marking off a lengths 1/b from 0. Recognize that the resulting interval has size a/b and that its endpoint locates the number a/b on the number line."
+          }
+        ],
+        "note": ""
+      }
+    },
+    {
+      "ga_code": "3.NR.4.3",
+      "ga_description": "Represent fractions, including fractions greater than one, in multiple ways.",
+      "error_type": "Merge boundary incomplete -- both sides agree on the relationship type (merge or partial), but disagree on the exact code set",
+      "error_type_key": "merge_boundary_incomplete",
+      "flat_script_original": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "3.NF.2a",
+            "description": "Represent a fraction 1/b on a number line diagram by defining the interval from 0 to 1 as the whole and partitioning it into b equal parts. Recognize that each part has size 1/b and that the endpoint of the part based at 0 locates the number 1/b on the number line."
+          },
+          {
+            "code": "3.NF.2b",
+            "description": "Represent a fraction a/b on a number line diagram by marking off a lengths 1/b from 0. Recognize that the resulting interval has size a/b and that its endpoint locates the number a/b on the number line."
+          },
+          {
+            "code": "3.NF.3c",
+            "description": "Express whole numbers as fractions, and recognize fractions that are equivalent to whole numbers. Examples: Express 3 in the form 3 = 3/1; recognize that 6/1 = 6; locate 4/4 and 1 at the same point of a number line diagram."
+          }
+        ],
+        "note": "Representing fractions 'in multiple ways' spans number-line representation (3.NF.2a/2b) and whole-numbers-as-fractions (3.NF.3c) -- merge."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "3.NR.4.4",
+      "ga_description": "Recognize and generate simple equivalent fractions.",
+      "error_type": "Merge under-claimed -- reference requires 2+ CCSS codes, flat gave a single-code relationship (exact/state_superset/state_subset), missing one or more codes entirely",
+      "error_type_key": "merge_under_claimed",
+      "flat_script_original": {
+        "relationship": "exact",
+        "ccss_codes": [
+          {
+            "code": "3.NF.3b",
+            "description": "Recognize and generate simple equivalent fractions, e.g., 1/2 = 2/4, 4/6 = 2/3. Explain why the fractions are equivalent, e.g., by using a visual fraction model."
+          }
+        ],
+        "note": "Recognize/generate simple equivalent fractions matches verbatim."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "3.MDR.5.1",
+      "ga_description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+      "error_type": "Merge boundary incomplete -- both sides agree on the relationship type (merge or partial), but disagree on the exact code set",
+      "error_type_key": "merge_boundary_incomplete",
+      "flat_script_original": {
+        "relationship": "partial",
+        "ccss_codes": [
+          {
+            "code": "3.MD.3",
+            "description": "Draw a scaled picture graph and a scaled bar graph to represent a data set with several categories. Solve one- and two-step \"how many more\" and \"how many less\" problems using information presented in scaled bar graphs. For example, draw a bar graph in which each square in the bar graph might represent 5 pets."
+          },
+          {
+            "code": "3.MD.4",
+            "description": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units\u2014whole numbers, halves, or quarters."
+          }
+        ],
+        "note": "Generic 'ask questions using graphical displays' is vaguer than CCSS's specific scaled-graph (3.MD.3) and line-plot (3.MD.4) requirements."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "3.MDR.5.2",
+      "ga_description": "Tell and write time to the nearest minute and estimate time to the nearest fifteen minutes (quarter hour) from the analysis of an analog clock.",
+      "error_type": "False split claimed -- flat says split (thinks sibling GA codes jointly cover this CCSS code), but the reference says this GA code stands alone (exact/state_superset/partial)",
+      "error_type_key": "false_split_claimed",
+      "flat_script_original": {
+        "relationship": "split",
+        "ccss_codes": [
+          {
+            "code": "3.MD.1",
+            "description": "Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by representing the problem on a number line diagram."
+          }
+        ],
+        "note": "The tell/write-time half of 3.MD.1 (elapsed-time problem-solving is 3.MDR.5.3) -- split.",
+        "split_siblings": {
+          "3.MD.1": [
+            {
+              "ga_code": "3.MDR.5.2",
+              "ga_description": "Tell and write time to the nearest minute and estimate time to the nearest fifteen minutes (quarter hour) from the analysis of an analog clock.",
+              "relationship": "split"
+            },
+            {
+              "ga_code": "3.MDR.5.3",
+              "ga_description": "Solve meaningful problems involving elapsed time, including intervals of time to the hour, half hour, and quarter hour where the times presented are only on the hour, half hour, or quarter hour within a.m. or p.m. only.",
+              "relationship": "split"
+            }
+          ]
+        }
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "3.MDR.5.3",
+      "ga_description": "Solve meaningful problems involving elapsed time, including intervals of time to the hour, half hour, and quarter hour where the times presented are only on the hour, half hour, or quarter hour within a.m. or p.m. only.",
+      "error_type": "False split claimed -- flat says split (thinks sibling GA codes jointly cover this CCSS code), but the reference says this GA code stands alone (exact/state_superset/partial)",
+      "error_type_key": "false_split_claimed",
+      "flat_script_original": {
+        "relationship": "split",
+        "ccss_codes": [
+          {
+            "code": "3.MD.1",
+            "description": "Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by representing the problem on a number line diagram."
+          }
+        ],
+        "note": "The elapsed-time-problem-solving half of 3.MD.1, joined by 3.MDR.5.2 -- split.",
+        "split_siblings": {
+          "3.MD.1": [
+            {
+              "ga_code": "3.MDR.5.2",
+              "ga_description": "Tell and write time to the nearest minute and estimate time to the nearest fifteen minutes (quarter hour) from the analysis of an analog clock.",
+              "relationship": "split"
+            },
+            {
+              "ga_code": "3.MDR.5.3",
+              "ga_description": "Solve meaningful problems involving elapsed time, including intervals of time to the hour, half hour, and quarter hour where the times presented are only on the hour, half hour, or quarter hour within a.m. or p.m. only.",
+              "relationship": "split"
+            }
+          ]
+        }
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "3.MDR.5.4",
+      "ga_description": "Use rulers to measure lengths in halves and fourths (quarters) of an inch and a whole inch.",
+      "error_type": "False split claimed -- flat says split (thinks sibling GA codes jointly cover this CCSS code), but the reference says this GA code stands alone (exact/state_superset/partial)",
+      "error_type_key": "false_split_claimed",
+      "flat_script_original": {
+        "relationship": "split",
+        "ccss_codes": [
+          {
+            "code": "3.MD.4",
+            "description": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units\u2014whole numbers, halves, or quarters."
+          }
+        ],
+        "note": "The ruler-measurement half of 3.MD.4 (the line-plot-display half is covered under 3.MDR.5.1's data-display language) -- split.",
+        "split_siblings": {
+          "3.MD.4": [
+            {
+              "ga_code": "3.MDR.5.1",
+              "ga_description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+              "relationship": "partial"
+            },
+            {
+              "ga_code": "3.MDR.5.4",
+              "ga_description": "Use rulers to measure lengths in halves and fourths (quarters) of an inch and a whole inch.",
+              "relationship": "split"
+            }
+          ]
+        }
+      },
+      "verdict": "error",
+      "human_corrected_to": {
+        "relationship": "exact",
+        "ccss_codes": [
+          {
+            "code": "3.MD.4",
+            "description": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units\u2014whole numbers, halves, or quarters."
+          }
+        ],
+        "note": "Matches 3.MD.4's ruler-measurement clause exactly."
+      }
+    },
+    {
+      "ga_code": "3.GSR.6.2",
+      "ga_description": "Classify, compare, and contrast polygons, with a focus on quadrilaterals, based on properties. Analyze specific 3-dimensional figures to identify and describe quadrilaterals as faces of these figures.",
+      "error_type": "Scope judgment on an already-correct single code -- same CCSS code both sides, relationship differs only among exact/state_superset/state_subset",
+      "error_type_key": "scope_judgment_single_code",
+      "flat_script_original": {
+        "relationship": "exact",
+        "ccss_codes": [
+          {
+            "code": "3.G.1",
+            "description": "Understand that shapes in different categories (e.g., rhombuses, rectangles, and others) may share attributes (e.g., having four sides), and that the shared attributes can define a larger category (e.g., quadrilaterals). Recognize rhombuses, rectangles, and squares as examples of quadrilaterals, and draw examples of quadrilaterals that do not belong to any of these subcategories."
+          }
+        ],
+        "note": "Classifying quadrilaterals hierarchically by shared attributes matches 3.G.1."
+      },
+      "verdict": "error",
+      "human_corrected_to": {
+        "relationship": "state_superset",
+        "ccss_codes": [
+          {
+            "code": "3.G.1",
+            "description": "Understand that shapes in different categories (e.g., rhombuses, rectangles, and others) may share attributes (e.g., having four sides), and that the shared attributes can define a larger category (e.g., quadrilaterals). Recognize rhombuses, rectangles, and squares as examples of quadrilaterals, and draw examples of quadrilaterals that do not belong to any of these subcategories."
+          }
+        ],
+        "note": "Adds analyzing 3D figures' quadrilateral faces, not part of 3.G.1."
+      }
+    },
+    {
+      "ga_code": "3.GSR.7.1",
+      "ga_description": "Investigate area by covering the space of rectangles presented in realistic situations using multiple copies of the same unit, with no gaps or overlaps, and determine the total area (total number of units that covered the space).",
+      "error_type": "Merge boundary incomplete -- both sides agree on the relationship type (merge or partial), but disagree on the exact code set",
+      "error_type_key": "merge_boundary_incomplete",
+      "flat_script_original": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "3.MD.5b",
+            "description": "A plane figure which can be covered without gaps or overlaps by n unit squares is said to have an area of n square units."
+          },
+          {
+            "code": "3.MD.6",
+            "description": "Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units)."
+          }
+        ],
+        "note": "Investigating area via unit-square tiling spans the unit-square definition (3.MD.5b) and counting unit squares (3.MD.6) -- merge."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "3.GSR.7.2",
+      "ga_description": "Determine the area of rectangles (or shapes composed of rectangles) presented in relevant problems by tiling and counting.",
+      "error_type": "Invalid split -- run labeled it `split` but no other GA code in that same run's own mapping cites the same CCSS code, so the claimed sibling doesn't exist. A structural bug in the run itself, caught by verify_mapping.py's split-integrity check, independent of whether it also disagrees with the reference.",
+      "error_type_key": "invalid_split_no_sibling",
+      "flat_script_original": {
+        "relationship": "split",
+        "ccss_codes": [
+          {
+            "code": "3.MD.7a",
+            "description": "Find the area of a rectangle with whole-number side lengths by tiling it, and show that the area is the same as would be found by multiplying the side lengths."
+          }
+        ],
+        "note": "The tiling-to-find-area half of 3.MD.7a (the multiplication-equivalence insight is 3.GSR.7.3) -- split.",
+        "split_siblings": {
+          "3.MD.7a": [
+            {
+              "ga_code": "3.GSR.7.2",
+              "ga_description": "Determine the area of rectangles (or shapes composed of rectangles) presented in relevant problems by tiling and counting.",
+              "relationship": "split"
+            }
+          ]
+        }
+      },
+      "verdict": "error",
+      "human_corrected_to": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "3.MD.6",
+            "description": "Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units)."
+          },
+          {
+            "code": "3.MD.7a",
+            "description": "Find the area of a rectangle with whole-number side lengths by tiling it, and show that the area is the same as would be found by multiplying the side lengths."
+          },
+          {
+            "code": "3.MD.7d",
+            "description": "Recognize area as additive. Find areas of rectilinear figures by decomposing them into non-overlapping rectangles and adding the areas of the non-overlapping parts, applying this technique to solve real world problems."
+          }
+        ],
+        "note": "Also merges 3.MD.7d: GA's own parenthetical \"(or shapes composed of rectangles)\" is rectilinear-figure content, caught on audit."
+      }
+    },
+    {
+      "ga_code": "3.GSR.7.3",
+      "ga_description": "Discover and explain how area can be found by multiplying the dimensions of a rectangle.",
+      "error_type": "Invalid split -- run labeled it `split` but no other GA code in that same run's own mapping cites the same CCSS code, so the claimed sibling doesn't exist. A structural bug in the run itself, caught by verify_mapping.py's split-integrity check, independent of whether it also disagrees with the reference.",
+      "error_type_key": "invalid_split_no_sibling",
+      "flat_script_original": {
+        "relationship": "split",
+        "ccss_codes": [
+          {
+            "code": "3.MD.7b",
+            "description": "Multiply side lengths to find areas of rectangles with whole-number side lengths in the context of solving real world and mathematical problems, and represent whole-number products as rectangular areas in mathematical reasoning."
+          }
+        ],
+        "note": "The multiply-side-lengths half, joined by 3.GSR.7.2's tiling half -- split.",
+        "split_siblings": {
+          "3.MD.7b": [
+            {
+              "ga_code": "3.GSR.7.3",
+              "ga_description": "Discover and explain how area can be found by multiplying the dimensions of a rectangle.",
+              "relationship": "split"
+            }
+          ]
+        }
+      },
+      "verdict": "error",
+      "human_corrected_to": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "3.MD.7b",
+            "description": "Multiply side lengths to find areas of rectangles with whole-number side lengths in the context of solving real world and mathematical problems, and represent whole-number products as rectangular areas in mathematical reasoning."
+          },
+          {
+            "code": "3.MD.7c",
+            "description": "Use tiling to show in a concrete case that the area of a rectangle with whole-number side lengths a and b + c is the sum of a x b and a x c. Use area models to represent the distributive property in mathematical reasoning."
+          }
+        ],
+        "note": ""
+      }
+    },
+    {
+      "ga_code": "4.NR.4.2",
+      "ga_description": "Compare two fractions with the same numerator or the same denominator by reasoning about their size and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+      "error_type": "Genuine content-interpretation miss -- the two sides land on substantively different CCSS codes/content, not explainable by a scope or cardinality rule",
+      "error_type_key": "genuine_content_miss",
+      "flat_script_original": {
+        "relationship": "different_grade",
+        "ccss_codes": [
+          {
+            "code": "3.NF.3d",
+            "description": "Compare two fractions with the same numerator or the same denominator by reasoning about their size. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with the symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
+          }
+        ],
+        "note": "Comparing fractions with the same numerator or denominator is Grade 3 CCSS content (3.NF.3d); GA restates it a grade later as a stepping stone toward the general case (4.NR.4.3)."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "4.NR.4.3",
+      "ga_description": "Compare two fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+      "error_type": "Split not recognized -- reference says split (multiple GA codes jointly cover this CCSS code), flat treated it as a standalone exact/superset/subset match",
+      "error_type_key": "split_not_recognized",
+      "flat_script_original": {
+        "relationship": "exact",
+        "ccss_codes": [
+          {
+            "code": "4.NF.2",
+            "description": "Compare two fractions with different numerators and different denominators, e.g., by creating common denominators or numerators, or by comparing to a benchmark fraction such as 1/2. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
+          }
+        ],
+        "note": "General fraction comparison, different numerators and denominators, matches verbatim."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "4.NR.4.4",
+      "ga_description": "Represent whole numbers and fractions as the sum of unit fractions.",
+      "error_type": "Genuine content-interpretation miss -- the two sides land on substantively different CCSS codes/content, not explainable by a scope or cardinality rule",
+      "error_type_key": "genuine_content_miss",
+      "flat_script_original": {
+        "relationship": "exact",
+        "ccss_codes": [
+          {
+            "code": "4.NF.4a",
+            "description": "Understand a fraction a/b as a multiple of 1/b. For example, use a visual fraction model to represent 5/4 as the product 5 x (1/4), recording the conclusion by the equation 5/4 = 5 x (1/4)."
+          }
+        ],
+        "note": "Representing a fraction as a multiple of a unit fraction matches 4.NF.4a's framing."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "4.MDR.6.3",
+      "ga_description": "Create dot plots to display a distribution of numerical (quantitative) measurement data.",
+      "error_type": "Scope judgment on an already-correct single code -- same CCSS code both sides, relationship differs only among exact/state_superset/state_subset",
+      "error_type_key": "scope_judgment_single_code",
+      "flat_script_original": {
+        "relationship": "state_subset",
+        "ccss_codes": [
+          {
+            "code": "4.MD.4",
+            "description": "Make a line plot to display a data set of measurements in fractions of a unit (1/2, 1/4, 1/8). Solve problems involving addition and subtraction of fractions by using information presented in line plots. For example, from a line plot find and interpret the difference in length between the longest and shortest specimens in an insect collection."
+          }
+        ],
+        "note": "GA's bare 'create dot plots' statement omits 4.MD.4's fraction-of-a-unit data requirement and its solve-problems-using-the-plot component -- narrower than its one CCSS match."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "4.GSR.7.1",
+      "ga_description": "Recognize angles as geometric shapes formed when two rays share a common endpoint. Draw right, acute, and obtuse angles based on the relationship of the angle measure to 90 degrees.",
+      "error_type": "Merge boundary incomplete -- both sides agree on the relationship type (merge or partial), but disagree on the exact code set",
+      "error_type_key": "merge_boundary_incomplete",
+      "flat_script_original": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "4.G.1",
+            "description": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures."
+          },
+          {
+            "code": "4.MD.5a",
+            "description": "An angle is measured with reference to a circle with its center at the common endpoint of the rays, by considering the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns through 1/360 of a circle is called a \"one-degree angle,\" and can be used to measure angles."
+          }
+        ],
+        "note": "Recognizing angles as ray-pairs sharing an endpoint (4.MD.5a's conceptual framing) and drawing right/acute/obtuse angles (4.G.1's drawing skill) span two CCSS codes -- merge."
+      },
+      "verdict": "error",
+      "human_corrected_to": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "4.MD.5a",
+            "description": "An angle is measured with reference to a circle with its center at the common endpoint of the rays, by considering the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns through 1/360 of a circle is called a \"one-degree angle,\" and can be used to measure angles."
+          },
+          {
+            "code": "4.MD.5b",
+            "description": "An angle that turns through n one-degree angles is said to have an angle measure of n degrees."
+          },
+          {
+            "code": "4.MD.6",
+            "description": "Measure angles in whole-number degrees using a protractor. Sketch angles of specified measure."
+          },
+          {
+            "code": "4.G.1",
+            "description": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures."
+          }
+        ],
+        "note": "Guidance content explicitly mentions protractor use (4.MD.6). Also merges 4.G.1 for the angle-drawing clause (\"draw right, acute, and obtuse angles\"), a cross-domain (MD+G) case caught on audit -- GA only draws angles, not 4.G.1's lines/segments/rays/parallel-line content."
+      }
+    },
+    {
+      "ga_code": "4.GSR.7.2",
+      "ga_description": "Measure angles in reference to a circle with the center at the common endpoint of two rays. Determine an angle\u2019s measure in relation to the 360 degrees in a circle through division or as a missing factor problem.",
+      "error_type": "Merge vs. split disagreement -- one side says this GA code alone covers multiple CCSS codes (merge), the other says it's one of several GA codes jointly covering a single CCSS code (split)",
+      "error_type_key": "merge_vs_split_disagreement",
+      "flat_script_original": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "4.MD.5a",
+            "description": "An angle is measured with reference to a circle with its center at the common endpoint of the rays, by considering the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns through 1/360 of a circle is called a \"one-degree angle,\" and can be used to measure angles."
+          },
+          {
+            "code": "4.MD.5b",
+            "description": "An angle that turns through n one-degree angles is said to have an angle measure of n degrees."
+          }
+        ],
+        "note": "Measuring an angle in reference to a circle (4.MD.5a) and determining measure via degree-counting or missing-factor reasoning (4.MD.5b) span two CCSS codes -- merge."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "4.GSR.8.2",
+      "ga_description": "Classify, compare, and contrast polygons based on lines of symmetry, the presence or absence of parallel or perpendicular line segments, or the presence or absence of angles of a specified size and based on side lengths.",
+      "error_type": "Merge under-claimed -- reference requires 2+ CCSS codes, flat gave a single-code relationship (exact/state_superset/state_subset), missing one or more codes entirely",
+      "error_type_key": "merge_under_claimed",
+      "flat_script_original": {
+        "relationship": "state_superset",
+        "ccss_codes": [
+          {
+            "code": "4.G.2",
+            "description": "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles."
+          }
+        ],
+        "note": "GA additionally classifies by lines of symmetry and side lengths, not stated in 4.G.2's angle/parallel/perpendicular-only framing."
+      },
+      "verdict": "error",
+      "human_corrected_to": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "4.G.2",
+            "description": "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles."
+          },
+          {
+            "code": "4.G.3",
+            "description": "Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded along the line into matching parts. Identify line-symmetric figures and draw lines of symmetry."
+          }
+        ],
+        "note": "Also touches symmetry-based classification, which is 4.G.3's territory. Reclassified merge on audit (was state_superset with one code): GA's \"lines of symmetry\" classification criterion is substantial enough to require 4.G.3 alongside 4.G.2, not just a passing overlap -- cardinality-first rule means citing two codes makes this merge, not superset."
+      }
+    },
+    {
+      "ga_code": "5.NR.2.1",
+      "ga_description": "Fluently multiply multi-digit (up to 3- digit by 2-digit) whole numbers to solve authentic problems.",
+      "error_type": "Scope judgment on an already-correct single code -- same CCSS code both sides, relationship differs only among exact/state_superset/state_subset",
+      "error_type_key": "scope_judgment_single_code",
+      "flat_script_original": {
+        "relationship": "state_subset",
+        "ccss_codes": [
+          {
+            "code": "5.NBT.5",
+            "description": "Fluently multiply multi-digit whole numbers using the standard algorithm."
+          }
+        ],
+        "note": "CCSS 5.NBT.5 is general multi-digit multiplication; GA restricts to 'up to 3-digit by 2-digit', a real size cap CCSS doesn't state."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "5.NR.2.2",
+      "ga_description": "Fluently divide multi-digit whole numbers (up to 4-digit dividends and 2-digit divisors no greater than 25) to solve practical problems.",
+      "error_type": "Scope judgment on an already-correct single code -- same CCSS code both sides, relationship differs only among exact/state_superset/state_subset",
+      "error_type_key": "scope_judgment_single_code",
+      "flat_script_original": {
+        "relationship": "state_subset",
+        "ccss_codes": [
+          {
+            "code": "5.NBT.6",
+            "description": "Find whole-number quotients of whole numbers with up to four-digit dividends and two-digit divisors, using strategies based on place value, the properties of operations, and/or the relationship between multiplication and division. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models."
+          }
+        ],
+        "note": "CCSS allows any 2-digit divisor; GA further restricts divisors to 25 or less."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "5.NR.3.5",
+      "ga_description": "Explain why multiplying a whole number by a fraction greater than one results in a product greater than the whole number, and why multiplying a whole number by a fraction less than one results in a product less than the whole number and multiplying a whole number by a fraction equal to one results in a product equal to the whole number.",
+      "error_type": "Merge over-claimed -- flat added an extra CCSS code beyond what the reference says is actually needed for a clean single-code match",
+      "error_type_key": "merge_over_claimed",
+      "flat_script_original": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "5.NF.5a",
+            "description": "Comparing the size of a product to the size of one factor on the basis of the size of the other factor, without performing the indicated multiplication."
+          },
+          {
+            "code": "5.NF.5b",
+            "description": "Explaining why multiplying a given number by a fraction greater than 1 results in a product greater than the given number (recognizing multiplication by whole numbers greater than 1 as a familiar case); explaining why multiplying a given number by a fraction less than 1 results in a product smaller than the given number; and relating the principle of fraction equivalence a/b = (n x a)/(n x b) to the effect of multiplying a/b by 1."
+          }
+        ],
+        "note": "Explaining product-size relative to factors spans comparing product size without multiplying (5.NF.5a) and explaining why (5.NF.5b) -- merge."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "5.GSR.8.3",
+      "ga_description": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
+      "error_type": "Merge boundary incomplete -- both sides agree on the relationship type (merge or partial), but disagree on the exact code set",
+      "error_type_key": "merge_boundary_incomplete",
+      "flat_script_original": {
+        "relationship": "merge",
+        "ccss_codes": [
+          {
+            "code": "5.MD.4",
+            "description": "Measure volumes by counting unit cubes, using cubic cm, cubic in, cubic ft, and improvised units."
+          },
+          {
+            "code": "5.MD.5a",
+            "description": "Find the volume of a right rectangular prism with whole-number side lengths by packing it with unit cubes, and show that the volume is the same as would be found by multiplying the edge lengths, equivalently by multiplying the height by the area of the base. Represent threefold whole-number products as volumes, e.g., to represent the associative property of multiplication."
+          }
+        ],
+        "note": "Investigating volume by packing unit cubes spans counting unit cubes (5.MD.4) and the packing-based volume-formula justification (5.MD.5a) -- merge."
+      },
+      "verdict": "okay"
+    },
+    {
+      "ga_code": "5.GSR.8.4",
+      "ga_description": "Discover and explain how the volume of a right rectangular prism can be found by multiplying the area of the base times the height to solve authentic, mathematical problems.",
+      "error_type": "Merge under-claimed -- reference requires 2+ CCSS codes, flat gave a single-code relationship (exact/state_superset/state_subset), missing one or more codes entirely",
+      "error_type_key": "merge_under_claimed",
+      "flat_script_original": {
+        "relationship": "exact",
+        "ccss_codes": [
+          {
+            "code": "5.MD.5b",
+            "description": "Apply the formulas V = l x w x h and V = b x h for rectangular prisms to find volumes of right rectangular prisms with whole-number edge lengths in the context of solving real world and mathematical problems."
+          }
+        ],
+        "note": "Volume via base-area-times-height matches the V=lwh/V=Bxh formula standard verbatim."
+      },
+      "verdict": "okay"
+    }
+  ]
+}

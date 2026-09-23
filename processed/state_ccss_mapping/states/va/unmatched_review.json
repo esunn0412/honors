@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "description": "The 2 VA codes where both the flat and hierarchical methods agree with each other but disagree with EDUMath's crosswalk (gold for VA -- built by a student, verified by an educator, a real independent check). For each: our full classification note, and EDUMath's own row from the raw crosswalk (papers/edumath_data/matched_standards_summarized.csv), including the exact sub-point text EDUMath's row is actually about -- not just the domain-level code. Fill in `verdict` per item: \"edumath_issue\" (their citation doesn't hold up against the text), \"our_issue\" (our classification is wrong, or was working from the wrong granularity of VA text), or \"ambiguous\" (both defensible).",
+    "resolution": "Resolved: both are the expected standard-vs-sub-standard granularity gap between this pipeline (classifies VA at the whole-SOL-code level, since VA's numbering has no per-bullet identifiers) and EDUMath's crosswalk (cites one specific bullet per row). Not scored as an error on either side -- see preprocess.typ's 'Generalizability, and the hierarchical alternative' section and README.md's VA section for the full explanation."
+  },
+  "items": [
+    {
+      "va_code": "3.NS.4",
+      "va_broad_description": "The student will solve problems, including those in context, that involve counting, comparing, representing, and making change for money amounts up to $5.00.",
+      "edumath_row": {
+        "va_substandard_text_actually_cited": "3.NS.4:\nd) Solve contextual problems to make change from $5.00 or less by using counting on or counting back strategies with concrete or pictorial models.",
+        "math_topic": "1. Make change from $5.00 or less",
+        "ccss_domain_cited": "4.MD",
+        "ccss_substandard_text_actually_cited": "4.MD:\n2. Use the four operations to solve word problems involving distances, intervals of time, liquid volumes, masses of objects, and money, including problems involving simple fractions or decimals, and problems that require expressing measurements given in a larger unit in terms of a smaller unit. Represent measurement quantities using diagrams such as number line diagrams that feature a measurement scale."
+      },
+      "our_classification": {
+        "relationship": "different_grade",
+        "ccss_codes": [
+          "2.MD.8"
+        ],
+        "note": "Rule 3: VA's counting/comparing/making-change-for-money-up-to-$5 is the same operation as CCSS's only money standard, 2.MD.8 (solve word problems with dollar bills and coins) -- VA teaches it one grade later. DISAGREES WITH EDUMATH: their crosswalk cites 4.MD (specifically 4.MD.2, whose word-problem list happens to mention money as one of several contexts) rather than the CCSS standard that is actually about money as its own topic. Flagged as a discrepancy worth reporting, not silently adopted.",
+        "identical_in_hierarchical_run": true
+      },
+      "concern": "Our classification's note describes the BROAD parent VA standard (matches va_broad_description above), not the specific narrower sub-point EDUMath's row actually cites (va_substandard_text_actually_cited). We may have solved a different, broader classification problem than the one EDUMath's crosswalk row represents -- worth re-classifying against the exact cited sub-point text before concluding EDUMath's answer is wrong.",
+      "verdict": "granularity_gap_not_an_error"
+    },
+    {
+      "va_code": "4.NS.3",
+      "va_broad_description": "The student will use mathematical reasoning and justification to represent, compare, and order fractions (proper, improper, and mixed numbers with denominators 12 or less), with and without models.",
+      "edumath_row": {
+        "va_substandard_text_actually_cited": "4.NS.3:\ng) Represent the division of two whole numbers as a fraction given a contextual situation and a model (e.g., 3/5 means the same as 3 divided by 5 or 3/5 represents the amount of muffin each of five children will receive when sharing three muffins equally).",
+        "math_topic": "1. Represent division of two whole numbers as a fraction",
+        "ccss_domain_cited": "3.NF",
+        "ccss_substandard_text_actually_cited": "3.NF:\n1. Understand a fraction 1/b as the quantity formed by 1 part when a whole is partitioned into b equal parts; understand a fraction a/b as the quantity formed by a parts of size 1/b."
+      },
+      "our_classification": {
+        "relationship": "state_superset",
+        "ccss_codes": [
+          "4.NF.2"
+        ],
+        "note": "Rule 2: VA's compare-AND-ORDER fractions (including mixed numbers, denominators 12 or less) most closely matches CCSS Grade 4's own general fraction-comparison standard, 4.NF.2 (different numerators AND denominators) -- VA additionally requires ordering multiple fractions and explicit reasoning/justification, so state_superset. DISAGREES WITH EDUMATH: their crosswalk cites 3.NF (Grade 3), which only covers same-numerator-or-same-denominator comparisons (3.NF.3d), a narrower skill than VA's actual general-denominator comparison requirement -- their citation looks like a grade-level mismatch on their end, not ours. Flagged as a discrepancy.",
+        "identical_in_hierarchical_run": true
+      },
+      "concern": "Our classification's note describes the BROAD parent VA standard (matches va_broad_description above), not the specific narrower sub-point EDUMath's row actually cites (va_substandard_text_actually_cited). We may have solved a different, broader classification problem than the one EDUMath's crosswalk row represents -- worth re-classifying against the exact cited sub-point text before concluding EDUMath's answer is wrong.",
+      "verdict": "granularity_gap_not_an_error"
+    }
+  ]
+}

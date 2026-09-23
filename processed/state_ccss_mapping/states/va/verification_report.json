@@ -1,0 +1,21 @@
+{
+  "totals": {
+    "state_leaf_count": 21,
+    "state_mapped_to_at_least_one_ccss": 21,
+    "state_genuine_gap": 0,
+    "ccss_referenced": 28,
+    "ccss_unmapped": 147,
+    "by_relationship_type": {
+      "exact": 5,
+      "merge": 8,
+      "state_subset": 1,
+      "different_grade": 2,
+      "state_superset": 2,
+      "partial": 2,
+      "split": 1
+    },
+    "flagged_for_review": 3
+  },
+  "issues": [],
+  "clean": true
+}

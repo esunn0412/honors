@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
+# CCSS <-> state mapping pipeline: hierarchical method kept local for now,
+# not part of the public release yet.
+processed/state_ccss_mapping/map_state_to_ccss_hierarchical.py
+processed/state_ccss_mapping/states/ga/mapping_llm_hierarchical.json
+processed/state_ccss_mapping/states/ga/verification_report_hierarchical.json
+processed/state_ccss_mapping/states/ga/comparison_hierarchical_to_final.json
+processed/state_ccss_mapping/states/ga/error_analysis.json
+processed/state_ccss_mapping/states/va/mapping_llm_hierarchical.json
+processed/state_ccss_mapping/states/va/comparison_to_gold_hierarchical.json

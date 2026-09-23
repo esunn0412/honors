@@ -1,0 +1,457 @@
+{
+  "subject": "Mathematics",
+  "grade": "0",
+  "source": "Georgia's K-12 Mathematics Standards, 2021, Georgia Department of Education (GaDOE)",
+  "source_document": "dat/ga_k8_math_standards.pdf",
+  "source_pages": "pp. 7-15",
+  "notes": {
+    "what_this_is": "The 'Evidence of Student Learning' guidance columns GaDOE prints alongside each sub-standard in the official PDF (Fundamentals, Strategies and Methods, Terminology, Age/Developmentally Appropriate, Relevance and Application, Examples). This is NOT in the CASE API (confirmed by querying it directly) and NOT in georgia_math_0.json (which only has the bare code + one-line description) -- it exists only in this PDF.",
+    "verbatim_policy": "Every bullet under every field is a verbatim transcription checked against the source page images, not paraphrased. Nested sub-bullets ('o' markers in the source) are kept as their own array entries or folded into the parent bullet with an em dash, matching how the source itself groups them.",
+    "excluded_content": "Two categories of source content are deliberately NOT included, per an explicit scope decision: (1) the decorative 'GELDS' logo icon that appears next to nearly every Fundamentals bullet citing a Pre-K standard -- it is a repeated 118x60px badge carrying no information beyond the adjacent text citation, which IS kept; (2) photographs of actual student handwork (e.g. the hand-drawn ladybug work sample under K.NR.5.2/K.NR.5.3) -- these are real, but out of scope for this file. Their surrounding explanatory 'Note' text, where the source itself describes what the photo shows, IS kept as ordinary verbatim example text, just without the photo.",
+    "diagrams": "Clean instructional diagrams (manipulatives, patterns, shape compositions) ARE kept as real extracted image files, not just descriptions -- saved to processed/standards/diagrams/, referenced from the relevant sub-standard's 'diagrams' array by relative path. Extracted directly from the PDF's embedded image objects via pdfimages (not a rendered screenshot crop), so image quality matches the source exactly."
+  },
+  "domains": [
+    {
+      "code": "K.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "note": "K.MP has no Evidence of Student Learning breakdown in the source (no Fundamentals/Strategies/etc. columns) -- it is a single grade-level statement, not decomposed into sub-standards, consistent with how proposal.typ already treats MP as excluded from the difficulty graph."
+    },
+    {
+      "code": "K.NR",
+      "name": "Numerical Reasoning",
+      "big_idea_note": "NUMERICAL REASONING -- counting, money, place value, numbers to 20, addition, subtraction and fluency",
+      "standards": [
+        {
+          "code": "K.NR.1",
+          "description": "Demonstrate and explain the relationship between numbers and quantities up to 20; connect counting to cardinality (the last number counted represents the total quantity in a set).",
+          "sub_standards": [
+            {
+              "code": "K.NR.1.1",
+              "expectation": "Count up to 20 objects in a variety of structured arrangements and up to 10 objects in a scattered arrangement.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA2.4b: Counts at least 10 objects using one-to-one correspondence.",
+                "Students should count objects using one-to-one correspondence saying the number names in the standard order and communicate quantities for authentic purposes. \"Authentic purposes\" refers to experiences students have in their everyday lives.",
+                "The overall goal is for students to be able to count up to 20 objects arranged in a line, a rectangle, or a circle, or up to 10 objects in a scattered arrangement."
+              ],
+              "relevance_and_application": [
+                "Students should be able to count to answer \"how many?\" questions with up to 20 objects arranged in a variety of ways (a line, a rectangular array, or a circle), or up to 10 objects arranged in a scattered configuration."
+              ],
+              "strategies_and_methods": [
+                "Dot cards, five-frames, ten-frames, rekenreks, dominoes, beads, rocks, counting bears, and playing cards are some tools that can be used for subitizing."
+              ]
+            },
+            {
+              "code": "K.NR.1.2",
+              "expectation": "When counting objects, explain that the last number counted represents the total quantity in a set (cardinality), regardless of the arrangement and order.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standards, CD-MA1.4e: Quickly recognizes and names how many items are in a group of up to four items. and CD-MA2.4e: With adult guidance and when counting, understands and can respond with the last number counted to represent quantity (cardinality).",
+                "Students should know that the last number counted represents the total quantity in a set (cardinality), when counting objects regardless of the arrangement and order.",
+                "Students should instantly see how many objects are in a group without counting (subitizing)."
+              ],
+              "strategies_and_methods": [
+                "Dot cards, five-frames, ten-frames, and rekenreks can be used for subitizing."
+              ]
+            },
+            {
+              "code": "K.NR.1.3",
+              "expectation": "Given a number from 1-20, identify the number that is one more or one less.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standards, CD-MA1.4d: Describes sets having more, less, same as/equal. and CD-MA1.4f: Tells numbers that come before and after a given number up to 10.",
+                "Students should be able to understand that each successive number name refers to a quantity that is one larger and the previous number name is one less."
+              ]
+            },
+            {
+              "code": "K.NR.1.4",
+              "expectation": "Identify pennies, nickels, and dimes and know their name and value.",
+              "fundamentals": [
+                "Students should be able to identify and represent coins by name and value."
+              ],
+              "strategies_and_methods": [
+                "Students can use different types of coin manipulatives to extend their understanding of counting by ones.",
+                "Coins as manipulatives could be used for counting by ones."
+              ],
+              "age_developmentally_appropriate": [
+                "Student is able to count five nickels. Students are not expected to find the value."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "K.NR.2",
+          "description": "Use count sequences within 100 to count forward and backward in sequence.",
+          "sub_standards": [
+            {
+              "code": "K.NR.2.1",
+              "expectation": "Count forward to 100 by tens and ones and backward from 20 by ones.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA1.4a: Recites numbers up to 20 in sequence.",
+                "Students should count for authentic purposes which connect to their everyday experiences.",
+                "Students should understand that each successive number name refers to a quantity that is one larger.",
+                "When students are rote counting forward, start the count sequence at 1.",
+                "When students are counting backward, start the count sequence beginning at 10 and progress to counting backward beginning at 20."
+              ],
+              "strategies_and_methods": [
+                "When students count backward from 20, they can use visual resources such as a number line, a 99-chart, or a 100-chart."
+              ],
+              "age_developmentally_appropriate": [
+                "When students count by tens, they are only expected to master counting by the decade (10, 20, ...).",
+                "This expectation does not require recognition of numerals."
+              ]
+            },
+            {
+              "code": "K.NR.2.2",
+              "expectation": "Count forward beginning from any number within 100 and count backward from any number within 20.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA1.4a: Recites numbers up to 20 in sequence.",
+                "Students should count forward and backward from a given number using the known number word sequence for authentic purposes.",
+                "Students should be able to begin and end with any given number."
+              ],
+              "examples": [
+                "Given the number 54, a student will count \"54, 55, 56, 57, 58…\""
+              ],
+              "age_developmentally_appropriate": [
+                "This expectation does not require recognition of numerals."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "K.NR.3",
+          "description": "Use place value understanding to compose and decompose numbers from 11-19.",
+          "sub_standards": [
+            {
+              "code": "K.NR.3.1",
+              "expectation": "Describe numbers from 11 to 19 by composing (putting together) and decomposing (breaking apart) the numbers into ten ones and some more ones.",
+              "fundamentals": [
+                "Students should be able to put together (compose) and break apart (decompose) numbers into a group of ten ones and some further ones to understand that these numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones.",
+                "Students should use strategic thinking in order to communicate quantities for authentic purposes."
+              ],
+              "strategies_and_methods": [
+                "Use objects or drawings to explain and record each composition or decomposition with a drawing or equation.",
+                "Students should be given the opportunity to use five frames, ten frames, and rekenreks with support to demonstrate each composition or decomposition."
+              ],
+              "examples": [
+                "The teacher can provide students with a variety of tools to make sense of numbers during everyday instruction. One day, a teacher may ask during a Number Talk, \"In what ways can you decompose the number 14?\". Possible student response: \"I decomposed 14 in my mind's eye into one full ten frame and four more on another ten frame.\" The teacher records the student's thoughts as follows:"
+              ],
+              "diagrams": [
+                { "image": "diagrams/K.NR.3.1_ten_frame.png", "caption": "Two ten-frames: the first fully filled with 10 dots, the second with 4 dots filled, illustrating the decomposition of 14 into one full ten-frame and four more." }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "K.NR.4",
+          "description": "Identify, write, represent, and compare numbers up to 20.",
+          "sub_standards": [
+            {
+              "code": "K.NR.4.1",
+              "expectation": "Identify written numerals 0-20 and represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects).",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA1.4b: Recognizes numerals and uses counting as part of play and as a means for determining quantity.",
+                "Students should be able to identify and write numerals between 0 and 20 for authentic purposes.",
+                "Students should be able to demonstrate the relationship between written numerals and a number of objects."
+              ]
+            },
+            {
+              "code": "K.NR.4.2",
+              "expectation": "Compare two sets of up to 10 objects and identify whether the number of objects in one group is more or less than the other group, using the words \"greater than,\" \"less than,\" or \"the same as\".",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA2.4a: Matches two equal sets using one-to-one correspondence and understands they are the same.",
+                "Students should compare the number of objects in two groups in authentic situations and identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group.",
+                "Students should be able to explain that equal to is \"the same\" quantity."
+              ],
+              "age_developmentally_appropriate": [
+                "This standard expects mastery of up to 10 objects.",
+                "The words greater than, less than, or the same as (equal to) should be used instead of the symbols."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "K.NR.5",
+          "description": "Explain the concepts of addition, subtraction, and equality and use these concepts to solve real-life problems within 10.",
+          "sub_standards": [
+            {
+              "code": "K.NR.5.1",
+              "expectation": "Compose (put together) and decompose (break apart) numbers up to 10 using objects and drawings.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA2.4c: Practices combining, separating, and naming quantities.",
+                "Authentic problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "terminology": [
+                "The terms below are used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Compose – put together numbers",
+                "Decompose – break apart numbers"
+              ],
+              "strategies_and_methods": [
+                "Teachers should use dot card images for students to explain how they see different number combinations."
+              ]
+            },
+            {
+              "code": "K.NR.5.2",
+              "expectation": "Represent addition and subtraction within 10 from a given authentic situation using a variety of representations and strategies.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standards, CD-MA2.4c: Practices combining, separating, and naming quantities. and CD-MA7.4b: Uses simple strategies to solve mathematical problems and communicates how he/she solved it.",
+                "Students should be able to represent relevant problems involving the addition and subtraction of whole numbers within 10 with objects and drawings.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "age_developmentally_appropriate": [
+                "Exposure to equations is expected but mastery of equations is not required.",
+                "Kindergarten students should see addition and subtraction equations, and student writing of equations in kindergarten is encouraged, but is not required. However, please note that it is not until First Grade when \"Understand the meaning of the equal sign\" is an expectation."
+              ],
+              "strategies_and_methods": [
+                "Student drawings and equations should show the mathematics of the solution from the given situation.",
+                "Equations should be derived from visual depiction."
+              ],
+              "examples": [
+                "Note: The student work above shows four different representations of the student's thinking.  One with pictures (3 ladybugs + 2 ladybugs) and two equations with numerals (3 + 2 and 2 + 3).  The student also represented the problem with words and numbers."
+              ],
+              "diagram_excluded": "photograph of student handwork accompanying this example, excluded per notes.excluded_content"
+            },
+            {
+              "code": "K.NR.5.3",
+              "expectation": "Use a variety of strategies to solve addition and subtraction problems within 10.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standards, CD-MA2.4c: Practices combining, separating, and naming quantities. and CD-MA7.4b: Uses simple strategies to solve mathematical problems and communicates how he/she solved it.",
+                "Authentic, mathematical problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be able to solve authentic, mathematical problems involving the addition and subtraction of single-digit whole numbers, using a variety of strategies such as: counting on, counting backward, making 10"
+              ],
+              "terminology": [
+                "Students should be provided with a variety of problem types including Join: Result Unknown, Separate: Result Unknown, Part-Part-Whole: Whole Unknown, and Part-Part-Whole: Both Parts Unknown; however, students are not required to know or use this terminology.",
+                { "problem_type": "Join: Result Unknown", "example": "3 birds were sitting in a tree and 2 more birds flew onto the tree. How many birds were in the tree then?" },
+                { "problem_type": "Separate: Result Unknown", "example": "Toni had 8 guppies. She gave 3 guppies to Roger. How many guppies does Toni have now?" },
+                { "problem_type": "Part-Part-Whole: Whole Unknown", "example": "6 girls and 4 boys were playing soccer. How many children were playing soccer?" },
+                { "problem_type": "Part-Part-Whole: Both Parts Unknown", "example": "Ann has 15 cap erasers. Some are pink and some are blue. How many could be pink and how many could be blue?" }
+              ],
+              "age_developmentally_appropriate": [
+                "Exposure to equations is expected but mastery of equations is not required in Kindergarten."
+              ],
+              "examples": [
+                "Note: The student work above shows four different representations that helped the student solve the problem:  One with pictures (3 ladybugs + 2 ladybugs), two with numerals (3 + 2 = 5 and 2 + 3 = 5), and written form.  The student also used the commutative property of addition to solve the problem."
+              ],
+              "diagram_excluded": "photograph of student handwork accompanying this example (same photo reused from K.NR.5.2), excluded per notes.excluded_content"
+            },
+            {
+              "code": "K.NR.5.4",
+              "expectation": "Fluently add and subtract within 5 using a variety of strategies to solve practical, mathematical problems.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standards, CD-MA7.4b: Uses simple strategies to solve mathematical problems and communicates how he/she solved it.",
+                "Problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be able to solve problems involving the addition and subtraction of numbers within five related to everyday life."
+              ],
+              "terminology": [
+                "The terms below are used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Fluently/Fluency -- To achieve fluency, students should be able to choose flexibly among methods and strategies to solve mathematical problems accurately and efficiently.",
+                "Fluency does not lend itself to timed tests or speed.",
+                "Exposure to equations is expected but mastery of equations is not required."
+              ],
+              "examples": [
+                "When making toothpick designs the various combinations of the number \"5\", the student writes the numerals for the various parts (such as \"4\" and \"1\") or selects a number sentence that represents that particular situation (such as 5 = 4 + 1)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "K.PAR",
+      "name": "Patterning and Algebraic Reasoning",
+      "big_idea_note": "PATTERNING & ALGEBRAIC REASONING -- repeating patterns and time",
+      "standards": [
+        {
+          "code": "K.PAR.6",
+          "description": "Explain, extend, and create repeating patterns with a repetition, not exceeding 4 and describe patterns involving the passage of time.",
+          "sub_standards": [
+            {
+              "code": "K.PAR.6.1",
+              "expectation": "Create, extend, and describe repeating patterns with numbers and shapes, and explain the rationale for the pattern.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standards, CD-MA4.4c: Creates and extends simple, repeating patterns. and CD-MA7.4b: Uses simple strategies to solve mathematical problems and communicates how he/she solved it."
+              ],
+              "strategies_and_methods": [
+                "Patterns should include spatial, color, location, shape, and symbols (letter/ number)."
+              ],
+              "age_developmentally_appropriate": [
+                "This standard should be taught throughout the year.",
+                "The repetition (iteration) of pattern should not exceed 4."
+              ],
+              "examples": [
+                "Students are able to use shapes to create and extend patterns such as the following: In the pattern of 1 blue, 1 green, 1 blue, 2 greens, students would explain that 1 blue would be next in the sequence and that the pattern increases by one for the green."
+              ],
+              "diagrams": [
+                { "image": "diagrams/K.PAR.6.1_shape_pattern.png", "caption": "A repeating shape pattern: triangle, triangle, circle, triangle, triangle, circle, triangle, triangle, circle, triangle (blue triangles and green circles in the source), illustrating the '1 blue, 1 blue, 1 green' style repeating pattern described in the example." }
+              ]
+            },
+            {
+              "code": "K.PAR.6.2",
+              "expectation": "Describe patterns involving the passage of time using words and phrases related to actual events.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA3.4d: Associates and describes the passage of time with actual events."
+              ],
+              "strategies_and_methods": [
+                "Patterns should include yesterday, today and tomorrow, as well as morning and afternoon.",
+                "Students should be able to use terms such as now, earlier, later, before, after, yesterday, today, tomorrow, morning, afternoon, evening, day of the week, week, month, year."
+              ],
+              "age_developmentally_appropriate": [
+                "This standard should be taught throughout the year."
+              ],
+              "examples": [
+                "A student may explain: \"Tomorrow is Tom's birthday. Next week will be my birthday.\"",
+                "A student may explain: \"It is sunny outside now. This morning it was rainy.\"",
+                "A student may explain: \"I got dressed this morning. This afternoon I will ride the bus home. I will go to my ball game this evening.\"",
+                "A student may explain: \"Today is Friday. We do not go to school on Saturday and Sunday. It is the weekend.\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "K.MDR",
+      "name": "Measurement and Data Reasoning",
+      "big_idea_note": "MEASUREMENT & DATA REASONING -- attributes of objects, classifying objects",
+      "standards": [
+        {
+          "code": "K.MDR.7",
+          "description": "Observe, describe, and compare the physical and measurable attributes of objects and analyze graphical displays of data.",
+          "sub_standards": [
+            {
+              "code": "K.MDR.7.1",
+              "expectation": "Directly compare, describe, and order common objects, using measurable attributes (length, height, width, or weight) and describe the difference.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standards, CD-MA3.4a: Uses mathematical terms to describe experiences involving measurement.; CD-MA3.4b: Compares objects using two or more attributes, such as length, weight and size.; CD-MA3.4c: Uses a variety of techniques and standard and non-standard tools to measure and compare length, volume (capacity) and weight.; and CD-MA4.4a: Independently orders objects using one characteristic and describes the criteria used.",
+                "In Kindergarten, students should use language such as heavier, lighter, longer, taller, shorter, wider, larger, smaller.",
+                "In Kindergarten, students may use a variety of techniques and tools to compare, describe, and order objects. Students may use a referent object being compared as a tool to describe the other object(s)."
+              ],
+              "terminology": [
+                "The terms below are used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Attributes – characteristics (i.e., length, height, width, or weight)",
+                "Referent object – an object used as the standard of comparison"
+              ],
+              "examples": [
+                "Directly compare the heights of two objects and describe one object as taller/shorter.",
+                "A student may describe a shoe as, \"The red shoe is heavier than the blue shoe (the blue shoe is the referent in this case)! The red shoe is also longer!\""
+              ]
+            },
+            {
+              "code": "K.MDR.7.2",
+              "expectation": "Classify and sort up to ten objects into categories by an attribute; count the number of objects in each category and sort the categories by count.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA4.4b: Sorts and classifies objects using one or more attributes or relationships.",
+                "Kindergarten students should be able to sort objects by characteristics such as heavier, lighter, longer, and shorter (compare to benchmark item)."
+              ],
+              "terminology": [
+                "The terminology below is used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Attributes – characteristics (i.e., length, height, width, or weight)"
+              ],
+              "age_developmentally_appropriate": [
+                "Categories should have no more than 10 objects."
+              ],
+              "examples": [
+                "When given a collection of buttons, the student separates the buttons into different piles based on color. Then, the student counts the number of objects in each pile. Finally, the student organizes the groups by the quantity in each group: orange buttons (3), green buttons next (4), purple buttons with the green buttons because purple also had (4), blue buttons last (5)."
+              ]
+            },
+            {
+              "code": "K.MDR.7.3",
+              "expectation": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+              "strategies_and_methods": [
+                "Questions should be student generated."
+              ],
+              "fundamentals": [
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "K.GSR",
+      "name": "Geometric and Spatial Reasoning",
+      "big_idea_note": "GEOMETRIC & SPATIAL REASONING -- 2D and 3D shapes, relative locations, attributes",
+      "standards": [
+        {
+          "code": "K.GSR.8",
+          "description": "Identify, describe, and compare basic shapes encountered in the environment, and form two-dimensional shapes and three-dimensional figures.",
+          "sub_standards": [
+            {
+              "code": "K.GSR.8.1",
+              "expectation": "Identify, sort, classify, analyze, and compare two-dimensional shapes and three-dimensional figures, in different sizes and orientations, using informal language to describe their similarities, differences, number of sides and vertices, and other attributes.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA6.4a: Recognizes and names common two-dimensional and three-dimensional shapes, their parts and attributes."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be able to identify basic shapes, including squares, circles, triangles, rectangles, hexagons, octagons, cubes, cones, cylinders, and spheres.",
+                "Students begin to understand how three-dimensional figures are composed of two-dimensional shapes."
+              ],
+              "terminology": [
+                "The terms below are used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Attributes – characteristics (i.e., two-dimensional shapes (lying in a plane, \"flat\") and three-dimensional figures (\"solid\"), including geometric properties.). An example of an attribute is having sides of equal length.",
+                "Vertices – corners of a geometric figure"
+              ],
+              "examples": [
+                "The base and top of a cylinder is a circle."
+              ]
+            },
+            {
+              "code": "K.GSR.8.2",
+              "expectation": "Describe the relative location of an object using positional words.",
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standard, CD-MA5.4a: Uses appropriate directional language to indicate where things are in their environment - positions, distances, order.",
+                "Kindergarten students should be able to explain the location of an object in relation to another object using positional language, such as \"above,\" \"below,\" \"beside,\" \"in front of,\" \"behind,\" or \"next to.\""
+              ],
+              "age_developmentally_appropriate": [
+                "Kindergarten students should be able to use various objects they come in contact with in their everyday life."
+              ],
+              "examples": [
+                "\"The cup is beside the pencil.\"",
+                "\"The boy is behind the girl in line.\"",
+                "In a sequence of pictures, the student would describe the position of a particular object."
+              ]
+            },
+            {
+              "code": "K.GSR.8.3",
+              "expectation": "Use basic shapes to represent specific shapes found in the environment by creating models and drawings.",
+              "age_developmentally_appropriate": [
+                "Basic shapes used in kindergarten should include squares, circles, triangles, rectangles, hexagons, octagons, cubes, cones, cylinders, and spheres."
+              ],
+              "strategies_and_methods": [
+                "A variety of materials can be used to create models of shapes that exist in everyday life."
+              ],
+              "examples": [
+                "Models – sticks with clay balls, toothpicks with marshmallows, popsicle sticks, technology, etc."
+              ]
+            },
+            {
+              "code": "K.GSR.8.4",
+              "expectation": "Use two or more basic shapes to form larger shapes.",
+              "age_developmentally_appropriate": [
+                "Basic shapes used in kindergarten should include squares, circles, triangles, rectangles, hexagons, octagons, cubes, cones, cylinders, and spheres."
+              ],
+              "fundamentals": [
+                "This learning objective builds on the Pre-K Georgia Early Learning and Development Standards, CD-MA5.4b: Uses deliberate manipulation and describes process for fitting objects together. and CD-MA6.4b: Combines simple shapes to form new shapes."
+              ],
+              "strategies_and_methods": [
+                "Students should be able to form (compose) larger shapes by putting together smaller shapes through exploration and play."
+              ],
+              "examples": [
+                "\"Use the 7 tangram pieces to make a fox.\""
+              ],
+              "diagrams": [
+                { "image": "diagrams/K.GSR.8.4_tangram_fox.png", "caption": "A fox silhouette formed by arranging the 7 tangram pieces, matching the example prompt 'Use the 7 tangram pieces to make a fox.'" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

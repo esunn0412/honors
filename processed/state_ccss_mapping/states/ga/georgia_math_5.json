@@ -1,0 +1,224 @@
+{
+  "subject": "Mathematics",
+  "grade": "5",
+  "source": "Georgia K-12 Mathematics Standards (SY2023-2024)",
+  "case_document_id": "e9dd7229-3558-4df2-85c6-57b8938f6180",
+  "domains": [
+    {
+      "code": "5.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "standards": [
+        {
+          "code": "5.MP.1",
+          "description": "Make sense of problems and persevere in solving them."
+        },
+        {
+          "code": "5.MP.2",
+          "description": "Reason abstractly and quantitatively."
+        },
+        {
+          "code": "5.MP.3",
+          "description": "Construct viable arguments and critique the reasoning of others."
+        },
+        {
+          "code": "5.MP.4",
+          "description": "Model with mathematics."
+        },
+        {
+          "code": "5.MP.5",
+          "description": "Use appropriate tools strategically."
+        },
+        {
+          "code": "5.MP.6",
+          "description": "Attend to precision."
+        },
+        {
+          "code": "5.MP.7",
+          "description": "Look for and make use of structure."
+        },
+        {
+          "code": "5.MP.8",
+          "description": "Look for and express regularity in repeated reasoning."
+        }
+      ]
+    },
+    {
+      "code": "5.NR",
+      "name": "Number Relations",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "5.NR.1",
+          "description": "Use place value understanding to solve real-life, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "5.NR.1.1",
+              "description": "Explain that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and $\\frac{1}{10}$ of what it represents in the place to its left."
+            },
+            {
+              "code": "5.NR.1.2",
+              "description": "Explain patterns in the placement of digits when multiplied or divided by a power of 10. Use whole-number exponents to denote powers of 10, up to $10^3$."
+            }
+          ]
+        },
+        {
+          "code": "5.NR.2",
+          "description": "Multiply and divide multi-digit whole numbers to solve relevant, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "5.NR.2.1",
+              "description": "Fluently multiply multi-digit (up to 3- digit by 2-digit) whole numbers to solve authentic problems."
+            },
+            {
+              "code": "5.NR.2.2",
+              "description": "Fluently divide multi-digit whole numbers (up to 4-digit dividends and 2-digit divisors no greater than 25) to solve practical problems."
+            }
+          ]
+        },
+        {
+          "code": "5.NR.3",
+          "description": "Describe fractions and perform operations with fractions to solve relevant, mathematical problems using part-whole strategies and visual models.",
+          "sub_standards": [
+            {
+              "code": "5.NR.3.1",
+              "description": "Explain the meaning of a fraction as division of the numerator by the denominator ($\\frac{a}{b}$ = a ÷ b). Solve problems involving division of whole numbers leading to answers in the form of fractions or mixed numbers."
+            },
+            {
+              "code": "5.NR.3.2",
+              "description": "Compare and order up to three fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies."
+            },
+            {
+              "code": "5.NR.3.3",
+              "description": "Model and solve problems involving addition and subtraction of fractions and mixed numbers with unlike denominators."
+            },
+            {
+              "code": "5.NR.3.4",
+              "description": "Model and solve problems involving multiplication of a fraction and a whole number."
+            },
+            {
+              "code": "5.NR.3.5",
+              "description": "Explain why multiplying a whole number by a fraction greater than one results in a product greater than the whole number, and why multiplying a whole number by a fraction less than one results in a product less than the whole number and multiplying a whole number by a fraction equal to one results in a product equal to the whole number."
+            },
+            {
+              "code": "5.NR.3.6",
+              "description": "Model and solve problems involving division of a unit fraction by a whole number and a whole number by a unit fraction."
+            }
+          ]
+        },
+        {
+          "code": "5.NR.4",
+          "description": "Read, write, and compare decimal numbers to the thousandths place, and round and perform operations with decimal numbers to the hundredths place to solve relevant, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "5.NR.4.1",
+              "description": "Read and write decimal numbers to the thousandths place using base-ten numerals written in standard form and expanded form."
+            },
+            {
+              "code": "5.NR.4.2",
+              "description": "Represent, compare, and order decimal numbers to the thousandths place based on the meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons."
+            },
+            {
+              "code": "5.NR.4.3",
+              "description": "Use place value understanding to round decimal numbers to the hundredths place."
+            },
+            {
+              "code": "5.NR.4.4",
+              "description": "Solve problems involving addition and subtraction of decimal numbers to the hundredths place using a variety of strategies."
+            }
+          ]
+        },
+        {
+          "code": "5.NR.5",
+          "description": "Write, interpret, and evaluate numerical expressions within authentic problems.",
+          "sub_standards": [
+            {
+              "code": "5.NR.5.1",
+              "description": "Write, interpret, and evaluate simple numerical expressions involving whole numbers with or without grouping symbols to represent actual situations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "5.PAR",
+      "name": "Patterns and Algebraic Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "5.PAR.6",
+          "description": "Solve relevant problems by creating and analyzing numerical patterns using the given rule(s).",
+          "sub_standards": [
+            {
+              "code": "5.PAR.6.1",
+              "description": "Generate two numerical patterns using two given rules. Identify apparent relationships between corresponding terms by completing a table."
+            },
+            {
+              "code": "5.PAR.6.2",
+              "description": "Represent problems by plotting ordered pairs and explain coordinate values of points in the first quadrant of the coordinate plane."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "5.MDR",
+      "name": "Measurement, Data, and Results",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "5.MDR.7",
+          "description": "Solve problems involving customary measurements, metric measurements, and time and analyze graphical displays of data to answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "5.MDR.7.1",
+              "description": "Explore realistic problems involving different units of measurement, including distance, mass, weight, volume, and time."
+            },
+            {
+              "code": "5.MDR.7.2",
+              "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life"
+            },
+            {
+              "code": "5.MDR.7.3",
+              "description": "Convert among units within the metric system and then apply these conversions to solve multistep, practical problems."
+            },
+            {
+              "code": "5.MDR.7.4",
+              "description": "Convert among units within relative sizes of measurement units within the customary measurement system."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "5.GSR",
+      "name": "Geometry and Spatial Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "5.GSR.8",
+          "description": "Examine properties of polygons and rectangular prisms, classify polygons by their properties, and discover volume of right rectangular prisms.",
+          "sub_standards": [
+            {
+              "code": "5.GSR.8.1",
+              "description": "Classify, compare, and contrast polygons based on properties."
+            },
+            {
+              "code": "5.GSR.8.2",
+              "description": "Determine, through exploration and investigation, that attributes belonging to a category of two-dimensional figures also belong to all subcategories of that category."
+            },
+            {
+              "code": "5.GSR.8.3",
+              "description": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems."
+            },
+            {
+              "code": "5.GSR.8.4",
+              "description": "Discover and explain how the volume of a right rectangular prism can be found by multiplying the area of the base times the height to solve authentic, mathematical problems."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "metadata": {
+    "description": "Virginia SOL standards mapped to CCSS K-5, in the same schema map_state_to_ccss.py's API script produces. Covers the 21 distinct VA codes whose full standard text is currently available (from EDUMath's crosswalk) -- not yet Virginia's complete grades 3-5 standard set.",
+    "model": "claude-sonnet-5 (via Claude Code session, not a live API call -- see README.md)",
+    "state_leaf_count": 21,
+    "coverage_note": "21 distinct VA codes from EDUMath's single-VA-code crosswalk rows; the 8 rows combining two VA codes into one ad hoc unit are excluded, since this pipeline classifies one state standard at a time."
+  },
+  "mappings": [
+    {
+      "state_code": "3.CE.1",
+      "grade": "3",
+      "ccss_codes": [
+        {
+          "code": "3.NBT.2",
+          "description": "Fluently add and subtract within 1000 using strategies and algorithms based on place value, properties of operations, and/or the relationship between addition and subtraction."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Rule 2: VA's addition/subtraction within 1000 (word-problem framing) matches CCSS 3.NBT.2's fluency-within-1000 requirement one-for-one.",
+      "edumath_cited_domain": "3.NBT"
+    },
+    {
+      "state_code": "3.CE.2",
+      "grade": "3",
+      "ccss_codes": [
+        {
+          "code": "3.OA.3",
+          "description": "Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem."
+        },
+        {
+          "code": "3.OA.7",
+          "description": "Fluently multiply and divide within 100, using strategies such as the relationship between multiplication and division (e.g., knowing that 8 x 5 = 40, one knows 40 / 5 = 8) or properties of operations. By the end of Grade 3, know from memory all products of two one-digit numbers."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Rule 1 (cardinality first): VA bundles fact-recall automaticity (matches 3.OA.7's fluency requirement) with solving contextual multiplication/division problems (matches 3.OA.3) -- two CCSS codes, merge.",
+      "edumath_cited_domain": "3.OA"
+    },
+    {
+      "state_code": "3.MG.2",
+      "grade": "3",
+      "ccss_codes": [
+        {
+          "code": "3.MD.7d",
+          "description": "Recognize area as additive. Find areas of rectilinear figures by decomposing them into non-overlapping rectangles and adding the areas of the non-overlapping parts, applying this technique to solve real world problems."
+        },
+        {
+          "code": "3.MD.8",
+          "description": "Solve real world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, and exhibiting rectangles with the same perimeter and different areas or with the same area and different perimeters."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Rule 1: VA bundles area (CCSS treats via 3.MD.5-7, here anchored to the composite-area case 3.MD.7d) and perimeter (3.MD.8) into one statement, which CCSS keeps as separate standards -- merge.",
+      "edumath_cited_domain": "3.MD"
+    },
+    {
+      "state_code": "3.MG.3",
+      "grade": "3",
+      "ccss_codes": [
+        {
+          "code": "3.MD.1",
+          "description": "Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by representing the problem on a number line diagram."
+        }
+      ],
+      "relationship": "state_subset",
+      "needs_review": true,
+      "note": "Rule 2: same core skill as CCSS 3.MD.1 (tell time to the minute, solve elapsed-time word problems), but VA restricts elapsed-time problems to one-hour increments within a 12-hour period, while CCSS 3.MD.1 states general addition/subtraction of time intervals in minutes with no such restriction -- VA narrower, one CCSS code, state_subset.",
+      "edumath_cited_domain": "3.MD"
+    },
+    {
+      "state_code": "3.NS.4",
+      "grade": "3",
+      "ccss_codes": [
+        {
+          "code": "2.MD.8",
+          "description": "Solve word problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and \u00a2 symbols appropriately. Example: If you have 2 dimes and 3 pennies, how many cents do you have?"
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "Rule 3: VA's counting/comparing/making-change-for-money-up-to-$5 is the same operation as CCSS's only money standard, 2.MD.8 (solve word problems with dollar bills and coins) -- VA teaches it one grade later. DISAGREES WITH EDUMATH: their crosswalk cites 4.MD (specifically 4.MD.2, whose word-problem list happens to mention money as one of several contexts) rather than the CCSS standard that is actually about money as its own topic. Flagged as a discrepancy worth reporting, not silently adopted.",
+      "edumath_cited_domain": "4.MD"
+    },
+    {
+      "state_code": "3.PFA.1",
+      "grade": "3",
+      "ccss_codes": [
+        {
+          "code": "3.OA.9",
+          "description": "Identify arithmetic patterns (including patterns in the addition table or multiplication table), and explain them using properties of operations. For example, observe that 4 times a number is always even, and explain why 4 times a number can be decomposed into two equal addends."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "Rule 2: unlike GA's K-2 pattern standards (which have no CCSS equivalent because CCSS's only pattern standard, 4.OA.5, is rule-based generation, a different operation), CCSS DOES have a real Grade 3 pattern standard, 3.OA.9 (identify arithmetic patterns, explain using properties of operations). VA additionally requires 'extend and create', which 3.OA.9 doesn't ask for -- state_superset, one CCSS code, same grade. Agrees with EDUMath's domain citation (3.OA).",
+      "edumath_cited_domain": "3.OA"
+    },
+    {
+      "state_code": "4.CE.1",
+      "grade": "4",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.4",
+          "description": "Fluently add and subtract multi-digit whole numbers using the standard algorithm."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Rule 2: VA's addition/subtraction with whole numbers at Grade 4 matches CCSS 4.NBT.4's standard-algorithm fluency requirement one-for-one.",
+      "edumath_cited_domain": "4.NBT"
+    },
+    {
+      "state_code": "4.CE.2",
+      "grade": "4",
+      "ccss_codes": [
+        {
+          "code": "4.NBT.5",
+          "description": "Multiply a whole number of up to four digits by a one-digit whole number, and multiply two two-digit numbers, using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models."
+        },
+        {
+          "code": "4.NBT.6",
+          "description": "Find whole-number quotients and remainders with up to four-digit dividends and one-digit divisors, using strategies based on place value, the properties of operations, and/or the relationship between multiplication and division. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Rule 1: VA bundles multiplication (matches 4.NBT.5) and division (matches 4.NBT.6) computation into one statement -- two CCSS codes, merge.",
+      "edumath_cited_domain": "4.NBT"
+    },
+    {
+      "state_code": "4.CE.3",
+      "grade": "4",
+      "ccss_codes": [
+        {
+          "code": "4.NF.3d",
+          "description": "Solve word problems involving addition and subtraction of fractions referring to the same whole and having like denominators, e.g., by using visual fraction models and equations to represent the problem."
+        },
+        {
+          "code": "4.NF.4c",
+          "description": "Solve word problems involving multiplication of a fraction by a whole number, e.g., by using visual fraction models and equations to represent the problem. For example, if each person at a party will eat 3/8 of a pound of roast beef, and there will be 5 people at the party, how many pounds of roast beef will be needed? Between what two whole numbers does your answer lie?"
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Rule 1: VA bundles add/subtract fractions with like denominators (4.NF.3d) with multiplying a whole number by a unit fraction (4.NF.4c) -- two CCSS codes from different sub-clusters, merge.",
+      "edumath_cited_domain": "4.NF"
+    },
+    {
+      "state_code": "4.CE.4",
+      "grade": "4",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.7",
+          "description": "Add, subtract, multiply, and divide decimals to hundredths, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used."
+        }
+      ],
+      "relationship": "partial",
+      "needs_review": true,
+      "note": "Rule 4: compound mismatch, not a clean single case -- VA requires decimal addition/subtraction to the THOUSANDTHS place at Grade 4, but CCSS's only decimal-computation standard (5.NBT.7) caps at HUNDREDTHS and doesn't appear until Grade 5. Both a grade shift AND a scope extension beyond what CCSS ever explicitly states for decimal computation at any grade -- too compound to call a clean different_grade match, so partial, flagged for review.",
+      "edumath_cited_domain": "5.NBT"
+    },
+    {
+      "state_code": "4.MG.1",
+      "grade": "4",
+      "ccss_codes": [
+        {
+          "code": "4.MD.1",
+          "description": "Know relative sizes of measurement units within one system of units including km, m, cm; kg, g; lb, oz.; l, ml; hr, min, sec. Within a single system of measurement, express measurements in a larger unit in terms of a smaller unit. Record measurement equivalents in a two-column table. For example, know that 1 ft is 12 times as long as 1 in. Express the length of a 4 ft snake as 48 in. Generate a conversion table for feet and inches listing the number pairs (1, 12), (2, 24), (3, 36), ..."
+        },
+        {
+          "code": "4.MD.2",
+          "description": "Use the four operations to solve word problems involving distances, intervals of time, liquid volumes, masses of objects, and money, including problems involving simple fractions or decimals, and problems that require expressing measurements given in a larger unit in terms of a smaller unit. Represent measurement quantities using diagrams such as number line diagrams that feature a measurement scale."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Rule 1: VA's general length/mass/volume problem-solving across both unit systems spans CCSS 4.MD.1 (relative unit sizes and conversion) and 4.MD.2 (measurement word problems) -- merge.",
+      "edumath_cited_domain": "4.MD"
+    },
+    {
+      "state_code": "4.MG.2",
+      "grade": "4",
+      "ccss_codes": [
+        {
+          "code": "4.MD.2",
+          "description": "Use the four operations to solve word problems involving distances, intervals of time, liquid volumes, masses of objects, and money, including problems involving simple fractions or decimals, and problems that require expressing measurements given in a larger unit in terms of a smaller unit. Represent measurement quantities using diagrams such as number line diagrams that feature a measurement scale."
+        }
+      ],
+      "relationship": "split",
+      "needs_review": false,
+      "note": "Rule 1: CCSS 4.MD.2 bundles word problems about distances/time/volume/mass/money together; VA splits the elapsed-time piece into its own standard (4.MG.2) while the other measurement types are covered by 4.MG.1 -- this piece alone is only part of 4.MD.2, split.",
+      "edumath_cited_domain": "4.MD"
+    },
+    {
+      "state_code": "4.NS.3",
+      "grade": "4",
+      "ccss_codes": [
+        {
+          "code": "4.NF.2",
+          "description": "Compare two fractions with different numerators and different denominators, e.g., by creating common denominators or numerators, or by comparing to a benchmark fraction such as 1/2. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
+        }
+      ],
+      "relationship": "state_superset",
+      "needs_review": false,
+      "note": "Rule 2: VA's compare-AND-ORDER fractions (including mixed numbers, denominators 12 or less) most closely matches CCSS Grade 4's own general fraction-comparison standard, 4.NF.2 (different numerators AND denominators) -- VA additionally requires ordering multiple fractions and explicit reasoning/justification, so state_superset. DISAGREES WITH EDUMATH: their crosswalk cites 3.NF (Grade 3), which only covers same-numerator-or-same-denominator comparisons (3.NF.3d), a narrower skill than VA's actual general-denominator comparison requirement -- their citation looks like a grade-level mismatch on their end, not ours. Flagged as a discrepancy.",
+      "edumath_cited_domain": "3.NF"
+    },
+    {
+      "state_code": "4.PFA.1",
+      "grade": "4",
+      "ccss_codes": [
+        {
+          "code": "4.OA.5",
+          "description": "Generate a number or shape pattern that follows a given rule. Identify apparent features of the pattern that were not explicit in the rule itself. For example, given the rule \"Add 3\" and the starting number 1, generate terms in the resulting sequence and observe that the terms appear to alternate between odd and even numbers. Explain informally why the numbers will continue to alternate in this way."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Rule 2: unlike the K-2 pattern mismatches, this is a genuine same-grade match -- VA's identify/describe/extend/create patterns (limited to add/subtract/multiply) matches CCSS 4.OA.5's generate-a-pattern-from-a-rule requirement at the same grade. GA's own 4.PAR.3.1/4.PAR.3.2 match this same CCSS code the same way (split, in GA's case). Agrees with EDUMath's domain citation (4.OA).",
+      "edumath_cited_domain": "4.OA"
+    },
+    {
+      "state_code": "5.CE.1",
+      "grade": "5",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.5",
+          "description": "Fluently multiply multi-digit whole numbers using the standard algorithm."
+        },
+        {
+          "code": "5.NBT.6",
+          "description": "Find whole-number quotients of whole numbers with up to four-digit dividends and two-digit divisors, using strategies based on place value, the properties of operations, and/or the relationship between multiplication and division. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Rule 1: VA's four-operations-with-whole-numbers statement -- addition/subtraction are Grade 4 CCSS content already fluent by 4.NBT.4, so the genuinely new Grade 5 CCSS content this maps to is multiplication (5.NBT.5) and division (5.NBT.6) -- two CCSS codes, merge.",
+      "edumath_cited_domain": "5.NBT"
+    },
+    {
+      "state_code": "5.CE.2",
+      "grade": "5",
+      "ccss_codes": [
+        {
+          "code": "5.NF.2",
+          "description": "Solve word problems involving addition and subtraction of fractions referring to the same whole, including cases of unlike denominators, e.g., by using visual fraction models or equations to represent the problem. Use benchmark fractions and number sense of fractions to estimate mentally and assess the reasonableness of answers. For example, recognize an incorrect result 2/5 + 1/2 = 3/7, by observing that 3/7 < 1/2."
+        },
+        {
+          "code": "5.NF.6",
+          "description": "Solve real world problems involving multiplication of fractions and mixed numbers, e.g., by using visual fraction models or equations to represent the problem."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Rule 1: VA bundles add/subtract fractions with unlike denominators (5.NF.2) with multiplying a whole number by a proper fraction (5.NF.6, the word-problem application of 5.NF.4's multiplication concept -- Grade 5's fraction-multiplication cluster has no lettered 'c' word-problem part the way Grade 4's 4.NF.4c does, so 5.NF.6 is the correct application-level anchor) -- two CCSS codes, merge.",
+      "edumath_cited_domain": "5.NF"
+    },
+    {
+      "state_code": "5.CE.3",
+      "grade": "5",
+      "ccss_codes": [
+        {
+          "code": "5.NBT.7",
+          "description": "Add, subtract, multiply, and divide decimals to hundredths, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Rule 2: unlike 5.CE.1 (which needed splitting across two CCSS codes), decimal four-operations content is already bundled into a single CCSS standard, 5.NBT.7 (add, subtract, multiply, divide decimals to hundredths) -- clean one-to-one match, exact.",
+      "edumath_cited_domain": "5.NBT"
+    },
+    {
+      "state_code": "5.MG.1",
+      "grade": "5",
+      "ccss_codes": [
+        {
+          "code": "5.MD.1",
+          "description": "Convert among different-sized standard measurement units within a given measurement system (e.g., convert 5 cm to 0.05 m), and use these conversions in solving multi-step, real world problems."
+        }
+      ],
+      "relationship": "exact",
+      "needs_review": false,
+      "note": "Rule 2: VA's metric-only length/mass/volume problem-solving matches CCSS 5.MD.1's unit-conversion-and-problem-solving requirement.",
+      "edumath_cited_domain": "5.MD"
+    },
+    {
+      "state_code": "5.MG.2",
+      "grade": "5",
+      "ccss_codes": [
+        {
+          "code": "5.MD.5a",
+          "description": "Find the volume of a right rectangular prism with whole-number side lengths by packing it with unit cubes, and show that the volume is the same as would be found by multiplying the edge lengths, equivalently by multiplying the height by the area of the base. Represent threefold whole-number products as volumes, e.g., to represent the associative property of multiplication."
+        },
+        {
+          "code": "5.MD.5b",
+          "description": "Apply the formulas V = l x w x h and V = b x h for rectangular prisms to find volumes of right rectangular prisms with whole-number edge lengths in the context of solving real world and mathematical problems."
+        },
+        {
+          "code": "5.MD.5c",
+          "description": "Recognize volume as additive. Find volumes of solid figures composed of two non-overlapping right rectangular prisms by adding the volumes of the non-overlapping parts, applying this technique to solve real world problems."
+        }
+      ],
+      "relationship": "merge",
+      "needs_review": false,
+      "note": "Rule 1: VA bundles perimeter and area (already Grade 3-4 CCSS content, 3.MD.8/4.MD.3) together with volume, the genuinely new Grade 5 CCSS content (5.MD.5a-c) -- classified against the new content (volume), which itself spans 3 CCSS codes, merge.",
+      "edumath_cited_domain": "5.MD"
+    },
+    {
+      "state_code": "5.PFA.1",
+      "grade": "5",
+      "ccss_codes": [
+        {
+          "code": "5.OA.3",
+          "description": "Generate two numerical patterns using two given rules. Identify apparent relationships between corresponding terms. Form ordered pairs consisting of corresponding terms from the two patterns, and graph the ordered pairs on a coordinate plane. For example, given the rule \"Add 3\" and the starting number 0, and given the rule \"Add 6\" and the starting number 0, generate terms in the resulting sequences, and observe that the terms in one sequence are twice the corresponding terms in the other sequence. Explain informally why this is so."
+        }
+      ],
+      "relationship": "partial",
+      "needs_review": true,
+      "note": "Rule 4: VA's general pattern identify/describe/extend/create (whole numbers, fractions, decimals) is narrower than CCSS 5.OA.3's specific requirement to generate patterns from TWO given rules, relate corresponding terms, form ordered pairs, and graph them -- related but VA doesn't build toward the ordered-pairs/graphing component at all, too imprecise for a clean subset call -- partial, flagged for review.",
+      "edumath_cited_domain": "5.OA"
+    },
+    {
+      "state_code": "5.PFA.2",
+      "grade": "5",
+      "ccss_codes": [
+        {
+          "code": "4.OA.3",
+          "description": "Solve multistep word problems posed with whole numbers and having whole-number answers using the four operations, including problems in which remainders must be interpreted. Represent these problems using equations with a letter standing for the unknown quantity. Assess the reasonableness of answers using mental computation and estimation strategies including rounding."
+        }
+      ],
+      "relationship": "different_grade",
+      "needs_review": false,
+      "note": "Rule 3: VA's 'investigate and use variables in contextual problems' is the same operation as CCSS 4.OA.3's represent-with-a-letter-for-the-unknown requirement, taught one grade later in VA. Agrees with EDUMath's own citation (4.OA).",
+      "edumath_cited_domain": "4.OA"
+    }
+  ]
+}

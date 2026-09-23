@@ -1,0 +1,294 @@
+{
+  "gold_source": "EDUMath crosswalk (papers/edumath_data/matched_standards_summarized.csv) -- undergrad-mapped, educator-verified per author correspondence",
+  "n": 21,
+  "domain_level_agreement_rate": 0.9047619047619048,
+  "candidate_script_errors": [
+    {
+      "va_code": "3.NS.4",
+      "our_relationship": "different_grade",
+      "our_ccss_codes": [
+        "2.MD.8"
+      ],
+      "our_ccss_domains": [
+        "2.MD"
+      ],
+      "gold_domain_edumath": "4.MD",
+      "domain_agrees": false
+    },
+    {
+      "va_code": "4.NS.3",
+      "our_relationship": "state_superset",
+      "our_ccss_codes": [
+        "4.NF.2"
+      ],
+      "our_ccss_domains": [
+        "4.NF"
+      ],
+      "gold_domain_edumath": "3.NF",
+      "domain_agrees": false
+    }
+  ],
+  "rows": [
+    {
+      "va_code": "3.CE.1",
+      "our_relationship": "exact",
+      "our_ccss_codes": [
+        "3.NBT.2"
+      ],
+      "our_ccss_domains": [
+        "3.NBT"
+      ],
+      "gold_domain_edumath": "3.NBT",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "3.CE.2",
+      "our_relationship": "merge",
+      "our_ccss_codes": [
+        "3.OA.3",
+        "3.OA.7"
+      ],
+      "our_ccss_domains": [
+        "3.OA"
+      ],
+      "gold_domain_edumath": "3.OA",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "3.MG.2",
+      "our_relationship": "merge",
+      "our_ccss_codes": [
+        "3.MD.7d",
+        "3.MD.8"
+      ],
+      "our_ccss_domains": [
+        "3.MD"
+      ],
+      "gold_domain_edumath": "3.MD",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "3.MG.3",
+      "our_relationship": "state_subset",
+      "our_ccss_codes": [
+        "3.MD.1"
+      ],
+      "our_ccss_domains": [
+        "3.MD"
+      ],
+      "gold_domain_edumath": "3.MD",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "3.NS.4",
+      "our_relationship": "different_grade",
+      "our_ccss_codes": [
+        "2.MD.8"
+      ],
+      "our_ccss_domains": [
+        "2.MD"
+      ],
+      "gold_domain_edumath": "4.MD",
+      "domain_agrees": false
+    },
+    {
+      "va_code": "3.PFA.1",
+      "our_relationship": "state_superset",
+      "our_ccss_codes": [
+        "3.OA.9"
+      ],
+      "our_ccss_domains": [
+        "3.OA"
+      ],
+      "gold_domain_edumath": "3.OA",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "4.CE.1",
+      "our_relationship": "exact",
+      "our_ccss_codes": [
+        "4.NBT.4"
+      ],
+      "our_ccss_domains": [
+        "4.NBT"
+      ],
+      "gold_domain_edumath": "4.NBT",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "4.CE.2",
+      "our_relationship": "merge",
+      "our_ccss_codes": [
+        "4.NBT.5",
+        "4.NBT.6"
+      ],
+      "our_ccss_domains": [
+        "4.NBT"
+      ],
+      "gold_domain_edumath": "4.NBT",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "4.CE.3",
+      "our_relationship": "merge",
+      "our_ccss_codes": [
+        "4.NF.3d",
+        "4.NF.4c"
+      ],
+      "our_ccss_domains": [
+        "4.NF"
+      ],
+      "gold_domain_edumath": "4.NF",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "4.CE.4",
+      "our_relationship": "partial",
+      "our_ccss_codes": [
+        "5.NBT.7"
+      ],
+      "our_ccss_domains": [
+        "5.NBT"
+      ],
+      "gold_domain_edumath": "5.NBT",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "4.MG.1",
+      "our_relationship": "merge",
+      "our_ccss_codes": [
+        "4.MD.1",
+        "4.MD.2"
+      ],
+      "our_ccss_domains": [
+        "4.MD"
+      ],
+      "gold_domain_edumath": "4.MD",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "4.MG.2",
+      "our_relationship": "split",
+      "our_ccss_codes": [
+        "4.MD.2"
+      ],
+      "our_ccss_domains": [
+        "4.MD"
+      ],
+      "gold_domain_edumath": "4.MD",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "4.NS.3",
+      "our_relationship": "state_superset",
+      "our_ccss_codes": [
+        "4.NF.2"
+      ],
+      "our_ccss_domains": [
+        "4.NF"
+      ],
+      "gold_domain_edumath": "3.NF",
+      "domain_agrees": false
+    },
+    {
+      "va_code": "4.PFA.1",
+      "our_relationship": "exact",
+      "our_ccss_codes": [
+        "4.OA.5"
+      ],
+      "our_ccss_domains": [
+        "4.OA"
+      ],
+      "gold_domain_edumath": "4.OA",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "5.CE.1",
+      "our_relationship": "merge",
+      "our_ccss_codes": [
+        "5.NBT.5",
+        "5.NBT.6"
+      ],
+      "our_ccss_domains": [
+        "5.NBT"
+      ],
+      "gold_domain_edumath": "5.NBT",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "5.CE.2",
+      "our_relationship": "merge",
+      "our_ccss_codes": [
+        "5.NF.2",
+        "5.NF.6"
+      ],
+      "our_ccss_domains": [
+        "5.NF"
+      ],
+      "gold_domain_edumath": "5.NF",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "5.CE.3",
+      "our_relationship": "exact",
+      "our_ccss_codes": [
+        "5.NBT.7"
+      ],
+      "our_ccss_domains": [
+        "5.NBT"
+      ],
+      "gold_domain_edumath": "5.NBT",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "5.MG.1",
+      "our_relationship": "exact",
+      "our_ccss_codes": [
+        "5.MD.1"
+      ],
+      "our_ccss_domains": [
+        "5.MD"
+      ],
+      "gold_domain_edumath": "5.MD",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "5.MG.2",
+      "our_relationship": "merge",
+      "our_ccss_codes": [
+        "5.MD.5a",
+        "5.MD.5b",
+        "5.MD.5c"
+      ],
+      "our_ccss_domains": [
+        "5.MD"
+      ],
+      "gold_domain_edumath": "5.MD",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "5.PFA.1",
+      "our_relationship": "partial",
+      "our_ccss_codes": [
+        "5.OA.3"
+      ],
+      "our_ccss_domains": [
+        "5.OA"
+      ],
+      "gold_domain_edumath": "5.OA",
+      "domain_agrees": true
+    },
+    {
+      "va_code": "5.PFA.2",
+      "our_relationship": "different_grade",
+      "our_ccss_codes": [
+        "4.OA.3"
+      ],
+      "our_ccss_domains": [
+        "4.OA"
+      ],
+      "gold_domain_edumath": "4.OA",
+      "domain_agrees": true
+    }
+  ]
+}

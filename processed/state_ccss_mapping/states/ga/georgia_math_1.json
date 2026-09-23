@@ -1,0 +1,200 @@
+{
+  "subject": "Mathematics",
+  "grade": "1",
+  "source": "Georgia K-12 Mathematics Standards (SY2023-2024)",
+  "case_document_id": "e9dd7229-3558-4df2-85c6-57b8938f6180",
+  "domains": [
+    {
+      "code": "1.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "standards": [
+        {
+          "code": "1.MP.1",
+          "description": "Make sense of problems and persevere in solving them."
+        },
+        {
+          "code": "1.MP.2",
+          "description": "Reason abstractly and quantitatively."
+        },
+        {
+          "code": "1.MP.3",
+          "description": "Construct viable arguments and critique the reasoning of others."
+        },
+        {
+          "code": "1.MP.4",
+          "description": "Model with mathematics."
+        },
+        {
+          "code": "1.MP.5",
+          "description": "Use appropriate tools strategically."
+        },
+        {
+          "code": "1.MP.6",
+          "description": "Attend to precision."
+        },
+        {
+          "code": "1.MP.7",
+          "description": "Look for and make use of structure."
+        },
+        {
+          "code": "1.MP.8",
+          "description": "Look for and express regularity in repeated reasoning."
+        }
+      ]
+    },
+    {
+      "code": "1.NR",
+      "name": "Number Relations",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "1.NR.1",
+          "description": "Extend the count sequence to 120. Read, write, and represent numerical values to 120 and compare numerical values to 100.",
+          "sub_standards": [
+            {
+              "code": "1.NR.1.1",
+              "description": "Count within 120, forward and backward, starting at any number. In this range, read and write numerals and represent a number of objects with a written numeral."
+            },
+            {
+              "code": "1.NR.1.2",
+              "description": "Explain that the two digits of a 2-digit number represent the amounts of tens and ones."
+            },
+            {
+              "code": "1.NR.1.3",
+              "description": "Compare and order whole numbers up to 100 using concrete models, drawings, and the symbols >, =, and <."
+            }
+          ]
+        },
+        {
+          "code": "1.NR.2",
+          "description": "Explain the relationship between addition and subtraction and apply the properties of operations to solve real-life addition and subtraction problems within 20.",
+          "sub_standards": [
+            {
+              "code": "1.NR.2.1",
+              "description": "Use a variety of strategies to solve addition and subtraction problems within 20."
+            },
+            {
+              "code": "1.NR.2.2",
+              "description": "Use pictures, drawings, and equations to develop strategies for addition and subtraction within 20 by exploring strings of related problems."
+            },
+            {
+              "code": "1.NR.2.3",
+              "description": "Recognize the inverse relationship between subtraction and addition within 20 and use this inverse relationship to solve authentic problems."
+            },
+            {
+              "code": "1.NR.2.4",
+              "description": "Fluently add and subtract within 10 using a variety of strategies."
+            },
+            {
+              "code": "1.NR.2.5",
+              "description": "Use the meaning of the equal sign to determine whether equations involving addition and subtraction are true or false."
+            },
+            {
+              "code": "1.NR.2.6",
+              "description": "Determine the unknown whole number in an addition or subtraction equation relating to three whole numbers."
+            },
+            {
+              "code": "1.NR.2.7",
+              "description": "Apply properties of operations as strategies to solve addition and subtraction problem situations within 20."
+            }
+          ]
+        },
+        {
+          "code": "1.NR.5",
+          "description": "Use concrete models, the base ten structure, and properties of operations to add and subtract within 100.",
+          "sub_standards": [
+            {
+              "code": "1.NR.5.1",
+              "description": "Use a variety of strategies to solve applicable, mathematical addition and subtraction problems with one- and two-digit whole numbers."
+            },
+            {
+              "code": "1.NR.5.2",
+              "description": "Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used."
+            },
+            {
+              "code": "1.NR.5.3",
+              "description": "Add and subtract multiples of 10 within 100."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.PAR",
+      "name": "Patterns and Algebraic Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "1.PAR.3",
+          "description": "Identify, describe, extend, and create repeating patterns, growing patterns, and shrinking patterns found in real-life situations.",
+          "sub_standards": [
+            {
+              "code": "1.PAR.3.1",
+              "description": "Investigate, create, and make predictions about repeating patterns with a core of up to 3 elements resulting from repeating an operation, as a series of shapes, or a number string."
+            },
+            {
+              "code": "1.PAR.3.2",
+              "description": "Identify, describe, and create growing, shrinking, and repeating patterns based on the repeated addition or subtraction of 1s, 2s, 5s, and 10s."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.GSR",
+      "name": "Geometry and Spatial Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "1.GSR.4",
+          "description": "Compose shapes, analyze the attributes of shapes, and relate their parts to the whole.",
+          "sub_standards": [
+            {
+              "code": "1.GSR.4.1",
+              "description": "Identify common two-dimensional shapes and three-dimensional figures, sort and classify them by their attributes and build and draw shapes that possess defining attributes."
+            },
+            {
+              "code": "1.GSR.4.2",
+              "description": "Compose two-dimensional shapes (rectangles, squares, triangles, half-circles, and quarter-circles) and three-dimensional figures (cubes, rectangular prisms, cones, and cylinders) to create a shape formed of two or more common shapes and compose new shapes from the composite shape."
+            },
+            {
+              "code": "1.GSR.4.3",
+              "description": "Partition circles and rectangles into two and four equal shares."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.MDR",
+      "name": "Measurement, Data, and Results",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "1.MDR.6",
+          "description": "Use appropriate tools to measure, order, and compare intervals of length and time, as well as denominations of money to solve real-life, mathematical problems and analyze graphical displays of data to answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "1.MDR.6.1",
+              "description": "Estimate, measure, and record lengths of objects using non-standard units, and compare and order up to three objects using the recorded measurements. Describe the objects compared."
+            },
+            {
+              "code": "1.MDR.6.2",
+              "description": "Tell and write time in hours and half-hours using analog and digital clocks, and measure elapsed time to the hour on the hour using a predetermined number line."
+            },
+            {
+              "code": "1.MDR.6.3",
+              "description": "Identify the value of quarters and compare the values of pennies, nickels, dimes, and quarters."
+            },
+            {
+              "code": "1.MDR.6.4",
+              "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to compare and order whole numbers."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

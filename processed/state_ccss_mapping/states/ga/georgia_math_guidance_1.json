@@ -1,0 +1,472 @@
+{
+  "subject": "Mathematics",
+  "grade": "1",
+  "source": "Georgia's K-12 Mathematics Standards, 2021, Georgia Department of Education (GaDOE)",
+  "source_document": "dat/ga_k8_math_standards.pdf",
+  "source_pages": "pp. 16-25",
+  "notes": {
+    "what_this_is": "See processed/standards/georgia_math_guidance_0.json notes.what_this_is -- same convention, this grade's content.",
+    "verbatim_policy": "Every bullet under every field is a verbatim transcription checked against the source page images, not paraphrased.",
+    "excluded_content": "Same two exclusion categories as Kindergarten (see georgia_math_guidance_0.json notes.excluded_content). Grade 1 has no GELDS Pre-K logo citations (that citation pattern only appears in Kindergarten). One photograph exclusion this grade: 1.MDR.6.1's two aquaponics-garden photos of students measuring real plants -- unlike Kindergarten's ladybug photo, the source has no separate explanatory 'Note' text for these photos to preserve, so only a 'diagram_excluded' key is recorded, no extra example text.",
+    "diagrams": "Same policy as Kindergarten -- real extracted images, not descriptions, saved to processed/standards/diagrams/. Two of this grade's diagrams needed extra processing: 1.NR.1.1's image already combines the Number Path and Number Line into one source graphic (kept as one file); 1.NR.5.2's diagram was split across two adjacent PDF image objects (a ten-frame grid and a small leftover-dots cluster) that together form one illustration, so they were composited side-by-side into a single file."
+  },
+  "domains": [
+    {
+      "code": "1.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "note": "1.MP has no Evidence of Student Learning breakdown in the source, same as K.MP."
+    },
+    {
+      "code": "1.NR",
+      "name": "Numerical Reasoning",
+      "big_idea_note": "NUMERICAL REASONING -- counting, numbers, equality, place value, addition, subtraction",
+      "standards": [
+        {
+          "code": "1.NR.1",
+          "description": "Extend the count sequence to 120. Read, write, and represent numerical values to 120 and compare numerical values to 100.",
+          "sub_standards": [
+            {
+              "code": "1.NR.1.1",
+              "expectation": "Count within 120, forward and backward, starting at any number. In this range, read and write numerals and represent a number of objects with a written numeral.",
+              "fundamentals": [
+                "Students should understand that as the counting sequence increases, the value of each number increases by one or ten. As the counting sequence decreases, the value of each number decreases by one or ten."
+              ],
+              "strategies_and_methods": [
+                "Students should count forwards and backwards by 1s and 10s from any number within 120.",
+                "Students should have opportunities to explore the counting sequences using a variety of tools. These tools can include, but are not limited to 99 charts, hundred charts, number paths, number lines (predetermined and open), etc."
+              ],
+              "terminology": [
+                "Number Path -- a counting model where each rectangle can be counted",
+                "Number Line -- a length model where each number is represented by its length from zero"
+              ],
+              "diagrams": [
+                { "image": "diagrams/1.NR.1.1_number_path_line.png", "caption": "Two labeled diagrams: a 'Number Path' shown as numbered rectangles 1-9 in a row, and a 'Number Line' shown as a ray marked 0-11 with the definitions 'a counting model where each rectangle can be counted' and 'a length model where each number is represented by its length from zero.'" }
+              ]
+            },
+            {
+              "code": "1.NR.1.2",
+              "expectation": "Explain that the two digits of a 2-digit number represent the amounts of tens and ones.",
+              "fundamentals": [
+                "Students should be able to recognize the relationship of a digit to its place. For example: In the number 33, the digit \"3\" in the tens place has a value that is equivalent to three groups of ten. Students interpret the value of each digit. The number 33 has three tens and three remaining ones. They should also see this as equivalent to 33 ones.",
+                "Students should understand the following as special cases:",
+                "10 can be thought of as a bundle of ten ones — called a \"ten.\" Bundles could include groups of pennies, bundles of straws, or other hands-on manipulatives.",
+                "The numbers from 11 to 19 are composed or decomposed as a ten and one, two, three, four, five, six, seven, eight, or nine ones."
+              ],
+              "strategies_and_methods": [
+                "The numbers 11 to 19 can be represented on ten frames, double ten frames, rekenreks, and with pennies and dimes, etc.",
+                "The numbers 10, 20, 30, 40, 50, 60, 70, 80, and 90, can be represented using a variety of tools (popsicle sticks, linking cubes, etc.)"
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be able to explain that the numbers 10, 20, 30, 40, 50, 60, 70, 80, 90 refer to one, two, three, four, five, six, seven, eight, or nine tens (and 0 ones)."
+              ]
+            },
+            {
+              "code": "1.NR.1.3",
+              "expectation": "Compare and order whole numbers up to 100 using concrete models, drawings, and the symbols >, =, and <.",
+              "fundamentals": [
+                "Students should understand whole numbers to 100 based on meanings of the tens and ones and record the results of comparisons with the symbols >, =, and <."
+              ],
+              "strategies_and_methods": [
+                "Representations should include the use of physical materials such as number paths, base-ten materials, number lines (predetermined and open), dimes and pennies, etc."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should have ample experiences communicating their comparisons using words, representations AND relevant applications before only using symbols in the learning objective.",
+                "Students need practice justifying comparisons with words and models, prior to exposure and use of the comparison symbols."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1.NR.2",
+          "description": "Explain the relationship between addition and subtraction and apply the properties of operations to solve real-life addition and subtraction problems within 20.",
+          "sub_standards": [
+            {
+              "code": "1.NR.2.1",
+              "expectation": "Use a variety of strategies to solve addition and subtraction problems within 20.",
+              "fundamentals": [
+                "Students should be able to solve problems with two or more addends.",
+                "Decomposition should include, but not be limited to tens and ones."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be able to solve problems involving addition and subtraction using a variety of advanced counting and part-whole strategies related to everyday life.",
+                "Problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "terminology": [
+                "First grade students should be given opportunities to use mental reasoning to solve problems with a variety of problem types within 20.",
+                "Click here for a listing of all problem types."
+              ],
+              "examples": [
+                "I have scored 13 points. How many more points do I need to make 20 points?"
+              ],
+              "diagrams": [
+                { "image": "diagrams/1.NR.2.1_ten_frame_13.png", "caption": "Two ten-frames illustrating the number 13: the first fully filled with 10 dots, the second with 3 dots filled." }
+              ]
+            },
+            {
+              "code": "1.NR.2.2",
+              "expectation": "Use pictures, drawings, and equations to develop strategies for addition and subtraction within 20 by exploring strings of related problems.",
+              "fundamentals": [
+                "Students should be able to relate counting to addition and subtraction by counting all, counting on, and counting back when making sense of practical, mathematical addition and subtraction problems within 20.",
+                "Students should be given opportunities to use mental reasoning to solve problems involving number strings within 20. Click here for a listing of all problem types.",
+                "Students should also solve problem situations with an unknown in all positions.",
+                "Students should be given multiple opportunities to apply strategies developed through number strings to solve practical, mathematical problems."
+              ],
+              "terminology": [
+                "Number strings are sets of related problems crafted to support students to construct big ideas about mathematics and build their own strategies (Fosnot & Dolk, 2002)."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Symbols can be used to represent unknown amounts in equations.",
+                "Students should be provided with learning experiences to develop strategies such as: Advanced Counting; Counting On, Making Ten, Decomposing a number leading to a ten, Using the relationship between addition and subtraction within 20 (knowing that 8 + 4 = 12, one knows 12 – 8 = 4); and creating equivalent but easier or known sums (6 + 7 is the same as 6 + 6 + 1 = 12 + 1 = 13).",
+                "Counting All 5 + 2 = ☐. The student counts five counters. The student adds two more. The student counts 1, 2, 3, 4, 5, 6, 7 to get the answer.",
+                "Counting Back 12 – 3 = ☐. The student counts twelve counters. The student removes a counter and says 11, removes another counter and says 10, and removes a third counter and says 9. The student knows the answer is 9 since they counted back 3."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should not be encouraged to use key/clue words because they will not work with subsequent problem types.",
+                "The unknown quantity should be represented in all positions."
+              ],
+              "diagrams": [
+                { "image": "diagrams/1.NR.2.2_number_strings.png", "caption": "A rounded-rectangle box listing a number string example: '8 + 2', '8 + 2 + 4', '8 + 6', '8 + 5'." }
+              ]
+            },
+            {
+              "code": "1.NR.2.3",
+              "expectation": "Recognize the inverse relationship between subtraction and addition within 20 and use this inverse relationship to solve authentic problems.",
+              "age_developmentally_appropriate": [
+                "Problems should be within 20."
+              ],
+              "fundamentals": [
+                "Students should understand subtraction as an unknown-addend problem.",
+                "Students are not expected to know nor use the term inverse."
+              ],
+              "terminology": [
+                "The terms below are used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Addend – a number that is added to another number in an addition expression or equation. For example, in the expression 5 + 8, 5 and 8 are both addends.",
+                "An inverse relationship shows the relationship between addition and subtraction where addition can be used to find the quantity of a set after some in the set are removed. For example, 3+2 = 5 is related to 5 - 3 = 2 because of the inverse relationship."
+              ],
+              "examples": [
+                "There are 14 birds in the tree. 8 of them flew away. How many birds are left in the tree? The student thinks of 14 – 8 = ☐ as 8 + ☐ = 14",
+                "Jenny had 10 pencils and gave some to Eric. Jenny now has 8 pencils. How many pencils did she give to Eric? The student thinks of 10 - ☐ = 8 as ☐ + 8 = 10"
+              ]
+            },
+            {
+              "code": "1.NR.2.4",
+              "expectation": "Fluently add and subtract within 10 using a variety of strategies.",
+              "terminology": [
+                "Fluently/Fluency – To achieve fluency, students should be able to choose flexibly among methods and strategies to solve mathematical problems accurately and efficiently.",
+                "Accuracy includes attending to precision.",
+                "Efficiency includes using well-understood strategy with ease.",
+                "Flexibility involves using strategies such as making 5 or making 10.",
+                "For appropriate strategies and methods, see special note in appendix."
+              ],
+              "age_developmentally_appropriate": [
+                "Fluency does not lend itself to timed tests or speed."
+              ]
+            },
+            {
+              "code": "1.NR.2.5",
+              "expectation": "Use the meaning of the equal sign to determine whether equations involving addition and subtraction are true or false.",
+              "fundamentals": [
+                "Students should explore and explain the relationship of the equal sign to quantities and orally justify if equations involving addition and subtraction are \"true\" (equal) or \"false\" (not equal)."
+              ],
+              "examples": [
+                "Which of the following equations are true and which are false? How do you know? 6 = 6 (True/Correct Statement); 7 = 8 – 1 (True/Correct Statement); 5 + 2 = 2 + 5 (True/Correct Statement); 4 + 1 = 5 + 2 (False/Incorrect Statement)"
+              ]
+            },
+            {
+              "code": "1.NR.2.6",
+              "expectation": "Determine the unknown whole number in an addition or subtraction equation relating to three whole numbers.",
+              "strategies_and_methods": [
+                "Symbols can be used to represent unknown amounts in equations."
+              ],
+              "examples": [
+                "Determine the unknown number that makes the equation true in each of the equations: 8 + ? = 10, 5 = ☐ – 3, 3 + 4 = Δ. These are some possible ways to record equations that indicate an unknown number."
+              ]
+            },
+            {
+              "code": "1.NR.2.7",
+              "expectation": "Apply properties of operations as strategies to solve addition and subtraction problem situations within 20.",
+              "fundamentals": [
+                "Students solve problem situations with an unknown in all positions. Click here for a listing of all problem types."
+              ],
+              "terminology": [
+                "The terminology below is used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Addend – any number that is added to another number in an addition expression or equation. For example, in the expression 7 + 3, 7 and 3 are addends."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should not use key/clue words because they will not work with subsequent problem types.",
+                "The unknown quantity should be represented in all positions.",
+                "Students at this grade level are not expected to know the names or identify the specific properties."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "When students use strategies such as make a ten and decompose numbers, they are using properties such as the associative property and commutative property.",
+                "Students should be given multiple opportunities to use objects, drawings, and equations to solve problems involving addition and subtraction.",
+                "Students should develop strategies involving the properties of operations by comparing problem solving strategies.",
+                "Symbols can be used to represent unknown amounts in equations."
+              ],
+              "examples": [
+                "Example 1: Students may engage mentally using flexibility with the order of the addends: If 8 + 3 = 11 is known, then 3 + 8 = 11 is also known (The Commutative Property of Addition is applied in this example).",
+                "Example 2: Students may engage mentally using flexibility with the grouping of numbers: To add 2 + 6 + 4, the second two numbers can be added to make a ten, so 2 + 6 + 4 = 2 + 10 = 12 (The Associative Property of Addition is applied in this example)."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "1.NR.5",
+          "description": "Use concrete models, the base ten structure, and properties of operations to add and subtract within 100.",
+          "sub_standards": [
+            {
+              "code": "1.NR.5.1",
+              "expectation": "Use a variety of strategies to solve applicable, mathematical addition and subtraction problems with one- and two-digit whole numbers.",
+              "fundamentals": [
+                "Problems can include word problems that are meaningful to a student's real environment. It is important for the applicable, mathematical problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity.",
+                "Students should be able to interpret and manipulate concrete mathematical models.",
+                "Students should be given opportunities to justify their solutions to meet this learning objective.",
+                "Students should use estimation as a strategy to find numbers that are close to the numbers they are using to add and subtract.",
+                "Students should be able to use numerical reasoning to add and subtract within 100.",
+                "The numerical reasoning developed should include an understanding of the base-ten structure and properties of operations.",
+                "Students should reason that in adding two-digit numbers, one adds tens and tens, ones and ones; and sometimes it is necessary to put together (compose) or break apart (decompose) a ten."
+              ],
+              "terminology": [
+                "The terms below are used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Compose – put together numbers",
+                "Decompose – break apart numbers",
+                "Estimate – find a value that is close"
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should use concrete models, drawings, estimation, and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction to explain their reasoning.",
+                "Strategies may include reasoning involving making a ten, doubles and near-doubles, think addition, and using benchmark numbers.",
+                "Examples of different strategies and representations can be found within the Computational Strategies for Whole Numbers document found in the appendices."
+              ],
+              "age_developmentally_appropriate": [
+                "The properties of operation that should be explored in this objective are the commutative and associative properties.",
+                "Students are not expected to identify properties."
+              ]
+            },
+            {
+              "code": "1.NR.5.2",
+              "expectation": "Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used.",
+              "age_developmentally_appropriate": [
+                "This expectation requires students to apply this mental strategy and become fluent through purposeful practice. The goal is automaticity built on a deep understanding of the patterns of tens within our base-ten system."
+              ],
+              "examples": [
+                "There were 74 birds in the park. 10 of the birds flew away. How many birds are in the park, now? I pictured 7 ten-frames and 4 left over in my head. Since 10 birds flew away, I took one of the ten-frames away. That left 6 ten-frames and 4 left over. So, there are 64 birds left in the park."
+              ],
+              "diagrams": [
+                { "image": "diagrams/1.NR.5.2_ten_frames_74_minus_10.png", "caption": "Seven ten-frames arranged in a row with the last one crossed out (X), plus 4 loose dots beside them, illustrating 74 - 10 = 64 by removing one full ten-frame from 7 ten-frames-and-4-left-over." }
+              ]
+            },
+            {
+              "code": "1.NR.5.3",
+              "expectation": "Add and subtract multiples of 10 within 100.",
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should use concrete models; drawings, and strategies based on place value, properties of operations, and or/the relationship between addition and subtraction to explain their reasoning.",
+                "Students should describe sums and differences, using concrete models (tools and manipulatives), drawings, and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction to explain (verbally and/or written) the reasoning used."
+              ],
+              "age_developmentally_appropriate": [
+                "By the end of first grade, students should be able to state and write their justifications showing the relationship between their solution path and their reasoning. The focus of this standard is on thought processes, not merely on computational accuracy."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.PAR",
+      "name": "Patterning and Algebraic Reasoning",
+      "big_idea_note": "PATTERNING & ALGEBRAIC REASONING -- repeating patterns, growing, patterns, and shrinking patterns",
+      "standards": [
+        {
+          "code": "1.PAR.3",
+          "description": "Identify, describe, extend, and create repeating patterns, growing patterns, and shrinking patterns found in real-life situations.",
+          "sub_standards": [
+            {
+              "code": "1.PAR.3.1",
+              "expectation": "Investigate, create, and make predictions about repeating patterns with a core of up to 3 elements resulting from repeating an operation, as a series of shapes, or a number string.",
+              "fundamentals": [
+                "Students should investigate repeating patterns to make predictions."
+              ],
+              "examples": [
+                "Number String: 1, 2, 3, 1, 2, 3, 1, 2, …",
+                "Series of shapes:",
+                "Operation: 2, 4, 6, 8, … (add 2 each time)"
+              ],
+              "diagrams": [
+                { "image": "diagrams/1.PAR.3.1_shape_pattern.png", "caption": "A repeating shape pattern: triangle, triangle, circle, repeated three times." }
+              ]
+            },
+            {
+              "code": "1.PAR.3.2",
+              "expectation": "Identify, describe, and create growing, shrinking, and repeating patterns based on the repeated addition or subtraction of 1s, 2s, 5s, and 10s.",
+              "strategies_and_methods": [
+                "Students should use a number line and a hundred chart.",
+                "Students should investigate patterns found in authentic situations."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.GSR",
+      "name": "Geometric and Spatial Reasoning",
+      "big_idea_note": "GEOMETRIC & SPATIAL REASONING -- shapes, attributes, partitions of circles and rectangles",
+      "standards": [
+        {
+          "code": "1.GSR.4",
+          "description": "Compose shapes, analyze the attributes of shapes, and relate their parts to the whole.",
+          "sub_standards": [
+            {
+              "code": "1.GSR.4.1",
+              "expectation": "Identify common two-dimensional shapes and three-dimensional figures, sort and classify them by their attributes and build and draw shapes that possess defining attributes.",
+              "terminology": [
+                "The terms below are used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Attributes – characteristics of two-dimensional shapes and three-dimensional figures, including geometric properties.",
+                "Defining attributes – include number of sides, faces, vertices (corners), and angles.",
+                "Non-defining attributes – include size, orientation, texture, and color."
+              ],
+              "fundamentals": [
+                "Students should identify these two-dimensional shapes based on attributes: half circle, quarter circles, circles, triangles, squares, rectangles (Students should know that a square is a type of rectangle, based on its attributes.), hexagons",
+                "Students should identify these three-dimensional shapes based on attributes: cubes, cones, cylinders, spheres, rectangular prisms",
+                "Students should distinguish between defining attributes of two-dimensional shapes and three-dimensional figures versus non-defining attributes (e.g., triangles are closed and three-sided, a defining attribute versus triangles are red, non-defining attribute).",
+                "Students should be able to build and draw shapes based on defining attributes. Two dimensional shapes should be limited to triangles, squares, rectangles.",
+                "Students should be able to identify a shape's attributes, regardless of its orientation (i.e., flipped) or position (i.e., turned)."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be encouraged to sort and classify shapes based on their choice of attributes as well as attributes that may be provided.",
+                "Students at this grade level are not expected to know the names of or identify specific geometric properties."
+              ]
+            },
+            {
+              "code": "1.GSR.4.2",
+              "expectation": "Compose two-dimensional shapes (rectangles, squares, triangles, half-circles, and quarter-circles) and three-dimensional figures (cubes, rectangular prisms, cones, and cylinders) to create a shape formed of two or more common shapes and compose new shapes from the composite shape.",
+              "age_developmentally_appropriate": [
+                "Students do not need to learn formal names, such as \"right rectangular prism\"."
+              ],
+              "fundamentals": [
+                "It is important to note that the size of the shape does not necessarily distinguish between common and composite.",
+                "Students should use these two-dimensional shapes to create composite shapes: circles, half-circles, quarter-circles, triangles, squares, rectangles (Students should know that a square is a type of rectangle based on its attributes.), hexagons",
+                "Students should use these three-dimensional shapes to create composite shapes: cubes, cones, cylinders, spheres, rectangular prisms"
+              ],
+              "terminology": [
+                "Shapes that are made up of two or more common shapes are called composite shapes.",
+                "Compose – put together",
+                "Decompose – break apart"
+              ],
+              "examples": [
+                "Students will be working with shapes to compose and decompose shapes to form new shapes."
+              ],
+              "diagrams": [
+                { "image": "diagrams/1.GSR.4.2_common_shapes.png", "caption": "A labeled 'Common Shapes' diagram showing a blue rectangle, a purple circle, an orange square/diamond, a green triangle, and a yellow hexagon." },
+                { "image": "diagrams/1.GSR.4.2_composite_shapes.png", "caption": "A labeled 'Composite Shapes' diagram showing two blue rectangles joined into one larger rectangle, two red shapes joined into a hexagon-like composite, and a green triangle on an orange square forming a house-like composite." }
+              ]
+            },
+            {
+              "code": "1.GSR.4.3",
+              "expectation": "Partition circles and rectangles into two and four equal shares.",
+              "age_developmentally_appropriate": [
+                "Shading of the shares is not needed for this learning objective because the student is only required to partition the whole shape into equal shares.",
+                "Students are not expected to write the fraction using fraction notation in first grade."
+              ],
+              "fundamentals": [
+                "Students should explore and justify reasoning about the relationship of parts to the whole.",
+                "Students should describe the shares using the words \"halves,\" \"fourths or quarters.\"",
+                "Students should describe the whole as \"two of\" or \"four of\" the shares.",
+                "Students should reason that partitioning a shape into more equal shares creates smaller shares."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "1.MDR",
+      "name": "Measurement and Data Reasoning",
+      "big_idea_note": "MEASUREMENT & DATA REASONING -- length, time, money",
+      "standards": [
+        {
+          "code": "1.MDR.6",
+          "description": "Use appropriate tools to measure, order, and compare intervals of length and time, as well as denominations of money to solve real-life, mathematical problems and answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "1.MDR.6.1",
+              "expectation": "Estimate, measure, and record lengths of objects using non-standard units, and compare and order up to three objects using the recorded measurements. Describe the objects compared.",
+              "age_developmentally_appropriate": [
+                "Students should learn through exploration that the length measurement of an object is the number of same-sized length units that span it with no gaps or overlaps (iteration). For example, when students are measuring the height of a vegetable plant in their classroom garden, they may use snap cubes put together to determine how tall the plant is.",
+                "Iteration – the process of repeating a unit length end to end along an object to obtain a measurement."
+              ],
+              "terminology": [
+                "Length measurement of an object is the number of same-sized length units that span an object with no gaps or overlaps (iteration)."
+              ],
+              "fundamentals": [
+                "Students should explore this concept with objects found in the real world to develop solid measurement reasoning.",
+                "Students should explore this concept with objects.",
+                "Students should express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end, by using non-standard units."
+              ],
+              "strategies_and_methods": [
+                "Students should use terminology such as, but not limited to, \"longer than\", \"shorter than\", \"same length as\", \"taller than\", and \"equal to\".",
+                "Appropriate tools to measure non-standard units can be items such as one-inch paper clips, one-inch tiles, centimeter cubes, etc. The units need to correspond to standard units of measurement."
+              ],
+              "examples": [
+                "Students at an elementary school are maintaining an aquaponics garden. To measure the heights of the plants growing in their garden, they use snap cubes to determine how many cubes high the plant have grown."
+              ],
+              "diagram_excluded": "two photographs of students measuring real plants with snap cubes in an aquaponics garden setup, excluded per notes.excluded_content (no separate explanatory 'Note' text accompanies these photos in the source)"
+            },
+            {
+              "code": "1.MDR.6.2",
+              "expectation": "Tell and write time in hours and half-hours using analog and digital clocks, and measure elapsed time to the hour on the hour using a predetermined number line.",
+              "age_developmentally_appropriate": [
+                "Students should tell and write time to the hour and half hour in everyday settings, paying attention to a.m. and p.m.",
+                "Problems presented to students should avoid crossing over a.m. and p.m.",
+                "Students are not required to know the term elapsed time at this grade level."
+              ],
+              "strategies_and_methods": [
+                "Begin with a one-handed clock (just the hour hand) and use a lot of approximate language such as: \"It's close to 10:00.\", \"It's half-way between 11:00 and 12:00.\", \"It's just a little after 1:00.\"",
+                "Video showing how to use a number line to tell time and how the number line can be curved to look like a circular clock -- Click Here."
+              ],
+              "fundamentals": [
+                "The familiarity of the number line provides students with an opportunity to make sense of the concept of elapsed time. The connection to the traditional clock can be made by bending the clock number line into a circle."
+              ],
+              "examples": [
+                "At 3:00 PM we are going to the trampoline park. We will be there for 4 hours. What time will we be leaving the trampoline park? Represent this on a number line. It will be 7:00 when we leave the trampoline park."
+              ],
+              "diagrams": [
+                { "image": "diagrams/1.MDR.6.2_elapsed_time_number_line.png", "caption": "A number line from 3 to 10 with four green arcs labeled '1' each, arching from 3 to 4, 4 to 5, 5 to 6, and 6 to 7, illustrating 4 hours of elapsed time from 3:00 to 7:00." }
+              ]
+            },
+            {
+              "code": "1.MDR.6.3",
+              "expectation": "Identify the value of quarters and compare the values of pennies, nickels, dimes, and quarters.",
+              "fundamentals": [
+                "Students explored the values of pennies, nickels, and dimes in Kindergarten."
+              ],
+              "strategies_and_methods": [
+                "Learning experiences should be provided to help students understand that size does not always equal value."
+              ],
+              "examples": [
+                "\"A set of three dimes has a greater value than one quarter,\" or \"five nickels is equal in value to one quarter\"."
+              ]
+            },
+            {
+              "code": "1.MDR.6.4",
+              "expectation": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to compare and order whole numbers.",
+              "strategies_and_methods": [
+                "Questions should be student generated.",
+                "Students should have the opportunity to use concrete models, drawings, and the symbols >, <, and = when exploring comparisons."
+              ],
+              "fundamentals": [
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

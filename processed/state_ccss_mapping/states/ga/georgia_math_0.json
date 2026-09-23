@@ -1,0 +1,212 @@
+{
+  "subject": "Mathematics",
+  "grade": "0",
+  "source": "Georgia K-12 Mathematics Standards (SY2023-2024)",
+  "case_document_id": "e9dd7229-3558-4df2-85c6-57b8938f6180",
+  "domains": [
+    {
+      "code": "K.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "standards": [
+        {
+          "code": "K.MP.1",
+          "description": "Make sense of problems and persevere in solving them."
+        },
+        {
+          "code": "K.MP.2",
+          "description": "Reason abstractly and quantitatively."
+        },
+        {
+          "code": "K.MP.3",
+          "description": "Construct viable arguments and critique the reasoning of others."
+        },
+        {
+          "code": "K.MP.4",
+          "description": "Model with mathematics."
+        },
+        {
+          "code": "K.MP.5",
+          "description": "Use appropriate tools strategically."
+        },
+        {
+          "code": "K.MP.6",
+          "description": "Attend to precision."
+        },
+        {
+          "code": "K.MP.7",
+          "description": "Look for and make use of structure."
+        },
+        {
+          "code": "K.MP.8",
+          "description": "Look for and express regularity in repeated reasoning."
+        }
+      ]
+    },
+    {
+      "code": "K.NR",
+      "name": "Number Relations",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "K.NR.1",
+          "description": "Demonstrate and explain the relationship between numbers and quantities up to 20; connect counting to cardinality (the last number counted represents the total quantity in a set).",
+          "sub_standards": [
+            {
+              "code": "K.NR.1.1",
+              "description": "Count up to 20 objects in a variety of structured arrangements and up to 10 objects in a scattered arrangement."
+            },
+            {
+              "code": "K.NR.1.2",
+              "description": "When counting objects, explain that the last number counted represents the total quantity in a set (cardinality), regardless of the arrangement and order."
+            },
+            {
+              "code": "K.NR.1.3",
+              "description": "Given a number from 1-20, identify the number that is one more or one less."
+            },
+            {
+              "code": "K.NR.1.4",
+              "description": "Identify pennies, nickels, and dimes and know their name and value."
+            }
+          ]
+        },
+        {
+          "code": "K.NR.2",
+          "description": "Use count sequences within 100 to count forward and backward in sequence.",
+          "sub_standards": [
+            {
+              "code": "K.NR.2.1",
+              "description": "Count forward to 100 by tens and ones and backward from 20 by ones."
+            },
+            {
+              "code": "K.NR.2.2",
+              "description": "Count forward beginning from any number within 100 and count backward from any number within 20."
+            }
+          ]
+        },
+        {
+          "code": "K.NR.3",
+          "description": "Use place value understanding to compose and decompose numbers from 11–19.",
+          "sub_standards": [
+            {
+              "code": "K.NR.3.1",
+              "description": "Describe numbers from 11 to 19 by composing (putting together) and decomposing (breaking apart) the numbers into ten ones and some more ones."
+            }
+          ]
+        },
+        {
+          "code": "K.NR.4",
+          "description": "Identify, write, represent, and compare numbers up to 20.",
+          "sub_standards": [
+            {
+              "code": "K.NR.4.1",
+              "description": "Identify written numerals 0- 20 and represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects)."
+            },
+            {
+              "code": "K.NR.4.2",
+              "description": "Compare two sets of up to 10 objects and identify whether the number of objects in one group is more or less than the other group, using the words “greater than,” “less than,” or “the same as”."
+            }
+          ]
+        },
+        {
+          "code": "K.NR.5",
+          "description": "Explain the concepts of addition, subtraction, and equality and use these concepts to solve real-life problems within 10.",
+          "sub_standards": [
+            {
+              "code": "K.NR.5.1",
+              "description": "Compose (put together) and decompose (break apart) numbers up to 10 using objects and drawings."
+            },
+            {
+              "code": "K.NR.5.2",
+              "description": "Represent addition and subtraction within 10 from a given authentic situation using a variety of representations and strategies."
+            },
+            {
+              "code": "K.NR.5.3",
+              "description": "Use a variety of strategies to solve addition and subtraction problems within 10."
+            },
+            {
+              "code": "K.NR.5.4",
+              "description": "Fluently add and subtract within 5 using a variety of strategies to solve practical, mathematical problems."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "K.PAR",
+      "name": "Patterns and Algebraic Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "K.PAR.6",
+          "description": "Explain, extend, and create repeating patterns with a repetition, not exceeding 4 and describe patterns involving the passage of time.",
+          "sub_standards": [
+            {
+              "code": "K.PAR.6.1",
+              "description": "Create, extend, and describe repeating patterns with numbers and shapes, and explain the rationale for the pattern."
+            },
+            {
+              "code": "K.PAR.6.2",
+              "description": "Describe patterns involving the passage of time using words and phrases related to actual events."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "K.MDR",
+      "name": "Measurement, Data, and Results",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "K.MDR.7",
+          "description": "Observe, describe, and compare the physical and measurable attributes of objects and analyze graphical displays of data to answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "K.MDR.7.1",
+              "description": "Directly compare, describe, and order common objects, using measurable attributes (length, height, width, or weight) and describe the difference."
+            },
+            {
+              "code": "K.MDR.7.2",
+              "description": "Classify and sort up to ten objects into categories by an attribute; count the number of objects in each category and sort the categories by count."
+            },
+            {
+              "code": "K.MDR.7.3",
+              "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "K.GSR",
+      "name": "Geometry and Spatial Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "K.GSR.8",
+          "description": "Identify, describe, and compare basic shapes encountered in the environment, and form two-dimensional shapes and three-dimensional figures.",
+          "sub_standards": [
+            {
+              "code": "K.GSR.8.1",
+              "description": "Identify, sort, classify, analyze, and compare two- dimensional shapes and three-dimensional figures, in different sizes and orientations, using informal language to describe their similarities, differences, number of sides and vertices, and other attributes."
+            },
+            {
+              "code": "K.GSR.8.2",
+              "description": "Describe the relative location of an object using positional words."
+            },
+            {
+              "code": "K.GSR.8.3",
+              "description": "Use basic shapes to represent specific shapes found in the environment by creating models and drawings."
+            },
+            {
+              "code": "K.GSR.8.4",
+              "description": "Use two or more basic shapes to form larger shapes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
