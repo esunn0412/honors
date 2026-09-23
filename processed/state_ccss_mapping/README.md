@@ -101,16 +101,16 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 
 **Relationship-type breakdown (`states/ga/mapping_final.json`, 150 codes):**
 
-| Relationship | Count |
-|---|---|
-| `exact` | 56 |
-| `merge` | 32 |
-| `split` | 18 |
-| `state_superset` | 12 |
-| `none` | 12 |
-| `different_grade` | 7 |
-| `state_subset` | 7 |
-| `partial` | 6 |
+| Relationship | Count | % |
+|---|---|---|
+| `exact` | 56 | 37.3% |
+| `merge` | 32 | 21.3% |
+| `split` | 18 | 12.0% |
+| `state_superset` | 12 | 8.0% |
+| `none` | 12 | 8.0% |
+| `different_grade` | 7 | 4.7% |
+| `state_subset` | 7 | 4.7% |
+| `partial` | 6 | 4.0% |
 
 **Corrections by error type:**
 
@@ -142,15 +142,15 @@ There's no independently-verified "gold" mapping for GA — the thesis author is
 
 **Relationship-type breakdown (`states/va/mapping_llm.json`, 21 codes — identical for the hierarchical run too):**
 
-| Relationship | Count |
-|---|---|
-| `merge` | 8 |
-| `exact` | 5 |
-| `different_grade` | 2 |
-| `state_superset` | 2 |
-| `partial` | 2 |
-| `split` | 1 |
-| `state_subset` | 1 |
+| Relationship | Count | % |
+|---|---|---|
+| `merge` | 8 | 38.1% |
+| `exact` | 5 | 23.8% |
+| `different_grade` | 2 | 9.5% |
+| `state_superset` | 2 | 9.5% |
+| `partial` | 2 | 9.5% |
+| `split` | 1 | 4.8% |
+| `state_subset` | 1 | 4.8% |
 
 **Why domain-level only, and why GA uses sub-standard-level:** GA's own codes are sub-standard-level by construction (one code per lettered teaching point). VA's SOL codes aren't — one code covers several lettered bullets with no separate ID per bullet, and no available source breaks VA's text into complete per-bullet form. So this pipeline classifies VA at the whole-standard level, while EDUMath cites one specific bullet per row.
 
@@ -167,16 +167,16 @@ Alternative to the flat method: stage the search (pick domain family → pick cl
 
 **Relationship-type breakdown, GA hierarchical run (150 codes) vs. the adopted mapping:**
 
-| Relationship | Hierarchical | Adopted |
+| Relationship | Hierarchical (n, %) | Adopted (n, %) |
 |---|---|---|
-| `exact` | 56 | 56 |
-| `merge` | 31 | 32 |
-| `state_superset` | 18 | 12 |
-| `state_subset` | 16 | 7 |
-| `different_grade` | 11 | 7 |
-| `none` | 9 | 12 |
-| `split` | 8 | 18 |
-| `partial` | 1 | 6 |
+| `exact` | 56, 37.3% | 56, 37.3% |
+| `merge` | 31, 20.7% | 32, 21.3% |
+| `state_superset` | 18, 12.0% | 12, 8.0% |
+| `state_subset` | 16, 10.7% | 7, 4.7% |
+| `different_grade` | 11, 7.3% | 7, 4.7% |
+| `none` | 9, 6.0% | 12, 8.0% |
+| `split` | 8, 5.3% | 18, 12.0% |
+| `partial` | 1, 0.7% | 6, 4.0% |
 
 Same total per-type usage overall, but shifted heavily toward `state_superset`/`state_subset` and away from `split`/`partial` — consistent with the error-type finding below (narrower candidate view → more scope/label judgment calls, less recognition that a code is jointly split with siblings).
 
