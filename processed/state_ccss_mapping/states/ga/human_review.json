@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Full human review of the flat classification script's (map_state_to_ccss.py) output against every code it did NOT trivially agree on with a prior hand-built mapping -- 25 of the script's 150 GA codes, each independently re-examined against the actual GA and CCSS standard text. 8 verdicts came back 'error' (the script's own classification was wrong; `human_corrected_to` gives the corrected relationship/codes, now baked into runs/ga/mapping_final.json). The other 17 came back 'okay' -- a defensible judgment call, or the script's answer stands as the better one; the script's original output was kept unchanged for those. Combined with 142 codes that needed no review at all, this means 142/150 (95%) of the script's raw output required no correction whatsoever.",
+    "description": "Full human review of the flat classification script's (map_state_to_ccss.py) output against every code it did NOT trivially agree on with a prior hand-built mapping -- 25 of the script's 150 GA codes, each independently re-examined against the actual GA and CCSS standard text. 8 verdicts came back 'error' (the script's own classification was wrong; `human_corrected_to` gives the corrected relationship/codes, now baked into runs/ga/mapping_final.json). The other 17 came back 'okay' -- a defensible judgment call, or the script's answer stands as the better one; the script's original output was kept unchanged for those. Combined with 142 codes that needed no review at all, this means 142/150 (95%) of the script's raw output required no correction whatsoever. Error-type categories revised to a strict, mutually-exclusive 5-type scheme (see README.md's 'Error type definitions' section) -- earlier categories overlapped conceptually.",
     "n_reviewed": 25,
     "n_error": 7,
     "n_okay": 18
@@ -62,8 +62,8 @@
     {
       "ga_code": "3.NR.4.1",
       "ga_description": "Describe a unit fraction and explain how multiple copies of a unit fraction form a non-unit fraction. Use parts of a whole, parts of a set, points on a number line, distances on a number line and area models.",
-      "error_type": "Merge under-claimed -- reference requires 2+ CCSS codes, flat gave a single-code relationship (exact/state_superset/state_subset), missing one or more codes entirely",
-      "error_type_key": "merge_under_claimed",
+      "error_type": "Code-set boundary mismatch -- the two sides' CCSS code sets for this entry overlap but aren't identical",
+      "error_type_key": "code_set_boundary_mismatch",
       "flat_script_original": {
         "relationship": "exact",
         "ccss_codes": [
@@ -222,8 +222,8 @@
     {
       "ga_code": "3.MDR.5.4",
       "ga_description": "Use rulers to measure lengths in halves and fourths (quarters) of an inch and a whole inch.",
-      "error_type": "False split claimed -- flat says split (thinks sibling GA codes jointly cover this CCSS code), but the reference says this GA code stands alone (exact/state_superset/partial)",
-      "error_type_key": "false_split_claimed",
+      "error_type": "Split-status disagreement -- identical CCSS code(s), but exactly one side calls it split",
+      "error_type_key": "split_status_disagreement",
       "flat_script_original": {
         "relationship": "split",
         "ccss_codes": [
@@ -263,8 +263,8 @@
     {
       "ga_code": "3.GSR.6.2",
       "ga_description": "Classify, compare, and contrast polygons, with a focus on quadrilaterals, based on properties. Analyze specific 3-dimensional figures to identify and describe quadrilaterals as faces of these figures.",
-      "error_type": "Scope judgment on an already-correct single code -- same CCSS code both sides, relationship differs only among exact/state_superset/state_subset",
-      "error_type_key": "scope_judgment_single_code",
+      "error_type": "Scope/label judgment -- identical CCSS code(s) on both sides, relationship label differs (neither side says split)",
+      "error_type_key": "scope_label_judgment",
       "flat_script_original": {
         "relationship": "exact",
         "ccss_codes": [
@@ -311,8 +311,8 @@
     {
       "ga_code": "3.GSR.7.2",
       "ga_description": "Determine the area of rectangles (or shapes composed of rectangles) presented in relevant problems by tiling and counting.",
-      "error_type": "Invalid split -- run labeled it `split` but no other GA code in that same run's own mapping cites the same CCSS code, so the claimed sibling doesn't exist. A structural bug in the run itself, caught by verify_mapping.py's split-integrity check, independent of whether it also disagrees with the reference.",
-      "error_type_key": "invalid_split_no_sibling",
+      "error_type": "Invalid split -- claimed sibling code doesn't actually cite the same CCSS code (structural bug, checked independent of any comparison)",
+      "error_type_key": "invalid_split",
       "flat_script_original": {
         "relationship": "split",
         "ccss_codes": [
@@ -355,8 +355,8 @@
     {
       "ga_code": "3.GSR.7.3",
       "ga_description": "Discover and explain how area can be found by multiplying the dimensions of a rectangle.",
-      "error_type": "Invalid split -- run labeled it `split` but no other GA code in that same run's own mapping cites the same CCSS code, so the claimed sibling doesn't exist. A structural bug in the run itself, caught by verify_mapping.py's split-integrity check, independent of whether it also disagrees with the reference.",
-      "error_type_key": "invalid_split_no_sibling",
+      "error_type": "Invalid split -- claimed sibling code doesn't actually cite the same CCSS code (structural bug, checked independent of any comparison)",
+      "error_type_key": "invalid_split",
       "flat_script_original": {
         "relationship": "split",
         "ccss_codes": [
@@ -463,8 +463,8 @@
     {
       "ga_code": "4.GSR.7.1",
       "ga_description": "Recognize angles as geometric shapes formed when two rays share a common endpoint. Draw right, acute, and obtuse angles based on the relationship of the angle measure to 90 degrees.",
-      "error_type": "Merge boundary incomplete -- both sides agree on the relationship type (merge or partial), but disagree on the exact code set",
-      "error_type_key": "merge_boundary_incomplete",
+      "error_type": "Code-set boundary mismatch -- the two sides' CCSS code sets for this entry overlap but aren't identical",
+      "error_type_key": "code_set_boundary_mismatch",
       "flat_script_original": {
         "relationship": "merge",
         "ccss_codes": [
@@ -527,8 +527,8 @@
     {
       "ga_code": "4.GSR.8.2",
       "ga_description": "Classify, compare, and contrast polygons based on lines of symmetry, the presence or absence of parallel or perpendicular line segments, or the presence or absence of angles of a specified size and based on side lengths.",
-      "error_type": "Merge under-claimed -- reference requires 2+ CCSS codes, flat gave a single-code relationship (exact/state_superset/state_subset), missing one or more codes entirely",
-      "error_type_key": "merge_under_claimed",
+      "error_type": "Code-set boundary mismatch -- the two sides' CCSS code sets for this entry overlap but aren't identical",
+      "error_type_key": "code_set_boundary_mismatch",
       "flat_script_original": {
         "relationship": "state_superset",
         "ccss_codes": [

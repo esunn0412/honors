@@ -83,30 +83,28 @@ No retrieval/embedding pre-filter: only ~175 CCSS codes total, so the full list 
 
 ## Error type definitions
 
-Used both for the 8 GA corrections below and for the hierarchical-vs-adopted comparison. Each type is a specific *pair* of relationship labels the two sides disagreed on — not just "same type vs. different type":
+Used both for the 8 GA corrections below and for the hierarchical-vs-adopted comparison. 5 categories, applied in this order — **every disagreement gets exactly one**, never more than one:
 
-| Error type | What it means |
-|---|---|
-| Merge under-claimed | Mapping needs 2+ codes; the other side gave a single-code relationship, missing codes entirely. |
-| Merge boundary incomplete | Both sides say `merge`, but disagree on the exact code set. |
-| Merge over-claimed | The other side added a code the mapping doesn't actually need. |
-| Invalid split | Claimed sibling code doesn't actually cite the same CCSS code — the split's premise is factually wrong. |
-| False split claimed | Other side says `split`; mapping says this code stands alone (`exact`/`state_superset`/`partial`). |
-| Split not recognized | Mapping says `split`; other side treated it as a standalone match. |
-| Scope/label judgment | Same CCSS code, same idea — just disagree among `exact`/`state_superset`/`state_subset`/`partial`/`different_grade`. |
-| Genuine content miss | Substantively different CCSS codes/content — not a scope or cardinality issue. |
+| Step | Check | Category if matched |
+|---|---|---|
+| 1 | Either side's `split` claim has no real sibling in its own mapping (a structural bug, checked on its own terms — not by comparing the two sides) | **Invalid split** |
+| 2 | The two sides' CCSS code sets are identical, but exactly one side calls it `split` | **Split-status disagreement** |
+| 3 | The two sides' CCSS code sets are identical, and neither calls it `split` (they disagree among `exact`/`state_superset`/`state_subset`/`partial`/`different_grade` instead) | **Scope/label judgment** |
+| 4 | The two sides' CCSS code sets overlap, but aren't identical | **Code-set boundary mismatch** |
+| 5 | The two sides' CCSS code sets share nothing in common | **Genuine content miss** |
+
+Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-claimed," "false split claimed," "split not recognized") that described the *same* underlying disagreements from different angles and could overlap on a single code. This version classifies by two hard facts only — does either side's split claim actually hold up, and how much do the two cited code sets overlap — so categories can't collide.
 
 ## Review results — GA
 
 **8 of 150 codes corrected (142/150, 95%, needed no change).** Full trail: `states/ga/human_review.json`.
 
-| Error type | Count | Example |
+| Error type | Count | Codes |
 |---|---|---|
-| Invalid split | 3 | `K.GSR.8.2` — claimed sibling never actually cited the same CCSS code |
-| Merge boundary incomplete | 2 | Right relationship, missing a code |
-| Scope/label judgment | 1 | |
-| False split claimed | 1 | |
-| Merge/exact cardinality miss | 1 | |
+| Invalid split | 3 | `K.GSR.8.2`, `3.GSR.7.2`, `3.GSR.7.3` — claimed sibling never actually cited the same CCSS code |
+| Code-set boundary mismatch | 3 | `3.NR.4.1`, `4.GSR.7.1`, `4.GSR.8.2` — right idea, code set incomplete |
+| Split-status disagreement | 1 | `3.MDR.5.4` — script said `split`, correct answer is `exact` |
+| Scope/label judgment | 1 | `3.GSR.6.2` — same code, `exact` vs. `state_superset` |
 
 **How the review worked:**
 1. Compare the flat script's 150 classifications against an earlier hand-built classification of the same codes.
@@ -149,14 +147,13 @@ Alternative to the flat method: stage the search (pick domain family → pick cl
 
 | Error type | Count |
 |---|---|
+| Code-set boundary mismatch | 20 |
 | Scope/label judgment | 13 |
-| Merge boundary incomplete | 9 |
-| Split not recognized | 9 |
-| Merge under-claimed | 7 |
-| Merge over-claimed | 5 |
-| Genuine content miss | 5 |
+| Split-status disagreement | 9 |
+| Genuine content miss | 6 |
+| Invalid split | 0 |
 
-**Why it underperforms:** scope/label judgment is the largest bucket by far — both methods usually agree on *which* CCSS code is right, then disagree on how to label the relationship. Narrowing to one cluster's ~5 leaves makes small wording differences louder without making that judgment easier. It's almost never a domain-selection mistake (flat already picks the right family nearly every time), so staging fixes a bottleneck that mostly isn't there.
+**Why it underperforms:** code-set boundary mismatch and scope/label judgment together are 33/48 — both methods usually agree on *which* CCSS code is right, then disagree on the exact code set or how to label the relationship. Narrowing to one cluster's ~5 leaves makes small wording differences louder without making that judgment easier. It's almost never a domain-selection mistake (flat already picks the right family nearly every time), so staging fixes a bottleneck that mostly isn't there.
 
 **VA:** staging made no difference — every code landed on the same domain family either way, since VA's SOL statements are broad enough that domain selection was never the hard part.
 
