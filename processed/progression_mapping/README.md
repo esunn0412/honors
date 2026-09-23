@@ -133,6 +133,27 @@ as a whole. E.g.:
 (GA apparently revisits pieces of 4.G.3/4.NBT.2's content at earlier grades
 in addition to the grade-4 treatment CCSS states once.)
 
+**This mixed-type fan-out doesn't need a human pick between candidates —
+grade-matching resolves it mechanically.** Checked all 21 CCSS codes that
+have more than one GA candidate:
+
+| pattern | count | resolution |
+|---|---|---|
+| same-grade only, all `split`/`merge` | 14 | pure siblings — GA jointly decomposes one CCSS standard into co-equal parts; keep all, no ranking needed |
+| same-grade only, other types (e.g. `merge`+`state_superset`) | 1 | same as above — both types are already high-confidence individually |
+| mixed same-grade + `different_grade` | 6 | keep only the same-grade candidate(s); set the `different_grade` ones aside as a "GA also revisits this at grade X" annotation, not a parallel edge |
+| all candidates cross-grade, nothing at the code's own grade | 0 | (would fall back to the cross-grade set with `needs_review: true`; never occurred) |
+
+One case (`4.NF.2`) confirmed the rule needs to be **grade-match, not
+relationship-type-match**: its off-grade candidate is tagged `partial`, not
+`different_grade`, so a rule that only special-cased the `different_grade`
+label would have missed it. Filtering by the candidate's actual grade against
+the CCSS code's own grade catches it too. Net effect: **fan-out (multiple GA
+candidates) is never itself a reason to flag an edge for review** — same-grade
+multiplicity is always a legitimate sibling decomposition in this data, so
+it's kept in full; cross-grade multiplicity is resolved by preferring the
+same-grade candidate(s) and demoting the rest to an annotation.
+
 **Granularity mismatch between the two files.** `mapping_final.json`'s CCSS
 citations are keyed to whatever GA needed to cite (often a lettered
 sub-standard, e.g. `5.NF.5a`); stage 1's edges sometimes use the bare parent
@@ -150,45 +171,63 @@ them at all (`K.CC.4a`, `K.CC.7`, `3.OA.1`, `3.G.2`, `2.G.2`, `2.MD.2`,
 `4.NF.4c`, `5.MD.5c`) — logged for human review, not silently dropped.
 
 **Net result across all 147 edges**, using direct lookup + the
-children-union fallback:
+children-union fallback + grade-preference filtering:
 
 | | count |
 |---|---|
 | both endpoints resolve to ≥1 GA code | 115 |
 | only one endpoint resolves (edge can't be translated) | 30 |
 | neither endpoint resolves | 2 |
-| ...of the 115: collapse to a GA self-loop (both sides → same GA code) → dropped | 11 |
-| ...of the 115: produce ≥1 real (ga_from, ga_to) combination | 104 |
-| combination fan-out per edge (1:1, 1:2, ... GA pairs) | 70×1, 18×2, 10×3, 5×4, 1×5 |
-| **raw GA edges before deduping identical pairs across different source CCSS edges** | **161** |
+| **raw GA edges (after grade-filtering, before deduping identical pairs across different source CCSS edges)** | **150** |
+| ...of those, `needs_review: false` | **89** |
+| ...of those, `needs_review: true` | **61** (44 from the children-union fallback's granularity guess, 23 inherited from an endpoint's own `partial`/`state_subset` tag in `mapping_final.json`) |
+
+Grade-filtering (see above) already dropped the raw combination count from
+161 (naive Cartesian product) to 150 — and, more importantly, fan-out is no
+longer counted as a reason for review at all, so the 61 `needs_review: true`
+edges are exactly the ones with a *genuine* judgment call baked in, not
+inflated by ordinary sibling multiplicity.
 
 ### Algorithm
 1. Build the CCSS→GA reverse index from `mapping_final.json` (code →
    list of `(ga_code, relationship, needs_review, note)`).
-2. `resolve(ccss_code)`: direct hit in the index, else union of any
-   `{code}[a-z]` children present in the index, else unresolved.
-3. For each of the 147 stage-1 edges: resolve both `from` and `to`.
+2. `resolve(ccss_code)`:
+   a. Direct hit in the index → those candidates.
+   b. Else, union of any `{code}[a-z]` lettered children present in the
+      index (the parent/child granularity-mismatch fallback).
+   c. Else unresolved.
+3. **Grade-filter** the resolved candidate set: keep only candidates whose
+   own grade matches `ccss_code`'s grade. If that leaves the set empty, fall
+   back to the full (cross-grade) set and mark it `needs_review: true`
+   (never triggered in this data, but a real possibility for a future state
+   or a grounding-file update). The candidates filtered *out* aren't
+   discarded — recorded as `other_grade_ga_codes` on the edge, since "GA
+   also covers this a grade earlier" is useful provenance even when it's not
+   this edge's translation target.
+4. For each of the 147 stage-1 edges: resolve + grade-filter both `from` and
+   `to`.
    - Either side unresolved → log to `translation_gaps.json` with a reason
      (`no_ga_mapping` / `only_beyond_k5` / etc.), emit no GA edge.
-   - Both resolve → Cartesian product of GA candidates on each side, drop
-     any pair where `ga_from == ga_to` (self-loop), emit one candidate GA
-     edge per remaining pair.
-4. Each candidate GA edge carries the full chain of citations: the stage-1
+   - Both resolve → Cartesian product of the (already grade-filtered)
+     candidates on each side, drop any pair where `ga_from == ga_to`
+     (self-loop), emit one candidate GA edge per remaining pair. Same-grade
+     multiplicity on either side is kept in full as siblings — no ranking or
+     pruning among them.
+5. Each candidate GA edge carries the full chain of citations: the stage-1
    CCSS page + quote, *and* the `mapping_final.json` note(s) for both
    endpoints — so a reviewer can see both "why this is a real CCSS
    prerequisite" and "why this GA code is that CCSS code."
-5. **Confidence / `needs_review` rule**: an edge is `needs_review: false`
-   only if *both* endpoints resolved directly (no fallback), each had
-   exactly one GA candidate (no fan-out), and each endpoint's
-   `mapping_final.json` relationship is `exact`, `merge`, or
-   `state_superset`/`state_subset`. Everything else (`partial`,
-   `different_grade`, any use of the children-union fallback, or any
-   fan-out >1) is `needs_review: true` — the ambiguity is real and a human
-   pass should see it, not have it silently resolved one way.
-6. Dedupe: if two different stage-1 CCSS edges translate to the same
+6. **`needs_review` rule** (fan-out is *not* one of the triggers): an edge is
+   `needs_review: true` if *either* endpoint (a) resolved only via the
+   children-union fallback, (b) itself carries `needs_review: true` in
+   `mapping_final.json` (i.e. relationship `partial` or `state_subset`), or
+   (c) fell back to the cross-grade candidate set in step 3. Otherwise
+   `false` — including when there's same-grade fan-out, since that's an
+   expected sibling decomposition, not uncertainty.
+7. Dedupe: if two different stage-1 CCSS edges translate to the same
    `(ga_from, ga_to)` pair, merge into one output edge and union their
    citations (this is a corroboration signal worth keeping, not noise).
-7. Output: `ga_progressions_translated.json` (the auto-translated edges) +
+8. Output: `ga_progressions_translated.json` (the auto-translated edges) +
    `translation_gaps.json` (the 32 untranslatable stage-1 edges, for a human
    decision on whether they need a hand-authored GA-native edge instead).
 
@@ -217,25 +256,42 @@ Both sides singleton, direct, `exact` → exactly **one** output edge,
  "needs_review": false}
 ```
 
-**Fan-out case: `K.CC.2 → 1.OA.6`.**
-- `K.CC.2` ← `K.NR.2.2` only, but relationship is `state_superset` (GA's
-  K.NR.2.2 also covers backward counting, which CCSS doesn't state) —
-  singleton, but not `exact`.
-- `1.OA.6` ← **three** GA codes, all tagged `split`: `1.NR.2.1`, `1.NR.2.2`,
-  `1.NR.2.4` (three GA codes that jointly cover 1.OA.6's different strategy
-  clauses).
+**Sibling fan-out case: `K.CC.2 → 1.OA.6`** (same-grade split — no ranking
+needed).
+- `K.CC.2` ← `K.NR.2.2` only (`state_superset`, grade K).
+- `1.OA.6` ← **three** GA codes, all grade 1: `1.NR.2.1` (`merge`),
+  `1.NR.2.2` (`split`), `1.NR.2.4` (`split`) — GA splits 1.OA.6's strategy
+  content across three codes.
 
-Cartesian product (1 × 3, no self-loops) → **three** output edges, all
-`needs_review: true` (fan-out present, and `split`/`state_superset` aren't in
-the clean-pass set):
+Both `1.OA.6`'s candidates are at grade 1, same as `1.OA.6` itself, so
+grade-filtering keeps all three — they're genuine siblings, not competing
+guesses. Cartesian product (1 × 3, no self-loops) → **three** output edges,
+**all `needs_review: false`** (no fallback used, no endpoint carries its own
+`partial`/`state_subset` flag — the fan-out itself doesn't trigger review):
 ```
-K.NR.2.2 → 1.NR.2.1   (needs_review: true)
-K.NR.2.2 → 1.NR.2.2   (needs_review: true)
-K.NR.2.2 → 1.NR.2.4   (needs_review: true)
+K.NR.2.2 → 1.NR.2.1   (needs_review: false)
+K.NR.2.2 → 1.NR.2.2   (needs_review: false)
+K.NR.2.2 → 1.NR.2.4   (needs_review: false)
 ```
-The script can't know which of GA's three strategy-clause codes is the "real"
-target of this specific prerequisite claim, so it emits all three and leaves
-the pruning to a human/advisor review pass rather than guessing.
+GA genuinely teaches this prerequisite relationship across all three of its
+own strategy-clause codes, so keeping all three is correct, not a hedge.
+
+**Grade-filtering case: `4.NF.1 → 4.NF.2`.**
+- `4.NF.1` ← `4.NR.4.1` only (`exact`, grade 4).
+- `4.NF.2` ← **two** candidates: `4.NR.4.3` (`exact`, grade 4) and
+  `5.NR.3.2` (`partial`, grade 5 — GA's 5.NR.3.2 extends this to
+  three-fraction comparison, a scope extension beyond 4.NF.2 itself).
+
+`4.NF.2` is a grade-4 CCSS code, so grade-filtering keeps only `4.NR.4.3`
+(grade 4) and sets `5.NR.3.2` aside as an `other_grade_ga_codes` annotation
+rather than a translation target — even though its own relationship tag is
+`partial`, not `different_grade`; the filter goes by actual grade, not by
+label. Result: **one** output edge, `needs_review: false`:
+```json
+{"from": "4.NR.4.1", "to": "4.NR.4.3", "rule": "concept_foundation",
+ "other_grade_ga_codes": {"to": ["5.NR.3.2"]},
+ "needs_review": false}
+```
 
 ### Still open after stage 2
 The 14 GA codes with `relationship: none` in `mapping_final.json`
