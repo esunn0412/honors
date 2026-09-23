@@ -192,11 +192,35 @@ CCSS's 24 genuinely-uncited codes, by domain:
 | CC (Counting & Cardinality) | 2 | `K.CC.4a`, `K.CC.7` |
 | NBT (Number & Operations in Base Ten) | 1 | `2.NBT.9` |
 
-MD and NF carry most of the CCSS-side gap — largely component sub-parts
-(volume's `5.MD.3a`/`3b`, area's `3.MD.5a`, fraction sub-clauses like
-`4.NF.4b/c`) rather than whole standards, consistent with the granularity
-point above: GA typically cites the parent or a sibling sub-part instead of
-the exact lettered piece.
+**Whole standards vs. single missing sub-clauses.** Of the 24, **14 are bare,
+unlettered standards** with no sub-parts to compare (`1.OA.5`, `2.G.2`,
+`2.MD.2`, `2.MD.5`, `2.NBT.9`, `3.G.2`, `3.OA.1`, `3.OA.2`, `4.MD.7`,
+`5.MD.2`, `K.CC.7`, `K.G.2`, `K.G.3`, and `5.MD.3` — whose own two lettered
+children are *also* both uncited, so all of `5.MD.3` is a gap, not just the
+parent). The other **10 are one specific lettered clause of an otherwise
+GA-covered standard** — checking each against its siblings:
+
+| gap code | siblings' status | which clause is missing |
+|---|---|---|
+| `3.NF.3a` | b, c, d all cited | the **definition** ("two fractions are equivalent if same size / same point on a number line") — b/c/d (generate, express as whole number, compare) are covered |
+| `4.NF.3a` | b, c, d all cited | same shape: the definition ("understand addition/subtraction of fractions as joining/separating parts") — b/c/d covered |
+| `K.CC.4a` | b, c cited | the definition (pair each object with one number name in order) — b, c (cardinality, "one more") covered |
+| `3.MD.5a` | b cited | the definition ("a unit square... has one square unit of area") |
+| `4.NF.4b`, `4.NF.4c` | **a** is cited, b and c are not | reverse shape: the definition (a — "a multiple of a/b as a multiple of 1/b") is covered; the two application clauses (scale a fraction by a whole number; solve word problems) are not |
+| `5.NF.4b` | a cited | the application clause (find area of a rectangle with fractional side lengths) — the definition (a) is covered |
+| `5.MD.5c` | a, b cited | the composite-shapes application clause ("volume is additive... find volumes of composite figures") — the basic volume-formula clauses (a, b) are covered |
+| `5.MD.3a`, `5.MD.3b` | (each other) both uncited | neither half of this standard's own definition is cited by any GA code — a genuine full-standard gap, like the 14 above, just expressed at the lettered level |
+
+So it's not a single clean rule ("GA always skips the definition" or "always
+skips the last clause") — it goes both ways. What's consistent is *shape*:
+in 8 of these 10 codes (the other 2, `5.MD.3a`/`3b`, are a full gap — see
+above), GA cites most of a CCSS standard's sub-parts but leaves one or two
+out, and the one left out is either the standalone conceptual
+definition (`3.NF.3a`, `4.NF.3a`, `K.CC.4a`, `3.MD.5a`) or a narrower
+real-world/composite application that extends past what any single GA code
+was anchored to (`4.NF.4b/c`, `5.NF.4b`, `5.MD.5c`). Worth a closer look
+per-code before treating any of these 10 as truly uncovered by GA — several
+are plausibly implicit in the sibling clause GA *did* cite.
 
 **Discussion, for the thesis writeup:** the 9.3% GA-side figure is the more
 load-bearing number, since it identifies content Georgia teaches that has
