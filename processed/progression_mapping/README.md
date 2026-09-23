@@ -44,7 +44,9 @@ numbers.
 
 ## The relationship-type complication
 
-`mapping_final.json`'s 150 GA↔CCSS entries aren't all 1:1:
+`mapping_final.json` is indexed **by GA code**: each of the 150 GA K-5 leaf
+standards has one entry naming which CCSS code(s) it corresponds to (0, 1, or
+several). The `relationship` field describes that GA code's own match:
 
 | relationship | count | reverse-lookup behavior |
 |---|---|---|
@@ -54,13 +56,40 @@ numbers.
 | merge | 32 | one GA code covers multiple CCSS codes → several CCSS edges collapse onto one GA code |
 | split | 18 | several GA codes jointly cover one CCSS code → one CCSS edge fans out into several GA edges |
 | different_grade | 7 | GA code sits at a different grade than the CCSS code it maps to |
-| partial | 6 | weak match — keep, flag lower confidence |
-| none | 12 | no GA equivalent — untranslatable |
+| partial | 4 | weak match — keep, flag lower confidence |
+| **none** | **14** | **this GA code has no CCSS equivalent at all** — patterns/PAR domain, money, time (listed below) |
+| **total** | **150** | |
 
-Separately: **14 GA codes have no CCSS home at all** (`relationship: none`)
-— patterns/PAR domain, money, time. No CCSS edge can ever translate into
-these; they stay hand-authored (`provenance: ga_native`) in the stage 3
-merge.
+**`none` answers "which GA standards have no CCSS match" — not the reverse
+question.** It's easy to misread the row above as being about CCSS codes
+lacking a GA match; it isn't. The reverse question is a separate count,
+computed directly against the full CCSS K-5 leaf-code list (191 codes, from
+`../state_ccss_mapping/ccss_standards/`):
+
+| direction | count |
+|---|---|
+| GA standards with no CCSS match (`relationship: none`, above) | **14** |
+| CCSS K-5 codes that no GA standard cites at all | **39** |
+| ...of those 39, resolvable by the parent/child fallback (the bare parent isn't cited, but at least one of its lettered children is — e.g. `1.NBT.2` uncited but `1.NBT.2a/b/c` are) | 15 |
+| ...of those 39, genuinely uncited at any granularity — real gaps | **24** |
+
+The 24 real CCSS-side gaps: `1.OA.5`, `2.G.2`, `2.MD.2`, `2.MD.5`, `2.NBT.9`,
+`3.G.2`, `3.MD.5a`, `3.NF.3a`, `3.OA.1`, `3.OA.2`, `4.MD.7`, `4.NF.3a`,
+`4.NF.4b`, `4.NF.4c`, `5.MD.2`, `5.MD.3`, `5.MD.3a`, `5.MD.3b`, `5.MD.5c`,
+`5.NF.4b`, `K.CC.4a`, `K.CC.7`, `K.G.2`, `K.G.3` — no GA standard in
+`mapping_final.json` was classified against any of them, at any granularity.
+This is expected: `mapping_final.json` was built by iterating over the 150
+GA codes and finding each one's best CCSS match, not the other way around,
+so a CCSS code simply doesn't appear if no GA standard happened to need it as
+its closest match. These overlap heavily with the 15 "genuine gaps" already
+flagged in the granularity-mismatch section below (that list was scoped to
+just the 133 CCSS codes touched by the 147 stage-1 edges; this one is the
+full 191-code universe).
+
+Separately: the **14 GA-side `none` codes** have no CCSS home at all — no
+CCSS edge can ever translate into them; they stay hand-authored
+(`provenance: ga_native`) in the stage 3 merge (full list in "Still open
+after stage 2" below).
 
 ## Plan
 
