@@ -203,11 +203,9 @@ Same total per-type usage overall, but shifted heavily toward `state_superset`/`
 
 ## What's still open
 
-- Get Virginia's full grades 3-5 SOL standards (current VA run only covers what EDUMath happened to cite).
 - Get an API key and run `map_state_to_ccss.py` for real, instead of a manual session.
 - Publish the hierarchical method's run outputs + full error analysis (currently local-only).
-- Break VA's SOL text into per-bullet sub-standards, if a source ever becomes available, so VA can be classified at GA's granularity.
-- Resolve the `3.MDR.5.1`/`4.MDR.6.2`/`5.MDR.7.1` lint flag.
+- Resolve the `3.MDR.5.1`/`4.MDR.6.2`/`5.MDR.7.1` lint flag — each is `partial`, citing a CCSS code a same-grade sibling already confidently owns (`3.MDR.5.4`, `4.MDR.6.3`, `5.MDR.7.3`/`5.MDR.7.4`); per the taxonomy's own rule this pattern is almost always `none`, not `partial` — same shape as the `5.MDR.7.2` fix, just not yet reviewed.
 
 ## Adding a new state
 
