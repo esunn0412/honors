@@ -1,292 +1,278 @@
 # Progression mapping
 
-This directory holds the work to rebuild `../math_prereq_grounding.json` on a
-cleaner, two-stage foundation, plus the MathFish/Achieve the Core comparison
-that led to that decision.
+Rebuilding `../math_prereq_grounding.json` on a cleaner, two-stage
+foundation, plus the MathFish/Achieve the Core comparison that motivated it.
 
-`math_prereq_grounding_outdated.json` in this directory is a **read-only
-copy** of `../math_prereq_grounding.json`, kept here as the fixed baseline
-stage 3's diff step compares against. The live file stays at its original
-path since `proposal.typ`, `processed/preprocess.typ`, and
-`processed/README.md` all reference it there — this rebuild doesn't touch
-that path until the final merge (Plan step 4). `processed/preprocess.typ`
-already independently flags that file as a "standing issue" needing review,
-for the same reasons this rebuild exists.
+## At a glance
+
+| item | status | number |
+|---|---|---|
+| MathFish/ATC comparison | done | verdict: complementary, not a replacement (see below) |
+| Stage 1 — `ccss_progressions.json` | done | 147 CCSS-native edges |
+| Stage 2 — `translate_progressions_to_ga.py` | **planned, not written** | ~89-150 GA edges expected |
+| Stage 3 — diff + merge into new grounding file | not started | — |
+
+- `math_prereq_grounding_outdated.json` here = **read-only copy** of
+  `../math_prereq_grounding.json`, kept as the fixed baseline stage 3 diffs
+  against.
+- The live file stays at `../math_prereq_grounding.json` — `proposal.typ`,
+  `processed/preprocess.typ`, and `processed/README.md` all reference that
+  path. This rebuild doesn't touch it until the final merge (Plan step 4).
+- `processed/preprocess.typ` already independently flags that file as a
+  "standing issue" needing review, for the same reasons this rebuild exists.
 
 ## Why a rewrite
 
-`../math_prereq_grounding.json`'s 148 edges were authored by reading the CCSS
-Progressions PDF and hand-translating into Georgia GSE codes *at the same
-time* — that's why some citations are messy free text
-(`"1.OA.1 / 1.OA.6 (strategies)"`, `"K.OA.1-3"`) instead of clean codes: the
-translation was done live, in your head, while reading. Now that
-`../state_ccss_mapping/states/ga/mapping_final.json` exists — a reviewed,
-adopted GA↔CCSS mapping for all 150 Georgia K-5 sub-standards — the two jobs
-can be split apart:
+The old file's 148 edges were authored by reading the CCSS Progressions PDF
+and hand-translating into Georgia GSE codes **at the same time** — that's why
+some citations are messy free text instead of clean codes:
+- `"1.OA.1 / 1.OA.6 (strategies)"`
+- `"K.OA.1-3"`
 
-1. **Stage 1 — CCSS-native progressions.** Read the Progressions PDF
-   (`../scripts/ccss_progressions_all.pdf`, 333 pages, all domains) and write
-   prerequisite edges purely in CCSS-code space (`ccss_from → ccss_to`, same
-   5-rule taxonomy, page + quote citation), checked only against the CCSS K-5
-   standards list. No Georgia judgment calls mixed in. This also fixes the
-   "stale OA_PROG pagination" issue flagged in the current grounding file's
-   metadata, since edges are cited fresh against this PDF's real page numbers.
-2. **Stage 2 — mechanical translation.** Run every stage-1 edge through
-   `mapping_final.json`'s reverse index (CCSS code → GA code) to produce GA
-   edges. This is a lookup, not a judgment call — the judgment already
-   happened once, when `mapping_final.json` was reviewed and adopted.
+The translation was done live, in-head, while reading. Now that
+`mapping_final.json` exists (a reviewed, adopted GA↔CCSS mapping for all 150
+Georgia K-5 sub-standards), the two jobs split apart:
 
-### The complication stage 2 has to handle
+| stage | what it does | judgment involved? |
+|---|---|---|
+| 1. CCSS-native progressions | Read the Progressions PDF, write edges purely in CCSS-code space | Yes — this is the real content extraction |
+| 2. Mechanical translation | Run every stage-1 edge through `mapping_final.json`'s reverse index | No — pure lookup, judgment already happened when the mapping was adopted |
 
-`mapping_final.json`'s relationship types aren't all 1:1, so the reverse
-lookup isn't trivial:
+Stage 1 also fixes the "stale OA_PROG pagination" bug flagged in the old
+file's metadata, since edges are cited fresh against the PDF's real page
+numbers.
+
+## The relationship-type complication
+
+`mapping_final.json`'s 150 GA↔CCSS entries aren't all 1:1:
 
 | relationship | count | reverse-lookup behavior |
 |---|---|---|
-| exact / state_superset / state_subset | 56+12+7=75 | clean 1:1, no issue |
-| merge | 32 | one GA code covers multiple CCSS codes → several CCSS edges may collapse onto the same GA code |
-| split | 18 | several GA codes jointly cover one CCSS code → one CCSS edge may fan out into several GA edges |
-| different_grade | 7 | GA code sits at a different grade than the CCSS code it maps to — affects which grade an edge "counts" as |
-| partial | 6 | weak match — keep, but flag lower confidence |
-| none | 12 | no GA equivalent exists — these CCSS-side edges can't be translated at all |
+| exact | 56 | clean 1:1 |
+| state_superset | 12 | clean 1:1 |
+| state_subset | 7 | clean 1:1 |
+| merge | 32 | one GA code covers multiple CCSS codes → several CCSS edges collapse onto one GA code |
+| split | 18 | several GA codes jointly cover one CCSS code → one CCSS edge fans out into several GA edges |
+| different_grade | 7 | GA code sits at a different grade than the CCSS code it maps to |
+| partial | 6 | weak match — keep, flag lower confidence |
+| none | 12 | no GA equivalent — untranslatable |
 
-And separately: Georgia has content with **no CCSS home at all** (the
-`none`-mapped codes — patterns/PAR domain sequencing, money, time). Those can
-never come out of stage 2, since there's no CCSS edge to translate. They stay
-hand-authored, same as today, but labeled as a distinct provenance category
-instead of blended in with the auto-translated edges.
+Separately: **14 GA codes have no CCSS home at all** (`relationship: none`)
+— patterns/PAR domain, money, time. No CCSS edge can ever translate into
+these; they stay hand-authored (`provenance: ga_native`) in the stage 3
+merge.
 
-### Plan
+## Plan
 
-1. Re-read `ccss_progressions_all.pdf` and produce `ccss_progressions.json`
-   in this directory — CCSS-only edges, fresh page citations. **(this step)**
-2. Write `translate_progressions_to_ga.py`: build the CCSS→GA reverse index
-   from `mapping_final.json`, apply it to every stage-1 edge, drop edges
-   touching a `none`-mapped code (logging what got dropped, same idea as the
-   ATC gap-list below), tag `partial`/`state_subset`-derived edges as
-   lower-confidence, dedupe edges that collapse together, and union citations
-   (CCSS Progressions quote + the specific `mapping_final.json` note) so each
-   output edge carries the full chain of custody.
-   - Default for `split` (one CCSS edge → several GA edges): emit **all**
-     resulting GA edge combinations rather than picking one "primary" —
-     under-connecting silently would be worse than a few edges a human
-     review pass can prune.
-3. Diff the result against the current 148 hand-authored edges — what
-   survives unchanged, what gets a cleaner citation, what's genuinely new,
-   and what (patterns/money/time) has no automatic equivalent and must stay
+1. ✅ Read `ccss_progressions_all.pdf`, produce `ccss_progressions.json` —
+   CCSS-only edges, fresh page citations.
+2. ⬜ Write `translate_progressions_to_ga.py` — reverse-index lookup + the
+   algorithm below.
+3. ⬜ Diff against the 148 hand-authored edges — what survives, what gets a
+   cleaner citation, what's new, what (patterns/money/time) must stay
    hand-authored.
-4. Merge: final grounding file = auto-translated edges
-   (`provenance: ccss_translated`) + the residual GA-only hand-authored edges
-   (`provenance: ga_native`), replacing `../math_prereq_grounding.json`
-   (version bump from 0.12).
-5. Re-run `validate_skills.py` / resume `skills_math_*.json` authoring once
-   the new grounding file is in place.
+4. ⬜ Merge: `provenance: ccss_translated` + `provenance: ga_native` edges →
+   replace `../math_prereq_grounding.json` (version bump from 0.12).
+5. ⬜ Re-run `validate_skills.py` / resume `skills_math_*.json` authoring.
 
-### Status
+---
 
-- [x] MathFish/Achieve the Core comparison (see below) — informed the
-      decision to keep the Progressions-PDF as the primary source and use
-      ATC only for cross-validation and gap-finding.
-- [x] Stage 1 — `ccss_progressions.json` (2026-09-23): **147 edges**, from a
-      full page-by-page read of `ccss_progressions_all.pdf` pages 16–161
-      (every K-5 sub-document; the PDF moves into Grade 6+ Ratios &
-      Proportional Relationships at page 162, out of scope). By rule:
-      concept_foundation 58, grade_progression 57, decomposition 16,
-      bloom_progression 13, scope_expansion 3. By domain (of the `from`
-      code): NF 42, MD 36, OA 21, NBT 18, G 17, CC 13. All 147 edges
-      validated against the authoritative K-5 CCSS leaf-code list in
-      `../state_ccss_mapping/ccss_standards/` (0 invalid codes, 0 duplicate
-      from/to pairs); page/quote citations spot-checked directly against the
-      PDF. Sub-standard-letter sequencing (e.g. `K.CC.4a→4b→4c`,
-      `5.NF.5a→5b`) is included throughout — the granularity ATC lacks (see
-      comparison above). 17 edges come directly from the Measurement & Data
-      Progression's own "Notable connections" table. One edge
-      (`5.NF.4→5.NF.5a`) is marked `continues_beyond_k5: true` since the
-      source text frames it as Grade-6 prep. Extraction favored precision
-      over exhaustiveness: only edges with an explicit, quotable
-      code-to-code claim were kept, so this is not a claim of *every*
-      possible prerequisite relationship in the text, just what it
-      explicitly supports.
-- [ ] Stage 2 — `translate_progressions_to_ga.py` — **planned, not yet
-      written** (see "Stage 2 plan" below).
-- [ ] Diff + merge into new `math_prereq_grounding.json`
+## Stage 1 results — `ccss_progressions.json`
 
-## Stage 2 plan
+| metric | value |
+|---|---|
+| total edges | **147** |
+| source | `ccss_progressions_all.pdf`, pages 16–161 (every K-5 sub-document; page 162+ moves into Grade 6 Ratios & Proportional Relationships, out of scope) |
+| invalid codes / duplicate pairs | 0 / 0 (validated against `../state_ccss_mapping/ccss_standards/`) |
 
-`mapping_final.json` (copied into this directory) is per-GA-code: each of the
-150 GA leaf standards lists the CCSS code(s) it corresponds to. Stage 2 needs
-the reverse direction — CCSS code → GA code(s) — so the first thing the
-script builds is that reverse index. Before writing the script, I ran the
-actual reverse lookup against all 147 stage-1 edges to find the real shape of
-the problem, rather than guess at it:
+**By rule:**
 
-**The reverse index is not cleanly split by relationship type.** A single
-CCSS code can map back to several GA codes carrying *different* relationship
-types at once — it's a property of each (CCSS, GA) pair, not of the CCSS code
-as a whole. E.g.:
+| rule | count |
+|---|---|
+| concept_foundation | 58 |
+| grade_progression | 57 |
+| decomposition | 16 |
+| bloom_progression | 13 |
+| scope_expansion | 3 |
+
+**By domain** (of the `from` code):
+
+| domain | count |
+|---|---|
+| NF | 42 |
+| MD | 36 |
+| OA | 21 |
+| NBT | 18 |
+| G | 17 |
+| CC | 13 |
+
+**Notes:**
+- Sub-standard-letter sequencing included throughout (e.g. `K.CC.4a→4b→4c`,
+  `5.NF.5a→5b`) — the granularity ATC/MathFish lacks (see comparison below).
+- 17 edges come directly from the Measurement & Data Progression's own
+  "Notable connections" table.
+- One edge (`5.NF.4→5.NF.5a`) is marked `continues_beyond_k5: true` (source
+  text frames it as Grade-6 prep).
+- Extraction favored precision over exhaustiveness: only edges with an
+  explicit, quotable code-to-code claim were kept. This is not a claim of
+  *every* possible prerequisite relationship in the text — just what it
+  explicitly supports.
+- Page/quote citations spot-checked directly against the PDF.
+
+---
+
+## Stage 2 plan — `translate_progressions_to_ga.py`
+
+### The reverse index isn't clean by relationship type
+
+A single CCSS code can map back to GA codes carrying **different**
+relationship types at once — it's a property of each (CCSS, GA) pair, not of
+the CCSS code as a whole:
+
 ```
 4.G.3   -> [(2.GSR.7.2, different_grade), (3.GSR.6.3, different_grade),
-            (4.GSR.8.1, merge), (4.GSR.8.2, merge)]
-4.NBT.2 -> [(3.NR.1.1, different_grade), (3.NR.1.2, different_grade),
-            (4.NR.1.1, split), (4.NR.1.3, split)]
+            (4.GSR.8.1, merge),           (4.GSR.8.2, merge)]
+4.NBT.2 -> [(3.NR.1.1, different_grade),  (3.NR.1.2, different_grade),
+            (4.NR.1.1, split),            (4.NR.1.3, split)]
 ```
-(GA apparently revisits pieces of 4.G.3/4.NBT.2's content at earlier grades
-in addition to the grade-4 treatment CCSS states once.)
+(GA revisits pieces of this content at earlier grades in addition to the
+grade-4 treatment CCSS states once.)
 
-**This mixed-type fan-out doesn't need a human pick between candidates —
-grade-matching resolves it mechanically.** Checked all 21 CCSS codes that
-have more than one GA candidate:
+### Fan-out resolves mechanically — checked all 21 fan-out CCSS codes
 
 | pattern | count | resolution |
 |---|---|---|
-| same-grade only, all `split`/`merge` | 14 | pure siblings — GA jointly decomposes one CCSS standard into co-equal parts; keep all, no ranking needed |
-| same-grade only, other types (e.g. `merge`+`state_superset`) | 1 | same as above — both types are already high-confidence individually |
-| mixed same-grade + `different_grade` | 6 | keep only the same-grade candidate(s); set the `different_grade` ones aside as a "GA also revisits this at grade X" annotation, not a parallel edge |
-| all candidates cross-grade, nothing at the code's own grade | 0 | (would fall back to the cross-grade set with `needs_review: true`; never occurred) |
+| same-grade only, all `split`/`merge` | 14 | pure siblings — keep all, no ranking |
+| same-grade only, mixed high-confidence types | 1 | same — both types already high-confidence individually |
+| mixed same-grade + `different_grade` | 6 | keep same-grade candidate(s); set `different_grade` ones aside as an annotation |
+| all candidates cross-grade | 0 | (would fall back to cross-grade set + `needs_review: true`; never occurred) |
 
-One case (`4.NF.2`) confirmed the rule needs to be **grade-match, not
-relationship-type-match**: its off-grade candidate is tagged `partial`, not
-`different_grade`, so a rule that only special-cased the `different_grade`
-label would have missed it. Filtering by the candidate's actual grade against
-the CCSS code's own grade catches it too. Net effect: **fan-out (multiple GA
-candidates) is never itself a reason to flag an edge for review** — same-grade
-multiplicity is always a legitimate sibling decomposition in this data, so
-it's kept in full; cross-grade multiplicity is resolved by preferring the
-same-grade candidate(s) and demoting the rest to an annotation.
+- **Rule must be grade-match, not tag-match.** `4.NF.2`'s off-grade candidate
+  is tagged `partial`, not `different_grade` — a tag-based filter would miss
+  it; a grade-based filter catches it.
+- **Net effect: fan-out is never itself a reason for `needs_review`.**
+  Same-grade multiplicity = legitimate sibling decomposition, kept in full.
 
-**Granularity mismatch between the two files.** `mapping_final.json`'s CCSS
-citations are keyed to whatever GA needed to cite (often a lettered
-sub-standard, e.g. `5.NF.5a`); stage 1's edges sometimes use the bare parent
-code (`5.NF.5`) when the Progressions text discusses the standard before
-drilling into its lettered parts. Checked against all 133 distinct CCSS
-codes touched by the 147 edges: 26 don't appear directly in the reverse
-index. Of those, 11 are recoverable by falling back to the **union of GA
-codes mapped to that parent's lettered children** (e.g. `5.NF.4` → union of
-whoever maps to `5.NF.4a`) — tested a parent-fallback in the other direction
-(child code → look up its bare parent) too, but it recovered zero cases in
-this data, so it's not worth the extra code path. The remaining 15 are
-genuine gaps — no GA standard in `mapping_final.json` was classified against
-them at all (`K.CC.4a`, `K.CC.7`, `3.OA.1`, `3.G.2`, `2.G.2`, `2.MD.2`,
+### Granularity mismatch between the two files
+
+`mapping_final.json` cites whatever GA needed (often a lettered
+sub-standard, e.g. `5.NF.5a`); stage 1 sometimes uses the bare parent
+(`5.NF.4`) when the Progressions text discusses the standard before its
+lettered parts.
+
+| | count |
+|---|---|
+| distinct CCSS codes touched by the 147 edges | 133 |
+| ...not found directly in the reverse index | 26 |
+| ...recovered via children-union fallback (parent → union of its lettered children's GA codes) | 11 |
+| ...genuine gaps (no GA code cites them at all) | 15 |
+
+Genuine-gap codes: `K.CC.4a`, `K.CC.7`, `3.OA.1`, `3.G.2`, `2.G.2`, `2.MD.2`,
 `2.MD.5`, `5.MD.2`, `5.MD.3`, `4.MD.7`, `3.NF.3a`, `4.NF.3a`, `4.NF.4b`,
-`4.NF.4c`, `5.MD.5c`) — logged for human review, not silently dropped.
+`4.NF.4c`, `5.MD.5c` — logged for human review, not silently dropped.
 
-**Net result across all 147 edges**, using direct lookup + the
-children-union fallback + grade-preference filtering:
+(Tested a parent-fallback in the other direction too — child code looks up
+its bare parent — but it recovered 0 cases in this data, so it's not worth
+the extra code path.)
+
+### Net translation yield
 
 | | count |
 |---|---|
 | both endpoints resolve to ≥1 GA code | 115 |
-| only one endpoint resolves (edge can't be translated) | 30 |
+| only one endpoint resolves (untranslatable) | 30 |
 | neither endpoint resolves | 2 |
-| **raw GA edges (after grade-filtering, before deduping identical pairs across different source CCSS edges)** | **150** |
-| ...of those, `needs_review: false` | **89** |
-| ...of those, `needs_review: true` | **61** (44 from the children-union fallback's granularity guess, 23 inherited from an endpoint's own `partial`/`state_subset` tag in `mapping_final.json`) |
+| **raw GA edges after grade-filtering** (before dedup) | **150** |
+| ...`needs_review: false` | **89** |
+| ...`needs_review: true` | **61** |
 
-Grade-filtering (see above) already dropped the raw combination count from
-161 (naive Cartesian product) to 150 — and, more importantly, fan-out is no
-longer counted as a reason for review at all, so the 61 `needs_review: true`
-edges are exactly the ones with a *genuine* judgment call baked in, not
-inflated by ordinary sibling multiplicity.
+`needs_review: true` breakdown (61 total):
+
+| reason | count |
+|---|---|
+| resolved only via children-union fallback | 44 |
+| endpoint inherits `partial`/`state_subset` from `mapping_final.json` | 23 |
+
+(Grade-filtering already dropped the naive Cartesian-product count from 161
+→ 150 — and fan-out itself no longer inflates the review count.)
 
 ### Algorithm
-1. Build the CCSS→GA reverse index from `mapping_final.json` (code →
-   list of `(ga_code, relationship, needs_review, note)`).
+
+1. Build the CCSS→GA reverse index from `mapping_final.json`: code → list of
+   `(ga_code, relationship, needs_review, note)`.
 2. `resolve(ccss_code)`:
-   a. Direct hit in the index → those candidates.
-   b. Else, union of any `{code}[a-z]` lettered children present in the
-      index (the parent/child granularity-mismatch fallback).
-   c. Else unresolved.
-3. **Grade-filter** the resolved candidate set: keep only candidates whose
-   own grade matches `ccss_code`'s grade. If that leaves the set empty, fall
-   back to the full (cross-grade) set and mark it `needs_review: true`
-   (never triggered in this data, but a real possibility for a future state
-   or a grounding-file update). The candidates filtered *out* aren't
-   discarded — recorded as `other_grade_ga_codes` on the edge, since "GA
-   also covers this a grade earlier" is useful provenance even when it's not
-   this edge's translation target.
-4. For each of the 147 stage-1 edges: resolve + grade-filter both `from` and
-   `to`.
-   - Either side unresolved → log to `translation_gaps.json` with a reason
-     (`no_ga_mapping` / `only_beyond_k5` / etc.), emit no GA edge.
-   - Both resolve → Cartesian product of the (already grade-filtered)
-     candidates on each side, drop any pair where `ga_from == ga_to`
-     (self-loop), emit one candidate GA edge per remaining pair. Same-grade
-     multiplicity on either side is kept in full as siblings — no ranking or
-     pruning among them.
-5. Each candidate GA edge carries the full chain of citations: the stage-1
-   CCSS page + quote, *and* the `mapping_final.json` note(s) for both
-   endpoints — so a reviewer can see both "why this is a real CCSS
-   prerequisite" and "why this GA code is that CCSS code."
-6. **`needs_review` rule** (fan-out is *not* one of the triggers): an edge is
-   `needs_review: true` if *either* endpoint (a) resolved only via the
-   children-union fallback, (b) itself carries `needs_review: true` in
-   `mapping_final.json` (i.e. relationship `partial` or `state_subset`), or
-   (c) fell back to the cross-grade candidate set in step 3. Otherwise
-   `false` — including when there's same-grade fan-out, since that's an
-   expected sibling decomposition, not uncertainty.
-7. Dedupe: if two different stage-1 CCSS edges translate to the same
-   `(ga_from, ga_to)` pair, merge into one output edge and union their
-   citations (this is a corroboration signal worth keeping, not noise).
-8. Output: `ga_progressions_translated.json` (the auto-translated edges) +
-   `translation_gaps.json` (the 32 untranslatable stage-1 edges, for a human
-   decision on whether they need a hand-authored GA-native edge instead).
+   - direct hit in the index → those candidates
+   - else, union of any `{code}[a-z]` lettered children present in the index
+   - else unresolved
+3. **Grade-filter**: keep only candidates whose grade matches `ccss_code`'s
+   grade. If empty, fall back to the full cross-grade set and mark
+   `needs_review: true` (never triggered in this data). Filtered-out
+   candidates aren't discarded — recorded as `other_grade_ga_codes`.
+4. For each of the 147 stage-1 edges, resolve + grade-filter both sides:
+   - either side unresolved → log to `translation_gaps.json`, emit nothing
+   - both resolve → Cartesian product (grade-filtered), drop self-loops,
+     emit one edge per remaining pair — same-grade multiplicity kept in full
+5. Each output edge carries both citations: the stage-1 CCSS page/quote, and
+   the `mapping_final.json` note(s) for both endpoints.
+6. `needs_review: true` iff either endpoint (a) used the children-union
+   fallback, (b) itself carries `needs_review: true` in `mapping_final.json`,
+   or (c) fell back to the cross-grade set. Fan-out alone never triggers it.
+7. Dedupe: edges collapsing to the same `(ga_from, ga_to)` pair merge, union
+   their citations (corroboration, not noise).
+8. Output `ga_progressions_translated.json` + `translation_gaps.json` (the
+   32 untranslatable edges, for a human call on whether they need a
+   hand-authored GA-native edge instead).
 
 ### Worked examples
 
-**Simple case: `K.CC.5 → K.MD.3` (no fan-out).** Stage-1 edge:
-```json
-{"from": "K.CC.5", "to": "K.MD.3", "rule": "concept_foundation", "page": 80,
- "source": "Notable connections table (K.MD.3 row): K.CC. Counting to tell the number of objects."}
-```
-Reverse-lookup each side in `mapping_final.json` (which GA `state_code` cites
-this CCSS code):
-- `K.CC.5` ← `K.NR.1.1` (`exact`)
-- `K.MD.3` ← `K.MDR.7.2` (`exact`, note: *"Classify/sort into categories,
-  count, sort by count, matches verbatim"*)
+**1. Simple case — `K.CC.5 → K.MD.3` (no fan-out)**
 
-Both sides singleton, direct, `exact` → exactly **one** output edge,
-`needs_review: false`:
+| side | GA code | relationship |
+|---|---|---|
+| from: K.CC.5 | K.NR.1.1 | exact |
+| to: K.MD.3 | K.MDR.7.2 | exact ("classify/sort into categories, count, sort by count, matches verbatim") |
+
+→ one output edge, `needs_review: false`:
 ```json
 {"from": "K.NR.1.1", "to": "K.MDR.7.2", "rule": "concept_foundation",
  "provenance": "ccss_translated",
  "ccss_from": "K.CC.5", "ccss_to": "K.MD.3",
  "ccss_citation": {"page": 80, "source": "Notable connections table..."},
- "ga_mapping_notes": {"K.NR.1.1": "exact match to K.CC.5",
-                       "K.MDR.7.2": "exact match to K.MD.3"},
  "needs_review": false}
 ```
 
-**Sibling fan-out case: `K.CC.2 → 1.OA.6`** (same-grade split — no ranking
-needed).
-- `K.CC.2` ← `K.NR.2.2` only (`state_superset`, grade K).
-- `1.OA.6` ← **three** GA codes, all grade 1: `1.NR.2.1` (`merge`),
-  `1.NR.2.2` (`split`), `1.NR.2.4` (`split`) — GA splits 1.OA.6's strategy
-  content across three codes.
+**2. Sibling fan-out — `K.CC.2 → 1.OA.6`** (same-grade split, no ranking needed)
 
-Both `1.OA.6`'s candidates are at grade 1, same as `1.OA.6` itself, so
-grade-filtering keeps all three — they're genuine siblings, not competing
-guesses. Cartesian product (1 × 3, no self-loops) → **three** output edges,
-**all `needs_review: false`** (no fallback used, no endpoint carries its own
-`partial`/`state_subset` flag — the fan-out itself doesn't trigger review):
+| side | GA code(s) | relationship | grade |
+|---|---|---|---|
+| from: K.CC.2 | K.NR.2.2 | state_superset | K |
+| to: 1.OA.6 | 1.NR.2.1 | merge | 1 |
+| to: 1.OA.6 | 1.NR.2.2 | split | 1 |
+| to: 1.OA.6 | 1.NR.2.4 | split | 1 |
+
+All three `to`-side candidates are grade 1 (same as `1.OA.6`) → all kept as
+genuine siblings, not competing guesses → **3 output edges, all
+`needs_review: false`**:
 ```
-K.NR.2.2 → 1.NR.2.1   (needs_review: false)
-K.NR.2.2 → 1.NR.2.2   (needs_review: false)
-K.NR.2.2 → 1.NR.2.4   (needs_review: false)
+K.NR.2.2 → 1.NR.2.1
+K.NR.2.2 → 1.NR.2.2
+K.NR.2.2 → 1.NR.2.4
 ```
-GA genuinely teaches this prerequisite relationship across all three of its
-own strategy-clause codes, so keeping all three is correct, not a hedge.
+GA genuinely teaches this prerequisite across all three of its own
+strategy-clause codes — keeping all three is correct, not a hedge.
 
-**Grade-filtering case: `4.NF.1 → 4.NF.2`.**
-- `4.NF.1` ← `4.NR.4.1` only (`exact`, grade 4).
-- `4.NF.2` ← **two** candidates: `4.NR.4.3` (`exact`, grade 4) and
-  `5.NR.3.2` (`partial`, grade 5 — GA's 5.NR.3.2 extends this to
-  three-fraction comparison, a scope extension beyond 4.NF.2 itself).
+**3. Grade-filtering — `4.NF.1 → 4.NF.2`**
 
-`4.NF.2` is a grade-4 CCSS code, so grade-filtering keeps only `4.NR.4.3`
-(grade 4) and sets `5.NR.3.2` aside as an `other_grade_ga_codes` annotation
-rather than a translation target — even though its own relationship tag is
-`partial`, not `different_grade`; the filter goes by actual grade, not by
-label. Result: **one** output edge, `needs_review: false`:
+| side | GA code | relationship | grade |
+|---|---|---|---|
+| from: 4.NF.1 | 4.NR.4.1 | exact | 4 |
+| to: 4.NF.2 | 4.NR.4.3 | exact | 4 |
+| to: 4.NF.2 | 5.NR.3.2 | partial | 5 |
+
+`4.NF.2` is a grade-4 code, so grade-filtering keeps only `4.NR.4.3` and sets
+`5.NR.3.2` aside as an annotation — **even though its tag is `partial`, not
+`different_grade`**; the filter goes by actual grade, not label.
+→ **1 output edge**, `needs_review: false`:
 ```json
 {"from": "4.NR.4.1", "to": "4.NR.4.3", "rule": "concept_foundation",
  "other_grade_ga_codes": {"to": ["5.NR.3.2"]},
@@ -294,152 +280,110 @@ label. Result: **one** output edge, `needs_review: false`:
 ```
 
 ### Still open after stage 2
-The 14 GA codes with `relationship: none` in `mapping_final.json`
-(`K.NR.1.4`, `K.PAR.6.1/6.2`, `K.MDR.7.3`, `1.PAR.3.1/3.2`, `1.MDR.6.3`,
-`2.PAR.4.1/4.2`, `2.MDR.5.1`, `3.PAR.3.4`, `4.MDR.6.2`, `5.MDR.7.1/7.2` —
-patterns, money, time) have no CCSS equivalent at all, so stage 2 can never
-produce an edge touching them. Whatever internal sequencing they need stays
-hand-authored (`provenance: ga_native`) in the stage 3 merge.
+
+14 GA codes have `relationship: none` — no CCSS equivalent, so stage 2 can
+never produce an edge touching them. Sequencing among them stays
+hand-authored (`provenance: ga_native`):
+
+| domain | codes |
+|---|---|
+| Money/measurement | `K.NR.1.4`, `K.MDR.7.3`, `1.MDR.6.3`, `2.MDR.5.1`, `4.MDR.6.2`, `5.MDR.7.1`, `5.MDR.7.2` |
+| Patterns (PAR) | `K.PAR.6.1`, `K.PAR.6.2`, `1.PAR.3.1`, `1.PAR.3.2`, `2.PAR.4.1`, `2.PAR.4.2`, `3.PAR.3.4` |
 
 ---
 
 ## MathFish / Achieve the Core comparison
 
-Question: is the Achieve the Core "Coherence Map" (shipped as the
-`allenai/achieve-the-core` HuggingFace dataset, the resource behind the
-MathFish paper) a more comprehensive source of K-5 prerequisite structure
-than the CCSS Progressions-PDF-grounded edges in `../math_prereq_grounding.json`?
-Scope is K-5 only, per project scope.
+**Question:** is Achieve the Core's "Coherence Map" (the `allenai/achieve-the-core`
+HuggingFace dataset behind the MathFish paper) a more comprehensive source of
+K-5 prerequisite structure than the CCSS Progressions-grounded edges in
+`../math_prereq_grounding.json`? Scope: K-5 only.
 
-Data source: https://huggingface.co/datasets/allenai/achieve-the-core
-(`standards.jsonl`, `domain_groups.json`, downloaded into `data/` on 2026-09-23).
-Not the "1000+ connections" figure quoted for the full dataset — that count is
-K-8 + high school. K-5 is a subset.
+Data: https://huggingface.co/datasets/allenai/achieve-the-core, downloaded
+2026-09-23. Note: the dataset's own "1000+ connections" figure is for the
+**full K-8 + HS set**, not K-5 (see bottom of this section).
 
-### What each source actually is
+### What each source is
 
-**Achieve the Core (ATC) / MathFish**
-- 737 total records across all levels (Grade/Domain/Cluster/Standard/Sub-standard),
-  K-8 + HS. Restricting to K-5 Standard/Sub-standard records: **191 nodes**.
-- Each node carries `connections: {progress to, progress from, related}` —
-  edges are between whole CCSS standards (e.g. `K.OA.A.3`), essentially never
-  between sub-standard letters (`K.OA.A.3a` vs `3b`) — those sub-parts exist
-  as separate nodes but have **empty connection lists** in every case checked.
-- K-5 → K-5 `progress to` edges: **246** (294 total if you count edges that
-  spill into grade 6+). K-5 `related` edges (undirected, deduped): **55**.
-- No sourcing per edge — each connection is just an id pair, with no citation
-  to a page or passage explaining *why*. It's a curated map, not an annotated one.
-- CCSS-native. Has no notion of Georgia's GSE codes (NR/PAR/MDR/GSR) — using
-  it for this project requires a CCSS→Georgia remapping layer, and Georgia's
-  domain consolidation is already documented as nontrivial (see
-  `math_prereq_grounding.json` metadata.notes — e.g. Georgia's `PAR` domain
-  doesn't correspond to any single CCSS domain).
-
-**`math_prereq_grounding.json` (this project)**
-- **148 edges**, authored directly against Georgia GSE sub-standard codes —
-  no remapping layer needed, since the project's actual skill graph is built
-  on GSE codes.
-- Finer granularity: routinely encodes sequencing *within* a CCSS standard
-  (e.g. `K.CC.4a → K.CC.4b → K.CC.4c`) that ATC does not represent at all.
-- Every edge cites a specific Progressions document, page, and quoted passage,
-  plus a rule from the 5-rule taxonomy (grade_progression, scope_expansion,
-  concept_foundation, bloom_progression, decomposition) — defensible
-  provenance for the thesis write-up, not just an asserted link.
+| | Achieve the Core (ATC/MathFish) | `math_prereq_grounding.json` (this project) |
+|---|---|---|
+| K-5 nodes | 191 | — (Georgia-code based) |
+| K-5 edges | 246 progress-to + 55 related | 148 |
+| Code space | CCSS-native (no Georgia GSE codes) | Georgia GSE codes directly — no remapping layer needed |
+| Granularity | whole standards only — sub-standard letters (e.g. `K.OA.A.3a` vs `3b`) have **empty** connection lists | routinely encodes within-standard sequencing (`K.CC.4a→4b→4c`) |
+| Per-edge sourcing | none — just an id pair | every edge cites a Progressions doc, page, quote, and taxonomy rule |
 
 ### Direct comparison
 
-Method (`compare.py`): resolve each grounding-file edge's `ccss_from`/`ccss_to`
-citation to Achieve the Core standard ids (ignoring the CCSS cluster letter,
-which the grounding file's citations omit), then check whether ATC records
-that same pair as `progress to` or `related`.
+Method: resolve each grounding-file edge's CCSS citation to an ATC id, check
+whether ATC records that pair as `progress to` or `related`.
 
 | | count |
 |---|---|
 | Georgia grounding edges | 148 |
-| ...with citations clean enough to resolve to ATC ids on both ends | 118 |
+| ...citations clean enough to resolve to ATC ids on both ends | 118 |
 | ...of those, confirmed by an ATC `progress to` edge | 47 |
 | ...of those, confirmed only by ATC `related` (non-directional) | 6 |
 | ...of those, absent from ATC entirely | 65 |
-| Citations that didn't resolve to a clean ATC id (patterns domain, GA-only, or non-standard-level) | 30 |
+| Citations too messy to resolve to a clean ATC id | 30 |
 
-The 65 "absent from ATC" edges are not really disagreements — inspecting them,
-the large majority (e.g. `K.NR.1.1→K.NR.1.2`, citing `K.CC.4a→K.CC.4b`) are
-sub-standard-letter sequencing that ATC's coherence map simply doesn't encode
-(confirmed by checking `K.CC.B.4a/4b/4c` directly: all three have empty
-`connections` in `data/standards.jsonl`). This is the expected consequence of ATC
-operating at coarser granularity, not evidence that the grounding-file edges
-are wrong.
+- The 65 "absent from ATC" edges aren't disagreements — most (e.g.
+  `K.NR.1.1→K.NR.1.2`, citing `K.CC.4a→K.CC.4b`) are sub-standard-letter
+  sequencing ATC simply doesn't encode (confirmed: `K.CC.B.4a/4b/4c` all
+  have empty `connections` in the raw data).
 
 **Reverse check — does ATC know something the grounding file doesn't?**
-Of ATC's 246 K-5 `progress to` edges, 235 touch at least one standard id that
-already appears somewhere in the grounding file's citations (95.5% overlap in
-node coverage). Only **11 ATC edges touch two standards neither of which the
-grounding file references at all** — these are the genuine gaps, listed in
-`comparison_output.json` under a query for edges where neither endpoint is in
-the referenced-id set (see below for the list). Notable ones:
-- `5.NF.A.2 → 5.MD.B.2`, `5.NF.B.6 → 5.MD.B.2`, `5.NF.B.7 → 5.MD.B.2`: fraction
-  operations feeding into fraction-based line plots — a Data/Measurement
-  connection the current grounding file doesn't have because `DATA_PROG` and
-  `NF_PROG` were read as separate documents.
-- `4.MD.C.5 → 4.MD.C.7`: angle measurement → additive angle measure, within
-  the Geometric Measurement progression.
-- `3.OA.B.6 → 5.NF.B.7`, `4.OA.A.2 → 5.NF.B.5/B.6`: division-as-unknown-factor
-  and multiplicative comparison as long-range foundations for grade-5 fraction
-  operations — a genuinely useful cross-grade-band edge the taxonomy's
-  "grade_progression" rule would cover but that hasn't been drafted yet.
+
+| | count |
+|---|---|
+| ATC K-5 progress-to edges | 246 |
+| ...touching ≥1 id already in the grounding file's citations | 235 (95.5%) |
+| ...touching **no** id the grounding file references at all (genuine gaps) | 11 |
+
+Notable gap edges:
+- `5.NF.A.2 → 5.MD.B.2`, `5.NF.B.6 → 5.MD.B.2`, `5.NF.B.7 → 5.MD.B.2` —
+  fraction operations feeding fraction-based line plots (missed because
+  `DATA_PROG` and `NF_PROG` were read as separate documents).
+- `4.MD.C.5 → 4.MD.C.7` — angle measurement → additive angle measure.
+- `3.OA.B.6 → 5.NF.B.7`, `4.OA.A.2 → 5.NF.B.5/B.6` — long-range
+  cross-grade-band foundations for grade-5 fraction operations.
 
 ### Verdict
 
-**Neither replaces the other; they're complementary, and the Progressions-PDF
-approach should stay the primary method.** ATC is not more comprehensive for
-this project's purposes — it has more raw edges only because it's not
-Georgia-native and not sub-standard-granular, so its role here is as a
-**cross-validation and gap-finding tool**, not a replacement:
+**Complementary, not a replacement — Progressions-PDF stays the primary
+method.**
 
-1. It corroborates 53/118 (45%) of currently-resolvable grounding edges via
-   an independent source (Achieve the Core, not the Progressions narrative),
-   which is worth citing alongside the existing citations for those edges.
-2. It surfaces 11 concrete candidate edges (above) not yet in the grounding
-   file, mostly cross-domain (NF↔MD) connections worth drafting with a full
-   Progressions citation before adding them.
-3. It does **not** cover the sub-standard-letter sequencing that is a large
-   fraction of the grounding file's value (65/118 resolvable edges), so it
-   can't substitute for the Progressions-PDF read-through for that part of
-   the graph.
-4. It has no Georgia GSE codes and no per-edge sourcing, so it can't be cited
-   directly in the thesis as the "why" — only the Progressions documents can.
+- ATC corroborates 53/118 (45%) of resolvable grounding edges independently
+  — worth citing alongside existing citations.
+- ATC surfaces 11 concrete candidate edges not yet in the grounding file
+  (mostly NF↔MD), worth drafting with a proper Progressions citation.
+- ATC does **not** cover sub-standard-letter sequencing (65/118 resolvable
+  edges) — can't substitute for the PDF read-through there.
+- ATC has no Georgia codes and no per-edge sourcing — can't be cited
+  directly in the thesis as the "why."
 
 ### Files
 
-- `data/standards.jsonl` — filtered to K-5 only (289 of the original 737
-  records: Grade/Domain/Cluster/Standard/Sub-standard nodes whose id is grade
-  K-5). This is what `compare.py` reads. Connection fields are left
-  un-pruned, so a K-5 standard that progresses into grade 6+ still shows that
-  target id even though the grade-6+ node itself isn't a record in this file.
-- `data/domain_groups.json` — domain-taxonomy lookup, trimmed to the 6
-  domain groups that actually occur in K-5 (CC, OA, NBT, MD, G, NF); the
-  K-8/HS-only domain groups (Ratios & Proportional Relationships, Number
-  Systems and Quantity, Statistics & Probability, Functions, Modeling) and
-  the K-8/HS-only cats within kept groups (EE, A under Operations & Algebra)
-  were removed.
-- `data/README_hf.md` — the dataset's own HuggingFace README/citation.
-- `compare.py` — matching + comparison script.
-- `comparison_output.json` — full machine-readable output: matched edges (with
-  which ATC edge confirmed them), unmatched edges, and unresolvable citations.
+| file | contents |
+|---|---|
+| `data/standards.jsonl` | filtered to K-5 (289 of 737 records) |
+| `data/domain_groups.json` | trimmed to the 6 domain groups occurring in K-5 |
+| `data/README_hf.md` | dataset's own HF README/citation |
+| `compare.py` | matching + comparison script |
+| `comparison_output.json` | matched / unmatched / unresolvable edges, full detail |
 
-The original, unfiltered download (737 records, K-8 + HS) was not kept in
-this repo since only K-5 is in scope; re-fetch it from
-https://huggingface.co/datasets/allenai/achieve-the-core if the full dataset
-is needed again.
+The original unfiltered download (737 records, K-8+HS) wasn't kept — re-fetch
+from the HF link above if needed again.
 
-### Note on the "1000+ connections" figure
+### The "1000+ connections" figure, explained
 
-That count describes the **full K-8 + HS dataset**, not the K-5 slice this
-project cares about. Across all 737 raw records (656 with a populated
-`connections` field), summing `progress to` + `progress from` + `related` as
-raw list entries gives 1,623; deduping direction-mirrored progress pairs and
-undirected related pairs gives 812 unique connections. Restricted to K-5
-(289 of 737 records), that shrinks to 246 progress-to edges + 55 related
-edges, per the table above — K-5 standards branch less and have fewer
-cross-domain links than middle/high school algebra, so the K-5 slice is
-smaller than 289/737 (~39%) of the total nodes would suggest.
+| scope | metric | value |
+|---|---|---|
+| Full K-8+HS (737 records, 656 with connections) | raw `progress to`+`progress from`+`related` list entries | 1,623 |
+| Full K-8+HS | deduped unique connections | 812 |
+| K-5 only (289 of 737 records) | progress-to edges | 246 |
+| K-5 only | related edges | 55 |
+
+K-5 standards branch less and have fewer cross-domain links than middle/high
+school algebra, so the K-5 slice is smaller than its 289/737 (~39%) share of
+total nodes would suggest.
