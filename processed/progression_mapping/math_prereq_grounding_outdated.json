@@ -1,0 +1,1315 @@
+{
+  "metadata": {
+    "STATUS": "OUTDATED as of 2026-09-23. This is a copy of ../math_prereq_grounding.json (the still-live path other docs reference: proposal.typ, preprocess.typ, processed/README.md), kept here read-only as the baseline for the diff/reconciliation step (see Plan step 3 in README.md). It is superseded by the two-stage rebuild in this directory: ccss_progressions.json (stage 1, done) + translate_progressions_to_ga.py (stage 2, pending). Do not edit this copy or treat it as authoritative -- processed/preprocess.typ independently flags the live file as a 'standing issue' needing review for the same reasons this rebuild exists (stale OA_PROG page citations, GA-code translation done ad hoc while reading rather than checked against the now-adopted mapping_final.json).",
+    "version": "0.12",
+    "description": "Prerequisite dependency grounding for Georgia K-5 Math standards. Each entry maps one Georgia sub-standard (the prerequisite, 'from') to another (the dependent, 'to'). Grounded in CCSS Progressions documents and the 5-rule taxonomy. Use this file \u2014 not purely LLM judgment \u2014 as the justification layer when authoring skills_math_*.json.",
+    "sources": {
+      "OA_PROG": "CCSS Progressions for K, Counting and Cardinality; K-5, Operations and Algebraic Thinking. Draft 5/29/2011. STALE PAGE CITATIONS: this section previously lived in a standalone 39-page extract (processed/scripts/ccss_oa_k5.pdf, now removed) and every OA_PROG page-number citation below (e.g. 'OA_PROG p.4') refers to that file's pagination. It has been replaced with the full combined Progressions document, processed/scripts/ccss_progressions_all.pdf, fetched from https://mathematicalmusings.org/wp-content/uploads/2023/05/Progressions.pdf (333 pages, covers OA/Counting and Cardinality plus NBT, Geometry, Geometric Measurement, and NF in one file). The OA/Counting-and-Cardinality section starts around p.7 of this combined file, not p.1 as in the old standalone extract, so every existing OA_PROG page citation needs to be re-verified against this file's own pagination before being treated as authoritative again -- flagged for the next grounding pass.",
+      "NBT_PROG": "CCSS Progressions for K-5, Number and Operations in Base Ten. Draft 4/7/2011. File fetched from https://www.isbe.net/Documents/number-base-ten-k-5.pdf",
+      "GEOM_PROG": "CCSS Progressions for K-6, Geometry. Draft 27 Dec 2014 (chapter title 'Geometry, K-6'; suggested citation on the title page reads 'Grades K-5, Geometry', dated 19 Sept 2013 -- same series, note the title-page/chapter-heading date discrepancy). Read in full (21/21 pages) as of this round; Grades 3-5 quadrilateral-hierarchy content mined here. Note: GA's 3.GSR.6.1 (perpendicular/parallel lines, right angles) and 3.GSR.6.3 (lines of symmetry) introduce vocabulary at Grade 3 that this CCSS Progressions document places at Grade 4 (4.G.1, 4.G.3) -- a real GA/CCSS sequencing mismatch, not an unread-source gap. No edge is drafted into either sub-standard for that reason; a citation would misrepresent what the source document says. File fetched from https://mathematicalmusings.org/wp-content/uploads/2014/12/ccss_progression_gk6_2014_12_27.pdf",
+      "GEOM_MEAS_PROG": "CCSS Progressions for K-5, Geometric Measurement. Draft 6/23/2012. Read in full (28/28 pages). Covers length (K-2), perimeter/area (Grade 3), angle measure (Grade 4), and volume (Grade 5). Does not cover categorical/measurement data (see DATA_PROG) or shape classification/quadrilateral properties (see GEOM_PROG). File fetched from https://www.isbe.net/Documents/geometric-measurement-k-5.pdf",
+      "DATA_PROG": "CCSS Progressions for K-5, 'K-3, Categorical Data; Grades 2-5, Measurement Data.' Draft 6/20/2011. Covers categorical data (bar/picture graphs) and measurement data (line plots), grades K-5. Does NOT cover time or money sub-standards (no CCSS Progressions document does). File fetched from https://achievethecore.org/content/upload/Draft%20K%E2%80%935%20Progression%20on%20Measurement%20and%20Data%20(data%20part).pdf Grades 3-5 content (categorical scaled graphs, fraction-based line plots) mined in this round.",
+      "NF_PROG": "CCSS Progressions for Grades 3-5, Number and Operations--Fractions. Draft 8/12/2011. Read in full (13/13 pages). Previously cited only secondhand via mentions inside OA_PROG (confidence: medium); all fraction edges re-cited directly against this document in this round, and the Grade 3 internal ordering corrected to match the document's actual sequence (unit fraction -> multiple representations -> equivalence -> comparing). File fetched from https://www.isbe.net/Documents/number-fractions-3-5.pdf"
+    },
+    "rule_taxonomy": {
+      "grade_progression": "The same concept extends from one grade to the next. Same operation or idea, larger scope, deeper representation.",
+      "scope_expansion": "Same concept, expanded number range or added complexity within a grade level or across a closely related grade band.",
+      "concept_foundation": "One standard is a named conceptual prerequisite for another; the second cannot be meaningfully taught without the first.",
+      "bloom_progression": "Lower cognitive level (Remember / Understand) on the same concept precedes higher level (Apply / Analyze / Create).",
+      "decomposition": "A composite standard broken into ordered sub-skills; foundational sub-skill precedes the composite whole."
+    },
+    "notes": [
+      "Direction convention: 'from' is the prerequisite; 'to' is what follows. 'from' must be mastered before 'to'.",
+      "ccss_from / ccss_to give the corresponding CCSS standard codes for traceability back to the Progressions documents.",
+      "Georgia consolidated CCSS domains: K.CC \u2192 K.NR.1/NR.2/NR.4; K.OA \u2192 K.NR.5; K.NBT \u2192 K.NR.3; 1.OA \u2192 1.NR.2; 1.NBT \u2192 1.NR.1/NR.5; 2.OA.2 \u2192 2.NR.2.1, 2.OA.3-4 \u2192 2.NR.3; 3.OA \u2192 3.PAR.3; 3.NBT \u2192 3.NR.1+3.PAR.3.5; 3.NF \u2192 3.NR.4; 4.OA.1-3 \u2192 4.NR.2, 4.OA.4-5 \u2192 4.PAR.3; 4.NBT \u2192 4.NR.1/NR.2; 4.NF \u2192 4.NR.4/NR.5; 5.OA.1-2 \u2192 5.NR.5, 5.OA.3 \u2192 5.PAR.6; 5.NBT \u2192 5.NR.1/NR.2/NR.4; 5.NF \u2192 5.NR.3.",
+      "NF (Number and Fractions) Progression has not been read in full \u2014 fraction dependency entries are grounded in the overall NF progression narrative cited in OA_PROG p.33 and the NBT_PROG overview. These entries are marked with 'confidence': 'medium' and should receive additional review against the NF Progression document.",
+      "ccss_oa_k5.pdf (standalone OA-only extract) was replaced by ccss_progressions_all.pdf (the full combined CCSS Progressions document, all domains) on 2026-09-20. All existing OA_PROG page-number citations were written against the old standalone file's pagination and do not match the combined file's page numbers -- re-verify each OA_PROG citation against ccss_progressions_all.pdf before relying on it, and consider re-grounding NBT/Geometry/Geometric Measurement/NF from this same local file too, since it already contains all five and the external URLs currently cited for those four were fetched separately instead."
+    ]
+  },
+  "dependencies": [
+    {
+      "_section": "K \u2014 Within-grade: Counting and Cardinality (K.NR.1, K.NR.2, K.NR.4)",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "K.NR.1.1",
+      "to": "K.NR.1.2",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.4: 'Students become fluent in saying the count sequence so that they have enough attention to focus on the pairings involved in counting objects. To count a group of objects, they pair each word said with one object.' \u2014 K.CC.4a (count objects) precedes K.CC.4b (last number = total quantity).",
+      "ccss_from": "K.CC.5 / K.CC.4a",
+      "ccss_to": "K.CC.4b"
+    },
+    {
+      "from": "K.NR.1.2",
+      "to": "K.NR.1.3",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.5: 'Understanding that each successive number name refers to a quantity that is one larger (K.CC.4c) is the conceptual start for Grade 1 counting on.' Requires cardinality (K.CC.4b) to be understood first.",
+      "ccss_from": "K.CC.4b",
+      "ccss_to": "K.CC.4c"
+    },
+    {
+      "from": "K.NR.2.1",
+      "to": "K.NR.2.2",
+      "rule": "scope_expansion",
+      "source": "OA_PROG p.4-5: Students first count forward by ones and tens (K.CC.1), then count forward from any given number (K.CC.2). K.CC.2 requires fluency with the sequence established in K.CC.1.",
+      "ccss_from": "K.CC.1",
+      "ccss_to": "K.CC.2"
+    },
+    {
+      "from": "K.NR.1.1",
+      "to": "K.NR.4.1",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.4: Counting objects (K.CC.5) requires recognizing number names; written numeral identification (K.CC.3) is closely intertwined with cardinality work.",
+      "ccss_from": "K.CC.5",
+      "ccss_to": "K.CC.3"
+    },
+    {
+      "from": "K.NR.1.3",
+      "to": "K.NR.4.2",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.5: 'Comparing numbers progresses in Grade 1 to adding and subtracting in comparing situations.' K.CC.4c (one-larger understanding) underlies K.CC.6-7 (compare which group has more/fewer).",
+      "ccss_from": "K.CC.4c",
+      "ccss_to": "K.CC.6 / K.CC.7"
+    },
+    {
+      "_section": "K \u2014 Within-grade: Operations (K.NR.5)",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "K.NR.5.1",
+      "to": "K.NR.5.2",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.8: Students act out adding and subtracting situations by representing quantities with objects, fingers, and math drawings (K.OA.1). Decomposing numbers (K.OA.3) is the concrete prerequisite for representing those operations in authentic situations.",
+      "ccss_from": "K.OA.3",
+      "ccss_to": "K.OA.1"
+    },
+    {
+      "from": "K.NR.5.2",
+      "to": "K.NR.5.3",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.8-11: Students first represent the situation (K.OA.1), then solve using a variety of strategies such as counting on or making 10 (K.OA.1 \u2192 strategies that culminate in K.OA.5).",
+      "ccss_from": "K.OA.1",
+      "ccss_to": "K.OA.1 / K.OA.2 strategies"
+    },
+    {
+      "from": "K.NR.5.3",
+      "to": "K.NR.5.4",
+      "rule": "scope_expansion",
+      "source": "OA_PROG p.8: 'Working within 5. Students work with small numbers first. Focusing attention on small groups in adding and subtracting situations can help students move from perceptual subitizing to conceptual subitizing.' Fluency within 5 (K.OA.5) is achieved through mastering strategies within 5 before extending to within 10.",
+      "ccss_from": "K.OA.1-3",
+      "ccss_to": "K.OA.5"
+    },
+    {
+      "from": "K.NR.1.2",
+      "to": "K.NR.5.1",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.11: 'Composing and decomposing numbers from 11 to 19 into ten ones and some further ones builds from all this work [with cardinality and counting on].' Cardinality understanding (K.CC.4b) is a foundation for decomposing numbers.",
+      "ccss_from": "K.CC.4b",
+      "ccss_to": "K.OA.3"
+    },
+    {
+      "_section": "K \u2192 Grade 1: Cross-grade progression",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "K.NR.3.1",
+      "to": "1.NR.1.2",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.2: 'By working with teen numbers in this way in Kindergarten, students gain a foundation for viewing 10 ones as a new unit called a ten in Grade 1.' K.NBT.1 \u2192 1.NBT.2a.",
+      "ccss_from": "K.NBT.1",
+      "ccss_to": "1.NBT.2a"
+    },
+    {
+      "from": "K.NR.5.1",
+      "to": "1.NR.2.1",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.16: 'These make-a-ten methods have three prerequisites reaching back to Kindergarten: a) knowing the partner that makes 10 for any number (K.OA.4 sets the stage for this), b) knowing all decompositions for any number below 10 (K.OA.3), and c) knowing all teen numbers as 10 + n.' Decomposing within 10 is required for Grade 1 Level-3 strategies.",
+      "ccss_from": "K.OA.3",
+      "ccss_to": "1.OA.6"
+    },
+    {
+      "from": "K.NR.5.3",
+      "to": "1.NR.2.1",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.12-14: Grade 1 extends Kindergarten's Level 1 (Direct Modeling) strategies to Level 2 (Counting On) strategies. K strategies within 10 are prerequisite for Grade 1 strategies within 20.",
+      "ccss_from": "K.OA.1-2",
+      "ccss_to": "1.OA.1"
+    },
+    {
+      "from": "K.NR.5.4",
+      "to": "1.NR.2.4",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.8,20: 'Students who enter Kindergarten without knowledge... will require extra teaching time to meet the Kindergarten standards. Such time and support are vital for enabling all students to master the Grade 1 standards.' Fluency within 5 (K.OA.5) is the stepping stone to fluency within 10 (1.OA.6) in Grade 1.",
+      "ccss_from": "K.OA.5",
+      "ccss_to": "1.OA.6"
+    },
+    {
+      "from": "K.NR.1.3",
+      "to": "1.NR.2.1",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.5,14: 'K.CC.2 is a prerequisite for counting on. Understanding that each successive number name refers to a quantity that is one larger (K.CC.4c) is the conceptual start for Grade 1 counting on.' Counting forward from any number enables Level 2 counting-on strategies.",
+      "ccss_from": "K.CC.2 / K.CC.4c",
+      "ccss_to": "1.OA.5 / 1.OA.6"
+    },
+    {
+      "from": "K.PAR.6.1",
+      "to": "1.PAR.3.1",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.25: Repeating patterns in Kindergarten (core \u22644 elements) extend to Grade 1 repeating patterns with operations and growing/shrinking patterns. The core competency of identifying and extending a repeating unit is prerequisite.",
+      "ccss_from": "K patterns",
+      "ccss_to": "1 patterns"
+    },
+    {
+      "_section": "Grade 1 \u2014 Within-grade",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "K.NR.3.1",
+      "to": "1.NR.5.1",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.2-4: 'The work in Grade 1 [adding two-digit numbers] builds on the conceptual foundation of viewing ten ones as a new unit called a ten. Students have already worked with teen numbers as 10 + extra ones in Kindergarten.'",
+      "ccss_from": "K.NBT.1",
+      "ccss_to": "1.NBT.4 / 1.NBT.6"
+    },
+    {
+      "from": "1.NR.1.2",
+      "to": "1.NR.5.1",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.4: 'In Grade 1, students add within 100 by relying on the structure of two-digit numbers: tens and ones.' Understanding that a two-digit number represents tens + ones (1.NBT.2) is prerequisite for adding/subtracting two-digit numbers (1.NBT.4-5).",
+      "ccss_from": "1.NBT.2",
+      "ccss_to": "1.NBT.4"
+    },
+    {
+      "from": "1.NR.2.1",
+      "to": "1.NR.2.4",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.18,20: 'The word fluent is used in the Standards to mean fast and accurate. Fluency in each grade involves a mixture of just knowing some answers, knowing some answers from patterns, and knowing some answers from the use of strategies.' Strategies within 20 (1.OA.1,1.OA.6) precede fluency within 10 (1.OA.6 fluency part).",
+      "ccss_from": "1.OA.1 / 1.OA.6 (strategies)",
+      "ccss_to": "1.OA.6 (fluency)"
+    },
+    {
+      "from": "1.NR.2.3",
+      "to": "1.NR.2.7",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.13: 'The meaning of subtraction as an unknown-addend addition problem is one of the essential understandings students will need in middle school.' Understanding inverse relationship (1.OA.4) is prerequisite for applying properties (1.OA.3) in mixed situations.",
+      "ccss_from": "1.OA.4",
+      "ccss_to": "1.OA.3"
+    },
+    {
+      "from": "1.NR.2.4",
+      "to": "1.NR.5.1",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.14,20: 'The OA progression in Grade 1 describes [development] for single-digit addition and subtraction, culminating in methods that rely on properties of operations. The NBT progression describes how these methods combine with place value reasoning to extend computation to multi-digit numbers.' Fluency within 10 is combined with place value to add within 100.",
+      "ccss_from": "1.OA.6",
+      "ccss_to": "1.NBT.4"
+    },
+    {
+      "from": "1.NR.5.2",
+      "to": "1.NR.5.3",
+      "rule": "scope_expansion",
+      "source": "NBT_PROG p.4: 'Given a two-digit number, mentally find 10 more or 10 less (1.NBT.5) is prerequisite for adding/subtracting multiples of 10 (1.NBT.6), as the latter generalizes the former.'",
+      "ccss_from": "1.NBT.5",
+      "ccss_to": "1.NBT.6"
+    },
+    {
+      "from": "1.PAR.3.1",
+      "to": "1.PAR.3.2",
+      "rule": "scope_expansion",
+      "source": "OA_PROG p.25: Repeating patterns precede growing/shrinking patterns. A student must be able to recognize and extend a repeating pattern before identifying systematic growth rules.",
+      "ccss_from": "1 repeating patterns",
+      "ccss_to": "1 growing/shrinking patterns"
+    },
+    {
+      "_section": "Grade 1 \u2192 Grade 2: Cross-grade progression",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "1.NR.1.2",
+      "to": "2.NR.1.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.5: 'In Grade 2, students extend their understanding from two-digit to three-digit numbers. The base-ten system is extended by viewing 10 tens as forming a new unit called a hundred (2.NBT.1).' The same bundling logic used in Grade 1 for tens is applied again for hundreds.",
+      "ccss_from": "1.NBT.2",
+      "ccss_to": "2.NBT.1"
+    },
+    {
+      "from": "1.NR.2.4",
+      "to": "2.NR.2.1",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.21: 'Grade 2 students master all of the problem situations. By end of Grade 2, students know all sums of two one-digit numbers from memory (2.OA.2).' Grade 1 fluency within 10 (1.OA.6) directly extends to Grade 2 fluency within 20 (2.OA.2).",
+      "ccss_from": "1.OA.6",
+      "ccss_to": "2.OA.2"
+    },
+    {
+      "from": "1.NR.5.1",
+      "to": "2.NR.2.3",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.5-7: 'Adding within 100 is a special case of adding and subtracting within 1000... methods within 100 will be discussed before fluency within 100.' Grade 1 two-digit strategies (1.NBT.4-5) are directly extended in Grade 2.",
+      "ccss_from": "1.NBT.4 / 1.NBT.5",
+      "ccss_to": "2.NBT.5 / 2.NBT.7"
+    },
+    {
+      "from": "1.NR.1.3",
+      "to": "2.NR.1.3",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.5: Grade 2 extends comparison of two-digit numbers to three-digit numbers using the same place value reasoning. Compare up to 100 (1.NBT.3) \u2192 compare up to 1000 (2.NBT.4).",
+      "ccss_from": "1.NBT.3",
+      "ccss_to": "2.NBT.4"
+    },
+    {
+      "from": "1.PAR.3.2",
+      "to": "2.PAR.4.1",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.25: Growing/shrinking patterns by repeated addition/subtraction of 1s, 2s, 5s, 10s (Grade 1) extend to identifying numerical patterns resulting from operations (Grade 2).",
+      "ccss_from": "1 growing patterns",
+      "ccss_to": "2.OA (patterns)"
+    },
+    {
+      "_section": "Grade 2 \u2014 Within-grade",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "2.NR.1.1",
+      "to": "2.NR.1.3",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.5-6: Explaining the value of a three-digit number (2.NBT.1-3) is prerequisite for using that understanding to compare three-digit numbers (2.NBT.4).",
+      "ccss_from": "2.NBT.1-3",
+      "ccss_to": "2.NBT.4"
+    },
+    {
+      "from": "2.NR.2.1",
+      "to": "2.NR.2.3",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.6: 'Fluency in two-digit addition and subtraction requires that students know single-digit sums from memory.' Single-digit fluency (2.OA.2) is an ingredient in two-digit strategies.",
+      "ccss_from": "2.OA.2",
+      "ccss_to": "2.NBT.5"
+    },
+    {
+      "from": "2.NR.2.3",
+      "to": "2.NR.2.4",
+      "rule": "bloom_progression",
+      "source": "NBT_PROG p.7: 'Fluency within 100 is achieved after extensive work with strategies (2.NBT.5, 2.NBT.7).' Part-whole strategies (2.NBT.5) precede fluency (also 2.NBT.5, fluency aspect).",
+      "ccss_from": "2.NBT.5 (strategies)",
+      "ccss_to": "2.NBT.5 (fluency)"
+    },
+    {
+      "from": "2.NR.1.1",
+      "to": "2.NR.2.4",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.6-7: Place value understanding (2.NBT.1-4) is used directly in the strategies for two-digit addition/subtraction. e.g. 'add hundreds to hundreds, tens to tens, ones to ones.'",
+      "ccss_from": "2.NBT.1-4",
+      "ccss_to": "2.NBT.5"
+    },
+    {
+      "from": "2.NR.3.1",
+      "to": "2.NR.3.2",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.25: '2.OA.3 relates doubles to even numbers and to counting by 2s, setting the stage for Level 2 multiplication methods. 2.OA.4 focuses on rectangular arrays.' Odd/even understanding (2.OA.3) supports the idea of equal groups used in array problems (2.OA.4).",
+      "ccss_from": "2.OA.3",
+      "ccss_to": "2.OA.4"
+    },
+    {
+      "from": "2.PAR.4.1",
+      "to": "2.PAR.4.2",
+      "rule": "scope_expansion",
+      "source": "OA_PROG: Identifying patterns from a single operation (addition or subtraction) precedes identifying both growing and shrinking patterns and relating them to the inverse operations.",
+      "ccss_from": "2 numerical patterns",
+      "ccss_to": "2 growing/shrinking patterns"
+    },
+    {
+      "_section": "Grade 2 \u2192 Grade 3: Cross-grade progression",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "2.NR.1.1",
+      "to": "3.NR.1.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.8: Grade 3 extends place value from hundreds to ten-thousands. The base-ten bundling pattern (each 10 of smaller unit = 1 of next) continues.",
+      "ccss_from": "2.NBT.1",
+      "ccss_to": "3.NBT (implicit)"
+    },
+    {
+      "from": "2.NR.2.4",
+      "to": "3.PAR.2.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.8: 'In Grade 3, students continue adding and subtracting... fluency within 1000.' Grade 2 fluency within 100 (2.NBT.5) extends to fluency within 1000 (3.NBT.2).",
+      "ccss_from": "2.NBT.5",
+      "ccss_to": "3.NBT.2"
+    },
+    {
+      "from": "2.NR.2.1",
+      "to": "3.PAR.2.1",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.8: 'Grade 2 fluency with single-digit sums (2.OA.2) is maintained in Grade 3 for use in multi-digit computation.' Single-digit fluency from memory underpins all multi-digit strategies.",
+      "ccss_from": "2.OA.2",
+      "ccss_to": "3.NBT.2"
+    },
+    {
+      "from": "2.NR.3.2",
+      "to": "3.PAR.3.2",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.25: 'Standard 2.OA.4 focuses on using addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends. The Grade 2 standard is at Level 1 but sets the stage for Level 2 multiplication.' Rectangular arrays with equal addends (2.OA.4) are a direct conceptual predecessor to multiplication (3.OA.1).",
+      "ccss_from": "2.OA.4",
+      "ccss_to": "3.OA.1"
+    },
+    {
+      "from": "2.NR.3.1",
+      "to": "3.PAR.3.1",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.25: '2.OA.3 relates doubles additions up to 20 to the concept of odd and even numbers and to counting by 2s.' Odd/even and doubles (2.OA.3) introduce the idea of numeric patterns built from multiplication structure.",
+      "ccss_from": "2.OA.3",
+      "ccss_to": "3.OA (numeric patterns)"
+    },
+    {
+      "from": "2.PAR.4.2",
+      "to": "3.PAR.3.1",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.25: Grade 2 growing/shrinking patterns involving repeated addition \u2192 Grade 3 numeric patterns related to multiplication (e.g. 3, 6, 9 count-bys described on p.25).",
+      "ccss_from": "2 growing patterns",
+      "ccss_to": "3.OA patterns"
+    },
+    {
+      "_section": "Grade 3 \u2014 Within-grade",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "3.NR.1.1",
+      "to": "3.NR.1.2",
+      "rule": "bloom_progression",
+      "source": "NBT_PROG p.8: Reading and writing multi-digit numbers (3.NBT.1 write) precedes comparing them using >, =, < symbols, which requires understanding the value of each place.",
+      "ccss_from": "3.NBT.1 (read/write)",
+      "ccss_to": "3.NBT.1 (compare)"
+    },
+    {
+      "from": "3.NR.1.1",
+      "to": "3.NR.1.3",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.8: 'Rounding to the nearest 10 or 100 (3.NBT.1) relies on understanding which multiples of 10 or 100 a given number lies between.' Understanding the place value structure is prerequisite for rounding.",
+      "ccss_from": "3.NBT.1 (place value)",
+      "ccss_to": "3.NBT.1 (rounding)"
+    },
+    {
+      "from": "3.PAR.2.1",
+      "to": "3.PAR.2.2",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.27-28: Fluent add/subtract within 1000 (3.NBT.2) is required to solve word problems within 10,000 using equations with a letter for the unknown (3.OA.8).",
+      "ccss_from": "3.NBT.2",
+      "ccss_to": "3.OA.8"
+    },
+    {
+      "from": "3.NR.1.3",
+      "to": "3.PAR.2.2",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.27: 'Assessment... includes estimation strategies including rounding.' Rounding (3.NBT.1) is used to assess reasonableness in word problem solutions (3.OA.8).",
+      "ccss_from": "3.NBT.1 (rounding)",
+      "ccss_to": "3.OA.8"
+    },
+    {
+      "from": "3.PAR.3.2",
+      "to": "3.PAR.3.3",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.26: 'Level 3 methods use the associative property or the distributive property to compose and decompose. These compositions and decompositions may be additive or multiplicative.' Understanding single-digit multiplication facts (3.OA.7) is prerequisite for applying properties to derive unknown facts (3.OA.5).",
+      "ccss_from": "3.OA.7",
+      "ccss_to": "3.OA.5"
+    },
+    {
+      "from": "3.PAR.3.2",
+      "to": "3.PAR.3.6",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.22: 'All of the understandings of multiplication and division situations... culminate by the end of Grade 3 in fluently multiplying and dividing... (3.OA.7).' Meaning of multiplication/division (3.OA.1-2) precedes solving word problems (3.OA.3).",
+      "ccss_from": "3.OA.1 / 3.OA.2",
+      "ccss_to": "3.OA.3"
+    },
+    {
+      "from": "3.PAR.3.3",
+      "to": "3.PAR.3.4",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.27: 'Understanding and using the associative and distributive properties... requires students to know two conventions for reading an expression that has more than one operation.' Applying properties (3.OA.5) supports understanding of equal expressions and the equals sign (3.OA.4 / 3.PAR.3.4).",
+      "ccss_from": "3.OA.5",
+      "ccss_to": "3.OA.4 / equals sign"
+    },
+    {
+      "from": "3.PAR.3.2",
+      "to": "3.PAR.3.5",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.8: 'Multiplying one-digit whole numbers by multiples of 10 (3.NBT.3) relies on place value reasoning combined with multiplication of single-digit numbers.' Single-digit multiplication (3.OA.7) is a direct component of 3.NBT.3.",
+      "ccss_from": "3.OA.7",
+      "ccss_to": "3.NBT.3"
+    },
+    {
+      "from": "3.PAR.3.2",
+      "to": "3.PAR.3.7",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.22: 'Grade 3 standards focus on Equal Groups and on Arrays.' Understanding and representing multiplication/division (3.OA.1-2) is prerequisite for using them to solve word problems (3.OA.3 / 3.OA.7+8).",
+      "ccss_from": "3.OA.1 / 3.OA.2",
+      "ccss_to": "3.OA.7 / 3.OA.8"
+    },
+    {
+      "from": "3.GSR.7.1",
+      "to": "3.GSR.7.2",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.24: 'Area problems where regions are partitioned by unit squares are foundational for Grade 3 multiplication strategies.' Investigating area by tiling (3.MD.5-6) precedes determining area by counting unit squares (3.MD.6).",
+      "ccss_from": "3.MD.5 / 3.MD.6",
+      "ccss_to": "3.MD.6"
+    },
+    {
+      "from": "3.GSR.7.2",
+      "to": "3.GSR.7.3",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.24: 'Area problems where regions are partitioned by unit squares are foundational for Grade 3 multiplication strategies. In Grade 4 as a model for multi-digit multiplication...' Area by counting (3.MD.6) precedes the formula area = l\u00d7w (3.MD.7).",
+      "ccss_from": "3.MD.6",
+      "ccss_to": "3.MD.7"
+    },
+    {
+      "from": "3.GSR.7.3",
+      "to": "3.PAR.3.5",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.24: 'Grade 3 standards focus on area measurement (3.MD.5-7). The measurement examples are more difficult than discrete-objects examples, so these should follow problems about discrete objects. Area problems where regions are partitioned by unit squares are foundational for Grade 3 standards because area is used as a model for single-digit multiplication and division strategies (3.MD.7).' Area model (l\u00d7w = l groups of w) supports multiplying by multiples of 10.",
+      "ccss_from": "3.MD.7",
+      "ccss_to": "3.NBT.3"
+    },
+    {
+      "_section": "Grade 3 \u2192 Grade 4: Cross-grade progression",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "3.NR.1.1",
+      "to": "4.NR.1.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.11: 'In Grade 4, students extend their work with multi-digit numbers to include numbers through the hundred-thousands place.' The same base-ten structure extends from thousands (Grade 3) to hundred-thousands (Grade 4).",
+      "ccss_from": "3.NBT",
+      "ccss_to": "4.NBT.1-3"
+    },
+    {
+      "from": "3.PAR.2.1",
+      "to": "4.NR.2.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.11: 'In Grade 4, students extend to multi-digit addition and subtraction, using a standard algorithm.' Grade 3 fluency within 1000 (3.NBT.2) extends to fluency through hundred-thousands (4.NBT.4).",
+      "ccss_from": "3.NBT.2",
+      "ccss_to": "4.NBT.4"
+    },
+    {
+      "from": "3.PAR.3.7",
+      "to": "4.NR.2.2",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.29: 'Students in earlier grades learned to compare these heights in an additive sense \u2014 in Grade 4, students learn to compare these quantities multiplicatively as well. 4.OA.1 interprets a multiplication equation as a comparison.' Grade 3 multiply/divide within 100 (3.OA.7) is prerequisite for multiplicative comparison (4.OA.1).",
+      "ccss_from": "3.OA.7",
+      "ccss_to": "4.OA.1"
+    },
+    {
+      "from": "3.PAR.3.7",
+      "to": "4.NR.2.3",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.12: 'In Grade 4, students extend single-digit multiplication to multi-digit multiplication. They use strategies based on place value and the properties of operations.' Grade 3 fluency with single-digit multiplication (3.OA.7) is a component of the partial-products strategies for multi-digit multiplication.",
+      "ccss_from": "3.OA.7",
+      "ccss_to": "4.NBT.5"
+    },
+    {
+      "from": "3.PAR.3.5",
+      "to": "4.NR.2.3",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.12: 'Grade 4 multi-digit multiplication strategies build directly on Grade 3 multiplying by multiples of 10 (3.NBT.3). For example, 40 \u00d7 7 = (4 \u00d7 10) \u00d7 7 = 4 \u00d7 (10 \u00d7 7) = 4 \u00d7 70 is a prerequisite decomposition step.'",
+      "ccss_from": "3.NBT.3",
+      "ccss_to": "4.NBT.5"
+    },
+    {
+      "from": "3.PAR.3.1",
+      "to": "4.PAR.3.1",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.30: 'Fourth graders extend the idea of decomposition to multiplication... this standard begins a small focus on reasoning about number or shape patterns, connecting a rule for a given pattern with its sequence of numbers or shapes.' Grade 3 numeric patterns (3.OA.9) \u2192 Grade 4 both number and shape patterns (4.OA.5).",
+      "ccss_from": "3.OA.9",
+      "ccss_to": "4.OA.5"
+    },
+    {
+      "_section": "Grade 4 \u2014 Within-grade",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "4.NR.1.1",
+      "to": "4.NR.1.2",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.11: 'Recognizing that a digit in one place has a value ten times greater than the place to its right (4.NBT.1) generalizes the bundling pattern students have used since Kindergarten.' Understanding place value structure (4.NBT.1 read/write) precedes the 10x relationship insight (4.NBT.1 relationship).",
+      "ccss_from": "4.NBT.1 (read/write)",
+      "ccss_to": "4.NBT.1 (10x relationship)"
+    },
+    {
+      "from": "4.NR.1.1",
+      "to": "4.NR.1.3",
+      "rule": "bloom_progression",
+      "source": "NBT_PROG p.11: Reading/writing multi-digit numbers (4.NBT.1) precedes comparing and ordering them (4.NBT.2), which requires understanding the value of each digit.",
+      "ccss_from": "4.NBT.1",
+      "ccss_to": "4.NBT.2"
+    },
+    {
+      "from": "4.NR.1.2",
+      "to": "4.NR.1.4",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.11: 'Rounding multi-digit whole numbers (4.NBT.3) uses the understanding that a digit in one place represents 10 times as much as in the place to its right.'",
+      "ccss_from": "4.NBT.1 (10x relationship)",
+      "ccss_to": "4.NBT.3"
+    },
+    {
+      "from": "4.NR.2.3",
+      "to": "4.NR.2.4",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.22: 'Division builds on multiplication; understanding division as finding an unknown factor (3.OA.6).' The same partial-products/area strategies used for multiplication (4.NBT.5) are mirrored in division (4.NBT.6).",
+      "ccss_from": "4.NBT.5",
+      "ccss_to": "4.NBT.6"
+    },
+    {
+      "from": "4.NR.2.2",
+      "to": "4.NR.2.3",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.29: 'Fourth graders extend problem solving to multi-step word problems using the four operations posed with whole numbers.' Multiplicative comparison (4.OA.1) provides context for multi-digit multiplication problems (4.NBT.5).",
+      "ccss_from": "4.OA.1",
+      "ccss_to": "4.NBT.5"
+    },
+    {
+      "from": "4.NR.2.3",
+      "to": "4.NR.2.5",
+      "rule": "scope_expansion",
+      "source": "OA_PROG p.29-30: 'Fourth graders extend problem solving to multi-step word problems using the four operations (4.OA.3). The same limitations discussed for two-step problems apply \u2014 number of steps no more than three, involving easy/medium addition and subtraction.' Fluent multi-digit multiplication (4.NBT.5) is a component of multi-step problems.",
+      "ccss_from": "4.NBT.5",
+      "ccss_to": "4.OA.3"
+    },
+    {
+      "from": "4.NR.5.1",
+      "to": "4.NR.5.2",
+      "rule": "bloom_progression",
+      "source": "NBT_PROG p.11-12: Understanding equivalence between fractions with denominators 10 and 100 (4.NF.5) is the conceptual foundation for decimal notation (4.NF.6). 'Express fractions with denominator 10 as hundredths, and add.' \u2192 'Use decimal notation for fractions with denominators 10 or 100.'",
+      "ccss_from": "4.NF.5",
+      "ccss_to": "4.NF.6"
+    },
+    {
+      "from": "4.NR.5.2",
+      "to": "4.NR.5.3",
+      "rule": "bloom_progression",
+      "source": "NBT_PROG p.12: Reading/writing decimals to hundredths (4.NF.6) is prerequisite for comparing them using >, =, < symbols (4.NF.7).",
+      "ccss_from": "4.NF.6",
+      "ccss_to": "4.NF.7"
+    },
+    {
+      "from": "4.PAR.3.3",
+      "to": "4.PAR.3.4",
+      "rule": "bloom_progression",
+      "source": "OA_PROG p.30: 'Students understand and use of the concepts and language [of factors and multiples], but need not be fluent in finding all factor pairs. Determining whether a given whole number is prime or composite... is a matter of interpreting prior knowledge of division in terms of the language of multiples and factors.' Finding factor pairs (4.OA.4) must precede classifying primes vs. composites.",
+      "ccss_from": "4.OA.4 (factor pairs)",
+      "ccss_to": "4.OA.4 (prime/composite)"
+    },
+    {
+      "from": "4.PAR.3.1",
+      "to": "4.PAR.3.2",
+      "rule": "scope_expansion",
+      "source": "OA_PROG p.30-31: Generating patterns from a rule (4.OA.5) extends naturally to representing those patterns in input/output tables and charts (implied by the connection to functions in later grades).",
+      "ccss_from": "4.OA.5 (generate)",
+      "ccss_to": "4.OA.5 (analyze via I/O tables)"
+    },
+    {
+      "_section": "Grade 4 \u2192 Grade 5: Cross-grade progression",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "4.NR.1.2",
+      "to": "5.NR.1.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.15: 'The same understanding of how adjacent places in the base-ten system relate extends to the right: the ones place is 1/10 of the tens place, the tenths place is 1/10 of the ones place...' Grade 4's 10x relationship (4.NBT.1) is extended in Grade 5 to include the 1/10 relationship to the right.",
+      "ccss_from": "4.NBT.1",
+      "ccss_to": "5.NBT.1"
+    },
+    {
+      "from": "4.NR.1.1",
+      "to": "5.NR.1.2",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.15-16: 'Grade 5 students explain patterns in the placement of digits when multiplied or divided by a power of 10. Use whole-number exponents to denote powers of 10, up to 10^3.' This extends Grade 4 place value structure to explicit exponential notation.",
+      "ccss_from": "4.NBT.1-3",
+      "ccss_to": "5.NBT.2"
+    },
+    {
+      "from": "4.NR.2.3",
+      "to": "5.NR.2.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.14-15: 'In Grade 5, students extend multi-digit multiplication to fluency for 3-digit by 2-digit. They refine strategies learned in Grade 4 (4-digit \u00d7 1-digit, two 2-digit \u00d7 2-digit).' Grade 4 partial-products / area-model strategies \u2192 Grade 5 fluency for larger products.",
+      "ccss_from": "4.NBT.5",
+      "ccss_to": "5.NBT.5"
+    },
+    {
+      "from": "4.NR.2.4",
+      "to": "5.NR.2.2",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.15: 'Grade 5 students extend division to 2-digit divisors (no greater than 25).' Grade 4 division (4-digit \u00f7 1-digit) directly extends to the 2-digit divisor case in Grade 5.",
+      "ccss_from": "4.NBT.6",
+      "ccss_to": "5.NBT.6"
+    },
+    {
+      "from": "4.NR.5.2",
+      "to": "5.NR.4.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.15-16: 'Grade 5 students extend to thousandths.' Decimal notation to hundredths (4.NF.6) extends to thousandths (5.NBT.3).",
+      "ccss_from": "4.NF.6",
+      "ccss_to": "5.NBT.3"
+    },
+    {
+      "from": "4.PAR.3.1",
+      "to": "5.PAR.6.1",
+      "rule": "grade_progression",
+      "source": "OA_PROG p.32: 'Students extend their Grade 4 pattern work by working briefly with two numerical patterns that can be related and examining these relationships within sequences of ordered pairs.' Single-pattern work (4.OA.5) \u2192 two-pattern coordination (5.OA.3).",
+      "ccss_from": "4.OA.5",
+      "ccss_to": "5.OA.3"
+    },
+    {
+      "_section": "Grade 5 \u2014 Within-grade",
+      "_": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+    },
+    {
+      "from": "5.NR.1.1",
+      "to": "5.NR.1.2",
+      "rule": "bloom_progression",
+      "source": "NBT_PROG p.15-16: Understanding the 10x / 1/10 relationship between adjacent places (5.NBT.1) precedes explaining patterns when multiplied/divided by powers of 10 and using exponential notation (5.NBT.2).",
+      "ccss_from": "5.NBT.1",
+      "ccss_to": "5.NBT.2"
+    },
+    {
+      "from": "5.NR.4.1",
+      "to": "5.NR.4.2",
+      "rule": "bloom_progression",
+      "source": "NBT_PROG p.15-16: Reading/writing decimal numbers to thousandths (5.NBT.3a) precedes comparing and ordering them (5.NBT.3b).",
+      "ccss_from": "5.NBT.3a",
+      "ccss_to": "5.NBT.3b"
+    },
+    {
+      "from": "5.NR.4.1",
+      "to": "5.NR.4.3",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.16: Rounding decimal numbers (5.NBT.4) requires understanding the place value of each digit, which is established in 5.NBT.3.",
+      "ccss_from": "5.NBT.3",
+      "ccss_to": "5.NBT.4"
+    },
+    {
+      "from": "5.NR.4.1",
+      "to": "5.NR.4.4",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.16: Adding/subtracting decimals (5.NBT.7) requires reading and understanding decimal notation (5.NBT.3) to align by place value.",
+      "ccss_from": "5.NBT.3",
+      "ccss_to": "5.NBT.7"
+    },
+    {
+      "from": "5.NR.4.3",
+      "to": "5.NR.4.4",
+      "rule": "concept_foundation",
+      "source": "NBT_PROG p.16: Rounding decimals (5.NBT.4) is used for estimating and checking reasonableness of decimal addition/subtraction (5.NBT.7).",
+      "ccss_from": "5.NBT.4",
+      "ccss_to": "5.NBT.7"
+    },
+    {
+      "from": "5.NR.5.1",
+      "to": "5.PAR.6.1",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.32: 'As preparation for the Expressions and Equations Progression in the middle grades, students in Grade 5 begin working more formally with expressions (5.OA.1, 5.OA.2). They write expressions to express a calculation...' Writing/evaluating numerical expressions (5.OA.1-2) is prerequisite for generating patterns defined by rules expressed as operations (5.OA.3).",
+      "ccss_from": "5.OA.1 / 5.OA.2",
+      "ccss_to": "5.OA.3"
+    },
+    {
+      "from": "5.PAR.6.1",
+      "to": "5.PAR.6.2",
+      "rule": "scope_expansion",
+      "source": "OA_PROG p.32: 'Students extend their Grade 4 pattern work by working with two numerical patterns... examining these relationships within sequences of ordered pairs and in the graphs in the first quadrant of the coordinate plane (5.OA.3). This work prepares students for studying proportional relationships and functions in middle school.' Generating/relating two patterns (5.OA.3) is the prerequisite for graphing them as ordered pairs.",
+      "ccss_from": "5.OA.3 (patterns)",
+      "ccss_to": "5.OA.3 (coordinate plane)"
+    },
+    {
+      "_section": "K-2 GSR (Geometry and Spatial Reasoning) -- sourced from GEOM_PROG (Geometry, K-6, draft 27 Dec 2014)"
+    },
+    {
+      "from": "K.GSR.8.1",
+      "to": "K.GSR.8.3",
+      "rule": "concept_foundation",
+      "source": "GEOM_PROG p.6: 'concept images and names they have learned for the shapes are the raw material from which they can abstract common features.[MP2] This also supports their learning to represent shapes informally with drawings and by building them from components...[K.G.5]' -- shape analysis/concept-image formation (K.G.4) is explicitly the raw material for representing/modeling shapes (K.G.5).",
+      "ccss_from": "K.G.4",
+      "ccss_to": "K.G.5"
+    },
+    {
+      "from": "K.GSR.8.1",
+      "to": "K.GSR.8.4",
+      "rule": "concept_foundation",
+      "source": "GEOM_PROG p.7: 'A second important area for kindergartners is the composition of geometric figures. Students not only build shapes from components, but also compose shapes to build pictures and designs.' Presented as building on the shape-recognition/analysis work described immediately prior (K.G.3/K.G.4).",
+      "ccss_from": "K.G.4",
+      "ccss_to": "K.G.6",
+      "confidence": "medium"
+    },
+    {
+      "from": "K.GSR.8.1",
+      "to": "1.GSR.4.1",
+      "rule": "grade_progression",
+      "source": "GEOM_PROG p.8: 'In Grade 1, students reason about shapes... based on early work recognizing, naming, sorting, and building shapes from components, they describe in their own words why a shape belongs to a given category... they differentiate between defining attributes... and nondefining attributes.[1.G.1]'",
+      "ccss_from": "K.G.4",
+      "ccss_to": "1.G.1"
+    },
+    {
+      "from": "K.GSR.8.4",
+      "to": "1.GSR.4.2",
+      "rule": "grade_progression",
+      "source": "GEOM_PROG p.8: 'From the early beginnings of informally matching shapes and solving simple shape puzzles, students learn to intentionally compose and decompose plane and solid figures... building understanding of part-whole relationships as well as the properties of the original and composite shapes.[1.G.2]' and p.9: 'Students build these competencies, often more slowly, in the domain of three-dimensional shapes.'",
+      "ccss_from": "K.G.6",
+      "ccss_to": "1.G.2",
+      "confidence": "medium"
+    },
+    {
+      "from": "1.GSR.4.3",
+      "to": "2.GSR.7.3",
+      "rule": "scope_expansion",
+      "source": "GEOM_PROG p.8 (1.G.3: 'Partition circles and rectangles into two and four equal shares...') vs. p.10 (2.G.3: 'Partition circles and rectangles into two, three, or four equal shares...') -- same partitioning skill, thirds added at Grade 2.",
+      "ccss_from": "1.G.3",
+      "ccss_to": "2.G.3"
+    },
+    {
+      "from": "2.GSR.7.1",
+      "to": "2.GSR.7.3",
+      "rule": "concept_foundation",
+      "source": "GEOM_PROG p.10: 'Because they have developed both verbal descriptions of these categories and their defining attributes and a rich store of associated mental images...[2.G.1] Students learn to combine their composition and decomposition competencies to build and operate on composite units... to develop foundations for area, fraction, and proportion... they recognize that... each trapezoid has half of that area, and each rhombus has a third of that area.[2.G.3]'",
+      "ccss_from": "2.G.1",
+      "ccss_to": "2.G.3"
+    },
+    {
+      "_section": "K-2 MDR (Measurement, Data, and Results) -- length/measurement portion only, sourced from GEOM_MEAS_PROG (Geometric Measurement, K-5, draft 6/23/2012). Data/graphing sub-standards (K.MDR.7.2/7.3, 1.MDR.6.4, 2.MDR.5.4/5.5, 2.MDR.6.1/6.2) are NOT covered by this document -- see metadata note."
+    },
+    {
+      "from": "K.MDR.7.1",
+      "to": "1.MDR.6.1",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.6-7 (Kindergarten, 'Describe and compare measurable attributes'[K.MD.1], 'Length'[K.MD.2]: students directly compare lengths, discuss aligning endpoints) -> p.8-9 (Grade 1, 'Length comparisons': 'First graders should continue to use direct comparison...Once they can compare lengths of objects by direct comparison, they could compare several items to a single item'[1.MD.1] and 'Measure lengths indirectly and by iterating length units'[1.MD.2]).",
+      "ccss_from": "K.MD.1",
+      "ccss_to": "1.MD.2"
+    },
+    {
+      "from": "1.MDR.6.1",
+      "to": "2.MDR.5.1",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.9-10: 'an instructional progression based on this finding would start by ensuring that students can perform direct comparisons. Then, children should engage in experiences that allow them to connect number to length, using manipulative units that have a standard unit of length, such as centimeter cubes.[1.MD.2]' -> p.12 (Grade 2): 'Second graders learn to measure length with a variety of tools, such as rulers, meter sticks, and measuring tapes.[2.MD.1]' with explicit discussion of comparing physical units to a ruler's marked units.",
+      "ccss_from": "1.MD.2",
+      "ccss_to": "2.MD.1"
+    },
+    {
+      "from": "1.MDR.6.1",
+      "to": "2.MDR.5.2",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.10: 'As they measure with these manipulative units, students discuss the concepts and skills involved (e.g., as previously discussed, not leaving space between successive length-units)...they compare the results of measuring to direct and indirect comparisons.[1.MD.2]' -> p.12 (Grade 2): discussion of 'length-unit iteration,' 'accumulation of distance,' 'alignment of zero-point,' and 'meaning of numerals on the ruler' as the skills needed to move from iterating physical units to estimating/measuring to the nearest whole unit with a standard tool.[2.MD.1]",
+      "ccss_from": "1.MD.2",
+      "ccss_to": "2.MD.1",
+      "confidence": "medium"
+    },
+    {
+      "_section": "K-2 MDR (Measurement, Data, and Results) -- categorical-data and measurement-data (graphing/number-line) portion, sourced from DATA_PROG ('K-3, Categorical Data; Grades 2-5, Measurement Data', draft 6/20/2011). Time (2.MDR.6.1) and money (1.MDR.6.3, 2.MDR.6.2) sub-standards are NOT covered by this document or by GEOM_MEAS_PROG -- still an open gap, no CCSS Progressions document addresses them (they are largely outside the CCSS's own progression-document scope)."
+    },
+    {
+      "from": "K.MDR.7.2",
+      "to": "1.MDR.6.4",
+      "rule": "grade_progression",
+      "source": "DATA_PROG p.5: 'Students in Kindergarten classify objects into categories...Students can then count the number of specimens in each pile[K.CC.5]...use these category counts and their understanding of cardinality to say whether there are more specimens with wings or without wings.[K.CC.6,K.CC.7]' -> p.5-6 (Grade 1): 'Students in Grade 1 begin to organize and represent categorical data...Students can also ask and answer questions about categorical data based on a representation of the data.'",
+      "ccss_from": "K.MD.3",
+      "ccss_to": "1.MD.4"
+    },
+    {
+      "from": "1.MDR.6.4",
+      "to": "2.MDR.5.4",
+      "rule": "grade_progression",
+      "source": "DATA_PROG p.6 (Grade 1: organize/represent/ask-and-answer questions about categorical data with up to three categories) -> p.6 (Grade 2): 'Students in Grade 2 draw a picture graph and a bar graph (with single-unit scale)...Solve simple put-together, take-apart, and compare problems using information presented in a bar graph.[2.MD.10,2.OA.1]'",
+      "ccss_from": "1.MD.4",
+      "ccss_to": "2.MD.10"
+    },
+    {
+      "from": "2.MDR.5.1",
+      "to": "2.MDR.5.5",
+      "rule": "concept_foundation",
+      "source": "DATA_PROG p.9: 'Students in Grade 2 measure lengths to generate a set of measurement data.[2.MD.1]...To make a line plot from the data in the table, the student can ascertain the greatest and least values in the data...draw a segment of a number line diagram...[2.MD.5,2.MD.6]' -- length measurement is the stated source of the data plotted on the required number-line diagram.",
+      "ccss_from": "2.MD.1",
+      "ccss_to": "2.MD.6"
+    },
+    {
+      "from": "2.MDR.5.4",
+      "to": "2.MDR.5.5",
+      "rule": "concept_foundation",
+      "source": "DATA_PROG p.9: contrasts categorical-data bar-graph work (which Grade 2 students are already familiar with, per 2.MD.10) with measurement data, explicitly building the line-plot/number-line representation (2.MD.5,2.MD.6) on students' prior bar-graph representational competence: 'Because students in Grade 2 are already familiar with categorical data and bar graphs, a student might find it natural to summarize this data set by viewing it in terms of categories.'",
+      "ccss_from": "2.MD.10",
+      "ccss_to": "2.MD.6",
+      "confidence": "medium"
+    },
+    {
+      "_section": "K-4 MDR -- topic-continuity edges (time, money, repeated 'ask/answer questions from graphical displays' standard). No CCSS Progressions document covers time or money at all; these edges are grounded directly in Georgia's own standard text showing the same topic recurring with expanding scope across grades, not an external citation. Rule 'topic_continuity' is used specifically to keep these visually distinct from document-cited edges."
+    },
+    {
+      "from": "K.NR.1.4",
+      "to": "1.MDR.6.3",
+      "rule": "topic_continuity",
+      "source": "GA text only (no CCSS Progressions document covers money): K.NR.1.4 'Identify pennies, nickels, and dimes and know their name and value' -> 1.MDR.6.3 'Identify the value of quarters and compare the values of pennies, nickels, dimes, and quarters.' Same topic (coin identification/value), expanding from naming to comparing values, one grade later.",
+      "ccss_from": "K.CC (informal, money not in CCSS at K)",
+      "ccss_to": "n/a (GA-specific)",
+      "confidence": "medium"
+    },
+    {
+      "from": "1.MDR.6.3",
+      "to": "2.MDR.6.2",
+      "rule": "topic_continuity",
+      "source": "GA text only: 1.MDR.6.3 'Identify the value of quarters and compare the values of pennies, nickels, dimes, and quarters' -> 2.MDR.6.2 'Find the value of a group of coins and determine combinations of coins that equal a given amount.' Comparing individual coin values precedes computing the value of a group of coins.",
+      "ccss_from": "n/a (GA-specific)",
+      "ccss_to": "2.MD.8",
+      "confidence": "medium"
+    },
+    {
+      "from": "1.MDR.6.2",
+      "to": "2.MDR.6.1",
+      "rule": "topic_continuity",
+      "source": "GA text only (no CCSS Progressions document covers time): 1.MDR.6.2 'Tell and write time in hours and half-hours' -> 2.MDR.6.1 'Tell and write time... to the nearest five minutes.' Same topic (telling time), increasing precision, one grade later.",
+      "ccss_from": "1.MD.3",
+      "ccss_to": "2.MD.7",
+      "confidence": "medium"
+    },
+    {
+      "from": "2.MDR.6.1",
+      "to": "3.MDR.5.2",
+      "rule": "topic_continuity",
+      "source": "GA text only: 2.MDR.6.1 'Tell and write time... to the nearest five minutes' -> 3.MDR.5.2 'Tell and write time to the nearest minute.' Same topic, increasing precision, one grade later.",
+      "ccss_from": "2.MD.7",
+      "ccss_to": "3.MD.1",
+      "confidence": "medium"
+    },
+    {
+      "from": "3.MDR.5.2",
+      "to": "3.MDR.5.3",
+      "rule": "decomposition",
+      "source": "GA text only, within-grade: 3.MDR.5.2 'Tell and write time to the nearest minute' is the reading skill 3.MDR.5.3 'Solve meaningful problems involving elapsed time' requires as a component.",
+      "ccss_from": "3.MD.1",
+      "ccss_to": "3.MD.1",
+      "confidence": "medium"
+    },
+    {
+      "from": "3.MDR.5.3",
+      "to": "4.MDR.6.1",
+      "rule": "topic_continuity",
+      "source": "GA text only: 3.MDR.5.3 'Solve meaningful problems involving elapsed time, including intervals of time to the hour, half hour, and quarter hour' -> 4.MDR.6.1 'Use the four operations to solve problems involving elapsed time to the nearest minute, intervals of time...' Same topic, added operations and precision, one grade later.",
+      "ccss_from": "3.MD.1",
+      "ccss_to": "4.MD.2",
+      "confidence": "medium"
+    },
+    {
+      "_section": "Grades 2-5 MDR -- categorical/graphical-display standard, verbatim-repeated text across grades (K.MDR.7.3 -> 1.MDR.6.4 -> 2.MDR.5.4 already grounded above via DATA_PROG; continuing the same chain into Grades 3-5 where the standard's wording is repeated near-verbatim)."
+    },
+    {
+      "from": "2.MDR.5.4",
+      "to": "3.MDR.5.1",
+      "rule": "topic_continuity",
+      "source": "GA text: 2.MDR.5.4 and 3.MDR.5.1 use near-identical wording ('Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life') -- the same standard repeated one grade later, consistent with DATA_PROG p.7's account of categorical-data work continuing from Grade 2 into Grade 3 scaled graphs.",
+      "ccss_from": "2.MD.10",
+      "ccss_to": "3.MD.3",
+      "confidence": "medium"
+    },
+    {
+      "from": "3.MDR.5.1",
+      "to": "4.MDR.6.2",
+      "rule": "topic_continuity",
+      "source": "GA text: 3.MDR.5.1 and 4.MDR.6.2 use near-identical wording ('Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life') -- the same standard repeated one grade later. No CCSS categorical-data Progressions content extends past Grade 3 (DATA_PROG's own 'Where the Categorical Data Progression is heading' section jumps directly to Grade 8 bivariate data), so this edge is topic-continuity from GA's repeated text, not a CCSS Progressions citation.",
+      "ccss_from": "3.MD.3",
+      "ccss_to": "n/a (GA-specific, no CCSS Grade-4 categorical-data standard)",
+      "confidence": "medium"
+    },
+    {
+      "from": "4.MDR.6.2",
+      "to": "5.MDR.7.2",
+      "rule": "topic_continuity",
+      "source": "GA text: 4.MDR.6.2 and 5.MDR.7.2 use near-identical wording ('Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life') -- the same standard repeated one grade later.",
+      "ccss_from": "n/a (GA-specific)",
+      "ccss_to": "n/a (GA-specific)",
+      "confidence": "medium"
+    },
+    {
+      "_section": "Grades 2-4 MDR -- fraction-based measurement data (line plots), sourced from DATA_PROG (already read in full for this project; Grades 3-5 content mined here for the first time)."
+    },
+    {
+      "from": "2.MDR.5.5",
+      "to": "3.MDR.5.4",
+      "rule": "grade_progression",
+      "source": "DATA_PROG p.10: 'In Grade 3, students are beginning to learn fraction concepts (3.NF)... Grade 3 students also measure lengths using rulers marked with halves and fourths of an inch. They use their developing knowledge of fractions and number lines to extend their work from the previous grade by working with measurement data involving fractional measurement values.'",
+      "ccss_from": "2.MD.6",
+      "ccss_to": "3.MD.4"
+    },
+    {
+      "from": "3.MDR.5.4",
+      "to": "4.MDR.6.3",
+      "rule": "grade_progression",
+      "source": "DATA_PROG p.10 (Grade 3 students measure lengths in fractional units and build the corresponding line plot) and p.11 (Grade 4: 'Grade 4 students learn elements of fraction equivalence and arithmetic...Students can use these skills to solve problems, including problems that arise from analyzing line plots'). GA's 4.MDR.6.3 ('Create dot plots to display a distribution of numerical measurement data') is the CCSS 4.MD.4 line-plot-construction skill this progression describes as building on Grade 3's fractional-unit measuring.",
+      "ccss_from": "3.MD.4",
+      "ccss_to": "4.MD.4"
+    },
+    {
+      "_section": "Grades 2-5 GSR/MDR -- perimeter, area, angle, and volume, sourced from GEOM_MEAS_PROG (Geometric Measurement, K-5, draft 6/23/2012), now read in full (28/28 pages). Earlier work in this file only used its K-2 length-measurement portion (pages 1-12); this batch mines pages 12-28 (Grades 2-5 perimeter/area/angle/volume)."
+    },
+    {
+      "from": "2.NR.3.2",
+      "to": "3.GSR.7.1",
+      "rule": "concept_foundation",
+      "source": "GEOM_MEAS_PROG p.15: 'Grade 2 work in multiplication involves work with rectangular arrays,[2.G.2] and this work is an ideal context in which to simultaneously develop both arithmetical and spatial structuring foundations for later work with area.'",
+      "ccss_from": "2.G.2",
+      "ccss_to": "3.MD.5"
+    },
+    {
+      "from": "2.MDR.5.3",
+      "to": "3.GSR.8.1",
+      "rule": "concept_foundation",
+      "source": "GEOM_MEAS_PROG p.14: 'Second graders also learn to combine and compare lengths using arithmetic operations. That is, they can add two lengths to obtain the length of the whole and subtract one length from another to find the difference in lengths.[2.MD.4,2.MD.5]' -- additive length reasoning is the arithmetic basis for p.16's perimeter-as-sum-of-side-lengths.",
+      "ccss_from": "2.MD.4",
+      "ccss_to": "3.MD.8"
+    },
+    {
+      "from": "3.GSR.7.3",
+      "to": "3.GSR.8.2",
+      "rule": "concept_foundation",
+      "source": "GEOM_MEAS_PROG p.18: 'With strong and distinct concepts of both perimeter and area established, students can work on problems to differentiate their measures... they can find and sketch rectangles with the same perimeter and different areas or with the same area and different perimeters.'",
+      "ccss_from": "3.MD.7",
+      "ccss_to": "3.MD.8"
+    },
+    {
+      "from": "3.GSR.8.1",
+      "to": "3.GSR.8.2",
+      "rule": "concept_foundation",
+      "source": "GEOM_MEAS_PROG p.18: 'With strong and distinct concepts of both perimeter and area established, students can work on problems to differentiate their measures... they can find and sketch rectangles with the same perimeter and different areas or with the same area and different perimeters.'",
+      "ccss_from": "3.MD.8",
+      "ccss_to": "3.MD.8"
+    },
+    {
+      "from": "2.MDR.5.2",
+      "to": "3.MDR.5.5",
+      "rule": "scope_expansion",
+      "source": "GEOM_MEAS_PROG p.3: 'central characteristics of measurement are the same for all of these attributes' (length, area, volume, and explicitly 'nongeometric attributes such as weight, mass, capacity, time'). p.18-19: 'Students in Grade 3 learn to solve a variety of problems involving measurement and such attributes as length and area, liquid volume, mass, and time.[3.MD.1,3.MD.2]' -- same estimate/measure-with-standard-units skill as Grade 2 length, expanded to liquid volume and mass.",
+      "ccss_from": "2.MD.1",
+      "ccss_to": "3.MD.2",
+      "confidence": "medium"
+    },
+    {
+      "from": "3.MDR.5.5",
+      "to": "4.MDR.6.1",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.20: 'Fourth graders learn the relative sizes of measurement units within a system of measurement[4.MD.1] including: length...; volume...; mass...' and p.20: 'students combine competencies from different domains as they solve measurement problems using all four arithmetic operations.[4.MD.2]' -- direct continuation of Grade 3's introduction of liquid volume and mass as measured attributes.",
+      "ccss_from": "3.MD.2",
+      "ccss_to": "4.MD.2"
+    },
+    {
+      "from": "3.GSR.8.1",
+      "to": "4.GSR.8.3",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.22: 'In Grade 4 and beyond, the mental visual images for perimeter and area from Grade 3 can support students in problem solving with these concepts... Students could solve perimeter problems that give the perimeter and the length of one side and ask the length of the adjacent side.'",
+      "ccss_from": "3.MD.8",
+      "ccss_to": "4.MD.3"
+    },
+    {
+      "from": "3.GSR.7.3",
+      "to": "4.GSR.8.3",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.22: 'In Grade 4 and beyond, the mental visual images for perimeter and area from Grade 3 can support students in problem solving with these concepts.[4.MD.3] For example, they might be asked, \"A rectangular garden has as an area of 80 square feet. It is 5 feet wide. How long is the garden?\"'",
+      "ccss_from": "3.MD.7",
+      "ccss_to": "4.MD.3"
+    },
+    {
+      "from": "4.GSR.7.1",
+      "to": "4.GSR.7.2",
+      "rule": "decomposition",
+      "source": "GEOM_MEAS_PROG p.23: 'As with all measureable attributes, students must first recognize the attribute of angle measure, and distinguish it from other attributes... Measuring and then sketching many angles with no horizontal or vertical arms,[4.MD.6] perhaps initially using circular 360-degree protractors, can help students avoid such limited conceptions.'",
+      "ccss_from": "4.G.1",
+      "ccss_to": "4.MD.6"
+    },
+    {
+      "from": "4.GSR.7.1",
+      "to": "4.GSR.8.2",
+      "rule": "concept_foundation",
+      "source": "GEOM_MEAS_PROG p.23 margin: '4.G.2 Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles.' -- classifying by angle properties requires first recognizing angles as a measurable attribute of shapes.",
+      "ccss_from": "4.G.1",
+      "ccss_to": "4.G.2"
+    },
+    {
+      "from": "3.GSR.7.3",
+      "to": "5.GSR.8.3",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.26-27: 'The major emphasis for measurement in Grade 5 is volume. Volume not only introduces a third dimension...but also complexity in the nature of the materials measured.' p.27: 'they understand that volume is a derived attribute that, once a length unit is specified, can be computed as the product of three length measurements or as the product of one area and one length measurement.' The document itself has no Grade 4 area/volume content between Grade 3 area and Grade 5 volume, mirroring Georgia's own standards (no 4.GSR volume sub-standard exists either).",
+      "ccss_from": "3.MD.7",
+      "ccss_to": "5.MD.3"
+    },
+    {
+      "from": "5.GSR.8.3",
+      "to": "5.GSR.8.4",
+      "rule": "decomposition",
+      "source": "GEOM_MEAS_PROG p.27: 'Then, students can learn the formulas V = l x w x h and V = B x h for right rectangular prisms as efficient methods for computing volume, maintaining the connection between these methods and their previous work with computing the number of unit cubes that pack a right rectangular prism.[5.MD.5b]'",
+      "ccss_from": "5.MD.5a",
+      "ccss_to": "5.MD.5b"
+    },
+    {
+      "_section": "Grades 3-5 GSR -- shape classification/quadrilateral hierarchy, sourced from GEOM_PROG (Geometry, K-6), now read in full (21/21 pages). Earlier work in this file only used its K-2 portion (pages 1-11)."
+    },
+    {
+      "from": "2.GSR.7.1",
+      "to": "3.GSR.6.2",
+      "rule": "grade_progression",
+      "source": "GEOM_PROG p.13: 'Students analyze, compare, and classify two-dimensional shapes by their properties[3.G.1]...Because they have built a firm foundation of several shape categories, these categories can be the raw material for thinking about the relationships between classes.'",
+      "ccss_from": "2.G.1",
+      "ccss_to": "3.G.1"
+    },
+    {
+      "from": "3.GSR.6.2",
+      "to": "4.GSR.8.1",
+      "rule": "grade_progression",
+      "source": "GEOM_PROG p.13 (Grade 3 shape-category classification as 'raw material') -> p.15 (Grade 4: 'students develop explicit awareness of and vocabulary for many concepts they have been developing, including points, lines, line segments, rays, angles..., and perpendicular and parallel lines.[4.G.1]').",
+      "ccss_from": "3.G.1",
+      "ccss_to": "4.G.1"
+    },
+    {
+      "from": "4.GSR.8.1",
+      "to": "4.GSR.8.2",
+      "rule": "concept_foundation",
+      "source": "GEOM_PROG p.15: 'Students describe, analyze, compare, and classify two-dimensional shapes by their properties..., including explicit use of angle sizes[4.G.1] and the related geometric properties of perpendicularity and parallelism.[4.G.2] They can identify these properties in two-dimensional figures.'",
+      "ccss_from": "4.G.1",
+      "ccss_to": "4.G.2"
+    },
+    {
+      "from": "4.GSR.8.2",
+      "to": "5.GSR.8.1",
+      "rule": "grade_progression",
+      "source": "GEOM_PROG p.18: 'Students learn to analyze and relate categories of two-dimensional and three-dimensional shapes explicitly based on their properties.[5.G.4] ... Based on analysis of properties, they classify two-dimensional figures in hierarchies.'",
+      "ccss_from": "4.G.2",
+      "ccss_to": "5.G.4"
+    },
+    {
+      "from": "5.GSR.8.1",
+      "to": "5.GSR.8.2",
+      "rule": "decomposition",
+      "source": "GEOM_PROG p.18: '...they classify two-dimensional figures in hierarchies. For example, they conclude that all rectangles are parallelograms, because they are all quadrilaterals with two pairs of opposite, parallel, equal-length sides.[5.G.3] In this way, they relate certain categories of shapes as subclasses of other categories.[5.G.3] This leads to understanding propagation of properties.'",
+      "ccss_from": "5.G.4",
+      "ccss_to": "5.G.3"
+    },
+    {
+      "from": "K.MDR.7.3",
+      "to": "1.MDR.6.4",
+      "rule": "topic_continuity",
+      "source": "GA text: K.MDR.7.3 and 1.MDR.6.4 use near-identical wording ('Ask questions and answer them based on gathered information, observations, and appropriate graphical displays...') -- the same standard repeated one grade later, distinct from the K.MDR.7.2 (classify/count) -> 1.MDR.6.4 edge already grounded via DATA_PROG.",
+      "ccss_from": "n/a (GA-specific)",
+      "ccss_to": "1.MD.4",
+      "confidence": "medium"
+    },
+    {
+      "_section": "Grade 3-5 fractions (NR), re-cited directly against NF_PROG (Number and Operations--Fractions, 3-5, draft 8/12/2011), now read in full (13/13 pages). Previously these edges were cited secondhand via mentions inside OA_PROG at confidence:medium; the internal Grade-3 ordering below is also corrected -- the document's own sequence is unit-fraction concept -> multiple representations (incl. >1, number line) -> equivalence -> comparing, not the compare-then-represent-then-equivalence order previously assumed."
+    },
+    {
+      "from": "2.GSR.7.3",
+      "to": "3.NR.4.1",
+      "rule": "grade_progression",
+      "source": "NF_PROG p.2: 'In Grades 1 and 2, students use fraction language to describe partitions of shapes into equal shares.[2.G.3] In Grade 3 they start to develop the idea of a fraction more formally, building on the idea of partitioning a whole into equal parts.'",
+      "ccss_from": "2.G.3",
+      "ccss_to": "3.NF.1"
+    },
+    {
+      "from": "3.NR.4.1",
+      "to": "3.NR.4.3",
+      "rule": "concept_foundation",
+      "source": "NF_PROG p.2-3: unit fractions are introduced ('Grade 3 students start with unit fractions... Next, students build fractions from unit fractions, seeing the numerator 3 of 3/4 as the quantity you get by putting 3 of the 1/4's together... 5/3 is the quantity you get by combining 5 parts together when the whole is divided into 3 equal parts') directly before p.3's 'The number line and number line diagrams' section, which is where fractions greater than 1 and multiple representations (3.NF.2) are developed.",
+      "ccss_from": "3.NF.1",
+      "ccss_to": "3.NF.2"
+    },
+    {
+      "from": "3.NR.4.3",
+      "to": "3.NR.4.4",
+      "rule": "grade_progression",
+      "source": "NF_PROG p.3: 'Grade 3 students do some preliminary reasoning about equivalent fractions, in preparation for work in Grade 4. As students experiment on number line diagrams they discover that many fractions label the same point on the number line, and are therefore equal; that is, they are equivalent fractions.'",
+      "ccss_from": "3.NF.2",
+      "ccss_to": "3.NF.3ab"
+    },
+    {
+      "from": "3.NR.4.4",
+      "to": "3.NR.4.2",
+      "rule": "concept_foundation",
+      "source": "NF_PROG p.4: 'Comparing fractions. Previously, in Grade 2, students compared lengths using a standard measurement unit.[2.MD.3] In Grade 3 they build on this idea to compare fractions with the same denominator... As with equivalence of fractions, it is important in comparing fractions to make sure that each fraction refers to the same whole.' -- the comparing section directly follows and reuses the equivalence section's same-whole reasoning.",
+      "ccss_from": "3.NF.3ab",
+      "ccss_to": "3.NF.3d"
+    },
+    {
+      "from": "3.NR.4.4",
+      "to": "4.NR.4.1",
+      "rule": "grade_progression",
+      "source": "NF_PROG p.5: 'Grade 4 students learn a fundamental property of equivalent fractions: multiplying the numerator and denominator of a fraction by the same non-zero whole number results in a fraction that represents the same number as the original fraction.' Directly continues Grade 3's preliminary equivalent-fraction reasoning (p.3).",
+      "ccss_from": "3.NF.3ab",
+      "ccss_to": "4.NF.1"
+    },
+    {
+      "from": "4.NR.4.1",
+      "to": "4.NR.4.2",
+      "rule": "concept_foundation",
+      "source": "NF_PROG p.5: 'Grade 4 students use their understanding of equivalent fractions to compare fractions with different numerators and different denominators.[4.NF.2]' The simpler same-numerator/same-denominator comparison case (4.NR.4.2) is the direct precursor GA splits out before the harder different-numerator-and-denominator case (4.NR.4.3).",
+      "ccss_from": "4.NF.1",
+      "ccss_to": "4.NF.2"
+    },
+    {
+      "from": "3.NR.4.2",
+      "to": "4.NR.4.2",
+      "rule": "topic_continuity",
+      "source": "GA text and NF_PROG structure: comparing fractions with the same denominator/numerator (3.NR.4.2, 3.NF.3d, p.4) is the same comparison skill GA continues at Grade 4 (4.NR.4.2) before extending it to different numerators and denominators (4.NR.4.3). The NF_PROG document does not state this specific cross-grade link explicitly, so this edge is topic-continuity from GA's own repeated skill structure, not a direct quote.",
+      "ccss_from": "3.NF.3d",
+      "ccss_to": "4.NF.2",
+      "confidence": "medium"
+    },
+    {
+      "from": "4.NR.4.2",
+      "to": "4.NR.4.3",
+      "rule": "scope_expansion",
+      "source": "NF_PROG p.5: 'Grade 4 students use their understanding of equivalent fractions to compare fractions with different numerators and different denominators.[4.NF.2] For example, to compare 5/12 and 7/8 they rewrite both fractions...' -- the same 4.NF.2 comparing skill, extended from same-numerator-or-denominator to different-numerator-and-denominator.",
+      "ccss_from": "4.NF.2",
+      "ccss_to": "4.NF.2"
+    },
+    {
+      "from": "4.NR.4.4",
+      "to": "4.NR.4.5",
+      "rule": "bloom_progression",
+      "source": "NF_PROG p.6: 'Just as 5 = 1+1+1+1+1, so 5/3 = 1/3+1/3+1/3+1/3+1/3[4.NF.3] because 5/3 is the total length of 5 copies of 1/3. Armed with this insight, students decompose and compose fractions with the same denominator.[4.NF.3c] 7/5+4/5 = (1/5+...+1/5)+(1/5+...+1/5) = (7+4)/5'",
+      "ccss_from": "4.NF.3",
+      "ccss_to": "4.NF.3c"
+    },
+    {
+      "from": "4.NR.4.5",
+      "to": "4.NR.4.6",
+      "rule": "bloom_progression",
+      "source": "NF_PROG p.6-7: after decomposing/composing same-denominator fractions, 'they also subtract fractions with the same denominator' and 'Students also compute sums of whole numbers and fractions...use this method to add mixed numbers with like denominators.'",
+      "ccss_from": "4.NF.3c",
+      "ccss_to": "4.NF.3cd"
+    },
+    {
+      "from": "4.NR.4.6",
+      "to": "5.NR.3.3",
+      "rule": "grade_progression",
+      "source": "NF_PROG p.10: 'In Grade 4, students calculate sums of fractions with different denominators where one denominator is a divisor of the other...Grade 5 students extend this reasoning to situations where it is necessary to re-express both fractions in terms of a new denominator.[5.NF.1]'",
+      "ccss_from": "4.NF.3cd",
+      "ccss_to": "5.NF.1"
+    },
+    {
+      "from": "4.NR.4.6",
+      "to": "5.NR.3.4",
+      "rule": "grade_progression",
+      "source": "NF_PROG p.11: 'In Grade 4 students connected fractions with addition and multiplication, understanding that 5/3 = 1/3+1/3+1/3+1/3+1/3 = 5x1/3...Using this understanding of multiplication by a fraction, students develop the general formula for the product of two fractions.'",
+      "ccss_from": "4.NF.4",
+      "ccss_to": "5.NF.4a"
+    },
+    {
+      "from": "5.NR.3.3",
+      "to": "5.NR.3.4",
+      "rule": "scope_expansion",
+      "source": "NF_PROG p.10-11: addition/subtraction with unlike denominators (5.NF.1, p.10) is presented immediately before multiplying and dividing fractions (p.11): 'In Grade 4 students connected fractions with addition and multiplication...In Grade 5, they connect fractions with division.'",
+      "ccss_from": "5.NF.1",
+      "ccss_to": "5.NF.4a"
+    },
+    {
+      "from": "5.NR.3.4",
+      "to": "5.NR.3.5",
+      "rule": "bloom_progression",
+      "source": "NF_PROG p.13: 'The understanding of multiplication as scaling is an important opportunity for students to reason abstractly (MP2)...Grade 5 work with multiplying by unit fractions...enables students to see that multiplying a quantity by a number smaller than 1 produces a smaller quantity.[5.NF.5b]'",
+      "ccss_from": "5.NF.4a",
+      "ccss_to": "5.NF.5b"
+    },
+    {
+      "from": "5.NR.3.1",
+      "to": "5.NR.3.6",
+      "rule": "concept_foundation",
+      "source": "NF_PROG p.11: 'In Grade 5, they connect fractions with division, understanding that 5\u00f73 = 5/3...They can explain this by working with their understanding of division as equal sharing.[5.NF.3]' directly precedes p.12's division of unit fractions by whole numbers and vice versa (5.NF.7).",
+      "ccss_from": "5.NF.3",
+      "ccss_to": "5.NF.7abc"
+    },
+    {
+      "from": "5.NR.3.2",
+      "to": "5.NR.3.3",
+      "rule": "concept_foundation",
+      "source": "NF_PROG p.10: 'Grade 5 students extend this reasoning to situations where it is necessary to re-express both fractions in terms of a new denominator...In general two fractions can be added by subdividing the unit fractions in one using the denominator of the other.' -- re-expressing fractions with unlike denominators for comparison is the same operation needed to add/subtract them.",
+      "ccss_from": "5.NF (compare)",
+      "ccss_to": "5.NF.1"
+    },
+    {
+      "from": "4.MDR.6.1",
+      "to": "5.MDR.7.3",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.26: 'In Grade 5, students extend their abilities from Grade 4 to express measurements in larger or smaller units within a measurement system.[4.MD.1, 5.MD.1] This is an excellent opportunity to reinforce notions of place value for whole numbers and decimals, and connection between fractions and decimals.'",
+      "ccss_from": "4.MD.1",
+      "ccss_to": "5.MD.1"
+    },
+    {
+      "from": "4.MDR.6.1",
+      "to": "5.MDR.7.4",
+      "rule": "grade_progression",
+      "source": "GEOM_MEAS_PROG p.26: 'In Grade 5, students extend their abilities from Grade 4 to express measurements in larger or smaller units within a measurement system.[4.MD.1, 5.MD.1]' -- same conversion skill extended to the customary system.",
+      "ccss_from": "4.MD.1",
+      "ccss_to": "5.MD.1"
+    },
+    {
+      "from": "2.GSR.7.3",
+      "to": "2.GSR.7.4",
+      "rule": "decomposition",
+      "source": "Both GA sub-standards decompose a single CCSS standard, 2.G.3: 'Partition circles and rectangles into two, three, or four equal shares, describe the shares using the words halves, thirds,...Recognize that equal shares of identical wholes need not have the same shape.' The partitioning skill (2.GSR.7.3) is the literal first clause of 2.G.3; the equal-shares-different-shapes insight (2.GSR.7.4) is its second clause, and presupposes the partitioning is already understood.",
+      "ccss_from": "2.G.3",
+      "ccss_to": "2.G.3"
+    },
+    {
+      "_section": "3.GSR.6.1, 3.GSR.6.3 -- GA introduces this vocabulary one grade ahead of GEOM_PROG's own sequencing (GEOM_PROG places it at Grade 4, via 4.G.1/4.G.3). The edges below reuse the same real quotes already cited for the Grade-4 versions (4.GSR.8.1), applied to GA's Grade-3 placement of the identical content, with the grade-placement difference stated explicitly rather than hidden. This is an acceleration of CCSS's own sequence, not a different dependency claim -- the same 'shape-recognition precedes explicit line/angle vocabulary' relationship holds regardless of which grade GA schedules it at."
+    },
+    {
+      "from": "2.GSR.7.1",
+      "to": "3.GSR.6.1",
+      "rule": "concept_foundation",
+      "source": "GEOM_PROG p.13 (Grade 3: shape-category recognition as 'raw material for thinking about relationships between classes') -> p.15 (Grade 4: 'students develop explicit awareness of and vocabulary for many concepts they have been developing, including points, lines, line segments, rays, angles..., and perpendicular and parallel lines.[4.G.1]'). GEOM_PROG places this vocabulary at Grade 4; GA's 3.GSR.6.1 introduces it one grade earlier. The dependency (informal shape recognition precedes formal line/angle vocabulary) is the same regardless of which grade it is scheduled at; GEOM_PROG does not describe a different or reordered dependency for the accelerated placement.",
+      "ccss_from": "2.G.1",
+      "ccss_to": "4.G.1",
+      "confidence": "medium"
+    },
+    {
+      "from": "2.GSR.7.1",
+      "to": "3.GSR.6.3",
+      "rule": "concept_foundation",
+      "source": "GEOM_PROG p.15-16 (Grade 4): 'Given a half of a figure and a line of symmetry, can you accurately draw the other half to create a symmetric figure?[4.G.3]' -- immediately follows the same Grade-3/4 shape-vocabulary passage cited for 3.GSR.6.1. GEOM_PROG places formal line-of-symmetry identification at Grade 4 (4.G.3); GA's 3.GSR.6.3 introduces it one grade earlier. Same caveat as 3.GSR.6.1: an accelerated placement of the same dependency, not a different one.",
+      "ccss_from": "2.G.1",
+      "ccss_to": "4.G.3",
+      "confidence": "medium"
+    },
+    {
+      "_section": "Remaining NR gaps -- re-mined from OA_PROG (already read) and NBT_PROG (re-fetched and read for this round)."
+    },
+    {
+      "from": "1.NR.2.1",
+      "to": "1.NR.2.2",
+      "rule": "scope_expansion",
+      "source": "OA_PROG p.14-15: after establishing basic addition/subtraction strategies, 'there are a variety of methods to change to an easier problem... A known addition or subtraction can be used to solve a related addition or subtraction by decomposing one addend... 8+6=8+2+4=10+4=14.[1.OA.6]' -- this is the make-a-ten/related-problem strategy-development process 1.NR.2.2 describes, extending 1.NR.2.1's general strategy use.",
+      "ccss_from": "1.OA.6",
+      "ccss_to": "1.OA.6"
+    },
+    {
+      "from": "1.NR.2.1",
+      "to": "1.NR.2.6",
+      "rule": "concept_foundation",
+      "source": "OA_PROG p.13: 'Students next gain experience with the more difficult and more \"algebraic\" problem subtypes in which a situation equation does not immediately lead to the answer. For example, a student analyzing a Take From problem with Change Unknown might write the situation equation 14-[]=8... the student can write a related equation called a solution equation.[1.OA.8]'",
+      "ccss_from": "1.OA.1",
+      "ccss_to": "1.OA.8"
+    },
+    {
+      "from": "K.NR.3.1",
+      "to": "1.NR.1.1",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.5-6: 'By working with teen numbers in this way in Kindergarten, students gain a foundation for viewing 10 ones as a new unit called a ten in Grade 1.' p.6: 'Grade 1 students take the important step of viewing ten ones as a unit called a \"ten\"... They learn to view the decade numbers 10,...,90... [1.NBT.2c]' directly precedes the extended count sequence to 120.[1.NBT.1]",
+      "ccss_from": "K.NBT.1",
+      "ccss_to": "1.NBT.1"
+    },
+    {
+      "from": "1.NR.1.1",
+      "to": "2.NR.1.2",
+      "rule": "grade_progression",
+      "source": "NBT_PROG p.6 (Grade 1 extends the counting sequence, viewing decade numbers as tens[1.NBT.1-3]) -> p.8 (Grade 2: 'At Grade 2, students extend their base-ten understanding to hundreds... students begin to work towards multiplication when they skip count by 5s, by 10s, and by 100s.[2.NBT.2]')",
+      "ccss_from": "1.NBT.1",
+      "ccss_to": "2.NBT.2"
+    },
+    {
+      "from": "1.NR.5.2",
+      "to": "2.NR.2.2",
+      "rule": "scope_expansion",
+      "source": "NBT_PROG p.7: 'First graders also engage in mental calculation, such as mentally finding 10 more or 10 less than a given two-digit number without having to count by ones.[1.NBT.5]' -> p.8: 'At Grade 2, students extend their base-ten understanding to hundreds. They now add and subtract within 1000, with composing and decomposing...' -- the same mental ten-more/ten-less skill extended to hundreds and three-digit numbers.",
+      "ccss_from": "1.NBT.5",
+      "ccss_to": "2.NBT.8",
+      "confidence": "medium"
+    }
+  ]
+}

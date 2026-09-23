@@ -1,0 +1,36 @@
+{
+  "_id": "669dfdd261278f96d8ddaaf3",
+  "id": "allenai/achieve-the-core",
+  "author": "allenai",
+  "sha": "a3bc393b31b5cb0f6d3da3077c02d170fff8d5fa",
+  "lastModified": "2024-11-13T18:53:22.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "language:en",
+    "license:odc-by",
+    "size_categories:n<1K",
+    "arxiv:2408.04226",
+    "region:us",
+    "education",
+    "math"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for Achieve the Core\n\t\n\n\n\nThis repository includes Common Core math standards, their descriptions, and metadata obtained from Achieve the Core.\nExample of a math standard: \n{\n  \"id\": \"K.CC.B.4\",\n  \"description\": \"Understand the relationship between numbers and quantities; connect counting to cardinality.\",\n  \"source\": \"Achieve the Core\",\n  \"level\": \"Standard\",\n  \"cluster_type\": \"major cluster\",\n  \"aspects\": [],\n  \"parent\": \"K.CC.B\",\n  \"children\": [\"K.CC.B.4c\"… See the full description on the dataset page: https://huggingface.co/datasets/allenai/achieve-the-core.",
+  "downloads": 114,
+  "likes": 4,
+  "cardData": {
+    "license": "odc-by",
+    "language": ["en"],
+    "tags": ["education", "math"],
+    "size_categories": ["n<1K"]
+  },
+  "siblings": [
+    { "rfilename": ".gitattributes" },
+    { "rfilename": "README.md" },
+    { "rfilename": "domain_groups.json" },
+    { "rfilename": "standards.jsonl" }
+  ],
+  "createdAt": "2024-07-22T06:36:02.000Z",
+  "usedStorage": 0
+}
