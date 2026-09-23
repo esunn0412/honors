@@ -25,7 +25,7 @@ state_ccss_mapping/
     ga/
       georgia_math_0.json ... _5.json           GA's own K-5 standards.
       georgia_math_guidance_0.json ... _5.json  GA's per-standard teaching guidance.
-      mapping_final.json      THE adopted GA <-> CCSS mapping (150 codes, 8 corrections applied).
+      mapping_final.json      THE adopted GA <-> CCSS mapping (150 codes, 11 corrections applied).
       mapping_llm.json        The script's original, unedited output.
       human_review.json       Every reviewed code: original output, verdict, correction.
       verification_report.json
@@ -83,7 +83,7 @@ No retrieval/embedding pre-filter: only ~175 CCSS codes total, so the full list 
 
 ## Error type definitions
 
-Used both for the 8 GA corrections below and for the hierarchical-vs-adopted comparison. 5 categories, applied in this order — **every disagreement gets exactly one**, never more than one:
+Used both for the 11 GA corrections below and for the hierarchical-vs-adopted comparison. 5 categories, applied in this order — **every disagreement gets exactly one**, never more than one:
 
 | Step | Check | Category if matched |
 |---|---|---|
@@ -97,7 +97,7 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 
 ## Review results — GA
 
-**8 of 150 codes corrected (142/150, 95%, needed no change).** Full trail: `states/ga/human_review.json`.
+**11 of 150 codes corrected (139/150, 93%, needed no change).** Full trail: `states/ga/human_review.json`.
 
 **Relationship-type breakdown (`states/ga/mapping_final.json`, 150 codes):**
 
@@ -106,11 +106,11 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 | `exact` | 56 | 37.3% |
 | `merge` | 32 | 21.3% |
 | `split` | 18 | 12.0% |
+| `none` | 14 | 9.3% |
 | `state_superset` | 12 | 8.0% |
-| `none` | 12 | 8.0% |
 | `different_grade` | 7 | 4.7% |
 | `state_subset` | 7 | 4.7% |
-| `partial` | 6 | 4.0% |
+| `partial` | 4 | 2.7% |
 
 **Corrections by error type:**
 
@@ -118,6 +118,7 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 |---|---|---|
 | Invalid split | 3 | `K.GSR.8.2`, `3.GSR.7.2`, `3.GSR.7.3` — claimed sibling never actually cited the same CCSS code |
 | Code-set boundary mismatch | 3 | `3.NR.4.1`, `4.GSR.7.1`, `4.GSR.8.2` — right idea, code set incomplete |
+| Borrowed thematic label | 3 | `3.MDR.5.1`, `4.MDR.6.2`, `5.MDR.7.1` — cited a CCSS code a same-grade sibling already confidently owns (see below) |
 | Split-status disagreement | 1 | `3.MDR.5.4` — script said `split`, correct answer is `exact` |
 | Scope/label judgment | 1 | `3.GSR.6.2` — same code, `exact` vs. `state_superset` |
 
@@ -125,11 +126,12 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 1. Compare the flat script's 150 classifications against an earlier hand-built classification of the same codes.
 2. Where they disagreed (25 codes): lay both side by side, re-examine against the actual standard text, assign a verdict — `error` (script is wrong, fix it) or `okay` (defensible either way, or script was already right). → 7 errors, 18 okay.
 3. `verify_mapping.py`'s split-integrity check catches 1 more bug (`K.GSR.8.2`) invisible to step 2, because the hand-built classification it was compared against shared the identical bug.
-4. **Total: 8 corrections.**
+4. `verify_mapping.py`'s "borrowed thematic label" lint flags 3 more (`3.MDR.5.1`, `4.MDR.6.2`, `5.MDR.7.1`) — each `partial`, citing a CCSS code a same-grade sibling already confidently owns. Resolved individually, not as a blanket fix:
+   - `3.MDR.5.1` cited two codes; only one was actually borrowed. Dropped it, kept the other, stayed `partial`.
+   - `4.MDR.6.2` and `5.MDR.7.1` had no other CCSS code left once the borrowed one was ruled out → genuine gaps, `none`.
+5. **Total: 11 corrections.**
 
-There's no independently-verified "gold" mapping for GA — the thesis author is the only reviewer. This process checks that every classification makes sense on its own terms, not that it matches ground truth.
-
-**Still open (not a correction, a lint):** `3.MDR.5.1`, `4.MDR.6.2`, `5.MDR.7.1` are each `partial` while citing a CCSS code another entry already confidently claims at the same grade.
+There's no independently-verified "gold" mapping for GA — the thesis author is the only reviewer. This process checks that every classification makes sense on its own terms, not that it matches ground truth. `verify_mapping.py` now reports **clean: true** — zero open lint flags.
 
 ## Review results — VA
 
@@ -205,7 +207,6 @@ Same total per-type usage overall, but shifted heavily toward `state_superset`/`
 
 - Get an API key and run `map_state_to_ccss.py` for real, instead of a manual session.
 - Publish the hierarchical method's run outputs + full error analysis (currently local-only).
-- Resolve the `3.MDR.5.1`/`4.MDR.6.2`/`5.MDR.7.1` lint flag — each is `partial`, citing a CCSS code a same-grade sibling already confidently owns (`3.MDR.5.4`, `4.MDR.6.3`, `5.MDR.7.3`/`5.MDR.7.4`); per the taxonomy's own rule this pattern is almost always `none`, not `partial` — same shape as the `5.MDR.7.2` fix, just not yet reviewed.
 
 ## Adding a new state
 

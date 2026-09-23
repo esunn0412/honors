@@ -1,70 +1,22 @@
 {
   "totals": {
     "state_leaf_count": 150,
-    "state_mapped_to_at_least_one_ccss": 138,
-    "state_genuine_gap": 12,
-    "ccss_referenced": 149,
-    "ccss_unmapped": 26,
+    "state_mapped_to_at_least_one_ccss": 136,
+    "state_genuine_gap": 14,
+    "ccss_referenced": 152,
+    "ccss_unmapped": 23,
     "by_relationship_type": {
-      "exact": 57,
+      "exact": 56,
       "state_superset": 12,
-      "none": 12,
-      "merge": 28,
-      "split": 22,
-      "partial": 6,
-      "different_grade": 7,
-      "state_subset": 6
+      "none": 14,
+      "merge": 32,
+      "split": 18,
+      "state_subset": 7,
+      "partial": 4,
+      "different_grade": 7
     },
-    "flagged_for_review": 24
+    "flagged_for_review": 25
   },
-  "issues": [
-    {
-      "type": "split_relationship_has_no_sibling",
-      "entries": [
-        {
-          "state_code": "K.GSR.8.2",
-          "ccss_code": "K.G.1"
-        },
-        {
-          "state_code": "3.GSR.7.2",
-          "ccss_code": "3.MD.7a"
-        },
-        {
-          "state_code": "3.GSR.7.3",
-          "ccss_code": "3.MD.7b"
-        }
-      ]
-    },
-    {
-      "type": "possible_borrowed_thematic_label",
-      "entries": [
-        {
-          "state_code": "3.MDR.5.1",
-          "relationship": "partial",
-          "ccss_code": "3.MD.4",
-          "already_matched_at_same_grade_by": [
-            "3.MDR.5.4"
-          ]
-        },
-        {
-          "state_code": "4.MDR.6.2",
-          "relationship": "partial",
-          "ccss_code": "4.MD.4",
-          "already_matched_at_same_grade_by": [
-            "4.MDR.6.3"
-          ]
-        },
-        {
-          "state_code": "5.MDR.7.1",
-          "relationship": "partial",
-          "ccss_code": "5.MD.1",
-          "already_matched_at_same_grade_by": [
-            "5.MDR.7.3",
-            "5.MDR.7.4"
-          ]
-        }
-      ]
-    }
-  ],
-  "clean": false
+  "issues": [],
+  "clean": true
 }
