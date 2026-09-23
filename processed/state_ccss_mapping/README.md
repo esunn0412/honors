@@ -72,14 +72,29 @@ No retrieval/embedding pre-filter: only ~175 CCSS codes total, so the full list 
 | `partial` | Related but narrower/different; lower confidence. |
 | `none` | No CCSS match at any grade — a genuine gap. |
 
-**Two rules `verify_mapping.py` enforces automatically:**
+**Three checks `verify_mapping.py` enforces automatically:**
 
 | Rule | What it checks | What it catches |
 |---|---|---|
 | Cardinality-first | `state_superset`/`state_subset` only ever cite exactly 1 CCSS code | A 2+-code entry mislabeled as superset/subset instead of `merge`/`split` |
 | Split-integrity | A `split` entry's claimed sibling code actually exists and cites the same CCSS code | 3 real bugs in the flat run's raw output — see below |
+| Borrowed thematic label | A `partial`/`different_grade` entry's cited CCSS code is *also* already claimed, confidently, by a different entry at the same grade | 3 more real bugs — see below |
 
 `needs_review` is `true` iff relationship is `partial`, `state_subset`, or `none` (the three low-confidence/gap types).
+
+Running `map_state_to_ccss.py` or `map_state_to_ccss_hierarchical.py` runs all three checks automatically at the end: `verification_report.json` always gets written, but if anything is flagged, the script **also prints every issue to stderr and exits with status 1** — a run isn't silently "successful" just because the API calls didn't error.
+
+### The "borrowed thematic label" lint, with real examples
+
+The idea: a low-confidence (`partial`) entry that cites a CCSS code is only a real match if nothing else already owns that code more confidently at the same grade. If some other entry already claims it `exact`/`merge`/`split`/etc., the `partial` entry probably just grabbed the nearest topically-related code because its own GA text was vague — not because it's a genuine match. Three GA codes tripped this, each resolved individually against the actual standard text (not a blanket fix):
+
+| Code | GA text (paraphrased) | Was cited | Already confidently owned by | Fix |
+|---|---|---|---|---|
+| `3.MDR.5.1` | Ask questions from graphical displays | `3.MD.3`, `3.MD.4` | `3.MD.4` → `3.MDR.5.4` (ruler measurement, unrelated topic) | Dropped `3.MD.4`; kept `3.MD.3` (unclaimed elsewhere, a real match); stayed `partial` |
+| `4.MDR.6.2` | Ask questions from graphical displays | `4.MD.4` | `4.MD.4` → `4.MDR.6.3` (dot plots) | No CCSS code left once the borrowed one was ruled out → `none` (genuine gap) |
+| `5.MDR.7.1` | Explore problems with different measurement units | `5.MD.1` | `5.MD.1` → `5.MDR.7.3` + `5.MDR.7.4` (metric + customary conversions, jointly covering all of it) | Same — nothing left to attach to → `none` (genuine gap) |
+
+`3.MDR.5.1` and `4.MDR.6.2` are two different grades of the *same* recurring GA sentence ("ask questions and answer them... graphical displays..."), which is why they hit the same pattern; `5.MDR.7.1` is a different, unrelated GA standard that happened to trip the identical check on a different CCSS code.
 
 ## Error type definitions
 

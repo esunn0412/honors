@@ -194,6 +194,10 @@ def main():
     json.dump(report, open(report_path, "w"), indent=2)
     print(f"Wrote {report_path}")
     print(json.dumps(report["totals"], indent=2))
+    if not report["clean"]:
+        print(f"\n{len(report['issues'])} issue(s) found -- see {report_path} for full detail:", file=sys.stderr)
+        print(json.dumps(report["issues"], indent=2), file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
