@@ -148,6 +148,66 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 
 There's no independently-verified "gold" mapping for GA — the thesis author is the only reviewer. This process checks that every classification makes sense on its own terms, not that it matches ground truth. `verify_mapping.py` now reports **clean: true** — zero open lint flags.
 
+### Coverage loss: how much of each standard set isn't matched
+
+`mapping_final.json` is indexed by GA code — so "coverage" is actually two
+different questions that are easy to conflate:
+
+| direction | denominator | not matched | % |
+|---|---|---|---|
+| GA → CCSS (GA code has no CCSS equivalent, `relationship: none`) | 150 GA codes | 14 | **9.3%** |
+| CCSS → GA (no GA code cites this CCSS code, at any granularity) | 191 CCSS K-5 leaf codes | 39 | **20.4%** |
+| ...of those 39, a parent/child granularity artifact (bare parent uncited, but a lettered child of it *is* cited — e.g. `1.NBT.2` vs. `1.NBT.2a/b/c`) | 191 | 15 | 7.9% |
+| ...of those 39, genuine gaps (uncited at any granularity) | 191 | **24** | **12.6%** |
+
+The CCSS-side number is structurally larger, and that's expected, not a
+quality problem: this mapping was built by finding each of GA's 150 codes
+its single best CCSS anchor, not by working through the CCSS list looking
+for a GA match for every code. A CCSS code can go uncited simply because no
+GA code happened to need it as its *closest* match — even when GA's
+curriculum functionally covers that content elsewhere. `3.OA.1`/`3.OA.2`
+(the base definitions of multiplication/division) are a likely example of
+this: GA surely teaches the underlying ideas, they just weren't any single
+GA code's best/closest anchor.
+
+**What kind of content is lost on each side:**
+
+GA's 14 uncited codes, by content type:
+
+| type | count | codes |
+|---|---|---|
+| Patterns (PAR domain — repeating/growing/shrinking patterns, equal-sign reasoning) | 7 | `K.PAR.6.1`, `K.PAR.6.2`, `1.PAR.3.1`, `1.PAR.3.2`, `2.PAR.4.1`, `2.PAR.4.2`, `3.PAR.3.4` |
+| Open-ended data inquiry ("ask and answer questions from gathered information") | 3 | `K.MDR.7.3`, `4.MDR.6.2`, `5.MDR.7.2` |
+| Money | 2 | `K.NR.1.4`, `1.MDR.6.3` |
+| Measurement construction/units (building instruments, realistic multi-unit problems) | 2 | `2.MDR.5.1`, `5.MDR.7.1` |
+
+CCSS's 24 genuinely-uncited codes, by domain:
+
+| domain | count | codes |
+|---|---|---|
+| MD (Measurement & Data) | 9 | `2.MD.2`, `2.MD.5`, `3.MD.5a`, `4.MD.7`, `5.MD.2`, `5.MD.3`, `5.MD.3a`, `5.MD.3b`, `5.MD.5c` |
+| NF (Number & Operations—Fractions) | 5 | `3.NF.3a`, `4.NF.3a`, `4.NF.4b`, `4.NF.4c`, `5.NF.4b` |
+| G (Geometry) | 4 | `2.G.2`, `3.G.2`, `K.G.2`, `K.G.3` |
+| OA (Operations & Algebraic Thinking) | 3 | `1.OA.5`, `3.OA.1`, `3.OA.2` |
+| CC (Counting & Cardinality) | 2 | `K.CC.4a`, `K.CC.7` |
+| NBT (Number & Operations in Base Ten) | 1 | `2.NBT.9` |
+
+MD and NF carry most of the CCSS-side gap — largely component sub-parts
+(volume's `5.MD.3a`/`3b`, area's `3.MD.5a`, fraction sub-clauses like
+`4.NF.4b/c`) rather than whole standards, consistent with the granularity
+point above: GA typically cites the parent or a sibling sub-part instead of
+the exact lettered piece.
+
+**Discussion, for the thesis writeup:** the 9.3% GA-side figure is the more
+load-bearing number, since it identifies content Georgia teaches that has
+*no* CCSS Progressions document to ground prerequisite edges against at all
+— exactly the `provenance: ga_native` set called out in
+`../progression_mapping/README.md`'s stage 2 plan. The 20.4%/12.6% CCSS-side
+figures are a property of this mapping's GA-anchored construction method
+more than a claim about GA's curricular coverage, and shouldn't be read as
+"CCSS content Georgia doesn't teach" without checking each code individually
+first.
+
 ## Review results — VA
 
 21 distinct VA SOL codes (not Virginia's full grade 3-5 set — only what EDUMath's crosswalk happens to cite). Gold here **is** independently verified: EDUMath's crosswalk was built by a student, checked by an educator (Christ et al., `github.com/bryanchrist/EDUMATH`).
