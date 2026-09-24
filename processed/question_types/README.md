@@ -168,7 +168,9 @@ not the Diagnostic test.
   These PDFs do contain text.
   - **1,176 numbered problems**, with their pictures cropped from the student packet.
   - **Answers** come from Curriculum Associates' free teacher packets, which are the same
-    pages with answers printed in blue. 1,098 problems have a written answer; the rest are
+    pages with answers printed in blue. Student and teacher packets for every grade are
+    linked from the [At-Home Resources: Mathematics](https://www.curriculumassociates.com/summer-learning-support/at-home-resources-mathematics)
+    page. 1,098 problems have a written answer; the rest are
     worked examples or have answers that are drawn (circling, shading).
 - **Assigned Common Core standards.** i-Ready prints none, so I chose them from the content
   (i-Ready is built on Common Core). They're marked `standard_source: "assigned"`; you can
@@ -467,18 +469,36 @@ local copies are in `raw/`.
 
 ### Georgia Milestones (grades 3-5)
 
-The official versions live on GaDOE's portal
-([gadoe.org › Georgia Milestones](https://gadoe.org/assessment-accountability/georgia-milestones/)),
-which only works in a browser. The same GaDOE PDFs are re-hosted by school districts:
+**Why these files, and why they're from 2016-2017.**
+
+- **GaDOE's current guides aren't downloadable.** The Milestones page
+  ([gadoe.org › Georgia Milestones](https://gadoe.org/assessment-accountability/georgia-milestones/))
+  sends you to GaDOE's "Inspire" portal. That portal is a JavaScript app that works only in a
+  browser, and its file server (`lor2.gadoe.org`) returned a web page instead of the PDF when
+  I tried to download one directly.
+- **The current practice tests are interactive only.** They run in the DRC test player
+  ([gaexperienceonline.com](https://www.gaexperienceonline.com/)), with no PDF to download.
+- **The downloadable copies are older.** The copies schools post publicly are the 2016-2017
+  GaDOE editions. They were written for the old Georgia standards, before the 2023 math
+  standards.
+- **Newer copies may exist on some school's site;** I didn't find any.
+
+**Where each file came from:**
+
+- **Study guides:** posted by **Fair Oaks Elementary (Cobb County)** on its
+  [Parent Resources page](https://www.cobbk12.org/fairoaks/parent-resources). The page links
+  to `media.cobbk12.org/…/fgg/2411/Grade N Milestone Study Guide-1.pdf`; I downloaded the
+  same files from the Cobb storage mirror (`sbcobbstor.blob.core.windows.net`, same path).
+- **Assessment guides:** other Cobb and DeKalb school file servers, found by web search.
 
 | Document | Grade | Year | Link | Local file |
 |---|---|---|---|---|
-| EOG Study/Resource Guide | 3 | 2017 | [PDF (Cobb County Schools)](https://sbcobbstor.blob.core.windows.net/media/WWWCobb/fgg/2411/Grade%203%20Milestone%20Study%20Guide-1.pdf) | `raw/milestones/cobb_g3_study_guide.pdf` |
-| EOG Study/Resource Guide | 4 | 2017 | [PDF (Cobb County Schools)](https://sbcobbstor.blob.core.windows.net/media/WWWCobb/fgg/2411/Grade%204%20Milestone%20Study%20Guide-1.pdf) | `raw/milestones/cobb_g4_study_guide.pdf` |
-| EOG Study/Resource Guide | 5 | 2017 | [PDF (Cobb County Schools)](https://sbcobbstor.blob.core.windows.net/media/WWWCobb/fgg/2411/Grade%205%20Milestone%20Study%20Guide-1.pdf) | `raw/milestones/cobb_g5_study_guide.pdf` |
+| EOG Study/Resource Guide | 3 | 2017 | [PDF (Fair Oaks ES, Cobb)](https://sbcobbstor.blob.core.windows.net/media/WWWCobb/fgg/2411/Grade%203%20Milestone%20Study%20Guide-1.pdf) | `raw/milestones/cobb_g3_study_guide.pdf` |
+| EOG Study/Resource Guide | 4 | 2017 | [PDF (Fair Oaks ES, Cobb)](https://sbcobbstor.blob.core.windows.net/media/WWWCobb/fgg/2411/Grade%204%20Milestone%20Study%20Guide-1.pdf) | `raw/milestones/cobb_g4_study_guide.pdf` |
+| EOG Study/Resource Guide | 5 | 2017 | [PDF (Fair Oaks ES, Cobb)](https://sbcobbstor.blob.core.windows.net/media/WWWCobb/fgg/2411/Grade%205%20Milestone%20Study%20Guide-1.pdf) | `raw/milestones/cobb_g5_study_guide.pdf` |
 | EOG Assessment Guide | 3 | 2016 | [PDF (DeKalb County, Cedar Grove ES)](https://cedargrovees.dekalb.k12.ga.us/Downloads/Grade%203%20Assessment%20Guide.pdf) | `raw/milestones/dekalb_g3_assessment_guide.pdf` |
-| EOG Assessment Guide | 4 | 2017 | [PDF (Cobb County Schools)](https://media.cobbk12.org/media/WWWCobb/frf/3552/Grade-4_Assessment%20Guide.pdf) | `raw/milestones/cobb_g4_assessment_guide.pdf` |
-| EOG Assessment Guide | 5 | 2017 | [PDF (Cobb County Schools)](https://media.cobbk12.org/media/WWWCobb/frf/3552/Grade-5%20Assessment%20Guide.pdf) | `raw/milestones/cobb_g5_assessment_guide.pdf` |
+| EOG Assessment Guide | 4 | 2017 | [PDF (Cobb County school file server)](https://media.cobbk12.org/media/WWWCobb/frf/3552/Grade-4_Assessment%20Guide.pdf) | `raw/milestones/cobb_g4_assessment_guide.pdf` |
+| EOG Assessment Guide | 5 | 2017 | [PDF (Cobb County school file server)](https://media.cobbk12.org/media/WWWCobb/frf/3552/Grade-5%20Assessment%20Guide.pdf) | `raw/milestones/cobb_g5_assessment_guide.pdf` |
 | Experience Online user guide (how to open the *current* practice tests) | 3-8 | 2023-24 | [PDF (DRC)](http://assets.drcedirect.com/States/GA/Experience/UserGuide.pdf) | `raw/milestones/experience_online_user_guide_2023-24.pdf` |
 
 Current online practice tests: [gaexperienceonline.com](https://www.gaexperienceonline.com/)
@@ -491,12 +511,19 @@ Current online practice tests: [gaexperienceonline.com](https://www.gaexperience
 | Diagnostic sample items page (starting point) | [curriculumassociates.com › Diagnostic sample items](https://www.curriculumassociates.com/reviews/assessment/diagnostic-sample-items) | — |
 | "Sample Items: Item Types" | [PDF](https://cdn.bfldr.com/LS6J0F7/at/2r35hjbf2vjnn4xbvbtwmvw/Sample_Items_Item_Types_1.pdf) | `raw/iready/iready_item_types.pdf` |
 | "Sample Items: Math Tools" | [PDF](https://cdn.bfldr.com/LS6J0F7/at/g5ppsbkw934jqt3wtqsgb/Sample_Items_Math_Tools.pdf) | `raw/iready/iready_math_tools.pdf` |
-| At-Home Activity Packet, Kindergarten (2020) | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-k-2020.pdf) | `raw/iready/iready_athome_practice_grade_k.pdf` |
-| At-Home Activity Packet, Grade 1 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-1-2020.pdf) | `raw/iready/iready_athome_practice_grade_1.pdf` |
-| At-Home Activity Packet, Grade 2 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-2-2020.pdf) | `raw/iready/iready_athome_practice_grade_2.pdf` |
-| At-Home Activity Packet, Grade 3 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-3-2020.pdf) | `raw/iready/iready_athome_practice_grade_3.pdf` |
-| At-Home Activity Packet, Grade 4 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-4-2020.pdf) | `raw/iready/iready_athome_practice_grade_4.pdf` |
-| At-Home Activity Packet, Grade 5 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-5-2020.pdf) | `raw/iready/iready_athome_practice_grade_5.pdf` |
+| **At-Home Activity Packets, all grades: student and teacher (answer-key) versions** | [curriculumassociates.com › At-Home Resources: Mathematics](https://www.curriculumassociates.com/summer-learning-support/at-home-resources-mathematics) (the source page; every packet link below is on it) | — |
+| Student packet, Kindergarten (2020) | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-k-2020.pdf) | `raw/iready/iready_athome_practice_grade_k.pdf` |
+| Student packet, Grade 1 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-1-2020.pdf) | `raw/iready/iready_athome_practice_grade_1.pdf` |
+| Student packet, Grade 2 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-2-2020.pdf) | `raw/iready/iready_athome_practice_grade_2.pdf` |
+| Student packet, Grade 3 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-3-2020.pdf) | `raw/iready/iready_athome_practice_grade_3.pdf` |
+| Student packet, Grade 4 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-4-2020.pdf) | `raw/iready/iready_athome_practice_grade_4.pdf` |
+| Student packet, Grade 5 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-student-math-grade-5-2020.pdf) | `raw/iready/iready_athome_practice_grade_5.pdf` |
+| Teacher packet (answers in blue), Kindergarten | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-teacher-math-grade-k-2020.pdf) | `raw/iready/iready_athome_teacher_grade_k.pdf` |
+| Teacher packet (answers in blue), Grade 1 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-teacher-math-grade-1-2020.pdf) | `raw/iready/iready_athome_teacher_grade_1.pdf` |
+| Teacher packet (answers in blue), Grade 2 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-teacher-math-grade-2-2020.pdf) | `raw/iready/iready_athome_teacher_grade_2.pdf` |
+| Teacher packet (answers in blue), Grade 3 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-teacher-math-grade-3-2020.pdf) | `raw/iready/iready_athome_teacher_grade_3.pdf` |
+| Teacher packet (answers in blue), Grade 4 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-teacher-math-grade-4-2020.pdf) | `raw/iready/iready_athome_teacher_grade_4.pdf` |
+| Teacher packet (answers in blue), Grade 5 | [PDF](https://capubstore.blob.core.windows.net/athomepdfs/iready-at-home-activity-packets-teacher-math-grade-5-2020.pdf) | `raw/iready/iready_athome_teacher_grade_5.pdf` |
 
 ### MathFish
 
