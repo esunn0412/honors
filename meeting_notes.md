@@ -10,9 +10,7 @@ mapping, progression mapping, and question types.
 | Mapping stats: how much mapped, what's unmapped, how inferred, numbers with zero ambiguity (Sep 1) | **Done.** See §1 |
 | Can the progression be implied from the mapping? Skill mapping first, then progression (Sep 1) | **Partly.** Stage 1 (CCSS progressions) done; stage 2 (translate to GA) designed, not coded. See §2 |
 | Evaluate whether the progression mapping is correct (Sep 1) | **Partly.** Cross-checked against Achieve the Core; no evaluation against student data yet |
-| Kindergarten not too necessary (Sep 1) | Noted. K is still included in the data, but can be dropped from any analysis |
 | Run the EDUMath-style mapping for Virginia and compare (Sep 15) | **Done** on the 21 VA codes EDUMath cites: 19/21 agree. See §1 |
-| Email EDUMath authors if their mapping method isn't in the paper (Sep 15) | Not needed so far: their crosswalk is in the repo. Their *method* isn't described in detail (open question) |
 | Error analysis of frequent LLM mapping errors (Sep 15) | **Done.** 5-category error taxonomy. See §1 |
 | Conclude the mapping with full verification (Sep 15) | **Done** for GA: every non-trivial code reviewed by hand; `verify_mapping.py` reports clean |
 | Question-type list per grade from i-Ready and Milestones; categorize; multimodal categories (Sep 15) | **Done.** See §3 |
