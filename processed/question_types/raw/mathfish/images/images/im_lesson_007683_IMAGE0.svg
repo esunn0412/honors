@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="234pt" height="90pt" viewBox="0 0 234 90">
+<g enable-background="new">
+<g>
+<clipPath id="cp0">
+<path transform="matrix(.0019684875,0,0,.001968504,0,0)" d="M 0 0 L 118872 0 L 118872 45720 L 0 45720 L 0 0 Z "/>
+</clipPath>
+<g clip-path="url(#cp0)">
+<path transform="matrix(.0019684875,0,0,.001968504,0,0)" d="M 0 0 L 118872 0 L 118872 45720 L 0 45720 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.0019684875,0,0,.001968504,0,0)" d="M 5902 41108 L 5902 4532 L 42478 41108 Z " fill="#ffd791" fill-rule="evenodd"/>
+<path transform="matrix(.0019684875,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 5902 41108 L 5902 4532 L 42478 41108 Z "/>
+<path transform="matrix(.0019684875,0,0,.001968504,0,0)" d="M 64811.22 4612.192 L 83099.22 4612.192 L 83099.22 41188.19 L 64811.22 41188.19 Z " fill="#ffd791" fill-rule="evenodd"/>
+<path transform="matrix(.0019684875,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 64811.22 4612.192 L 83099.22 4612.192 L 83099.22 41188.19 L 64811.22 41188.19 Z "/>
+</g>
+</g>
+</g>
+</svg>

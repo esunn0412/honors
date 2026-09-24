@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="144pt" height="180pt" viewBox="0 0 144 180">
+<g enable-background="new">
+<g>
+<clipPath id="cp0">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 73152 0 L 73152 91440 L 0 91440 L 0 0 Z "/>
+</clipPath>
+<g clip-path="url(#cp0)">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 73152 0 L 73152 91440 L 0 91440 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 68587.07 53697.416 L 28171.067 40533.416 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="1143" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 64862.5 52484.275 L 28171.067 40533.416 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 64862.5 52484.275 L 63242.21 53308.39 L 66998.269 53179.92 L 64038.384 50863.986 Z " fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="1143" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 64862.5 52484.275 L 63242.21 53308.39 L 66998.269 53179.92 L 64038.384 50863.986 Z "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 7850.466 7676.9885 L 7850.466 83600.988 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="1143" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 7850.466 11594.148 L 7850.466 83600.988 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 7850.466 11594.148 L 9135.865 12879.547 L 7850.466 9347.942 L 6565.067 12879.547 Z " fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="1143" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 7850.466 11594.148 L 9135.865 12879.547 L 7850.466 9347.942 L 6565.067 12879.547 Z "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 7850.466 83122.378 L 28658.465 40558.376 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="1143" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 7850.466 83122.378 L 28658.465 40558.376 "/>
+</g>
+</g>
+</g>
+</svg>

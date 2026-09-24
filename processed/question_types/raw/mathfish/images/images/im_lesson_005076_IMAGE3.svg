@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="126pt" height="126pt" viewBox="0 0 126 126">
+<g enable-background="new">
+<g>
+<clipPath id="cp0">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 64008 0 L 64008 64008 L 0 64008 L 0 0 Z "/>
+</clipPath>
+<g clip-path="url(#cp0)">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 64008 0 L 64008 64008 L 0 64008 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 8867.033 18648.508 L 55139.03 45360.509 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 11128.673 19954.112 L 52877.39 44054.904 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 11128.673 19954.112 L 12299.249 19640.393 L 9831.787 19205.444 L 11442.393 21124.688 Z " fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 11128.673 19954.112 L 12299.249 19640.393 L 9831.787 19205.444 L 11442.393 21124.688 Z "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 52877.39 44054.904 L 51706.818 44368.62 L 54174.279 44803.576 L 52563.67 42884.33 Z " fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 52877.39 44054.904 L 51706.818 44368.62 L 54174.279 44803.576 L 52563.67 42884.33 Z "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 32172.075 31481.868 L 32172.075 31481.868 C 32460.368 31574.65 32618.86 31883.575 32526.075 32171.868 C 32481.52 32310.31 32383.791 32425.383 32254.39 32491.77 C 32124.99 32558.159 31974.518 32570.424 31836.075 32525.868 C 31547.784 32433.083 31389.291 32124.16 31482.075 31835.868 C 31574.86 31547.575 31883.784 31389.083 32172.075 31481.868 Z " fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="381" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 32172.075 31481.868 L 32172.075 31481.868 C 32460.368 31574.65 32618.86 31883.575 32526.075 32171.868 C 32481.52 32310.31 32383.791 32425.383 32254.39 32491.77 C 32124.99 32558.159 31974.518 32570.424 31836.075 32525.868 C 31547.784 32433.083 31389.291 32124.16 31482.075 31835.868 C 31574.86 31547.575 31883.784 31389.083 32172.075 31481.868 Z "/>
+</g>
+</g>
+</g>
+</svg>

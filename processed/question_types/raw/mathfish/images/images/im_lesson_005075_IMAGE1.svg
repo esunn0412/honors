@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="234pt" height="72pt" viewBox="0 0 234 72">
+<g enable-background="new">
+<g>
+<clipPath id="cp0">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 118872 0 L 118872 36576 L 0 36576 L 0 0 Z "/>
+</clipPath>
+<g clip-path="url(#cp0)">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 118872 0 L 118872 36576 L 0 36576 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 10347.947 25983.13 L 41055.47 18288.579 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 10347.947 25983.13 L 41055.47 18288.579 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 10347.947 10593.631 L 41055.47 18288.184 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 10347.947 10593.631 L 41055.47 18288.184 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 10482 10593.5 L 41261 18341.5 L 10482 25982.5 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 10482 10593.5 L 41261 18341.5 L 10482 25982.5 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 102852.13 11539.267 L 108506.238 18335.038 L 102852.13 25036.959 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 102852.13 11539.267 L 108506.238 18335.038 L 102852.13 25036.959 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 56979.85 7881.4597 L 75459.56 18360.629 L 56979.85 28695.083 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 56979.85 7881.4597 L 75459.56 18360.629 L 56979.85 28695.083 "/>
+</g>
+</g>
+</g>
+</svg>

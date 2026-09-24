@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="351pt" height="108pt" viewBox="0 0 351 108">
+<g enable-background="new">
+<g>
+<clipPath id="cp0">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 178308 0 L 178308 54864 L 0 54864 L 0 0 Z "/>
+</clipPath>
+<g clip-path="url(#cp0)">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 178308 0 L 178308 54864 L 0 54864 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 111415.5 6138.7307 L 165016 6138.7307 L 165016 26686.178 L 150749.5 41943.666 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 111415.5 6138.7307 L 165016 6138.7307 L 165016 26686.178 L 150749.5 41943.666 Z "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 5524 0 L 18328 0 L 18328 14424 L 5524 14424 Z " fill-opacity="0" fill-rule="evenodd"/>
+<symbol id="font_1_28">
+<path d="M .39794923 0 L 0 0 L 0 .7138672 L .39794923 .7138672 L .39794923 .6401367 L .08300781 .6401367 L .08300781 .41015626 L .37890626 .41015626 L .37890626 .33691407 L .08300781 .33691407 L .08300781 .07421875 L .39794923 .07421875 L .39794923 0 Z "/>
+</symbol>
+<use xlink:href="#font_1_28" transform="matrix(14,0,0,-14,18.99804,20.189999)"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 25352.85 5432.49 L 79352.85 26085.534 L 79352.85 46748.49 L 25352.85 26095.448 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 25352.85 5432.49 L 79352.85 26085.534 L 79352.85 46748.49 L 25352.85 26095.448 Z "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 92963.85 .1957 L 103955.85 .1957 L 103955.85 12624.195 L 92963.85 12624.195 Z " fill-opacity="0" fill-rule="evenodd"/>
+<symbol id="font_1_29">
+<path d="M .08300781 0 L 0 0 L 0 .7138672 L .39794923 .7138672 L .39794923 .6401367 L .08300781 .6401367 L .08300781 .37890626 L .37890626 .37890626 L .37890626 .30517579 L .08300781 .30517579 L .08300781 0 Z "/>
+</symbol>
+<use xlink:href="#font_1_29" transform="matrix(14,0,0,-14,191.12372,20.190384)"/>
+</g>
+</g>
+</g>
+</svg>

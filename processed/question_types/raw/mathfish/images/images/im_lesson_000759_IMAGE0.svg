@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="234pt" height="126pt" viewBox="0 0 234 126">
+<g enable-background="new">
+<g>
+<clipPath id="cp0">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 118872 0 L 118872 64008 L 0 64008 L 0 0 Z "/>
+</clipPath>
+<g clip-path="url(#cp0)">
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 0 0 L 118872 0 L 118872 64008 L 0 64008 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 1117 43589 L 57541 19493 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="381" stroke-linecap="butt" stroke-dasharray="1524,1143" stroke-linejoin="round" fill="none" stroke="#000000" d="M 1117 43589 L 57541 19493 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 38127.36 52274.669 L 20475.358 34818.96 L 20475.358 10586.669 L 38127.36 28042.379 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 38127.36 52274.669 L 20475.358 34818.96 L 20475.358 10586.669 L 38127.36 28042.379 Z "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 106156.269 7878.962 L 66676.269 56106.96 " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="381" stroke-linecap="butt" stroke-dasharray="1524,1143" stroke-linejoin="round" fill="none" stroke="#000000" d="M 106156.269 7878.962 L 66676.269 56106.96 "/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" d="M 96813.269 50688.63 L 79161.269 40687.71 L 79161.269 9000.63 L 96813.269 19001.547 Z " fill-opacity="0" fill-rule="evenodd"/>
+<path transform="matrix(.001968504,0,0,.001968504,0,0)" stroke-width="762" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#000000" d="M 96813.269 50688.63 L 79161.269 40687.71 L 79161.269 9000.63 L 96813.269 19001.547 Z "/>
+</g>
+</g>
+</g>
+</svg>
