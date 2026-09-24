@@ -33,7 +33,7 @@ choices, parts), with its **figures as separate images** and its **answer**:
 |---|---|---|
 | Milestones | Question text, lettered choices (text or picture), figures, "[answer space]" markers | GaDOE's key + explanation of every choice; full-credit exemplar for written items |
 | i-Ready Diagnostic samples | Hand transcription of the question and choices, the diagram cut out of the screenshot, how the student answers (click, type, tool) | Worked out by us (i-Ready publishes no key), labeled as such |
-| i-Ready practice worksheets | Numbered problems as text, with their pictures | The teacher packet's answers, highlighted in place |
+| i-Ready practice problems | One card per numbered problem: the worksheet title and page instruction, then the problem as text with its pictures | The teacher packet's answer, highlighted in place |
 | MathFish | The publisher's own formatted page (paragraphs, numbered lists, tables) with its images | None: the publishers keep solutions behind a teacher login |
 
 Every card also has **Show original page**, so you can check the extraction against the
@@ -41,11 +41,20 @@ source.
 
 Using the page:
 
-- **Filter** by source, grade, Common Core domain, question type, picture type, or search
-  text (e.g. `3.NF.2`, `number line`). "Only items with an answer" hides MathFish.
-- **Link to a view:** add filters to the address, e.g. `index.html?source=milestones&grade=4`.
-- **Correct our labels:** each item has a *my label* menu (pick the right question type, or
-  "Label is correct"), a note box, and a **Flag** button.
+- **Filter** by source, grade, Common Core domain, question type, answer mode used in any
+  part, stimulus, or search text (e.g. `3.NF.2`, `number line`). "Only items with an answer"
+  hides MathFish.
+- **Link to a view:** add filters to the address, e.g.
+  `index.html?source=milestones&grade=4&type=multi_part`.
+- **Check and correct the labels.** All labels except the i-Ready Diagnostic ones come from
+  rules, and **this page is where a person validates them.** Each card has:
+  - a **Question type** menu and a **Stimulus** menu. The first entry is the rule's label;
+    pick another entry to correct it.
+  - a **Part modes** box for multi-part questions, e.g. `enter, write`.
+  - **Labels are correct**, to mark a card as checked with no change.
+  - a note box and a **Flag** button.
+- **Corrections take effect immediately** in the filters and chips, so you can re-count by
+  filtering.
 - **Where your review is kept:** in your browser. **Export my review (CSV)** downloads it,
   so the corrections can be fed back in.
 - **Math symbols** render through KaTeX, which loads from the internet. Offline, the formulas
@@ -57,19 +66,27 @@ To rebuild the page after re-running the pipeline: `python3 scripts/build_review
 
 ## 2. Summary
 
-- **The real tests are mostly multiple choice.**
-  - 70% of Milestones sample items are single-answer multiple choice, 5% multi-select, 25%
-    written explanation.
-  - 7 of the 10 public i-Ready Diagnostic samples are multiple choice.
-- **MathFish is almost never multiple choice (under 1%).**
-  - It's lesson material: 42% "explain your reasoning", 29% open activities (games,
-    discussions), 24% numeric answers.
+Every question is coded on three dimensions: **answer mode** (select one, select many,
+enter, write, construct, match, drop-down), **structure** (single or multi-part), and
+**stimulus** (none, table, diagram, illustration, interactive). See §4.
+
+These labels are a rule-based first pass, to be checked by hand in the review page (§1).
+Treat the percentages as provisional until then.
+
+- **The real tests are mostly "select one".**
+  - Milestones: 67% select one, 2% select many, 9% write, **21% multi-part**.
+  - i-Ready Diagnostic samples: 7 of 10 select one.
+- **Multi-part is the tests' second format.** Milestones multi-part items are all
+  technology-enhanced or constructed-response. Their parts are usually *enter → write*
+  (solve, then explain) or two *select one* parts.
+- **MathFish is almost never "select" (6% of problems have any select part).**
+  - It's lesson material: 37% multi-part (mostly chains of *enter* and *write* prompts), 27%
+    open activities, 15% write, 14% enter.
   - It covers the standards well, but its question *formats* look nothing like the tests.
-- **Question format tracks difficulty on Milestones.** Every DOK-1 (easiest) item is
-  multiple choice; 71% of DOK-3 (hardest) items are written.
-- **Nearly every picture on the tests can be drawn by code.**
-  - Milestones: 56% have no picture, 6% just a table, 36% a simple diagram (number line,
-    fraction model, shape, grid, graph).
+- **i-Ready practice worksheets are drills:** 91% of their 1,213 problems are *enter*.
+- **Nearly every picture on the tests is a diagram a program could draw.**
+  - Milestones: 56% no picture, 6% a table, 36% a diagram (number line, fraction model,
+    shape, grid, graph).
   - Only 3 of 123 items need a real illustration.
 - **i-Ready's distinctive feature is interaction.** 8 of its 10 samples are answered with an
   on-screen tool: ruler, protractor, counters, click-to-plot.
@@ -98,6 +115,32 @@ leaving **123 unique items**. For every item GaDOE prints:
 | Standard | Old Georgia code, which uses Common Core numbering | `MGSE3.OA.4` = Common Core `3.OA.4` |
 | Answer + rationale | Correct answer, and why each wrong answer is wrong | "Choice (B) is incorrect because it shows rounding to the nearest ten" |
 
+**Milestones item types (GaDOE's labels), 123 unique items:**
+
+| GaDOE item type | Points | What the student does | Items | Example |
+|---|---|---|---|---|
+| Selected-Response | 1 | Choose one of 4 answer choices | 83 | "What is 738 rounded to the nearest hundred? A. 700 B. 730 C. 740 D. 800" |
+| Technology-Enhanced, multi-select | 2 | Choose 2-3 correct answers out of 5-6 | 3 | "Select THREE colors of paper that each have an area of 36 square inches." |
+| Technology-Enhanced, multi-part with a multi-select part | 2 | Part A multi-select, Part B one choice | 3 | "Part A: Select TWO equations that are missing the same number… Part B: How many friends shared this bag?" |
+| Technology-Enhanced, multi-part (single choices) | 2 | Part A and Part B, one choice each | 3 | "Part A: What will be the length of the new park? Part B: What is the perimeter of the old park?" |
+| Constructed-Response | 2 | Write an answer and/or explanation, scored with a rubric | 19 | "Part A: Solve. 571 − 324 = ☐  Part B: Explain the strategy you used." |
+| Extended Constructed-Response | 4 | Longer multi-part written response, scored with a rubric | 12 | "Part A: Write a story problem for 32 ÷ ☐ = 8. Part B: Solve it. Part C: Circle groups of dots…" |
+| **Total** | | | **123** | |
+
+- **Where the label comes from:** it's printed on the line under each item's heading
+  ("Item 9 / Technology-Enhanced"; "Selected-Response: 1 point"). Point values are printed
+  in the assessment guides.
+- **Technology-enhanced subtypes:** GaDOE defines math technology-enhanced items as exactly
+  two kinds, "a multiple-select item and a multiple-part item" (assessment guides, "Item
+  Types" section).
+  - The study guides print only "Technology-Enhanced", so I split the 9 items by reading
+    them: 3 multi-select, 6 multi-part (3 of which include a multi-select part).
+  - The grade 5 assessment guide does print the subtypes. Its three technology-enhanced items
+    are duplicates of grade 5 study-guide items, and its labels (Multi-Select; Multi-Part
+    Multi-Select; Multi-Part) match my split.
+- **Despite the name,** the 2016-2017 technology-enhanced math items are still choose-from-a-list
+  items, just multi-select or two-part. No drag-and-drop or graphing appears in these guides.
+
 **What we did:**
 
 1. **Parsed the PDFs** (`scripts/build_milestones.py`). For each item it pulls the text,
@@ -118,8 +161,8 @@ leaving **123 unique items**. For every item GaDOE prints:
 
 **What we got:**
 
-- The official format mix: 70% multiple choice, 5% multi-select, 25% written.
-- How format relates to difficulty (DOK).
+- The official format mix: 83 select one, 3 select many, 11 write, 26 multi-part (§10.2 lists
+  what the parts are).
 - Error-based wrong answers with a stated reason for each: a model for generating
   distractors.
 - A frequency list of the diagrams the test uses, i.e. what a drawing library must cover.
@@ -157,7 +200,7 @@ not the Diagnostic test.
 **What we did:**
 
 - **Coded by hand from the page images** (`scripts/build_iready.py`): for each sample item
-  and worksheet, the question format, picture type, and whether it's a word problem.
+  and worksheet, the answer mode and the picture kinds.
 - **Transcribed the 10 Diagnostic samples** (`scripts/extract_iready_diagnostic.py`). These
   PDFs are screenshots with no text in them, so the questions were typed in by hand and only
   the diagram was cut out.
@@ -182,9 +225,12 @@ not the Diagnostic test.
 **What we got:**
 
 - The list of **interactive formats and tools** that Milestones doesn't show.
-- The practice worksheets are 91% numeric-answer drills, and 59% end with one "explain your
-  strategy" question.
-- Kindergarten worksheets mix in circling, matching and drawing.
+- **Counted per problem:** each numbered problem is one question (1,176 problems), and a page
+  with no numbered problems counts as one question (29 Kindergarten pages and 8 others),
+  giving **1,213**.
+- 91% are *enter* (numeric drills); 6% are *write*, usually the "explain your strategy"
+  question that ends a worksheet.
+- Kindergarten pages mix in circling, matching and drawing.
 - **Limit:** 10 samples show *which* formats exist, not how often each is used.
 
 ### 3.3 MathFish
@@ -215,9 +261,10 @@ is labeled by the publisher with Common Core standards.
    Facing" part is used. Lessons with no student part (teacher-led number talks) are marked
    as open activities.
 4. **Tagged every problem with the same categories as the tests**
-   (`scripts/tag_question_types.py`). 4,428 is too many to label by hand, so text rules do
-   it: "Explain…" means written response, lettered options mean multiple choice, "Select
-   all" means multi-select, and so on. §8 shows how accurate this is.
+   (`scripts/tag_question_types.py`). 4,428 is too many to label by hand, so text rules give
+   a first pass: numbered list items or "Problem 1 / Problem 2" make it multi-part, "Explain…"
+   means *write*, lettered options mean *select one*, "Select all" means *select many*, and
+   so on. The labels are checked by hand in the review page (§8).
 5. **Downloaded MathFish's images** (4,869 files for the K-5 problems) so the review page can
    show them.
 6. **Used the publisher's own HTML for display** (`scripts/mathfish_html.py`). MathFish's
@@ -242,43 +289,55 @@ is labeled by the publisher with Common Core standards.
 
 ## 4. The question-type categories
 
-Full definitions: [`CODEBOOK.md`](CODEBOOK.md). Each item is coded on four separate
-dimensions, so the categories don't overlap. For example, a word problem with a number line is
-coded "word problem" *and* "number line", on different dimensions.
+Full definitions and rules: [`CODEBOOK.md`](CODEBOOK.md). Each question is coded on **three
+separate dimensions**, so the categories don't overlap.
 
-**A. Response format: what the student has to produce**
+**1. Answer mode: what the student does to answer**
 
-| Code | Question type | Example | Seen on |
+| Code | Answer mode | Example | Seen on |
 |---|---|---|---|
-| `SR` | Multiple choice, one answer | "What is 738 rounded to the nearest hundred? A. 700 B. 730 …" | Milestones, i-Ready |
-| `MS` | Multi-select | "Select **TWO** equations that are missing the same number." | Milestones |
-| `NUM` | Numeric / short answer | "Type the answer in the box: ___ inches" | i-Ready, worksheets |
-| `MATCH` | Match / sort / drag | "Draw lines to match the numbers." | i-Ready, K worksheets |
-| `DRAW` | Draw / plot / shade / label | "Click on the number line to show ½." | i-Ready |
-| `CR` | Written explanation | "Part B: Explain the strategy you used." | Milestones (2 or 4 points) |
-| `ACT` | Open activity, no single answer | Partner games, number talks, "What do you notice?" | MathFish only |
+| `select_one` | Select one | "What is 738 rounded to the nearest hundred? A. 700 B. 730 …" | Milestones, i-Ready |
+| `select_many` | Select many | "Select **TWO** equations that are missing the same number." | Milestones |
+| `enter` | Enter a number / expression | "Type the answer in the box: ___ inches" | i-Ready, worksheets, Milestones parts |
+| `write` | Write an explanation | "Explain the strategy you used." | Milestones (2 or 4 points) |
+| `construct` | Construct: plot, shade, draw | "Click on the number line to show ½." | i-Ready |
+| `match` | Match / order / sort | "Draw lines to match the numbers." | i-Ready, K worksheets |
+| `dropdown` | Drop-down | a menu inside a sentence | i-Ready (grade-8 sample only) |
 
-**When an item mixes formats:**
+`open` (MathFish only) marks games, centers and teacher-led routines. These have no
+scorable answer, so they fall **outside** the scheme and are reported separately.
 
-- **Test items** take the type of their *hardest part*, which is how GaDOE labels its own
-  items. "Part A: solve, Part B: explain" counts as a written explanation.
-- **i-Ready worksheets** have 4-20 separate problems, so they take their *most common*
-  format.
+**2. Structure: one question or several parts**
 
-**B. Context:** word problem, visual model (a task about a picture), or symbolic (bare numbers).
+- `single`: one question.
+- `multi_part`: two or more parts answered separately. This includes explicit parts (Part A /
+  Part B, a. / b.) and **item sets** (several questions on one shared situation).
+- Each part keeps its own answer mode, in order (`part_modes`), e.g. Milestones *enter →
+  write* = "Part A: solve. Part B: explain."
+- A list of exercises under one prompt ("Find each value: a. 3 × 10 b. 3 × 20") is a
+  single question.
 
-**C. Picture (the multimodal question):**
+The main tables use **question type** = the answer mode of a single question, or
+"multi-part".
 
-| Category | Meaning | Can we generate it? |
+**3. Stimulus: what the student looks at (the multimodal question)**
+
+| Stimulus | Meaning | Can we generate it? |
 |---|---|---|
-| Text only | No picture | Yes, the LLM writes it |
-| Table only | A data table | Yes, as Markdown/HTML |
-| Code-drawable diagram | Number line, fraction model, clock, shape, grid, graph, base-ten blocks … | Yes, render with code (SVG/matplotlib) from parameters |
+| None | Text only | Yes, the LLM writes it |
+| Table | Text or numbers in cells | Yes, as Markdown/HTML |
+| Diagram | Number line, fraction model, clock, shape, grid, graph, base-ten blocks … | Yes, render with code (SVG/matplotlib) from parameters |
 | Illustration / photo | Real objects (nails, bottle caps, a fish to measure) | Hard: needs image generation or an image library |
 | Interactive tool | Student answers by using an on-screen ruler, protractor, counters | Needs a front-end widget, not just an image |
 
-**D. Difficulty (DOK):** Webb's Depth of Knowledge: 1 = recall, 2 = skill/concept,
-3 = strategic thinking. Only Milestones prints it.
+A table whose cells contain pictures (e.g. shapes to classify) counts as the picture, not
+as a table.
+
+**Not used to categorize:**
+
+- **Difficulty (DOK).** Only Milestones prints it, so it can't be compared across sources.
+  It is kept as GaDOE's label for reference.
+- **Context** (word problem vs. bare numbers). This coding was dropped.
 
 ---
 
@@ -288,83 +347,91 @@ Domains below are **Common Core domains**: CC Counting & Cardinality (K only), O
 Algebraic Thinking, NBT Number & Operations in Base Ten, NF Fractions, MD Measurement & Data,
 G Geometry.
 
+All numbers come from the rule-based first-pass labels (see §8) and will change as the
+labels are checked in the review page.
+
 ### 5.1 Question type by source
 
-| Question type | Milestones (gr 3-5) | i-Ready Diagnostic samples | i-Ready practice worksheets | MathFish (K-5) |
+| Question type | Milestones (gr 3-5) | i-Ready Diagnostic samples | i-Ready practice problems | MathFish (K-5) |
 |---|---|---|---|---|
-| Multiple choice (one answer) | **70%** | **7 of 10** | 2% | 0.4% |
-| Multi-select | 5% | · | · | 0.2% |
-| Numeric / short answer | · | 2 of 10 | **91%** | 24% |
-| Match / sort | · | · | 2% | 1% |
-| Draw / plot / shade | · | 1 of 10 | 4% | 4% |
-| Written explanation | 25% | · | 1% | **42%** |
-| Open activity | · | · | · | **29%** |
-| **Number of items** | 123 | 10 | 129 worksheets | 4,428 |
+| Select one | **67%** | **7 of 10** | <1% | 4% |
+| Select many | 2% | · | <1% | <1% |
+| Enter | · | 2 of 10 | **91%** | 14% |
+| Write | 9% | · | 6% | 15% |
+| Construct | · | 1 of 10 | 2% | 1% |
+| Match / order / sort | · | · | <1% | <1% |
+| **Multi-part** | **21%** | · | · | **37%** |
+| Open activity (outside the scheme) | · | · | · | 27% |
+| **Number of questions** | 123 | 10 | 1,213 | 4,428 |
 
-- **Fair comparison (grades 3-5 only, since Milestones starts at grade 3):** MathFish is 52%
-  written explanation and 0.5% multiple choice.
+- **Fair comparison (grades 3-5 only, since Milestones starts at grade 3):** MathFish is 2%
+  select one, and only 4% of its problems have a select part anywhere. 48% ask for a written
+  explanation somewhere.
 - **Even MathFish's most test-like parts don't match.** Fishtank exit tickets and IM practice
-  problems (grades 3-5) are about 1% multiple choice.
-- **Multi-part items are common on the tests.** Most Milestones technology-enhanced and
-  written items have a Part A and a Part B.
+  problems (grades 3-5) have a select part in only 4-5% of problems.
+- **Milestones multi-part items** (26) are all technology-enhanced (6) or constructed-response
+  (20). Counting their parts, 23% of Milestones items ask for writing somewhere and 16% ask
+  the student to enter a number.
 
-### 5.2 By grade
+### 5.2 What the multi-part questions are made of
+
+| | Milestones | MathFish |
+|---|---|---|
+| Multi-part questions | 26 of 123 | 1,660 of 4,428 |
+| Parts per question | mostly 2 (15) or 3 (8) | 2-5 usually; 424 have 6+ (long IM activities) |
+| Most common part sequences | enter → write (4); enter → enter (3); select one → select one (3); enter → enter → write (3) | enter → enter (143); enter → enter → enter (117); write → write (95) |
+
+The test's multi-part items are short and structured (2-3 parts, often ending in an
+explanation). MathFish's are longer chains of prompts.
+
+### 5.3 By grade
 
 | | K | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|---|
-| **MathFish:** open activity | 66% | 40% | 31% | 20% | 16% | 15% |
-| **MathFish:** written explanation | 12% | 32% | 36% | 47% | 55% | 55% |
-| **i-Ready worksheets:** numeric answer | 60% | 88% | 100% | 96% | 96% | 93% |
-| **Milestones:** multiple choice | — | — | — | 72% | 68% | 70% |
+| **MathFish:** open activity | 61% | 36% | 29% | 19% | 16% | 15% |
+| **MathFish:** multi-part | 5% | 18% | 36% | 42% | 55% | 53% |
+| **MathFish:** asks for writing in any part | 10% | 29% | 31% | 42% | 51% | 51% |
+| **i-Ready practice:** enter | 62% | 94% | 95% | 89% | 89% | 92% |
+| **Milestones:** select one | — | — | — | 70% | 65% | 68% |
+| **Milestones:** multi-part | — | — | — | 19% | 18% | 28% |
 
 - **MathFish shifts with grade.** Kindergarten is mostly games and hands-on activities; by
-  grade 5 over half ask for an explanation.
-- **Milestones is steady across grades 3-5:** about 70% multiple choice, 5% multi-select,
-  25% written.
+  grade 4-5 over half the problems are multi-part and ask for an explanation.
+- **Milestones is steady across grades 3-5:** about two-thirds select one and a fifth
+  multi-part; grade 5 has the most multi-part items.
 
-### 5.3 By domain
+### 5.4 By domain
 
-| Domain | Milestones: multiple choice | Milestones: has a diagram | MathFish: written explanation | MathFish: open activity |
-|---|---|---|---|---|
-| CC (K only) | — | — | 10% | 73% |
-| OA | 60% | 8% | 42% | 27% |
-| NBT | 70% | 15% | 44% | 26% |
-| NF | 67% | 41% | **57%** | 14% |
-| MD | 76% | **59%** | 43% | 23% |
-| G | 80% | **67%** | 32% | 44% |
+| Domain | Milestones: select one | Milestones: multi-part | Milestones: diagram | MathFish: writing in any part | MathFish: construct in any part | MathFish: open activity |
+|---|---|---|---|---|---|---|
+| CC (K only) | — | — | — | 10% | 1% | 68% |
+| OA | 56% | **40%** | 8% | 38% | 4% | 25% |
+| NBT | 70% | 19% | 15% | 40% | 4% | 24% |
+| NF | 67% | 19% | 41% | **54%** | 13% | 13% |
+| MD | 69% | 14% | **59%** | 38% | 8% | 21% |
+| G | 80% | 13% | **67%** | 28% | **19%** | 42% |
 
-- **Milestones:** written items cluster in OA (32%) and fractions (30%). Measurement and
-  geometry items are multiple choice *about a picture*.
-- **MathFish:** fractions are the most explanation-heavy; geometry has the most drawing tasks
-  (13%).
+- **Milestones:** multi-part items cluster in OA (10 of 25 OA items). Measurement and
+  geometry items are mostly *select one about a picture*.
+- **MathFish:** fractions are the most explanation-heavy; geometry has the most drawing tasks.
 - **Per-standard breakdown** (e.g. which `3.OA.x` standards lean toward which type):
-  `tables/standard_by_type.csv` and §10.
+  `tables/standard_by_type.csv` and §10.5.
 
-### 5.4 By difficulty (Milestones only)
+### 5.5 Stimulus (pictures)
 
-| Question type | DOK 1 | DOK 2 | DOK 3 |
-|---|---|---|---|
-| Multiple choice | **100%** | 67% | 24% |
-| Multi-select | · | 7% | 6% |
-| Written explanation | · | 26% | **71%** |
-| **Items** | 33 | 73 | 17 |
-
-Easy items are always multiple choice; hard items are mostly written. This is useful for a
-generator that must produce several difficulty levels.
-
-### 5.5 Pictures
-
-| Picture | Milestones | i-Ready Diagnostic | i-Ready worksheets | MathFish |
+| Stimulus | Milestones | i-Ready Diagnostic | i-Ready practice problems | MathFish |
 |---|---|---|---|---|
-| Text only | 56% | · | 64% | 53% |
-| Table only | 6% | · | 5% | 4% |
-| Code-drawable diagram | 36% | 2 of 10 | 26% | 21% |
-| Illustration / photo | 2% | · | 5% | not measured* |
+| None | 56% | · | 65% | 53% |
+| Table | 6% | · | <1% | 4% |
+| Diagram | 36% | 2 of 10 | 14% | 22% |
+| Illustration / photo | 2% | · | <1% | not measured* |
 | Interactive tool | · | **8 of 10** | · | · |
-| Image, kind unknown | · | · | · | 21%* |
+| Image, kind unknown | · | · | 19%* | 21%* |
 
-\*MathFish images weren't coded one by one. A spot check of 32 found about 4 in 5 were
-ordinary diagrams too.
+\*"Kind unknown" = a picture is present, but the text doesn't say what it is. For i-Ready
+practice, the worksheet's hand-coded kinds didn't include a diagram and the problem text names
+none. MathFish images weren't coded one by one; a spot check of 32 found about 4 in 5 were
+ordinary diagrams. The review page's Stimulus menu is where these get fixed.
 
 **Most common diagrams on Milestones** (what to build first):
 
@@ -379,17 +446,17 @@ items.
 ### 5.6 What this means for our question generator
 
 - **Formats to support:**
-  - 4-option multiple choice with error-based wrong answers (model: the Milestones
+  - select one (4 options) with error-based wrong answers (model: the Milestones
     rationales)
-  - multi-select (choose 2-3 of 5-6)
-  - two-part items (Part A / Part B)
-  - numeric entry
-  - written explanation with a rubric
-  - for i-Ready alignment: number-line plotting and drop-down
+  - select many (choose 2-3 of 5-6)
+  - multi-part items, mostly two or three parts (enter → write; select → select)
+  - enter a number
+  - write an explanation, with a rubric
+  - for i-Ready alignment: construct (number-line plotting) and drop-down
 - **Use MathFish for content, not format:** convert its standard-labeled problems into the
   formats above.
-- **Pictures:** a code-drawn diagram library covers nearly all grade 3-5 test items; start
-  with the list in §5.5.
+- **Pictures:** a library of code-drawn diagrams covers nearly all grade 3-5 test items;
+  start with the list in §5.5.
 
 ---
 
@@ -568,7 +635,7 @@ Current online practice tests: [gaexperienceonline.com](https://www.gaexperience
 | Parse Milestones PDFs (type, DOK, standard, answer) | `scripts/build_milestones.py` | `data/milestones_items.jsonl` (132, 9 duplicates flagged) |
 | Milestones pictures, coded by hand | — | `data/milestones_visuals.json` |
 | i-Ready items, coded by hand | `scripts/build_iready.py` | `data/iready_items.jsonl` (139) |
-| Apply the categories to everything | `scripts/tag_question_types.py` | `data/all_items.jsonl` (4,690) |
+| Apply the categories to everything (first-pass labels) | `scripts/tag_question_types.py` (reads the structured extractions, so run it after them) | `data/all_items.jsonl` (5,774 questions) |
 | Tables | `scripts/analyze.py` | `tables/*.csv`, §10 |
 | Milestones questions as text + figures | `scripts/extract_milestones_structured.py` | `data/milestones_structured.json`, `review/img/milestones_fig/` |
 | Milestones answers, explanations, exemplars | `scripts/extract_milestones_answers.py` | `data/milestones_answers.json` |
@@ -587,28 +654,31 @@ The PDF extraction scripts need PyMuPDF, installed in a local virtual environmen
 ```bash
 cd processed/question_types/scripts
 python3 build_mathfish.py && python3 build_milestones.py && python3 build_iready.py \
-  && python3 tag_question_types.py && python3 analyze.py \
   && python3 extract_milestones_images.py && python3 extract_iready_images.py \
   && ../.venv/bin/python extract_milestones_structured.py && ../.venv/bin/python extract_milestones_answers.py \
   && ../.venv/bin/python extract_iready_structured.py && ../.venv/bin/python extract_iready_diagnostic.py \
-  && python3 build_review.py
+  && python3 tag_question_types.py && python3 analyze.py && python3 build_review.py
 ```
 
-**How accurate is the MathFish tagging?** Text rules label MathFish, so they were checked
-three ways:
+**How the labels are checked.** Apart from the hand-coded i-Ready Diagnostic samples, the
+labels come from rules applied to the extracted text (`tag_question_types.py`; the rules are
+in `CODEBOOK.md`). They are a **first pass for a person to check**, not a result:
 
-| Check | Result |
-|---|---|
-| Rules vs GaDOE's own labels, on the 123 Milestones items | 92% agree (κ = 0.83) |
-| Rules vs my blind labels, on 30 new MathFish items | 21/30 (70%) |
-| Same 30, after fixing one bug that check exposed | 23/30 (77%), no longer blind |
-
-- **Where the rules go wrong:** on fuzzy boundaries: "open activity" vs "explain", answer
-  choices without A/B/C letters, "draw" vs "explain".
-- **So read MathFish percentages as about ±10 points.**
-- **The multiple-choice gap is real.** Only 6% of MathFish problems contain *any*
-  answer-choice prompt.
-- **You can check it yourself:** the review page shows every label next to its item.
+- **Milestones:** GaDOE's printed item type is a built-in check. The rule labels agree with
+  it on all 123 items: every Selected-Response item is *select one*, the 3 multi-select items
+  are *select many*, and the 6 multi-part technology-enhanced items are *multi-part*. The
+  part breakdown inside CR items is still the rules' reading.
+- **i-Ready practice and MathFish:** no official labels exist, so they need **human review in
+  the review page** (§1). There, a reviewer corrects the question type, part modes and
+  stimulus, and exports the corrections as CSV.
+- **Known weak spots to look at first:**
+  - MathFish *open* vs *write* (discussion prompts);
+  - MathFish long activities split into many parts;
+  - i-Ready pages where the instruction applies to every problem ("Circle all the problems
+    with…, then find…");
+  - pictures of unknown kind.
+- **The multiple-choice gap is robust** to these errors: only 6% of MathFish problems contain
+  *any* answer-choice prompt.
 
 **Limitations**
 
@@ -631,8 +701,9 @@ three ways:
    items?
 2. **i-Ready.** Is there a legitimate way to see more Diagnostic items (e.g. a partner
    teacher's account)?
-3. **Review.** Go through `review/index.html`, fix labels, and export the CSV so corrections
-   feed back in.
+3. **Human validation of the labels.** Go through `review/index.html` (starting with a
+   sample per source), correct the labels, and export the CSV. Who should the second reviewer
+   be, and how big a sample?
 4. **Generator.** Lock in the target formats (§5.6) and start the diagram library (§5.5).
 
 ---
@@ -649,47 +720,63 @@ Generated by `scripts/analyze.py`; don't edit by hand. Cells are **count (column
 |---|---|---|---|---|
 | Milestones (GaDOE EOG samples, gr 3-5) | one test item | 123 | 3-5 | GaDOE (old GA codes, Common Core numbering) |
 | i-Ready Diagnostic samples | one test item | 10 | K-5 | Common Core, assigned by us |
-| i-Ready practice sets (K-5) | one worksheet (4-20 problems) | 129 | K-5 | Common Core, assigned by us |
+| i-Ready practice problems (K-5) | one numbered problem (K: one page) | 1213 | K-5 | Common Core, assigned by us |
 | MathFish (IM + Fishtank, K-5) | one problem / activity | 4428 | K-5 | Common Core, by IM / Fishtank |
 
 #### 10.1 Question type by source
 
-| Question type | Milestones (GaDOE EOG samples, gr 3-5) | i-Ready Diagnostic samples | i-Ready practice sets (K-5) | MathFish (IM + Fishtank, K-5) |
+| Question type | Milestones (GaDOE EOG samples, gr 3-5) | i-Ready Diagnostic samples | i-Ready practice problems (K-5) | MathFish (IM + Fishtank, K-5) |
 |---|---|---|---|---|
-| Selected response (single) | 86 (70%) | 7 (70%) | 3 (2%) | 16 (<1%) |
-| Multi-select | 6 (5%) | · | · | 9 (<1%) |
-| Numeric / short answer | · | 2 (20%) | 117 (91%) | 1082 (24%) |
-| Match / sort | · | · | 3 (2%) | 23 (<1%) |
-| Draw / plot / shade | · | 1 (10%) | 5 (4%) | 174 (4%) |
-| Constructed response (explain) | 31 (25%) | · | 1 (<1%) | 1851 (42%) |
-| Open activity (no scorable answer) | · | · | · | 1273 (29%) |
-| **Total** | 123 | 10 | 129 | 4428 |
+| Select one | 83 (67%) | 7 (70%) | 4 (<1%) | 197 (4%) |
+| Select many | 3 (2%) | · | 3 (<1%) | 11 (<1%) |
+| Enter (number / expression) | · | 2 (20%) | 1101 (91%) | 608 (14%) |
+| Write (explanation) | 11 (9%) | · | 76 (6%) | 686 (15%) |
+| Construct (plot / shade / draw) | · | 1 (10%) | 22 (2%) | 52 (1%) |
+| Match / order / sort | · | · | 7 (<1%) | 24 (<1%) |
+| Drop-down | · | · | · | · |
+| Multi-part | 26 (21%) | · | · | 1660 (37%) |
+| Open activity (outside the scheme) | · | · | · | 1190 (27%) |
+| **Total** | 123 | 10 | 1213 | 4428 |
 
 **Same grades only (3-5)** — Milestones has no K-2 test, so this is the fair comparison:
 
 | Question type | Milestones gr 3-5 | MathFish gr 3-5 (all) | MathFish gr 3-5: FL target tasks (exit tickets) | MathFish gr 3-5: IM practice problems | i-Ready practice gr 3-5 |
 |---|---|---|---|---|---|
-| Selected response (single) | 86 (70%) | 12 (<1%) | 2 (<1%) | 1 (1%) | · |
-| Multi-select | 6 (5%) | 5 (<1%) | · | 3 (4%) | · |
-| Numeric / short answer | · | 636 (25%) | 146 (38%) | 26 (36%) | 72 (95%) |
-| Match / sort | · | 10 (<1%) | · | · | · |
-| Draw / plot / shade | · | 126 (5%) | 32 (8%) | 3 (4%) | 3 (4%) |
-| Constructed response (explain) | 31 (25%) | 1345 (52%) | 181 (48%) | 37 (51%) | 1 (1%) |
-| Open activity (no scorable answer) | · | 442 (17%) | 20 (5%) | 3 (4%) | · |
-| **Total** | 123 | 2576 | 381 | 73 | 76 |
+| Select one | 83 (67%) | 52 (2%) | 2 (<1%) | 1 (1%) | 1 (<1%) |
+| Select many | 3 (2%) | 3 (<1%) | · | 3 (4%) | 3 (<1%) |
+| Enter (number / expression) | · | 338 (13%) | 59 (15%) | 18 (25%) | 735 (90%) |
+| Write (explanation) | 11 (9%) | 424 (16%) | 63 (17%) | 29 (40%) | 59 (7%) |
+| Construct (plot / shade / draw) | · | 38 (1%) | 14 (4%) | 2 (3%) | 18 (2%) |
+| Match / order / sort | · | 8 (<1%) | · | · | 1 (<1%) |
+| Drop-down | · | · | · | · | · |
+| Multi-part | 26 (21%) | 1288 (50%) | 230 (60%) | 18 (25%) | · |
+| Open activity (outside the scheme) | · | 425 (16%) | 13 (3%) | 2 (3%) | · |
+| **Total** | 123 | 2576 | 381 | 73 | 817 |
 
-Share of items that **contain** each format anywhere (an item can count in several rows):
+Share of questions that **use** each answer mode in any part (a multi-part question counts in every row its parts use):
 
-| Question type | Milestones (GaDOE EOG samples, gr 3-5) | i-Ready Diagnostic samples | i-Ready practice sets (K-5) | MathFish (IM + Fishtank, K-5) |
+| Question type | Milestones (GaDOE EOG samples, gr 3-5) | i-Ready Diagnostic samples | i-Ready practice problems (K-5) | MathFish (IM + Fishtank, K-5) |
 |---|---|---|---|---|
-| Selected response (single) | 74% | 70% | 13% | 5% |
-| Multi-select | 5% | · | <1% | 1% |
-| Numeric / short answer | 17% | 20% | 95% | 61% |
-| Match / sort | <1% | · | 3% | 3% |
-| Draw / plot / shade | <1% | 10% | 12% | 10% |
-| Constructed response (explain) | 25% | · | 59% | 47% |
+| Select one | 72% | 70% | <1% | 6% |
+| Select many | 5% | · | <1% | <1% |
+| Enter (number / expression) | 16% | 20% | 91% | 43% |
+| Write (explanation) | 23% | · | 6% | 38% |
+| Construct (plot / shade / draw) | <1% | 10% | 2% | 7% |
+| Match / order / sort | · | · | <1% | 1% |
+| Drop-down | · | · | · | · |
 
-#### 10.2 Question type × Common Core domain
+#### 10.2 What multi-part questions are made of
+
+Each part keeps its own answer mode; the combination lists the parts in order.
+
+| Source | Multi-part | Parts per question | Most common combinations |
+|---|---|---|---|
+| Milestones (GaDOE EOG samples, gr 3-5) | 26 | 2: 15, 3: 8, 4: 2, 5: 1 | enter → write (4); enter → enter (3); select_one → select_one (3); enter → enter → write (3) |
+| i-Ready Diagnostic samples | 0 | · | · |
+| i-Ready practice problems (K-5) | 0 | · | · |
+| MathFish (IM + Fishtank, K-5) | 1660 | 2: 433, 3: 341, 4: 281, 5: 181, 6+: 424 | enter → enter (143); enter → enter → enter (117); write → write (95); enter → enter → enter → enter (85) |
+
+#### 10.3 Question type × Common Core domain
 
 Domains: **CC** Counting & Cardinality, **OA** Operations & Algebraic Thinking, **NBT** Number & Operations in Base Ten, **NF** Number & Operations - Fractions, **MD** Measurement & Data, **G** Geometry.
 
@@ -697,91 +784,97 @@ Domains: **CC** Counting & Cardinality, **OA** Operations & Algebraic Thinking, 
 
 | Question type | OA | NBT | NF | MD | G | Total |
 |---|---|---|---|---|---|---|
-| Selected response (single) | 15 (60%) | 19 (70%) | 18 (67%) | 22 (76%) | 12 (80%) | 86 |
-| Multi-select | 2 (8%) | 1 (4%) | 1 (4%) | 2 (7%) | · | 6 |
-| Constructed response (explain) | 8 (32%) | 7 (26%) | 8 (30%) | 5 (17%) | 3 (20%) | 31 |
+| Select one | 14 (56%) | 19 (70%) | 18 (67%) | 20 (69%) | 12 (80%) | 83 |
+| Select many | · | · | 1 (4%) | 2 (7%) | · | 3 |
+| Write (explanation) | 1 (4%) | 3 (11%) | 3 (11%) | 3 (10%) | 1 (7%) | 11 |
+| Multi-part | 10 (40%) | 5 (19%) | 5 (19%) | 4 (14%) | 2 (13%) | 26 |
 | **Total** | 25 | 27 | 27 | 29 | 15 | 123 |
 
 **i-Ready Diagnostic samples** (n=10)
 
 | Question type | CC | OA | NBT | NF | MD | Total |
 |---|---|---|---|---|---|---|
-| Selected response (single) | 1 (100%) | 2 (100%) | 1 (100%) | · | 3 (60%) | 7 |
-| Numeric / short answer | · | · | · | · | 2 (40%) | 2 |
-| Draw / plot / shade | · | · | · | 1 (100%) | · | 1 |
+| Select one | 1 (100%) | 2 (100%) | 1 (100%) | · | 3 (60%) | 7 |
+| Enter (number / expression) | · | · | · | · | 2 (40%) | 2 |
+| Construct (plot / shade / draw) | · | · | · | 1 (100%) | · | 1 |
 | **Total** | 1 | 2 | 1 | 1 | 5 | 10 |
 
-**i-Ready practice sets (K-5)** (n=129)
+**i-Ready practice problems (K-5)** (n=1213)
 
 | Question type | CC | OA | NBT | NF | MD | Total |
 |---|---|---|---|---|---|---|
-| Selected response (single) | 2 (33%) | 1 (2%) | · | · | · | 3 |
-| Numeric / short answer | 4 (67%) | 51 (89%) | 42 (95%) | 15 (88%) | 5 (100%) | 117 |
-| Match / sort | · | 2 (4%) | 1 (2%) | · | · | 3 |
-| Draw / plot / shade | · | 3 (5%) | · | 2 (12%) | · | 5 |
-| Constructed response (explain) | · | · | 1 (2%) | · | · | 1 |
-| **Total** | 6 | 57 | 44 | 17 | 5 | 129 |
+| Select one | 3 (27%) | 1 (<1%) | · | · | · | 4 |
+| Select many | · | · | 3 (<1%) | · | · | 3 |
+| Enter (number / expression) | 8 (73%) | 405 (91%) | 510 (92%) | 148 (89%) | 30 (88%) | 1101 |
+| Write (explanation) | · | 22 (5%) | 40 (7%) | 10 (6%) | 4 (12%) | 76 |
+| Construct (plot / shade / draw) | · | 13 (3%) | 1 (<1%) | 8 (5%) | · | 22 |
+| Match / order / sort | · | 5 (1%) | 2 (<1%) | · | · | 7 |
+| **Total** | 11 | 446 | 556 | 166 | 34 | 1213 |
 
 **MathFish (IM + Fishtank, K-5)** (n=4428)
 
 | Question type | CC | OA | NBT | NF | MD | G | Total |
 |---|---|---|---|---|---|---|---|
-| Selected response (single) | · | 1 (<1%) | 3 (<1%) | 5 (<1%) | 5 (<1%) | 2 (<1%) | 16 |
-| Multi-select | · | 1 (<1%) | 3 (<1%) | 1 (<1%) | 3 (<1%) | 1 (<1%) | 9 |
-| Numeric / short answer | 50 (16%) | 273 (28%) | 333 (28%) | 153 (22%) | 227 (29%) | 46 (10%) | 1082 |
-| Match / sort | 2 (<1%) | 5 (<1%) | 6 (<1%) | 4 (<1%) | 2 (<1%) | 4 (<1%) | 23 |
-| Draw / plot / shade | 2 (<1%) | 19 (2%) | 24 (2%) | 37 (5%) | 33 (4%) | 59 (13%) | 174 |
-| Constructed response (explain) | 32 (10%) | 403 (42%) | 526 (44%) | 399 (57%) | 342 (43%) | 149 (32%) | 1851 |
-| Open activity (no scorable answer) | 227 (73%) | 259 (27%) | 309 (26%) | 96 (14%) | 179 (23%) | 203 (44%) | 1273 |
+| Select one | 23 (7%) | 56 (6%) | 48 (4%) | 13 (2%) | 28 (4%) | 29 (6%) | 197 |
+| Select many | · | 2 (<1%) | 2 (<1%) | 1 (<1%) | 5 (<1%) | 1 (<1%) | 11 |
+| Enter (number / expression) | 34 (11%) | 157 (16%) | 203 (17%) | 101 (15%) | 95 (12%) | 18 (4%) | 608 |
+| Write (explanation) | 26 (8%) | 188 (20%) | 182 (15%) | 134 (19%) | 106 (13%) | 50 (11%) | 686 |
+| Construct (plot / shade / draw) | · | 7 (<1%) | 5 (<1%) | 9 (1%) | 12 (2%) | 19 (4%) | 52 |
+| Match / order / sort | 2 (<1%) | 6 (<1%) | 4 (<1%) | 4 (<1%) | 5 (<1%) | 3 (<1%) | 24 |
+| Multi-part | 16 (5%) | 306 (32%) | 474 (39%) | 345 (50%) | 372 (47%) | 147 (32%) | 1660 |
+| Open activity (outside the scheme) | 212 (68%) | 239 (25%) | 286 (24%) | 88 (13%) | 168 (21%) | 197 (42%) | 1190 |
 | **Total** | 313 | 961 | 1204 | 695 | 791 | 464 | 4428 |
 
 
-#### 10.3 Question type × grade
+#### 10.4 Question type × grade
 
 **Milestones (GaDOE EOG samples, gr 3-5)** (n=123)
 
 | Question type | 3 | 4 | 5 | Total |
 |---|---|---|---|---|
-| Selected response (single) | 31 (72%) | 27 (68%) | 28 (70%) | 86 |
-| Multi-select | 2 (5%) | 2 (5%) | 2 (5%) | 6 |
-| Constructed response (explain) | 10 (23%) | 11 (28%) | 10 (25%) | 31 |
+| Select one | 30 (70%) | 26 (65%) | 27 (68%) | 83 |
+| Select many | 1 (2%) | 1 (2%) | 1 (2%) | 3 |
+| Write (explanation) | 4 (9%) | 6 (15%) | 1 (2%) | 11 |
+| Multi-part | 8 (19%) | 7 (18%) | 11 (28%) | 26 |
 | **Total** | 43 | 40 | 40 | 123 |
 
 **i-Ready Diagnostic samples** (n=10)
 
 | Question type | K | 2 | 3 | 4 | 5 | Total |
 |---|---|---|---|---|---|---|
-| Selected response (single) | 2 (100%) | 2 (100%) | 1 (50%) | 2 (67%) | · | 7 |
-| Numeric / short answer | · | · | · | 1 (33%) | 1 (100%) | 2 |
-| Draw / plot / shade | · | · | 1 (50%) | · | · | 1 |
+| Select one | 2 (100%) | 2 (100%) | 1 (50%) | 2 (67%) | · | 7 |
+| Enter (number / expression) | · | · | · | 1 (33%) | 1 (100%) | 2 |
+| Construct (plot / shade / draw) | · | · | 1 (50%) | · | · | 1 |
 | **Total** | 2 | 2 | 2 | 3 | 1 | 10 |
 
-**i-Ready practice sets (K-5)** (n=129)
+**i-Ready practice problems (K-5)** (n=1213)
 
 | Question type | K | 1 | 2 | 3 | 4 | 5 | Total |
 |---|---|---|---|---|---|---|---|
-| Selected response (single) | 2 (13%) | 1 (6%) | · | · | · | · | 3 |
-| Numeric / short answer | 9 (60%) | 14 (88%) | 22 (100%) | 25 (96%) | 22 (96%) | 25 (93%) | 117 |
-| Match / sort | 2 (13%) | 1 (6%) | · | · | · | · | 3 |
-| Draw / plot / shade | 2 (13%) | · | · | 1 (4%) | 1 (4%) | 1 (4%) | 5 |
-| Constructed response (explain) | · | · | · | · | · | 1 (4%) | 1 |
-| **Total** | 15 | 16 | 22 | 26 | 23 | 27 | 129 |
+| Select one | 3 (10%) | · | · | 1 (<1%) | · | · | 4 |
+| Select many | · | · | · | · | 3 (1%) | · | 3 |
+| Enter (number / expression) | 18 (62%) | 99 (94%) | 249 (95%) | 238 (89%) | 190 (89%) | 307 (92%) | 1101 |
+| Write (explanation) | · | 4 (4%) | 13 (5%) | 15 (6%) | 19 (9%) | 25 (7%) | 76 |
+| Construct (plot / shade / draw) | 4 (14%) | · | · | 13 (5%) | 2 (<1%) | 3 (<1%) | 22 |
+| Match / order / sort | 4 (14%) | 2 (2%) | · | 1 (<1%) | · | · | 7 |
+| **Total** | 29 | 105 | 262 | 268 | 214 | 335 | 1213 |
 
 **MathFish (IM + Fishtank, K-5)** (n=4428)
 
 | Question type | K | 1 | 2 | 3 | 4 | 5 | Total |
 |---|---|---|---|---|---|---|---|
-| Selected response (single) | · | 1 (<1%) | 3 (<1%) | 4 (<1%) | 3 (<1%) | 5 (<1%) | 16 |
-| Multi-select | · | 1 (<1%) | 3 (<1%) | 1 (<1%) | 4 (<1%) | · | 9 |
-| Numeric / short answer | 109 (19%) | 167 (25%) | 170 (28%) | 227 (27%) | 197 (23%) | 212 (25%) | 1082 |
-| Match / sort | 6 (1%) | 5 (<1%) | 2 (<1%) | 4 (<1%) | 3 (<1%) | 3 (<1%) | 23 |
-| Draw / plot / shade | 10 (2%) | 8 (1%) | 30 (5%) | 46 (5%) | 44 (5%) | 36 (4%) | 174 |
-| Constructed response (explain) | 69 (12%) | 217 (32%) | 220 (36%) | 399 (47%) | 471 (55%) | 475 (55%) | 1851 |
-| Open activity (no scorable answer) | 373 (66%) | 270 (40%) | 188 (31%) | 169 (20%) | 139 (16%) | 134 (15%) | 1273 |
+| Select one | 49 (9%) | 61 (9%) | 35 (6%) | 28 (3%) | 9 (1%) | 15 (2%) | 197 |
+| Select many | 5 (<1%) | 1 (<1%) | 2 (<1%) | 1 (<1%) | 2 (<1%) | · | 11 |
+| Enter (number / expression) | 74 (13%) | 109 (16%) | 87 (14%) | 122 (14%) | 99 (11%) | 117 (14%) | 608 |
+| Write (explanation) | 50 (9%) | 128 (19%) | 84 (14%) | 150 (18%) | 135 (16%) | 139 (16%) | 686 |
+| Construct (plot / shade / draw) | 6 (1%) | 4 (<1%) | 4 (<1%) | 21 (2%) | 8 (<1%) | 9 (1%) | 52 |
+| Match / order / sort | 8 (1%) | 5 (<1%) | 3 (<1%) | 4 (<1%) | 2 (<1%) | 2 (<1%) | 24 |
+| Multi-part | 31 (5%) | 118 (18%) | 223 (36%) | 361 (42%) | 472 (55%) | 455 (53%) | 1660 |
+| Open activity (outside the scheme) | 344 (61%) | 243 (36%) | 178 (29%) | 163 (19%) | 134 (16%) | 128 (15%) | 1190 |
 | **Total** | 567 | 669 | 616 | 850 | 861 | 865 | 4428 |
 
 
-#### 10.4 Which standards each question type concentrates on
+#### 10.5 Which standards each question type concentrates on
 
 Common Core standards (e.g. `3.OA.4`; sub-letters merged) with the most items of each type. *share* = that type's share of the standard's items (standards with ≥ 8 items in the source). Full per-standard counts: `tables/standard_by_type.csv`.
 
@@ -789,95 +882,127 @@ Common Core standards (e.g. `3.OA.4`; sub-letters merged) with the most items of
 
 | Question type | Top standards: count (share of standard's items) |
 |---|---|
-| Selected response (single) | `1.MD.1` 1 (12%), `5.G.3` 1 (5%), `5.G.4` 1 (5%), `3.MD.7` 3 (4%), `2.NBT.4` 1 (4%), `5.NF.1` 2 (4%) |
-| Multi-select | `2.MD.4` 1 (8%), `3.G.2` 1 (8%), `2.NBT.3` 1 (7%), `4.MD.1` 2 (5%), `1.NBT.5` 1 (5%), `2.OA.4` 1 (4%) |
-| Numeric / short answer | `2.NBT.6` 7 (70%), `4.OA.1` 13 (68%), `K.CC.A` 6 (60%), `5.MD.1` 13 (50%), `2.NBT.3` 7 (50%), `4.NBT.B` 5 (50%) |
-| Match / sort | `4.NF.7` 2 (14%), `K.MD.3` 1 (9%), `1.NBT.3` 3 (8%), `1.G.2` 1 (7%), `K.G.2` 1 (7%), `K.G.1` 1 (6%) |
-| Draw / plot / shade | `2.G.2` 6 (67%), `4.MD.6` 8 (36%), `5.OA.3` 5 (36%), `5.G.2` 7 (33%), `4.G.3` 7 (29%), `5.G.1` 9 (29%) |
-| Constructed response (explain) | `5.OA.A` 8 (89%), `4.NF.1` 33 (87%), `5.NF.2` 30 (86%), `5.NF.5` 38 (84%), `4.OA.5` 20 (83%), `5.MD.3` 9 (82%) |
-| Open activity (no scorable answer) | `K.G` 19 (100%), `4.G.A` 10 (100%), `5.G.B` 21 (95%), `K.G.5` 17 (94%), `K.CC.6` 42 (89%), `2.G.A` 8 (89%) |
+| Select one | `1.NBT.5` 8 (38%), `1.NBT.6` 4 (31%), `1.OA.5` 22 (29%), `5.MD.3` 3 (27%), `1.OA.8` 13 (27%), `2.G.A` 2 (22%) |
+| Select many | `K.MD.2` 4 (29%), `3.G.2` 1 (8%), `2.NBT.3` 1 (7%), `1.NBT.5` 1 (5%), `2.OA.4` 1 (4%), `4.MD.1` 1 (3%) |
+| Enter (number / expression) | `2.NBT.6` 7 (70%), `K.CC.A` 6 (60%), `K.CC.C` 4 (44%), `1.NBT.B` 5 (33%), `1.OA.7` 8 (32%), `4.NBT.B` 3 (30%) |
+| Write (explanation) | `1.OA.7` 14 (56%), `5.OA.A` 5 (56%), `1.MD.1` 4 (50%), `3.OA.A` 4 (50%), `3.NBT.3` 6 (40%), `1.OA.3` 7 (37%) |
+| Construct (plot / shade / draw) | `K.G.2` 3 (20%), `3.G.2` 2 (17%), `K.MD.2` 2 (14%), `4.G.3` 3 (12%), `3.NF.1` 4 (11%), `2.G.2` 1 (11%) |
+| Match / order / sort | `K.MD.3` 3 (27%), `1.G.2` 2 (14%), `4.NF.7` 2 (14%), `1.MD.4` 2 (7%), `K.G.2` 1 (7%), `1.G.A` 2 (6%) |
+| Multi-part | `5.OA.3` 13 (93%), `2.MD.5` 10 (91%), `5.NBT.2` 26 (87%), `3.NBT.1` 30 (81%), `5.G.2` 17 (81%), `5.MD.1` 21 (81%) |
+| Open activity (outside the scheme) | `K.G` 19 (100%), `4.G.A` 10 (100%), `5.G.B` 21 (95%), `K.CC.1` 26 (87%), `K.CC.6` 40 (85%), `K.G.5` 15 (83%) |
 
 **Milestones** (standards with ≥ 3 items)
 
 | Question type | Top standards: count (share of standard's items) |
 |---|---|
-| Selected response (single) | `3.NBT.1` 3 (100%), `3.MD.4` 2 (67%), `3.OA.4` 2 (67%), `3.MD.3` 2 (67%), `4.NBT.3` 2 (67%), `5.NF.2` 2 (67%) |
-| Multi-select | `3.OA.4` 1 (33%), `4.OA.4` 1 (33%), `5.NBT.4` 1 (33%), `5.MD.5` 1 (33%), `4.NF.3` 1 (17%) |
-| Constructed response (explain) | `4.NF.3` 3 (50%), `3.NBT.2` 2 (50%), `3.MD.4` 1 (33%), `3.MD.3` 1 (33%), `4.OA.4` 1 (33%), `4.NBT.3` 1 (33%) |
+| Select one | `3.NBT.1` 3 (100%), `3.MD.4` 2 (67%), `3.OA.4` 2 (67%), `3.MD.3` 2 (67%), `4.NBT.3` 2 (67%), `5.NF.2` 2 (67%) |
+| Select many | `5.MD.5` 1 (33%), `4.NF.3` 1 (17%) |
+| Write (explanation) | `3.MD.3` 1 (33%), `4.NBT.3` 1 (33%), `3.NBT.2` 1 (25%), `4.NF.3` 1 (17%) |
+| Multi-part | `4.OA.4` 2 (67%), `4.NF.3` 2 (33%), `3.MD.4` 1 (33%), `3.OA.4` 1 (33%), `5.NF.2` 1 (33%), `5.NBT.7` 1 (33%) |
 
 **i-Ready practice** (standards with ≥ 3 items)
 
 | Question type | Top standards: count (share of standard's items) |
 |---|---|
-| Numeric / short answer | `3.OA.7` 9 (100%), `1.OA.6` 5 (100%), `2.OA.1` 4 (100%), `2.NBT.5` 4 (100%), `2.NBT.7` 4 (100%), `4.NBT.4` 4 (100%) |
-| Draw / plot / shade | `5.NF.4` 1 (33%), `4.NF.3` 1 (25%) |
-| Constructed response (explain) | `5.NBT.7` 1 (12%) |
+| Select one | `K.CC.6` 2 (50%), `K.CC.4` 1 (33%), `3.OA.8` 1 (7%) |
+| Select many | `4.NBT.2` 3 (18%) |
+| Enter (number / expression) | `4.NBT.3` 19 (100%), `4.OA.2` 18 (100%), `4.NF.2` 16 (100%), `1.OA.1` 15 (100%), `2.MD.3` 10 (100%), `1.OA.7` 9 (100%) |
+| Write (explanation) | `5.NBT.1` 2 (67%), `3.OA.9` 1 (33%), `3.MD.7` 2 (25%), `3.OA.1` 1 (25%), `4.OA.3` 2 (18%), `4.NBT.6` 5 (16%) |
+| Construct (plot / shade / draw) | `3.OA.2` 4 (80%), `K.OA.3` 2 (50%), `3.NF.1` 4 (33%), `5.NBT.1` 1 (33%), `5.NF.4` 2 (9%), `3.OA.5` 2 (7%) |
+| Match / order / sort | `K.OA.1` 4 (100%), `3.OA.5` 1 (3%) |
 
 
-#### 10.5 Visual content (multimodal) by source
+#### 10.6 Stimulus (what the student looks at) by source
 
-| Visual category | Milestones (GaDOE EOG samples, gr 3-5) | i-Ready Diagnostic samples | i-Ready practice sets (K-5) | MathFish (IM + Fishtank, K-5) |
+| Stimulus | Milestones (GaDOE EOG samples, gr 3-5) | i-Ready Diagnostic samples | i-Ready practice problems (K-5) | MathFish (IM + Fishtank, K-5) |
 |---|---|---|---|---|
-| Text only | 69 (56%) | · | 83 (64%) | 2343 (53%) |
-| Table only | 7 (6%) | · | 7 (5%) | 198 (4%) |
-| Code-drawable diagram | 44 (36%) | 2 (20%) | 33 (26%) | 952 (21%) |
-| Illustration / photo | 3 (2%) | · | 6 (5%) | · |
+| None (text only) | 69 (56%) | · | 794 (65%) | 2343 (53%) |
+| Table (text / numbers in cells) | 7 (6%) | · | 3 (<1%) | 171 (4%) |
+| Diagram | 44 (36%) | 2 (20%) | 174 (14%) | 962 (22%) |
+| Illustration / photo | 3 (2%) | · | 9 (<1%) | · |
 | Interactive tool | · | 8 (80%) | · | · |
-| Image, kind unknown (MathFish) | · | · | · | 935 (21%) |
+| Image, kind unknown | · | · | 233 (19%) | 952 (21%) |
 
-Visual category × CCSS domain (share of the domain's items):
+Stimulus × question type (share of each type's questions):
 
 **Milestones (GaDOE EOG samples, gr 3-5)**
 
-| Visual category | OA | NBT | NF | MD | G | Total |
-|---|---|---|---|---|---|---|
-| Text only | 20 (80%) | 22 (81%) | 15 (56%) | 7 (24%) | 5 (33%) | 69 |
-| Table only | 2 (8%) | 1 (4%) | 1 (4%) | 3 (10%) | · | 7 |
-| Code-drawable diagram | 2 (8%) | 4 (15%) | 11 (41%) | 17 (59%) | 10 (67%) | 44 |
-| Illustration / photo | 1 (4%) | · | · | 2 (7%) | · | 3 |
-| **Total** | 25 | 27 | 27 | 29 | 15 | 123 |
+| Stimulus | Select one | Select many | Write | Multi-part | Total |
+|---|---|---|---|---|---|
+| None (text only) | 46 (55%) | 2 (67%) | 6 (55%) | 15 (58%) | 69 |
+| Table (text / numbers in cells) | 4 (5%) | 1 (33%) | 1 (9%) | 1 (4%) | 7 |
+| Diagram | 30 (36%) | · | 4 (36%) | 10 (38%) | 44 |
+| Illustration / photo | 3 (4%) | · | · | · | 3 |
+| **Total** | 83 | 3 | 11 | 26 | 123 |
+
+**i-Ready Diagnostic samples**
+
+| Stimulus | Select one | Enter | Construct | Total |
+|---|---|---|---|---|
+| Diagram | 1 (14%) | 1 (50%) | · | 2 |
+| Interactive tool | 6 (86%) | 1 (50%) | 1 (100%) | 8 |
+| **Total** | 7 | 2 | 1 | 10 |
+
+**i-Ready practice problems (K-5)**
+
+| Stimulus | Select one | Select many | Enter | Write | Construct | Match / order / sort | Total |
+|---|---|---|---|---|---|---|---|
+| None (text only) | 1 (25%) | 3 (100%) | 717 (65%) | 58 (76%) | 14 (64%) | 1 (14%) | 794 |
+| Table (text / numbers in cells) | · | · | 3 (<1%) | · | · | · | 3 |
+| Diagram | · | · | 153 (14%) | 7 (9%) | 8 (36%) | 6 (86%) | 174 |
+| Illustration / photo | 3 (75%) | · | 6 (<1%) | · | · | · | 9 |
+| Image, kind unknown | · | · | 222 (20%) | 11 (14%) | · | · | 233 |
+| **Total** | 4 | 3 | 1101 | 76 | 22 | 7 | 1213 |
 
 **MathFish (IM + Fishtank, K-5)**
 
-| Visual category | CC | OA | NBT | NF | MD | G | Total |
+| Stimulus | Select one | Select many | Enter | Write | Construct | Match / order / sort | Multi-part | Open activity | Total |
+|---|---|---|---|---|---|---|---|---|---|
+| None (text only) | 14 (7%) | 4 (36%) | 367 (60%) | 309 (45%) | 11 (21%) | 7 (29%) | 616 (37%) | 1015 (85%) | 2343 |
+| Table (text / numbers in cells) | 3 (2%) | · | 35 (6%) | 13 (2%) | · | · | 110 (7%) | 10 (<1%) | 171 |
+| Diagram | 45 (23%) | 5 (45%) | 114 (19%) | 111 (16%) | 36 (69%) | 6 (25%) | 579 (35%) | 66 (6%) | 962 |
+| Image, kind unknown | 135 (69%) | 2 (18%) | 92 (15%) | 253 (37%) | 5 (10%) | 11 (46%) | 355 (21%) | 99 (8%) | 952 |
+| **Total** | 197 | 11 | 608 | 686 | 52 | 24 | 1660 | 1190 | 4428 |
+
+Stimulus × CCSS domain (share of the domain's questions):
+
+**Milestones (GaDOE EOG samples, gr 3-5)**
+
+| Stimulus | OA | NBT | NF | MD | G | Total |
+|---|---|---|---|---|---|---|
+| None (text only) | 20 (80%) | 22 (81%) | 15 (56%) | 7 (24%) | 5 (33%) | 69 |
+| Table (text / numbers in cells) | 2 (8%) | 1 (4%) | 1 (4%) | 3 (10%) | · | 7 |
+| Diagram | 2 (8%) | 4 (15%) | 11 (41%) | 17 (59%) | 10 (67%) | 44 |
+| Illustration / photo | 1 (4%) | · | · | 2 (7%) | · | 3 |
+| **Total** | 25 | 27 | 27 | 29 | 15 | 123 |
+
+**i-Ready practice problems (K-5)**
+
+| Stimulus | CC | OA | NBT | NF | MD | Total |
+|---|---|---|---|---|---|---|
+| None (text only) | · | 258 (58%) | 381 (69%) | 140 (84%) | 15 (44%) | 794 |
+| Table (text / numbers in cells) | · | · | 3 (<1%) | · | · | 3 |
+| Diagram | 6 (55%) | 97 (22%) | 45 (8%) | 11 (7%) | 15 (44%) | 174 |
+| Illustration / photo | 5 (45%) | · | · | · | 4 (12%) | 9 |
+| Image, kind unknown | · | 91 (20%) | 127 (23%) | 15 (9%) | · | 233 |
+| **Total** | 11 | 446 | 556 | 166 | 34 | 1213 |
+
+**MathFish (IM + Fishtank, K-5)**
+
+| Stimulus | CC | OA | NBT | NF | MD | G | Total |
 |---|---|---|---|---|---|---|---|
-| Text only | 198 (63%) | 529 (55%) | 739 (61%) | 388 (56%) | 282 (36%) | 207 (45%) | 2343 |
-| Table only | 1 (<1%) | 42 (4%) | 57 (5%) | 39 (6%) | 46 (6%) | 13 (3%) | 198 |
-| Code-drawable diagram | 42 (13%) | 111 (12%) | 145 (12%) | 168 (24%) | 308 (39%) | 178 (38%) | 952 |
-| Image, kind unknown (MathFish) | 72 (23%) | 279 (29%) | 263 (22%) | 100 (14%) | 155 (20%) | 66 (14%) | 935 |
+| None (text only) | 198 (63%) | 529 (55%) | 739 (61%) | 388 (56%) | 282 (36%) | 207 (45%) | 2343 |
+| Table (text / numbers in cells) | 1 (<1%) | 38 (4%) | 50 (4%) | 32 (5%) | 41 (5%) | 9 (2%) | 171 |
+| Diagram | 42 (13%) | 112 (12%) | 147 (12%) | 168 (24%) | 311 (39%) | 182 (39%) | 962 |
+| Image, kind unknown | 72 (23%) | 282 (29%) | 268 (22%) | 107 (15%) | 157 (20%) | 66 (14%) | 952 |
 | **Total** | 313 | 961 | 1204 | 695 | 791 | 464 | 4428 |
 
-Code-drawable diagram kinds (count of items showing each kind):
+Diagram kinds (count of questions showing each kind):
 
 | Source | Diagram kinds |
 |---|---|
 | Milestones (GaDOE EOG samples, gr 3-5) | geometry_2d 9, fraction_model 7, area_grid 4, number_line 4, coordinate_grid 4, line_plot 4, ruler 3, picture_graph 2, clock 2, decimal_grid 2, geometry_3d 2, equal_groups_array 1, bar_graph 1, protractor 1, measurement_scale 1 |
 | i-Ready Diagnostic samples | ruler 2, counters 1, number_line 1, geometry_3d 1, base_ten 1, protractor 1, geometry_2d 1, area_grid 1, ten_frame 1 |
-| i-Ready practice sets (K-5) | counters 9, number_line 8, ten_frame 6, cubes 5, number_bond 4, ruler 2, equal_groups_array 2, fraction_model 2, base_ten 1, clock 1, decimal_grid 1, area_grid 1 |
-| MathFish (IM + Fishtank, K-5) | geometry_2d 407, number_line 160, area_grid 138, fraction_model 86, geometry_3d 76, base_ten 72, counters 59, protractor 52, equal_groups_array 34, money 32, coordinate_grid 30, clock 29, line_plot 27, ten_frame 25, bar_graph 21, ruler 20, picture_graph 12, tape_diagram 3 |
-
-#### 10.6 Problem context by source
-
-| Context | Milestones (GaDOE EOG samples, gr 3-5) | i-Ready Diagnostic samples | i-Ready practice sets (K-5) | MathFish (IM + Fishtank, K-5) |
-|---|---|---|---|---|
-| Symbolic (bare numbers) | 45 (37%) | 8 (80%) | 76 (59%) | 856 (19%) |
-| Word problem | 49 (40%) | 2 (20%) | 23 (18%) | 2398 (54%) |
-| Visual model | 29 (24%) | · | 30 (23%) | 1174 (27%) |
-
-#### 10.7 Milestones: question type × DOK level
-
-| Question type | DOK 1 | DOK 2 | DOK 3 | Total |
-|---|---|---|---|---|
-| Selected response (single) | 33 (100%) | 49 (67%) | 4 (24%) | 86 |
-| Multi-select | · | 5 (7%) | 1 (6%) | 6 |
-| Constructed response (explain) | · | 19 (26%) | 12 (71%) | 31 |
-| **Total** | 33 | 73 | 17 | 123 |
-
-#### 10.8 How reliable is the MathFish tagger?
-
-| Check | Agreement | Cohen's κ |
-|---|---|---|
-| Text tagger vs GaDOE's official item type (123 Milestones items) | 113/123 (92%) | 0.83 |
-| Tagger vs our hand labels, held-out MathFish sample (blind; one rule fixed afterwards, see below) | 23/30 (77%) | 0.65 |
-| Tagger vs our hand labels, tuning MathFish sample (rules were refined on it, optimistic) | 37/40 (92%) | 0.89 |
+| i-Ready practice problems (K-5) | geometry_2d 52, number_bond 30, ten_frame 25, number_line 24, counters 17, cubes 13, ruler 10, base_ten 8, fraction_model 8, clock 6, equal_groups_array 3, area_grid 2, decimal_grid 1 |
+| MathFish (IM + Fishtank, K-5) | geometry_2d 412, number_line 160, area_grid 138, fraction_model 86, geometry_3d 78, base_ten 75, counters 59, protractor 55, table_with_pictures 55, equal_groups_array 34, money 32, coordinate_grid 30, clock 29, line_plot 27, ten_frame 25, bar_graph 21, ruler 20, picture_graph 12, tape_diagram 3 |
 <!-- TABLES:END -->
