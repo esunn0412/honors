@@ -55,12 +55,12 @@ bullet of a VA standard, while we map the whole standard.
 **To discuss:**
 
 - There is no independent gold mapping for GA; I'm the only reviewer. Is that acceptable
-  for the thesis, or should a second person (e.g. Prof. Kwon or a teacher) review a sample?
+  for the thesis, or should a second person review a sample?
 - The 14 GA-only standards (mostly patterns and money) have no CCSS Progressions to ground
   prerequisites on. The plan is to author those edges by hand from GA's own documents
-  (`provenance: ga_native`). OK?
+  (`provenance: ga_native`), or by hierarchical connection. OK?
 - Still open: run `map_state_to_ccss.py` with an API key for reproducibility; currently the
-  classification was done in a Claude Code session with the same rules.
+  classification was done with claude, so not reproducible.
 
 ---
 
@@ -78,24 +78,14 @@ two clean stages.
 
 **Other evidence gathered:**
 
-- **Achieve the Core coherence map** (from MathFish): confirms 45% of our resolvable edges
-  independently and suggests 11 missing edges, mostly fractions → line plots. It can't
-  replace the PDF approach: no GA codes, no per-edge citations, no sub-standard sequencing.
-- **Georgia's own "Learning Progressions" table** (GA standards document, pp. 5-6) mapped to
-  GA codes: all 150 codes appear in it; 5 table cells describe content no standard
+- **Achieve the Core coherence map** (from MathFish)
+- **Georgia's own "Learning Progressions" table** : 5 table cells describe content no standard
   contains.
-
-**Answer to Sep 1's question ("can the progression be implied from the mapping?"):**
-mostly, yes. Where GA and CCSS match 1:1 the CCSS edge carries over directly. Merges and
-splits fan out into several GA edges, which are kept as siblings. Only the 14 GA-only
-standards need hand-authored edges.
 
 **To discuss:**
 
 - How should the progression be evaluated for correctness? Options: agreement with Achieve
-  the Core and with GA's own table (available now), or student data later.
-- Are the 11 Achieve the Core edges worth adding?
-
+  the Core and with GA's own table (available now), or self-review again.
 ---
 
 ## 3. Question types (`processed/question_types/`)
@@ -168,13 +158,3 @@ standards need hand-authored edges.
 - **Pictures:** build a code-based diagram library (geometry figures, fraction models,
   number lines, grids, line plots first)?
 
----
-
-## Questions for Dr. Choi (short list)
-
-1. Is a single reviewer enough for the GA mapping, or should someone review a sample?
-2. How should we evaluate the progression mapping?
-3. Do you agree with the generator's target formats (§3)?
-4. Should the type-per-standard work start with grade 4?
-5. Is getting current Milestones items worth pursuing, and how?
-6. Committee: status of Prof. Kwon (from Sep 1)?
