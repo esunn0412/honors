@@ -158,18 +158,3 @@ two clean stages.
   item sets counted as multi-part and DOK/context left out. Agree?
 - **Validation plan:** who checks the labels in the review page, and on how big a sample per
   source?
-- **Target formats for the generator.** Proposal: select one (4 options) with error-based
-  distractors (modeled on GaDOE's rationales), select many, multi-part (enter → write;
-  select → select), enter, write with a rubric, and construct (number-line plotting) for
-  i-Ready. Agree?
-- **Next step from Sep 15 (type per standard):** start from the observed type-per-standard
-  counts (`tables/standard_by_type.csv`), then have an LLM generate each type per standard,
-  solve it, and discard infeasible ones. Pick one grade first (grade 4, as suggested
-  earlier)?
-- **Current Milestones items:** is hand-transcribing the online practice tests worth it, or
-  can we get portal / GOFAR access through a district?
-- **More i-Ready items:** is there a legitimate route to more Diagnostic items (e.g. a
-  teacher account)?
-- **Pictures:** build a code-based diagram library (geometry figures, fraction models,
-  number lines, grids, line plots first)?
-
