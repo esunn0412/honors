@@ -1,0 +1,1251 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Prerequisite dependency graph for K-5 CCSS Math standards, written purely in CCSS code space (no Georgia GSE codes). Grounded in a full, direct read of the combined CCSS Progressions PDF (processed/scripts/ccss_progressions_all.pdf), restricted to the K-5 portion of each sub-document. This supersedes the CCSS-side interpretation embedded in ../math_prereq_grounding.json (which mixed CCSS reading with Georgia-code translation into a single hand-authored pass, producing messier citations). This file is Stage 1 of the progression-mapping pipeline described in README.md; Stage 2 (a separate script, not yet written) will translate these edges into Georgia GSE codes via ../state_ccss_mapping/states/ga/mapping_final.json.",
+    "status": "COMPLETE for K-5 scope. All 6 K-5 sub-documents bundled in ccss_progressions_all.pdf have been read in full (every page, not sampled): Counting & Cardinality / Operations & Algebraic Thinking (K-5), Number & Operations in Base Ten (K-5), Measurement & Data (K-5), Geometric Measurement (K-5), Geometry (K-6, K-5 portion), and Number & Operations--Fractions (3-5). The document continues past this file's scope into Ratios & Proportional Relationships (6-7) and beyond (Number System, Expressions & Equations, Functions, Statistics & Probability 6+, Geometry 7-8/HS, Algebra) -- none of that was read, since none of it is K-5 content.",
+    "source_pdf": "processed/scripts/ccss_progressions_all.pdf (333 pages total; K-5 content read spans absolute pages 16-161; fetched from https://mathematicalmusings.org/wp-content/uploads/2023/05/Progressions.pdf, this printing dated May 24, 2023)",
+    "page_citation_note": "All page numbers below are ABSOLUTE page numbers within ccss_progressions_all.pdf (the number you would pass to a PDF page-range reader to find that page again), NOT the printed page number shown in each sub-document's own header/footer. Empirically, absolute_page = printed_page + 6 throughout this file's body, but every citation was individually verified against the actual page image during extraction, not computed from the offset alone.",
+    "sub_documents": [
+      {
+        "name": "Counting and Cardinality, K; Operations and Algebraic Thinking, K-5",
+        "pages": "16-51",
+        "covers": "K.CC, K.OA, 1.OA, 2.OA, 3.OA, 4.OA, 5.OA"
+      },
+      {
+        "name": "Number and Operations in Base Ten, K-5",
+        "pages": "58-77",
+        "covers": "K.NBT, 1.NBT, 2.NBT, 3.NBT, 4.NBT, 5.NBT"
+      },
+      {
+        "name": "Measurement and Data, K-5 (Categorical Data K-3; Measurement Data 2-5)",
+        "pages": "78-91",
+        "covers": "K.MD.3, 1.MD.4, 2.MD.9-10, 3.MD.3-4, 4.MD.4, 5.MD.2 and their categorical/measurement-data connections"
+      },
+      {
+        "name": "Geometric Measurement, K-5",
+        "pages": "92-117",
+        "covers": "K.MD.1-2, 1.MD.1-2, 2.MD.1-6,9, 3.MD.1-2,5-8, 4.MD.1-3,5-7, 5.MD.1,3-5"
+      },
+      {
+        "name": "Geometry, K-6 (K-5 portion)",
+        "pages": "119-135",
+        "covers": "K.G.1-6, 1.G.1-3, 2.G.1-3, 3.G.1-2, 4.G.1-3, 5.G.1-4"
+      },
+      {
+        "name": "Number and Operations--Fractions, 3-5",
+        "pages": "139-161",
+        "covers": "3.NF.1-3, 4.NF.1-7, 5.NF.1-7"
+      }
+    ],
+    "rule_taxonomy": {
+      "grade_progression": "The same concept extends from one grade to the next. Same operation or idea, larger scope, deeper representation.",
+      "scope_expansion": "Same concept, expanded number range or added complexity within a grade level or across a closely related grade band.",
+      "concept_foundation": "One standard is a named conceptual prerequisite for another; the second cannot be meaningfully taught without the first.",
+      "bloom_progression": "Lower cognitive level (Remember/Understand) on the same concept precedes higher level (Apply/Analyze/Create).",
+      "decomposition": "A composite standard broken into ordered sub-skills; foundational sub-skill precedes the composite whole."
+    },
+    "edge_count": 147,
+    "edge_count_by_rule": {
+      "decomposition": 16,
+      "concept_foundation": 58,
+      "grade_progression": 57,
+      "scope_expansion": 3,
+      "bloom_progression": 13
+    },
+    "edge_count_by_source_domain": {
+      "CC": 13,
+      "OA": 21,
+      "NBT": 18,
+      "MD": 36,
+      "NF": 42,
+      "G": 17
+    },
+    "notes": [
+      "Coverage bar: only edges with an explicit code-to-code textual claim were included (signal phrases like 'prerequisite for', 'builds on', 'extends to', 'sets the stage for', 'culminate in', an explicit named connections table, or the standard's own lettered sub-parts discussed in sequence). Plausible-but-uncited inferences were deliberately left out rather than forced -- this file is not exhaustive of every possible prerequisite relationship in K-5 math, only of what the Progressions text explicitly supports with a quotable passage.",
+      "A block of 17 edges (feeding K.MD.3, 1.MD.4, 2.MD.10, 3.MD.3, 2.MD.9, 3.MD.4, 4.MD.4, 5.MD.2) are drawn directly from the Measurement and Data Progression's own 'Notable connections' table (p.80), not narrative prose -- these are the document's own explicit cross-references, the strongest citation type in this file.",
+      "Sub-standard-letter sequencing (e.g. K.CC.4a -> K.CC.4b -> K.CC.4c, 5.MD.5a -> 5.MD.5b -> 5.MD.5c) is included wherever the narrative discusses a composite standard's lettered parts in order -- this is exactly the granularity the Achieve the Core / MathFish coherence map does NOT capture (see ../README.md's MathFish comparison section), and is one of this file's main advantages over that source.",
+      "continues_beyond_k5 is true on exactly one edge (5.NF.4 -> 5.NF.5a, page 160), where the source text explicitly frames the concept as preparation for Grade 6 ratios and proportional relationships work; every other edge's 'to' code is fully within K-5.",
+      "This file does NOT include Georgia GSE codes, patterns/money/time content (Georgia-specific, no CCSS equivalent), or any cross-validation against the Achieve the Core dataset -- see ../README.md for how those fit into the overall pipeline (Stage 2 translation, and the separate MathFish comparison).",
+      "All 147 dependency edges were validated to reference only codes present in ../state_ccss_mapping/ccss_standards/ccss_math_{0..5}.json (the authoritative K-5 CCSS leaf-code list); zero invalid codes and zero duplicate (from,to) pairs."
+    ]
+  },
+  "dependencies": [
+    {
+      "from": "K.CC.4a",
+      "to": "K.CC.4b",
+      "rule": "decomposition",
+      "page": 17,
+      "source": "To count a group of objects, they pair each word said with one object. [...] Students understand that the last number name said in counting tells the number of objects counted.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.4b",
+      "to": "K.CC.4c",
+      "rule": "decomposition",
+      "page": 17,
+      "source": "Experience with counting allows students to discuss and come to understand the second part of K.CC.4b—that the number of objects is the same regardless of their arrangement or the order in which they were counted. [...] Finally, understanding that each successive number name refers to a quantity that is one larger is the conceptual start for Grade 1 counting on.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.2",
+      "to": "1.OA.6",
+      "rule": "concept_foundation",
+      "page": 17,
+      "source": "Being able to count forward, beginning from a given number within the known sequence, is a prerequisite for such counting on.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.4c",
+      "to": "1.OA.6",
+      "rule": "concept_foundation",
+      "page": 17,
+      "source": "Finally, understanding that each successive number name refers to a quantity that is one larger is the conceptual start for Grade 1 counting on. Prior to reaching this understanding, a student might have to recount entirely a collection of known cardinality to which a single object has been added.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.4b",
+      "to": "1.OA.6",
+      "rule": "grade_progression",
+      "page": 17,
+      "source": "This connection will continue in Grade 1 with the more advanced counting-on methods in which a counting word represents a group of objects that are added or subtracted and addends become embedded within the total.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.6",
+      "to": "1.OA.1",
+      "rule": "grade_progression",
+      "page": 21,
+      "source": "Compare problems build upon Kindergarten comparisons, in which students identified “Which is more?” or “Which is less?” without ascertaining the difference between the numbers.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.7",
+      "to": "1.OA.1",
+      "rule": "grade_progression",
+      "page": 21,
+      "source": "Compare problems build upon Kindergarten comparisons, in which students identified “Which is more?” or “Which is less?” without ascertaining the difference between the numbers.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.OA.3",
+      "to": "K.NBT.1",
+      "rule": "scope_expansion",
+      "page": 20,
+      "source": "Experience with decompositions of numbers and with Add To and Take From situations enables students to begin to fluently add and subtract within 5. Finally, composing and decomposing numbers from 11 to 19 into ten ones and some further ones builds from this work. This is a vital first step that kindergartners must take toward understanding base-ten notation for numbers greater than 9.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.OA.4",
+      "to": "1.OA.6",
+      "rule": "concept_foundation",
+      "page": 25,
+      "source": "These make-a-ten methods have three prerequisites reaching back to Kindergarten: a. knowing the partner that makes 10 for any number (K.OA.4 sets the stage for this)",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.OA.3",
+      "to": "1.OA.6",
+      "rule": "concept_foundation",
+      "page": 25,
+      "source": "b. knowing all decompositions for any number below 10 (K.OA.3 sets the stage for this)",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.NBT.1",
+      "to": "1.OA.6",
+      "rule": "concept_foundation",
+      "page": 25,
+      "source": "c. knowing all teen numbers as 10 + n (e.g., 12 = 10 + 2, 15 = 10 + 5, see K.NBT.1 and 1.NBT.2b).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.NBT.2b",
+      "to": "1.OA.6",
+      "rule": "concept_foundation",
+      "page": 25,
+      "source": "c. knowing all teen numbers as 10 + n (e.g., 12 = 10 + 2, 15 = 10 + 5, see K.NBT.1 and 1.NBT.2b).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.OA.6",
+      "to": "2.OA.2",
+      "rule": "grade_progression",
+      "page": 27,
+      "source": "The deep extended experiences students have with addition and subtraction in Kindergarten and Grade 1 culminate in Grade 2 with students becoming fluent in single-digit additions and the related subtractions using the mental Level 2 and 3 strategies as needed.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.OA.1",
+      "to": "2.OA.1",
+      "rule": "grade_progression",
+      "page": 27,
+      "source": "Grade 2 students build upon their work in Grade 1 in two major ways. They represent and solve situational problems of all three types which involve addition and subtraction within 100 rather than within 20, and they represent and solve two-step situational problems of all three types.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.6",
+      "to": "3.NF.2",
+      "rule": "concept_foundation",
+      "page": 26,
+      "source": "Number line diagrams are introduced in Grade 2 when students have had experience with length units on measuring tools... the same diagrams can represent the adding and subtracting situations for all of the numbers students encounter in later grades (whether they are represented as multi-digit whole numbers, fractions, decimals, or variables; see, e.g., the Number and Operations—Fractions Progression, p. 144).",
+      "continues_beyond_k5": false,
+      "note": "target standard to re-verify once NF section (~p.139-155) is read directly"
+    },
+    {
+      "from": "2.OA.3",
+      "to": "3.OA.7",
+      "rule": "concept_foundation",
+      "page": 34,
+      "source": "The Grade 2 standards 2.OA.3 and 2.OA.4 are at this level but set the stage for Level 2. Standard 2.OA.3 relates doubles additions up to 20 to the concept of odd and even numbers and to counting by 2s (the easiest count-by in Level 2).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.OA.4",
+      "to": "3.OA.1",
+      "rule": "concept_foundation",
+      "page": 34,
+      "source": "2.OA.4 focuses on using addition to find the total number of objects arranged in rectangular arrays (up to 5 by 5).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.MD.7",
+      "to": "4.NBT.5",
+      "rule": "grade_progression",
+      "page": 33,
+      "source": "Area problems where regions are partitioned by unit squares are foundational for Grade 3 standards because area is used to represent single-digit multiplication and division strategies, multi-digit multiplication and division in Grade 4, and multiplication and division of fractions in Grades 5 and 6.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.MD.7",
+      "to": "5.NBT.6",
+      "rule": "grade_progression",
+      "page": 33,
+      "source": "Area problems where regions are partitioned by unit squares are foundational for Grade 3 standards because area is used to represent single-digit multiplication and division strategies, multi-digit multiplication and division in Grade 4, and multiplication and division of fractions in Grades 5 and 6.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.1",
+      "to": "3.MD.5",
+      "rule": "grade_progression",
+      "page": 33,
+      "source": "Variations of each type that use measurements instead of discrete objects are given in the Geometric Measurement Progression. Grade 2 standards focus on length measurement and Grade 3 standards focus on area measurement.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.OA.1",
+      "to": "3.OA.8",
+      "rule": "grade_progression",
+      "page": 43,
+      "source": "As with two-step problems at Grade 2 which involve only addition and subtraction (2.OA.1 and 2.MD.5), the Grade 3 two-step word problems vary greatly in difficulty and ease of representation.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.5",
+      "to": "3.OA.8",
+      "rule": "grade_progression",
+      "page": 43,
+      "source": "As with two-step problems at Grade 2 which involve only addition and subtraction (2.OA.1 and 2.MD.5), the Grade 3 two-step word problems vary greatly in difficulty and ease of representation.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.OA.1",
+      "to": "4.OA.1",
+      "rule": "grade_progression",
+      "page": 44,
+      "source": "Students in earlier grades learned to compare these heights in an additive sense—“This one is 32 feet higher than that one”—by solving additive Compare problems and using addition and subtraction to solve word problems involving length. Students in Grade 4 learn to compare these quantities multiplicatively as well: “This one is 5 times as high as that one.”",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.5",
+      "to": "4.MD.2",
+      "rule": "grade_progression",
+      "page": 44,
+      "source": "Students in earlier grades learned to compare these heights in an additive sense—“This one is 32 feet higher than that one”—by solving additive Compare problems and using addition and subtraction to solve word problems involving length. Students in Grade 4 learn to compare these quantities multiplicatively as well: “This one is 5 times as high as that one.”",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.OA.1",
+      "to": "4.OA.2",
+      "rule": "bloom_progression",
+      "page": 44,
+      "source": "4.OA.1 Interpret a multiplication equation as a comparison... 4.OA.2 Multiply or divide to solve word problems involving multiplicative comparison..., distinguishing multiplicative comparison from additive comparison.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.OA.5",
+      "to": "5.OA.3",
+      "rule": "grade_progression",
+      "page": 47,
+      "source": "Students extend their Grade 4 pattern work by working briefly with two numerical patterns that can be related and examining these relationships within sequences of ordered pairs and in the graphs in the first quadrant of the coordinate plane. This work prepares students for studying proportional relationships and functions in middle grades.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.OA.1",
+      "to": "4.OA.1",
+      "rule": "grade_progression",
+      "page": 48,
+      "source": "the concept of multiplication begins in Grade 3 with an entirely discrete notion of “equal groups.” By Grade 4, students can also interpret a multiplication equation as a statement of comparison involving the notion “times as much.”",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.OA.1",
+      "to": "4.NF.4",
+      "rule": "grade_progression",
+      "page": 48,
+      "source": "This notion easily includes continuous quantities, e.g., 3 = 4 × 3/4 might describe how 3 cups of flour are 4 times as much as 3/4 cup of flour.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.OA.1",
+      "to": "4.MD.2",
+      "rule": "grade_progression",
+      "page": 48,
+      "source": "This notion easily includes continuous quantities, e.g., 3 = 4 × 3/4 might describe how 3 cups of flour are 4 times as much as 3/4 cup of flour.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.4",
+      "to": "5.NF.4",
+      "rule": "grade_progression",
+      "page": 48,
+      "source": "By Grade 5, when students multiply fractions in general, products can be larger or smaller than either factor, and multiplication can be seen as an operation that “stretches or shrinks” by a scale factor.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.4",
+      "to": "5.NF.5",
+      "rule": "bloom_progression",
+      "page": 48,
+      "source": "By Grade 5, when students multiply fractions in general, products can be larger or smaller than either factor, and multiplication can be seen as an operation that “stretches or shrinks” by a scale factor. This view of multiplication as scaling is the appropriate notion for reasoning multiplicatively with continuous quantities.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.1",
+      "to": "K.NBT.1",
+      "rule": "concept_foundation",
+      "page": 61,
+      "source": "Children do count by tens in Kindergarten to develop understanding of and fluency with the pattern of decade words so that they can build all two-digit counting words.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.3",
+      "to": "K.NBT.1",
+      "rule": "concept_foundation",
+      "page": 61,
+      "source": "The 0 in 10 uses the understanding of “0 as a count of no objects,” but also is the first use of 0 as a placeholder when a digit in a place means 0 units, here 0 ones.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.NBT.1",
+      "to": "1.NBT.2a",
+      "rule": "grade_progression",
+      "page": 62,
+      "source": "In first grade, students learn to view ten ones as a unit called a “ten.” The ability to compose and decompose this unit flexibly and to view the numbers 11 to 19 as composed of one ten and some ones allows development of efficient, general base-ten methods for addition and subtraction.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.NBT.2a",
+      "to": "1.NBT.2b",
+      "rule": "decomposition",
+      "page": 62,
+      "source": "Grade 1 students take the important step of viewing ten ones as a unit called a “ten.” They learn to view the numbers 11 through 19 as composed of 1 ten and some ones.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.NBT.2b",
+      "to": "1.NBT.2c",
+      "rule": "decomposition",
+      "page": 62,
+      "source": "They learn to view the numbers 11 through 19 as composed of 1 ten and some ones. They learn to view the decade numbers 10, . . . , 90, in written and spoken form, as 1 ten, . . . , 9 tens.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.NBT.2c",
+      "to": "1.NBT.3",
+      "rule": "concept_foundation",
+      "page": 62,
+      "source": "Grade 1 students use their base-ten work to recognize that the digit in the tens place is more important for determining the size of a two-digit number. They use this understanding to compare two two-digit numbers, indicating the result with the symbols >, =, and <.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.NBT.5",
+      "to": "1.NBT.6",
+      "rule": "bloom_progression",
+      "page": 63,
+      "source": "First graders also engage in mental calculation, such as mentally finding 10 more or 10 less than a given two-digit number without having to count by ones. [...] In Grade 1, children learn to compute differences of two-digit numbers for limited cases.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.NBT.6",
+      "to": "2.NBT.7",
+      "rule": "grade_progression",
+      "page": 63,
+      "source": "First graders are not expected to compute differences of two-digit numbers other than multiples of ten. Deferring such work until Grade 2 allows two-digit subtraction with and without decomposing to occur in close succession, highlighting the similarity between these two cases.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.NBT.2a",
+      "to": "2.NBT.1a",
+      "rule": "grade_progression",
+      "page": 64,
+      "source": "In Grade 2, students extend their understanding of the base-ten system by viewing 10 tens as forming a new unit called a “hundred.” This lays the groundwork for understanding the structure of the base-ten system as based on repeated bundling in groups of 10 and understanding that the unit associated with each place is 10 of the unit associated with the place to its right.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.NBT.8",
+      "to": "2.NBT.2",
+      "rule": "scope_expansion",
+      "page": 64,
+      "source": "Building on their place value work, students continue to develop proficiency with mental computation. They extend this to skip-counting by 5s, 10s, and 100s to emphasize and experience the tens and hundreds within the sequence and to prepare for multiplication.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.NBT.2",
+      "to": "3.OA.1",
+      "rule": "concept_foundation",
+      "page": 64,
+      "source": "They extend this to skip-counting by 5s, 10s, and 100s to emphasize and experience the tens and hundreds within the sequence and to prepare for multiplication. Because 2.NBT.2 is designed to prepare for multiplication, there is no need to start skip-counting at numbers that are not multiples of 5.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.NBT.5",
+      "to": "2.NBT.7",
+      "rule": "scope_expansion",
+      "page": 65,
+      "source": "Students fluently add and subtract within 100. They also add and subtract within 1000. [...] Because adding and subtracting within 100 is a special case of adding and subtracting within 1000, methods within 1000 will be discussed before fluency within 100.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.NBT.4",
+      "to": "2.NBT.7",
+      "rule": "grade_progression",
+      "page": 66,
+      "source": "In Grade 1, students have added within 100 using objects or drawings and used at least one method that is generalizable to larger numbers (such as between 101 and 1000). In Grade 2, they can make that generalization, using drawings for understanding and explanation as discussed above.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.NBT.7",
+      "to": "3.NBT.2",
+      "rule": "grade_progression",
+      "page": 68,
+      "source": "At Grade 3, the major focus is multiplication (see the Operations and Algebraic Thinking Progression), so students’ work with addition and subtraction is limited to maintenance of fluency within 1000 for some students and building fluency to within 1000 for others. Students fluently add and subtract within 1000 using methods based on place value, properties of operations, and/or the relationship of addition and subtraction.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NBT.2",
+      "to": "4.NBT.4",
+      "rule": "grade_progression",
+      "page": 68,
+      "source": "They focus on methods that generalize readily to larger numbers so that these methods can be extended to 1,000,000 in Grade 4 and fluency can be reached with such larger numbers.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NBT.3",
+      "to": "4.NBT.5",
+      "rule": "grade_progression",
+      "page": 71,
+      "source": "One component of understanding general methods for multiplication is understanding how to compute products of one-digit numbers and multiples of 10, 100, and 1000. This extends work in Grade 3 on products of one-digit numbers and multiples of 10.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NBT.6",
+      "to": "5.NBT.6",
+      "rule": "grade_progression",
+      "page": 74,
+      "source": "Division in Grade 5 extends Grade 4 methods to two-digit divisors. Students continue to decompose the dividend into base-ten units and find the quotient place by place, starting from the highest place.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.7b",
+      "to": "5.NBT.7",
+      "rule": "concept_foundation",
+      "page": 76,
+      "source": "students can view 7 ÷ 0.1 = □ as asking how many tenths are in 7. [...] Because it takes 10 tenths to make 1, it takes 7 times as many tenths as it takes to make 7, so 7 ÷ 0.1 = 7 × 10 = 70.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.5",
+      "to": "5.NBT.7",
+      "rule": "concept_foundation",
+      "page": 76,
+      "source": "Dividing by a decimal less than 1 results in a quotient larger than the dividend and moves the digits of the dividend one place to the left.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.5",
+      "to": "K.MD.3",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (K.MD.3 row): K.CC. Counting to tell the number of objects.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.6",
+      "to": "K.MD.3",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (K.MD.3 row): K.CC. Comparing numbers.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.7",
+      "to": "K.MD.3",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (K.MD.3 row): K.CC. Comparing numbers.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.OA.1",
+      "to": "1.MD.4",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (1.MD.4 row): 1.OA. Problems involving addition and subtraction within 20 (Put Together, Take Apart, Compare).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.OA.2",
+      "to": "1.MD.4",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (1.MD.4 row): 1.OA. problems that call for addition of three whole numbers.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.OA.1",
+      "to": "2.MD.10",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (2.MD.10 row): 2.OA. Problems involving addition and subtraction within 100 (Put Together, Take Apart, Compare).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.OA.3",
+      "to": "3.MD.3",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (3.MD.3 row): 3.OA.3. Problems involving multiplication and division within 100.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.OA.8",
+      "to": "3.MD.3",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (3.MD.3 row): 3.OA.8. Two-step problems using the four operations.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.G.1",
+      "to": "3.MD.3",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (3.MD.3 row): 3.G.1. Categories of shapes.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.MD.2",
+      "to": "2.MD.9",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (2.MD.9 row): 1.MD.2. Length measurement.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.6",
+      "to": "2.MD.9",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (2.MD.9 row): 2.MD.6. Number line.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NF.2",
+      "to": "3.MD.4",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (3.MD.4 row): 3.NF.2. Fractions on a number line (Expectations limited to denominators 2, 3, 4, 6, and 8).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.3",
+      "to": "4.MD.4",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (4.MD.4 row): 4.NF.3,4. Problems involving fraction arithmetic (Expectations limited to denominators 2, 3, 4, 5, 6, 8, 10, and 12).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.4",
+      "to": "4.MD.4",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (4.MD.4 row): 4.NF.3,4. Problems involving fraction arithmetic (Expectations limited to denominators 2, 3, 4, 5, 6, 8, 10, and 12).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.1",
+      "to": "5.MD.2",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (5.MD.2 row): 5.NF.1,2,4,6,7. Problems involving fraction arithmetic (Division of a fraction by a fraction is not a requirement at this grade).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.2",
+      "to": "5.MD.2",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (5.MD.2 row): 5.NF.1,2,4,6,7. Problems involving fraction arithmetic (Division of a fraction by a fraction is not a requirement at this grade).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.4",
+      "to": "5.MD.2",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (5.MD.2 row): 5.NF.1,2,4,6,7. Problems involving fraction arithmetic (Division of a fraction by a fraction is not a requirement at this grade).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.6",
+      "to": "5.MD.2",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (5.MD.2 row): 5.NF.1,2,4,6,7. Problems involving fraction arithmetic (Division of a fraction by a fraction is not a requirement at this grade).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.7",
+      "to": "5.MD.2",
+      "rule": "concept_foundation",
+      "page": 80,
+      "source": "Notable connections table (5.MD.2 row): 5.NF.1,2,4,6,7. Problems involving fraction arithmetic (Division of a fraction by a fraction is not a requirement at this grade).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.MD.3",
+      "to": "1.MD.4",
+      "rule": "grade_progression",
+      "page": 82,
+      "source": "Students in Grade 1 begin to organize and represent categorical data. [...] Students’ data work in Grade 1 has important connections to addition and subtraction, as noted in the overview.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.MD.4",
+      "to": "2.MD.10",
+      "rule": "grade_progression",
+      "page": 83,
+      "source": "Students in Grade 2 draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. They solve simple Put Together, Take Apart, and Compare problems using information presented in a bar graph.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.10",
+      "to": "3.MD.3",
+      "rule": "grade_progression",
+      "page": 85,
+      "source": "In Grade 3, the most important development in data representation for categorical data is that students now draw picture graphs in which each picture represents more than one object, and they draw bar graphs in which the height of a given bar in tick marks must be multiplied by the scale factor in order to yield the number of objects in the given category.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.9",
+      "to": "3.MD.4",
+      "rule": "grade_progression",
+      "page": 88,
+      "source": "In Grade 3, students are beginning to learn fraction concepts. [...] They use their developing knowledge of fractions and number lines to extend their work from the previous grade by working with measurement data involving fractional measurement values.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.MD.4",
+      "to": "4.MD.4",
+      "rule": "grade_progression",
+      "page": 89,
+      "source": "As in Grade 3, expectations in the domain of measurement and data for Grades 4 and 5 are coordinated with grade-level expectations for work with fractions. Grade 4 students learn elements of fraction equivalence and arithmetic [...] Students can use these skills to solve problems, including problems that arise from analyzing line plots.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.1",
+      "to": "4.MD.4",
+      "rule": "concept_foundation",
+      "page": 89,
+      "source": "Grade 4 students learn elements of fraction equivalence and arithmetic, including multiplying a fraction by a whole number and adding and subtracting fractions with like denominators. Students can use these skills to solve problems, including problems that arise from analyzing line plots.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.6",
+      "to": "5.NBT.7",
+      "rule": "grade_progression",
+      "page": 89,
+      "source": "Measurements expressed in decimal notation can also be used in this grade, but computations in this notation are not expected until Grade 5.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.MD.4",
+      "to": "5.MD.2",
+      "rule": "grade_progression",
+      "page": 89,
+      "source": "Grade 5 students grow in their skill and understanding of fraction arithmetic, including adding and subtracting fractions with unlike denominators, multiplying a fraction by a fraction, and dividing a unit fraction by a whole number or a whole number by a unit fraction. Students can use these skills to solve problems, [...] including problems that arise from analyzing line plots.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.7c",
+      "to": "5.MD.2",
+      "rule": "concept_foundation",
+      "page": 89,
+      "source": "Students can use these skills to solve problems, including problems that arise from analyzing line plots. For example, given five graduated cylinders with different measures of liquid in each, students might find the amount of liquid each cylinder would contain if the total amount in all the cylinders were redistributed equally.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.MD.1",
+      "to": "K.MD.2",
+      "rule": "decomposition",
+      "page": 96,
+      "source": "As they discuss these situations and compare objects using different attributes, they learn to distinguish, label, and describe several measurable attributes of a single object. [...] Length. [...] Kindergartners easily compare lengths in simple situations, such as comparing people’s heights, because standing next to each other automatically aligns one endpoint.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.MD.2",
+      "to": "1.MD.1",
+      "rule": "grade_progression",
+      "page": 97,
+      "source": "Students who have these competencies can engage in experiences that lay the groundwork for later learning. Many can begin to learn to compare the lengths of two objects using a third object, order lengths, and connect number to length.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.MD.2",
+      "to": "2.MD.1",
+      "rule": "grade_progression",
+      "page": 102,
+      "source": "Second graders learn to measure length with a variety of tools, such as rulers, meter sticks, and measuring tapes. [...] As described for Grade 1, teachers and students can also call these “length-units.” Initially, students lay multiple copies of the same physical unit end-to-end along the ruler.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.CC.4",
+      "to": "2.MD.1",
+      "rule": "concept_foundation",
+      "page": 102,
+      "source": "accumulation of distance. Understanding that the counting “eight” when placing the last length-unit means the space covered by 8 length-units, rather then just the eighth length-unit. Note the connection to cardinality.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.1",
+      "to": "2.MD.2",
+      "rule": "bloom_progression",
+      "page": 103,
+      "source": "Second graders also learn the concept of the inverse relationship between the size of the unit of length and the number of units required to cover a specific length or distance.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.1",
+      "to": "2.MD.3",
+      "rule": "bloom_progression",
+      "page": 104,
+      "source": "After experience with measuring, second graders learn to estimate lengths. Real-world applications of length often involve estimation.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.4",
+      "to": "2.MD.5",
+      "rule": "bloom_progression",
+      "page": 104,
+      "source": "Second graders also learn to combine and compare lengths using arithmetic operations. That is, they can add two lengths to obtain the length of the whole and subtract one length from another to find out the difference in lengths. [...] As an arithmetic example, students might measure all the sides of a rectangle with unmarked (foot) rulers to measure how much ribbon they would need to decorate the perimeter of the table.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.5",
+      "to": "2.MD.6",
+      "rule": "concept_foundation",
+      "page": 104,
+      "source": "These understandings are essential in supporting work with number line diagrams. That is, to use a number line diagram to understand number and number operations, students need to understand that number line diagrams have specific conventions.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.G.2",
+      "to": "3.MD.7",
+      "rule": "concept_foundation",
+      "page": 105,
+      "source": "Grade 2 work in multiplication involves work with rectangular arrays, and this work is an ideal context in which to simultaneously develop both arithmetical and spatial structuring foundations for later work with area.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.MD.5",
+      "to": "3.MD.6",
+      "rule": "decomposition",
+      "page": 107,
+      "source": "To begin an explicit focus on area, teachers might then ask students which of three rectangles covers the most area. Students may first solve the problem with decomposition (cutting and/or folding) and re-composition, and eventually analyses with area-units, by covering each with unit squares (tiles).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.MD.6",
+      "to": "3.MD.7",
+      "rule": "bloom_progression",
+      "page": 107,
+      "source": "Students might then find the areas of other rectangles. As previously stated, students can be taught to multiply length measurements to find the area of a rectangular region. But, in order that they make sense of these quantities (MP.2), they first learn to interpret measurement of rectangular regions as a multiplicative relationship of the number of square units in a row and the number of rows.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.MD.7",
+      "to": "3.MD.8",
+      "rule": "concept_foundation",
+      "page": 108,
+      "source": "Recognize perimeter as an attribute of plane figures and distinguish between linear and area measures. With strong and distinct concepts of both perimeter and area established, students can work on problems to differentiate their measures.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.MD.8",
+      "to": "4.MD.3",
+      "rule": "grade_progression",
+      "page": 111,
+      "source": "Students learn to consider perimeter and area of rectangles, begun in Grade 3, more abstractly (MP.2). Based on work in previous grades with multiplication, spatially structuring arrays, and area, they abstract the formula for the area of a rectangle A = l × w.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.MD.7",
+      "to": "4.MD.3",
+      "rule": "grade_progression",
+      "page": 111,
+      "source": "Students learn to consider perimeter and area of rectangles, begun in Grade 3, more abstractly (MP.2). Based on work in previous grades with multiplication, spatially structuring arrays, and area, they abstract the formula for the area of a rectangle A = l × w.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NBT.4",
+      "to": "4.MD.3",
+      "rule": "concept_foundation",
+      "page": 112,
+      "source": "In Grade 4, working with perimeter and area of rectangles is still grounded in specific visualizations and numbers. These numbers can now be any of the numbers used in Grade 4 (for addition and subtraction for perimeter and for multiplication and division for area).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.3d",
+      "to": "4.MD.3",
+      "rule": "concept_foundation",
+      "page": 112,
+      "source": "In Grade 4, working with perimeter and area of rectangles is still grounded in specific visualizations and numbers. These numbers can now be any of the numbers used in Grade 4 (for addition and subtraction for perimeter and for multiplication and division for area).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.OA.4",
+      "to": "4.MD.3",
+      "rule": "concept_foundation",
+      "page": 112,
+      "source": "In Grade 4, working with perimeter and area of rectangles is still grounded in specific visualizations and numbers. These numbers can now be any of the numbers used in Grade 4 (for addition and subtraction for perimeter and for multiplication and division for area).",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.MD.5",
+      "to": "4.G.1",
+      "rule": "concept_foundation",
+      "page": 113,
+      "source": "Another way of saying this is that each ray determines a direction and the angle size measures the change from one direction to the other. (This illustrates how angle measure is related to the concepts of parallel and perpendicular lines in Grade 4 geometry.)",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.MD.6",
+      "to": "4.MD.7",
+      "rule": "concept_foundation",
+      "page": 114,
+      "source": "Students with an accurate conception of angle can recognize that angle measure is additive. As with length, area, and volume, when an angle is decomposed into non-overlapping parts, the angle measure of the whole is the sum of the angle measures of the parts.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.MD.1",
+      "to": "5.MD.1",
+      "rule": "grade_progression",
+      "page": 116,
+      "source": "In Grade 5, students extend their abilities from Grade 4 to express measurements in larger or smaller units within a measurement system.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.MD.3",
+      "to": "5.MD.4",
+      "rule": "decomposition",
+      "page": 117,
+      "source": "Students learn about a unit of volume, such as a cube with a side length of 1 unit, called a unit cube. They pack cubes (without gaps) into right rectangular prisms and count the cubes to determine the volume or build right rectangular prisms from cubes and see the layers as they build.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.MD.4",
+      "to": "5.MD.5a",
+      "rule": "bloom_progression",
+      "page": 117,
+      "source": "Students then learn to determine the volumes of several right rectangular prisms, using cubic centimeters, cubic inches, and cubic feet. With guidance, they learn to increasingly apply multiplicative reasoning to determine volume [...] they understand that multiplying the length times the width of a right rectangular prism can be viewed as determining how many cubes would be in each layer if the prism were packed with or built up from unit cubes.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.MD.5a",
+      "to": "5.MD.5b",
+      "rule": "decomposition",
+      "page": 117,
+      "source": "Then, students can learn the formulas V = l×w×h and V = b×h for right rectangular prisms as efficient methods for computing volume, maintaining the connection between these methods and their previous work with computing the number of unit cubes that pack a right rectangular prism.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.MD.5b",
+      "to": "5.MD.5c",
+      "rule": "decomposition",
+      "page": 117,
+      "source": "Students also recognize that volume is additive (see Overview) and they find the total volume of solid figures composed of two right rectangular prisms.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.G.5",
+      "to": "K.G.6",
+      "rule": "decomposition",
+      "page": 124,
+      "source": "A second important area for kindergartners is the composition of geometric figures. Students not only build shapes from components, but also compose shapes to build pictures and designs.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.G.4",
+      "to": "1.G.1",
+      "rule": "grade_progression",
+      "page": 125,
+      "source": "In Grade 1, students reason about shapes. They describe and classify shapes, including drawings, manipulatives, and physical-world objects, in terms of their geometric attributes. [...] based on early work recognizing, naming, sorting, and building shapes from components, they describe in their own words why a shape belongs to a given category.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.G.6",
+      "to": "1.G.2",
+      "rule": "grade_progression",
+      "page": 125,
+      "source": "From the early beginnings of informally matching shapes and solving simple shape puzzles, students learn to intentionally compose and decompose plane and solid figures [...] building understanding of part-whole relationships as well as the properties of the original and composite shapes.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.G.5",
+      "to": "1.G.2",
+      "rule": "grade_progression",
+      "page": 125,
+      "source": "Students build these competencies, often more slowly, in the domain of three-dimensional shapes. [...] Even simple compositions, such as building a floor or wall of rectangular prisms, build a foundation for later mathematics.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "K.G.1",
+      "to": "2.G.1",
+      "rule": "grade_progression",
+      "page": 127,
+      "source": "In Kindergarten, students learned to identify shapes by their names, but were not expected to characterize shapes by defining attributes (see the footnote on p. 114). In Grade 2, students learn to name and describe defining attributes of categories of two-dimensional shapes.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.G.2",
+      "to": "2.G.1",
+      "rule": "grade_progression",
+      "page": 127,
+      "source": "Students learn to combine their composition and decomposition competencies to build and operate on composite units (units of units), intentionally substituting arrangements or composites of smaller shapes or substituting several larger shapes for many smaller shapes, using geometric knowledge and spatial reasoning to develop foundations for area, fraction, and proportion.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "1.G.1",
+      "to": "3.G.1",
+      "rule": "grade_progression",
+      "page": 130,
+      "source": "Students analyze, compare, and classify two-dimensional shapes by their properties (see the footnote on p. 114). They explicitly relate and combine these classifications. Because they have built a firm foundation of several shape categories, these categories can be the raw material for thinking about the relationships between classes.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.G.1",
+      "to": "3.G.1",
+      "rule": "grade_progression",
+      "page": 130,
+      "source": "Students analyze, compare, and classify two-dimensional shapes by their properties (see the footnote on p. 114). They explicitly relate and combine these classifications. Because they have built a firm foundation of several shape categories, these categories can be the raw material for thinking about the relationships between classes.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.G.2",
+      "to": "3.G.2",
+      "rule": "concept_foundation",
+      "page": 131,
+      "source": "Students also develop more competence in the composition and decomposition of rectangular regions, that is, spatially structuring rectangular arrays. They learn to partition a rectangle into identical squares by anticipating the final structure and thus forming the array by drawing rows and columns.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.G.1",
+      "to": "4.G.1",
+      "rule": "grade_progression",
+      "page": 132,
+      "source": "Students describe, analyze, compare, and classify two-dimensional figures by their properties (see the footnote on p. 114), including explicit use of angle sizes and the related geometric properties of perpendicularity and parallelism. They can identify these properties in two-dimensional figures.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.G.1",
+      "to": "4.G.2",
+      "rule": "grade_progression",
+      "page": 132,
+      "source": "Students describe, analyze, compare, and classify two-dimensional figures by their properties (see the footnote on p. 114), including explicit use of angle sizes and the related geometric properties of perpendicularity and parallelism. They can identify these properties in two-dimensional figures.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.G.2",
+      "to": "5.G.1",
+      "rule": "grade_progression",
+      "page": 134,
+      "source": "By the end of Grade 5, competencies in shape composition and decomposition, and especially the special case of spatial structuring of rectangular arrays (recall p. 122), should be highly developed (MP.7). [...] Second, students extend their knowledge of the coordinate plane, understanding the continuous nature of two-dimensional space and the role of fractions in specifying locations in that space. Thus, spatial structuring underlies coordinates for the plane as well.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.G.4",
+      "to": "5.G.3",
+      "rule": "concept_foundation",
+      "page": 135,
+      "source": "Based on analysis of properties, they classify two-dimensional figures in hierarchies. For example, they conclude that all rectangles are parallelograms, because they are all quadrilaterals with two pairs of opposite, parallel, equal-length sides (MP.3). In this way, they relate certain categories of shapes as subclasses of other categories.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.G.3",
+      "to": "3.NF.1",
+      "rule": "grade_progression",
+      "page": 146,
+      "source": "In Grades 1 and 2, students use fraction language to describe partitions of shapes into equal shares. In Grade 3, they start to develop a more general concept of fraction, building on the idea of partitioning a whole into equal parts and expressing the number of parts symbolically, using fraction notation.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.G.2",
+      "to": "3.NF.1",
+      "rule": "concept_foundation",
+      "page": 146,
+      "source": "Initially, students can use an intuitive notion of congruence (“same size and same shape” or “matches exactly”) to explain why the parts are equal, e.g., when they partition a square into four equal squares or four equal rectangles.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NF.2",
+      "to": "3.NF.3a",
+      "rule": "concept_foundation",
+      "page": 147,
+      "source": "Grade 3 students do some preliminary reasoning about equivalent fractions, in preparation for work in Grade 4. As students experiment on number line diagrams they discover that many fractions label the same point on the number line, and are therefore equal; that is, they are equivalent fractions.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NF.3a",
+      "to": "3.NF.3b",
+      "rule": "decomposition",
+      "page": 147,
+      "source": "Understand two fractions as equivalent (equal) if they are the same size, or the same point on the number line. [...] Recognize and generate simple equivalent fractions, e.g., 1/2 = 2/4, 4/6 = 2/3. Explain why the fractions are equivalent.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NF.3b",
+      "to": "3.NF.3c",
+      "rule": "decomposition",
+      "page": 147,
+      "source": "Recognize and generate simple equivalent fractions, e.g., 1/2 = 2/4, 4/6 = 2/3. [...] Express whole numbers as fractions, and recognize fractions that are equivalent to whole numbers.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.3",
+      "to": "3.NF.3d",
+      "rule": "grade_progression",
+      "page": 148,
+      "source": "Previously, in Grade 2, students compared lengths using a standard unit of measurement. In Grade 3, they build on this idea to compare fractions with the same denominator, they see that for two fractions that have the same denominator, the underlying unit fractions are the same size, so the fraction with the greater numerator is greater because it is made of more unit fractions.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "2.MD.2",
+      "to": "3.NF.3d",
+      "rule": "concept_foundation",
+      "page": 148,
+      "source": "In Grade 2, students gained experience with the inverse relationship between the size of a physical length-unit and the number of length-units required to cover a given distance. Grade 3 students see that for unit fractions, the fraction with the larger denominator is smaller, by reasoning, for example, that in order for more (identical) pieces to make the same whole, the pieces must be smaller.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NF.3",
+      "to": "4.NF.1",
+      "rule": "grade_progression",
+      "page": 149,
+      "source": "In Grade 4 students move on from the special cases discussed in Grade 3 to a fundamental property of equivalent fractions: multiplying the numerator and denominator of a fraction by the same non-zero whole number results in a fraction equal to the original fraction.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.1",
+      "to": "4.NF.2",
+      "rule": "concept_foundation",
+      "page": 149,
+      "source": "This property forms the basis for important work in Grade 4, including the comparison of fractions and the introduction of finite decimals.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NF.3d",
+      "to": "4.NF.2",
+      "rule": "grade_progression",
+      "page": 150,
+      "source": "Grade 4 students use their understanding of equivalent fractions to compare fractions with different numerators and different denominators.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.NF.2",
+      "to": "4.NF.3",
+      "rule": "grade_progression",
+      "page": 151,
+      "source": "This simple understanding of addition as putting together allows students to see in a new light the way fractions are composed of unit fractions. Number line diagrams, the same type of diagrams that students used in Grade 3 to see a fraction as a point on the number line, allow them to see a fraction as a sum of unit fractions.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.3a",
+      "to": "4.NF.3b",
+      "rule": "decomposition",
+      "page": 151,
+      "source": "a Understand addition and subtraction of fractions as joining and separating parts referring to the same whole. b Decompose a fraction into a sum of fractions with the same denominator in more than one way, recording each decomposition by an equation. Justify decompositions, e.g., by using a visual fraction model.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.3b",
+      "to": "4.NF.3c",
+      "rule": "decomposition",
+      "page": 151,
+      "source": "c Add and subtract mixed numbers with like denominators, e.g., by replacing each mixed number with an equivalent fraction, and/or by using properties of operations and the relationship between addition and subtraction.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.3c",
+      "to": "4.NF.3d",
+      "rule": "bloom_progression",
+      "page": 153,
+      "source": "When solving word problems students learn to attend carefully to the underlying quantities (MP.6). In an equation of the form A+B=C or A−B=C for a word problem, the numbers A, B, and C must all refer to the same whole, in terms of the same units.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "3.OA.1",
+      "to": "4.NF.4a",
+      "rule": "grade_progression",
+      "page": 153,
+      "source": "Previously in Grade 3, students learned that 5 × 3 can be represented as the number of objects in 5 groups of 3 objects [...] Grade 4 students combine these understandings to see 5/3 as 5 × 1/3. In general, they come to see a fraction as the numerator times the unit fraction with the same denominator.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.4a",
+      "to": "4.NF.4b",
+      "rule": "decomposition",
+      "page": 153,
+      "source": "The same thinking, based on the analogy between fractions and whole numbers, allows students to give meaning to the product of a whole number and a fraction.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.4b",
+      "to": "4.NF.4c",
+      "rule": "bloom_progression",
+      "page": 154,
+      "source": "Students solve word problems involving multiplication of a fraction by a whole number.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.MD.2",
+      "to": "4.NF.5",
+      "rule": "concept_foundation",
+      "page": 154,
+      "source": "Decimal fractions and decimal notation. Fractions with denominators 10 and 100, called decimal fractions, arise when students express dollars as cents, and have a more fundamental importance, developed in Grade 5, in the base-ten system.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.1",
+      "to": "4.NF.6",
+      "rule": "concept_foundation",
+      "page": 154,
+      "source": "Fractions with denominators equal to 10 and 100 can be written by using a decimal point. [...] Students use their knowledge of equivalent fractions to reason that 2.70 = 2.7.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.5",
+      "to": "5.NF.1",
+      "rule": "grade_progression",
+      "page": 154,
+      "source": "Grade 4 students learn to add decimal fractions by writing them as fractions with the same denominator. [...] In Grade 5, students build on this experience to compute sums in fraction notation or in decimal notation.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.5",
+      "to": "5.NBT.7",
+      "rule": "grade_progression",
+      "page": 154,
+      "source": "Grade 4 students learn to add decimal fractions by writing them as fractions with the same denominator. [...] In Grade 5, students build on this experience to compute sums in fraction notation or in decimal notation.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.3",
+      "to": "5.NF.4",
+      "rule": "concept_foundation",
+      "page": 145,
+      "source": "In Grade 5, students connect fractions with division, understanding numerical instances of a/b = a ÷ b for whole numbers a and b, with b not equal to zero (MP.8). With this understanding, students see, for example, that 5/3 is one third of 5, which leads to the meaning of multiplication by a unit fraction.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.4",
+      "to": "5.MD.1",
+      "rule": "concept_foundation",
+      "page": 145,
+      "source": "In 5.MD.1, conversions also involve viewing a smaller unit as part of a decomposition of a larger unit (e.g., an inch is 1/12 foot), so a measurement in feet is 1/12 times what it is in inches and conversions require multiplication by a fraction.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.4",
+      "to": "5.NF.7",
+      "rule": "concept_foundation",
+      "page": 145,
+      "source": "Using their understanding of division of whole numbers and multiplication of fractions, students in Grade 5 solve problems that involve dividing a whole number by a unit fraction or a unit fraction by a whole number.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.7",
+      "to": "5.NBT.3b",
+      "rule": "grade_progression",
+      "page": 155,
+      "source": "Students compare decimals using the meaning of a decimal as a fraction, making sure to compare fractions with the same denominator. [...] In Grade 5, the argument using the meaning of a decimal as a fraction and using the fundamental property to rewrite decimals as fractions with the same denominator generalizes to work with decimals that have more than two digits.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.1",
+      "to": "5.NF.2",
+      "rule": "bloom_progression",
+      "page": 156,
+      "source": "Students make sense of fractional quantities when solving word problems, estimating answers mentally to see if they make sense.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "4.NF.4",
+      "to": "5.NF.3",
+      "rule": "grade_progression",
+      "page": 157,
+      "source": "In Grade 4, students connected fractions with multiplication, understanding that 5/3 = 5 × 1/3. In Grade 5, they connect fractions with division, understanding that 5 ÷ 3 = 5/3.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.4a",
+      "to": "5.NF.7a",
+      "rule": "concept_foundation",
+      "page": 159,
+      "source": "Using the relationship between division and multiplication, students start working with quotients that have unit fractions. Having seen that dividing a whole number by a whole number, e.g., 5 ÷ 3, is the same as multiplying the number by a unit fraction, 1/3 × 5, they now extend the same reasoning to division of a unit fraction by a whole number.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.7a",
+      "to": "5.NF.7b",
+      "rule": "decomposition",
+      "page": 159,
+      "source": "Also, they reason that since there are 6 portions of 1/6 in 1, there must be 3 × 6 in 3, and so 3 ÷ 1/6 = 3 × 6 = 18.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.7b",
+      "to": "5.NF.7c",
+      "rule": "bloom_progression",
+      "page": 159,
+      "source": "Students use story problems to make sense of division.",
+      "continues_beyond_k5": false
+    },
+    {
+      "from": "5.NF.4",
+      "to": "5.NF.5a",
+      "rule": "concept_foundation",
+      "page": 160,
+      "source": "Multiplication as scaling. In preparation for Grade 6 work with ratios and proportional relationships, students learn to see products such as 5 × 3 or 1/2 × 3 as expressions that can be interpreted as an amount, 3, and a scaling factor, 5 or 1/2.",
+      "continues_beyond_k5": true
+    },
+    {
+      "from": "5.NF.5a",
+      "to": "5.NF.5b",
+      "rule": "bloom_progression",
+      "page": 160,
+      "source": "The understanding of multiplication as scaling is an important opportunity for students to reason abstractly (MP.2). [...] Grade 5 work with multiplying by unit fractions, and interpreting fractions in terms of division, enables students to see that multiplying a quantity by a number smaller than 1 produces a smaller quantity, as when a price is multiplied by 1/2, for example.",
+      "continues_beyond_k5": false
+    }
+  ]
+}

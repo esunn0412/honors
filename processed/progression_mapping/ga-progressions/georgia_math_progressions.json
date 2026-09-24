@@ -1,0 +1,195 @@
+{
+  "source": "Georgia's K-12 Mathematics Standards, August 2021, pp. 5-6 (\"K-5 Mathematics: Learning Progressions\")",
+  "note": "Transcribed verbatim from the rendered page images, not from a raw text extraction -- pdftotext's layout mode garbled several stacked fraction glyphs in the Grade 4 Measurement & Data cell (rendered as '1 1 / 2 4' and similar), which were misread until the page was rendered as an image and read directly. This table gives GA's own official K-5 cross-grade progression by 'Key Concept' strand within each of the four GA domains; it does not cite individual GA sub-standard codes, and it does not state cross-strand dependencies (e.g. it does not say place value is a prerequisite for multi-digit addition) -- those still require separate inference. An empty by_grade list means the source table's cell for that strand/grade is blank in the original (the strand does not begin, or has no listed content, at that grade).",
+  "domains": [
+    {
+      "domain_code": "NR",
+      "domain_heading": "Numerical Reasoning",
+      "key_concepts": [
+        {
+          "concept": "Numbers (whole numbers, fractions, and decimal numbers)",
+          "by_grade": {
+            "K": ["Whole numbers to 100"],
+            "1": ["Whole numbers to 120", "Partition shapes into halves and quarters/fourths (fourths) with no shading"],
+            "2": ["Whole numbers to 1000", "Partition shapes into halves, thirds and quarters (fourths) with no shading"],
+            "3": ["Whole numbers to 10,000", "Unit fractions with denominators of 2, 3, 4, 6, and 8", "Represent fractions", "Equivalence of simple fractions", "Introduce shading to identify and compare fractional parts"],
+            "4": ["Whole numbers to 100,000", "Non-unit fractions with denominators of 2, 3, 4, 5, 6, 8, 10, 12, and 100", "Fractions with like denominators", "Decimal fractions (tenths and hundredths)"],
+            "5": ["Multi-digit whole numbers", "Fractions with unlike denominators", "Fractions greater than 1", "Decimal fractions to thousandths"]
+          }
+        },
+        {
+          "concept": "Counting",
+          "by_grade": {
+            "K": ["Counting forward to 100", "Counting backward from 20", "Counting objects to 20"],
+            "1": ["Counting forward and backward within 120", "Skip counting by 2s, 5s, and 10s", "Counting objects to 120"],
+            "2": ["Counting forward and backward within 1000", "Skip counting by 2s, 5s, 10s, 25s, and 100s", "Counting objects to 1000"],
+            "3": ["Counting unit fractions"],
+            "4": ["Counting non-unit fractions"],
+            "5": ["Counting decimal numbers"]
+          }
+        },
+        {
+          "concept": "Place Value",
+          "by_grade": {
+            "K": ["Compose and decompose numbers within 20", "Identify and write numerals to 20"],
+            "1": ["Compose and decompose 2-digit numbers"],
+            "2": ["Hundreds, tens and ones in 3-digit numbers"],
+            "3": ["Round numbers to 1000 to nearest 10 or 100", "Read & write multi-digit whole numbers to thousands"],
+            "4": ["Magnitude of place value", "Multi-digit whole numbers to 100,000", "Round multi-digit whole numbers", "Fractions with denominators of 10 or 100"],
+            "5": ["Magnitude of place value extended to decimal numbers", "Powers of 10 to 10³", "Read & write decimal numbers to thousandths place", "Round decimal numbers to hundredths place"]
+          }
+        },
+        {
+          "concept": "Comparisons",
+          "by_grade": {
+            "K": ["Comparing objects up to 10", "Comparing numbers of objects in a set from 1-10"],
+            "1": ["Comparing numbers to 100"],
+            "2": ["Comparing numbers to 1,000"],
+            "3": ["Comparing numbers to 10,000", "Unit fractions"],
+            "4": ["Multi-digit numbers", "Fractions less than 1", "Decimal fractions to hundredths place"],
+            "5": ["Decimal fractions to thousandths place", "Fractions greater than 1"]
+          }
+        },
+        {
+          "concept": "Computational Fluency",
+          "by_grade": {
+            "K": ["Fluency with addition and subtraction within 5"],
+            "1": ["Fluency with addition and subtraction within 10"],
+            "2": ["Fluency using mental math up to 20", "Fluency with strategies within 100"],
+            "3": ["Fluency with multiplication and division with single-digit numbers", "Fluency with addition and subtraction within 1,000"],
+            "4": ["Fluency with addition and subtraction with multi-digit whole numbers"],
+            "5": ["Fluency with multiplication and division with multi-digit whole numbers"]
+          }
+        },
+        {
+          "concept": "Addition & Subtraction",
+          "by_grade": {
+            "K": ["Single-digit numbers within 10"],
+            "1": ["Within 20 (using properties of operations)", "Within 100 (using base ten understanding)"],
+            "2": ["Within 1,000 (using tools and strategies)"],
+            "3": ["Within 10,000"],
+            "4": ["Within 100,000", "Fractions with like denominators"],
+            "5": ["Fractions with unlike denominators", "Decimal fractions to the hundredths place"]
+          }
+        },
+        {
+          "concept": "Multiplication & Division",
+          "by_grade": {
+            "K": [],
+            "1": [],
+            "2": ["Building arrays"],
+            "3": ["Within 100", "Multiply by multiples of 10"],
+            "4": ["Factors and multiples", "Prime and composite numbers", "Multiply by multi-digit whole numbers", "Divide by 1-digit divisors"],
+            "5": ["Multiply multi-digit whole numbers", "Multiply fractions and whole numbers", "Divide unit fractions and whole numbers", "Reason about multiplying by a fraction >, <, or = 1"]
+          }
+        },
+        {
+          "concept": "Expressions",
+          "by_grade": {
+            "K": [],
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": ["Simple numerical expressions involving whole numbers with or without grouping symbols", "Express fractions as division problems"]
+          }
+        }
+      ]
+    },
+    {
+      "domain_code": "PAR",
+      "domain_heading": "Patterning & Algebraic Reasoning",
+      "key_concepts": [
+        {
+          "concept": "Patterns",
+          "by_grade": {
+            "K": ["Repeating patterns with numbers and shapes", "Explain the rationale for the pattern."],
+            "1": ["Growing and repeating patterns of 1s, 5s, and 10s", "Repeated operations, shapes or numbers"],
+            "2": ["Numerical patterns involving addition and subtraction"],
+            "3": ["Numerical patterns related to multiplication", "Make predictions based on patterns"],
+            "4": ["Generate number and shape patterns that follow a rule", "Represent and describe patterns"],
+            "5": ["Generate two numerical patterns using a given rule", "Identify relationships using a table"]
+          }
+        },
+        {
+          "concept": "Graphing",
+          "by_grade": {
+            "K": [],
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": ["Plot order pairs in first quadrant"]
+          }
+        }
+      ]
+    },
+    {
+      "domain_code": "GSR",
+      "domain_heading": "Geometric & Spatial Reasoning",
+      "key_concepts": [
+        {
+          "concept": "Shapes and Properties",
+          "by_grade": {
+            "K": ["Identify, sort, classify, analyze, and compare 2D & 3D based on attributes using informal language", "Positional words"],
+            "1": ["Identify, sort, and classify 2D & 3D shapes based on specific attributes using formal language and geometric properties", "Compose 2D shapes & 3D shapes"],
+            "2": ["Describe, compare and sort 2-D and 3-D shapes given a set of attributes", "Identify lines of symmetry in everyday objects"],
+            "3": ["Quadrilaterals", "Parallel & perpendicular line segments, points, lines, line segments, & right angles and presence or absence of these in quadrilaterals", "Lines of symmetry with quadrilaterals"],
+            "4": ["Points, lines, line segments, rays, angles, and parallel & perpendicular line segments", "Classify, compare, & contrast polygons based on presence or absence of parallel or perpendicular line segments, angles of a specified size or side lengths."],
+            "5": ["Classify polygons based on geometric properties", "Relationships between categories and subcategories of shapes"]
+          }
+        },
+        {
+          "concept": "Geometric Measurement",
+          "by_grade": {
+            "K": [],
+            "1": [],
+            "2": [],
+            "3": ["Area of rectangles", "Perimeter of rectangles"],
+            "4": ["Area and perimeter of composite rectangles", "Angle measurement"],
+            "5": ["Volume of right rectangular prisms"]
+          }
+        }
+      ]
+    },
+    {
+      "domain_code": "MDR",
+      "domain_heading": "Measurement & Data Reasoning",
+      "key_concepts": [
+        {
+          "concept": "Measurement & Data",
+          "by_grade": {
+            "K": ["Measurable attributes of length, height, width and weight", "Classify and sort up to 10 objects by attributes", "Display and interpret categorical data with up to 10 data points on graphs"],
+            "1": ["Measure length in non-standard units", "Compare, describe and order up to 3 objects using length in non-standard units", "Display and interpret categorical data (with up to 3 categories)"],
+            "2": ["Measure length to nearest whole unit", "Use tools such as constructed rulers and standard rulers", "Choose units (in, ft, yd) appropriately", "Display and interpret categorical data (with up to 4 categories)"],
+            "3": ["Measure liquid volume, length and mass in customary units", "Use rulers to measure lengths in halves and fourths of an inch", "Analyze numerical and categorical data with whole number values"],
+            "4": ["Measure liquid volume, distance, and mass using the metric measurement system", "Use rulers to measure lengths to nearest 1/2, 1/4 and 1/8 of an inch", "Analyze data using dot plots (with values to the nearest 1/8 of a unit)"],
+            "5": ["Measure length and weight in metric units", "Convert between units of measurement", "Create and analyze dot plots (line plots) with fraction measurements"]
+          }
+        },
+        {
+          "concept": "Money",
+          "by_grade": {
+            "K": ["Identify pennies, nickels and dimes and know the value of each coin"],
+            "1": ["Identify value of pennies, nickels, dimes and quarters"],
+            "2": ["Combination of coins", "Problems involving dollars and all coins"],
+            "3": ["Using money to solve problems"],
+            "4": ["Using money as a tool or manipulative to solve problems"],
+            "5": ["Using money as a tool to solve problems involving decimals"]
+          }
+        },
+        {
+          "concept": "Time",
+          "by_grade": {
+            "K": [],
+            "1": ["Tell & write time in hours and half hours", "Measure elapsed time to the hour"],
+            "2": ["Time to the nearest five minutes", "Distinguish between a.m. & p.m.", "Elapsed time to hour or half hour"],
+            "3": ["Tell time to the nearest minute", "Estimate relative time", "Elapsed time to hour, half hour & quarter hour"],
+            "4": ["Intervals of time", "Elapsed time to the nearest minute"],
+            "5": ["Solving problems involving time"]
+          }
+        }
+      ]
+    }
+  ]
+}

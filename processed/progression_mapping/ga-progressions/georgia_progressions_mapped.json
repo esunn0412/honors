@@ -1,0 +1,2145 @@
+{
+  "description": "Maps every cell of georgia_math_progressions.json (GA's own K-5 Learning Progressions table) to the actual GA sub-standard code(s) whose text corresponds to that cell's bullets. Built entirely from GA's own documents (georgia_math_progressions.json cross-referenced against georgia_math_0.json..._5.json) -- no CCSS text or the CCSS<->GA skill map was consulted.",
+  "totals": {
+    "cells_mapped": 74,
+    "ga_codes_total": 150,
+    "ga_codes_referenced_by_progression_table": 150,
+    "ga_codes_not_in_progression_table": 0,
+    "cells_with_a_gap": 5,
+    "cells_with_a_gap_and_zero_mapped_codes": 1,
+    "cells_with_cross_domain_codes": 10
+  },
+  "gap_cells": [
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "3",
+      "bullets": [
+        "Counting unit fractions"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.NR.4.1",
+          "description": "Describe a unit fraction and explain how multiple copies of a unit fraction form a non-unit fraction. Use parts of a whole, parts of a set, points on a number line, distances on a number line and area models.",
+          "domain": "NR"
+        }
+      ],
+      "gap": true,
+      "unmatched_bullets": [
+        "Counting unit fractions"
+      ],
+      "cross_domain": false,
+      "note": "'Counting unit fractions' has no standard whose text describes a counting/enumerating skill for fractions (3.NR.4.1 describes unit fractions but as composition, not counting in sequence). Nearest relative given, but recorded as a gap."
+    },
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "4",
+      "bullets": [
+        "Counting non-unit fractions"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.NR.4.4",
+          "description": "Represent whole numbers and fractions as the sum of unit fractions.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.5",
+          "description": "Represent a fraction as a sum of fractions with the same denominator in more than one way, recording with an equation.",
+          "domain": "NR"
+        }
+      ],
+      "gap": true,
+      "unmatched_bullets": [
+        "Counting non-unit fractions"
+      ],
+      "cross_domain": false,
+      "note": "'Counting non-unit fractions' has no standard literally describing counting; nearest relative is representing fractions as sums of unit fractions (4.NR.4.4/4.NR.4.5), which is counting-adjacent but not the same stated skill. Recorded as a gap."
+    },
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "5",
+      "bullets": [
+        "Counting decimal numbers"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.4.1",
+          "description": "Read and write decimal numbers to the thousandths place using base-ten numerals written in standard form and expanded form.",
+          "domain": "NR"
+        }
+      ],
+      "gap": true,
+      "unmatched_bullets": [
+        "Counting decimal numbers"
+      ],
+      "cross_domain": false,
+      "note": "'Counting decimal numbers' has no standard literally describing counting; nearest relative is read/write decimals (5.NR.4.1). Recorded as a gap. Pattern across grades 3-5: the 'Counting' strand's own concept (counting unit fractions/non-unit fractions/decimals) is never restated as an explicit standalone skill in the standards text past Grade 2 -- it becomes purely conceptual/implicit."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Measurement & Data",
+      "grade": "5",
+      "bullets": [
+        "Measure length and weight in metric units",
+        "Convert between units of measurement",
+        "Create and analyze dot plots (line plots) with fraction measurements"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.MDR.7.1",
+          "description": "Explore realistic problems involving different units of measurement, including distance, mass, weight, volume, and time.",
+          "domain": "MDR"
+        },
+        {
+          "code": "5.MDR.7.3",
+          "description": "Convert among units within the metric system and then apply these conversions to solve multistep, practical problems.",
+          "domain": "MDR"
+        },
+        {
+          "code": "5.MDR.7.4",
+          "description": "Convert among units within relative sizes of measurement units within the customary measurement system.",
+          "domain": "MDR"
+        },
+        {
+          "code": "5.MDR.7.2",
+          "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life",
+          "domain": "MDR"
+        }
+      ],
+      "gap": true,
+      "unmatched_bullets": [
+        "Create and analyze dot plots (line plots) with fraction measurements"
+      ],
+      "cross_domain": false,
+      "note": "'Measure length and weight in metric units' and 'convert between units' map cleanly to 5.MDR.7.1/7.3/7.4. But 'create and analyze dot plots (line plots) with fraction measurements' has no matching text in any 5.MDR standard -- none mentions dot/line plots or fractions. 5.MDR.7.2 (ask/answer questions from graphical displays) is the nearest relative, but does not state fractions. Recorded as a gap."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Money",
+      "grade": "3",
+      "bullets": [
+        "Using money to solve problems"
+      ],
+      "mapped_codes": [],
+      "gap": true,
+      "unmatched_bullets": [
+        "Using money to solve problems"
+      ],
+      "cross_domain": false,
+      "note": "No Grade 3 GA standard names money as its subject, checked against every bare standard (3.NR, 3.PAR, 3.MDR, 3.GSR) AND every guidance file entry (georgia_math_guidance_3.json). The only hit anywhere in Grade 3's guidance is a scope caveat on 3.PAR.3.7 -- 'situations involving money should not include decimal numbers' -- which implies money-themed word problems are used as one possible context for that standard's multiplication/division content, but no actual worked example anywhere in Grade 3's guidance uses money (checked every examples field). Thin evidence, not enough to call this resolved -- recorded as a gap, with the caveat noted for completeness."
+    }
+  ],
+  "cells": [
+    {
+      "domain": "NR",
+      "concept": "Numbers (whole numbers, fractions, and decimal numbers)",
+      "grade": "K",
+      "bullets": [
+        "Whole numbers to 100"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.NR.2.1",
+          "description": "Count forward to 100 by tens and ones and backward from 20 by ones.",
+          "domain": "NR"
+        },
+        {
+          "code": "K.NR.4.1",
+          "description": "Identify written numerals 0- 20 and represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects).",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "Strand-level summary of K's overall number range, not one single standard: K.NR.2.1 supplies the 'to 100' bound (counting), K.NR.4.1 supplies numeral identification (to 20 only -- the bare description never reaches 100 for numeral writing specifically)."
+    },
+    {
+      "domain": "NR",
+      "concept": "Numbers (whole numbers, fractions, and decimal numbers)",
+      "grade": "1",
+      "bullets": [
+        "Whole numbers to 120",
+        "Partition shapes into halves and quarters/fourths (fourths) with no shading"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.NR.1.1",
+          "description": "Count within 120, forward and backward, starting at any number. In this range, read and write numerals and represent a number of objects with a written numeral.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.GSR.4.3",
+          "description": "Partition circles and rectangles into two and four equal shares.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "'Whole numbers to 120' -> 1.NR.1.1. 'Partition shapes into halves and quarters with no shading' -> 1.GSR.4.3, which is a GSR-domain standard, not NR -- fraction partitioning is coded under geometry in GA even though this progression row sits under the Numerical Reasoning header. See the cross-domain callout below."
+    },
+    {
+      "domain": "NR",
+      "concept": "Numbers (whole numbers, fractions, and decimal numbers)",
+      "grade": "2",
+      "bullets": [
+        "Whole numbers to 1000",
+        "Partition shapes into halves, thirds and quarters (fourths) with no shading"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.NR.1.1",
+          "description": "Explain the value of a three-digit number using hundreds, tens, and ones in a variety of ways.",
+          "domain": "NR"
+        },
+        {
+          "code": "2.NR.1.2",
+          "description": "Count forward and backward by ones from any number within 1000. Count forward by fives from multiples of 5 within 1000. Count forward and backward by 10s and 100s from any number within 1000. Count forward by 25s from 0.",
+          "domain": "NR"
+        },
+        {
+          "code": "2.GSR.7.3",
+          "description": "Partition circles and rectangles into two, three, or four equal shares. Identify and describe equal-sized parts of the whole using fractional names (\u201chalves,\u201d \u201cthirds,\u201d \u201cfourths\u201d, \u201chalf of,\u201d \u201cthird of,\u201d \u201cquarter of,\u201d etc.).",
+          "domain": "GSR"
+        },
+        {
+          "code": "2.GSR.7.4",
+          "description": "Recognize that equal shares of identical wholes may be different shapes within the same whole.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "'Whole numbers to 1000' -> 2.NR.1.1/2.NR.1.2. 'Partition shapes...' -> 2.GSR.7.3, again GSR-domain, not NR; 2.GSR.7.4 (equal shares of a whole may be different shapes) is the same parent standard's (2.GSR.7) next sub-item extending the same partitioning concept, added alongside it."
+    },
+    {
+      "domain": "NR",
+      "concept": "Numbers (whole numbers, fractions, and decimal numbers)",
+      "grade": "3",
+      "bullets": [
+        "Whole numbers to 10,000",
+        "Unit fractions with denominators of 2, 3, 4, 6, and 8",
+        "Represent fractions",
+        "Equivalence of simple fractions",
+        "Introduce shading to identify and compare fractional parts"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.NR.1.1",
+          "description": "Read and write multi-digit whole numbers up to 10,000 to the thousands using base-ten numerals and expanded form.",
+          "domain": "NR"
+        },
+        {
+          "code": "3.NR.4.1",
+          "description": "Describe a unit fraction and explain how multiple copies of a unit fraction form a non-unit fraction. Use parts of a whole, parts of a set, points on a number line, distances on a number line and area models.",
+          "domain": "NR"
+        },
+        {
+          "code": "3.NR.4.2",
+          "description": "Compare two unit fractions by flexibly using a variety of tools and strategies.",
+          "domain": "NR"
+        },
+        {
+          "code": "3.NR.4.3",
+          "description": "Represent fractions, including fractions greater than one, in multiple ways.",
+          "domain": "NR"
+        },
+        {
+          "code": "3.NR.4.4",
+          "description": "Recognize and generate simple equivalent fractions.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "Clean match: whole numbers to 10,000 -> 3.NR.1.1; the four fraction bullets (unit fractions, represent fractions, equivalence, shading) -> 3.NR.4.1-3.NR.4.4 respectively."
+    },
+    {
+      "domain": "NR",
+      "concept": "Numbers (whole numbers, fractions, and decimal numbers)",
+      "grade": "4",
+      "bullets": [
+        "Whole numbers to 100,000",
+        "Non-unit fractions with denominators of 2, 3, 4, 5, 6, 8, 10, 12, and 100",
+        "Fractions with like denominators",
+        "Decimal fractions (tenths and hundredths)"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.NR.1.1",
+          "description": "Read and write multi-digit whole numbers to the hundred-thousands place using base-ten numerals and expanded form.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.1",
+          "description": "Using concrete materials, drawings, and number lines, demonstrate and explain the relationship between equivalent fractions, including fractions greater than one, and explain the identity property of multiplication as it relates to equivalent fractions. Generate equivalent fractions using these relationships.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.2",
+          "description": "Compare two fractions with the same numerator or the same denominator by reasoning about their size and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.3",
+          "description": "Compare two fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.4",
+          "description": "Represent whole numbers and fractions as the sum of unit fractions.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.5",
+          "description": "Represent a fraction as a sum of fractions with the same denominator in more than one way, recording with an equation.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.6",
+          "description": "Add and subtract fractions and mixed numbers with like denominators using a variety of tools.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.5.1",
+          "description": "Demonstrate and explain the concept of equivalent fractions with denominators of 10 and 100, using concrete materials and visual models. Add two fractions with denominators of 10 and 100.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.5.2",
+          "description": "Represent, read, and write fractions with denominators of 10 or 100 using decimal notation, and decimal numbers to the hundredths place as fractions, using concrete materials and drawings.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Whole numbers to 100,000' -> 4.NR.1.1. 'Non-unit fractions with denominators of 2,3,4,5,6,8,10,12,and 100' is a summary of grade 4's whole fraction-representation cluster (4.NR.4.1-4.NR.4.5), not one standard's exact wording. 'Fractions with like denominators' -> 4.NR.4.6. 'Decimal fractions (tenths and hundredths)' -> 4.NR.5.1/4.NR.5.2."
+    },
+    {
+      "domain": "NR",
+      "concept": "Numbers (whole numbers, fractions, and decimal numbers)",
+      "grade": "5",
+      "bullets": [
+        "Multi-digit whole numbers",
+        "Fractions with unlike denominators",
+        "Fractions greater than 1",
+        "Decimal fractions to thousandths"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.1.1",
+          "description": "Explain that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and $\\frac{1}{10}$ of what it represents in the place to its left.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.3.2",
+          "description": "Compare and order up to three fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.3.3",
+          "description": "Model and solve problems involving addition and subtraction of fractions and mixed numbers with unlike denominators.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.4.1",
+          "description": "Read and write decimal numbers to the thousandths place using base-ten numerals written in standard form and expanded form.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Multi-digit whole numbers' loosely attributed to 5.NR.1.1 (place value magnitude), no Grade 5 standard restates multi-digit whole-number reading/writing as its own item. 'Fractions with unlike denominators' -> 5.NR.3.2/5.NR.3.3. 'Fractions greater than 1' has no distinct Grade 5 standard -- that language belongs to 3.NR.4.3/4.NR.4.1 (reinforcement, not new Grade 5 content); left unattributed rather than forced onto an unrelated code. 'Decimal fractions to thousandths' -> 5.NR.4.1."
+    },
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "K",
+      "bullets": [
+        "Counting forward to 100",
+        "Counting backward from 20",
+        "Counting objects to 20"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.NR.2.1",
+          "description": "Count forward to 100 by tens and ones and backward from 20 by ones.",
+          "domain": "NR"
+        },
+        {
+          "code": "K.NR.2.2",
+          "description": "Count forward beginning from any number within 100 and count backward from any number within 20.",
+          "domain": "NR"
+        },
+        {
+          "code": "K.NR.1.1",
+          "description": "Count up to 20 objects in a variety of structured arrangements and up to 10 objects in a scattered arrangement.",
+          "domain": "NR"
+        },
+        {
+          "code": "K.NR.1.2",
+          "description": "When counting objects, explain that the last number counted represents the total quantity in a set (cardinality), regardless of the arrangement and order.",
+          "domain": "NR"
+        },
+        {
+          "code": "K.NR.1.3",
+          "description": "Given a number from 1-20, identify the number that is one more or one less.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Counting forward to 100' and 'counting backward from 20' -> K.NR.2.1 (starting from 0) and K.NR.2.2 (starting from any number within the range). 'Counting objects to 20' -> K.NR.1.1, plus K.NR.1.2 (cardinality) and K.NR.1.3 (one more/one less), the rest of the same parent standard (K.NR.1). K.NR.1.3 is the weakest fit of the three -- it's a static relational skill (given a number, name its neighbor), not the sequential-counting action the bullet names -- but it shares K.NR.1.3's own 1-20 range with K.NR.1.1/1.2 exactly, whereas Comparisons/K's bullets cap at 10 objects, so Counting is the better-matching bound even though the skill itself is a weaker fit than a true counting action. Placed here as the best available cell rather than left unreferenced."
+    },
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "1",
+      "bullets": [
+        "Counting forward and backward within 120",
+        "Skip counting by 2s, 5s, and 10s",
+        "Counting objects to 120"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.NR.1.1",
+          "description": "Count within 120, forward and backward, starting at any number. In this range, read and write numerals and represent a number of objects with a written numeral.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.PAR.3.2",
+          "description": "Identify, describe, and create growing, shrinking, and repeating patterns based on the repeated addition or subtraction of 1s, 2s, 5s, and 10s.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "'Counting forward and backward within 120' and 'counting objects to 120' -> 1.NR.1.1. 'Skip counting by 2s, 5s, and 10s' has no matching NR standard, but 1.PAR.3.2's own text -- 'growing, shrinking, and repeating patterns based on the repeated addition or subtraction of 1s, 2s, 5s, and 10s' -- is functionally the same skill (repeatedly adding 2 from 0 produces the skip-count-by-2s sequence), just framed as a pattern rather than a counting action. Cross-domain, not a gap: PAR, not NR, the same pattern already seen at Grade 3 for Computational Fluency/Addition & Subtraction/Multiplication & Division."
+    },
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "2",
+      "bullets": [
+        "Counting forward and backward within 1000",
+        "Skip counting by 2s, 5s, 10s, 25s, and 100s",
+        "Counting objects to 1000"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.NR.1.2",
+          "description": "Count forward and backward by ones from any number within 1000. Count forward by fives from multiples of 5 within 1000. Count forward and backward by 10s and 100s from any number within 1000. Count forward by 25s from 0.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "All three bullets (forward/backward within 1000, skip counting by 2s/5s/10s/25s/100s, counting objects to 1000) map cleanly onto 2.NR.1.2's own wording, which lists all of them explicitly."
+    },
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "3",
+      "bullets": [
+        "Counting unit fractions"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.NR.4.1",
+          "description": "Describe a unit fraction and explain how multiple copies of a unit fraction form a non-unit fraction. Use parts of a whole, parts of a set, points on a number line, distances on a number line and area models.",
+          "domain": "NR"
+        }
+      ],
+      "gap": true,
+      "unmatched_bullets": [
+        "Counting unit fractions"
+      ],
+      "cross_domain": false,
+      "note": "'Counting unit fractions' has no standard whose text describes a counting/enumerating skill for fractions (3.NR.4.1 describes unit fractions but as composition, not counting in sequence). Nearest relative given, but recorded as a gap."
+    },
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "4",
+      "bullets": [
+        "Counting non-unit fractions"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.NR.4.4",
+          "description": "Represent whole numbers and fractions as the sum of unit fractions.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.5",
+          "description": "Represent a fraction as a sum of fractions with the same denominator in more than one way, recording with an equation.",
+          "domain": "NR"
+        }
+      ],
+      "gap": true,
+      "unmatched_bullets": [
+        "Counting non-unit fractions"
+      ],
+      "cross_domain": false,
+      "note": "'Counting non-unit fractions' has no standard literally describing counting; nearest relative is representing fractions as sums of unit fractions (4.NR.4.4/4.NR.4.5), which is counting-adjacent but not the same stated skill. Recorded as a gap."
+    },
+    {
+      "domain": "NR",
+      "concept": "Counting",
+      "grade": "5",
+      "bullets": [
+        "Counting decimal numbers"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.4.1",
+          "description": "Read and write decimal numbers to the thousandths place using base-ten numerals written in standard form and expanded form.",
+          "domain": "NR"
+        }
+      ],
+      "gap": true,
+      "unmatched_bullets": [
+        "Counting decimal numbers"
+      ],
+      "cross_domain": false,
+      "note": "'Counting decimal numbers' has no standard literally describing counting; nearest relative is read/write decimals (5.NR.4.1). Recorded as a gap. Pattern across grades 3-5: the 'Counting' strand's own concept (counting unit fractions/non-unit fractions/decimals) is never restated as an explicit standalone skill in the standards text past Grade 2 -- it becomes purely conceptual/implicit."
+    },
+    {
+      "domain": "NR",
+      "concept": "Place Value",
+      "grade": "K",
+      "bullets": [
+        "Compose and decompose numbers within 20",
+        "Identify and write numerals to 20"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.NR.3.1",
+          "description": "Describe numbers from 11 to 19 by composing (putting together) and decomposing (breaking apart) the numbers into ten ones and some more ones.",
+          "domain": "NR"
+        },
+        {
+          "code": "K.NR.5.1",
+          "description": "Compose (put together) and decompose (break apart) numbers up to 10 using objects and drawings.",
+          "domain": "NR"
+        },
+        {
+          "code": "K.NR.4.1",
+          "description": "Identify written numerals 0- 20 and represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects).",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Compose and decompose numbers within 20' is split across two GA codes by number range: K.NR.3.1 covers 11-19, K.NR.5.1 covers up to 10. 'Identify and write numerals to 20' -> K.NR.4.1."
+    },
+    {
+      "domain": "NR",
+      "concept": "Place Value",
+      "grade": "1",
+      "bullets": [
+        "Compose and decompose 2-digit numbers"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.NR.1.2",
+          "description": "Explain that the two digits of a 2-digit number represent the amounts of tens and ones.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Place Value",
+      "grade": "2",
+      "bullets": [
+        "Hundreds, tens and ones in 3-digit numbers"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.NR.1.1",
+          "description": "Explain the value of a three-digit number using hundreds, tens, and ones in a variety of ways.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Place Value",
+      "grade": "3",
+      "bullets": [
+        "Round numbers to 1000 to nearest 10 or 100",
+        "Read & write multi-digit whole numbers to thousands"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.NR.1.3",
+          "description": "Use place value understanding to round whole numbers within up to 1000 to the nearest 10 or 100.",
+          "domain": "NR"
+        },
+        {
+          "code": "3.NR.1.1",
+          "description": "Read and write multi-digit whole numbers up to 10,000 to the thousands using base-ten numerals and expanded form.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Place Value",
+      "grade": "4",
+      "bullets": [
+        "Magnitude of place value",
+        "Multi-digit whole numbers to 100,000",
+        "Round multi-digit whole numbers",
+        "Fractions with denominators of 10 or 100"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.NR.1.2",
+          "description": "Recognize and show that a digit in one place has a value ten times greater than what it represents in the place to its right and extend this understanding to determine the value of a digit when it is shifted to the left or right, based on the relationship between multiplication and division.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.1.1",
+          "description": "Read and write multi-digit whole numbers to the hundred-thousands place using base-ten numerals and expanded form.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.1.4",
+          "description": "Use place value understanding to round multi-digit whole numbers.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.5.1",
+          "description": "Demonstrate and explain the concept of equivalent fractions with denominators of 10 and 100, using concrete materials and visual models. Add two fractions with denominators of 10 and 100.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Place Value",
+      "grade": "5",
+      "bullets": [
+        "Magnitude of place value extended to decimal numbers",
+        "Powers of 10 to 10\u00b3",
+        "Read & write decimal numbers to thousandths place",
+        "Round decimal numbers to hundredths place"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.1.1",
+          "description": "Explain that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and $\\frac{1}{10}$ of what it represents in the place to its left.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.1.2",
+          "description": "Explain patterns in the placement of digits when multiplied or divided by a power of 10. Use whole-number exponents to denote powers of 10, up to $10^3$.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.4.1",
+          "description": "Read and write decimal numbers to the thousandths place using base-ten numerals written in standard form and expanded form.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.4.3",
+          "description": "Use place value understanding to round decimal numbers to the hundredths place.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Comparisons",
+      "grade": "K",
+      "bullets": [
+        "Comparing objects up to 10",
+        "Comparing numbers of objects in a set from 1-10"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.NR.4.2",
+          "description": "Compare two sets of up to 10 objects and identify whether the number of objects in one group is more or less than the other group, using the words \u201cgreater than,\u201d \u201cless than,\u201d or \u201cthe same as\u201d.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Comparisons",
+      "grade": "1",
+      "bullets": [
+        "Comparing numbers to 100"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.NR.1.3",
+          "description": "Compare and order whole numbers up to 100 using concrete models, drawings, and the symbols >, =, and <.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Comparisons",
+      "grade": "2",
+      "bullets": [
+        "Comparing numbers to 1,000"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.NR.1.3",
+          "description": "Represent, compare, and order whole numbers to 1000 with an emphasis on place value and equality. Use >, =, and < symbols to record the results of comparisons.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Comparisons",
+      "grade": "3",
+      "bullets": [
+        "Comparing numbers to 10,000",
+        "Unit fractions"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.NR.1.2",
+          "description": "Use place value reasoning to compare multi-digit numbers up to 10,000, using >, =, and < symbols to record the results of comparisons.",
+          "domain": "NR"
+        },
+        {
+          "code": "3.NR.4.2",
+          "description": "Compare two unit fractions by flexibly using a variety of tools and strategies.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Comparisons",
+      "grade": "4",
+      "bullets": [
+        "Multi-digit numbers",
+        "Fractions less than 1",
+        "Decimal fractions to hundredths place"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.NR.1.3",
+          "description": "Use place value reasoning to represent, compare, and order multi-digit numbers, using >, =, and < symbols to record the results of comparisons.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.2",
+          "description": "Compare two fractions with the same numerator or the same denominator by reasoning about their size and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.3",
+          "description": "Compare two fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies and recognize that comparisons are valid only when the two fractions refer to the same whole.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.5.3",
+          "description": "Compare two decimal numbers to the hundredths place by reasoning about their size. Record the results of comparisons with the symbols >, =, or <, and justify the conclusions.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Comparisons",
+      "grade": "5",
+      "bullets": [
+        "Decimal fractions to thousandths place",
+        "Fractions greater than 1"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.4.2",
+          "description": "Represent, compare, and order decimal numbers to the thousandths place based on the meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.3.2",
+          "description": "Compare and order up to three fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Fractions greater than 1' has no dedicated Grade 5 comparison standard; loosely attributed to 5.NR.3.2 (compare up to three fractions), which does not itself use 'greater than 1' language."
+    },
+    {
+      "domain": "NR",
+      "concept": "Computational Fluency",
+      "grade": "K",
+      "bullets": [
+        "Fluency with addition and subtraction within 5"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.NR.5.4",
+          "description": "Fluently add and subtract within 5 using a variety of strategies to solve practical, mathematical problems.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Computational Fluency",
+      "grade": "1",
+      "bullets": [
+        "Fluency with addition and subtraction within 10"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.NR.2.4",
+          "description": "Fluently add and subtract within 10 using a variety of strategies.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Computational Fluency",
+      "grade": "2",
+      "bullets": [
+        "Fluency using mental math up to 20",
+        "Fluency with strategies within 100"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.NR.2.1",
+          "description": "Fluently add and subtract within 20 using a variety of mental, part-whole strategies.",
+          "domain": "NR"
+        },
+        {
+          "code": "2.NR.2.4",
+          "description": "Fluently add and subtract within 100 using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Computational Fluency",
+      "grade": "3",
+      "bullets": [
+        "Fluency with multiplication and division with single-digit numbers",
+        "Fluency with addition and subtraction within 1,000"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.PAR.3.2",
+          "description": "Represent single digit multiplication and division facts using a variety of strategies. Explain the relationship between multiplication and division.",
+          "domain": "PAR"
+        },
+        {
+          "code": "3.PAR.2.1",
+          "description": "Fluently add and subtract within 1000 to solve problems.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "Both bullets are PAR-domain standards, not NR: Grade 3 files multiplication/division fluency AND addition/subtraction fluency under Patterns & Algebraic Reasoning (3.PAR.2.1, 3.PAR.3.2), not Number Relations. See the cross-domain callout -- this is the largest single instance of it."
+    },
+    {
+      "domain": "NR",
+      "concept": "Computational Fluency",
+      "grade": "4",
+      "bullets": [
+        "Fluency with addition and subtraction with multi-digit whole numbers"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.NR.2.1",
+          "description": "Fluently add and subtract multi-digit numbers to solve practical, mathematical problems using place value understanding, properties of operations, and relationships between operations.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Computational Fluency",
+      "grade": "5",
+      "bullets": [
+        "Fluency with multiplication and division with multi-digit whole numbers"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.2.1",
+          "description": "Fluently multiply multi-digit (up to 3- digit by 2-digit) whole numbers to solve authentic problems.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.2.2",
+          "description": "Fluently divide multi-digit whole numbers (up to 4-digit dividends and 2-digit divisors no greater than 25) to solve practical problems.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Addition & Subtraction",
+      "grade": "K",
+      "bullets": [
+        "Single-digit numbers within 10"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.NR.5.2",
+          "description": "Represent addition and subtraction within 10 from a given authentic situation using a variety of representations and strategies.",
+          "domain": "NR"
+        },
+        {
+          "code": "K.NR.5.3",
+          "description": "Use a variety of strategies to solve addition and subtraction problems within 10.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Addition & Subtraction",
+      "grade": "1",
+      "bullets": [
+        "Within 20 (using properties of operations)",
+        "Within 100 (using base ten understanding)"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.NR.2.1",
+          "description": "Use a variety of strategies to solve addition and subtraction problems within 20.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.NR.2.2",
+          "description": "Use pictures, drawings, and equations to develop strategies for addition and subtraction within 20 by exploring strings of related problems.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.NR.2.3",
+          "description": "Recognize the inverse relationship between subtraction and addition within 20 and use this inverse relationship to solve authentic problems.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.NR.2.5",
+          "description": "Use the meaning of the equal sign to determine whether equations involving addition and subtraction are true or false.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.NR.2.6",
+          "description": "Determine the unknown whole number in an addition or subtraction equation relating to three whole numbers.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.NR.2.7",
+          "description": "Apply properties of operations as strategies to solve addition and subtraction problem situations within 20.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.NR.5.1",
+          "description": "Use a variety of strategies to solve applicable, mathematical addition and subtraction problems with one- and two-digit whole numbers.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.NR.5.2",
+          "description": "Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used.",
+          "domain": "NR"
+        },
+        {
+          "code": "1.NR.5.3",
+          "description": "Add and subtract multiples of 10 within 100.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "Confirmed by GA's own parent-standard titles, not just topical similarity: 1.NR.2's own title is 'Explain the relationship between addition and subtraction and apply the properties of operations to solve real-life addition and subtraction problems within 20' -- i.e. all seven of 1.NR.2.1-1.NR.2.7 belong to 'Within 20', not just the ones whose own bare text happens to say 'properties of operations' (1.NR.2.5's equal-sign true/false and 1.NR.2.6's unknown-addend both fall under this same umbrella; 1.NR.2.4 is excluded because it narrows to 'within 10' and is already used for the Computational Fluency cell instead). Likewise 1.NR.5's own title is 'Use concrete models, the base ten structure, and properties of operations to add and subtract within 100' -- covering 1.NR.5.1 (general strategies), 1.NR.5.2 (mentally find 10 more/less, i.e. add/subtract 10 -- moved here from an earlier, wrong placement under Place Value), and 1.NR.5.3 (add/subtract multiples of 10)."
+    },
+    {
+      "domain": "NR",
+      "concept": "Addition & Subtraction",
+      "grade": "2",
+      "bullets": [
+        "Within 1,000 (using tools and strategies)"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.NR.2.3",
+          "description": "Solve problems involving the addition and subtraction of two-digit numbers using part-whole strategies.",
+          "domain": "NR"
+        },
+        {
+          "code": "2.NR.2.2",
+          "description": "Find 10 more or 10 less than a given three-digit number and find 100 more or 100 less than a given three-digit number.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "No 2.NR standard states addition/subtraction 'within 1,000' as a word-problem-solving bound explicitly; attributed to the two nearest strategy-based standards. Loose."
+    },
+    {
+      "domain": "NR",
+      "concept": "Addition & Subtraction",
+      "grade": "3",
+      "bullets": [
+        "Within 10,000"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.PAR.2.2",
+          "description": "Apply part-whole strategies, properties of operations and place value understanding, to solve problems involving addition and subtraction within 10,000. Represent these problems using equations with a letter standing for the unknown quantity. Justify solutions.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "PAR-domain, not NR: Grade 3's addition/subtraction-within-10,000 standard is coded 3.PAR.2.2."
+    },
+    {
+      "domain": "NR",
+      "concept": "Addition & Subtraction",
+      "grade": "4",
+      "bullets": [
+        "Within 100,000",
+        "Fractions with like denominators"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.NR.2.1",
+          "description": "Fluently add and subtract multi-digit numbers to solve practical, mathematical problems using place value understanding, properties of operations, and relationships between operations.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.2.5",
+          "description": "Solve multi-step problems using addition, subtraction, multiplication, and division involving whole numbers. Use mental computation and estimation strategies to justify the reasonableness of solutions.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.4.6",
+          "description": "Add and subtract fractions and mixed numbers with like denominators using a variety of tools.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Within 100,000' attributed to 4.NR.2.1, whose own text says 'multi-digit numbers' without stating the bound explicitly (Grade 4's number range tops out at 100,000 per 4.NR.1.1). 'Fractions with like denominators' -> 4.NR.4.6. UNCERTAIN PLACEMENT: 4.NR.2.5 ('solve multi-step problems using addition, subtraction, multiplication, and division... mental computation and estimation') is placed here as its most natural home, but it explicitly spans all four operations, not just addition/subtraction -- it could equally be argued to belong under Multiplication & Division/4 instead. Both cells' shared parent standard is 4.NR.2, whose own title covers addition, subtraction, multiplication, and division together, so the parent standard itself doesn't resolve which single cell is the better fit."
+    },
+    {
+      "domain": "NR",
+      "concept": "Addition & Subtraction",
+      "grade": "5",
+      "bullets": [
+        "Fractions with unlike denominators",
+        "Decimal fractions to the hundredths place"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.3.3",
+          "description": "Model and solve problems involving addition and subtraction of fractions and mixed numbers with unlike denominators.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.4.4",
+          "description": "Solve problems involving addition and subtraction of decimal numbers to the hundredths place using a variety of strategies.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Multiplication & Division",
+      "grade": "2",
+      "bullets": [
+        "Building arrays"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.NR.3.1",
+          "description": "Determine whether a group (up to 20) has an odd or even number of objects. Write an equation to express an even number as a sum of two equal addends.",
+          "domain": "NR"
+        },
+        {
+          "code": "2.NR.3.2",
+          "description": "Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "2.NR.3.1 (odd/even numbers, sum of two equal addends) and 2.NR.3.2 (arrays) share the same parent standard, 2.NR.3: 'Work with equal groups to gain foundations for multiplication.' 'Building arrays' names only 2.NR.3.2's own content literally, but 2.NR.3.1 is the other half of the same foundations-for-multiplication parent, added alongside it."
+    },
+    {
+      "domain": "NR",
+      "concept": "Multiplication & Division",
+      "grade": "3",
+      "bullets": [
+        "Within 100",
+        "Multiply by multiples of 10"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.PAR.3.3",
+          "description": "Apply properties of operations (i.e., commutative property, associative property, distributive property) to multiply and divide within 100.",
+          "domain": "PAR"
+        },
+        {
+          "code": "3.PAR.3.4",
+          "description": "Use the meaning of the equal sign to determine whether expressions involving addition, subtraction, and multiplication are equivalent.",
+          "domain": "PAR"
+        },
+        {
+          "code": "3.PAR.3.5",
+          "description": "Use place value reasoning and properties of operations to multiply one-digit whole numbers by multiples of 10, in the range 10-90.",
+          "domain": "PAR"
+        },
+        {
+          "code": "3.PAR.3.6",
+          "description": "Solve practical, relevant problems involving multiplication and division within 100 using part-whole strategies, visual representations, and/or concrete models.",
+          "domain": "PAR"
+        },
+        {
+          "code": "3.PAR.3.7",
+          "description": "Use multiplication and division to solve problems involving whole numbers to 100. Represent these problems using equations with a letter standing for the unknown quantity. Justify solutions.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "All PAR-domain: Grade 3 files multiplication/division content under Patterns & Algebraic Reasoning, not Number Relations. All five sub-standards share the parent standard 3.PAR.3 ('multiplication and division with whole numbers within 100') and every other 3.PAR.3.x sibling is placed here, so 3.PAR.3.4 (equal sign / equivalence of expressions involving multiplication) joins them by the same parent-standard grouping, even though its own content (equivalence reasoning) is a narrower fit for the 'Within 100' bullet's computation focus than its siblings are."
+    },
+    {
+      "domain": "NR",
+      "concept": "Multiplication & Division",
+      "grade": "4",
+      "bullets": [
+        "Factors and multiples",
+        "Prime and composite numbers",
+        "Multiply by multi-digit whole numbers",
+        "Divide by 1-digit divisors"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.PAR.3.3",
+          "description": "Find factor pairs in the range 1\u2013100 and find multiples of single-digit numbers up to 100.",
+          "domain": "PAR"
+        },
+        {
+          "code": "4.PAR.3.4",
+          "description": "Identify composite numbers and prime numbers and explain the relationship with the factor pairs.",
+          "domain": "PAR"
+        },
+        {
+          "code": "4.NR.2.2",
+          "description": "Interpret, model, and solve problems involving multiplicative comparison.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.2.3",
+          "description": "Solve relevant problems involving multiplication of a number with up to four digits by a 1-digit whole number or involving multiplication of two two-digit numbers using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models.",
+          "domain": "NR"
+        },
+        {
+          "code": "4.NR.2.4",
+          "description": "Solve authentic division problems involving up to 4-digit dividends and 1- digit divisors (including whole number quotients with remainders) using strategies based on place-value understanding, properties of operations, and the relationships between operations.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "'Factors and multiples' and 'prime and composite numbers' are PAR-domain (4.PAR.3.3, 4.PAR.3.4); 'multiply by multi-digit whole numbers' and 'divide by 1-digit divisors' are back in NR (4.NR.2.3, 4.NR.2.4). Grade 4 splits this strand across two domains. 4.NR.2.2 (multiplicative comparison) added alongside 4.NR.2.3/2.4 -- same parent standard (4.NR.2), and multiplicative comparison is foundational to the multiply/divide skills the bullets name."
+    },
+    {
+      "domain": "NR",
+      "concept": "Multiplication & Division",
+      "grade": "5",
+      "bullets": [
+        "Multiply multi-digit whole numbers",
+        "Multiply fractions and whole numbers",
+        "Divide unit fractions and whole numbers",
+        "Reason about multiplying by a fraction >, <, or = 1"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.2.1",
+          "description": "Fluently multiply multi-digit (up to 3- digit by 2-digit) whole numbers to solve authentic problems.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.3.4",
+          "description": "Model and solve problems involving multiplication of a fraction and a whole number.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.3.6",
+          "description": "Model and solve problems involving division of a unit fraction by a whole number and a whole number by a unit fraction.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.3.5",
+          "description": "Explain why multiplying a whole number by a fraction greater than one results in a product greater than the whole number, and why multiplying a whole number by a fraction less than one results in a product less than the whole number and multiplying a whole number by a fraction equal to one results in a product equal to the whole number.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "NR",
+      "concept": "Expressions",
+      "grade": "5",
+      "bullets": [
+        "Simple numerical expressions involving whole numbers with or without grouping symbols",
+        "Express fractions as division problems"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.5.1",
+          "description": "Write, interpret, and evaluate simple numerical expressions involving whole numbers with or without grouping symbols to represent actual situations.",
+          "domain": "NR"
+        },
+        {
+          "code": "5.NR.3.1",
+          "description": "Explain the meaning of a fraction as division of the numerator by the denominator ($\\frac{a}{b}$ = a \u00f7 b). Solve problems involving division of whole numbers leading to answers in the form of fractions or mixed numbers.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Express fractions as division problems' -> 5.NR.3.1 (fraction as division of numerator by denominator), filed under the fractions standard group, not a separate expressions standard."
+    },
+    {
+      "domain": "PAR",
+      "concept": "Patterns",
+      "grade": "K",
+      "bullets": [
+        "Repeating patterns with numbers and shapes",
+        "Explain the rationale for the pattern."
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.PAR.6.1",
+          "description": "Create, extend, and describe repeating patterns with numbers and shapes, and explain the rationale for the pattern.",
+          "domain": "PAR"
+        },
+        {
+          "code": "K.PAR.6.2",
+          "description": "Describe patterns involving the passage of time using words and phrases related to actual events.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "K.PAR.6.1 is a near-verbatim match to the cell's bullets. K.PAR.6.2 (patterns involving the passage of time) shares the same parent standard, K.PAR.6, whose own title explicitly names 'patterns involving the passage of time' -- joins its sibling here by that grouping, even though the cell's own bullet text (repeating patterns with numbers/shapes) doesn't itself mention time, and no other K-5 grade's Patterns row mentions time either."
+    },
+    {
+      "domain": "PAR",
+      "concept": "Patterns",
+      "grade": "1",
+      "bullets": [
+        "Growing and repeating patterns of 1s, 5s, and 10s",
+        "Repeated operations, shapes or numbers"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.PAR.3.1",
+          "description": "Investigate, create, and make predictions about repeating patterns with a core of up to 3 elements resulting from repeating an operation, as a series of shapes, or a number string.",
+          "domain": "PAR"
+        },
+        {
+          "code": "1.PAR.3.2",
+          "description": "Identify, describe, and create growing, shrinking, and repeating patterns based on the repeated addition or subtraction of 1s, 2s, 5s, and 10s.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "PAR",
+      "concept": "Patterns",
+      "grade": "2",
+      "bullets": [
+        "Numerical patterns involving addition and subtraction"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.PAR.4.1",
+          "description": "Identify, describe, and create a numerical pattern resulting from repeating an operation such as addition and subtraction.",
+          "domain": "PAR"
+        },
+        {
+          "code": "2.PAR.4.2",
+          "description": "Identify, describe, and create growing patterns and shrinking patterns involving addition and subtraction up to 20.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "PAR",
+      "concept": "Patterns",
+      "grade": "3",
+      "bullets": [
+        "Numerical patterns related to multiplication",
+        "Make predictions based on patterns"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.PAR.3.1",
+          "description": "Describe, extend, and create numeric patterns related to multiplication. Make predictions related to the patterns.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "PAR",
+      "concept": "Patterns",
+      "grade": "4",
+      "bullets": [
+        "Generate number and shape patterns that follow a rule",
+        "Represent and describe patterns"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.PAR.3.1",
+          "description": "Generate both number and shape patterns that follow a provided rule.",
+          "domain": "PAR"
+        },
+        {
+          "code": "4.PAR.3.2",
+          "description": "Use input-output rules, tables, and charts to represent and describe patterns, find relationships, and solve problems.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "PAR",
+      "concept": "Patterns",
+      "grade": "5",
+      "bullets": [
+        "Generate two numerical patterns using a given rule",
+        "Identify relationships using a table"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.PAR.6.1",
+          "description": "Generate two numerical patterns using two given rules. Identify apparent relationships between corresponding terms by completing a table.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "PAR",
+      "concept": "Graphing",
+      "grade": "5",
+      "bullets": [
+        "Plot order pairs in first quadrant"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.PAR.6.2",
+          "description": "Represent problems by plotting ordered pairs and explain coordinate values of points in the first quadrant of the coordinate plane.",
+          "domain": "PAR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "The progression table's own bullet reads 'Plot order pairs in first quadrant' -- 'order pairs' rather than 'ordered pairs' (5.PAR.6.2's own wording). A wording slip in GA's progression table itself, not in the standard; kept verbatim in georgia_math_progressions.json per this project's verbatim policy, noted here rather than silently corrected."
+    },
+    {
+      "domain": "GSR",
+      "concept": "Shapes and Properties",
+      "grade": "K",
+      "bullets": [
+        "Identify, sort, classify, analyze, and compare 2D & 3D based on attributes using informal language",
+        "Positional words"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.GSR.8.1",
+          "description": "Identify, sort, classify, analyze, and compare two- dimensional shapes and three-dimensional figures, in different sizes and orientations, using informal language to describe their similarities, differences, number of sides and vertices, and other attributes.",
+          "domain": "GSR"
+        },
+        {
+          "code": "K.GSR.8.2",
+          "description": "Describe the relative location of an object using positional words.",
+          "domain": "GSR"
+        },
+        {
+          "code": "K.GSR.8.3",
+          "description": "Use basic shapes to represent specific shapes found in the environment by creating models and drawings.",
+          "domain": "GSR"
+        },
+        {
+          "code": "K.GSR.8.4",
+          "description": "Use two or more basic shapes to form larger shapes.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "K.GSR.8.1/8.2 match the cell's identification/positional-words bullets directly. K.GSR.8.3/8.4 (compose shapes into other shapes) share the same parent standard, K.GSR.8, whose own title includes 'form two-dimensional shapes and three-dimensional figures' -- joined here by that grouping, even though the cell's own bullet text doesn't itself mention composition (that content is restated as its own explicit bullet one grade later, 'Compose 2D shapes & 3D shapes', Grade 1, mapped to 1.GSR.4.2)."
+    },
+    {
+      "domain": "GSR",
+      "concept": "Shapes and Properties",
+      "grade": "1",
+      "bullets": [
+        "Identify, sort, and classify 2D & 3D shapes based on specific attributes using formal language and geometric properties",
+        "Compose 2D shapes & 3D shapes"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.GSR.4.1",
+          "description": "Identify common two-dimensional shapes and three-dimensional figures, sort and classify them by their attributes and build and draw shapes that possess defining attributes.",
+          "domain": "GSR"
+        },
+        {
+          "code": "1.GSR.4.2",
+          "description": "Compose two-dimensional shapes (rectangles, squares, triangles, half-circles, and quarter-circles) and three-dimensional figures (cubes, rectangular prisms, cones, and cylinders) to create a shape formed of two or more common shapes and compose new shapes from the composite shape.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "GSR",
+      "concept": "Shapes and Properties",
+      "grade": "2",
+      "bullets": [
+        "Describe, compare and sort 2-D and 3-D shapes given a set of attributes",
+        "Identify lines of symmetry in everyday objects"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.GSR.7.1",
+          "description": "Describe, compare and sort 2-D shapes including polygons, triangles, quadrilaterals, pentagons, hexagons, and 3-D shapes including rectangular prisms and cones, given a set of attributes.",
+          "domain": "GSR"
+        },
+        {
+          "code": "2.GSR.7.2",
+          "description": "Identify at least one line of symmetry in everyday objects to describe each object as a whole.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "GSR",
+      "concept": "Shapes and Properties",
+      "grade": "3",
+      "bullets": [
+        "Quadrilaterals",
+        "Parallel & perpendicular line segments, points, lines, line segments, & right angles and presence or absence of these in quadrilaterals",
+        "Lines of symmetry with quadrilaterals"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.GSR.6.2",
+          "description": "Classify, compare, and contrast polygons, with a focus on quadrilaterals, based on properties. Analyze specific 3-dimensional figures to identify and describe quadrilaterals as faces of these figures.",
+          "domain": "GSR"
+        },
+        {
+          "code": "3.GSR.6.1",
+          "description": "Identify perpendicular line segments, parallel line segments, and right angles, identify these in polygons, and solve problems involving parallel line segments, perpendicular line segments, and right angles.",
+          "domain": "GSR"
+        },
+        {
+          "code": "3.GSR.6.3",
+          "description": "Identify lines of symmetry in polygons.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Lines of symmetry with quadrilaterals' attributed to 3.GSR.6.3, whose own text says 'polygons' generically, not 'quadrilaterals' specifically -- minor scope-wording difference between the progression table and the standard."
+    },
+    {
+      "domain": "GSR",
+      "concept": "Shapes and Properties",
+      "grade": "4",
+      "bullets": [
+        "Points, lines, line segments, rays, angles, and parallel & perpendicular line segments",
+        "Classify, compare, & contrast polygons based on presence or absence of parallel or perpendicular line segments, angles of a specified size or side lengths."
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.GSR.8.1",
+          "description": "Explore, investigate, and draw points, lines, line segments, rays, angles (right, acute, obtuse), perpendicular lines, parallel lines, and lines of symmetry. Identify these in two-dimensional figures.",
+          "domain": "GSR"
+        },
+        {
+          "code": "4.GSR.8.2",
+          "description": "Classify, compare, and contrast polygons based on lines of symmetry, the presence or absence of parallel or perpendicular line segments, or the presence or absence of angles of a specified size and based on side lengths.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "GSR",
+      "concept": "Shapes and Properties",
+      "grade": "5",
+      "bullets": [
+        "Classify polygons based on geometric properties",
+        "Relationships between categories and subcategories of shapes"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.GSR.8.1",
+          "description": "Classify, compare, and contrast polygons based on properties.",
+          "domain": "GSR"
+        },
+        {
+          "code": "5.GSR.8.2",
+          "description": "Determine, through exploration and investigation, that attributes belonging to a category of two-dimensional figures also belong to all subcategories of that category.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "GSR",
+      "concept": "Geometric Measurement",
+      "grade": "3",
+      "bullets": [
+        "Area of rectangles",
+        "Perimeter of rectangles"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.GSR.7.1",
+          "description": "Investigate area by covering the space of rectangles presented in realistic situations using multiple copies of the same unit, with no gaps or overlaps, and determine the total area (total number of units that covered the space).",
+          "domain": "GSR"
+        },
+        {
+          "code": "3.GSR.7.2",
+          "description": "Determine the area of rectangles (or shapes composed of rectangles) presented in relevant problems by tiling and counting.",
+          "domain": "GSR"
+        },
+        {
+          "code": "3.GSR.7.3",
+          "description": "Discover and explain how area can be found by multiplying the dimensions of a rectangle.",
+          "domain": "GSR"
+        },
+        {
+          "code": "3.GSR.8.1",
+          "description": "Determine the perimeter of a polygon and explain that the perimeter represents the distance around a polygon. Solve problems involving perimeters of polygons.",
+          "domain": "GSR"
+        },
+        {
+          "code": "3.GSR.8.2",
+          "description": "Investigate and describe how rectangles with the same perimeter can have different areas or how rectangles with the same area can have different perimeters.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "GSR",
+      "concept": "Geometric Measurement",
+      "grade": "4",
+      "bullets": [
+        "Area and perimeter of composite rectangles",
+        "Angle measurement"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.GSR.8.3",
+          "description": "Solve problems involving area and perimeter of composite rectangles involving whole numbers with known side lengths.",
+          "domain": "GSR"
+        },
+        {
+          "code": "4.GSR.7.1",
+          "description": "Recognize angles as geometric shapes formed when two rays share a common endpoint. Draw right, acute, and obtuse angles based on the relationship of the angle measure to 90 degrees.",
+          "domain": "GSR"
+        },
+        {
+          "code": "4.GSR.7.2",
+          "description": "Measure angles in reference to a circle with the center at the common endpoint of two rays. Determine an angle\u2019s measure in relation to the 360 degrees in a circle through division or as a missing factor problem.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "GSR",
+      "concept": "Geometric Measurement",
+      "grade": "5",
+      "bullets": [
+        "Volume of right rectangular prisms"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.GSR.8.3",
+          "description": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
+          "domain": "GSR"
+        },
+        {
+          "code": "5.GSR.8.4",
+          "description": "Discover and explain how the volume of a right rectangular prism can be found by multiplying the area of the base times the height to solve authentic, mathematical problems.",
+          "domain": "GSR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "MDR",
+      "concept": "Measurement & Data",
+      "grade": "K",
+      "bullets": [
+        "Measurable attributes of length, height, width and weight",
+        "Classify and sort up to 10 objects by attributes",
+        "Display and interpret categorical data with up to 10 data points on graphs"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.MDR.7.1",
+          "description": "Directly compare, describe, and order common objects, using measurable attributes (length, height, width, or weight) and describe the difference.",
+          "domain": "MDR"
+        },
+        {
+          "code": "K.MDR.7.2",
+          "description": "Classify and sort up to ten objects into categories by an attribute; count the number of objects in each category and sort the categories by count.",
+          "domain": "MDR"
+        },
+        {
+          "code": "K.MDR.7.3",
+          "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "MDR",
+      "concept": "Measurement & Data",
+      "grade": "1",
+      "bullets": [
+        "Measure length in non-standard units",
+        "Compare, describe and order up to 3 objects using length in non-standard units",
+        "Display and interpret categorical data (with up to 3 categories)"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.MDR.6.1",
+          "description": "Estimate, measure, and record lengths of objects using non-standard units, and compare and order up to three objects using the recorded measurements. Describe the objects compared.",
+          "domain": "MDR"
+        },
+        {
+          "code": "1.MDR.6.4",
+          "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to compare and order whole numbers.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Display and interpret categorical data (with up to 3 categories)' attributed to 1.MDR.6.4, whose own text says 'compare and order whole numbers' via graphical displays -- the 'up to 3 categories' bound is not stated in 1.MDR.6.4 itself (may come from georgia_math_guidance_1.json instead of the bare standard)."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Measurement & Data",
+      "grade": "2",
+      "bullets": [
+        "Measure length to nearest whole unit",
+        "Use tools such as constructed rulers and standard rulers",
+        "Choose units (in, ft, yd) appropriately",
+        "Display and interpret categorical data (with up to 4 categories)"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.MDR.5.2",
+          "description": "Estimate and measure the length of an object or distance to the nearest whole unit using appropriate units and standard measuring tools.",
+          "domain": "MDR"
+        },
+        {
+          "code": "2.MDR.5.1",
+          "description": "Construct simple measuring instruments using unit models. Compare unit models to rulers.",
+          "domain": "MDR"
+        },
+        {
+          "code": "2.MDR.5.4",
+          "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+          "domain": "MDR"
+        },
+        {
+          "code": "2.MDR.5.3",
+          "description": "Measure to determine how much longer one object is than another and express the length difference in terms of a standard-length unit.",
+          "domain": "MDR"
+        },
+        {
+          "code": "2.MDR.5.5",
+          "description": "Represent whole-number sums and differences within a standard unit of measurement on a number line diagram.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "2.MDR.5.3 (measure the length difference between two objects) and 2.MDR.5.5 (represent sums/differences of lengths on a number line) both share the parent standard 2.MDR.5 with 2.MDR.5.1/5.2/5.4, and are both length-measurement content matching this cell's 'measure length' bullets, added alongside the other three."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Measurement & Data",
+      "grade": "3",
+      "bullets": [
+        "Measure liquid volume, length and mass in customary units",
+        "Use rulers to measure lengths in halves and fourths of an inch",
+        "Analyze numerical and categorical data with whole number values"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.MDR.5.5",
+          "description": "Estimate and measure liquid volumes, lengths and masses of objects using customary units. Solve problems involving mass, length, and volume given in the same unit, and reason about the relative sizes of measurement units within the customary system.",
+          "domain": "MDR"
+        },
+        {
+          "code": "3.MDR.5.4",
+          "description": "Use rulers to measure lengths in halves and fourths (quarters) of an inch and a whole inch.",
+          "domain": "MDR"
+        },
+        {
+          "code": "3.MDR.5.1",
+          "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "MDR",
+      "concept": "Measurement & Data",
+      "grade": "4",
+      "bullets": [
+        "Measure liquid volume, distance, and mass using the metric measurement system",
+        "Use rulers to measure lengths to nearest 1/2, 1/4 and 1/8 of an inch",
+        "Analyze data using dot plots (with values to the nearest 1/8 of a unit)"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.MDR.6.1",
+          "description": "Use the four operations to solve problems involving elapsed time to the nearest minute, intervals of time, metric measurements of liquid volumes, lengths, distances, and masses of objects, including problems involving fractions with like denominators, and also problems that require expressing measurements given in a larger unit in terms of a smaller unit, and expressing a smaller unit in terms of a larger unit based on the idea of equivalence.",
+          "domain": "MDR"
+        },
+        {
+          "code": "4.MDR.6.3",
+          "description": "Create dot plots to display a distribution of numerical (quantitative) measurement data.",
+          "domain": "MDR"
+        },
+        {
+          "code": "4.MDR.6.2",
+          "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Measure liquid volume, distance, and mass using the metric system' -> 4.MDR.6.1. 'Analyze data using dot plots' -> 4.MDR.6.3, plus 4.MDR.6.2 (the recurring 'ask questions and answer them...graphical displays' standard every other grade's data-analysis bullet is also attributed to). 'Use rulers to measure lengths to nearest 1/2, 1/4 and 1/8 of an inch' has no matching text in 4.MDR.6.3's bare description, but its own georgia_math_guidance_4.json entry states this exactly: age_developmentally_appropriate says 'Students should only use rulers marked to the nearest 1/8 of an inch,' and strategies_and_methods says 'Use rulers to measure lengths and record numerical measurement data to the nearest 1/2, 1/4 and 1/8 of an inch.' Not a gap -- the content lives in the guidance file, not the bare standard text. (This is exactly why every earlier 'gap' cell was re-checked against the guidance files too, not just the bare standards, before being finalized.)"
+    },
+    {
+      "domain": "MDR",
+      "concept": "Measurement & Data",
+      "grade": "5",
+      "bullets": [
+        "Measure length and weight in metric units",
+        "Convert between units of measurement",
+        "Create and analyze dot plots (line plots) with fraction measurements"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.MDR.7.1",
+          "description": "Explore realistic problems involving different units of measurement, including distance, mass, weight, volume, and time.",
+          "domain": "MDR"
+        },
+        {
+          "code": "5.MDR.7.3",
+          "description": "Convert among units within the metric system and then apply these conversions to solve multistep, practical problems.",
+          "domain": "MDR"
+        },
+        {
+          "code": "5.MDR.7.4",
+          "description": "Convert among units within relative sizes of measurement units within the customary measurement system.",
+          "domain": "MDR"
+        },
+        {
+          "code": "5.MDR.7.2",
+          "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life",
+          "domain": "MDR"
+        }
+      ],
+      "gap": true,
+      "unmatched_bullets": [
+        "Create and analyze dot plots (line plots) with fraction measurements"
+      ],
+      "cross_domain": false,
+      "note": "'Measure length and weight in metric units' and 'convert between units' map cleanly to 5.MDR.7.1/7.3/7.4. But 'create and analyze dot plots (line plots) with fraction measurements' has no matching text in any 5.MDR standard -- none mentions dot/line plots or fractions. 5.MDR.7.2 (ask/answer questions from graphical displays) is the nearest relative, but does not state fractions. Recorded as a gap."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Money",
+      "grade": "K",
+      "bullets": [
+        "Identify pennies, nickels and dimes and know the value of each coin"
+      ],
+      "mapped_codes": [
+        {
+          "code": "K.NR.1.4",
+          "description": "Identify pennies, nickels, and dimes and know their name and value.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "NR-domain, not MDR: Kindergarten's money standard is coded under Number Relations even though this progression row sits under Measurement & Data Reasoning."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Money",
+      "grade": "1",
+      "bullets": [
+        "Identify value of pennies, nickels, dimes and quarters"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.MDR.6.3",
+          "description": "Identify the value of quarters and compare the values of pennies, nickels, dimes, and quarters.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "MDR-domain this time -- inconsistent with Kindergarten's own money standard being NR-domain one grade earlier, within GA's own coding, not across documents."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Money",
+      "grade": "2",
+      "bullets": [
+        "Combination of coins",
+        "Problems involving dollars and all coins"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.MDR.6.2",
+          "description": "Find the value of a group of coins and determine combinations of coins that equal a given amount that is less than one hundred cents, and solve problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and \u00a2 symbols appropriately.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "Exact, near-verbatim match."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Money",
+      "grade": "3",
+      "bullets": [
+        "Using money to solve problems"
+      ],
+      "mapped_codes": [],
+      "gap": true,
+      "unmatched_bullets": [
+        "Using money to solve problems"
+      ],
+      "cross_domain": false,
+      "note": "No Grade 3 GA standard names money as its subject, checked against every bare standard (3.NR, 3.PAR, 3.MDR, 3.GSR) AND every guidance file entry (georgia_math_guidance_3.json). The only hit anywhere in Grade 3's guidance is a scope caveat on 3.PAR.3.7 -- 'situations involving money should not include decimal numbers' -- which implies money-themed word problems are used as one possible context for that standard's multiplication/division content, but no actual worked example anywhere in Grade 3's guidance uses money (checked every examples field). Thin evidence, not enough to call this resolved -- recorded as a gap, with the caveat noted for completeness."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Money",
+      "grade": "4",
+      "bullets": [
+        "Using money as a tool or manipulative to solve problems"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.NR.5.2",
+          "description": "Represent, read, and write fractions with denominators of 10 or 100 using decimal notation, and decimal numbers to the hundredths place as fractions, using concrete materials and drawings.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "No Grade 4 GA standard names money as its subject, but 4.NR.5.2's guidance directly evidences money being used 'as a tool or manipulative to solve problems' (the bullet's own wording): its examples field poses a $0.62 refund-check word problem specifically to teach fraction/decimal equivalence (62 cents as 62/100 of a dollar). Cross-domain (NR, not MDR) and not the standard's stated topic, but the bullet's own framing -- money as a *tool* for other content, not a dedicated skill -- is exactly what this shows."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Money",
+      "grade": "5",
+      "bullets": [
+        "Using money as a tool to solve problems involving decimals"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.NR.4.4",
+          "description": "Solve problems involving addition and subtraction of decimal numbers to the hundredths place using a variety of strategies.",
+          "domain": "NR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": true,
+      "note": "5.NR.4.4's guidance states, nearly verbatim: 'Money may be used as a tool to aid in the student's understanding of adding and subtracting decimal numbers to the hundredths place' -- matching the bullet ('Using money as a tool to solve problems involving decimals') almost exactly. Cross-domain (NR, not MDR) and not the standard's stated topic (5.NR.4.4 is about decimal addition/subtraction generally), but this is the strongest guidance-level evidence found for any Money cell past Grade 2."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Time",
+      "grade": "1",
+      "bullets": [
+        "Tell & write time in hours and half hours",
+        "Measure elapsed time to the hour"
+      ],
+      "mapped_codes": [
+        {
+          "code": "1.MDR.6.2",
+          "description": "Tell and write time in hours and half-hours using analog and digital clocks, and measure elapsed time to the hour on the hour using a predetermined number line.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "MDR",
+      "concept": "Time",
+      "grade": "2",
+      "bullets": [
+        "Time to the nearest five minutes",
+        "Distinguish between a.m. & p.m.",
+        "Elapsed time to hour or half hour"
+      ],
+      "mapped_codes": [
+        {
+          "code": "2.MDR.6.1",
+          "description": "Tell and write time from analog and digital clocks to the nearest five minutes, and estimate and measure elapsed time using a timeline, to the hour or half hour on the hour or half hour.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": "'Distinguish between a.m. & p.m.' is not stated in 2.MDR.6.1's own bare text (which covers telling time to five minutes and elapsed time to hour/half hour); likely drawn from georgia_math_guidance_2.json's elaboration rather than the bare standard."
+    },
+    {
+      "domain": "MDR",
+      "concept": "Time",
+      "grade": "3",
+      "bullets": [
+        "Tell time to the nearest minute",
+        "Estimate relative time",
+        "Elapsed time to hour, half hour & quarter hour"
+      ],
+      "mapped_codes": [
+        {
+          "code": "3.MDR.5.2",
+          "description": "Tell and write time to the nearest minute and estimate time to the nearest fifteen minutes (quarter hour) from the analysis of an analog clock.",
+          "domain": "MDR"
+        },
+        {
+          "code": "3.MDR.5.3",
+          "description": "Solve meaningful problems involving elapsed time, including intervals of time to the hour, half hour, and quarter hour where the times presented are only on the hour, half hour, or quarter hour within a.m. or p.m. only.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "MDR",
+      "concept": "Time",
+      "grade": "4",
+      "bullets": [
+        "Intervals of time",
+        "Elapsed time to the nearest minute"
+      ],
+      "mapped_codes": [
+        {
+          "code": "4.MDR.6.1",
+          "description": "Use the four operations to solve problems involving elapsed time to the nearest minute, intervals of time, metric measurements of liquid volumes, lengths, distances, and masses of objects, including problems involving fractions with like denominators, and also problems that require expressing measurements given in a larger unit in terms of a smaller unit, and expressing a smaller unit in terms of a larger unit based on the idea of equivalence.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    },
+    {
+      "domain": "MDR",
+      "concept": "Time",
+      "grade": "5",
+      "bullets": [
+        "Solving problems involving time"
+      ],
+      "mapped_codes": [
+        {
+          "code": "5.MDR.7.1",
+          "description": "Explore realistic problems involving different units of measurement, including distance, mass, weight, volume, and time.",
+          "domain": "MDR"
+        }
+      ],
+      "gap": false,
+      "unmatched_bullets": [],
+      "cross_domain": false,
+      "note": ""
+    }
+  ]
+}

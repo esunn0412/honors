@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+*typ
 
 # CCSS <-> state mapping pipeline: hierarchical method kept local for now,
 # not part of the public release yet.
