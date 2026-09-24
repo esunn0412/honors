@@ -96,29 +96,38 @@ two clean stages.
 |---|---|---|
 | Georgia Milestones | GaDOE study guides + assessment guides, grades 3-5 (2016-2017 editions, from Fair Oaks ES and other district sites) | 123 unique items, labeled by GaDOE with type, DOK and standard |
 | i-Ready | Diagnostic sample items (Curriculum Associates) | 10 K-5 items (screenshots) |
-| i-Ready | At-home practice packets, student + teacher versions ([source page](https://www.curriculumassociates.com/summer-learning-support/at-home-resources-mathematics)) | 129 worksheets, 1,176 problems |
+| i-Ready | At-home practice packets, student + teacher versions ([source page](https://www.curriculumassociates.com/summer-learning-support/at-home-resources-mathematics)) | 129 worksheets: 1,176 numbered problems + 37 pages without numbers = 1,213 questions |
 | MathFish | Research dataset (IM + Fishtank curricula), K-5 subset | 4,428 problems |
 
-**How questions are categorized:** four separate dimensions, not just one.
+**How questions are categorized:** three separate dimensions (full rules in
+`processed/question_types/CODEBOOK.md`).
 
-| Dimension | Values | Where it comes from |
-|---|---|---|
-| Response format | multiple choice, multi-select, numeric, match/sort, draw/plot, written explanation, open activity | GaDOE's labels (Milestones); hand-coded (i-Ready); text rules checked against GaDOE's labels (MathFish, 92% agreement) |
-| Context | word problem, visual model, symbolic | text rules (rough) |
-| Picture (multimodal) | text only, table, code-drawable diagram, illustration, interactive tool | hand-coded from page images (Milestones, i-Ready) |
-| Difficulty (DOK 1-3) | printed by GaDOE | Milestones only |
+| Dimension | Values |
+|---|---|
+| Answer mode | select one, select many, enter (number/expression), write (explanation), construct (plot/shade/draw), match/order/sort, drop-down |
+| Structure | single, or multi-part (Part A/B, a./b., and item sets on one shared situation). Each part keeps its own answer mode, e.g. *enter → write* |
+| Stimulus | none, table, diagram, illustration, interactive tool. A table holding pictures counts as a picture |
 
-**Main findings:**
+- **Not used:** DOK (only Milestones prints it; kept as GaDOE metadata) and context (word
+  problem vs. bare numbers).
+- **Outside the scheme:** MathFish games, centers and teacher-led routines, marked "open".
+- **Unit:** one question. i-Ready worksheets are now counted per problem (1,213).
+- **Labels:** a rule-based first pass, validated by hand in the review page. The only
+  automatic check is Milestones, where the labels agree with GaDOE's printed item type on
+  all 123 items.
 
-- **The tests are mostly multiple choice.** Milestones: 70% multiple choice, 5% multi-select,
-  25% written. i-Ready samples: 7 of 10 multiple choice.
-- **MathFish is under 1% multiple choice.** It's lesson material (42% explain, 29% open
-  activities), so it's a content pool, not a model of test formats.
-- **Format tracks difficulty.** Every DOK-1 item is multiple choice; 71% of DOK-3 items are
-  written.
-- **Almost every test picture can be drawn by code:** 98% of Milestones items are text,
-  tables or simple diagrams (number lines, fraction models, shapes, grids). Only 3 of 123
-  need a real illustration.
+**Main findings (first-pass labels):**
+
+- **The tests are mostly "select one".** Milestones: 67% select one, 2% select many, 9% write,
+  21% multi-part (usually *enter → write* or two *select one* parts). i-Ready samples: 7 of 10
+  select one.
+- **MathFish rarely asks students to select:** only 6% of problems have a select part. It's
+  lesson material (37% multi-part chains, 27% open activities, 15% write, 14% enter), so it's
+  a content pool, not a model of test formats.
+- **i-Ready practice worksheets are drills:** 91% of problems are *enter*.
+- **Almost every test picture is a diagram code could draw:** Milestones is 56% none, 6%
+  table, 36% diagram (number lines, fraction models, shapes, grids). Only 3 of 123 need a
+  real illustration.
 - **i-Ready's distinctive feature is interaction:** 8 of 10 samples are answered with an
   on-screen tool (ruler, protractor, counters, click-to-plot).
 
@@ -131,8 +140,9 @@ two clean stages.
   - i-Ready worksheets: 1,098 of 1,176, from the teacher packets.
   - i-Ready samples: 8 of 10, worked out by me.
   - MathFish: none; the publishers' solutions are behind a teacher login.
-- **Review tool:** `processed/question_types/review/index.html` shows every item with its
-  labels, pictures and answers, and lets you correct labels and export them.
+- **Review tool:** `processed/question_types/review/index.html` shows every question with its
+  labels, pictures and answers. It is also where labels are validated: correct the question
+  type, part modes and stimulus, mark a card checked, and export as CSV.
 
 **Limits to mention:**
 
@@ -144,9 +154,14 @@ two clean stages.
 
 **To discuss:**
 
-- **Target formats for the generator.** Proposal: 4-option multiple choice with error-based
-  distractors (modeled on GaDOE's rationales), multi-select, two-part (Part A/B), numeric
-  entry, written explanation with a rubric, and number-line plotting for i-Ready. Agree?
+- **Is the categorization right?** Three dimensions (answer mode, structure, stimulus), with
+  item sets counted as multi-part and DOK/context left out. Agree?
+- **Validation plan:** who checks the labels in the review page, and on how big a sample per
+  source?
+- **Target formats for the generator.** Proposal: select one (4 options) with error-based
+  distractors (modeled on GaDOE's rationales), select many, multi-part (enter → write;
+  select → select), enter, write with a rubric, and construct (number-line plotting) for
+  i-Ready. Agree?
 - **Next step from Sep 15 (type per standard):** start from the observed type-per-standard
   counts (`tables/standard_by_type.csv`), then have an LLM generate each type per standard,
   solve it, and discard infeasible ones. Pick one grade first (grade 4, as suggested
