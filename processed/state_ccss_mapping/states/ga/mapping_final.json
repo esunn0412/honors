@@ -1,9 +1,10 @@
 {
   "metadata": {
-    "description": "The adopted GA <-> CCSS K-5 skill mapping: map_state_to_ccss.py's flat classification of all 150 GA sub-standards (runs/ga/mapping_llm.json), with 8 corrections applied after a full human review of every code the flat script's independent classification disagreed with a prior hand-built mapping, plus one further bug (K.GSR.8.2) caught by verify_mapping.py's split-integrity check. 142/150 (95%) of the script's original output needed no correction.",
+    "description": "The adopted GA <-> CCSS K-5 skill mapping: map_state_to_ccss.py's flat classification of all 150 GA sub-standards (runs/ga/mapping_llm.json), with 11 corrections applied after a full human review of every code the flat script's independent classification disagreed with a prior hand-built mapping (8 corrections, plus one further bug, K.GSR.8.2, caught by verify_mapping.py's split-integrity check, plus 3 more caught by its borrowed-thematic-label lint -- see README.md), plus 3 more corrections from a second, later review pass that checked whether an already-cited GA code's own description text already covered a CCSS sub-clause the mapping had left uncited (see states/ga/coverage_gap_proposed_corrections.json for the full review trail of that pass, including the 1 candidate correction rejected). 136/150 (90.7%) of the script's original output needed no correction across both passes.",
     "state_leaf_count": 150,
     "corrections_applied": [
       "3.GSR.6.2",
+      "3.GSR.7.1",
       "3.GSR.7.2",
       "3.GSR.7.3",
       "3.MDR.5.1",
@@ -12,10 +13,12 @@
       "4.GSR.7.1",
       "4.GSR.8.2",
       "4.MDR.6.2",
+      "5.GSR.8.3",
       "5.MDR.7.1",
+      "5.NR.3.4",
       "K.GSR.8.2"
     ],
-    "n_corrections": 11
+    "n_corrections": 14
   },
   "mappings": [
     {
@@ -1255,6 +1258,10 @@
       "state_description": "Investigate area by covering the space of rectangles presented in realistic situations using multiple copies of the same unit, with no gaps or overlaps, and determine the total area (total number of units that covered the space).",
       "ccss_codes": [
         {
+          "code": "3.MD.5a",
+          "description": "A square with side length 1 unit, called \"a unit square,\" is said to have \"one square unit\" of area, and can be used to measure area."
+        },
+        {
           "code": "3.MD.5b",
           "description": "A plane figure which can be covered without gaps or overlaps by n unit squares is said to have an area of n square units."
         },
@@ -1265,7 +1272,7 @@
       ],
       "relationship": "merge",
       "needs_review": false,
-      "note": "Investigating area via unit-square tiling spans the unit-square definition (3.MD.5b) and counting unit squares (3.MD.6) -- merge."
+      "note": "Investigating area via unit-square tiling spans the unit-square definition itself (3.MD.5a: a unit square = one square unit of area), the covering-without-gaps-or-overlaps definition of area (3.MD.5b), and counting unit squares (3.MD.6) -- merge. Correction 2026-09-24: 3.MD.5a added after the coverage-gap review found this GA code's own text ('multiple copies of the same unit, with no gaps or overlaps') already states 3.MD.5a's definition, not just 3.MD.5b's -- see coverage_gap_proposed_corrections.json."
     },
     {
       "state_code": "3.GSR.7.2",
@@ -1896,6 +1903,14 @@
       "state_description": "Model and solve problems involving multiplication of a fraction and a whole number.",
       "ccss_codes": [
         {
+          "code": "4.NF.4b",
+          "description": "Understand a multiple of a/b as a multiple of 1/b, and use this understanding to multiply a fraction by a whole number. For example, use a visual fraction model to express 3 x (2/5) as 6 x (1/5), recognizing this product as 6/5. (In general, n x (a/b) = (n x a)/b.)"
+        },
+        {
+          "code": "4.NF.4c",
+          "description": "Solve word problems involving multiplication of a fraction by a whole number, e.g., by using visual fraction models and equations to represent the problem."
+        },
+        {
           "code": "5.NF.4a",
           "description": "Interpret the product (a/b) x q as a parts of a partition of q into b equal parts; equivalently, as the result of a sequence of operations a x q / b. For example, use a visual fraction model to show (2/3) x 4 = 8/3, and create a story context for this equation. Do the same with (2/3) x (4/5) = 8/15. (In general, (a/b) x (c/d) = ac/bd.)"
         },
@@ -1906,7 +1921,7 @@
       ],
       "relationship": "merge",
       "needs_review": false,
-      "note": "Multiplying a fraction and whole number spans the conceptual interpretation (5.NF.4a) and its real-world problem-solving application (5.NF.6) -- merge."
+      "note": "Multiplying a fraction and whole number spans the conceptual interpretation (5.NF.4a) and its real-world problem-solving application (5.NF.6) -- merge. Correction 2026-09-24: 4.NF.4b/4c added after the coverage-gap review found GA has no grade-4 standard for multiplying a fraction by a whole number at all -- it teaches this content here, one grade later than CCSS. Kept as merge rather than different_grade per taxonomy refinement: different_grade is reserved for a clean 1:1 same-standard-different-grade case, not a code already merging several same-grade CCSS codes -- see coverage_gap_proposed_corrections.json."
     },
     {
       "state_code": "5.NR.3.5",
@@ -2130,6 +2145,14 @@
       "state_description": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
       "ccss_codes": [
         {
+          "code": "5.MD.3a",
+          "description": "A cube with side length 1 unit, called a \"unit cube,\" is said to have \"one cubic unit\" of volume, and can be used to measure volume."
+        },
+        {
+          "code": "5.MD.3b",
+          "description": "A solid figure which can be packed without gaps or overlaps using n unit cubes is said to have a volume of n cubic units."
+        },
+        {
           "code": "5.MD.4",
           "description": "Measure volumes by counting unit cubes, using cubic cm, cubic in, cubic ft, and improvised units."
         },
@@ -2140,7 +2163,7 @@
       ],
       "relationship": "merge",
       "needs_review": false,
-      "note": "Investigating volume by packing unit cubes spans counting unit cubes (5.MD.4) and the packing-based volume-formula justification (5.MD.5a) -- merge."
+      "note": "Investigating volume by packing unit cubes spans the unit-cube/volume-by-packing definition itself (5.MD.3a/3b: a unit cube = one cubic unit, packing n unit cubes without gaps or overlaps = n cubic units), counting unit cubes (5.MD.4), and the packing-based volume-formula justification (5.MD.5a) -- merge. Correction 2026-09-24: 5.MD.3a/3b added after the coverage-gap review found this GA code's own text ('packing them with unit cubes without gaps or overlaps... determine the total volume') already states this definition -- see coverage_gap_proposed_corrections.json."
     },
     {
       "state_code": "5.GSR.8.4",

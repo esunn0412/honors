@@ -3,8 +3,8 @@
     "state_leaf_count": 150,
     "state_mapped_to_at_least_one_ccss": 136,
     "state_genuine_gap": 14,
-    "ccss_referenced": 152,
-    "ccss_unmapped": 23,
+    "ccss_referenced": 157,
+    "ccss_unmapped": 18,
     "by_relationship_type": {
       "exact": 56,
       "state_superset": 12,

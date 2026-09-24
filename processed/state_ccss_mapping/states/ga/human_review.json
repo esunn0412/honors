@@ -3,8 +3,94 @@
     "description": "Full human review of the flat classification script's (map_state_to_ccss.py) output against every code it did NOT trivially agree on with a prior hand-built mapping -- 25 of the script's 150 GA codes, each independently re-examined against the actual GA and CCSS standard text. 8 verdicts came back 'error' (the script's own classification was wrong; `human_corrected_to` gives the corrected relationship/codes, now baked into runs/ga/mapping_final.json). The other 17 came back 'okay' -- a defensible judgment call, or the script's answer stands as the better one; the script's original output was kept unchanged for those. Combined with 142 codes that needed no review at all, this means 142/150 (95%) of the script's raw output required no correction whatsoever. Error-type categories revised to a strict, mutually-exclusive 5-type scheme (see README.md's 'Error type definitions' section) -- earlier categories overlapped conceptually.",
     "n_reviewed": 25,
     "n_error": 7,
-    "n_okay": 18
+    "n_okay": 18,
+    "second_pass": {
+      "description": "A second, later review batch (2026-09-24) with a different origin: found while writing up the coverage-loss discussion in README.md, not from a flat-script-vs-hand-built-mapping disagreement. For each CCSS K-5 leaf code with no GA citation that was one lettered clause of an otherwise GA-covered standard, checked whether the GA code already citing its sibling clause(s) already described the missing clause's content in its own text. 4 candidates went to Taeeun for a verdict (full detail, including 2 checked-and-confirmed genuine gaps and 1 ambiguous case that weren't proposed as corrections: states/ga/coverage_gap_proposed_corrections.json). See `second_pass_items` below for the 4 reviewed here.",
+      "n_reviewed": 4,
+      "n_accepted": 3,
+      "n_rejected": 1
+    },
+    "n_corrections_total_both_passes": 14
   },
+  "second_pass_items": [
+    {
+      "ga_code": "5.GSR.8.3",
+      "ga_description": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
+      "error_type": "Coverage-gap under-citation -- GA code's own description already states the content of an uncited CCSS sibling sub-clause",
+      "error_type_key": "coverage_gap_undercite",
+      "current_citation": {
+        "relationship": "merge",
+        "ccss_codes": [
+          { "code": "5.MD.4", "description": "Measure volumes by counting unit cubes, using cubic cm, cubic in, cubic ft, and improvised units." },
+          { "code": "5.MD.5a", "description": "Find the volume of a right rectangular prism with whole-number side lengths by packing it with unit cubes..." }
+        ],
+        "note": "Investigating volume by packing unit cubes spans counting unit cubes (5.MD.4) and the packing-based volume-formula justification (5.MD.5a)."
+      },
+      "verdict": "accept",
+      "human_corrected_to": {
+        "relationship": "merge",
+        "ccss_codes_added": ["5.MD.3a", "5.MD.3b"],
+        "note": "5.GSR.8.3's own text ('packing with unit cubes without gaps or overlaps... determine total volume') already states the 5.MD.3a/3b unit-cube/volume-by-packing definition, not just 5.MD.4/5.MD.5a's downstream application of it."
+      }
+    },
+    {
+      "ga_code": "5.NR.3.4",
+      "ga_description": "Model and solve problems involving multiplication of a fraction and a whole number.",
+      "error_type": "Coverage-gap under-citation -- GA teaches this content one grade later than CCSS, at a code already cited for the grade-5 version",
+      "error_type_key": "coverage_gap_undercite",
+      "current_citation": {
+        "relationship": "merge",
+        "ccss_codes": [
+          { "code": "5.NF.4a", "description": "Interpret the product (a/b) x q as a parts of a partition of q into b equal parts..." },
+          { "code": "5.NF.6", "description": "Solve real world problems involving multiplication of fractions and mixed numbers..." }
+        ],
+        "note": "Multiplying a fraction and whole number spans the conceptual interpretation (5.NF.4a) and its real-world problem-solving application (5.NF.6)."
+      },
+      "verdict": "accept_modified",
+      "verdict_note": "okay, but keep it at merge. different grade is only if it's one exact same standard but in different grade.",
+      "human_corrected_to": {
+        "relationship": "merge",
+        "ccss_codes_added": ["4.NF.4b", "4.NF.4c"],
+        "note": "GA has no grade-4 standard for multiplying a fraction by a whole number at all -- it teaches this content here, one grade later than CCSS's 4.NF.4b/4c. Proposed as different_grade; Taeeun corrected to merge, since different_grade is reserved for a clean 1:1 same-standard-different-grade case, not a code already merging several same-grade CCSS codes."
+      }
+    },
+    {
+      "ga_code": "3.GSR.7.1",
+      "ga_description": "Investigate area by covering the space of rectangles presented in realistic situations using multiple copies of the same unit, with no gaps or overlaps, and determine the total area (total number of units that covered the space).",
+      "error_type": "Coverage-gap under-citation -- GA code's own description already states the content of an uncited CCSS sibling sub-clause",
+      "error_type_key": "coverage_gap_undercite",
+      "current_citation": {
+        "relationship": "merge",
+        "ccss_codes": [
+          { "code": "3.MD.5b", "description": "A plane figure which can be covered without gaps or overlaps by n unit squares is said to have an area of n square units." },
+          { "code": "3.MD.6", "description": "Measure areas by counting unit squares..." }
+        ],
+        "note": "Investigating area via unit-square tiling spans the unit-square definition (3.MD.5b) and counting unit squares (3.MD.6)."
+      },
+      "verdict": "accept",
+      "human_corrected_to": {
+        "relationship": "merge",
+        "ccss_codes_added": ["3.MD.5a"],
+        "note": "3.GSR.7.1's own text ('multiple copies of the same unit, with no gaps or overlaps') already states 3.MD.5a's unit-square definition, not just 3.MD.5b's counting-based definition."
+      }
+    },
+    {
+      "ga_code": "3.NR.4.4",
+      "ga_description": "Recognize and generate simple equivalent fractions.",
+      "error_type": "Coverage-gap under-citation (proposed, rejected) -- weaker evidence than the 3 accepted above",
+      "error_type_key": "coverage_gap_undercite",
+      "current_citation": {
+        "relationship": "exact",
+        "ccss_codes": [
+          { "code": "3.NF.3b", "description": "Recognize and generate simple equivalent fractions..." }
+        ],
+        "note": "Recognize/generate simple equivalent fractions matches verbatim."
+      },
+      "verdict": "reject",
+      "verdict_note": "nope, let's keep this a separate code",
+      "human_corrected_to": null
+    }
+  ],
   "items": [
     {
       "ga_code": "K.NR.1.1",

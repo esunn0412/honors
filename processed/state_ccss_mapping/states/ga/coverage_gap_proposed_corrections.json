@@ -1,8 +1,10 @@
 {
   "metadata": {
-    "description": "Candidate corrections to mapping_final.json, found while writing up the coverage-loss discussion in ../../README.md (the 24 CCSS K-5 leaf codes with no GA citation at all). For each of the 10 codes that are a single missing lettered clause of an otherwise GA-covered CCSS standard, checked whether the GA code(s) that already cite the sibling clause(s) already describe the missing clause's content in their own text -- i.e. whether mapping_final.json under-cited rather than GA genuinely lacking the content. These are proposals only, not applied to mapping_final.json. Pending Taeeun's verdict per item, same as human_review.json's review process.",
+    "description": "Candidate corrections to mapping_final.json, found while writing up the coverage-loss discussion in ../../README.md (originally the 24 CCSS K-5 leaf codes with no GA citation at all under an inconsistent 191-leaf count; 18 under the corrected, canonical 175-leaf count verify_mapping.py uses). For each of the codes that are a single missing lettered clause of an otherwise GA-covered CCSS standard, checked whether the GA code(s) that already cite the sibling clause(s) already describe the missing clause's content in their own text -- i.e. whether mapping_final.json under-cited rather than GA genuinely lacking the content. RESOLVED 2026-09-24: 3 accepted (1 with a modification) and applied to mapping_final.json, 1 rejected and left as a genuine gap. See each item's `verdict` and, for the modified one, `final_correction`.",
     "n_proposed": 4,
-    "n_pending": 4,
+    "n_accepted": 3,
+    "n_rejected": 1,
+    "n_pending": 0,
     "verdict_options": ["accept", "reject", "accept_modified"]
   },
   "items": [
@@ -25,7 +27,8 @@
         "note": "Investigating volume by packing unit cubes without gaps or overlaps IS the unit-cube/volume-by-packing definition (5.MD.3a/3b), not just a downstream application of it -- extending the existing merge."
       },
       "confidence": "high",
-      "verdict": "pending"
+      "verdict": "accept",
+      "applied": "Applied to mapping_final.json's 5.GSR.8.3 entry exactly as proposed."
     },
     {
       "missing_ccss_code": "4.NF.4b",
@@ -41,12 +44,14 @@
       },
       "evidence": "GA does not appear to teach 'multiply a fraction by a whole number' at grade 4 at all -- no other GA code in 4.NR.4 covers this content (4.NR.4.1-4.6 cover equivalence, comparison, decomposition, and like-denominator addition/subtraction only). GA teaches this content one grade later, at 5.NR.3.4, which is a near-verbatim match to CCSS's 4.NF.4b/4c framing. This is the same cross-grade pattern the mapping already tags as different_grade elsewhere (e.g. 4.G.3, 4.NBT.2).",
       "proposed_correction": {
-        "relationship": "different_grade",
+        "relationship": "merge",
         "ccss_codes": ["4.NF.4b", "4.NF.4c", "5.NF.4a", "5.NF.6"],
         "note": "GA teaches fraction-times-whole-number multiplication and its word-problem application one grade later than CCSS (grade 5 vs grade 4) -- add 4.NF.4b/4c as different_grade alongside the existing 5.NF.4a/5.NF.6 merge."
       },
       "confidence": "high",
-      "verdict": "pending"
+      "verdict": "accept_modified",
+      "verdict_note": "okay, but keep it at merge. different grade is only if it's one exact same standard but in different grade.",
+      "applied": "Applied to mapping_final.json's 5.NR.3.4 entry as merge (matching this proposed_correction, not the different_grade text still in this item's evidence field above, which predates the verdict)."
     },
     {
       "missing_ccss_code": "3.MD.5a",
@@ -65,7 +70,8 @@
         "note": "'Multiple copies of the same unit, with no gaps or overlaps' is 3.MD.5a's own definition of a unit square as well as 3.MD.5b's counting step -- extending the existing merge."
       },
       "confidence": "high",
-      "verdict": "pending"
+      "verdict": "accept",
+      "applied": "Applied to mapping_final.json's 3.GSR.7.1 entry exactly as proposed."
     },
     {
       "missing_ccss_code": "3.NF.3a",
@@ -84,7 +90,9 @@
         "note": "'Recognize... equivalent fractions' presupposes the same-size/same-point definition (3.NF.3a), not just the generate-examples step (3.NF.3b) -- changes relationship from exact to merge."
       },
       "confidence": "medium",
-      "verdict": "pending"
+      "verdict": "reject",
+      "verdict_note": "nope, let's keep this a separate code",
+      "applied": "No change to mapping_final.json -- 3.NF.3a stays uncited, a genuine gap."
     }
   ],
   "checked_and_rejected": [

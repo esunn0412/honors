@@ -26,12 +26,12 @@ state_ccss_mapping/
       georgia_standards/
         georgia_math_0.json ... _5.json           GA's own K-5 standards.
         georgia_math_guidance_0.json ... _5.json  GA's per-standard teaching guidance.
-      mapping_final.json      THE adopted GA <-> CCSS mapping (150 codes, 11 corrections applied).
+      mapping_final.json      THE adopted GA <-> CCSS mapping (150 codes, 14 corrections applied across two review passes).
       mapping_llm.json        The script's original, unedited output.
       human_review.json       Every reviewed code: original output, verdict, correction.
-      coverage_gap_proposed_corrections.json  Candidate corrections found while writing up
-                               the coverage-loss discussion below -- pending your verdict,
-                               not yet applied to mapping_final.json.
+      coverage_gap_proposed_corrections.json  4 candidate corrections found while writing up
+                               the coverage-loss discussion below, with Taeeun's verdicts --
+                               3 accepted (applied to mapping_final.json below) and 1 rejected.
       verification_report.json
     va/
       mapping_llm.json         21 distinct VA SOL codes, classified fresh.
@@ -116,7 +116,7 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 
 ## Review results — GA
 
-**11 of 150 codes corrected (139/150, 93%, needed no change).** Full trail: `states/ga/human_review.json`.
+**14 of 150 codes corrected across two review passes (136/150, 90.7%, needed no change).** 11 from the first pass (below), 3 more from a second pass driven by the coverage-loss discussion (see "Second review pass" below). Full trail: `states/ga/human_review.json` and `states/ga/coverage_gap_proposed_corrections.json`.
 
 **Relationship-type breakdown (`states/ga/mapping_final.json`, 150 codes):**
 
@@ -152,27 +152,46 @@ Earlier drafts of this table used 8 categories (e.g. separate "merge under/over-
 
 There's no independently-verified "gold" mapping for GA — the thesis author is the only reviewer. This process checks that every classification makes sense on its own terms, not that it matches ground truth. `verify_mapping.py` now reports **clean: true** — zero open lint flags.
 
+### Second review pass: 3 more corrections from the coverage-loss discussion
+
+While writing up the coverage-loss discussion below (which CCSS codes have no GA citation), checked each single-missing-clause case against whether the GA code already citing its sibling clause(s) already stated the missing clause's content in its own text. 4 candidates went to Taeeun for a verdict (`states/ga/coverage_gap_proposed_corrections.json`); 3 accepted, 1 rejected:
+
+| code | verdict | applied |
+|---|---|---|
+| `5.MD.3a`, `5.MD.3b` | accept | added to `5.GSR.8.3`'s existing `merge` |
+| `4.NF.4b`, `4.NF.4c` | accept, modified | added to `5.NR.3.4`'s existing `merge` — proposed as `different_grade`, but kept as `merge` per Taeeun's call: `different_grade` is reserved for a clean 1:1 same-standard-different-grade case, not a code that's already merging several same-grade CCSS codes |
+| `3.MD.5a` | accept | added to `3.GSR.7.1`'s existing `merge` |
+| `3.NF.3a` | reject | stays a separate, uncited code — not folded into `3.NR.4.4` |
+
+None of these changed any GA code's `relationship` type (all three target codes were already `merge`), so the relationship-type breakdown table above is unaffected — only `ccss_referenced` moved, from 152 to 157 (of 175 total CCSS K-5 leaf codes).
+
 ### Coverage loss: how much of each standard set isn't matched
 
 `mapping_final.json` is indexed by GA code — so "coverage" is actually two
-different questions that are easy to conflate:
+different questions that are easy to conflate. **Numbers below are
+post-correction** (after the second review pass above); the CCSS-side
+denominator uses `verify_mapping.py`'s own canonical leaf-code count
+(**175**, its `_load_leaf_codes` convention: a standard with lettered
+sub-parts is represented *only* by those sub-parts, the bare parent code
+isn't counted separately) — an earlier draft of this section used 191 by
+counting bare parents and their lettered children as separate leaves, which
+double-counted 16 standards; that inconsistency is fixed here.
 
 | direction | denominator | not matched | % |
 |---|---|---|---|
 | GA → CCSS (GA code has no CCSS equivalent, `relationship: none`) | 150 GA codes | 14 | **9.3%** |
-| CCSS → GA (no GA code cites this CCSS code, at any granularity) | 191 CCSS K-5 leaf codes | 39 | **20.4%** |
-| ...of those 39, a parent/child granularity artifact (bare parent uncited, but a lettered child of it *is* cited — e.g. `1.NBT.2` vs. `1.NBT.2a/b/c`) | 191 | 15 | 7.9% |
-| ...of those 39, genuine gaps (uncited at any granularity) | 191 | **24** | **12.6%** |
+| CCSS → GA (no GA code cites this CCSS code) | 175 CCSS K-5 leaf codes | **18** | **10.3%** |
 
-The CCSS-side number is structurally larger, and that's expected, not a
-quality problem: this mapping was built by finding each of GA's 150 codes
-its single best CCSS anchor, not by working through the CCSS list looking
-for a GA match for every code. A CCSS code can go uncited simply because no
-GA code happened to need it as its *closest* match — even when GA's
-curriculum functionally covers that content elsewhere. `3.OA.1`/`3.OA.2`
-(the base definitions of multiplication/division) are a likely example of
-this: GA surely teaches the underlying ideas, they just weren't any single
-GA code's best/closest anchor.
+Much closer together than the earlier (miscounted) 9.3%/20.4% draft
+suggested — both directions lose roughly a tenth of their own standard set.
+The CCSS-side number is still structurally a little inflated for a different
+reason: this mapping was built by finding each of GA's 150 codes its single
+best CCSS anchor, not by working through the CCSS list looking for a GA
+match for every code, so a CCSS code can go uncited simply because no GA
+code needed it as its *closest* match — even when GA's curriculum
+functionally covers it elsewhere (see the second-review-pass corrections
+above, which found exactly this for 5 of the codes that used to be on this
+list).
 
 **What kind of content is lost on each side:**
 
@@ -185,71 +204,52 @@ GA's 14 uncited codes, by content type:
 | Money | 2 | `K.NR.1.4`, `1.MDR.6.3` |
 | Measurement construction/units (building instruments, realistic multi-unit problems) | 2 | `2.MDR.5.1`, `5.MDR.7.1` |
 
-CCSS's 24 genuinely-uncited codes, by domain:
+CCSS's 18 uncited codes, by domain:
 
 | domain | count | codes |
 |---|---|---|
-| MD (Measurement & Data) | 9 | `2.MD.2`, `2.MD.5`, `3.MD.5a`, `4.MD.7`, `5.MD.2`, `5.MD.3`, `5.MD.3a`, `5.MD.3b`, `5.MD.5c` |
-| NF (Number & Operations—Fractions) | 5 | `3.NF.3a`, `4.NF.3a`, `4.NF.4b`, `4.NF.4c`, `5.NF.4b` |
+| MD (Measurement & Data) | 5 | `2.MD.2`, `2.MD.5`, `4.MD.7`, `5.MD.2`, `5.MD.5c` |
 | G (Geometry) | 4 | `2.G.2`, `3.G.2`, `K.G.2`, `K.G.3` |
+| NF (Number & Operations—Fractions) | 3 | `3.NF.3a`, `4.NF.3a`, `5.NF.4b` |
 | OA (Operations & Algebraic Thinking) | 3 | `1.OA.5`, `3.OA.1`, `3.OA.2` |
 | CC (Counting & Cardinality) | 2 | `K.CC.4a`, `K.CC.7` |
 | NBT (Number & Operations in Base Ten) | 1 | `2.NBT.9` |
 
-**Whole standards vs. single missing sub-clauses.** Of the 24, **14 are bare,
-unlettered standards** with no sub-parts to compare (`1.OA.5`, `2.G.2`,
+**Whole standards vs. single missing sub-clauses.** Of the 18, **13 are bare,
+unlettered standards** with no sub-parts to compare: `1.OA.5`, `2.G.2`,
 `2.MD.2`, `2.MD.5`, `2.NBT.9`, `3.G.2`, `3.OA.1`, `3.OA.2`, `4.MD.7`,
-`5.MD.2`, `K.CC.7`, `K.G.2`, `K.G.3`, and `5.MD.3` — whose own two lettered
-children are *also* both uncited, so all of `5.MD.3` is a gap, not just the
-parent). The other **10 are one specific lettered clause of an otherwise
-GA-covered standard** — checking each against its siblings:
+`5.MD.2`, `K.CC.7`, `K.G.2`, `K.G.3`. The other **5 are one specific lettered
+clause of an otherwise GA-covered standard** — every one already checked
+against the actual text of the GA code citing its sibling(s), same method as
+the second review pass above:
 
-| gap code | siblings' status | which clause is missing |
-|---|---|---|
-| `3.NF.3a` | b, c, d all cited | the **definition** ("two fractions are equivalent if same size / same point on a number line") — b/c/d (generate, express as whole number, compare) are covered |
-| `4.NF.3a` | b, c, d all cited | same shape: the definition ("understand addition/subtraction of fractions as joining/separating parts") — b/c/d covered |
-| `K.CC.4a` | b, c cited | the definition (pair each object with one number name in order) — b, c (cardinality, "one more") covered |
-| `3.MD.5a` | b cited | the definition ("a unit square... has one square unit of area") |
-| `4.NF.4b`, `4.NF.4c` | **a** is cited, b and c are not | reverse shape: the definition (a — "a multiple of a/b as a multiple of 1/b") is covered; the two application clauses (scale a fraction by a whole number; solve word problems) are not |
-| `5.NF.4b` | a cited | the application clause (find area of a rectangle with fractional side lengths) — the definition (a) is covered |
-| `5.MD.5c` | a, b cited | the composite-shapes application clause ("volume is additive... find volumes of composite figures") — the basic volume-formula clauses (a, b) are covered |
-| `5.MD.3a`, `5.MD.3b` | (each other) both uncited | looked like a full-standard gap at first — **but see the follow-up below: likely a mapping omission, not a true gap** |
+| gap code | siblings' status | which clause is missing | status |
+|---|---|---|---|
+| `3.NF.3a` | b, c, d all cited | the definition ("two fractions equivalent if same size / same point on a number line") | reviewed, **rejected** — `3.NR.4.4`'s "recognize... equivalent fractions" presupposes but doesn't state the definition; kept separate per Taeeun's verdict |
+| `4.NF.3a` | b, c, d all cited | the definition ("understand addition/subtraction of fractions as joining/separating parts") | same shape as `3.NF.3a`, not separately reviewed — treated consistently as a genuine gap rather than re-litigated |
+| `K.CC.4a` | b, c cited | the definition (pair each object with one number name in order) | checked — `K.NR.1.1`'s text doesn't state this explicitly; already modeled as a real prerequisite edge in `../progression_mapping/ccss_progressions.json` instead |
+| `5.NF.4b` | a cited | the application clause (area of a rectangle with fractional side lengths) | checked — searched every GA standard, content doesn't exist anywhere in GA K-5 |
+| `5.MD.5c` | a, b cited | the composite-shapes application clause ("volume is additive... composite figures") | checked — searched every GA standard, content doesn't exist anywhere in GA K-5 |
 
-So it's not a single clean rule ("GA always skips the definition" or "always
-skips the last clause") — it goes both ways. What's consistent is *shape*:
-in most of these 10 codes, GA cites most of a CCSS standard's sub-parts but leaves one or two
-out, and the one left out is either the standalone conceptual
-definition (`3.NF.3a`, `4.NF.3a`, `K.CC.4a`, `3.MD.5a`) or a narrower
-real-world/composite application that extends past what any single GA code
-was anchored to (`4.NF.4b/c`, `5.NF.4b`, `5.MD.5c`). Worth a closer look
-per-code before treating any of these 10 as truly uncovered by GA — several
-are plausibly implicit in the sibling clause GA *did* cite.
-
-**Follow-up: checked each of the 10 against the actual text of the GA code
-that already cites its sibling(s), looking for whether that code's own
-description already states the "missing" content.** Findings, and 4
-candidate corrections to `mapping_final.json`, are in
-`states/ga/coverage_gap_proposed_corrections.json` — pending review, not yet
-applied:
-
-| code | verdict | why |
-|---|---|---|
-| `5.MD.3a`/`3b` | **likely mapping omission** | `5.GSR.8.3`'s own text ("packing... with unit cubes without gaps or overlaps... determine total volume") already states this definition — it's currently merged to `5.MD.4`/`5.MD.5a` only |
-| `4.NF.4b`/`4c` | **likely mapping omission** | GA doesn't skip this content — it teaches it one grade later, at `5.NR.3.4` ("multiplication of a fraction and a whole number"), which should probably carry `4.NF.4b/4c` as `different_grade` |
-| `3.MD.5a` | **likely mapping omission** | same shape as `5.MD.3a/3b` — `3.GSR.7.1`'s text already states the unit-square definition |
-| `3.NF.3a` | **weaker candidate** | `3.NR.4.4` ("recognize and generate simple equivalent fractions") presupposes the definition but doesn't state it |
-| `5.NF.4b`, `5.MD.5c` | **confirmed genuine gaps** | searched every GA standard for the relevant content (fraction-side-length area; composite-figure volume) — neither exists anywhere in GA K-5 |
-| `K.CC.4a` | **ambiguous** | plausibly an implicit prerequisite skill for `K.NR.1.1` rather than the same content point; already modeled as a real prerequisite edge in `../progression_mapping/ccss_progressions.json` |
+`3.MD.5a`, `5.MD.3a`, `5.MD.3b`, `4.NF.4b`, `4.NF.4c` **used to be on this
+list** and are the 5 corrections from the second review pass above — each
+was exactly this same "definition already implied by a cited sibling's GA
+text" shape, just confirmed rather than left as a maybe.
 
 **Discussion, for the thesis writeup:** the 9.3% GA-side figure is the more
 load-bearing number, since it identifies content Georgia teaches that has
 *no* CCSS Progressions document to ground prerequisite edges against at all
 — exactly the `provenance: ga_native` set called out in
-`../progression_mapping/README.md`'s stage 2 plan. The 20.4%/12.6% CCSS-side
-figures are a property of this mapping's GA-anchored construction method
-more than a claim about GA's curricular coverage, and shouldn't be read as
-"CCSS content Georgia doesn't teach" without checking each code individually
-first.
+`../progression_mapping/README.md`'s stage 2 plan. For the remaining
+CCSS-side gaps (10.3%, now checked case-by-case rather than assumed), the
+plan going forward is not to keep hunting for more mapping corrections —
+it's to **acknowledge them as genuine gaps in both standard sets** and let
+the progression-mapping stage 2/3 work relate them anyway: a GA code with no
+CCSS anchor can still get real prerequisite edges through GA-native,
+hierarchical connections (e.g. `K.NR.1.1` → `K.CC.4a`'s content as an
+implicit prerequisite skill, even with no CCSS code to cite for the latter),
+which is exactly what `provenance: ga_native` edges in the rebuilt grounding
+file are for.
 
 ## Review results — VA
 
