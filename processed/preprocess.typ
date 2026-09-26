@@ -50,7 +50,7 @@ This file documents the preprocessing pipeline, not the thesis argument -- see `
 
 = CCSS standards #sym.arrow.r JSON
 
-`dat/ccss-math-standards.pdf` (corestandards.org, 93 pages) is transcribed page-by-page into `processed/standards/ccss_math_0.json` (K) through `ccss_math_5.json`, one file per grade.
+`dat/ccss-math-standards.pdf` (corestandards.org, 93 pages) is transcribed page-by-page into `raw/standards/ccss/ccss_math_0.json` (K) through `ccss_math_5.json`, one file per grade.
 
 CCSS's structure is *domain #sym.arrow.r cluster #sym.arrow.r standard #sym.arrow.r (optional) lettered sub-standard* -- one level deeper than Georgia's *domain #sym.arrow.r standard #sym.arrow.r sub_standard*. Clusters are unlabeled heading text in the source; standards are numbered and coded (`K.CC.1`); some break into lettered parts (`K.CC.4a/b/c`), the finest-grained citable unit when present.
 
@@ -99,7 +99,7 @@ The source's `Examples` column often includes a diagram rather than only text. I
 #keybox("Three-way classification, applied to every image found")[
   *(1) Decorative logo* (repeated "GELDS" Pre-K badge) -- dropped; adjacent text citation kept. \
   *(2) Photograph of real student handwork* -- excluded by scope decision. Where the source has its own explanatory prose, that text is kept verbatim as `examples` content, with a separate `diagram_excluded` key recording what was omitted -- never blended into the same string as the verbatim quote. \
-  *(3) Clean instructional diagram* -- kept as a real extracted PNG under `processed/standards/diagrams/`, referenced by the sub-standard's `diagrams` array as `{"image": ..., "caption": ...}`, caption hand-written (not verbatim).
+  *(3) Clean instructional diagram* -- kept as a real extracted PNG under `raw/standards/ga/diagrams/`, referenced by the sub-standard's `diagrams` array as `{"image": ..., "caption": ...}`, caption hand-written (not verbatim).
 ]
 
 One table (Sam/Terri fish-count, `5.PAR.6.1`) was kept as text in `examples` rather than an image, since it is plain tabular data.
@@ -125,7 +125,7 @@ Sub-standard count matches `georgia_math_*.json`'s independently-parsed K-5 tota
 
 == Cross-verification against `georgia_math_*.json`
 
-`processed/scripts/verify_guidance_descriptions.py` checks, for every code in `georgia_math_{grade}.json`, whether the same code exists in `georgia_math_guidance_{grade}.json` and whether the description text matches exactly.
+`raw/scripts/verify_guidance_descriptions.py` checks, for every code in `georgia_math_{grade}.json`, whether the same code exists in `georgia_math_guidance_{grade}.json` and whether the description text matches exactly.
 
 #table(
   columns: (auto, auto, auto, auto, auto),

@@ -465,7 +465,7 @@ items.
 ### Why not the same tool as the Georgia guidance diagrams?
 
 - The Georgia guidance documents **embed** their diagrams as image objects. `pdfimages`
-  pulls those out directly, and that's how `processed/standards/diagrams/` was made.
+  pulls those out directly, and that's how `raw/standards/ga/diagrams/` was made.
 - The Milestones guides **draw** their figures as vector graphics: lines, rectangles and
   curves, with no image objects. `pdfimages -list` finds nothing in them.
 - Plain text extraction only picks up the stray labels inside a drawing. A number-line
