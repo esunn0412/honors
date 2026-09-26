@@ -1,0 +1,122 @@
+{
+  "source": "Common Core State Standards for Mathematics (CCSSM), National Governors Association Center for Best Practices & Council of Chief State School Officers, 2010 — Glossary",
+  "source_document": "dat/ccss-math-standards.pdf",
+  "source_pages": "pp. 88-89",
+  "notes": {
+    "usage": "Several K-5 standards cite 'Glossary, Table 1' or 'Glossary, Table 2' as shorthand for the full taxonomy below, rather than restating it inline. Each such standard carries a 'glossary_ref' key (in ccss_math_*.json) naming one of this file's two top-level slugs. This file is the single source of truth for which slugs exist; it does NOT keep a reverse 'referenced_by' index back to the citing standards, since that would be a second, hand-maintained copy of information the standards files already carry via their own 'glossary_ref' tags, and the two could silently drift out of sync. To find every standard that cites a given slug, scan ccss_math_*.json for that glossary_ref value directly.",
+    "verbatim_policy": "title, category names, 'unknown' labels, examples, equations, and every 'description' field below (each one a source footnote, concatenated onto the table/category/situation it was attached to on the actual page, the same convention used for footnotes in ccss_math_*.json) are verbatim transcriptions checked against the source PDF page images, not paraphrased. Nothing in this file summarizes or editorializes on the source content.",
+    "not_reproduced": "The source Glossary also has Table 3 (properties of operations), Table 4 (properties of equality), and Table 5 (properties of inequality) — not reproduced here since no K-5 standard cites them."
+  },
+  "addition_subtraction_situations": {
+    "id": "addition_subtraction_situations",
+    "table_number_in_source": "Table 1",
+    "title": "Common addition and subtraction situations",
+    "categories": [
+      {
+        "name": "Add to",
+        "situations": [
+          { "unknown": "Result Unknown", "example": "Two bunnies sat on the grass. Three more bunnies hopped there. How many bunnies are on the grass now? 2 + 3 = ?" },
+          { "unknown": "Change Unknown", "example": "Two bunnies were sitting on the grass. Some more bunnies hopped there. Then there were five bunnies. How many bunnies hopped over to the first two? 2 + ? = 5" },
+          { "unknown": "Start Unknown", "example": "Some bunnies were sitting on the grass. Three more bunnies hopped there. Then there were five bunnies. How many bunnies were on the grass before? ? + 3 = 5" }
+        ]
+      },
+      {
+        "name": "Take from",
+        "situations": [
+          { "unknown": "Result Unknown", "example": "Five apples were on the table. I ate two apples. How many apples are on the table now? 5 – 2 = ?" },
+          { "unknown": "Change Unknown", "example": "Five apples were on the table. I ate some apples. Then there were three apples. How many apples did I eat? 5 – ? = 3" },
+          { "unknown": "Start Unknown", "example": "Some apples were on the table. I ate two apples. Then there were three apples. How many apples were on the table before? ? – 2 = 3" }
+        ]
+      },
+      {
+        "name": "Put Together/Take Apart",
+        "description": "Either addend can be unknown, so there are three variations of these problem situations. Both Addends Unknown is a productive extension of this basic situation, especially for small numbers less than or equal to 10.",
+        "situations": [
+          { "unknown": "Total Unknown", "example": "Three red apples and two green apples are on the table. How many apples are on the table? 3 + 2 = ?" },
+          { "unknown": "Addend Unknown", "example": "Five apples are on the table. Three are red and the rest are green. How many apples are green? 3 + ? = 5, 5 – 3 = ?" },
+          {
+            "unknown": "Both Addends Unknown",
+            "description": "These take apart situations can be used to show all the decompositions of a given number. The associated equations, which have the total on the left of the equal sign, help children understand that the = sign does not always mean makes or results in but always does mean is the same number as.",
+            "example": "Grandma has five flowers. How many can she put in her red vase and how many in her blue vase? 5 = 0 + 5, 5 = 5 + 0; 5 = 1 + 4, 5 = 4 + 1; 5 = 2 + 3, 5 = 3 + 2"
+          }
+        ]
+      },
+      {
+        "name": "Compare",
+        "description": "For the Bigger Unknown or Smaller Unknown situations, one version directs the correct operation (the version using more for the bigger unknown and using less for the smaller unknown). The other versions are more difficult.",
+        "situations": [
+          {
+            "unknown": "Difference Unknown",
+            "note": "The source prints these two variants stacked, followed by one shared equation line applying to the pair — kept as-is rather than forced onto one variant.",
+            "variants": [
+              { "label": "(\"How many more?\" version)", "example": "Lucy has two apples. Julie has five apples. How many more apples does Julie have than Lucy?" },
+              { "label": "(\"How many fewer?\" version)", "example": "Lucy has two apples. Julie has five apples. How many fewer apples does Lucy have than Julie?" }
+            ],
+            "equation": "2 + ? = 5, 5 – 2 = ?"
+          },
+          {
+            "unknown": "Bigger Unknown",
+            "variants": [
+              { "label": "(Version with \"more\")", "example": "Julie has three more apples than Lucy. Lucy has two apples. How many apples does Julie have? 2 + 3 = ?" },
+              { "label": "(Version with \"fewer\")", "example": "Lucy has 3 fewer apples than Julie. Lucy has two apples. How many apples does Julie have? 3 + 2 = ?" }
+            ]
+          },
+          {
+            "unknown": "Smaller Unknown",
+            "variants": [
+              { "label": "(Version with \"more\")", "example": "Julie has three more apples than Lucy. Julie has five apples. How many apples does Lucy have? 5 – 3 = ?" },
+              { "label": "(Version with \"fewer\")", "example": "Lucy has 3 fewer apples than Julie. Julie has five apples. How many apples does Lucy have? ? + 3 = 5" }
+            ]
+          }
+        ]
+      }
+    ],
+    "description": "Adapted from Box 2-4 of Mathematics Learning in Early Childhood, National Research Council (2009), pp. 32, 33."
+  },
+  "multiplication_division_situations": {
+    "id": "multiplication_division_situations",
+    "table_number_in_source": "Table 2",
+    "title": "Common multiplication and division situations",
+    "general_forms": {
+      "Unknown Product": "a x b = ?",
+      "Group Size Unknown (\"How many in each group?\" Division)": "a x ? = p, and p / a = ?",
+      "Number of Groups Unknown (\"How many groups?\" Division)": "? x b = p, and p / b = ?"
+    },
+    "categories": [
+      {
+        "name": "Equal Groups",
+        "situations": [
+          { "unknown": "Unknown Product", "example": "There are 3 bags with 6 plums in each bag. How many plums are there in all?", "measurement_example": "You need 3 lengths of string, each 6 inches long. How much string will you need altogether?" },
+          { "unknown": "Group Size Unknown", "example": "If 18 plums are shared equally into 3 bags, then how many plums will be in each bag?", "measurement_example": "You have 18 inches of string, which you will cut into 3 equal pieces. How long will each piece of string be?" },
+          { "unknown": "Number of Groups Unknown", "example": "If 18 plums are to be packed 6 to a bag, then how many bags are needed?", "measurement_example": "You have 18 inches of string, which you will cut into pieces that are 6 inches long. How many pieces of string will you have?" }
+        ]
+      },
+      {
+        "name": "Arrays, Area",
+        "description": "The language in the array examples shows the easiest form of array problems. A harder form is to use the terms rows and columns: The apples in the grocery window are in 3 rows and 6 columns. How many apples are there? Both forms are valuable. Area involves arrays of squares that have been pushed together so that there are no gaps or overlaps, so array problems include these especially important measurement situations.",
+        "situations": [
+          { "unknown": "Unknown Product", "example": "There are 3 rows of apples with 6 apples in each row. How many apples are there?", "area_example": "What is the area of a 3 cm by 6 cm rectangle?" },
+          { "unknown": "Group Size Unknown", "example": "If 18 apples are arranged into 3 equal rows, how many apples will be in each row?", "area_example": "A rectangle has area 18 square centimeters. If one side is 3 cm long, how long is a side next to it?" },
+          { "unknown": "Number of Groups Unknown", "example": "If 18 apples are arranged into equal rows of 6 apples, how many rows will there be?", "area_example": "A rectangle has area 18 square centimeters. If one side is 6 cm long, how long is a side next to it?" }
+        ]
+      },
+      {
+        "name": "Compare",
+        "situations": [
+          { "unknown": "Unknown Product", "example": "A blue hat costs $6. A red hat costs 3 times as much as the blue hat. How much does the red hat cost?", "measurement_example": "A rubber band is 6 cm long. How long will the rubber band be when it is stretched to be 3 times as long?" },
+          { "unknown": "Group Size Unknown", "example": "A red hat costs $18 and that is 3 times as much as a blue hat costs. How much does a blue hat cost?", "measurement_example": "A rubber band is stretched to be 18 cm long and that is 3 times as long as it was at first. How long was the rubber band at first?" },
+          { "unknown": "Number of Groups Unknown", "example": "A red hat costs $18 and a blue hat costs $6. How many times as much does the red hat cost as the blue hat?", "measurement_example": "A rubber band was 6 cm long at first. Now it is stretched to be 18 cm long. How many times as long is the rubber band now as it was at first?" }
+        ]
+      },
+      {
+        "name": "General",
+        "situations": [
+          { "unknown": "Unknown Product", "equation": "a x b = ?" },
+          { "unknown": "Group Size Unknown", "equation": "a x ? = p, and p / a = ?" },
+          { "unknown": "Number of Groups Unknown", "equation": "? x b = p, and p / b = ?" }
+        ]
+      }
+    ],
+    "description": "The first examples in each cell are examples of discrete things. These are easier for students and should be given before the measurement examples."
+  }
+}

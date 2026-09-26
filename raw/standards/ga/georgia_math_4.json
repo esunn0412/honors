@@ -1,0 +1,244 @@
+{
+  "subject": "Mathematics",
+  "grade": "4",
+  "source": "Georgia K-12 Mathematics Standards (SY2023-2024)",
+  "case_document_id": "e9dd7229-3558-4df2-85c6-57b8938f6180",
+  "domains": [
+    {
+      "code": "4.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "standards": [
+        {
+          "code": "4.MP.1",
+          "description": "Make sense of problems and persevere in solving them."
+        },
+        {
+          "code": "4.MP.2",
+          "description": "Reason abstractly and quantitatively."
+        },
+        {
+          "code": "4.MP.3",
+          "description": "Construct viable arguments and critique the reasoning of others."
+        },
+        {
+          "code": "4.MP.4",
+          "description": "Model with mathematics."
+        },
+        {
+          "code": "4.MP.5",
+          "description": "Use appropriate tools strategically."
+        },
+        {
+          "code": "4.MP.6",
+          "description": "Attend to precision."
+        },
+        {
+          "code": "4.MP.7",
+          "description": "Look for and make use of structure."
+        },
+        {
+          "code": "4.MP.8",
+          "description": "Look for and express regularity in repeated reasoning."
+        }
+      ]
+    },
+    {
+      "code": "4.NR",
+      "name": "Numerical Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "4.NR.1",
+          "description": "Recognize patterns within the base ten place value system with quantities presented in real-life situations to compare and round multi-digit whole numbers through the hundred-thousands place and compare decimal numbers to the hundredths place.",
+          "sub_standards": [
+            {
+              "code": "4.NR.1.1",
+              "description": "Read and write multi-digit whole numbers to the hundred-thousands place using base-ten numerals and expanded form."
+            },
+            {
+              "code": "4.NR.1.2",
+              "description": "Recognize and show that a digit in one place has a value ten times greater than what it represents in the place to its right and extend this understanding to determine the value of a digit when it is shifted to the left or right, based on the relationship between multiplication and division."
+            },
+            {
+              "code": "4.NR.1.3",
+              "description": "Use place value reasoning to represent, compare, and order multi-digit numbers, using >, =, and < symbols to record the results of comparisons."
+            },
+            {
+              "code": "4.NR.1.4",
+              "description": "Use place value understanding to round multi-digit whole numbers."
+            }
+          ]
+        },
+        {
+          "code": "4.NR.2",
+          "description": "Using part-whole strategies, solve problems involving addition and subtraction through the hundred-thousands place, as well as multiplication and division of multi-digit whole numbers presented in real-life, mathematical situations.",
+          "sub_standards": [
+            {
+              "code": "4.NR.2.1",
+              "description": "Fluently add and subtract multi-digit numbers to solve practical, mathematical problems using place value understanding, properties of operations, and relationships between operations."
+            },
+            {
+              "code": "4.NR.2.2",
+              "description": "Interpret, model, and solve problems involving multiplicative comparison."
+            },
+            {
+              "code": "4.NR.2.3",
+              "description": "Solve relevant problems involving multiplication of a number with up to four digits by a 1-digit whole number or involving multiplication of two two-digit numbers using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models."
+            },
+            {
+              "code": "4.NR.2.4",
+              "description": "Solve authentic division problems involving up to 4-digit dividends and 1- digit divisors (including whole number quotients with remainders) using strategies based on place-value understanding, properties of operations, and the relationships between operations."
+            },
+            {
+              "code": "4.NR.2.5",
+              "description": "Solve multi-step problems using addition, subtraction, multiplication, and division involving whole numbers. Use mental computation and estimation strategies to justify the reasonableness of solutions."
+            }
+          ]
+        },
+        {
+          "code": "4.NR.4",
+          "description": "Solve real-life problems involving addition, subtraction, equivalence, and comparison of fractions with denominators of 2, 3, 4, 5, 6, 8, 10, 12, and 100 using part-whole strategies and visual models.",
+          "sub_standards": [
+            {
+              "code": "4.NR.4.1",
+              "description": "Using concrete materials, drawings, and number lines, demonstrate and explain the relationship between equivalent fractions, including fractions greater than one, and explain the identity property of multiplication as it relates to equivalent fractions. Generate equivalent fractions using these relationships."
+            },
+            {
+              "code": "4.NR.4.2",
+              "description": "Compare two fractions with the same numerator or the same denominator by reasoning about their size and recognize that comparisons are valid only when the two fractions refer to the same whole."
+            },
+            {
+              "code": "4.NR.4.3",
+              "description": "Compare two fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies and recognize that comparisons are valid only when the two fractions refer to the same whole."
+            },
+            {
+              "code": "4.NR.4.4",
+              "description": "Represent whole numbers and fractions as the sum of unit fractions."
+            },
+            {
+              "code": "4.NR.4.5",
+              "description": "Represent a fraction as a sum of fractions with the same denominator in more than one way, recording with an equation."
+            },
+            {
+              "code": "4.NR.4.6",
+              "description": "Add and subtract fractions and mixed numbers with like denominators using a variety of tools."
+            }
+          ]
+        },
+        {
+          "code": "4.NR.5",
+          "description": "Solve real-life problems involving addition, equivalence, comparison of fractions with denominators of 10 and 100, and comparison of decimal numbers as tenths and hundredths using part-whole strategies and visual models.",
+          "sub_standards": [
+            {
+              "code": "4.NR.5.1",
+              "description": "Demonstrate and explain the concept of equivalent fractions with denominators of 10 and 100, using concrete materials and visual models. Add two fractions with denominators of 10 and 100."
+            },
+            {
+              "code": "4.NR.5.2",
+              "description": "Represent, read, and write fractions with denominators of 10 or 100 using decimal notation, and decimal numbers to the hundredths place as fractions, using concrete materials and drawings."
+            },
+            {
+              "code": "4.NR.5.3",
+              "description": "Compare two decimal numbers to the hundredths place by reasoning about their size. Record the results of comparisons with the symbols >, =, or <, and justify the conclusions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4.PAR",
+      "name": "Patterning and Algebraic Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "4.PAR.3",
+          "description": "Generate and analyze patterns, including those involving shapes, input/output diagrams, factors, multiples, prime numbers, and composite numbers.",
+          "sub_standards": [
+            {
+              "code": "4.PAR.3.1",
+              "description": "Generate both number and shape patterns that follow a provided rule."
+            },
+            {
+              "code": "4.PAR.3.2",
+              "description": "Use input-output rules, tables, and charts to represent and describe patterns, find relationships, and solve problems."
+            },
+            {
+              "code": "4.PAR.3.3",
+              "description": "Find factor pairs in the range 1–100 and find multiples of single-digit numbers up to 100."
+            },
+            {
+              "code": "4.PAR.3.4",
+              "description": "Identify composite numbers and prime numbers and explain the relationship with the factor pairs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4.MDR",
+      "name": "Measurement and Data Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "4.MDR.6",
+          "description": "Measure time and objects that exist in the world to solve real-life, mathematical problems and analyze graphical displays of data to answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "4.MDR.6.1",
+              "description": "Use the four operations to solve problems involving elapsed time to the nearest minute, intervals of time, metric measurements of liquid volumes, lengths, distances, and masses of objects, including problems involving fractions with like denominators, and also problems that require expressing measurements given in a larger unit in terms of a smaller unit, and expressing a smaller unit in terms of a larger unit based on the idea of equivalence."
+            },
+            {
+              "code": "4.MDR.6.2",
+              "description": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life."
+            },
+            {
+              "code": "4.MDR.6.3",
+              "description": "Create dot plots to display a distribution of numerical (quantitative) measurement data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4.GSR",
+      "name": "Geometric and Spatial Reasoning",
+      "is_meta": false,
+      "standards": [
+        {
+          "code": "4.GSR.7",
+          "description": "Investigate the concepts of angles and angle measurement to estimate and measure angles.",
+          "sub_standards": [
+            {
+              "code": "4.GSR.7.1",
+              "description": "Recognize angles as geometric shapes formed when two rays share a common endpoint. Draw right, acute, and obtuse angles based on the relationship of the angle measure to 90 degrees."
+            },
+            {
+              "code": "4.GSR.7.2",
+              "description": "Measure angles in reference to a circle with the center at the common endpoint of two rays. Determine an angle’s measure in relation to the 360 degrees in a circle through division or as a missing factor problem."
+            }
+          ]
+        },
+        {
+          "code": "4.GSR.8",
+          "description": "Identify and draw geometric objects, classify polygons based on properties, and solve problems involving area and perimeter of rectangular figures.",
+          "sub_standards": [
+            {
+              "code": "4.GSR.8.1",
+              "description": "Explore, investigate, and draw points, lines, line segments, rays, angles (right, acute, obtuse), perpendicular lines, parallel lines, and lines of symmetry. Identify these in two-dimensional figures."
+            },
+            {
+              "code": "4.GSR.8.2",
+              "description": "Classify, compare, and contrast polygons based on lines of symmetry, the presence or absence of parallel or perpendicular line segments, or the presence or absence of angles of a specified size and based on side lengths."
+            },
+            {
+              "code": "4.GSR.8.3",
+              "description": "Solve problems involving area and perimeter of composite rectangles involving whole numbers with known side lengths."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

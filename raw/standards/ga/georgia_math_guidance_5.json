@@ -1,0 +1,438 @@
+{
+  "subject": "Mathematics",
+  "grade": "5",
+  "source": "Georgia's K-12 Mathematics Standards, 2021, Georgia Department of Education (GaDOE)",
+  "source_document": "dat/ga_k8_math_standards.pdf",
+  "source_pages": "pp. 61-70",
+  "notes": {
+    "what_this_is": "See raw/standards/ga/georgia_math_guidance_0.json notes.what_this_is. This is the final grade of the K-5 set -- all six grades (K, 1, 2, 3, 4, 5) are now built.",
+    "verbatim_policy": "Every bullet is a verbatim transcription checked against the source page images, not paraphrased.",
+    "excluded_content": "No photograph exclusions this grade -- all diagrams found are clean instructional graphics.",
+    "diagrams": "Three clean embedded images kept (brownie-sharing squares, pan-sharing fraction diagram, decimal comparison grids), extracted directly via pdfimages. One additional embedded image (5.PAR.6.1's Sam/Terri fish-count table) was NOT kept as an image -- it is a plain data table better represented as text, so it was transcribed directly into the 'examples' field instead, consistent with how 4.PAR.3.2's table was handled.",
+    "page_range_correction": "The grade's actual standards content ends at p.70 (5.GSR.8.4); pp.71-75 are the '6-8 Mathematics Learning Progressions' overview tables, which are out of K-5 scope and not transcribed here."
+  },
+  "domains": [
+    {
+      "code": "5.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "note": "No Evidence of Student Learning breakdown in the source, same as prior grades."
+    },
+    {
+      "code": "5.NR",
+      "name": "Numerical Reasoning",
+      "big_idea_note": "NUMERICAL REASONING -- place value, multiplying by powers of 10, multiplication and division of multi-digit numbers, fractions, decimal numbers, numerical expressions",
+      "standards": [
+        {
+          "code": "5.NR.1",
+          "description": "Use place value understanding to solve real-life, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "5.NR.1.1",
+              "expectation": "Explain that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and 1/10 of what it represents in the place to its left.",
+              "fundamentals": [
+                "Students should identify the value of a digit up 100 times greater or 1/1000 of the value of a digit."
+              ],
+              "examples": [
+                "Mara has a digital scale. He placed one playing card on the scale and it read 1.3 grams.  How much would you expect 10 playing cards to weigh?",
+                "Chris took the cards off the scale and then placed 10 pennies on the scale and the scale read 24 grams.  How much would you expect one penny to weigh?"
+              ]
+            },
+            {
+              "code": "5.NR.1.2",
+              "expectation": "Explain patterns in the placement of digits when multiplied or divided by a power of 10. Use whole-number exponents to denote powers of 10, up to 10^3.",
+              "fundamentals": [
+                "Students should explain what happens to the value of a digit as it shifts to the left or right and discover the decimal point remains between the ones and tenths place as the digits shift.",
+                "Use whole-number exponents to denote powers of 10, up to 10^3."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5.NR.2",
+          "description": "Multiply and divide multi-digit whole numbers to solve relevant, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "5.NR.2.1",
+              "expectation": "Fluently multiply multi-digit (up to 3-digit by 2-digit) whole numbers to solve authentic problems.",
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be presented with realistic situations involving multiplication of multi-digit whole numbers.",
+                "Students should fluently (flexibly, accurately, and efficiently) multiply to solve practical, mathematical problems using efficient strategies that are based on knowledge of place value and properties of operations.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity.",
+                "Examples of different strategies and representations can be found within the Computational Strategies for Whole Numbers document found in the appendices."
+              ],
+              "age_developmentally_appropriate": [
+                "Students may use but are not limited to partial products (area model).",
+                "Students may also use a standard algorithm by making connections from previous part-whole strategies.",
+                "Students should choose a strategy that makes sense to them based on the problem. The focus should always be on efficiency."
+              ]
+            },
+            {
+              "code": "5.NR.2.2",
+              "expectation": "Fluently divide multi-digit whole numbers (up to 4-digit dividends and 2-digit divisors no greater than 25) to solve practical problems.",
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be presented with realistic situations involving the division of multi-digit whole numbers.",
+                "Students should be able to explain partial quotients prior to beginning to use a more formal algorithm.",
+                "Students should fluently (flexibly, accurately, and efficiently) divide, to solve practical, mathematical problems using an efficient algorithm and flexible strategies, based on knowledge of place value and properties of operations.",
+                "Examples of different strategies and representations can be found within the Computational Strategies for Whole Numbers document found in the appendices."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should divide multi-digit whole numbers up to 4-digit dividends and 2-digit divisors no greater than 25.",
+                "Students may use but are not limited to partial quotients (area model).",
+                "Students should choose a strategy that makes sense to them based on the problem and/or the numbers involved. The focus should always be on efficiency."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5.NR.3",
+          "description": "Describe fractions and perform operations with fractions to solve relevant, mathematical problems using part-whole strategies and visual models.",
+          "sub_standards": [
+            {
+              "code": "5.NR.3.1",
+              "expectation": "Explain the meaning of a fraction as division of the numerator by the denominator (a/b = a / b). Solve problems involving division of whole numbers leading to answers in the form of fractions or mixed numbers.",
+              "examples": [
+                "Four children want to share 13 brownies so each child gets the same amount.  How many does each child get? Possible solution: 13/4 = 3 1/4 brownies -- shown as 13 squares, each divided into 4 labeled quarter-pieces (1,2,3,4)."
+              ],
+              "diagrams": [
+                { "image": "diagrams/5.NR.3.1_brownies_shared.png", "caption": "Thirteen squares (brownies), each divided into four labeled quarter-pieces (1, 2, 3, 4), illustrating 13/4 = 3 1/4 brownies per child when shared among 4 children." }
+              ]
+            },
+            {
+              "code": "5.NR.3.2",
+              "expectation": "Compare and order up to three fractions with different numerators and/or different denominators by flexibly using a variety of tools and strategies.",
+              "fundamentals": [
+                "Tools and strategies could include visual fraction models, create common denominators or numerators, or compare to benchmarks such as 0, 1 and 2.",
+                "Students should compare all types of fractions, including fractions greater than one."
+              ],
+              "strategies_and_methods": [
+                "Students should use familiar tools such as number lines, fraction pieces, and other manipulatives to solve comparing and ordering fractions problems.",
+                "Students should be given the opportunity to choose strategies based on the mathematical context and/or the numbers in the problem to compare and order fractions.",
+                "Students may choose strategies such as common-numerator, common-denominator, using benchmark fractions, and equivalent fractions to compare and order fractions.",
+                "Students should record the results of comparisons with symbols >, =, or <, and justify the conclusions.",
+                "Students should be able to recognize that comparisons are valid only when the two fractions refer to the same whole."
+              ],
+              "examples": [
+                "Two customers ordered pizzas. Jamie ordered a small, and Zach ordered a large.  Jamie ate 3/4 of her pizza.  Zach at half of his.  Who ate more pizza? Since the two pizzas were different sizes, we are unable to determine who ate more without more information.",
+                "Luke, Ella, and Janice were all given the same amount of money for their birthdays.  Luke spent 3/5 of his money, Ella spent 5/8 of her money and Janice spent 3/8 of her money.  Who spent the most of their money?  Who spent the least?",
+                "Possible student response: \"I know that 5/8 is bigger than 3/8 because they're both eighths and 5 is of something is more than 3.  3/5 is also bigger than 3/8 because fifths are bigger than eighths and there are three of each.  5/8 is just a little bigger than 3/5 because 15/24 is just a little bigger than 15/25.  So, Janice spent the least, Ella spent the most, and Luke spent almost as much as Ella, but not quite.\""
+              ]
+            },
+            {
+              "code": "5.NR.3.3",
+              "expectation": "Model and solve problems involving addition and subtraction of fractions and mixed numbers with unlike denominators.",
+              "fundamentals": [
+                "Students should use benchmark fractions and number sense of fractions to estimate and assess the reasonableness of answers as an introduction to addition and subtraction."
+              ],
+              "strategies_and_methods": [
+                "Students should use numerical reasoning to add and subtract fractions and mixed numbers with unlike denominators in authentic, mathematical problems by finding a common denominator and equivalent fractions to produce like denominators using a variety of tools and strategies.",
+                "Students may solve problems in different ways and have the flexibility to choose a mathematical strategy that allows them to make sense of and strategically solve problems using efficient methods that are most comfortable for and makes sense to them."
+              ],
+              "examples": [
+                "Tom is baking a cake. He added 1/2 teaspoon of vanilla extract to the cake mix. He tasted the batter and determined he needed more, so he added another 3/4 teaspoon of vanilla extract.  How much total vanilla extract did he add to the cake mix?",
+                "Possible student response: A student may decompose one of the fractions to a make a benchmark number (1/2): 1/2 + 3/4 = 1/2 + (2/4 + 1/4) = (1/2 + 2/4) + 1/4 = 1 + 1/4 = 1 1/4"
+              ]
+            },
+            {
+              "code": "5.NR.3.4",
+              "expectation": "Model and solve problems involving multiplication of a fraction and a whole number.",
+              "strategies_and_methods": [
+                "Students should be presented with a variety of practical, mathematical problems involving multiplication of a fraction and a whole number.",
+                "Students should use their understanding of equivalency to flexibly reason with equivalent fractions based on the framework of the problem.  Simplifying fractions is not an expectation of this grade level.",
+                "Students may solve problems in different ways and have the flexibility to choose a mathematical strategy that allows them to make sense of and strategically solve problems using efficient methods that are most comfortable for and makes sense to them."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should explain the meaning of a fraction a/b as a multiple of 1/b.",
+                "Students should be exposed to fractions less than 1, equal to 1, and greater than 1."
+              ],
+              "examples": [
+                "Each cupcake takes 1/4 cup of frosting.  If Betty wants to make 20 cupcakes for a party, how much frosting will she need?",
+                "Mr. Rogers need to make peanut butter and jelly sandwiches for 12 children. He wants to make 3/4 of a sandwich for each child.  How many sandwiches does he need to make?"
+              ]
+            },
+            {
+              "code": "5.NR.3.5",
+              "expectation": "Explain why multiplying a whole number by a fraction greater than one results in a product greater than the whole number, and why multiplying a whole number by a fraction less than one results in a product less than the whole number and multiplying a whole number by a fraction equal to one results in a product equal to the whole number.",
+              "strategies_and_methods": [
+                "Students should be presented with a variety of realistic, mathematical situations involving multiplication as scaling (resizing) that include fractions and whole numbers.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "examples": [
+                "Mrs. Cole needs to make lunch for 12 children at a day care. Each child gets 1/2 of a sandwich. How many whole sandwiches does Mrs. Cole need to make?  NOTE:  The student should be able to recognize that the solution to 12 x 1/2 will be less than 12 because each child only gets half of a sandwich."
+              ]
+            },
+            {
+              "code": "5.NR.3.6",
+              "expectation": "Model and solve problems involving division of a unit fraction by a whole number and a whole number by a unit fraction.",
+              "strategies_and_methods": [
+                "Students should begin with modeling for deeper understanding.",
+                "Students should be presented with a variety of authentic problems involving division of a whole number by a unit fraction and division of a unit fraction by a whole number.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity.",
+                "Students may solve problems in different ways and have the flexibility to choose a mathematical strategy that allows them to make sense of and strategically solve problems using efficient methods that are most comfortable for and makes sense to them."
+              ],
+              "examples": [
+                "Knowing the number of groups/shares and finding how many/much in each group/share: Four students sitting at a table were given 1/3 of a pan of brownies to share. How much of a pan will each student get if they share the pan of brownies equally? The diagram shows the 1/3 pan divided into 4 equal shares with each share equaling 1/12 of the pan."
+              ],
+              "diagrams": [
+                { "image": "diagrams/5.NR.3.6_pan_sharing_thirds_twelfths.png", "caption": "A grid labeled 1/3 at top showing one column of 5 red-shaded cells out of a 4x5 grid, with a small blue-highlighted cell at the bottom of that column labeled 1/12, illustrating one-third of a pan divided into 4 equal shares of one-twelfth each." }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5.NR.4",
+          "description": "Read, write, and compare decimal numbers to the thousandths place, and round and perform operations with decimal numbers to the hundredths place to solve relevant, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "5.NR.4.1",
+              "expectation": "Read and write decimal numbers to the thousandths place using base-ten numerals written in standard form and expanded form.",
+              "examples": [
+                "347.392 = 3 x 100 + 4 x 10 + 7 x 1 + 3 x (1/10) + 9 x (1/100) + 2 x (1/1000)"
+              ],
+              "age_developmentally_appropriate": [
+                "Base-ten numerals should range between millions and thousandths.",
+                "Students are not expected to write decimal numbers in word form.",
+                "Exponents and decimal numbers should not be included in expanded form notation.",
+                "The decimal fractions used in Grade 5 should be limited to those for which the equivalent fraction can be written as a fraction where the denominator is a power of ten."
+              ]
+            },
+            {
+              "code": "5.NR.4.2",
+              "expectation": "Represent, compare, and order decimal numbers to the thousandths place based on the meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons.",
+              "strategies_and_methods": [
+                "Students should be presented with decimal number comparisons from relevant, mathematical situations.",
+                "Students should have opportunities to determine and explain comparisons using a variety of tools such as concrete materials, drawings, number lines, other visual representations, and strategies."
+              ],
+              "examples": [
+                "Which is greater 0.13 or 0.031?  Explain. Use a visual representation to illustrate your explanation. I think 0.13 is greater because it fills up more of the whole square than 0.031 does."
+              ],
+              "diagrams": [
+                { "image": "diagrams/5.NR.4.2_decimal_grids_comparison.png", "caption": "Two 10x10 grids side by side: the left grid labeled 0.13 with 13 of 100 squares shaded green; the right grid labeled 0.031 with roughly 3 of 100 large squares shaded red (each large square further subdivided into a 10x10 sub-grid, so the shaded portion represents 31 of 1000 sub-squares), illustrating that 0.13 fills more area than 0.031." }
+              ]
+            },
+            {
+              "code": "5.NR.4.3",
+              "expectation": "Use place value understanding to round decimal numbers to the hundredths place.",
+              "strategies_and_methods": [
+                "Students should round decimal numbers to the hundredths place in practical, mathematical problems using visual aids, such as a number line."
+              ]
+            },
+            {
+              "code": "5.NR.4.4",
+              "expectation": "Solve problems involving addition and subtraction of decimal numbers to the hundredths place using a variety of strategies.",
+              "strategies_and_methods": [
+                "Students should be presented with a variety of practical situations involving addition and subtraction of decimal numbers to the hundredths place.",
+                "Students should add and subtract decimal numbers to hundredths, using concrete models, drawings, strategies based on place value, properties of operations, and the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used.",
+                "Money may be used as a tool to aid in the student's understanding of adding and subtracting decimal numbers to the hundredths place."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be given the choice of which strategy they can use.",
+                "Students may solve problems in different ways and have the flexibility to choose a mathematical strategy that allows them to make sense of and strategically solve problems using efficient methods that are most comfortable for and makes sense to them."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "5.NR.5",
+          "description": "Write, interpret, and evaluate numerical expressions within authentic problems.",
+          "sub_standards": [
+            {
+              "code": "5.NR.5.1",
+              "expectation": "Write, interpret, and evaluate simple numerical expressions involving whole numbers with or without grouping symbols to represent actual situations.",
+              "age_developmentally_appropriate": [
+                "Simple expressions should only include two operations.",
+                "Grouping symbols used in expressions may include parentheses, brackets, or braces.",
+                "Nested grouping symbols (more than one grouping symbol used within another grouping symbol in an expression) should not be used within expressions at this grade level.",
+                "Appropriate numerical expressions should be no more complex than the expressions one finds in a simple application of the associative or distributive properties.  Example: 15(2 + 10)"
+              ],
+              "strategies_and_methods": [
+                "Students should begin with concrete models.  Concrete models may include color tiles or base ten blocks for constructing area models and rods for representing numerical values."
+              ],
+              "examples": [
+                "Karl brought 3 ten-packs of juice boxes to the class party. Joshua brought 4 six-packs of soda to the party. How many drinks did they bring altogether? Possible strategy: (3 x 10) + (4 x 6)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "5.PAR",
+      "name": "Patterning and Algebraic Reasoning",
+      "big_idea_note": "PATTERNING & ALGEBRAIC REASONING -- generating patterns, plotting ordered pairs in the first quadrant",
+      "standards": [
+        {
+          "code": "5.PAR.6",
+          "description": "Solve relevant problems by creating and analyzing numerical patterns using the given rule(s).",
+          "sub_standards": [
+            {
+              "code": "5.PAR.6.1",
+              "expectation": "Generate two numerical patterns using two given rules. Identify apparent relationships between corresponding terms by completing a table.",
+              "fundamentals": [
+                "This standard extends the work from fourth grade, where students generate numerical patterns when they are given one rule. In Fifth Grade, students are given two rules and generate two numerical patterns."
+              ],
+              "age_developmentally_appropriate": [
+                "This learning objective is limited to patterns involving whole numbers."
+              ],
+              "examples": [
+                "Sam and Terri live by a lake and enjoy going fishing together every day for five days.  Sam catches 2 fish every day, and Terri catches 4 fish every day.  Make a chart (table) to represent the number of fish that Sam and Terri catch.",
+                "Days / Sam's Total Number of Fish / Terri's Total Number of Fish: 0/0/0; 1/2/4; 2/4/8; 3/6/12; 4/8/16; 5/10/20"
+              ]
+            },
+            {
+              "code": "5.PAR.6.2",
+              "expectation": "Represent problems by plotting ordered pairs and explain coordinate values of points in the first quadrant of the coordinate plane.",
+              "age_developmentally_appropriate": [
+                "All four quadrants of the coordinate plane can be displayed, but students will only plot and label within the first quadrant."
+              ],
+              "strategies_and_methods": [
+                "Students should be provided with a variety of authentic, mathematical problems involving graphing points in the first quadrant.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity.",
+                "Students should interpret coordinate values of points based on the problem or situation presented."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "5.MDR",
+      "name": "Measurement and Data Reasoning",
+      "big_idea_note": "MEASUREMENT & DATA REASONING -- measurements within the metric system, measurement conversions and time as a unit of measurement",
+      "standards": [
+        {
+          "code": "5.MDR.7",
+          "description": "Solve problems involving customary measurements, metric measurements, and time and analyze graphical displays of data to answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "5.MDR.7.1",
+              "expectation": "Explore realistic problems involving different units of measurement, including distance, mass, weight, volume, and time.",
+              "age_developmentally_appropriate": [
+                "Fifth grade is the first time students are expected to convert between different units within the same measurement system.",
+                "Students should be presented with realistic problems involving distance, mass, weight, volume, and time that are practical and relevant to their everyday lives.",
+                "Students should have opportunities to solve problems involving customary and metric measurements.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ]
+            },
+            {
+              "code": "5.MDR.7.2",
+              "expectation": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+              "fundamentals": [
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "strategies_and_methods": [
+                "Questions should be student generated."
+              ]
+            },
+            {
+              "code": "5.MDR.7.3",
+              "expectation": "Convert among units within the metric system and then apply these conversions to solve multi-step, practical problems.",
+              "age_developmentally_appropriate": [
+                "Fifth grade is the first time students are expected to convert between different units within the same measurement system.",
+                "Conversion chart should be provided.",
+                "This objective is limited to the following unit conversions: meters-kilo, centi, milli; liters-kilo, milli; grams - kilo, milli.",
+                "Conversions should be limited to 1000 times greater or 1/1000 of the value of a given measure."
+              ],
+              "examples": [
+                "Record measurement equivalents in a two-column table."
+              ]
+            },
+            {
+              "code": "5.MDR.7.4",
+              "expectation": "Convert among units within relative sizes of measurement units within the customary measurement system.",
+              "age_developmentally_appropriate": [
+                "Fifth grade is the first time students are expected to convert between different units within the same measurement system.",
+                "Conversion chart should be provided.",
+                "This objective is limited to the following unit conversions: fluid ounces, cups, pints, quarts, gallons; inches, feet, yards, miles; ounces, pounds, tons.",
+                "Conversions will be provided, such as 1 gallon = 4 quarts = 8 pints = 16 cups.",
+                "Customary measurement units include weight (oz., lbs., tons) capacity (fl. oz, cups, pints, quarts, gallons), length (in., ft., yds., miles)."
+              ],
+              "examples": [
+                "Record measurement equivalents in a two-column table."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "5.GSR",
+      "name": "Geometric and Spatial Reasoning",
+      "big_idea_note": "GEOMETRIC & SPATIAL REASONING -- Properties of polygons and rectangular prisms, classify polygons",
+      "standards": [
+        {
+          "code": "5.GSR.8",
+          "description": "Examine properties of polygons and rectangular prisms, classify polygons by their properties, and discover volume of right rectangular prisms.",
+          "sub_standards": [
+            {
+              "code": "5.GSR.8.1",
+              "expectation": "Classify, compare, and contrast polygons based on properties.",
+              "fundamentals": [
+                "Students should explore, compare, and contrast polygons based on properties."
+              ],
+              "strategies_and_methods": [
+                "Polygons should include triangles, quadrilaterals including kites and trapezoids (rectangles, squares, rhombuses, and other parallelograms), pentagons, hexagons, and octagons.",
+                "Properties may include angles, side lengths, symmetry, congruence, and the presence or absence of parallel or perpendicular lines.",
+                "Students may use a variety of tools to measure angles and side lengths to make sense of the properties of polygons."
+              ],
+              "age_developmentally_appropriate": [
+                "This objective does not require students to create a hierarchy.",
+                "In Georgia resources and assessments, the inclusive definitions for the classification of shapes are used."
+              ]
+            },
+            {
+              "code": "5.GSR.8.2",
+              "expectation": "Determine, through exploration and investigation, that attributes belonging to a category of two-dimensional figures also belong to all subcategories of that category.",
+              "age_developmentally_appropriate": [
+                "This objective does not require students to create a hierarchy.",
+                "In Georgia resources and assessments, the inclusive definitions for the classification of shapes are used."
+              ],
+              "examples": [
+                "All rectangles have four right angles and squares are rectangles, so all squares have four right angles.",
+                "Students may use a variety of tools to measure angles and side lengths to make sense of the attributes of two-dimensional figures."
+              ]
+            },
+            {
+              "code": "5.GSR.8.3",
+              "expectation": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
+              "fundamentals": [
+                "Students should recognize volume as an attribute of solid figures."
+              ],
+              "terminology": [
+                "Total volume is defined as the total number of units that fill the space."
+              ],
+              "age_developmentally_appropriate": [
+                "If students are provided with an image of a right rectangular prism, the unit cubes should be visible."
+              ],
+              "strategies_and_methods": [
+                "Students should investigate authentic problems involving volume to make sense of this concept.",
+                "Students should explore the volume of solid figures from realistic situations by packing them with unit cubes with no gaps or overlaps.",
+                "Students should determine that a solid figure packed with n unit cubes is said to have a volume of n cubic units."
+              ]
+            },
+            {
+              "code": "5.GSR.8.4",
+              "expectation": "Discover and explain how the volume of a right rectangular prism can be found by multiplying the area of the base times the height to solve authentic, mathematical problems.",
+              "age_developmentally_appropriate": [
+                "This objective does not require students to memorize a formula for the volume of a right rectangular prism. Rather, students are expected to use geometric and spatial reasoning to determine the volume, given the area of the base and the height."
+              ],
+              "fundamentals": [
+                "The dimensions of a rectangular prism can be referred to as length, width, and height.",
+                "A cube with side length 1 unit, called \"a unit cube,\" is said to have \"one cubic unit\" of volume, and can be used to measure volume (e.g., cubic cm, cubic m, cubic in, cubic ft)."
+              ],
+              "terminology": [
+                "The focus of this expectation is for students to understand the concept of volume rather than the formula."
+              ],
+              "examples": [
+                "We store our wooden unit cubes in a rectangular box that has a base with an area of 64 square units.  The height of the box is 8 units. What is the volume of the box?  Show your mathematical thinking."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "subject": "Mathematics",
+  "grade": "2",
+  "source": "Georgia's K-12 Mathematics Standards, 2021, Georgia Department of Education (GaDOE)",
+  "source_document": "dat/ga_k8_math_standards.pdf",
+  "source_pages": "pp. 26-34",
+  "notes": {
+    "what_this_is": "See raw/standards/ga/georgia_math_guidance_0.json notes.what_this_is.",
+    "verbatim_policy": "Every bullet is a verbatim transcription checked against the source page images, not paraphrased.",
+    "excluded_content": "One photograph exclusion this grade: 2.GSR.7.3's two photos of a real second-grade student's hand-drawn circle partitioned into thirds. The source's own explanatory paragraph for this example IS kept verbatim as example text (see 2.GSR.7.3 below), only the photos themselves are excluded.",
+    "diagrams": "2.NR.2.3's diagram (base-ten block addition, base-ten block subtraction, and an open-number-line jump strategy, all illustrating the same word problem) is composed of many small tiled PDF image fragments rather than one embedded image, so it was salvaged by rendering the full page at 300dpi and cropping the diagram region, not by pdfimages extraction. All other diagrams this grade were clean single/paired embedded image objects, extracted directly as with Kindergarten and Grade 1. 2.GSR.7.3 and 2.GSR.7.4 share the exact same source image (verified identical), so both reference the same saved file."
+  },
+  "domains": [
+    {
+      "code": "2.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "note": "No Evidence of Student Learning breakdown in the source, same as K.MP/1.MP."
+    },
+    {
+      "code": "2.NR",
+      "name": "Numerical Reasoning",
+      "big_idea_note": "NUMERICAL REASONING -- counting within 1000, place value, addition and subtraction, fluency to 20, developing multiplication through arrays",
+      "standards": [
+        {
+          "code": "2.NR.1",
+          "description": "Using the place value structure, explore the count sequences to represent, read, write, and compare numerical values to 1000 and describe basic place-value relationships and structures.",
+          "sub_standards": [
+            {
+              "code": "2.NR.1.1",
+              "expectation": "Explain the value of a three-digit number using hundreds, tens, and ones in a variety of ways.",
+              "fundamentals": [
+                "Students should be able to put together (compose) and break apart (decompose) three-digit numbers.",
+                "Students should have multiple opportunities use concrete materials to develop an understanding of the place value structures, the relationship between numbers, and the value of quantities."
+              ],
+              "strategies_and_methods": [
+                "Students should use base ten materials to break apart (decompose) 327 into 3 hundreds, 2 tens, and 7 ones, or into 2 hundreds, 12 tens, and 7 ones.",
+                "Students should be able to explain that a bundle of ten 10s is equal to 100."
+              ]
+            },
+            {
+              "code": "2.NR.1.2",
+              "expectation": "Count forward and backward by ones from any number within 1000. Count forward by fives from multiples of 5 within 1000. Count forward and backward by 10s and 100s from any number within 1000. Count forward by 25s from 0.",
+              "strategies_and_methods": [
+                "Students should explore patterns on a hundred-chart, starting from a given number 10-90.",
+                "Students can also use number lines to demonstrate their understanding.",
+                "Students should be able to use coins to count, including nickels, dimes, quarters, and dollars. Half-dollars may also be used, if available."
+              ]
+            },
+            {
+              "code": "2.NR.1.3",
+              "expectation": "Represent, compare, and order whole numbers to 1000 with an emphasis on place value and equality.  Use >, =, and < symbols to record the results of comparisons.",
+              "strategies_and_methods": [
+                "Representations should include concrete materials (i.e., base ten blocks, counters, etc.), base ten numerals, words, expanded form, and pictures."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be able to represent a quantity from word form."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2.NR.2",
+          "description": "Apply multiple part-whole strategies, properties of operations and place value understanding to solve real-life, mathematical problems involving addition and subtraction within 1,000.",
+          "sub_standards": [
+            {
+              "code": "2.NR.2.1",
+              "expectation": "Fluently add and subtract within 20 using a variety of mental, part-whole strategies.",
+              "terminology": [
+                "Fluently/Fluency – To achieve fluency, students should be able to choose flexibly among methods and strategies to solve mathematical problems accurately and efficiently."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should explain their approaches and produce accurate answers efficiently and appropriately using mental strategies that include counting on, making ten, decomposing a number leading to a ten, using the relationship between addition and subtraction, creating equivalent but easier or known sums.",
+                "Examples of different strategies and representations can be found within the Computational Strategies for Whole Numbers document found in the appendices."
+              ],
+              "relevance_and_application": [
+                "Students should be able to use numerical reasoning to solve relevant, mathematical problems involving all problem types. Click here for a listing of all problem types."
+              ],
+              "age_developmentally_appropriate": [
+                "Reaching fluency is an ongoing process that will take much of the year.",
+                "Students should know all sums of two one-digit numbers by the end of Grade 2."
+              ],
+              "examples": [
+                "A student makes sense of 29 + 6 by flexibly thinking: \"If I think of 6 as 1 + 5, I can add the 1 to the 29 first to make a ten (30), then add 5 more to get 35.\""
+              ]
+            },
+            {
+              "code": "2.NR.2.2",
+              "expectation": "Find 10 more or 10 less than a given three-digit number and find 100 more or 100 less than a given three-digit number.",
+              "strategies_and_methods": [
+                "Tools such as a hundred chart and visual number lines may be used to help students discover the patterns of ten more and ten less."
+              ]
+            },
+            {
+              "code": "2.NR.2.3",
+              "expectation": "Solve problems involving the addition and subtraction of two-digit numbers using part-whole strategies.",
+              "age_developmentally_appropriate": [
+                "Students should work with practical, mathematical problems involving standard units of linear measurement (inches).  Note: This is an ongoing process that will take much of the year.",
+                "The sum of the numbers should be no greater than 1000.",
+                "At this grade level, students should only be expected to subtract up to two two-digit numbers and add up to four two-digit numbers."
+              ],
+              "relevance_and_application": [
+                "Authentic problems should be presented to provide students with the opportunity to make sense of the mathematics in the world around them.",
+                "Problems presented may involve money.",
+                "Students should be able to solve practical, mathematical problems involving addition and subtraction within 1,000.",
+                "Students should be able to use numerical reasoning to solve authentic, mathematical problems involving all problem types. Click here for a listing of all problem types."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be given the opportunity to explore and develop a variety of flexible strategies and algorithms.",
+                "Students should be able to solve one and two step mathematical problems within 100 and represent the problem by using concrete materials, drawings, and equations with a symbol for the unknown number.",
+                "Students should be able to use strategies that are based on a deep understanding of place-value in order to meet this expectation.",
+                "When solving problems, students should be given the opportunity to use concrete materials, drawings, tools, and part-whole reasoning strategies.",
+                "Students should be able to solve authentic, mathematical problems involving the addition of up to four two-digit numbers using strategies based on place value, properties of operations and the relationship between addition and subtraction."
+              ],
+              "examples": [
+                "In the morning, there are 25 students in the cafeteria. 18 more students come in. After a few minutes, some leave. If there are 14 students still in the cafeteria, how many students left the cafeteria? Write an equation for your problem."
+              ],
+              "diagrams": [
+                { "image": "diagrams/2.NR.2.3_base_ten_blocks_and_number_line.png", "caption": "Three stacked diagrams illustrating the cafeteria example (25 students, 18 more come in, 14 remain). Top: base-ten blocks showing 25 + 18 = 43 (two towers and 5 units, plus one tower and 8 units, equals four towers and 3 units). Middle: base-ten blocks showing 43 - ? = 14 (four towers and 3 units, minus an unknown, equals one tower and 4 units). Bottom: an open number line from 14 to 43 with a green 'counting up' path (25 to 43 via +10, +5, +3) above the line and a red 'counting back' path (43 to 14 via -23, -6) below it, both totaling the answer of 29 students who left." }
+              ]
+            },
+            {
+              "code": "2.NR.2.4",
+              "expectation": "Fluently add and subtract within 100 using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction.",
+              "terminology": [
+                "Fluently/Fluency – To achieve fluency, students should be able to choose flexibly among methods and strategies to solve mathematical problems accurately and efficiently."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be given multiple opportunities to solve applicable, mathematical problems as they work to build fluency.",
+                "The sum of the number should be no greater than 100."
+              ],
+              "relevance_and_application": [
+                "Students should be able to use numerical reasoning to solve applicable, mathematical problems involving all problem types.  Click here for a listing of all problem types."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2.NR.3",
+          "description": "Work with equal groups to gain foundations for multiplication through real-life, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "2.NR.3.1",
+              "expectation": "Determine whether a group (up to 20) has an odd or even number of objects. Write an equation to express an even number as a sum of two equal addends.",
+              "strategies_and_methods": [
+                "Students can group by pairing objects or counting them by 2s.",
+                "Students may also use doubles to determine if a quantity is even.  For example, 18 is even because adding two nines equals 18 or 9 + 9 =18."
+              ],
+              "terminology": [
+                "The terminology below is used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Addend – any number that is added to another number in an addition expression or equation.  For example, in the expression 16 + 4, 16 and 4 are addends."
+              ]
+            },
+            {
+              "code": "2.NR.3.2",
+              "expectation": "Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends.",
+              "fundamentals": [
+                "Students should be able to partition a rectangle into rows and columns of same-size squares and count to find the total number of them."
+              ],
+              "strategies_and_methods": [
+                "Students should model using rectangular arrays to determine the number of objects and discuss their reasoning."
+              ],
+              "examples": [
+                "Beth put 5 purses on each shelf. She has 4 shelves. Draw an array to model this. Write an equation to match the array."
+              ],
+              "terminology": [
+                "The terms below are used to clarify Expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Rectangular array – an arrangement of objects into rows and columns that form a rectangle.",
+                "Addend – any number that is added to another number in an addition expression or equation.  For example, in the expression 2 + 7 + 5, 2, 7 and 3 are addends."
+              ],
+              "diagrams": [
+                { "image": "diagrams/2.NR.3.2_array_grid.png", "caption": "A 5-column by 4-row grid of squares, captioned '5+5+5+5=20', modeling the array for Beth's 5 purses on each of 4 shelves." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.PAR",
+      "name": "Patterning and Algebraic Reasoning",
+      "big_idea_note": "PATTERNING & ALGEBRAIC REASONING -- patterns up to 20 and addition and subtraction within 1,000",
+      "standards": [
+        {
+          "code": "2.PAR.4",
+          "description": "Identify, describe, extend, and create repeating patterns, growing patterns, and shrinking patterns.",
+          "sub_standards": [
+            {
+              "code": "2.PAR.4.1",
+              "expectation": "Identify, describe, and create a numerical pattern resulting from repeating an operation such as addition and subtraction.",
+              "age_developmentally_appropriate": [
+                "Patterns involving addition and subtraction should include sums within 1,000 through models and representations."
+              ],
+              "relevance_and_application": [
+                "Problems should be presented within real applications to provide students with the opportunity to make sense of the mathematics.",
+                "Problems presented may involve money as a tool to make sense of the patterns."
+              ],
+              "fundamentals": [
+                "Students should investigate repeating patterns to make predictions and build algebraic reasoning.",
+                "Patterns may include exposure to even and odd.",
+                "Students should be using any tools available such as a number line, hundred-chart, 99-chart, etc., to create and analyze the patterns.",
+                "Patterns should be extended from 1st grade, where they explore intervals of 1s, 2s, 5s, and 10s, to also include intervals of 25s and 100s."
+              ],
+              "strategies_and_methods": [
+                "Students should be given the opportunity to use a variety of strategies to identify, describe, and create numerical patterns."
+              ],
+              "examples": [
+                "Start with 3 and jump by 5s to create a pattern.  Change the start number and create another pattern.  What do you notice about the two patterns?  How did they change?"
+              ]
+            },
+            {
+              "code": "2.PAR.4.2",
+              "expectation": "Identify, describe, and create growing patterns and shrinking patterns involving addition and subtraction up to 20.",
+              "examples": [
+                "Describe the growing pattern below and build the next two terms in the pattern."
+              ],
+              "diagrams": [
+                { "image": "diagrams/2.PAR.4.2_growing_pattern.png", "caption": "A growing pattern of three yellow hexagon shapes, each topped with a green triangular section that grows larger across the sequence (the first has one small triangle, the second and third add progressively more triangular pieces around the hexagon)." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.MDR",
+      "name": "Measurement and Data Reasoning",
+      "big_idea_note": "MEASUREMENT & DATA REASONING -- length, distance, time, and money",
+      "standards": [
+        {
+          "code": "2.MDR.5",
+          "description": "Estimate and measure the lengths of objects and distance to solve problems found in real-life using standard units of measurement, including inches, feet, and yards and analyze graphical displays of data to answer relevant questions.",
+          "note": "The content-page section heading only prints the first clause of this description (through 'yards'); the fuller version above, including the graphical-displays clause covering 2.MDR.5.4, is from the grade overview table on p.26 and is kept as authoritative.",
+          "sub_standards": [
+            {
+              "code": "2.MDR.5.1",
+              "expectation": "Construct simple measuring instruments using unit models.  Compare unit models to rulers.",
+              "strategies_and_methods": [
+                "Students should discuss how measurement with iterating individual one-inch units, such as one-inch tiles, compares with measurement using an instrument such as a standard ruler."
+              ],
+              "terminology": [
+                "Iterating one inch units means using several individual (inch) units, such as 1-inch tiles, and setting them next to one another to measure the length of an object."
+              ],
+              "age_developmentally_appropriate": [
+                "In Grade 1, students used one-inch items as non-standard units of measure for length.  In Grade 2, students compare a constructed ruler with standard rulers and compare the use of the devices."
+              ]
+            },
+            {
+              "code": "2.MDR.5.2",
+              "expectation": "Estimate and measure the length of an object or distance to the nearest whole unit using appropriate units and standard measuring tools.",
+              "strategies_and_methods": [
+                "Students should be able to use appropriate measuring tools such as rulers, yardsticks, and measuring tapes.",
+                "Units of measure include inches, feet, and yards"
+              ]
+            },
+            {
+              "code": "2.MDR.5.3",
+              "expectation": "Measure to determine how much longer one object is than another and express the length difference in terms of a standard-length unit.",
+              "fundamentals": [
+                "This is the first time students are introduced to a standard-length unit such as an inch."
+              ],
+              "strategies_and_methods": [
+                "Students should use tools such as rulers, measuring tapes, and yardsticks to obtain measurements."
+              ],
+              "examples": [
+                "I measured my two pet parakeets.  One was 7 inches long and one was 15 inches long.  The larger one is 8 inches longer than the smaller one."
+              ]
+            },
+            {
+              "code": "2.MDR.5.4",
+              "expectation": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+              "fundamentals": [
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "strategies_and_methods": [
+                "Questions should be student generated."
+              ]
+            },
+            {
+              "code": "2.MDR.5.5",
+              "expectation": "Represent whole-number sums and differences within a standard unit of measurement on a number line diagram.",
+              "fundamentals": [
+                "Students should be able to represent sums and differences presented in practical, mathematical problems on a number line diagram."
+              ],
+              "age_developmentally_appropriate": [
+                "This prepares students to use number lines for fractions in higher grades."
+              ],
+              "examples": [
+                "We were able to grab 56 cubes in fifteen seconds and our challengers grabbed 49 cubes. How many more cubes did we grab?"
+              ],
+              "diagrams": [
+                { "image": "diagrams/2.MDR.5.5_number_line_cubes.png", "caption": "A number line from 46 to 58 with 49 and 56 circled, and green arcs above showing a +1 jump (49 to 50) and a +6 jump (50 to 56), illustrating the difference of 7 cubes." }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2.MDR.6",
+          "description": "Solve real-life problems involving time and money.",
+          "sub_standards": [
+            {
+              "code": "2.MDR.6.1",
+              "expectation": "Tell and write time from analog and digital clocks to the nearest five minutes, and estimate and measure elapsed time using a timeline, to the hour or half hour on the hour or half hour.",
+              "fundamentals": [
+                "Students should be able to categorize daily activities by a.m. and p.m."
+              ],
+              "age_developmentally_appropriate": [
+                "Problems involving elapsed time in second grade should be written so as to avoid crossing over a.m. and p.m."
+              ],
+              "strategies_and_methods": [
+                "Video showing how to use a number line to tell time and how the number line can be curved to look like a circular clock -- Click Here."
+              ],
+              "examples": [
+                "Denise had soccer practice after school today.  Practice began at 3:30 and ended at 6:00.  How much time did she spend at soccer practice?"
+              ]
+            },
+            {
+              "code": "2.MDR.6.2",
+              "expectation": "Find the value of a group of coins and determine combinations of coins that equal a given amount that is less than one hundred cents, and solve problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and ¢ symbols appropriately.",
+              "age_developmentally_appropriate": [
+                "This is the first time students are required to find the value of a group of coins.",
+                "The total quantity should be based on cents and the value of a group of coins should be less than 100 cents.",
+                "Use of written decimal numbers is not an expectation for this grade level.",
+                "The $ symbol should only be used when referring to whole dollar amounts at this grade level.",
+                "Students should be able to solve applicable, mathematical problems that involve either only dollars or only cents.",
+                "Dollar bills may include $1, $5, $10, $20, and $100."
+              ],
+              "fundamentals": [
+                "Students should be able to identify the values of pennies, nickels, dimes, and quarters.  Half-dollars may also be investigated, if available."
+              ],
+              "strategies_and_methods": [
+                "Students should be given opportunities to explore this concept using hands-on manipulatives. Virtual manipulatives may also be used."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2.GSR",
+      "name": "Geometric and Spatial Reasoning",
+      "big_idea_note": "GEOMETRIC & SPATIAL REASONING -- sorting shapes, lines of symmetry, partitioning circles and rectangles",
+      "standards": [
+        {
+          "code": "2.GSR.7",
+          "description": "Draw and partition shapes and other objects with specific attributes and conduct observations of everyday items and structures to identify how shapes exist in the world.",
+          "sub_standards": [
+            {
+              "code": "2.GSR.7.1",
+              "expectation": "Describe, compare, and sort 2-D shapes including polygons, triangles, quadrilaterals, pentagons, hexagons, and 3-D shapes including rectangular prisms and cones, given a set of attributes.",
+              "relevance_and_application": [
+                "Students should be able to use spatial reasoning to analyze shapes in the environment."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be encouraged to sort and classify shapes based on their choice of attributes as well as attributes that may be provided.",
+                "Students at this grade level should describe shapes based on attributes."
+              ],
+              "terminology": [
+                "Attributes – characteristics of a two-dimensional or three-dimensional shape",
+                "Vertices – corners of a geometric figure",
+                "Rectangular prism – a three-dimensional shape that has a rectangular base (This also includes objects with square bases, such as cubes.)"
+              ],
+              "examples": [
+                "Describe a shape based on its attributes and compare and sort a collection of shapes based on the number of angles, vertices, sides, and equal faces."
+              ]
+            },
+            {
+              "code": "2.GSR.7.2",
+              "expectation": "Identify at least one line of symmetry in everyday objects to describe each object as a whole.",
+              "age_developmentally_appropriate": [
+                "Students should investigate symmetry using a variety of materials, such as miras and paper folding.",
+                "Students at this grade level should describe the everyday objects using the line of symmetry."
+              ],
+              "strategies_and_methods": [
+                "Students should be provided multiple opportunities to investigate symmetry through paper folding and/or the use of mirrors.",
+                "Students should develop an understanding of what a line of symmetry is through exploration with real-world objects."
+              ],
+              "examples": [
+                "Identify lines of symmetry seen in everyday objects, such as a butterfly, stop sign, flower, or dragonfly.  Identify lines of symmetry seen and how they connect to the object.",
+                "Sample student response: \"I can see that the butterfly looks the same on each wing, but it looks backward, like a mirror, on the other side of the line of symmetry.\""
+              ]
+            },
+            {
+              "code": "2.GSR.7.3",
+              "expectation": "Partition circles and rectangles into two, three, or four equal shares.  Identify and describe equal-sized parts of the whole using fractional names (\"halves,\" \"thirds\", \"fourths\", \"half of,\" \"third of,\" \"quarter of,\" etc.).",
+              "fundamentals": [
+                "Students have explored quarters and halves in first grade and are extending their understanding of fractions to thirds."
+              ],
+              "strategies_and_methods": [
+                "Students are not expected to precisely partition circles into thirds, but rather partition circles and rectangles into thirds close enough to be described as three equal parts."
+              ],
+              "age_developmentally_appropriate": [
+                "Partitioning shapes prepares students to reason about fractions in upper grades.",
+                "Shading is not an expectation within images for this grade because the student is only required to partition the whole shape into equal shares."
+              ],
+              "examples": [
+                "Below is a student work sample showing a second grade student's two attempts at partitioning a circle into thirds during a mini lesson. As she is making sense of what happens when you partition a circle into thirds, she realizes that each part represents the same quantity and is one third of the whole circle (approximate partitions are sufficient for beginning phases of understanding development related to quantity):"
+              ],
+              "diagram_excluded": "two photographs of a real second-grade student's hand-drawn circle, partitioned into thirds on paper (two attempts), excluded per notes.excluded_content",
+              "diagrams": [
+                { "image": "diagrams/2.GSR.7.3_partition_halves_thirds_fourths.png", "caption": "A labeled reference diagram of rectangles partitioned into Halves, Thirds, and Fourths (Quarters), showing several different valid ways to divide a rectangle into each number of equal shares." }
+              ]
+            },
+            {
+              "code": "2.GSR.7.4",
+              "expectation": "Recognize that equal shares of identical wholes may different shapes within the same whole.",
+              "strategies_and_methods": [
+                "Students should explore rectangles and circles being partitioned in multiple ways to recognize that equal shares may be different shapes within the same whole."
+              ],
+              "age_developmentally_appropriate": [
+                "Shading is not an expectation within images for this grade because the student is only required to partition the whole shape into equal shares."
+              ],
+              "examples": [
+                "Students should be able to recognize that even though shapes may be partition differently, they still have the same relationship to the whole."
+              ],
+              "diagrams": [
+                { "image": "diagrams/2.GSR.7.3_partition_halves_thirds_fourths.png", "caption": "The same labeled Halves/Thirds/Fourths (Quarters) reference diagram as 2.GSR.7.3, showing multiple differently-shaped ways to partition a rectangle into the same number of equal shares." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

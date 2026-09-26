@@ -1,0 +1,531 @@
+{
+  "subject": "Mathematics",
+  "grade": "3",
+  "source": "Georgia's K-12 Mathematics Standards, 2021, Georgia Department of Education (GaDOE)",
+  "source_document": "dat/ga_k8_math_standards.pdf",
+  "source_pages": "pp. 35-44",
+  "notes": {
+    "what_this_is": "See raw/standards/ga/georgia_math_guidance_0.json notes.what_this_is.",
+    "verbatim_policy": "Every bullet is a verbatim transcription checked against the source page images, not paraphrased. Standard-level 'description' text uses the grade overview table (p.35) wording where it differs from the content-page section heading, per the discrepancy found and corrected in Grade 2 (see georgia_math_guidance_2.json notes on 2.MDR.5).",
+    "excluded_content": "No photograph exclusions this grade -- all three diagrams found are clean instructional graphics, kept in full.",
+    "diagrams": "All three of this grade's diagrams were clean single embedded image objects, extracted directly via pdfimages with no compositing needed."
+  },
+  "domains": [
+    {
+      "code": "3.MP",
+      "name": "Mathematical Practices",
+      "is_meta": true,
+      "description": "Display perseverance and patience in problem-solving. Demonstrate skills and strategies needed to succeed in mathematics, including critical thinking, reasoning, and effective collaboration and expression. Seek help and apply feedback. Set and monitor goals.",
+      "note": "No Evidence of Student Learning breakdown in the source, same as prior grades."
+    },
+    {
+      "code": "3.NR",
+      "name": "Numerical Reasoning",
+      "standards": [
+        {
+          "code": "3.NR.1",
+          "big_idea_note": "NUMERICAL REASONING -- base ten numerals and place value up to 10,000, and rounding up to 1,000",
+          "description": "Use place value reasoning to represent, read, write, and compare numerical values up to 10,000 and round whole numbers up to 1,000.",
+          "sub_standards": [
+            {
+              "code": "3.NR.1.1",
+              "expectation": "Read and write multi-digit whole numbers up to 10,000 using base-ten numerals and expanded form.",
+              "strategies_and_methods": [
+                "Students should be able to compose (combine) and decompose (break apart) numbers in various ways.",
+                "Examples of different strategies and representations can be found within the Computational Strategies for Whole Numbers document found in the appendices."
+              ],
+              "examples": [
+                "15 tens + 13 ones = 163 OR 16 tens + 3 ones",
+                "568 = 500 + 50 + 18 OR 500 + 60 + 8"
+              ]
+            },
+            {
+              "code": "3.NR.1.2",
+              "expectation": "Use place value reasoning to compare multi-digit numbers up to 10,000, using >, =, and < symbols to record the results of comparisons.",
+              "strategies_and_methods": [
+                "Students should be able to compare whole numbers up to 10,000.",
+                "Students should also create bar graphs and dot plots to represent numerical data when answering a statistical investigative question. They should be able to analyze the data presented in dot plots and bar graphs to compare multi-digit numbers using the symbols to record comparison in context."
+              ]
+            },
+            {
+              "code": "3.NR.1.3",
+              "expectation": "Use place value understanding to round whole numbers up to 1000 to the nearest 10 or 100.",
+              "relevance_and_application": [
+                "Students should be able to use place value understanding to round whole numbers for an authentic purpose within authentic situations."
+              ],
+              "strategies_and_methods": [
+                "Students should locate numbers on a number line to determine the nearest multiple of 10 or 100."
+              ],
+              "fundamentals": [
+                "Students should be given opportunities to build understanding by exploring the concept within 100 first and then progressing to applying the same mathematical thinking within 1000."
+              ],
+              "examples": [
+                "On a road trip, there is a gas station at the 700-mile mark and the 800-mile mark. You have about 50 miles left in the tank when you hit the 765-mile mark, which gas station is the closest for you to go to?"
+              ],
+              "diagrams": [
+                { "image": "diagrams/3.NR.1.3_number_line_mile_markers.png", "caption": "A number line labeled 'Mile marker' with 700, 765, and 800 marked, a car icon positioned at 765, and the label '50 miles left in tank' above it." }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "3.NR.4",
+          "big_idea_note": "NUMERICAL REASONING -- unit fractions, equivalent fractions, fractions greater than 1",
+          "description": "Represent fractions with denominators of 2, 3, 4, 6 and 8 in multiple ways within a framework using visual models.",
+          "sub_standards": [
+            {
+              "code": "3.NR.4.1",
+              "expectation": "Describe a unit fraction and explain how multiple copies of a unit fraction form a non-unit fraction.  Use parts of a whole, parts of a set, points on a number line, distances on a number line and area models.",
+              "age_developmentally_appropriate": [
+                "This standard is limited to fractions with denominators of 2, 3, 4, 6 and 8.",
+                "Set sizes should not exceed 24."
+              ],
+              "strategies_and_methods": [
+                "Students should investigate unit fractions using area models, parts of a set, linear models, and points on a number line.",
+                "Students should be given the opportunity to explore this concept using a variety of visual tools such as Cuisenaire rods, fraction tiles, fraction strips, fraction bars, fraction towers, number lines, etc."
+              ],
+              "examples": [
+                "Understand that 3/4 is composed of three pieces, each with a size of 1/4."
+              ],
+              "diagrams": [
+                { "image": "diagrams/3.NR.4.1_fraction_bar_three_fourths.png", "caption": "A fraction bar labeled 3/4 with a bracket spanning three of four equal sections, the three sections labeled 1/4, 1/4, 1/4, and the fourth section left blank/unshaded." }
+              ]
+            },
+            {
+              "code": "3.NR.4.2",
+              "expectation": "Compare two unit fractions by flexibly using a variety of tools and strategies.",
+              "fundamentals": [
+                "Students should be able to recognize that comparisons are valid only when the two fractions refer to the same whole."
+              ],
+              "strategies_and_methods": [
+                "Students should be able to use numerical reasoning strategies when comparing unit fractions.",
+                "Tools and strategies could include visual fraction models.",
+                "Students should record the results of comparisons with symbols >, =, or <, and justify the conclusions."
+              ]
+            },
+            {
+              "code": "3.NR.4.3",
+              "expectation": "Represent fractions, including fractions greater than one, in multiple ways.",
+              "age_developmentally_appropriate": [
+                "This standard is limited to fractions with denominators of 2, 3, 4, 6 and 8.",
+                "Set sizes should not exceed 24."
+              ],
+              "strategies_and_methods": [
+                "Students should investigate using area models, set models (parts of a set), linear models, and points representing distances on a number line.",
+                "Students should be given the opportunity to explore this concept using a variety of visual tools such as Cuisenaire rods, fraction tiles, fraction strips, fraction bars, fraction towers, number lines, analog clock, fraction circle, etc."
+              ],
+              "examples": [
+                "There are 6 keys in Stephanie's collection.  She gives two of them to her friend. What fraction of her collection did she give? Possible Solution: She gave 1/3 of her collection."
+              ],
+              "diagrams": [
+                { "image": "diagrams/3.NR.4.3_keys_fraction.png", "caption": "Six key icons arranged in a 2x3 grid, with the top two keys circled to represent the 2 keys given away out of 6 total (1/3 of the collection)." }
+              ]
+            },
+            {
+              "code": "3.NR.4.4",
+              "expectation": "Recognize and generate simple equivalent fractions.",
+              "fundamentals": [
+                "Students should explore the relationship between halves, fourths, and eighths, as well as thirds and sixths to generate simple equivalent fractions."
+              ],
+              "age_developmentally_appropriate": [
+                "This standard is limited to fractions with denominators of 2, 3, 4, 6 and 8."
+              ],
+              "strategies_and_methods": [
+                "Students should determine that two fractions are equal when they are the same size or on the same location on a number line.",
+                "Students should express whole numbers as fractions recognize fractions that are equivalent to whole numbers."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "3.PAR",
+      "name": "Patterning and Algebraic Reasoning",
+      "big_idea_note": "PATTERNING & ALGEBRAIC REASONING -- fluency, addition and subtraction within 10,000, multiplication and division within 100, equality, properties of operations",
+      "standards": [
+        {
+          "code": "3.PAR.2",
+          "description": "Use part-whole strategies to represent and solve real-life problems involving addition and subtraction with whole numbers up to 10,000.",
+          "sub_standards": [
+            {
+              "code": "3.PAR.2.1",
+              "expectation": "Fluently add and subtract within 1000 to solve problems.",
+              "terminology": [
+                "Fluently/Fluency – To achieve fluency, students should be able to choose flexibly among methods and strategies to solve mathematical problems accurately and efficiently.",
+                "Dot plots and line plots are similar tools with different symbols used to display the data points. They can be used interchangeably."
+              ],
+              "relevance_and_application": [
+                "Students should be able to use numerical reasoning to solve mathematical problems relevant to everyday life involving all problem types.  Click here for a listing of all problem types.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity.",
+                "Some problems should include data obtained from measurements of objects. This will allow students to apply their problem-solving abilities to reading bar graphs, pictographs, and dot plots as they solve problems within 1000."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Strategies may be based on place value, properties of operations, and/or the relationship between addition and subtraction."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be allowed to choose an appropriate strategy to demonstrate fluency.",
+                "Finding and using key words is not an appropriate strategy."
+              ]
+            },
+            {
+              "code": "3.PAR.2.2",
+              "expectation": "Apply part-whole strategies, properties of operations and place value understanding, to solve problems involving addition and subtraction within 10,000. Represent these problems using equations with a letter standing for the unknown quantity.  Justify solutions.",
+              "fundamentals": [
+                "Students should add and subtract multi-digit numbers within 10,000 to solve authentic, whole mathematical problems using efficient and generalizable procedures, based on knowledge of place value and properties of operations.",
+                "The focus of this learning objective is mathematical reasoning and sense-making."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Students should be given opportunities to use variety of models and representations when extending their understanding of part-whole reasoning strategies.",
+                "Students should be given the choice of which strategy they can use."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "3.PAR.3",
+          "description": "Use part-whole strategies to solve real-life, mathematical problems involving multiplication and division with whole numbers within 100.",
+          "sub_standards": [
+            {
+              "code": "3.PAR.3.1",
+              "expectation": "Describe, extend, and create numeric patterns related to multiplication. Make predictions related to the patterns.",
+              "age_developmentally_appropriate": [
+                "Identifying patterns can help students derive and automatize multiplication facts.",
+                "Multiplication tables may be used to help students discover patterns and relationships.",
+                "A student looking at a multiplication table may discover that multiples of even numbers (2, 4, 6, and 8) are always even; the products in each row and column increase by the same amount (skip counting); the multiples of 6 are double the multiples of 3; the multiples of any number fall on a horizontal and a vertical line due to the commutative property, etc.",
+                "Patterns may include exposure to even and odd extending from previous work in 2nd grade."
+              ],
+              "examples": [
+                "A student highlighting the multiples of 9 on a hundreds chart might notice that 2 x 9 is 2 away from 20, 3 x 9 is 3 away from 30, and so forth."
+              ]
+            },
+            {
+              "code": "3.PAR.3.2",
+              "expectation": "Represent single digit multiplication and division facts using a variety of strategies. Explain the relationship between multiplication and division.",
+              "fundamentals": [
+                "Students should solve multiplication problems including single-digit factors and division problems including single-digit divisors and quotients."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Multiplication strategies may include repeated addition, equal-sized groups, arrays, area models, equal jumps on a number line and skip counting.",
+                "Multiplication tables may be used to help students discover patterns and relationships.",
+                "Division strategies may include repeated subtraction, equal sharing, and forming equal groups.",
+                "Examples of different strategies and representations can be found within the Computational Strategies for Whole Numbers document found in the appendices."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should be able to use numerical reasoning to learn multiplication and division facts through playing games and solving authentic, mathematical problems.",
+                "Fluency does not lend itself to timed tests or speed. Students should be given opportunities to choose flexibly among methods and strategies to solve mathematical problems accurately and efficiently.",
+                "Fluency can be assessed in different ways."
+              ]
+            },
+            {
+              "code": "3.PAR.3.3",
+              "expectation": "Apply properties of operations (i.e., commutative property, associative property, distributive property) to multiply and divide within 100.",
+              "age_developmentally_appropriate": [
+                "These properties should be used organically within the daily number sense routines.",
+                "Students at this grade level are not expected to identify the specific properties.",
+                "Third grade students do not need to know the formal names for these properties."
+              ],
+              "examples": [
+                "7 x 3 is known, then 3 x 7 is also known (Commutative Property)",
+                "3 x 5 x 2 can be found by 3 x 5 = 15, then 15 x 2 = 30, or 5 x 2 = 10, then 3 x 10 = 30 (Associative Property)",
+                "Knowing 8 x 5 = 40 and 8 x 2 = 16, 8 x 7 can be found as the sum of these partial products: 8 x (5 + 2) = (8 x 5) + (8 x 2) = 40 + 16 = 56 (Distributive Property)"
+              ]
+            },
+            {
+              "code": "3.PAR.3.4",
+              "expectation": "Use the meaning of the equal sign to determine whether expressions involving addition, subtraction, and multiplication are equivalent.",
+              "age_developmentally_appropriate": [
+                "Students build upon their prior knowledge of equality to extend to relational understanding."
+              ],
+              "examples": [
+                "Ten teams of 8 students signed up for a volleyball tournament. One of the teams had to drop out.  Write an equation with two expressions that show how many students will be at the tournament.",
+                "Possible solutions: 9 groups of 8 is the same as 10 groups of 8 minus one group of 8 or 9 x 8 = (10 x 8) – 8, or 9 x 8 = 8 + 8 + 8 + 8 + 8 + 8 + 8 + 8 + 8",
+                "Students may also use picture drawings or models to justify their thinking."
+              ]
+            },
+            {
+              "code": "3.PAR.3.5",
+              "expectation": "Use place value reasoning and properties of operations to multiply one-digit whole numbers by multiples of 10, in the range 10-90.",
+              "age_developmentally_appropriate": [
+                "Students should be given an opportunity to explore that when a number is 10 times larger than another number, this does not come from adding zero.",
+                "Students should understand that adding zero does not change the overall quantity.",
+                "Students should explore the patterns of multiplying by ten and notice how the magnitude of the number changes.  Exploring the pattern, students should uncover as numbers are multiplied by a multiple of 10, the digit shifts left, making the value ten times more with each shift."
+              ],
+              "examples": [
+                "6 times 20 is 120 because 6 times groups of 20 is 120; or 6 x 20 = 6 x (10 x 2) = (6 x 10) x 2 = 60 x 2 = 120."
+              ]
+            },
+            {
+              "code": "3.PAR.3.6",
+              "expectation": "Solve practical, relevant problems involving multiplication and division within 100 using part-whole strategies, visual representations, and/or concrete models.",
+              "fundamentals": [
+                "Students should be able to solve practical, realistic division problems including \"how many in each group\" and \"how many groups\" using efficient and flexible strategies."
+              ],
+              "age_developmentally_appropriate": [
+                "Multiplication and division within 100 means multiplication and division of two whole numbers with whole number answers, and with product or divided in the range 0-100 (e.g., 39 / 3 = 13)."
+              ],
+              "relevance_and_application": [
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Some problems should include creating and reading bar graphs, pictographs, and dot plots. Data could include values obtained from measurements of objects."
+              ],
+              "examples": [
+                "The store had video games on sale for $15 each. If you bought 4 games, how much would you spend?"
+              ]
+            },
+            {
+              "code": "3.PAR.3.7",
+              "expectation": "Use multiplication and division to solve problems involving whole numbers to 100. Represent these problems using equations with a letter standing for the unknown quantity.  Justify solutions.",
+              "fundamentals": [
+                "Students should use a variety of strategies to solve multi-step authentic, mathematical problems.",
+                "Students should represent problems using equations with a variable standing for the unknown quantity and justify their answers.  Variables can be letters used to represent the unknown.",
+                "Students should use numerical reasoning to assess the reasonableness of answers."
+              ],
+              "age_developmentally_appropriate": [
+                "This is limited to problems posed with whole numbers and having whole-number answers. Situations involving money should not include decimal numbers."
+              ],
+              "strategies_and_methods": [
+                "see special note in appendix",
+                "Some problems should include creating and reading bar graphs, pictographs, and dot plots."
+              ],
+              "examples": [
+                "At the movies, tickets cost $11 each, popcorn costs $7 each, and drinks costs $4 each. If I have $35, do I have enough to purchase 2 tickets, 1 popcorn, and 2 drinks?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "3.MDR",
+      "name": "Measurement and Data Reasoning",
+      "big_idea_note": "MEASUREMENT & DATA REASONING -- elapsed time, liquid volume, mass, lengths in half and fourth of an inch, data",
+      "standards": [
+        {
+          "code": "3.MDR.5",
+          "description": "Solve real-life, mathematical problems involving length, liquid volume, mass, and time and analyze graphical displays of data to answer relevant questions.",
+          "sub_standards": [
+            {
+              "code": "3.MDR.5.1",
+              "expectation": "Ask questions and answer them based on gathered information, observations, and appropriate graphical displays to solve problems relevant to everyday life.",
+              "fundamentals": [
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity.",
+                "Questions should be student generated."
+              ]
+            },
+            {
+              "code": "3.MDR.5.2",
+              "expectation": "Tell and write time to the nearest minute and estimate time to the nearest fifteen minutes (quarter hour) from the analysis of an analog clock.",
+              "fundamentals": [
+                "Students should be given opportunities to determine relative time and predict time to the nearest fifteen minutes using only the hour hand of an analog clock."
+              ]
+            },
+            {
+              "code": "3.MDR.5.3",
+              "expectation": "Solve meaningful problems involving elapsed time, including intervals of time to the hour, half hour, and quarter hour where the times presented are only on the hour, half hour, or quarter hour within a.m. or p.m. only.",
+              "age_developmentally_appropriate": [
+                "Problems should include am/pm, start unknown, end unknown, and change unknown and addition/subtraction of time intervals.",
+                "Students should be given opportunities to use number lines to find unknowns.",
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "examples": [
+                "The bus comes at 7:00 a.m. It takes me 15 minutes to eat breakfast and 30 minutes to get ready. What time do I need to wake up? (e.g., start unknown)",
+                "I went to the movies at 3:15 p.m. The movie lasted 1 hour 45 minutes. What time did the movie end? (e.g., end unknown)",
+                "After school I went to the park at 2:30 p.m. and left to go home at 3:45 p.m. How long was I at the park? (e.g., change unknown)"
+              ]
+            },
+            {
+              "code": "3.MDR.5.4",
+              "expectation": "Use rulers to measure lengths in halves and fourths (quarters) of an inch and a whole inch.",
+              "age_developmentally_appropriate": [
+                "Students should use rulers marked with halves and fourths (quarters) of an inch.",
+                "Students must have prior knowledge of fractions on a number line."
+              ]
+            },
+            {
+              "code": "3.MDR.5.5",
+              "expectation": "Estimate and measure liquid volumes, lengths and masses of objects using customary units.  Solve problems involving mass, length, and volume given in the same unit, and reason about the relative sizes of measurement units within the customary system.",
+              "fundamentals": [
+                "Students should have an opportunity to compare capacity by filling one container with something and then pouring this amount into the comparison container.",
+                "Students should have opportunities to physically measure objects."
+              ],
+              "age_developmentally_appropriate": [
+                "Conversions are not expected in this grade level. The focus here should be on helping learners see the equivalence between quantities.",
+                "Students extend understanding of measuring length in inches to measuring in feet and yards."
+              ],
+              "terminology": [
+                "The terminology below is used to clarify expectations for the teaching professional. Students are not required to use this terminology when engaging with the learning objective.",
+                "Customary measurement units include weight (oz., lbs., tons) capacity (fl. oz, cups, pints, quarts, gallons), length (in., ft., yds., miles)."
+              ],
+              "examples": [
+                "Students should be able to record measurement equivalents in a two-column table."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "3.GSR",
+      "name": "Geometric and Spatial Reasoning",
+      "big_idea_note": "GEOMETRIC & SPATIAL REASONING -- polygons, parallel line segments, perpendicular line segments, right angles, lines of symmetry, area, perimeter",
+      "standards": [
+        {
+          "code": "3.GSR.6",
+          "description": "Identify the attributes of polygons, including parallel segments, perpendicular segments, right angles, and symmetry.",
+          "sub_standards": [
+            {
+              "code": "3.GSR.6.1",
+              "expectation": "Identify perpendicular line segments, parallel line segments, and right angles, identify these in polygons, and solve problems involving parallel line segments, perpendicular line segments, and right angles.",
+              "terminology": [
+                "Two lines are perpendicular if the angle formed at their intersection is a right angle (angles that form a square corner).",
+                "Two lines are parallel if they are in the same plane and never intersect."
+              ],
+              "age_developmentally_appropriate": [
+                "There should be a focus on the investigation of quadrilaterals, specifically, but other polygons should also be explored."
+              ],
+              "examples": [
+                "Given a variety of shapes, identify whether each includes parallel line segments, perpendicular line segments, and right angles."
+              ]
+            },
+            {
+              "code": "3.GSR.6.2",
+              "expectation": "Classify, compare, and contrast polygons, with a focus on quadrilaterals, based on properties.  Analyze specific 3-dimensional figures to identify and describe quadrilaterals as faces of these figures.",
+              "fundamentals": [
+                "Students should explore, compare, and contrast polygons based on properties.",
+                "There should be a focus on the investigation of quadrilaterals, specifically, but other polygons should also be explored.",
+                "Students should also be able to identify and name precise quadrilaterals as faces of specific 3-dimensional figures."
+              ],
+              "age_developmentally_appropriate": [
+                "This learning objective does not require students to create a hierarchy."
+              ],
+              "strategies_and_methods": [
+                "Quadrilaterals should include square, rectangle, rhombus, parallelogram, trapezoid, and kite."
+              ],
+              "terminology": [
+                "Properties may include angles, side lengths, symmetry, congruence, and the presence or absence of parallel or perpendicular lines.",
+                "Students should be able to identify types of angles, including acute, obtuse, and right.",
+                "Right angle – An angle with a square corner.",
+                "Acute angle – An angle smaller than a right angle.",
+                "Obtuse angle – An angle larger than a right angle.",
+                "In Georgia resources and assessments, the inclusive definitions for the classification of shapes are used. Therefore, trapezoids are defined using the inclusive definition: at least one pair of parallel sides."
+              ]
+            },
+            {
+              "code": "3.GSR.6.3",
+              "expectation": "Identify lines of symmetry in polygons.",
+              "fundamentals": [
+                "There should be a focus on the investigation of quadrilaterals, specifically, but other polygons should also be explored."
+              ],
+              "age_developmentally_appropriate": [
+                "Students should investigate symmetry using a variety of materials, such as miras and paper folding."
+              ],
+              "terminology": [
+                "Quadrilaterals are polygons with four sides and four angles."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "3.GSR.7",
+          "description": "Identify area as a measurable attribute of rectangles and determine the area of a rectangle presented in real-life, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "3.GSR.7.1",
+              "expectation": "Investigate area by covering the space of rectangles presented in realistic situations using multiple copies of the same unit, with no gaps or overlaps, and determine the total area (total number of units that covered the space).",
+              "age_developmentally_appropriate": [
+                "The expectation at this grade level is for students to explore areas of rectangles only."
+              ],
+              "strategies_and_methods": [
+                "Students should use numerical and spatial reasoning to determine the area of rectangles presented in realistic, mathematical problems."
+              ],
+              "examples": [
+                "Students can determine the area of the top of their desk or other rectangle outlined by tape on the desk by covering it using non-standard units, such as index cards, sticky notes, tiles, etc."
+              ]
+            },
+            {
+              "code": "3.GSR.7.2",
+              "expectation": "Determine the area of rectangles (or shapes composed of rectangles) presented in relevant problems by tiling and counting.",
+              "age_developmentally_appropriate": [
+                "The expectation at this grade level is for students to explore areas of rectangles by tiling and counting to develop the concept of area as the space (number of tiles) needed to cover the shape."
+              ],
+              "strategies_and_methods": [
+                "Students should use numerical and spatial reasoning to determine the area of rectangles presented in realistic, mathematical problems by counting or tiling."
+              ],
+              "relevance_and_application": [
+                "Relevant problems can include word problems that are meaningful to a student's real environment. It is important for the problems presented to be relevant and interesting for the learners to pique their natural, intellectual curiosity."
+              ],
+              "examples": [
+                "A laptop cover is being made with square vinyl stickers. There are four rows of stickers. There are 9 stickers in each row. How many square stickers were used to create the laptop cover?"
+              ]
+            },
+            {
+              "code": "3.GSR.7.3",
+              "expectation": "Discover and explain how area can be found by multiplying the dimensions of a rectangle.",
+              "age_developmentally_appropriate": [
+                "Dimensions of the rectangle could be limited to values up to 10 for each dimension. Students could explore higher values for dimensions as they show readiness."
+              ],
+              "fundamentals": [
+                "Students should have multiple opportunities to connect area to the investigations of multiplication using arrays."
+              ],
+              "terminology": [
+                "The dimensions of a rectangle can be referred to as length and width OR base and height.",
+                "A square with side length 1 unit, called \"a unit square,\" is said to have \"one square unit\" of area, and can be used to measure area (e.g., square cm, square m, square in, square ft)."
+              ],
+              "examples": [
+                "The area of a rectangle with whole-number side lengths a and b + c is the sum of a x b and a x c; 4 x 7 is the same as 4 x (2 + 5) and is the sum of 4 x 2 and 4 x 5.",
+                "In a rectangular garden, you have four rows of peanut plants. There are 9 peanut plants in each row. How many peanut plants are there in the garden?"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "3.GSR.8",
+          "description": "Determine the perimeter of a polygon presented in real-life, mathematical problems.",
+          "sub_standards": [
+            {
+              "code": "3.GSR.8.1",
+              "expectation": "Determine the perimeter of a polygon and explain that the perimeter represents the distance around a polygon. Solve problems involving perimeters of polygons.",
+              "age_developmentally_appropriate": [
+                "At this grade level, students should explore perimeters of polygons with up to ten sides."
+              ],
+              "fundamentals": [
+                "Students should be given opportunities to develop a conceptual understanding of perimeter of all types of polygons including regular and irregular.",
+                "Students should investigate perimeters of polygons with a focus on quadrilaterals.",
+                "Students should be able to find the perimeter given the side lengths.",
+                "Students should be able to find the unknown side length given the perimeter."
+              ],
+              "terminology": [
+                "The focus of this learning objective should be on developing the conceptual understanding of perimeter, rather than on terminology.",
+                "A polygon is a closed figure with at least three straight sides and angles; a polygon is regular only when all sides are equal and all angles are equal; and a polygon is irregular when all sides are not equal or all angles are not equal."
+              ],
+              "examples": [
+                "Your neighbor has 24 feet of fencing and wants you to help her build a rectangular pen for her dog. What are some possible dimensions for the dog pen? Which pen would you recommend and why?",
+                "A square pizza box has a perimeter of 32 inches, what are side lengths of the box?",
+                "If a stop sign has a side length of 4 inches, what would its perimeter be?"
+              ]
+            },
+            {
+              "code": "3.GSR.8.2",
+              "expectation": "Investigate and describe how rectangles with the same perimeter can have different areas or how rectangles with the same area can have different perimeters.",
+              "age_developmentally_appropriate": [
+                "This learning objective is limited to rectangles only."
+              ],
+              "relevance_and_application": [
+                "Students should solve authentic, mathematical problems involving perimeter and area of rectangles."
+              ],
+              "examples": [
+                "I have eighteen 1-foot panels to build a raised garden bed. How many different ways can I put these eighteen panels together to build a rectangular raised garden bed?  Which rectangle will have the greatest area?"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
