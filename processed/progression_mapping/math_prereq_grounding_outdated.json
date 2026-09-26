@@ -716,7 +716,7 @@
       "ccss_to": "5.OA.3 (coordinate plane)"
     },
     {
-      "_section": "K-2 GSR (Geometry and Spatial Reasoning) -- sourced from GEOM_PROG (Geometry, K-6, draft 27 Dec 2014)"
+      "_section": "K-2 GSR (Geometric and Spatial Reasoning) -- sourced from GEOM_PROG (Geometry, K-6, draft 27 Dec 2014)"
     },
     {
       "from": "K.GSR.8.1",
@@ -769,7 +769,7 @@
       "ccss_to": "2.G.3"
     },
     {
-      "_section": "K-2 MDR (Measurement, Data, and Results) -- length/measurement portion only, sourced from GEOM_MEAS_PROG (Geometric Measurement, K-5, draft 6/23/2012). Data/graphing sub-standards (K.MDR.7.2/7.3, 1.MDR.6.4, 2.MDR.5.4/5.5, 2.MDR.6.1/6.2) are NOT covered by this document -- see metadata note."
+      "_section": "K-2 MDR (Measurement and Data Reasoning) -- length/measurement portion only, sourced from GEOM_MEAS_PROG (Geometric Measurement, K-5, draft 6/23/2012). Data/graphing sub-standards (K.MDR.7.2/7.3, 1.MDR.6.4, 2.MDR.5.4/5.5, 2.MDR.6.1/6.2) are NOT covered by this document -- see metadata note."
     },
     {
       "from": "K.MDR.7.1",
@@ -797,7 +797,7 @@
       "confidence": "medium"
     },
     {
-      "_section": "K-2 MDR (Measurement, Data, and Results) -- categorical-data and measurement-data (graphing/number-line) portion, sourced from DATA_PROG ('K-3, Categorical Data; Grades 2-5, Measurement Data', draft 6/20/2011). Time (2.MDR.6.1) and money (1.MDR.6.3, 2.MDR.6.2) sub-standards are NOT covered by this document or by GEOM_MEAS_PROG -- still an open gap, no CCSS Progressions document addresses them (they are largely outside the CCSS's own progression-document scope)."
+      "_section": "K-2 MDR (Measurement and Data Reasoning) -- categorical-data and measurement-data (graphing/number-line) portion, sourced from DATA_PROG ('K-3, Categorical Data; Grades 2-5, Measurement Data', draft 6/20/2011). Time (2.MDR.6.1) and money (1.MDR.6.3, 2.MDR.6.2) sub-standards are NOT covered by this document or by GEOM_MEAS_PROG -- still an open gap, no CCSS Progressions document addresses them (they are largely outside the CCSS's own progression-document scope)."
     },
     {
       "from": "K.MDR.7.2",
