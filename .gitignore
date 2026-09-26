@@ -4,6 +4,8 @@ __pycache__/
 .env
 *typ
 
+papers/* 
+history/*
 # CCSS <-> state mapping pipeline: hierarchical method kept local for now,
 # not part of the public release yet.
 processed/state_ccss_mapping/map_state_to_ccss_hierarchical.py
