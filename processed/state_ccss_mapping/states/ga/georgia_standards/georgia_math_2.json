@@ -46,7 +46,7 @@
     },
     {
       "code": "2.NR",
-      "name": "Number Relations",
+      "name": "Numerical Reasoning",
       "is_meta": false,
       "standards": [
         {
@@ -107,7 +107,7 @@
     },
     {
       "code": "2.PAR",
-      "name": "Patterns and Algebraic Reasoning",
+      "name": "Patterning and Algebraic Reasoning",
       "is_meta": false,
       "standards": [
         {
@@ -128,7 +128,7 @@
     },
     {
       "code": "2.MDR",
-      "name": "Measurement, Data, and Results",
+      "name": "Measurement and Data Reasoning",
       "is_meta": false,
       "standards": [
         {
@@ -175,7 +175,7 @@
     },
     {
       "code": "2.GSR",
-      "name": "Geometry and Spatial Reasoning",
+      "name": "Geometric and Spatial Reasoning",
       "is_meta": false,
       "standards": [
         {

@@ -46,7 +46,7 @@
     },
     {
       "code": "4.NR",
-      "name": "Number Relations",
+      "name": "Numerical Reasoning",
       "is_meta": false,
       "standards": [
         {
@@ -149,7 +149,7 @@
     },
     {
       "code": "4.PAR",
-      "name": "Patterns and Algebraic Reasoning",
+      "name": "Patterning and Algebraic Reasoning",
       "is_meta": false,
       "standards": [
         {
@@ -178,7 +178,7 @@
     },
     {
       "code": "4.MDR",
-      "name": "Measurement, Data, and Results",
+      "name": "Measurement and Data Reasoning",
       "is_meta": false,
       "standards": [
         {
@@ -203,7 +203,7 @@
     },
     {
       "code": "4.GSR",
-      "name": "Geometry and Spatial Reasoning",
+      "name": "Geometric and Spatial Reasoning",
       "is_meta": false,
       "standards": [
         {
