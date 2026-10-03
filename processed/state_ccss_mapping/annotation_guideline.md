@@ -8,23 +8,24 @@ jointly adjudicating a complete mapping of Georgia's K–5 standards, and it is 
 state. Every rule is meant to be applied the same way by different annotators working alone; where a
 judgment could go either way, the guideline states which way to go.
 
-**How to use it.** Read sections 1–9 once before starting. While annotating, work from the
-**quick reference** (section 11) and look up cases in **Find your case** below; each rule is stated
-in full in one place, which the others point to.
+**How to use it.** Read sections 1–10 once before starting. While annotating, work from the
+**quick reference** (section 12) and look up cases in **Find your case** below. Each rule is stated in
+full in one place; other sections point to it.
 
 ## Contents
 
 1. [The task](#1-the-task)
 2. [Independence](#2-independence)
 3. [Units](#3-units): which state and CCSS units to annotate and cite
-4. [Reading a standard](#4-reading-a-standard): core requirement and the four tests
-5. [Relationship types](#5-relationship-types): the seven labels; 5.1 split or subset; 5.2 merge or superset
-6. [Decision procedure](#6-decision-procedure): the six steps
-7. [Tie-break defaults](#7-tie-break-defaults)
-8. [Worked examples](#8-worked-examples): E1–E15
-9. [What to record](#9-what-to-record)
-10. [Process](#10-process)
-11. [Quick reference](#11-quick-reference)
+4. [Reading a standard](#4-reading-a-standard): what one standard requires
+5. [Comparing standards: the four tests](#5-comparing-standards-the-four-tests): when two requirements match
+6. [Relationship types](#6-relationship-types): what the seven labels mean
+7. [Decision procedure](#7-decision-procedure): how to choose a label; step 3 merge or superset, step 5 split or subset
+8. [Tie-break defaults](#8-tie-break-defaults): what to choose when unsure
+9. [Worked examples](#9-worked-examples): E1–E15
+10. [What to record](#10-what-to-record)
+11. [Process](#11-process)
+12. [Quick reference](#12-quick-reference)
 
 ## Find your case
 
@@ -42,14 +43,14 @@ in full in one place, which the others point to.
 | a CCSS code is a prerequisite or only a definition (e.g. 3.MD.5a) | Test D (not a match): don't cite it | E11 |
 | the state standard matches a CCSS parent's general statement | Section 3: cite all its lettered parts | E10 |
 | the state's guidance adds something the text doesn't say | Section 4.1: guidance interprets, never adds | — |
-| the state standard matches one code and has an extra part | Section 5.2: extra is another code's core → `merge`; otherwise `state_superset` | E3, E4 |
-| the state standard states two or more codes' core requirements | Section 5.2 → `merge`; leftovers in the rationale | E9, E10, E11 |
-| the state standard covers only part of a code, and no other standard covers the rest | Section 5.1 → `state_subset` | E6 |
-| two or more state standards each cover a different part of one code | Section 5.1 → `split` | E12 |
-| an earlier or narrower state standard covers part of a code another standard covers more fully | Section 5.1 → `state_subset` | 4.NBT.2 table in 5.1 |
-| you already marked a CCSS code `exact` and find a second state standard like it | Exact rule (section 5): re-examine both | — |
+| the state standard matches one code and has an extra part | Step 3: extra is another code's core → `merge`; otherwise `state_superset` | E3, E4 |
+| the state standard states two or more codes' core requirements | Step 4 → `merge`; leftovers in the rationale | E9, E10, E11 |
+| the state standard covers only part of a code, and no other standard covers the rest | Step 5 → `state_subset` | E6 |
+| two or more state standards each cover a different part of one code | Step 5 → `split` | E12 |
+| an earlier or narrower state standard covers part of a code another standard covers more fully | Step 5 → `state_subset` | 4.NBT.2 table in step 5 |
+| you already marked a CCSS code `exact` and find a second state standard like it | Exact rule (section 6): re-examine both | — |
 | the state standard both adds and lacks something | Step 6: decide by the more substantial difference, note both | — |
-| you are still unsure | Section 7 tie-breaks; mark `low` confidence | — |
+| you are still unsure | Section 8 tie-breaks; mark `low` confidence | — |
 
 ---
 
@@ -58,7 +59,7 @@ in full in one place, which the others point to.
 For each state standard, record:
 
 1. **which CCSS codes it corresponds to** (zero, one or more), and
-2. **how it relates to them**: one of seven relationship types (section 5).
+2. **how it relates to them**: one of seven relationship types (section 6).
 
 A "correspondence" means the two standards require the same learning of students. It does not mean
 they are on the same topic.
@@ -75,7 +76,7 @@ The annotations are used to measure agreement between annotators, so they must b
   where provided), the CCSS K–5 list (with domains, clusters and parent standards), and this guideline.
 - **Do not consult other mappings or crosswalks** of this state to CCSS (published, commercial or
   automatic), or any model's output.
-- **Questions go to the question log** (section 10), not to other annotators. Answers are sent to all
+- **Questions go to the question log** (section 11), not to other annotators. Answers are sent to all
   annotators in writing, so everyone works from the same guideline.
 
 ---
@@ -98,6 +99,8 @@ lettered parts (e.g. `3.MD.7`).
 
 ## 4. Reading a standard
 
+This section is about one standard at a time: what it requires. Section 5 compares two.
+
 ### 4.1 The standard's own text sets the requirement
 
 What a standard requires is what its own text says. The surrounding context (domain, cluster, parent
@@ -113,9 +116,9 @@ grade. Context and guidance never **add** a requirement the text doesn't state.
 to state. Reading the requirement from the text keeps annotators consistent and makes mappings of
 different states comparable. It is not a judgment that the guidance matters less for teaching.
 
-### 4.2 Describe each standard's core requirement
+### 4.2 Describe the core requirement
 
-Before comparing, describe each standard (the state standard and each candidate CCSS code) by:
+Describe each standard (the state standard and each candidate CCSS code) by:
 
 - **Action:** what students must do (count, identify, compare, represent, compute, solve problems,
   explain, draw, create, measure…).
@@ -127,18 +130,26 @@ Before comparing, describe each standard (the state standard and each candidate 
 A standard can have more than one requirement (e.g. "measure lengths … **and** show the data on a
 line plot"). List each separately.
 
-### 4.3 Four tests used throughout
+---
 
-**Test A (requirement): shared requirement, not shared topic.** Two requirements correspond only if
-the action, content and bounds are essentially the same. Being about the same topic is not enough.
+## 5. Comparing standards: the four tests
+
+These tests decide whether a state standard's requirement and a CCSS code's requirement match. The
+decision procedure (section 7) applies them; they are referred to by letter throughout.
+
+### Test A (requirement): shared requirement, not shared topic
+
+Two requirements correspond only if the action, content and bounds are essentially the same. Being
+about the same topic is not enough.
 
 > Identifying coins and their values (Georgia K.NR.1.4) and solving word problems with coins (CCSS
 > 2.MD.8) share a topic, not a requirement.
 
-**Test B (separate objective): does a difference change the relationship?** When one standard has
-something the other doesn't, decide whether that difference is **a separate learning objective**:
-something a teacher would plan, teach and assess as its own goal. Only then does it change the
-relationship.
+### Test B (separate objective): does a difference change the relationship?
+
+When one standard has something the other doesn't, decide whether that difference is **a separate
+learning objective**: something a teacher would plan, teach and assess as its own goal. Only then does
+it change the relationship.
 
 | Counts as a separate objective (changes the relationship) | Does not (the relationship stays the same) |
 |---|---|
@@ -154,11 +165,15 @@ learning, not how that learning is shown. Explaining and justifying are expected
 (e.g. CCSS Mathematical Practice 3), so counting them would make most pairs differ on wording alone.
 They still matter: note a missing "explain" or "justify" in the rationale.
 
-**Test C (bounds): a difference in bounds always counts.** A different number range (to 20 vs. to
-100), number type (whole numbers vs. fractions vs. decimals), place value (to hundredths vs. to any
-place), denominators, number of digits, number of steps, or set of cases.
+### Test C (bounds): a difference in bounds always counts
 
-**Test D (not a match): not every related code is a match.** Do not cite a CCSS code that is:
+A different number range (to 20 vs. to 100), number type (whole numbers vs. fractions vs. decimals),
+place value (to hundredths vs. to any place), denominators, number of digits, number of steps, or set
+of cases.
+
+### Test D (not a match): not every related code is a match
+
+Do not cite a CCSS code that is:
 
 - **a prerequisite** the state standard builds on but doesn't itself state;
 - **a base definition** the state standard assumes but doesn't state (e.g. CCSS 3.MD.5a, "A square with
@@ -170,25 +185,26 @@ place), denominators, number of digits, number of steps, or set of cases.
   teach some content earlier or later than CCSS), but a code two or more grades away must require the
   same action on the same content at a comparable level.
 
-A **grade difference alone is never a difference in scope** (`different_grade`, section 5).
+A **grade difference alone is never a difference in scope** (`different_grade`, section 6).
 
 ---
 
-## 5. Relationship types
+## 6. Relationship types
 
-Exactly one per state standard.
+Exactly one per state standard. This section says what each label **means**; section 7 says how to
+choose one.
 
 | Type | In short | CCSS codes cited | Definition |
 |---|---|---|---|
 | `exact` | same standard | exactly 1 | Essentially the same requirement: same action, content and bounds, at the same grade. Differences that are not separate objectives (Test B) are still `exact`. Not word for word. |
-| `state_superset` | the state asks for more | exactly 1 | Everything the CCSS code requires **plus** a separate objective or wider bounds that is not itself the core requirement of another CCSS code (section 5.2). |
-| `state_subset` | the state asks for less | exactly 1 | **Less** than the CCSS code requires (a missing separate objective or narrower bounds), and **not** one of the standards that together make up the full code (section 5.1). |
+| `state_superset` | the state asks for more | exactly 1 | Everything the CCSS code requires **plus** a separate objective or wider bounds that is not itself the core requirement of another CCSS code. |
+| `state_subset` | the state asks for less | exactly 1 | **Less** than the CCSS code requires (a missing separate objective or narrower bounds), and **not** one of the standards that together make up the full code. |
 | `different_grade` | same standard, another grade | exactly 1 | Essentially the same requirement (as for `exact`), but the CCSS code is at a different K–5 grade. |
-| `merge` | one state standard, several CCSS codes | 2 or more | The state standard states the core requirement of two or more CCSS codes (section 5.2), whether it covers each fully or partly. |
-| `split` | one CCSS code, spread over several state standards | exactly 1 | One of two or more state standards that **together make up the full CCSS code**, each covering a different part of it (section 5.1). Name the others in `split_with`. |
+| `merge` | one state standard, several CCSS codes | 2 or more | The state standard states the core requirement of two or more CCSS codes, whether it covers each fully or partly. |
+| `split` | one CCSS code, spread over several state standards | exactly 1 | One of two or more state standards that **together make up the full CCSS code**, each covering a different part of it. Name the others in `split_with`. |
 | `none` | no CCSS counterpart | 0 | No CCSS K–5 code shares the state standard's requirement at any grade. |
 
-Rules that always hold:
+Two rules always hold:
 
 - **Exact rule.** A state standard is `exact` with at most one CCSS code, and a CCSS code is `exact` with
   at most one state standard. If a second state standard is also essentially the same as a CCSS code
@@ -197,14 +213,68 @@ Rules that always hold:
 - **Count the codes first.** How many CCSS codes a standard corresponds to is decided before scope: a
   standard that corresponds to two or more codes is `merge`, even if it is broader or narrower than
   them.
-- **`split` vs. `state_subset`** is decided by full coverage (section 5.1).
-- **`merge` vs. `state_superset`** is decided by which codes' core requirements the state standard
-  states (section 5.2).
 
-### 5.1 Split or subset: does the standard help make up the full CCSS code?
+---
 
-*One CCSS code, spread over several state standards.* When a state standard covers only **part** of a
-CCSS code, look at **all** the state's standards that cover any part of that code, and ask:
+## 7. Decision procedure
+
+Work through the steps in order for each state standard. Record the step at which you decided in your
+rationale. Steps 3–4 decide `merge` or `state_superset`; step 5 decides `split` or `state_subset`.
+
+### Step 1. Describe
+
+Describe the state standard's core requirement: action, content, bounds (section 4.2).
+
+### Step 2. Search
+
+Search the whole CCSS list for candidate codes: every domain and every grade. Start at the state
+standard's own grade and domain, then widen. States organize content differently (e.g. a state may
+place area, perimeter, volume and angle measure under geometry, where CCSS places them under
+Measurement and Data).
+
+### Step 3. Keep the codes whose core requirement the standard states
+
+For each candidate code, ask:
+
+> **Does the state standard's text state this code's core requirement?**
+
+- **Keep a code only if the state standard states its core requirement** (Test A): its action on its
+  content. Sharing a detail, an example or the topic with the code is not enough.
+- **Drop** prerequisites, assumed definitions, same-topic codes with a different action, and
+  distant-grade topic matches (Test D).
+- **Check the neighbours.** Once you find one match, check its lettered siblings and the other codes in
+  its cluster: state standards often combine several CCSS codes.
+- **Look up any extra part.** If the state standard fully matches one code and has an extra part:
+  - the extra part is itself the core requirement of another CCSS code (search all grades and domains)
+    → keep that code too (it will be a `merge`);
+  - no CCSS code requires it → keep only the one code (it will be a `state_superset`, step 6).
+
+### Step 4. Count the codes kept
+
+- **0** → `none`. Stop.
+- **2 or more** → `merge`. Stop. Leftover differences go in the rationale, not the label: a small extra
+  part that no CCSS code requires, or one code covered a bit narrowly (e.g. without a demand attached to
+  the task, or with somewhat narrower bounds), does not turn a `merge` into `state_superset` or
+  `state_subset`.
+- **1** → step 5.
+
+**Examples for steps 3–4:**
+
+| Georgia standard | Codes whose core requirement it states | Extra or leftover | Label |
+|---|---|---|---|
+| K.NR.2.1: "Count forward to 100 by tens and ones and backward from 20 by ones." | K.CC.1 (count to 100 by ones and tens) | Counting backward: a separate objective, but no CCSS code requires it | `state_superset` of K.CC.1 |
+| 3.GSR.7.1: "Investigate area by covering the space of rectangles … using multiple copies of the same unit, with no gaps or overlaps, and determine the total area…" | 3.MD.5b (a figure covered without gaps or overlaps by n unit squares has area n) and 3.MD.6 (measure areas by counting unit squares) | None; 3.MD.5a is only a definition (Test D) | `merge` |
+| 3.NR.4.4: "Recognize and generate simple equivalent fractions." | 3.NF.3a (fractions as equivalent when the same size or the same point on a number line, as Georgia's guidance interprets "equivalent") and 3.NF.3b (recognize and generate simple equivalent fractions) | 3.NF.3b's "Explain why the fractions are equivalent" is not stated: noted in the rationale | `merge` |
+
+K.NR.2.1 is not a merge: counting backward is a separate objective (Test B), but because no CCSS code
+has it as its core requirement, there is no second code to cite. 3.NR.4.4 stays a merge even though it
+covers 3.NF.3b a little narrowly: once two codes' core requirements are stated, what is missing from
+one of them is recorded in the rationale, not in the label.
+
+### Step 5. Coverage: split or subset
+
+Does the state standard cover the full code (all of its parts)? **Yes** → step 6. **No, only part of
+it** → look at **all** the state's standards that cover any part of that code, and ask:
 
 > **Which standards, together, make up the full CCSS code: all of its parts?**
 
@@ -214,7 +284,7 @@ CCSS code, look at **all** the state's standards that cover any part of that cod
 | A standard covering a part that another standard already covers more fully (typically an earlier, narrower pass: smaller numbers, fewer cases, an earlier grade) | `state_subset`: it contributes to learning the code, but the full code is made up without it |
 | The same parts covered by more than one set of standards (e.g. in grade 3 and again, more fully, in grade 4) | the set with the fuller scope, usually at or nearest the code's grade, is `split`; the others are `state_subset` |
 | No combination of the state's standards covers all of the code's parts | every standard covering part of it is `state_subset` |
-| A single standard covers the full code | that standard is `exact`, `state_superset` or `different_grade`; any other standard covering part of the code is `state_subset` |
+| A single standard covers the full code | that standard goes to step 6 (`exact`, `state_superset` or `different_grade`); any other standard covering part of the code is `state_subset` |
 
 Within a split, a part may be covered with somewhat narrower bounds than the code (e.g. time intervals
 in quarter hours rather than minutes); note it in the rationale. What decides `split` is that the
@@ -246,99 +316,35 @@ covers only identifying, for fewer figures; the full code is made up without it,
 
 See also E12 (a two-standard split).
 
-### 5.2 Merge or superset: which CCSS codes does the standard state?
+### Step 6. Scope
 
-*One state standard, spread over several CCSS codes.* When a state standard seems to reach beyond one
-CCSS code (it matches one code and has something more, or it touches several codes), look at each
-candidate code, and ask:
+Compare the state standard with its one code (Tests B and C):
 
-> **Does the state standard's text state this code's core requirement?**
-
-- **A CCSS code joins a merge only if the state standard states that code's core requirement**
-  (Test A): its action on its content. Sharing a detail, an example or the topic with the code is not
-  enough, and Test D still applies (no prerequisites, definitions or distant-grade topic matches).
-- **If the state standard fully matches one CCSS code and has an extra part,** look at the extra part:
-  - it is itself the core requirement of another CCSS code → cite that code too → `merge`;
-  - no CCSS code requires it → `state_superset` of the one code.
-- **In a merge, leftover differences go in the rationale, not the label.** A small extra part that no
-  CCSS code requires, or one code covered a bit narrowly (e.g. without a demand attached to the task,
-  or with somewhat narrower bounds), does not turn a `merge` into `state_superset` or `state_subset`.
-  The codes are counted first (section 5).
-
-| Georgia standard | Codes whose core requirement it states | Extra or leftover | Label |
-|---|---|---|---|
-| K.NR.2.1: "Count forward to 100 by tens and ones and backward from 20 by ones." | K.CC.1 (count to 100 by ones and tens) | Counting backward: a separate objective, but no CCSS code requires it | `state_superset` of K.CC.1 |
-| 3.GSR.7.1: "Investigate area by covering the space of rectangles … using multiple copies of the same unit, with no gaps or overlaps, and determine the total area…" | 3.MD.5b (a figure covered without gaps or overlaps by n unit squares has area n) and 3.MD.6 (measure areas by counting unit squares) | None; 3.MD.5a is only a definition (Test D) | `merge` |
-| 3.NR.4.4: "Recognize and generate simple equivalent fractions." | 3.NF.3a (fractions as equivalent when the same size or the same point on a number line, as Georgia's guidance interprets "equivalent") and 3.NF.3b (recognize and generate simple equivalent fractions) | 3.NF.3b's "Explain why the fractions are equivalent" is not stated: noted in the rationale | `merge` |
-
-K.NR.2.1 is not a merge: counting backward is a separate objective (Test B), but because no CCSS code
-has it as its core requirement, there is no second code to cite. 3.NR.4.4 stays a merge even though it
-covers 3.NF.3b a little narrowly: once two codes' core requirements are stated, what is missing from
-one of them is recorded in the rationale, not in the label.
-
-See also E3, E4 (supersets) and E9–E11 (merges).
-
----
-
-## 6. Decision procedure
-
-Work through the steps in order for each state standard. Record the step at which you decided in your
-rationale.
-
-**Step 1. Describe** the state standard's core requirement: action, content, bounds (section 4.2).
-
-**Step 2. Search** the whole CCSS list for candidate codes: every domain and every grade. Start at the
-state standard's own grade and domain, then widen. States organize content differently (e.g. a state
-may place area, perimeter, volume and angle measure under geometry, where CCSS places them under
-Measurement and Data).
-
-**Step 3. Keep** only codes whose core requirement the state standard states (Test A; section 5.2).
-- Drop prerequisites, assumed definitions, same-topic codes with a different action, and distant-grade
-  topic matches (Test D).
-- Once you find one match, check its lettered siblings and the other codes in its cluster: state
-  standards often combine several CCSS codes.
-- If the state standard has a part the matched code doesn't require, search all grades and domains
-  for a code whose core requirement is that part; if there is one, keep it too.
-
-**Step 4. Count** the codes kept.
-- **0** → `none`. Stop.
-- **2 or more** → `merge`. Note leftover differences in the rationale (section 5.2). Stop.
-- **1** → step 5.
-
-**Step 5. Coverage.** Does the state standard cover the full code (all of its parts)?
-- **Yes** → step 6.
-- **No, only part of it** → apply section 5.1 to all the state's standards that cover any part of the
-  code: `split` (list the others) or `state_subset`. Stop.
-
-**Step 6. Scope** (Tests B and C), compared with that one code:
 - essentially the same → `exact` (same grade) or `different_grade` (other grade);
 - adds a separate objective or has wider bounds → `state_superset` (if the added part is another code's
-  core requirement, go back to step 3: it is a `merge`, section 5.2);
+  core requirement, go back to step 3: it is a `merge`);
 - has narrower bounds → `state_subset`;
 - both adds and lacks something → decide by the more substantial difference and note both.
 
 ---
 
-## 7. Tie-break defaults
+## 8. Tie-break defaults
 
 When a case could reasonably go either way, use these defaults, so that annotators who are uncertain
-in the same way still agree. Mark such cases **`low` confidence** (section 9).
+in the same way still agree. Mark such cases **`low` confidence** (section 10).
 
 | Unsure between | Choose | Unless |
 |---|---|---|
 | `exact` and `state_superset` / `state_subset` | `exact` | the difference passes Test B or Test C |
 | `different_grade` and `state_superset` / `state_subset` | `different_grade` | the difference passes Test B or Test C (a grade difference alone never does) |
-| `state_superset` and `merge` | `state_superset` | the extra part is itself the core requirement of another CCSS code: cite it, `merge` (section 5.2) |
-| `state_subset` and `merge` | `merge` | the standard states the core requirement of only one code (a shared detail or topic doesn't count, Test A) |
-| `split` and `state_subset` | `state_subset` | you can name the other standard(s) that, together with this one, make up the full code (section 5.1) |
+| citing a code or not (step 3), e.g. `state_superset` vs. `merge` | don't cite it | the state standard's text states the code's action on its content (Test A) |
+| `split` and `state_subset` (step 5) | `state_subset` | you can name the other standard(s) that, together with this one, make up the full code |
 | `state_subset` and `none` | `state_subset` | the shared part is only the topic, not a requirement (Test A) |
-| citing a code vs. not (it shares only a detail or the topic) | don't cite it | the state standard's text states the code's action on its content (Test A) |
-| citing a lettered part vs. its siblings | cite the parts whose text the state standard states | the state standard matches the parent's general statement: cite all parts |
 | a same-grade code vs. another-grade code with the same requirement | the same-grade code | only the other-grade code shares the requirement |
 
 ---
 
-## 8. Worked examples
+## 9. Worked examples
 
 All from the adjudicated Georgia mapping. Each gives the state text, the CCSS text, the label and
 what decided it.
@@ -373,7 +379,7 @@ what decided it.
 **E3. `state_superset`: an added separate objective no CCSS code requires.**
 - **Georgia K.NR.2.1:** "Count forward to 100 by tens and ones and backward from 20 by ones."
 - **CCSS K.CC.1:** "Count to 100 by ones and by tens."
-- **Decided by:** Test B and section 5.2. Counting backward is a separate objective, and no CCSS code
+- **Decided by:** Test B and step 3. Counting backward is a separate objective, and no CCSS code
   requires it, so there is no second code to cite.
 
 **E4. `state_superset`: an added separate objective.**
@@ -393,15 +399,15 @@ what decided it.
   and a whole inch."
 - **CCSS 3.MD.4:** "Generate measurement data by measuring lengths using rulers marked with halves and
   fourths of an inch. Show the data by making a line plot…"
-- **Decided by:** Test B and section 5.1. Making a line plot is a separate objective, and no other
-  Georgia grade-3 standard covers it.
+- **Decided by:** Test B and step 5. Making a line plot is a separate objective, and no other Georgia
+  grade-3 standard covers it.
 
 **E7. `different_grade`: same requirement; attached demands don't count.**
 - **Georgia 4.NR.4.2 (grade 4):** "Compare two fractions with the same numerator or the same
   denominator by reasoning about their size and recognize that comparisons are valid only when the two
   fractions refer to the same whole."
-- **CCSS 3.NF.3d (grade 3):** essentially the same text, plus "Record the results of comparisons with the symbols >,
-  =, or <, and justify the conclusions, e.g., by using a visual fraction model."
+- **CCSS 3.NF.3d (grade 3):** essentially the same text, plus "Record the results of comparisons with
+  the symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
 - **Decided by:** Test B. Recording with symbols and justifying are demands attached to the same task,
   so the requirement is essentially the same; only the grade differs.
 
@@ -416,8 +422,8 @@ what decided it.
 **E9. `merge`: two codes, one covered a little narrowly.**
 - **Georgia 3.NR.4.4:** "Recognize and generate simple equivalent fractions."
 - **CCSS 3.NF.3a and 3.NF.3b.**
-- **Decided by:** sections 4.1 and 5.2. The text states 3.NF.3b's core ("recognize and generate simple
-  equivalent fractions"), and Georgia's guidance interprets "equivalent" as 3.NF.3a does: "two
+- **Decided by:** section 4.1 and steps 3–4. The text states 3.NF.3b's core ("recognize and generate
+  simple equivalent fractions"), and Georgia's guidance interprets "equivalent" as 3.NF.3a does: "two
   fractions are equal when they are the same size or on the same location on a number line". It does
   not state 3.NF.3b's "explain why"; two codes means `merge`, and the missing part goes in the
   rationale.
@@ -442,10 +448,10 @@ what decided it.
 - **Georgia 3.MDR.5.3:** "Solve meaningful problems involving elapsed time…"
 - **CCSS 3.MD.1 (both):** "Tell and write time to the nearest minute and measure time intervals in
   minutes. Solve word problems involving addition and subtraction of time intervals in minutes…"
-- **Decided by:** section 5.1. Telling time and solving elapsed-time problems are separate objectives
-  of 3.MD.1; each Georgia standard covers one, and together they make up the code. Each is `split`,
+- **Decided by:** step 5. Telling time and solving elapsed-time problems are separate objectives of
+  3.MD.1; each Georgia standard covers one, and together they make up the code. Each is `split`,
   naming the other. (For an earlier, narrower standard that is `state_subset` rather than a split
-  partner, see the 4.NBT.2 table in section 5.1.)
+  partner, see the 4.NBT.2 table in step 5.)
 
 **E13. `none`: shared topic, different action.**
 - **Georgia K.NR.1.4:** "Identify pennies, nickels, and dimes and know their name and value."
@@ -469,7 +475,7 @@ what decided it.
 
 ---
 
-## 9. What to record
+## 10. What to record
 
 One row per state standard:
 
@@ -479,17 +485,17 @@ One row per state standard:
 | `ccss_codes` | The CCSS leaf codes, separated by commas; empty for `none` |
 | `relationship` | One of the seven types |
 | `split_with` | For `split` only: the other state standard(s) covering the rest of the code |
-| `confidence` | `high`: the guideline decides it clearly; `medium`: a judgment within a clear rule; `low`: a tie-break default was needed (section 7) |
+| `confidence` | `high`: the guideline decides it clearly; `medium`: a judgment within a clear rule; `low`: a tie-break default was needed (section 8) |
 | `rationale` | One or two sentences: the core requirement matched, the decisive difference (if any), and the test or step that decided it (e.g. "Step 6, Test C: rounds to hundredths only, CCSS to any place") |
 
 **Before moving on, check:**
-- the number of codes fits the type (section 5);
+- the number of codes fits the type (section 6);
 - no parent code with lettered parts is cited;
 - `split` names its partners.
 
 ---
 
-## 10. Process
+## 11. Process
 
 1. **Calibration.** Before annotating, each annotator maps a short practice set of standards from the
    adjudicated Georgia mapping (not from the state being annotated) and compares their answers with the
@@ -508,12 +514,14 @@ One row per state standard:
 
 ---
 
-## 11. Quick reference
+## 12. Quick reference
 
-**Units.** State standard at its lowest level. CCSS leaf codes only; if the state standard matches a
-parent's general statement, cite all its lettered parts.
+*A one-page summary; the full rules are in the sections named.*
 
-**Tests.**
+**Units** (section 3). State standard at its lowest level. CCSS leaf codes only; if the state standard
+matches a parent's general statement, cite all its lettered parts.
+
+**Tests** (section 5).
 - **A (requirement):** shared action + content + bounds, not a shared topic.
 - **B (separate objective):** a difference matters only if it is a separate learning objective, not
   wording, examples, recording/justifying, receptive vs. productive form, or ordinary components.
@@ -521,22 +529,18 @@ parent's general statement, cite all its lettered parts.
 - **D (not a match):** don't cite prerequisites, assumed definitions, same-topic codes with a different
   action, or distant-grade topic matches.
 
-**Steps.**
+**Steps** (section 7).
 1. **Describe** the requirement: action, content, bounds.
 2. **Search** all grades and domains.
 3. **Keep** codes whose core requirement the standard states (A, D); check siblings; look for a code
-   that requires any extra part (5.2).
+   that requires any extra part.
 4. **Count:** 0 → `none`; 2+ → `merge` (leftovers in the rationale); 1 → step 5.
 5. **Coverage:** covers only part of the code? Helps make up the full code with other standards →
-   `split`; otherwise `state_subset` (5.1).
+   `split`; otherwise `state_subset`.
 6. **Scope:** same → `exact` (same grade) / `different_grade` (other grade); more, and no code requires
    the extra → `state_superset`; less → `state_subset`.
 
 **Always.**
 - One `exact` per CCSS code.
 - Grade alone is not scope.
-- `split` = the standards that together make up the full code (named); a partial standard not needed
-  for the full code = `state_subset`.
-- `merge` = the standard states 2+ codes' core requirements; an extra part no code requires =
-  `state_superset`.
-- When unsure, use section 7 and mark `low` confidence.
+- When unsure, use the tie-break defaults (section 8) and mark `low` confidence.
