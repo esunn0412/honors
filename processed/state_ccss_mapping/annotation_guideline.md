@@ -49,7 +49,7 @@ full in one place; other sections point to it.
 | the two share some requirements, and each also has one the other lacks | Step 5 → `overlap`; it still counts as a piece | patterns 6–8 in section 6 |
 | two or more state standards each cover a different part of one code | Step 6A → `split` | E12 |
 | an earlier or narrower state standard covers part of a code another standard covers more fully | Step 6A → `state_subset` | 4.NBT.2 table in step 6 |
-| you already marked a CCSS code `exact` and find a second state standard like it | Exact rule (section 6): re-examine both | — |
+| you already marked a CCSS code `exact` and find a second state standard like it | Section 6, `exact` row: re-examine both | — |
 | the state standard both adds and lacks something | Step 5 → `overlap` | 3.GSR.6.1 in step 6 |
 | you are still unsure | Section 8 tie-breaks; mark `low` confidence | — |
 
@@ -207,7 +207,7 @@ neither does grade.
 
 | Label | In short | Which is inside which? | And |
 |---|---|---|---|
-| `exact` | same standard, at any grade | each inside the other | a state standard has at most one `exact` row, and a CCSS code is `exact` with at most one state standard (exact rule below) |
+| `exact` | same standard, at any grade | each inside the other | a state standard has at most one `exact` row, and a CCSS code is `exact` with at most one state standard. If a second state standard seems `exact` with the same code, re-examine both: usually each covers a separate part of it (`split`), or one of them differs in scope |
 | `split` | the state standard is a piece of the code | the state standard is inside the code | the state standards that cover parts of the code together make up all of the code, and this row's state standard is needed for that |
 | `state_subset` | the state asks for less | the state standard is inside the code | the state standards that cover parts of the code do not make up all of the code; or they do, but this row's state standard is not needed for that |
 | `merge` | the code is a piece of the state standard | the code is inside the state standard | the CCSS codes that cover parts of the state standard together make up all of the state standard, and this row's code is needed for that |
@@ -245,10 +245,6 @@ CCSS code requires.
 | 8 | Overlap that isn't needed | V = all of A; S = a1 + y | V–A `exact`; S–A `overlap` (S has y, which A lacks; A has a2, which S lacks) |
 
 Section 7 applies these rules to Georgia standards (steps 5–6), and section 9 has worked examples.
-
-**Exact rule.** `exact` is one-to-one (label table). If a second state standard is also essentially the
-same as a CCSS code you already marked `exact`, re-examine both: usually each covers a separate part of it (`split`), or one of them
-differs in scope.
 
 ---
 
