@@ -46,7 +46,7 @@ full in one place; other sections point to it.
 | the state standard matches one code and has an extra part | Step 3: look for a code that requires the extra part; none → `state_superset` (step 6B) | E3, E4 |
 | several codes each cover part of the state standard | Step 6B: together they make up all of it → `merge`; something left over → `state_superset` | E9, E10, E11 |
 | the state standard covers only part of a code, and no other standard covers the rest | Step 6A → `state_subset` | E6 |
-| the two share some requirements, and each also has one the other lacks | Step 5 → `overlap`; it still counts as a piece | examples in step 5 |
+| the two share some requirements, and each also has one the other lacks | Step 5 → `overlap`; it still counts as a piece | patterns 6–8 in section 6 |
 | two or more state standards each cover a different part of one code | Step 6A → `split` | E12 |
 | an earlier or narrower state standard covers part of a code another standard covers more fully | Step 6A → `state_subset` | 4.NBT.2 table in step 6 |
 | you already marked a CCSS code `exact` and find a second state standard like it | Exact rule (section 6): re-examine both | — |
@@ -229,6 +229,23 @@ the other rows make up a whole (`split` or `merge`).
 | The pieces do not make up the whole | `state_subset` | `state_superset` |
 | A piece that is neither inside nor contains | `overlap` (and it still counts toward making up the whole) | `overlap` (likewise) |
 
+**Common patterns.** In these cases, A, B, C and X are CCSS codes; R, S, T, U and V are state standards;
+lowercase letters are parts of a standard (a1 and a2 are the two parts of A). "y" is a part that no
+CCSS code requires.
+
+| # | Pattern | Standards | Rows |
+|---|---|---|---|
+| 1 | Split | A = a1 + a2; S = a1; T = a2 | S–A `split`, T–A `split`: S and T together make up A |
+| 2 | Split plus an earlier, narrower pass | as in 1, plus R = a smaller-number version of a1 | S–A `split`, T–A `split`, R–A `state_subset`: A is made up without R |
+| 3 | Merge | S = all of A + all of B | S–A `merge`, S–B `merge`: A and B together make up S |
+| 4 | Merge plus a code that isn't needed | S = all of B + all of C; A is inside S, but B already covers A's part more fully | S–B `merge`, S–C `merge`, S–A `state_superset`: S is made up without A |
+| 5 | Superset | S = all of A + y | S–A `state_superset`: y is covered by no code |
+| 6 | Overlap pieces completing two splits | A = a1 + a2; B = b1 + b2; S = a1 + b1; T = a2; U = b2 | S–A `overlap`, S–B `overlap` (S has something each code lacks, and each code has something S lacks); T–A `split` (T and the overlap piece S make up A); U–B `split` (U and S make up B) |
+| 7 | An overlap piece completing a merge | X = x1 + x2; S = all of X; T = all of A + x1 | S–X `exact`; T–X `overlap` (T has A, which X lacks; X has x2, which T lacks); T–A `merge` (A and the overlap piece X make up T). X has different labels on different rows. |
+| 8 | Overlap that isn't needed | V = all of A; S = a1 + y | V–A `exact`; S–A `overlap` (S has y, which A lacks; A has a2, which S lacks) |
+
+Section 7 applies these rules to Georgia standards (steps 5–6), and section 9 has worked examples.
+
 **Exact rule.** A state standard has at most one `exact` row, and a CCSS code is `exact` with at most one
 state standard. If a second state standard is also essentially the same as a CCSS code you already
 marked `exact`, re-examine both: usually each covers a separate part of it (`split`), or one of them
@@ -280,19 +297,8 @@ For each row, compare the state standard with the code (Tests B and C; grade doe
 - **The state standard is inside the code** (the code has more) → step 6, part A.
 - **The code is inside the state standard** (the state standard has more) → step 6, part B.
 
-**Example: a standard that covers parts of two codes.** If code A has parts a1 and a2, code B has parts
-b1 and b2, and three state standards cover S = a1 + b1, T = a2 and U = b2, the rows are:
-
-| Row | Label | Why |
-|---|---|---|
-| S–A | `overlap` | S has b1, which A lacks; A has a2, which S lacks |
-| S–B | `overlap` | likewise |
-| T–A | `split` | T is inside A, and T and S (an overlap piece) together make up A |
-| U–B | `split` | likewise, with S |
-
-**Example: a code spread over two state standards.** If code A = a1 + a2, and S1 = a1 + all of code B,
-S2 = a2 + all of code C, the rows are S1–A `overlap`, S2–A `overlap`, S1–B `merge` (B and the overlap
-piece A together make up S1), S2–C `merge`.
+For how these labels combine across rows (e.g. an `overlap` piece completing a `split`), see the
+common patterns in section 6.
 
 ### Step 6. Do the pieces make up the whole?
 
@@ -388,7 +394,7 @@ what decided it.
 | `exact` | E1, E2, E7 |
 | `state_superset` | E3, E4, E8 |
 | `state_subset` | E5, E6 |
-| `overlap` | 3.GSR.6.1 (step 6), examples in step 5 |
+| `overlap` | 3.GSR.6.1 (step 6), patterns 6–8 in section 6 |
 | `merge` | E9, E10, E11 |
 | `split` | E12 |
 | `none` | E13, E14, E15 |
