@@ -522,25 +522,38 @@ by several state standards appears on each of their rows; a `none` standard gets
 | `state_code` | The state standard's code |
 | `ccss_code` | One CCSS leaf code; empty for `none` |
 | `relationship` | One of the seven types, for this pair (section 6) |
+| `split_with` | On a `split` row, and on an `overlap` row that helps make up this row's code: the other state standards that, together with this row's state standard, make up this row's code. Otherwise empty. |
+| `merge_with` | On a `merge` row, and on an `overlap` row that helps make up this row's state standard: the other CCSS codes that, together with this row's code, make up this row's state standard. Otherwise empty. |
 | `confidence` | `high`: the guideline decides it clearly; `medium`: a judgment within a clear rule; `low`: a tie-break default was needed (section 8) |
-| `rationale` | One or two sentences: the requirement matched, the decisive difference (if any), and the test or step that decided it (e.g. "Step 6, Test C: rounds to hundredths only, CCSS to any place"). For a `split` row, name the other standards that make up the code. |
+| `rationale` | One or two sentences: the requirement matched, the decisive difference (if any), and the test or step that decided it (e.g. "Step 6, Test C: rounds to hundredths only, CCSS to any place"). |
 
-A standard's rows may carry different labels, because each describes one pair. Split partners need no
-separate field: they are the code's other `split` rows, plus any `overlap` rows needed to make it
-up (the `split` row's rationale names them).
+A standard's rows may carry different labels, because each describes one pair. `split_with` and
+`merge_with` record which rows belong together, including the `overlap` rows that help make up a whole.
+An `overlap` row that helps on neither side (pattern 8 in section 6) leaves both empty; one that helps
+on both sides fills both.
 
-| Georgia example | Rows |
-|---|---|
-| 3.NR.4.4 | 3.NR.4.4, 3.NF.3a, `merge` / 3.NR.4.4, 3.NF.3b, `merge` |
-| 3.MDR.5.2 and 3.MDR.5.3 | 3.MDR.5.2, 3.MD.1, `split` / 3.MDR.5.3, 3.MD.1, `split` |
-| K.NR.2.1 | K.NR.2.1, K.CC.1, `state_superset` |
-| K.NR.1.4 | K.NR.1.4, *(empty)*, `none` |
+| Example | `state_code` | `ccss_code` | `relationship` | `split_with` | `merge_with` |
+|---|---|---|---|---|---|
+| Georgia merge | 3.NR.4.4 | 3.NF.3a | `merge` | | 3.NF.3b |
+| | 3.NR.4.4 | 3.NF.3b | `merge` | | 3.NF.3a |
+| Georgia split | 3.MDR.5.2 | 3.MD.1 | `split` | 3.MDR.5.3 | |
+| | 3.MDR.5.3 | 3.MD.1 | `split` | 3.MDR.5.2 | |
+| Georgia superset | K.NR.2.1 | K.CC.1 | `state_superset` | | |
+| Georgia none | K.NR.1.4 | | `none` | | |
+| Pattern 6 (section 6) | S | A | `overlap` | T | B |
+| | S | B | `overlap` | U | A |
+| | T | A | `split` | S | |
+| | U | B | `split` | S | |
+| Pattern 7 (section 6) | S | X | `exact` | | |
+| | T | X | `overlap` | | A |
+| | T | A | `merge` | | X |
 
 **Before moving on, check:**
-- a standard with a `merge` row has at least two pieces (`merge` and `overlap` rows) that together make
-  up all of it (step 6B);
-- every CCSS code with a `split` row has at least two pieces (`split` and `overlap` rows) that together
-  make up the code (step 6A);
+- every `split` row has `split_with` filled, and every `merge` row has `merge_with` filled;
+- the partners agree: if row T–A lists S in `split_with`, the row S–A lists T (likewise for
+  `merge_with`);
+- each `split_with` group, with this row's state standard, makes up all of the code (step 6A); each
+  `merge_with` group, with this row's code, makes up all of the state standard (step 6B);
 - a `none` standard has exactly one row, with no code;
 - no parent code with lettered parts is cited.
 

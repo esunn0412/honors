@@ -149,11 +149,9 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 - **Step 6A, 4.NBT.2 example:** say that 4.NR.1.1 lacks 4.NBT.2's "number names" on purpose
   (Georgia's guidance: "Students are not expected to write numbers in word form"), and that this is
   allowed within a split.
-- ~~**Section 10 vs. the gold:** the gold has no `split_with` field.~~ Settled: `split_with` was dropped;
-  split partners are the other rows with the same CCSS code labeled `split`.
-
-## 7. Source-text errors (in our Georgia files, not in the guideline)
-
+- **Section 10 vs. the gold:** the guideline now has `split_with` and `merge_with` columns (needed
+  because an `overlap` row may or may not help make up a split or merge); `gold.csv` has neither. Add
+  them when the gold is re-adjudicated.
 - **3.NR.1.1:** our files (`raw/standards/ga/georgia_math_3.json`, `states/ga/ga_input.json`, the gold)
   read "up to 10,000 **to the thousands** using base-ten numerals…"; the official standards PDF (p. 36)
   has no "to the thousands". The quote in step 6A (the 4.NBT.2 table) inherits it. Fix the source files, then the quote.
