@@ -9,8 +9,8 @@ state. Every rule is meant to be applied the same way by different annotators wo
 judgment could go either way, the guideline states which way to go.
 
 **How to use it.** Read sections 1–8 once before starting. While annotating, work from the
-**quick reference** (section 9) and look up cases in **Find your case** below. Each rule is stated in
-full in one place; other sections point to it.
+**quick reference** (section 9). Each rule is stated in full in one place; other sections point to
+it.
 
 ## Contents
 
@@ -23,32 +23,6 @@ full in one place; other sections point to it.
 7. [Worked examples](#7-worked-examples): E1–E15
 8. [What to record](#8-what-to-record)
 9. [Quick reference](#9-quick-reference)
-
-## Find your case
-
-| If… | Rule | Example |
-|---|---|---|
-| the two standards share a topic but ask for different work | Test A (requirement) → `none` or drop the code | E13 |
-| no CCSS code at any grade shares the requirement | `none` | E14 |
-| the state standard is a general practice repeated at every grade | `none` unless it states a code's requirement | E15 |
-| the wording differs but the requirement is the same | Test C (separate objective) → `exact` | E1 |
-| one standard identifies and the other writes the same thing | Test C: receptive vs. productive form | E2 |
-| one standard adds "explain", "justify" or "record with symbols" | Test C: an attached demand, not an objective | E7 |
-| a method or tool is given with "e.g." or "such as" | Test C: an example, not a requirement | — |
-| the number range, number type or place value differs | Test D (bounds): always matters | E5 |
-| the only matching CCSS code is at another grade | grade alone never matters: `exact` if otherwise the same | E7, E8 |
-| a CCSS code is a prerequisite or only a definition (e.g. 3.MD.5a) | Test B (not a match): don't cite it | E11 |
-| the state standard matches a CCSS parent's general statement | Section 2: cite all its lettered parts | E10 |
-| the state's guidance adds something the text doesn't say | Section 3.1: guidance interprets, never adds | — |
-| the state standard matches one code and has an extra part | Step 3: look for a code that requires the extra part; none → `state_superset` (step 6B) | E3, E4 |
-| several codes each cover part of the state standard | Step 6B: together they make up all of it → `merge`; something left over → `state_superset` | E9, E10, E11 |
-| the state standard covers only part of a code, and no other standard covers the rest | Step 6A → `state_subset` | E6 |
-| the two share some requirements, and each also has one the other lacks | Step 5 → `overlap`; it still counts as a piece | patterns 6–8 in section 5 |
-| two or more state standards each cover a different part of one code | Step 6A → `split` | E12 |
-| an earlier or narrower state standard covers part of a code another standard covers more fully | Step 6A → `state_subset` | 4.NBT.2 table in step 6 |
-| you already marked a CCSS code `exact` and find a second state standard like it | Section 5, `exact` row: re-examine both | — |
-| the state standard both adds and lacks something | Step 5 → `overlap` | 3.GSR.6.1 in step 6 |
-| you are still unsure | Use the "when unsure" default in section 4.2 or step 6A; mark `low` confidence | — |
 
 ---
 

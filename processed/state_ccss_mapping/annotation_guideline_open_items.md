@@ -138,7 +138,7 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
   Done in version 1.2: E9 and the step 6B examples table now cite Georgia's guidance ("the same size or on
   the same location on a number line").
 - **Section 7, E15 ("Ask questions…"):** depends on item 16. If those standards are remapped, replace
-  E15 (the "general practice" rationale no longer holds) and remove its row from "Find your case". If
+  E15 (the "general practice" rationale no longer holds). If
   they stay `none`, fix the wording: grade 1 (1.MDR.6.4) ends "…to compare and order whole numbers", so
   "at every grade K–5" needs "(grade 1 with a different ending)".
 - **Section 7, E2 and E11:** depend on items 20 and 21.
