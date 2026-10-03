@@ -46,7 +46,7 @@ full in one place; other sections point to it.
 | the state standard matches one code and has an extra part | Step 3: look for a code that requires the extra part; none → `state_superset` (step 6B) | E3, E4 |
 | several codes each cover part of the state standard | Step 6B: together they make up all of it → `merge`; something left over → `state_superset` | E9, E10, E11 |
 | the state standard covers only part of a code, and no other standard covers the rest | Step 6A → `state_subset` | E6 |
-| each standard has something the other lacks | Step 5 → `overlap`; it still counts as a piece | examples in step 5 |
+| the two share some requirements, and each also has one the other lacks | Step 5 → `overlap`; it still counts as a piece | examples in step 5 |
 | two or more state standards each cover a different part of one code | Step 6A → `split` | E12 |
 | an earlier or narrower state standard covers part of a code another standard covers more fully | Step 6A → `state_subset` | 4.NBT.2 table in step 6 |
 | you already marked a CCSS code `exact` and find a second state standard like it | Exact rule (section 6): re-examine both | — |
@@ -212,12 +212,14 @@ neither does grade.
 | `state_subset` | the state asks for less | the state standard is inside the code | it is not needed to make up the code |
 | `merge` | the code is a piece of the state standard | the code is inside the state standard | the state standard's pieces make up all of it |
 | `state_superset` | the state asks for more | the code is inside the state standard | the state standard's pieces do not make up all of it |
-| `overlap` | each has something the other lacks | neither | — |
+| `overlap` | they share some requirements, and each also has a requirement the other lacks | neither | — |
 | `none` | no CCSS counterpart | — | no CCSS K–5 code shares any of the state standard's requirements; one row, with no code |
 
 **Pieces.** A code's pieces are the state standards that cover part of it: its `split`, `state_subset`
 and `overlap` rows. A state standard's pieces are the codes that cover part of it: its `merge`,
-`state_superset` and `overlap` rows. An `overlap` row counts as a piece on both sides.
+`state_superset` and `overlap` rows. An `overlap` row keeps its own label but counts as a piece on both
+sides at once, like a split piece for the code and a merge piece for the state standard: it can help
+the other rows make up a whole (`split` or `merge`).
 
 **`merge` mirrors `split`.** Both ask whether the pieces make up a whole, from opposite sides:
 
@@ -273,8 +275,8 @@ the action on the content (Test A). Sharing a detail, an example or the topic is
 For each row, compare the state standard with the code (Tests B and C; grade doesn't matter):
 
 - **Each is inside the other** (essentially the same requirement) → `exact`. Stop.
-- **Neither is inside the other** (each has a separate objective or bound the other lacks) →
-  `overlap`. Stop.
+- **Neither is inside the other** (they share some requirements, and each also has a separate
+  objective or bound the other lacks) → `overlap`. Stop.
 - **The state standard is inside the code** (the code has more) → step 6, part A.
 - **The code is inside the state standard** (the state standard has more) → step 6, part B.
 
