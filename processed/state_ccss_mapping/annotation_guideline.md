@@ -279,7 +279,9 @@ For each row, compare the state standard with the code (Tests C and D; grade doe
 
 - **Each is inside the other** (essentially the same requirement) → `exact`. Stop.
 - **Neither is inside the other** (they share some requirements, and each also has a separate
-  objective or bound the other lacks) → `overlap`. Stop.
+  objective or bound the other lacks) → `overlap`. The label is final, but an `overlap` row can still
+  help make up the code or the state standard: do the searches in step 6 (parts A and B) to fill its
+  `split_with` and `merge_with` (section 8).
 - **The state standard is inside the code** (the code has more) → step 6, part A.
 - **The code is inside the state standard** (the state standard has more) → step 6, part B.
 
@@ -288,8 +290,11 @@ common patterns in section 5.
 
 ### Step 6. Do the pieces make up the whole?
 
-**Part A: the state standard is inside the code.** Look at **all** the code's pieces (every state
-standard that covers part of it, including `overlap` rows), and ask:
+**Part A: the state standard is inside the code.** First, **look up every part of the code**: for each
+part of the code that this state standard doesn't cover, search the state's standards at every grade
+for ones that cover it (the mirror of step 3, which looks up every part of the state standard). Then
+look at **all** the code's pieces (every state standard that covers part of it, including `overlap`
+rows), and ask:
 
 > **Which standards, together, make up the full CCSS code: all of its parts?**
 
@@ -333,7 +338,7 @@ a separate objective (Test C): neither is inside the other, so it is `overlap`.
 See also E12 (a two-standard split).
 
 **Part B: the code is inside the state standard.** Look at **all** the CCSS codes that cover parts of
-the state standard (including `overlap` rows), and ask:
+the state standard (step 3 found them, including `overlap` rows), and ask:
 
 > **Which CCSS codes, together, make up the full state standard: all of its parts?**
 
