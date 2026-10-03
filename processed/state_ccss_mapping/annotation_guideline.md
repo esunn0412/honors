@@ -255,9 +255,16 @@ standard's own grade and domain, then widen. States organize content differently
 place area, perimeter, volume and angle measure under geometry, where CCSS places them under
 Measurement and Data).
 
-**Look up every part of the state standard.** Don't stop at the first match: state standards often
-combine several CCSS codes, from the same cluster or from other domains and grades. For each part of the
-state standard (step 1), look for a code that requires it. A part that no code requires stays uncovered.
+Search in both directions:
+
+- **Look up every part of the state standard.** Don't stop at the first match: state standards often
+  combine several CCSS codes, from the same cluster or from other domains and grades. For each part of
+  the state standard (step 1), look for a code that requires it. A part that no code requires stays
+  uncovered.
+- **Look up every part of the code**, when the state standard covers only part of a code. For each part
+  of the code that the state standard doesn't cover, search the state's standards at every grade for
+  ones that cover it. These are the state standards that may make up the code with this one (step 6,
+  part A).
 
 ### Step 3. Keep the codes that share a requirement
 
@@ -278,8 +285,8 @@ For each row, compare the state standard with the code (Tests C and D; grade doe
 - **Each is inside the other** (essentially the same requirement) → `exact`. Stop.
 - **Neither is inside the other** (they share some requirements, and each also has a separate
   objective or bound the other lacks) → `overlap`. The label is final, but an `overlap` row can still
-  help make up the code or the state standard: do the searches in step 6 (parts A and B) to fill its
-  `split_with` and `merge_with` (section 8).
+  help make up the code or the state standard: use the pieces found in step 2 to fill its `split_with`
+  and `merge_with` (section 8).
 - **The state standard is inside the code** (the code has more) → step 6, part A.
 - **The code is inside the state standard** (the state standard has more) → step 6, part B.
 
@@ -288,11 +295,8 @@ common patterns in section 5.
 
 ### Step 6. Do the pieces make up the whole?
 
-**Part A: the state standard is inside the code.** First, **look up every part of the code**: for each
-part of the code that this state standard doesn't cover, search the state's standards at every grade
-for ones that cover it (the mirror of step 2, which looks up every part of the state standard). Then
-look at **all** the code's pieces (every state standard that covers part of it, including `overlap`
-rows), and ask:
+**Part A: the state standard is inside the code.** Look at **all** the code's pieces (every state
+standard that covers part of it, found in step 2, including `overlap` rows), and ask:
 
 > **Which standards, together, make up the full CCSS code: all of its parts?**
 
@@ -554,7 +558,8 @@ matches a parent's general statement, cite all its lettered parts.
 
 **Steps** (section 6).
 1. **Describe** the requirement: action, content, bounds.
-2. **Search** all grades and domains, for a code for every part of the standard.
+2. **Search** all grades and domains, both ways: a code for every part of the standard, and (for a code
+   it covers only partly) the state's standards for every other part of the code.
 3. **Keep** codes that share a requirement, whole or a part (A, B).
 4. **Count:** 0 → one row, `none`; otherwise one row per code, labeled by steps 5–6.
 5. **Which is inside which?** Each inside the other → `exact` (any grade); neither → `overlap`;
