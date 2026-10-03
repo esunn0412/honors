@@ -552,8 +552,8 @@ matches a parent's general statement, cite all its lettered parts.
 **Steps** (section 6).
 1. **Describe** the requirement: action, content, bounds.
 2. **Search** all grades and domains.
-3. **Keep** codes that share a requirement, whole or a part (A, B); check siblings; look for a code for
-   every part of the standard.
+3. **Keep** codes that share a requirement, whole or a part (A, B); look for a code for every part of
+   the standard, in any domain or grade.
 4. **Count:** 0 → one row, `none`; otherwise one row per code, labeled by steps 5–6.
 5. **Which is inside which?** Each inside the other → `exact` (any grade); neither → `overlap`;
    standard inside code → 6A; code inside standard → 6B.
