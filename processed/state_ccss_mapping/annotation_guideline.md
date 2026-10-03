@@ -18,7 +18,7 @@ full in one place; other sections point to it.
 2. [Independence](#2-independence)
 3. [Units](#3-units): which state and CCSS units to annotate and cite
 4. [Reading a standard](#4-reading-a-standard): what one standard requires
-5. [Comparing standards: the four tests](#5-comparing-standards-the-four-tests): when two requirements match
+5. [Comparing standards: the four tests](#5-comparing-standards-the-four-tests): whether two standards share a requirement, and which is inside which
 6. [Relationship types](#6-relationship-types): what the seven labels mean, per row
 7. [Decision procedure](#7-decision-procedure): finding the codes and labeling each row; step 5 which is inside which, step 6 split, subset, merge or superset
 8. [Tie-break defaults](#8-tie-break-defaults): what to choose when unsure
@@ -34,13 +34,13 @@ full in one place; other sections point to it.
 | the two standards share a topic but ask for different work | Test A (requirement) → `none` or drop the code | E13 |
 | no CCSS code at any grade shares the requirement | `none` | E14 |
 | the state standard is a general practice repeated at every grade | `none` unless it states a code's requirement | E15 |
-| the wording differs but the requirement is the same | Test B (separate objective) → `exact` | E1 |
-| one standard identifies and the other writes the same thing | Test B: receptive vs. productive form | E2 |
-| one standard adds "explain", "justify" or "record with symbols" | Test B: an attached demand, not an objective | E7 |
-| a method or tool is given with "e.g." or "such as" | Test B: an example, not a requirement | — |
-| the number range, number type or place value differs | Test C (bounds): always counts | E5 |
+| the wording differs but the requirement is the same | Test C (separate objective) → `exact` | E1 |
+| one standard identifies and the other writes the same thing | Test C: receptive vs. productive form | E2 |
+| one standard adds "explain", "justify" or "record with symbols" | Test C: an attached demand, not an objective | E7 |
+| a method or tool is given with "e.g." or "such as" | Test C: an example, not a requirement | — |
+| the number range, number type or place value differs | Test D (bounds): always counts | E5 |
 | the only matching CCSS code is at another grade | grade alone never matters: `exact` if otherwise the same | E7, E8 |
-| a CCSS code is a prerequisite or only a definition (e.g. 3.MD.5a) | Test D (not a match): don't cite it | E11 |
+| a CCSS code is a prerequisite or only a definition (e.g. 3.MD.5a) | Test B (not a match): don't cite it | E11 |
 | the state standard matches a CCSS parent's general statement | Section 3: cite all its lettered parts | E10 |
 | the state's guidance adds something the text doesn't say | Section 4.1: guidance interprets, never adds | — |
 | the state standard matches one code and has an extra part | Step 3: look for a code that requires the extra part; none → `state_superset` (step 6B) | E3, E4 |
@@ -137,44 +137,26 @@ line plot"). List each separately.
 
 ## 5. Comparing standards: the four tests
 
-These tests decide whether a state standard's requirement and a CCSS code's requirement match. The
-decision procedure (section 7) applies them; they are referred to by letter throughout.
+Comparing a state standard with a CCSS code comes down to two questions. The four tests answer them;
+the decision procedure (section 7) applies them, and they are referred to by letter throughout.
 
-### Test A (requirement): shared requirement, not shared topic
+| Question | Tests | What the answer decides |
+|---|---|---|
+| 1. Do the two standards share a requirement? | A (requirement), B (not a match) | yes → the pair gets a row; no → no row (step 3) |
+| 2. Which is inside which? | C (separate objective), D (bounds) | which differences count; a difference that counts means the standard lacking it is not inside the other. That gives the label's first column in section 6: each inside the other, one inside the other, or neither (step 5) |
 
-Two requirements correspond only if the action, content and bounds are essentially the same. Being
-about the same topic is not enough.
+### 5.1 Do the two standards share a requirement? (Tests A and B)
+
+#### Test A (requirement): shared requirement, not shared topic
+
+Two standards correspond only if they share a requirement: the same action on the same content (one
+whole requirement, or one part of it). Being about the same topic is not enough. Differences in bounds
+don't prevent a match; they decide which standard is inside which (Test D).
 
 > Identifying coins and their values (Georgia K.NR.1.4) and solving word problems with coins (CCSS
 > 2.MD.8) share a topic, not a requirement.
 
-### Test B (separate objective): does a difference change the relationship?
-
-When one standard has something the other doesn't, decide whether that difference is **a separate
-learning objective**: something a teacher would plan, teach and assess as its own goal. Only then does
-it change the relationship.
-
-| Counts as a separate objective (changes the relationship) | Does not (the relationship stays the same) |
-|---|---|
-| A different product or skill: making a line plot, drawing figures, solving word problems, a second operation, counting backward as well as forward, measuring elapsed time | Wording, phrasing, emphasis |
-| A different or wider number range, number type, place value or set of cases (Test C) | Methods, tools or representations given as examples ("e.g.", "such as", "for example", "using objects or drawings") |
-| | A demand attached to the same task: recording the result with symbols, justifying or explaining the result, using a model to show it |
-| | Receptive and productive forms of the same skill on the same content (identifying written numerals vs. writing them, when both standards require representing quantities with numerals) |
-| | Ordinary components of the task (finding the value of a group of coins as part of solving money problems) |
-| | A general setting ("in authentic problems", "in real-world contexts") unless the other standard's requirement is specifically problem solving |
-
-*Why explaining and justifying don't count:* the question is whether two standards target the same
-learning, not how that learning is shown. Explaining and justifying are expected across all standards
-(e.g. CCSS Mathematical Practice 3), so counting them would make most pairs differ on wording alone.
-They still matter: note a missing "explain" or "justify" in the rationale.
-
-### Test C (bounds): a difference in bounds always counts
-
-A different number range (to 20 vs. to 100), number type (whole numbers vs. fractions vs. decimals),
-place value (to hundredths vs. to any place), denominators, number of digits, number of steps, or set
-of cases.
-
-### Test D (not a match): not every related code is a match
+#### Test B (not a match): not every related code is a match
 
 Do not cite a CCSS code that is:
 
@@ -188,8 +170,38 @@ Do not cite a CCSS code that is:
   teach some content earlier or later than CCSS), but a code two or more grades away must require the
   same action on the same content at a comparable level.
 
-A **grade difference alone is never a difference in scope**: the same requirement at another grade is
+### 5.2 Which is inside which? (Tests C and D)
+
+When one standard has something the other doesn't, the difference either **counts** (the standard
+lacking it is not inside the other) or is **ignored**. Test C decides for differences in what students
+do; Test D for differences in bounds. Grade never counts: the same requirement at another grade is
 `exact` (section 6).
+
+#### Test C (separate objective): does a difference in what students do count?
+
+A difference counts only if it is **a separate learning objective**: something a teacher would plan,
+teach and assess as its own goal.
+
+| Counts (the standard lacking it is not inside the other) | Ignored |
+|---|---|
+| A different product or skill: making a line plot, drawing figures, solving word problems, a second operation, counting backward as well as forward, measuring elapsed time | Wording, phrasing, emphasis |
+| A different or wider number range, number type, place value or set of cases (Test D) | Methods, tools or representations given as examples ("e.g.", "such as", "for example", "using objects or drawings") |
+| | A demand attached to the same task: recording the result with symbols, justifying or explaining the result, using a model to show it |
+| | Receptive and productive forms of the same skill on the same content (identifying written numerals vs. writing them, when both standards require representing quantities with numerals) |
+| | Ordinary components of the task (finding the value of a group of coins as part of solving money problems) |
+| | A general setting ("in authentic problems", "in real-world contexts") unless the other standard's requirement is specifically problem solving |
+
+*Why explaining and justifying don't count:* the question is whether two standards target the same
+learning, not how that learning is shown. Explaining and justifying are expected across all standards
+(e.g. CCSS Mathematical Practice 3), so counting them would make most pairs differ on wording alone.
+They still matter: note a missing "explain" or "justify" in the rationale.
+
+#### Test D (bounds): a difference in bounds always counts
+
+A different number range (to 20 vs. to 100), number type (whole numbers vs. fractions vs. decimals),
+place value (to hundredths vs. to any place), denominators, number of digits, number of steps, or set
+of cases. The standard with the narrower bounds is inside the other (e.g. rounding to hundredths is
+inside rounding to any place); if each is wider in a different way, neither is inside the other.
 
 ---
 
@@ -202,7 +214,7 @@ choose one.
 
 The labels rest on one question: **which standard is inside which?** One standard is inside another
 when everything it requires (every separate objective and bound) is also required by the other.
-Differences that are not separate objectives (Test B), such as a missing "explain why", don't count;
+Differences that are not separate objectives (Test C), such as a missing "explain why", don't count;
 neither does grade.
 
 | Label | In short | Which is inside which? | And |
@@ -270,7 +282,7 @@ Keep a code if the state standard states one of its requirements, all of it or o
 the action on the content (Test A). Sharing a detail, an example or the topic is not enough.
 
 - **Drop** prerequisites, assumed definitions, same-topic codes with a different action, and
-  distant-grade topic matches (Test D).
+  distant-grade topic matches (Test B).
 - **Check the neighbours.** Once you find one match, check its lettered siblings and the other codes in
   its cluster: state standards often combine several CCSS codes.
 - **Look up every part of the state standard.** For each part not yet covered by a kept code, search all
@@ -284,7 +296,7 @@ the action on the content (Test A). Sharing a detail, an example or the topic is
 
 ### Step 5. Which is inside which?
 
-For each row, compare the state standard with the code (Tests B and C; grade doesn't matter):
+For each row, compare the state standard with the code (Tests C and D; grade doesn't matter):
 
 - **Each is inside the other** (essentially the same requirement) → `exact`. Stop.
 - **Neither is inside the other** (they share some requirements, and each also has a separate
@@ -336,7 +348,7 @@ obtuse), and perpendicular and parallel lines. Identify these in two-dimensional
 Georgia standard, 4.GSR.8.1, covers all of it, so it is `exact`. Georgia 3.GSR.6.1 (grade 3: "Identify
 perpendicular line segments, parallel line segments, and right angles, identify these in polygons, and
 solve problems involving…" them) covers only identifying, for fewer figures, and adds solving problems,
-a separate objective (Test B): neither is inside the other, so it is `overlap`.
+a separate objective (Test C): neither is inside the other, so it is `overlap`.
 
 See also E12 (a two-standard split).
 
@@ -349,7 +361,7 @@ the state standard (including `overlap` rows), and ask:
 |---|---|
 | This row's code is one of the CCSS codes that together cover all of the state standard's parts | `merge` |
 | This row's code covers a part of the state standard that another CCSS code already covers more fully (e.g. an earlier-grade, narrower code) | `state_superset`: the full state standard is made up without this row's code |
-| No combination of CCSS codes covers all of the state standard's parts: some part is covered by no CCSS code, and it is a separate objective or wider bounds (Tests B and C) | `state_superset` |
+| No combination of CCSS codes covers all of the state standard's parts: some part is covered by no CCSS code, and it is a separate objective or wider bounds (Tests C and D) | `state_superset` |
 
 A `merge` needs at least two pieces. A code covered a bit narrowly (e.g. without a demand attached to
 its task) still counts as inside: note it in the rationale.
@@ -357,8 +369,8 @@ its task) still counts as inside: note it in the rationale.
 | Georgia standard | Pieces | Left over | Rows |
 |---|---|---|---|
 | K.NR.2.1: "Count forward to 100 by tens and ones and backward from 20 by ones." | K.CC.1 (count to 100 by ones and tens) | Counting backward: a separate objective no CCSS code requires | K.CC.1 `state_superset` |
-| 3.GSR.7.1: "Investigate area by covering the space of rectangles … using multiple copies of the same unit, with no gaps or overlaps, and determine the total area…" | 3.MD.5b (a figure covered without gaps or overlaps by n unit squares has area n), 3.MD.6 (measure areas by counting unit squares) | None; 3.MD.5a is only a definition (Test D) | both `merge` |
-| 3.NR.4.4: "Recognize and generate simple equivalent fractions." | 3.NF.3a (fractions as equivalent when the same size or the same point on a number line, as Georgia's guidance interprets "equivalent"), 3.NF.3b (recognize and generate simple equivalent fractions) | None; 3.NF.3b's "Explain why the fractions are equivalent" is an attached demand (Test B): noted in the rationale | both `merge` |
+| 3.GSR.7.1: "Investigate area by covering the space of rectangles … using multiple copies of the same unit, with no gaps or overlaps, and determine the total area…" | 3.MD.5b (a figure covered without gaps or overlaps by n unit squares has area n), 3.MD.6 (measure areas by counting unit squares) | None; 3.MD.5a is only a definition (Test B) | both `merge` |
+| 3.NR.4.4: "Recognize and generate simple equivalent fractions." | 3.NF.3a (fractions as equivalent when the same size or the same point on a number line, as Georgia's guidance interprets "equivalent"), 3.NF.3b (recognize and generate simple equivalent fractions) | None; 3.NF.3b's "Explain why the fractions are equivalent" is an attached demand (Test C): noted in the rationale | both `merge` |
 
 ---
 
@@ -369,10 +381,10 @@ in the same way still agree. Mark such cases **`low` confidence** (section 10).
 
 | Unsure between | Choose | Unless |
 |---|---|---|
-| `exact` and another label (is a difference a separate objective?) | `exact` | the difference passes Test B or Test C (a grade difference alone never does) |
-| one inside the other, or `overlap` (is the extra content a separate objective?) | inside (step 6) | the extra content passes Test B or Test C |
+| `exact` and another label (is a difference a separate objective?) | `exact` | the difference passes Test C or Test D (a grade difference alone never does) |
+| one inside the other, or `overlap` (is the extra content a separate objective?) | inside (step 6) | the extra content passes Test C or Test D |
 | citing a code or not (step 3) | don't cite it | the state standard's text states one of the code's requirements (Test A) |
-| `merge` and `state_superset` (step 6B): is the left-over part a separate objective? | `merge` | the left-over part passes Test B or Test C |
+| `merge` and `state_superset` (step 6B): is the left-over part a separate objective? | `merge` | the left-over part passes Test C or Test D |
 | `split` and `state_subset` (step 6A) | `state_subset` | you can name the other state standard(s) that, together with this row's state standard, make up the full code |
 | `state_subset` and `none` | `state_subset` | the shared part is only the topic, not a requirement (Test A) |
 | a same-grade code vs. another-grade code with the same requirement | the same-grade code | only the other-grade code shares the requirement |
@@ -400,7 +412,7 @@ what decided it.
 - **CCSS K.CC.4b:** "Understand that the last number name said tells the number of objects counted.
   The number of objects is the same regardless of their arrangement or the order in which they were
   counted."
-- **Decided by:** Test B. "Explain" and "understand" name the same conceptual requirement; content and
+- **Decided by:** Test C. "Explain" and "understand" name the same conceptual requirement; content and
   bounds match.
 
 **E2. `exact`: receptive vs. productive form of the same skill.**
@@ -408,33 +420,33 @@ what decided it.
   written numeral 0-20 (with 0 representing a count of no objects)."
 - **CCSS K.CC.3:** "Write numbers from 0 to 20. Represent a number of objects with a written numeral
   0-20 (with 0 representing a count of no objects)."
-- **Decided by:** Test B. Identifying vs. writing the same numerals is not a separate objective here;
+- **Decided by:** Test C. Identifying vs. writing the same numerals is not a separate objective here;
   the core requirement, representing quantities 0–20 with numerals, is identical.
 
 **E3. `state_superset`: an added separate objective no CCSS code requires.**
 - **Georgia K.NR.2.1:** "Count forward to 100 by tens and ones and backward from 20 by ones."
 - **CCSS K.CC.1:** "Count to 100 by ones and by tens."
-- **Decided by:** Test B and step 6B. K.CC.1 is inside it; counting backward is a separate
+- **Decided by:** Test C and step 6B. K.CC.1 is inside it; counting backward is a separate
   objective that no CCSS code requires, so it is left over.
 
 **E4. `state_superset`: an added separate objective.**
 - **Georgia 1.MDR.6.2:** "Tell and write time in hours and half-hours using analog and digital clocks,
   and measure elapsed time to the hour on the hour using a predetermined number line."
 - **CCSS 1.MD.3:** "Tell and write time in hours and half-hours using analog and digital clocks."
-- **Decided by:** Test B. Elapsed time is a separate objective.
+- **Decided by:** Test C. Elapsed time is a separate objective.
 
 **E5. `state_subset`: narrower bounds.**
 - **Georgia 5.NR.4.3:** "Use place value understanding to round decimal numbers to the hundredths
   place."
 - **CCSS 5.NBT.4:** "Use place value understanding to round decimals to any place."
-- **Decided by:** Test C. Hundredths only, vs. any place.
+- **Decided by:** Test D. Hundredths only, vs. any place.
 
 **E6. `state_subset`: a missing separate objective no other standard covers.**
 - **Georgia 3.MDR.5.4:** "Use rulers to measure lengths in halves and fourths (quarters) of an inch
   and a whole inch."
 - **CCSS 3.MD.4:** "Generate measurement data by measuring lengths using rulers marked with halves and
   fourths of an inch. Show the data by making a line plot…"
-- **Decided by:** Test B and step 6A. Making a line plot is a separate objective, and no other Georgia
+- **Decided by:** Test C and step 6A. Making a line plot is a separate objective, and no other Georgia
   grade-3 standard covers it.
 
 **E7. `exact` across grades: same requirement; attached demands don't count.**
@@ -443,7 +455,7 @@ what decided it.
   fractions refer to the same whole."
 - **CCSS 3.NF.3d (grade 3):** essentially the same text, plus "Record the results of comparisons with
   the symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
-- **Decided by:** Test B and step 5. Recording with symbols and justifying are demands attached to the
+- **Decided by:** Test C and step 5. Recording with symbols and justifying are demands attached to the
   same task, so each is inside the other: `exact`, although the grades differ.
 
 **E8. `state_superset` across grades: scope wins over grade.**
@@ -451,7 +463,7 @@ what decided it.
   involving addition, subtraction, and multiplication are equivalent."
 - **CCSS 1.OA.7 (grade 1):** "Understand the meaning of the equal sign, and determine if equations
   involving addition and subtraction are true or false."
-- **Decided by:** Test C and step 6B. 1.OA.7 is inside the state standard; multiplication widens the
+- **Decided by:** Test D and step 6B. 1.OA.7 is inside the state standard; multiplication widens the
   content, so it is `state_superset`. The grade difference plays no part.
 
 **E9. `merge`: two codes, one missing only an attached demand.**
@@ -460,7 +472,7 @@ what decided it.
 - **Decided by:** section 4.1 and step 6B. The text states 3.NF.3b's core ("recognize and generate
   simple equivalent fractions"), and Georgia's guidance interprets "equivalent" as 3.NF.3a does: "two
   fractions are equal when they are the same size or on the same location on a number line". It does
-  not state 3.NF.3b's "explain why", but that is an attached demand (Test B), so both codes are inside
+  not state 3.NF.3b's "explain why", but that is an attached demand (Test C), so both codes are inside
   it, and together they make up all of it: both rows are `merge`, with the missing part noted in
   the rationale.
 
@@ -475,7 +487,7 @@ what decided it.
 - **Georgia 3.GSR.7.1:** "Investigate area by covering the space of rectangles … using multiple copies
   of the same unit, with no gaps or overlaps, and determine the total area…"
 - **CCSS 3.MD.5b and 3.MD.6, not 3.MD.5a.**
-- **Decided by:** Test D. 3.MD.5a only defines a unit square; the state standard uses the concept
+- **Decided by:** Test B. 3.MD.5a only defines a unit square; the state standard uses the concept
   without stating the definition.
 
 **E12. `split`: two standards, each covering a separate objective of one code.**
@@ -525,7 +537,7 @@ by several state standards appears on each of their rows; a `none` standard gets
 | `split_with` | On a `split` row, and on an `overlap` row that helps make up this row's code: the other state standards that, together with this row's state standard, make up this row's code. Otherwise empty. |
 | `merge_with` | On a `merge` row, and on an `overlap` row that helps make up this row's state standard: the other CCSS codes that, together with this row's code, make up this row's state standard. Otherwise empty. |
 | `confidence` | `high`: the guideline decides it clearly; `medium`: a judgment within a clear rule; `low`: a tie-break default was needed (section 8) |
-| `rationale` | One or two sentences: the requirement matched, the decisive difference (if any), and the test or step that decided it (e.g. "Step 6, Test C: rounds to hundredths only, CCSS to any place"). |
+| `rationale` | One or two sentences: the requirement matched, the decisive difference (if any), and the test or step that decided it (e.g. "Step 6, Test D: rounds to hundredths only, CCSS to any place"). |
 
 A standard's rows may carry different labels, because each describes one pair. `split_with` and
 `merge_with` record which rows belong together, including the `overlap` rows that help make up a whole.
@@ -585,18 +597,18 @@ on both sides fills both.
 **Units** (section 3). State standard at its lowest level. CCSS leaf codes only; if the state standard
 matches a parent's general statement, cite all its lettered parts.
 
-**Tests** (section 5).
-- **A (requirement):** shared action + content + bounds, not a shared topic.
-- **B (separate objective):** a difference matters only if it is a separate learning objective, not
-  wording, examples, recording/justifying, receptive vs. productive form, or ordinary components.
-- **C (bounds):** different bounds always matter (range, number type, place value, cases, steps).
-- **D (not a match):** don't cite prerequisites, assumed definitions, same-topic codes with a different
+**Tests** (section 5). Question 1, a shared requirement: A, B. Question 2, which is inside which: C, D.
+- **A (requirement):** the same action on the same content, not a shared topic; bounds may differ.
+- **B (not a match):** don't cite prerequisites, assumed definitions, same-topic codes with a different
   action, or distant-grade topic matches.
+- **C (separate objective):** a difference matters only if it is a separate learning objective, not
+  wording, examples, recording/justifying, receptive vs. productive form, or ordinary components.
+- **D (bounds):** different bounds always matter (range, number type, place value, cases, steps).
 
 **Steps** (section 7).
 1. **Describe** the requirement: action, content, bounds.
 2. **Search** all grades and domains.
-3. **Keep** codes that share a requirement, whole or a part (A, D); check siblings; look for a code for
+3. **Keep** codes that share a requirement, whole or a part (A, B); check siblings; look for a code for
    every part of the standard.
 4. **Count:** 0 → one row, `none`; otherwise one row per code, labeled by steps 5–6.
 5. **Which is inside which?** Each inside the other → `exact` (any grade); neither → `overlap`;
