@@ -81,10 +81,11 @@ side. A row-by-row pass over the gold's 23 merges and all split, subset and supe
 | 37 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` | The standard adds "solve problems involving" the figures (a separate objective, Test C); 4.G.1 adds drawing. Now the guideline's `overlap` contrast example. |
 | 38 | 3.GSR.6.2 → 4.G.2 | `state_subset` | `overlap` | The standard adds analyzing 3-D figures for quadrilateral faces; 4.G.2 adds right triangles. |
 | 39 | 4.GSR.8.3 → 4.MD.3 | `state_subset` | `overlap`; consider also citing 3.MD.7d | The standard adds composite rectangles, which is CCSS 3.MD.7d ("Find areas of rectilinear figures by decomposing them into non-overlapping rectangles…"), cited nowhere in the gold. |
-| 40 | 5.NR.2.2 → 5.NBT.6 | `state_subset` | `overlap` if fluency counts (R2), else `state_subset` | The standard says "fluently divide"; 5.NBT.6 does not ask for fluency. |
+| 40 | 5.NR.2.2 → 5.NBT.6 | `state_subset` | `overlap` (R2 adopted) | The standard says "fluently divide"; 5.NBT.6 does not ask for fluency. |
 | 41 | 1.NR.2.2 → 1.OA.1 | `split` | `overlap` | "Develop strategies … by exploring strings of related problems" is not in 1.OA.1. See item 2. |
 | 42 | 3.MDR.5.2 → 3.MD.1 | `split` | `split`, or `overlap` if estimating to the quarter hour is a separate objective | Also changes worked example E12 if `overlap`. |
 | 43 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; worked example E7 already updated. |
+| 44 | 3.PAR.3.2 → 3.OA.7 | `exact` | `state_subset` | 3.OA.7 asks students to "Fluently multiply and divide within 100" and to "know from memory all products of two one-digit numbers"; 3.PAR.3.2 asks them to represent the facts with strategies and explain the relationship between multiplication and division, not fluency (R2). No other grade-3 Georgia standard covers the fluency. |
 
 ## 5. Proposed rules (drafts for the annotators to approve)
 
@@ -99,12 +100,17 @@ value, properties of operations, and/or the relationship between addition and su
 specific procedure." Without that limit, R1 would also affect standards such as 3.PAR.2.1 → 3.NBT.2,
 whose CCSS text lists broad methods. Affects items 17 and 18.
 
-**R2. Fluency.** *Test C, add to the "Matters" list:*
-> Fluency ("fluently", "demonstrating fluency") as well as, or instead of, computing with strategies.
+**R2. Fluency.** ~~Draft.~~ **Adopted Oct 3, 2026:** fluency is in Test C's "Matters" list, and the range of
+a fluency expectation is a bound (Test D). The gold did not treat fluency as mattering (3.PAR.3.2 →
+3.OA.7 is `exact` although only the CCSS code asks for fluency). Re-check of every gold row that
+mentions fluency:
 
-*And to Test D:* "The range of a fluency expectation is a bound (fluently within 10 vs. within 20)."
-Affects item 19; the other fluency standards in the gold (K.NR.5.4, 2.NR.2.1, 2.NR.2.4, 3.PAR.2.1,
-4.NR.2.1, 5.NR.2.1, 5.NR.2.2) should be re-checked against it.
+- **Unchanged:** K.NR.5.4, 2.NR.2.1, 2.NR.2.4, 3.PAR.2.1, 5.NR.2.1 (fluency on both sides; 5.NR.2.1 is
+  already `state_subset` for its bounds). 4.NR.2.1 is unchanged by R2 (see item 17 for the standard
+  algorithm).
+- **1.NR.2.4 → 1.OA.6:** item 19 (`state_subset`, or `split` with 1.NR.2.2).
+- **5.NR.2.2 → 5.NBT.6:** item 40 becomes `overlap` (Georgia adds fluency; 5.NBT.6 has divisors above 25).
+- **3.PAR.3.2 → 3.OA.7:** item 44.
 
 **R3. Practice standards.** *Section 3, state side, new paragraph:*
 > Annotate content standards only. A state's own practice standards (e.g. Georgia K.MP.1–8 at each

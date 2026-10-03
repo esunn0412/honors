@@ -188,11 +188,13 @@ teach and assess as its own goal.
 
 - a different product or skill: making a line plot, drawing figures, solving word problems, a second
   operation, counting backward as well as forward, measuring elapsed time;
+- fluency ("fluently", "demonstrating fluency") as well as, or instead of, computing with strategies;
+  fluency is quick, accurate, flexible recall, which teachers teach and assess as its own goal;
 - a different or wider number range, number type, place value or set of cases (Test D).
 
 **Ignored:**
 
-- wording, phrasing, emphasis;
+- wording, phrasing, emphasis (but not "fluently", above);
 - methods, tools or representations given as examples ("e.g.", "such as", "for example", "using
   objects or drawings");
 - a demand attached to the same task: recording the result with symbols, justifying or explaining the
@@ -214,7 +216,8 @@ They are still worth recording: note a missing "explain" or "justify" in the rat
 A different number range (to 20 vs. to 100), number type (whole numbers vs. fractions vs. decimals),
 place value (to hundredths vs. to any place), denominators, number of digits, number of steps, or set
 of cases. The standard with the narrower bounds is inside the other (e.g. rounding to hundredths is
-inside rounding to any place); if each is wider in a different way, neither is inside the other.
+inside rounding to any place); if each is wider in a different way, neither is inside the other. The
+range of a fluency expectation is a bound too: fluently within 10 is inside fluently within 20.
 
 ---
 
