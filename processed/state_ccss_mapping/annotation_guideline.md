@@ -560,11 +560,11 @@ on both sides fills both.
 | | 3.MDR.5.3 | 3.MD.1 | `split` | 3.MDR.5.2 | |
 | Georgia superset | K.NR.2.1 | K.CC.1 | `state_superset` | | |
 | Georgia none | K.NR.1.4 | | `none` | | |
-| Pattern 6 (section 6) | S | A | `overlap` | T | B |
+| Pattern 6 (section 6): S is part of two splits, one per row | S | A | `overlap` | T | B |
 | | S | B | `overlap` | U | A |
 | | T | A | `split` | S | |
 | | U | B | `split` | S | |
-| Pattern 7 (section 6) | S | X | `exact` | | |
+| Pattern 7 (section 6): an overlap piece completing a merge | S | X | `exact` | | |
 | | T | X | `overlap` | | A |
 | | T | A | `merge` | | X |
 
