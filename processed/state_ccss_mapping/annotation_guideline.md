@@ -188,12 +188,12 @@ teach and assess as its own goal.
 
 - a different product or skill: making a line plot, drawing figures, solving word problems, a second
   operation, counting backward as well as forward, measuring elapsed time;
-- fluency ("fluently", "demonstrating fluency", including CCSS's "know from memory") as well as, or
-  instead of, computing with strategies. Both documents define fluency as its own expectation: CCSS
-  uses "fluent" to mean "fast and accurate" (CCSS Progressions), and Georgia defines it as being able
-  to "choose flexibly among methods and strategies to solve mathematical problems accurately and
-  efficiently" (Georgia's Terminology notes). When both standards ask for fluency, treat it as the same
-  expectation, even though the two definitions differ;
+- fluency ("fluently", "demonstrating fluency"): performing a task fluently and performing the same
+  task without a fluency requirement are treated as different. Both documents define fluency as its own
+  expectation (CCSS: "fast and accurate"; Georgia: able to "choose flexibly among methods and strategies
+  to solve mathematical problems accurately and efficiently"). When both standards ask for fluency,
+  treat it as the same, even though the definitions differ. CCSS's "know from memory" counts as
+  fluency;
 - a different or wider number range, number type, place value or set of cases (Test D).
 
 **Ignored:**
