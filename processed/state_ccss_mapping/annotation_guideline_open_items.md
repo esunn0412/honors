@@ -6,7 +6,7 @@ A check of the guideline against the adjudicated Georgia mapping (`states/ga/gol
 cases below, where applying the guideline gives a different answer from the gold. The gold has **not**
 been changed; each case is to be re-adjudicated, and either the gold or the guideline updated.
 
-## 1. Split or subset (section 7, step 5)
+## 1. Split or subset (section 7, step 6A)
 
 | # | Georgia standard(s) | Gold | Guideline implies | Why |
 |---|---|---|---|---|
@@ -14,7 +14,7 @@ been changed; each case is to be re-adjudicated, and either the gold or the guid
 | 2 | 1.NR.2.1, 1.NR.2.2 → 1.OA.1 | `split` | 1.NR.2.1 `exact`; 1.NR.2.2 not a split partner | 1.OA.1 has one part, solving word problems within 20; its drawings and equations are an "e.g." (Test B). 1.NR.2.1 covers the whole code (its guidance lists all problem types). 1.NR.2.2's action, developing strategies, is 1.OA.6's. |
 | 3 | 3.PAR.3.6, 3.PAR.3.7 → 3.OA.3 | `split` | no clear answer | Both solve multiplication and division problems within 100 and differ only in representations, which 3.OA.3 gives as an "e.g.". Each covers the whole code, so neither `split` (different parts) nor two `exact` fits. **Needs a ruling.** |
 
-## 2. Merge or superset (section 7, step 6)
+## 2. Merge or superset (section 7, step 6B)
 
 | # | Georgia standard | Gold | Guideline implies | Why |
 |---|---|---|---|---|
@@ -28,7 +28,7 @@ been changed; each case is to be re-adjudicated, and either the gold or the guid
 | 11 | K.MDR.7.1 → K.MD.1 + K.MD.2 | `merge` | `merge`, adding 1.MD.1 | Its extra part, ordering objects, is 1.MD.1's first requirement (one grade away). Label unchanged. |
 | 12 | 2.MDR.6.1 → 2.MD.7 | `state_superset` | possibly `merge`: 2.MD.7 + 3.MD.1 | Its extra part, measuring elapsed time, is 3.MD.1's "measure time intervals", with narrower bounds; the gold accepts the same narrowing for 3.MDR.5.3 in the 3.MD.1 split. **Needs a ruling** on how narrow an extra part may be. |
 | 13 | 3.NR.4.3 → 3.NF.2a + 3.NF.2b + 3.NF.3c | `merge` | drop 3.NF.3c | The number line is supported by the guidance (an interpretation, section 4.1); "fractions greater than one" is not 3.NF.3c's "express whole numbers as fractions". |
-| 14 | 2.GSR.7.1 → 2.G.1 | `state_superset` | unclear | It lacks 2.G.1's "draw" (a separate objective), so it does not fully match the code; it both adds and lacks, and step 6 decides by the more substantial difference. |
+| 14 | 2.GSR.7.1 → 2.G.1 | `state_superset` | `overlap` (item 32) | It lacks 2.G.1's "draw" (a separate objective), so it does not fully match the code; it both adds and lacks, and step 6 decides by the more substantial difference. |
 | 15 | 5.NR.3.4 → 4.NF.4b + 4.NF.4c | `merge` | consider 5.NF.4a, 5.NF.6 | Section 8 tie-break: prefer a same-grade code with the same requirement. 5.NF.4a and 5.NF.6 are cited nowhere in the gold. |
 
 Items 4–7 are the clearest; items 10–15 are judgment calls.
@@ -48,37 +48,43 @@ rules in part 5.
 | 20 | K.NR.4.1 → K.CC.3 (worked example E2) | `exact` | contested: possibly `state_subset` | Kindergarten teachers treat writing numerals as its own skill (a fine-motor demand; often reported separately), and "Write numbers from 0 to 20" is its own sentence in K.CC.3. The current rule (receptive vs. productive form, Test B) is clear; the question is whether educators accept it. Classroom judgment, not a source finding. |
 | 21 | 3.GSR.7.1 → 3.MD.5b + 3.MD.6 (worked example E11) | `merge` | contested: possibly add 3.MD.5a | 3.MD.5a and 3.MD.5b are both phrased as definitions ("is said to have"), and 3.GSR.7.1's "multiple copies of the same unit" arguably states 5a's unit. Either add 5a or explain in Test D why 5a is a definition and 5b is not. |
 
-## 4. From the per-row rule (Oct 3, 2026)
+## 4. From the per-row and `overlap` rules (Oct 3, 2026)
 
-The guideline now labels each (state standard, CCSS code) **row** on its own (sections 6–7). A code
-that is only partly inside the state standard is never a merge piece: its row is `split` or
-`state_subset` (step 5). `merge` needs two or more codes, each fully inside the state standard, that
-together make up all of it; otherwise the fully-inside rows are `state_superset` (step 6). A row-by-row
-pass over the gold's 23 merges and 14 supersets:
+The guideline now labels each (state standard, CCSS code) row on its own by **which standard is inside
+which** (sections 6–7): each inside the other → `exact` (at any grade; `different_grade` was removed);
+the state standard inside the code → `split` / `state_subset`; the code inside the state standard →
+`merge` / `state_superset`; neither → `overlap`, which still counts as a piece toward making up either
+side. A row-by-row pass over the gold's 23 merges and all split, subset and superset rows (the 61
+`exact` rows were not re-checked):
 
-- **Unchanged (12 merges):** K.NR.5.1, K.GSR.8.1, 1.NR.1.2, 2.NR.1.1, 2.MDR.5.2, 3.NR.4.4, 3.GSR.7.1,
-  4.NR.2.2, 5.NR.3.3, 5.NR.3.4, 5.NR.3.6, 5.NR.5.1. All supersets but one are unchanged.
-- **Would change** (gold labels each row `merge` unless noted):
+- **Unchanged:** the merges K.NR.5.1, K.GSR.8.1, 1.NR.1.2, 2.NR.1.1, 2.MDR.5.2, 3.NR.4.4, 3.GSR.7.1,
+  4.NR.2.2, 5.NR.3.3, 5.NR.3.4, 5.NR.3.6, 5.NR.5.1, and most split, subset and superset rows.
+- **Would change** (judged from the texts and Georgia's guidance; for the annotators to confirm):
 
-| # | Georgia standard | Rows under the per-row rule | Why |
-|---|---|---|---|
-| 22 | 1.MDR.6.1 | 1.MD.1 `state_subset`; 1.MD.2 `state_superset` | 1.MD.1's indirect comparison ("compare the lengths of two objects indirectly by using a third object") is not covered, so 1.MD.1 is only partly inside; no other Georgia standard covers that part. 1.MD.2 alone leaves "estimate" and "compare and order" uncovered. |
-| 23 | K.MDR.7.1 | K.MD.1, K.MD.2 `state_superset` | "Order" objects is left over. Citing 1.MD.1 (item 11) does not make it a merge: 1.MD.1 would be only partly inside (no indirect comparison), so its row would be `state_subset` and its part wouldn't count. Depends on item 26 only if ordering objects is ruled not a separate objective. |
-| 24 | 2.NR.1.3 | `merge`, or `state_superset` on both rows | Depends on item 26 ("order" whole numbers to 1000). |
-| 25 | 4.GSR.8.2 | 4.G.2 `state_subset`; 4.G.3 `split` (with 4.GSR.8.1, if item 4 gives it a 4.G.3 row) or `state_subset` | Neither code is fully inside: 4.G.2's "Recognize right triangles as a category, and identify right triangles" and 4.G.3's "draw lines of symmetry" are not stated. With no code fully inside, there is no merge or superset row. |
-| 26 | **Ruling needed:** is ordering numbers a separate objective from comparing them? | apply one answer to 1.NR.1.3, 2.NR.1.3, 5.NR.3.2, 5.NR.4.2 | The gold disagrees with itself: 1.NR.1.3 ("Compare and order whole numbers up to 100") is `exact` with 1.NBT.3, so ordering did not count; 5.NR.3.2 and 5.NR.4.2 ("compare and order") are `state_superset`, so it did. No CCSS code requires ordering numbers. Add the answer to the Test B table. |
-| 27 | 4.GSR.7.1 | 4.G.1 `state_subset`; 4.MD.5b `state_superset` (if kept, item 9) | Covers only "draw … angles" of 4.G.1, and 4.GSR.8.1 covers all of 4.G.1. 4.MD.5b alone can't make up the standard. |
-| 28 | 2.NR.2.3 | 2.NBT.7 `state_subset`; 2.NBT.6 `state_superset`, or `merge` with 2.OA.1 (item 6) | The text is two-digit numbers; 2.NBT.7 is within 1000 with three-digit place value (Test C), so it is only partly inside. 2.NBT.6 alone leaves subtraction and problem solving; with 2.OA.1 fully inside too, the two might make up the standard. |
-| 29 | 4.NR.4.6 | 4.NF.3c `state_superset`; 4.NF.3d `state_subset` | 4.NF.3d's word problems are only in the guidance (item 8), so it is only partly inside. 4.NF.3c (mixed numbers) alone leaves adding and subtracting fractions; citing 4.NF.3a (item 8) could make it a merge. |
-| 30 | 4.MDR.6.1 | 4.MD.1 `state_superset`; 4.MD.2 `state_subset` | 4.MD.2 includes "money" and "simple fractions or decimals"; the Georgia text has neither (Test C), so 4.MD.2 is only partly inside, and no other grade-4 standard covers the rest. 4.MD.1 alone leaves the problem solving. |
-| 31 | 5.GSR.8.3 | 5.MD.3b `state_superset`; 5.MD.5a `split` (with 5.GSR.8.4, if it gets a 5.MD.5a row) or `state_subset` | 5.MD.5a also asks to "show that the volume is the same as would be found by multiplying the edge lengths", which 5.GSR.8.4 covers, not 5.GSR.8.3. 5.MD.3b alone leaves "determine the total volume to solve problems". |
-| 32 | 2.GSR.7.1 (gold `state_superset`) | 2.G.1 `state_subset` | 2.G.1's "draw shapes" is not covered, so 2.G.1 is not fully inside. This settles item 14. |
-| 33 | 3.NR.4.3 | 3.NF.2a, 3.NF.2b `merge` if the other ways of representing are not a separate objective, else `state_superset`; 3.NF.3c `state_subset` or dropped (item 13) | 3.NF.3c is only partly inside. Whether 3.NF.2a and 3.NF.2b make up "represent fractions … in multiple ways" depends on whether area and set models (named in the guidance) count as a separate objective (Test B: representations). |
-| 34 | 3.GSR.7.3 | depends on item 7 | If 3.MD.7c stays cited, it is only partly inside (its distributive property is only in the guidance): `state_subset`. |
-
-These are candidates from the standard texts and Georgia's guidance; each is for the annotators to
-confirm. Item 11's proposed fix (add 1.MD.1 to keep K.MDR.7.1 a merge) no longer works under this rule;
-see item 23.
+| # | Georgia standard | Gold | Rows under the new rules | Why |
+|---|---|---|---|---|
+| 22 | 1.MDR.6.1 | `merge` | 1.MD.1 `overlap`; 1.MD.2 `state_superset` | 1.MD.1's indirect comparison ("compare the lengths of two objects indirectly by using a third object") is not in the standard, and the standard has "estimate", which 1.MD.1 lacks. "Estimate" lengths is left over: no code covers it in non-standard units. |
+| 23 | K.MDR.7.1 | `merge` | K.MD.1, K.MD.2 `merge`, plus 1.MD.1 `overlap`; without 1.MD.1, `state_superset` | "Order" objects is left over unless 1.MD.1 ("Order three objects by length") is cited; as an `overlap` piece it covers ordering, so the pieces make up the standard. Settles item 11. Depends on item 26 only if ordering objects is ruled not a separate objective. |
+| 24 | 2.NR.1.3 | `merge` | `merge`, or `state_superset` on both rows | Depends on item 26 ("order" whole numbers to 1000). |
+| 25 | 4.GSR.8.2 | `merge` | 4.G.2 `overlap`; 4.G.3 `overlap` | Each code has something the standard lacks (4.G.2: right triangles; 4.G.3: "draw lines of symmetry") and the standard has more (side lengths, comparing and contrasting). |
+| 26 | **Ruling needed:** is ordering numbers a separate objective from comparing them? | — | apply one answer to 1.NR.1.3, 2.NR.1.3, 4.NR.1.3, 5.NR.3.2, 5.NR.4.2 | The gold disagrees with itself: 1.NR.1.3 ("Compare and order whole numbers up to 100") is `exact` with 1.NBT.3, so ordering did not count; 5.NR.3.2 and 5.NR.4.2 ("compare and order") are `state_superset`, so it did. No CCSS code requires ordering numbers. If ordering counts, 4.NR.1.3 → 4.NBT.2 becomes `overlap`, which changes the 4.NBT.2 worked example. Add the answer to the Test B table. |
+| 27 | 4.GSR.7.1 | `merge` | 4.G.1 `overlap`; 4.MD.5b `merge` (if kept, item 9) | The standard covers only drawing angles from 4.G.1, and adds recognizing angles as shapes. 4.MD.5b and the overlap piece 4.G.1 together make up the standard. |
+| 28 | 2.NR.2.3 | `merge` | 2.NBT.6 `merge` or `state_superset`; 2.NBT.7 `overlap` | 2.NBT.7 is within 1000 with three-digit place value, which the standard lacks; the standard's problem solving is not in 2.NBT.7. Whether the pieces make up the standard depends on item 6 (2.OA.1). |
+| 29 | 4.NR.4.6 | `merge` | 4.NF.3c `merge`; 4.NF.3d `overlap` | 4.NF.3d's word problems are only in the guidance (item 8), and the standard has mixed numbers, which 4.NF.3d lacks. 4.NF.3c and the overlap piece make up the standard. |
+| 30 | 4.MDR.6.1 | `merge` | 4.MD.1 `merge`; 4.MD.2 `overlap` | 4.MD.2 includes "money" and "simple fractions or decimals", which the standard lacks (Test C); the standard adds converting a smaller unit to a larger one. The pieces make up the standard. |
+| 31 | 5.GSR.8.3 | `merge` | 5.MD.3b `merge`; 5.MD.5a `overlap` | 5.MD.5a also asks to "show that the volume is the same as would be found by multiplying the edge lengths" (covered by 5.GSR.8.4), and the standard adds solving problems. If 5.GSR.8.4 gets a 5.MD.5a row, the two together make up 5.MD.5a. |
+| 32 | 2.GSR.7.1 | `state_superset` | 2.G.1 `overlap` | 2.G.1's "draw shapes" is not in the standard; the standard adds 3-D shapes and sorting. Settles item 14. |
+| 33 | 3.NR.4.3 | `merge` | 3.NF.2a, 3.NF.2b `merge` or `state_superset`; 3.NF.3c `overlap` or dropped (item 13) | Whether the pieces make up "represent fractions … in multiple ways" depends on whether area and set models (named in the guidance) count as a separate objective (Test B: representations). |
+| 34 | 3.GSR.7.3 | `merge` | depends on item 7 | If 3.MD.7c stays cited, the standard lacks its distributive property and it is `overlap` at most. |
+| 35 | 1.GSR.4.1 → 1.G.1 | `state_subset` | `overlap` | The standard adds identifying, sorting and classifying 2-D and 3-D shapes; 1.G.1 adds distinguishing defining from non-defining attributes. |
+| 36 | 3.MDR.5.5 → 3.MD.2 | `state_subset` | `overlap` | The standard uses customary units and includes lengths; 3.MD.2 uses metric units (g, kg, l) for masses and volumes (Test C both ways). |
+| 37 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` | The standard adds "solve problems involving" the figures (a separate objective, Test B); 4.G.1 adds drawing. Now the guideline's `overlap` contrast example. |
+| 38 | 3.GSR.6.2 → 4.G.2 | `state_subset` | `overlap` | The standard adds analyzing 3-D figures for quadrilateral faces; 4.G.2 adds right triangles. |
+| 39 | 4.GSR.8.3 → 4.MD.3 | `state_subset` | `overlap`; consider also citing 3.MD.7d | The standard adds composite rectangles, which is CCSS 3.MD.7d ("Find areas of rectilinear figures by decomposing them into non-overlapping rectangles…"), cited nowhere in the gold. |
+| 40 | 5.NR.2.2 → 5.NBT.6 | `state_subset` | `overlap` if fluency counts (R2), else `state_subset` | The standard says "fluently divide"; 5.NBT.6 does not ask for fluency. |
+| 41 | 1.NR.2.2 → 1.OA.1 | `split` | `overlap` | "Develop strategies … by exploring strings of related problems" is not in 1.OA.1. See item 2. |
+| 42 | 3.MDR.5.2 → 3.MD.1 | `split` | `split`, or `overlap` if estimating to the quarter hour is a separate objective | Also changes worked example E12 if `overlap`. |
+| 43 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; worked example E7 already updated. |
 
 ## 5. Proposed rules (drafts for the annotators to approve)
 
@@ -118,13 +124,13 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 
 ## 6. Pending edits to the guideline
 
-- **Step 5, contrast example (4.G.1):** depends on item 4. If 4.GSR.8.1 becomes a `merge`, replace
+- **Step 6A, contrast example (4.G.1):** depends on item 4. If 4.GSR.8.1 becomes a `merge`, replace
   the example or reword it.
-- **Step 5, contrast example (3.GSR.6.1):** 3.GSR.6.1 is described as covering "only identifying"; its text also
-  asks students to "solve problems involving" those figures. Reword; the label is unaffected.
-- **Step 5, 4.NBT.2 example:** remove the note on the Georgia mapping once item 1 is re-adjudicated.
-- ~~**Step 6 examples table and section 9, 3.NR.4.4:** say why the standard states 3.NF.3a's requirement.~~
-  Done in version 1.2: E9 and the step 6 examples table now cite Georgia's guidance ("the same size or on
+- ~~**Contrast example (3.GSR.6.1):** described as covering "only identifying".~~ Done: under the
+  `overlap` rule the example now says it also adds solving problems and is `overlap` (item 37).
+- **Step 6A, 4.NBT.2 example:** remove the note on the Georgia mapping once item 1 is re-adjudicated.
+- ~~**Step 6B examples table and section 9, 3.NR.4.4:** say why the standard states 3.NF.3a's requirement.~~
+  Done in version 1.2: E9 and the step 6B examples table now cite Georgia's guidance ("the same size or on
   the same location on a number line").
 - **Section 9, E15 ("Ask questions…"):** depends on item 16. If those standards are remapped, replace
   E15 (the "general practice" rationale no longer holds) and remove its row from "Find your case". If
@@ -135,12 +141,12 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
   heavily ("One hallmark of mathematical understanding is the ability to justify… why a particular
   mathematical statement is true", CCSS Introduction, "Understanding mathematics"), and
   say the rule is kept for agreement, with the difference recorded in the rationale.
-- **Section 10, `rationale`:** for `different_grade`, and for any match at another grade, say whether the
-  state teaches the content earlier or later than CCSS. Teachers care about the direction.
+- **Section 10, `rationale`:** for any match at another grade (`exact` now covers these, since
+  `different_grade` was removed), say whether the state teaches the content earlier or later than CCSS. Teachers care about the direction.
 - **Test D, "comparable level":** vague. A pointer to the CCSS Progressions would help, but section 2
   limits annotators to the provided materials; either add the Progressions to those materials or
   define "comparable level" in the guideline.
-- **Step 5, 4.NBT.2 example:** say that 4.NR.1.1 lacks 4.NBT.2's "number names" on purpose
+- **Step 6A, 4.NBT.2 example:** say that 4.NR.1.1 lacks 4.NBT.2's "number names" on purpose
   (Georgia's guidance: "Students are not expected to write numbers in word form"), and that this is
   allowed within a split.
 - ~~**Section 10 vs. the gold:** the gold has no `split_with` field.~~ Settled: `split_with` was dropped;
@@ -150,7 +156,7 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 
 - **3.NR.1.1:** our files (`raw/standards/ga/georgia_math_3.json`, `states/ga/ga_input.json`, the gold)
   read "up to 10,000 **to the thousands** using base-ten numerals…"; the official standards PDF (p. 36)
-  has no "to the thousands". The quote in step 5 (the 4.NBT.2 table) inherits it. Fix the source files, then the quote.
+  has no "to the thousands". The quote in step 6A (the 4.NBT.2 table) inherits it. Fix the source files, then the quote.
 - **3.NR.1.3:** our files read "round whole numbers **within** up to 1000"; the PDF reads "up to 1000".
 - Known transcription artifacts, already noted: K.NR.4.1 "0- 20" (official "0-20"); 5.MDR.7.2 missing its
   final period.
