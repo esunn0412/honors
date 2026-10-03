@@ -1,6 +1,6 @@
 # Open items: conflicts for re-adjudication and pending edits
 
-*Companion to [`annotation_guideline.md`](annotation_guideline.md), version 1.2 (Sep 30, 2026). For the adjudication meeting only: it discusses specific answers in the adjudicated Georgia mapping, so don't give it to annotators or use it in calibration (guideline section 11). "Section" numbers below refer to the guideline.*
+*Companion to [`annotation_guideline.md`](annotation_guideline.md), version 1.2 (Sep 30, 2026). For the adjudication meeting only: it discusses specific answers in the adjudicated Georgia mapping, so don't give it to annotators or use it in calibration (guideline section 10). "Section" numbers below refer to the guideline.*
 
 A check of the guideline against the adjudicated Georgia mapping (`states/ga/gold.json`) found the
 cases below, where applying the guideline gives a different answer from the gold. The gold has **not**
@@ -29,7 +29,7 @@ been changed; each case is to be re-adjudicated, and either the gold or the guid
 | 12 | 2.MDR.6.1 → 2.MD.7 | `state_superset` | possibly `merge`: 2.MD.7 + 3.MD.1 | Its extra part, measuring elapsed time, is 3.MD.1's "measure time intervals", with narrower bounds; the gold accepts the same narrowing for 3.MDR.5.3 in the 3.MD.1 split. **Needs a ruling** on how narrow an extra part may be. |
 | 13 | 3.NR.4.3 → 3.NF.2a + 3.NF.2b + 3.NF.3c | `merge` | drop 3.NF.3c | The number line is supported by the guidance (an interpretation, section 4.1); "fractions greater than one" is not 3.NF.3c's "express whole numbers as fractions". |
 | 14 | 2.GSR.7.1 → 2.G.1 | `state_superset` | `overlap` (item 32) | It lacks 2.G.1's "draw" (a separate objective), so it does not fully match the code; it both adds and lacks, and step 6 decides by the more substantial difference. |
-| 15 | 5.NR.3.4 → 4.NF.4b + 4.NF.4c | `merge` | consider 5.NF.4a, 5.NF.6 | Section 8 tie-break: prefer a same-grade code with the same requirement. 5.NF.4a and 5.NF.6 are cited nowhere in the gold. |
+| 15 | 5.NR.3.4 → 4.NF.4b + 4.NF.4c | `merge` | consider adding rows for 5.NF.4a, 5.NF.6 | The "prefer a same-grade code" tie-break was removed (Oct 3): with per-row labels, codes at different grades that share the requirement each get a row. Same-grade 5.NF.4a and 5.NF.6 are cited nowhere in the gold; check whether they share a requirement with 5.NR.3.4 and add rows if so. |
 
 Items 4–7 are the clearest; items 10–15 are judgment calls.
 
@@ -134,19 +134,19 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 - ~~**Contrast example (3.GSR.6.1):** described as covering "only identifying".~~ Done: under the
   `overlap` rule the example now says it also adds solving problems and is `overlap` (item 37).
 - **Step 6A, 4.NBT.2 example:** remove the note on the Georgia mapping once item 1 is re-adjudicated.
-- ~~**Step 6B examples table and section 9, 3.NR.4.4:** say why the standard states 3.NF.3a's requirement.~~
+- ~~**Step 6B examples table and section 8, 3.NR.4.4:** say why the standard states 3.NF.3a's requirement.~~
   Done in version 1.2: E9 and the step 6B examples table now cite Georgia's guidance ("the same size or on
   the same location on a number line").
-- **Section 9, E15 ("Ask questions…"):** depends on item 16. If those standards are remapped, replace
+- **Section 8, E15 ("Ask questions…"):** depends on item 16. If those standards are remapped, replace
   E15 (the "general practice" rationale no longer holds) and remove its row from "Find your case". If
   they stay `none`, fix the wording: grade 1 (1.MDR.6.4) ends "…to compare and order whole numbers", so
   "at every grade K–5" needs "(grade 1 with a different ending)".
-- **Section 9, E2 and E11:** depend on items 20 and 21.
+- **Section 8, E2 and E11:** depend on items 20 and 21.
 - **Test C "Why" note on explaining and justifying:** acknowledge that CCSS weights justification
   heavily ("One hallmark of mathematical understanding is the ability to justify… why a particular
   mathematical statement is true", CCSS Introduction, "Understanding mathematics"), and
   say the rule is kept for agreement, with the difference recorded in the rationale.
-- **Section 10, `rationale`:** for any match at another grade (`exact` now covers these, since
+- **Section 9, `rationale`:** for any match at another grade (`exact` now covers these, since
   `different_grade` was removed), say whether the state teaches the content earlier or later than CCSS. Teachers care about the direction.
 - **Test B, "comparable level":** vague. A pointer to the CCSS Progressions would help, but section 2
   limits annotators to the provided materials; either add the Progressions to those materials or
@@ -154,7 +154,7 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 - **Step 6A, 4.NBT.2 example:** say that 4.NR.1.1 lacks 4.NBT.2's "number names" on purpose
   (Georgia's guidance: "Students are not expected to write numbers in word form"), and that this is
   allowed within a split.
-- **Section 10 vs. the gold:** the guideline now has `split_with` and `merge_with` columns (needed
+- **Section 9 vs. the gold:** the guideline now has `split_with` and `merge_with` columns (needed
   because an `overlap` row may or may not help make up a split or merge); `gold.csv` has neither. Add
   them when the gold is re-adjudicated.
 - **3.NR.1.1:** our files (`raw/standards/ga/georgia_math_3.json`, `states/ga/ga_input.json`, the gold)
