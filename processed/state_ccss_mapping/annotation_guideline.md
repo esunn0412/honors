@@ -207,7 +207,7 @@ neither does grade.
 
 | Label | In short | Which is inside which? | And |
 |---|---|---|---|
-| `exact` | same standard, at any grade | each inside the other | — |
+| `exact` | same standard, at any grade | each inside the other | a state standard has at most one `exact` row, and a CCSS code is `exact` with at most one state standard (exact rule below) |
 | `split` | the state standard is a piece of the code | the state standard is inside the code | the state standards that cover parts of the code together make up all of the code, and this row's state standard is needed for that |
 | `state_subset` | the state asks for less | the state standard is inside the code | the state standards that cover parts of the code do not make up all of the code; or they do, but this row's state standard is not needed for that |
 | `merge` | the code is a piece of the state standard | the code is inside the state standard | the CCSS codes that cover parts of the state standard together make up all of the state standard, and this row's code is needed for that |
@@ -246,9 +246,8 @@ CCSS code requires.
 
 Section 7 applies these rules to Georgia standards (steps 5–6), and section 9 has worked examples.
 
-**Exact rule.** A state standard has at most one `exact` row, and a CCSS code is `exact` with at most one
-state standard. If a second state standard is also essentially the same as a CCSS code you already
-marked `exact`, re-examine both: usually each covers a separate part of it (`split`), or one of them
+**Exact rule.** `exact` is one-to-one (label table). If a second state standard is also essentially the
+same as a CCSS code you already marked `exact`, re-examine both: usually each covers a separate part of it (`split`), or one of them
 differs in scope.
 
 ---
