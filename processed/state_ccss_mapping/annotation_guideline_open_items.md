@@ -67,7 +67,7 @@ side. A row-by-row pass over the gold's 23 merges and all split, subset and supe
 | 23 | K.MDR.7.1 | `merge` | K.MD.1, K.MD.2 `merge`, plus 1.MD.1 `overlap`; without 1.MD.1, `state_superset` | "Order" objects is left over unless 1.MD.1 ("Order three objects by length") is cited; as an `overlap` piece it covers ordering, so the pieces make up the standard. Settles item 11. Depends on item 26 only if ordering objects is ruled not a separate objective. |
 | 24 | 2.NR.1.3 | `merge` | `merge`, or `state_superset` on both rows | Depends on item 26 ("order" whole numbers to 1000). |
 | 25 | 4.GSR.8.2 | `merge` | 4.G.2 `overlap`; 4.G.3 `overlap` | Each code has something the standard lacks (4.G.2: right triangles; 4.G.3: "draw lines of symmetry") and the standard has more (side lengths, comparing and contrasting). |
-| 26 | **Ruling needed:** is ordering numbers a separate objective from comparing them? | — | apply one answer to 1.NR.1.3, 2.NR.1.3, 4.NR.1.3, 5.NR.3.2, 5.NR.4.2 | The gold disagrees with itself: 1.NR.1.3 ("Compare and order whole numbers up to 100") is `exact` with 1.NBT.3, so ordering did not count; 5.NR.3.2 and 5.NR.4.2 ("compare and order") are `state_superset`, so it did. No CCSS code requires ordering numbers. If ordering counts, 4.NR.1.3 → 4.NBT.2 becomes `overlap`, which changes the 4.NBT.2 worked example. Add the answer to the Test C table. |
+| 26 | **Ruling needed:** is ordering numbers a separate objective from comparing them? | — | apply one answer to 1.NR.1.3, 2.NR.1.3, 4.NR.1.3, 5.NR.3.2, 5.NR.4.2 | The gold disagrees with itself: 1.NR.1.3 ("Compare and order whole numbers up to 100") is `exact` with 1.NBT.3, so ordering did not count; 5.NR.3.2 and 5.NR.4.2 ("compare and order") are `state_superset`, so it did. No CCSS code requires ordering numbers. If ordering counts, 4.NR.1.3 → 4.NBT.2 becomes `overlap`, which changes the 4.NBT.2 worked example. Add the answer to the Test C lists. |
 | 27 | 4.GSR.7.1 | `merge` | 4.G.1 `overlap`; 4.MD.5b `merge` (if kept, item 9) | The standard covers only drawing angles from 4.G.1, and adds recognizing angles as shapes. 4.MD.5b and the overlap piece 4.G.1 together make up the standard. |
 | 28 | 2.NR.2.3 | `merge` | 2.NBT.6 `merge` or `state_superset`; 2.NBT.7 `overlap` | 2.NBT.7 is within 1000 with three-digit place value, which the standard lacks; the standard's problem solving is not in 2.NBT.7. Whether the pieces make up the standard depends on item 6 (2.OA.1). |
 | 29 | 4.NR.4.6 | `merge` | 4.NF.3c `merge`; 4.NF.3d `overlap` | 4.NF.3d's word problems are only in the guidance (item 8), and the standard has mixed numbers, which 4.NF.3d lacks. 4.NF.3c and the overlap piece make up the standard. |
@@ -90,16 +90,16 @@ side. A row-by-row pass over the gold's 23 merges and all split, subset and supe
 
 Not in the guideline yet. Each gives the draft wording, where it goes, and the gold items it affects.
 
-**R1. Required methods.** *Test C table, left column (counts as a separate objective):*
+**R1. Required methods.** *Test C, add to the "Matters" list:*
 > A specific procedure the standard requires, not as an example (e.g. "using the standard algorithm"
 > in 4.NBT.4 and 5.NBT.5).
 
-*And to the right-column row on methods, add:* "Broad families of methods ('strategies based on place
+*And to the "Ignored" item on methods, add:* "Broad families of methods ('strategies based on place
 value, properties of operations, and/or the relationship between addition and subtraction') are not a
 specific procedure." Without that limit, R1 would also affect standards such as 3.PAR.2.1 → 3.NBT.2,
 whose CCSS text lists broad methods. Affects items 17 and 18.
 
-**R2. Fluency.** *Test C table, left column:*
+**R2. Fluency.** *Test C, add to the "Matters" list:*
 > Fluency ("fluently", "demonstrating fluency") as well as, or instead of, computing with strategies.
 
 *And to Test D:* "The range of a fluency expectation is a bound (fluently within 10 vs. within 20)."
@@ -113,8 +113,8 @@ Affects item 19; the other fluency standards in the gold (K.NR.5.4, 2.NR.2.1, 2.
 
 The gold already does this (150 content standards, no MP standards); the guideline doesn't say so.
 
-**R4. "Solve problems" vs. "solve word problems".** *Test C table, right column, replace the "general
-setting" row with:*
+**R4. "Solve problems" vs. "solve word problems".** *Test C, replace the "general setting" item in the "Ignored" list
+with:*
 > A general setting ("in authentic problems", "to solve problems", "in real-world contexts") when
 > problems are only the setting for another action (e.g. "fluently add and subtract within 1000 to
 > solve problems": the action is fluent computation). When solving problems is the standard's main

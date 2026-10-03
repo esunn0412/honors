@@ -38,7 +38,7 @@ full in one place; other sections point to it.
 | one standard identifies and the other writes the same thing | Test C: receptive vs. productive form | E2 |
 | one standard adds "explain", "justify" or "record with symbols" | Test C: an attached demand, not an objective | E7 |
 | a method or tool is given with "e.g." or "such as" | Test C: an example, not a requirement | — |
-| the number range, number type or place value differs | Test D (bounds): always counts | E5 |
+| the number range, number type or place value differs | Test D (bounds): always matters | E5 |
 | the only matching CCSS code is at another grade | grade alone never matters: `exact` if otherwise the same | E7, E8 |
 | a CCSS code is a prerequisite or only a definition (e.g. 3.MD.5a) | Test B (not a match): don't cite it | E11 |
 | the state standard matches a CCSS parent's general statement | Section 3: cite all its lettered parts | E10 |
@@ -143,7 +143,7 @@ the decision procedure (section 7) applies them, and they are referred to by let
 | Question | Tests | What the answer decides |
 |---|---|---|
 | 1. Do the two standards share a requirement? | A (requirement), B (not a match) | yes → the pair gets a row; no → no row (step 3) |
-| 2. Which is inside which? | C (separate objective), D (bounds) | which differences count; a difference that counts means the standard that has it is not inside the other (the one without it may still be inside). That gives the label's first column in section 6: each inside the other, one inside the other, or neither (step 5) |
+| 2. Which is inside which? | C (separate objective), D (bounds) | which differences matter; a difference that matters means the standard that has it is not inside the other (the one without it may still be inside). That gives the label's first column in section 6: each inside the other, one inside the other, or neither (step 5) |
 
 ### 5.1 Do the two standards share a requirement? (Tests A and B)
 
@@ -172,33 +172,44 @@ Do not cite a CCSS code that is:
 
 ### 5.2 Which is inside which? (Tests C and D)
 
-When one standard has something the other doesn't, the difference either **counts** (the standard
+When one standard has something the other doesn't, the difference either **matters** (the standard
 that has it is not inside the other) or is **ignored**. For example, if a code has a part the state
 standard lacks, the code is not inside the state standard, but the state standard can still be inside
 the code (`split` or `state_subset`, with other standards covering the rest). Test C decides for differences in what students
-do; Test D for differences in bounds. Grade never counts: the same requirement at another grade is
+do; Test D for differences in bounds. Grade never matters: the same requirement at another grade is
 `exact` (section 6).
 
-#### Test C (separate objective): does a difference in what students do count?
+#### Test C (separate objective): does a difference in what students do matter?
 
-A difference counts only if it is **a separate learning objective**: something a teacher would plan,
+A difference matters only if it is **a separate learning objective**: something a teacher would plan,
 teach and assess as its own goal.
 
-| Counts (the standard that has it is not inside the other) | Ignored |
-|---|---|
-| A different product or skill: making a line plot, drawing figures, solving word problems, a second operation, counting backward as well as forward, measuring elapsed time | Wording, phrasing, emphasis |
-| A different or wider number range, number type, place value or set of cases (Test D) | Methods, tools or representations given as examples ("e.g.", "such as", "for example", "using objects or drawings") |
-| | A demand attached to the same task: recording the result with symbols, justifying or explaining the result, using a model to show it |
-| | Receptive and productive forms of the same skill on the same content (identifying written numerals vs. writing them, when both standards require representing quantities with numerals) |
-| | Ordinary components of the task (finding the value of a group of coins as part of solving money problems) |
-| | A general setting ("in authentic problems", "in real-world contexts") unless the other standard's requirement is specifically problem solving |
+**Matters** (the standard that has it is not inside the other):
 
-*Why explaining and justifying don't count:* the question is whether two standards target the same
+- a different product or skill: making a line plot, drawing figures, solving word problems, a second
+  operation, counting backward as well as forward, measuring elapsed time;
+- a different or wider number range, number type, place value or set of cases (Test D).
+
+**Ignored:**
+
+- wording, phrasing, emphasis;
+- methods, tools or representations given as examples ("e.g.", "such as", "for example", "using
+  objects or drawings");
+- a demand attached to the same task: recording the result with symbols, justifying or explaining the
+  result, using a model to show it;
+- receptive and productive forms of the same skill on the same content (identifying written numerals
+  vs. writing them, when both standards require representing quantities with numerals);
+- ordinary components of the task (finding the value of a group of coins as part of solving money
+  problems);
+- a general setting ("in authentic problems", "in real-world contexts"), unless the other standard's
+  requirement is specifically problem solving.
+
+*Why explaining and justifying are ignored:* the question is whether two standards target the same
 learning, not how that learning is shown. Explaining and justifying are expected across all standards
 (e.g. CCSS Mathematical Practice 3), so counting them would make most pairs differ on wording alone.
-They still matter: note a missing "explain" or "justify" in the rationale.
+They are still worth recording: note a missing "explain" or "justify" in the rationale.
 
-#### Test D (bounds): a difference in bounds always counts
+#### Test D (bounds): a difference in bounds always matters
 
 A different number range (to 20 vs. to 100), number type (whole numbers vs. fractions vs. decimals),
 place value (to hundredths vs. to any place), denominators, number of digits, number of steps, or set
@@ -216,7 +227,7 @@ choose one.
 
 The labels rest on one question: **which standard is inside which?** One standard is inside another
 when everything it requires (every separate objective and bound) is also required by the other.
-Differences that are not separate objectives (Test C), such as a missing "explain why", don't count;
+Differences that are not separate objectives (Test C), such as a missing "explain why", don't matter;
 neither does grade.
 
 | Label | In short | Which is inside which? | And |
@@ -451,7 +462,7 @@ what decided it.
 - **Decided by:** Test C and step 6A. Making a line plot is a separate objective, and no other Georgia
   grade-3 standard covers it.
 
-**E7. `exact` across grades: same requirement; attached demands don't count.**
+**E7. `exact` across grades: same requirement; attached demands are ignored.**
 - **Georgia 4.NR.4.2 (grade 4):** "Compare two fractions with the same numerator or the same
   denominator by reasoning about their size and recognize that comparisons are valid only when the two
   fractions refer to the same whole."
