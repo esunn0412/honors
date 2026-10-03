@@ -143,7 +143,7 @@ the decision procedure (section 7) applies them, and they are referred to by let
 | Question | Tests | What the answer decides |
 |---|---|---|
 | 1. Do the two standards share a requirement? | A (requirement), B (not a match) | yes → the pair gets a row; no → no row (step 3) |
-| 2. Which is inside which? | C (separate objective), D (bounds) | which differences count; a difference that counts means the standard lacking it is not inside the other. That gives the label's first column in section 6: each inside the other, one inside the other, or neither (step 5) |
+| 2. Which is inside which? | C (separate objective), D (bounds) | which differences count; a difference that counts means the standard that has it is not inside the other (the one without it may still be inside). That gives the label's first column in section 6: each inside the other, one inside the other, or neither (step 5) |
 
 ### 5.1 Do the two standards share a requirement? (Tests A and B)
 
@@ -173,7 +173,9 @@ Do not cite a CCSS code that is:
 ### 5.2 Which is inside which? (Tests C and D)
 
 When one standard has something the other doesn't, the difference either **counts** (the standard
-lacking it is not inside the other) or is **ignored**. Test C decides for differences in what students
+that has it is not inside the other) or is **ignored**. For example, if a code has a part the state
+standard lacks, the code is not inside the state standard, but the state standard can still be inside
+the code (`split` or `state_subset`, with other standards covering the rest). Test C decides for differences in what students
 do; Test D for differences in bounds. Grade never counts: the same requirement at another grade is
 `exact` (section 6).
 
@@ -182,7 +184,7 @@ do; Test D for differences in bounds. Grade never counts: the same requirement a
 A difference counts only if it is **a separate learning objective**: something a teacher would plan,
 teach and assess as its own goal.
 
-| Counts (the standard lacking it is not inside the other) | Ignored |
+| Counts (the standard that has it is not inside the other) | Ignored |
 |---|---|
 | A different product or skill: making a line plot, drawing figures, solving word problems, a second operation, counting backward as well as forward, measuring elapsed time | Wording, phrasing, emphasis |
 | A different or wider number range, number type, place value or set of cases (Test D) | Methods, tools or representations given as examples ("e.g.", "such as", "for example", "using objects or drawings") |
