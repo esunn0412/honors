@@ -262,10 +262,10 @@ the action on the content (Test A). Sharing a detail, an example or the topic is
 
 - **Drop** prerequisites, assumed definitions, same-topic codes with a different action, and
   distant-grade topic matches (Test B).
-- **Check the neighbours.** Once you find one match, check its lettered siblings and the other codes in
-  its cluster: state standards often combine several CCSS codes.
-- **Look up every part of the state standard.** For each part not yet covered by a kept code, search all
-  grades and domains for a code that requires it, and keep it if there is one. A part that no code
+- **Look up every part of the state standard.** Don't stop at the first match: state standards often
+  combine several CCSS codes, from the same cluster or from other domains and grades. For each part not
+  yet covered by a kept code, search all grades and domains for a code that requires it, and keep it if
+  there is one. A part that no code
   requires stays uncovered (it can make the standard a `state_superset`, step 6).
 
 ### Step 4. Count the codes kept
