@@ -212,7 +212,7 @@ neither does grade.
 | `state_subset` | the state asks for less | the state standard is inside the code | the state standards that cover parts of the code do not make up all of the code; or they do, but this row's state standard is not needed for that |
 | `merge` | the code is a piece of the state standard | the code is inside the state standard | the CCSS codes that cover parts of the state standard together make up all of the state standard, and this row's code is needed for that |
 | `state_superset` | the state asks for more | the code is inside the state standard | the CCSS codes that cover parts of the state standard do not make up all of the state standard (some part of the state standard is covered by no CCSS code); or they do, but this row's code is not needed for that |
-| `overlap` | they share some requirements, and each also has a requirement the other lacks | neither | — |
+| `overlap` | they share some requirements, and each also has a requirement the other lacks | neither | the row still counts as a piece on both sides: it helps the state standards that cover parts of the code make up the code, and the CCSS codes that cover parts of the state standard make up the state standard |
 | `none` | no CCSS counterpart | — | no CCSS K–5 code shares any of the state standard's requirements; one row, with no code |
 
 **Pieces.** A code's pieces are the state standards that cover part of it: its `split`, `state_subset`
