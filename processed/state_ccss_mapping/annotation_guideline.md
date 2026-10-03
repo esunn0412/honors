@@ -241,8 +241,8 @@ Section 6 applies these rules to Georgia standards (steps 5–6), and section 7 
 
 ## 6. Decision procedure
 
-Steps 1–4 find the codes, one row each; steps 5–6 label each row. Record the step at which you decided
-in the row's rationale.
+Steps 1–4 find the codes and make one row per code; steps 5–6 label each row. In each row's rationale,
+record the step that decided it.
 
 ### Step 1. Describe
 
@@ -250,130 +250,81 @@ Describe the state standard's core requirement: action, content, bounds (section
 
 ### Step 2. Search
 
-Search the whole CCSS list for candidate codes: every domain and every grade. Start at the state
-standard's own grade and domain, then widen. States organize content differently (e.g. a state may
-place area, perimeter, volume and angle measure under geometry, where CCSS places them under
-Measurement and Data).
+Search the whole CCSS list, every domain and grade, starting at the state standard's own grade and
+domain (states organize content differently: e.g. Georgia puts area under geometry, CCSS under
+Measurement and Data). Search in both directions:
 
-Search in both directions:
+- **Every part of the state standard:** look for a code that requires each part. Don't stop at the
+  first match; a state standard often combines several codes, from any domain or grade. A part that no
+  code requires stays uncovered.
+- **Every part of the code**, for a code the state standard covers only partly: search the state's
+  standards, at every grade, for the parts it doesn't cover. These are its possible split partners.
 
-- **Look up every part of the state standard.** Don't stop at the first match: state standards often
-  combine several CCSS codes, from the same cluster or from other domains and grades. For each part of
-  the state standard (step 1), look for a code that requires it. A part that no code requires stays
-  uncovered.
-- **Look up every part of the code**, when the state standard covers only part of a code. For each part
-  of the code that the state standard doesn't cover, search the state's standards at every grade for
-  ones that cover it. These are the state standards that may make up the code with this one (step 6,
-  part A).
+### Step 3. Keep
 
-### Step 3. Keep the codes that share a requirement
+Keep a candidate code only if the state standard states one of its requirements, whole or a part
+(Test A); a shared detail, example or topic is not enough. Drop prerequisites, definitions, same-topic
+codes with a different action, and distant-grade topic matches (Test B).
 
-Keep a candidate code only if the state standard states one of its requirements, all of it or one of
-its parts: the action on the content (Test A). Sharing a detail, an example or the topic is not enough.
-Drop prerequisites, assumed definitions, same-topic codes with a different action, and distant-grade
-topic matches (Test B).
+### Step 4. Count
 
-### Step 4. Count the codes kept
-
-- **0** → one row, `none`. Stop.
-- **1 or more** → one row per code. Label each row with steps 5–6.
+**0 codes** → one row, `none`. **1 or more** → one row per code, labeled by steps 5–6.
 
 ### Step 5. Which is inside which?
 
-For each row, compare the state standard with the code (Tests C and D; grade doesn't matter):
+Compare the state standard with the row's code (Tests C and D; grade never matters):
 
-- **Each is inside the other** (essentially the same requirement) → `exact`. Stop.
-- **Neither is inside the other** (they share some requirements, and each also has a separate
-  objective or bound the other lacks) → `overlap`. The label is final, but an `overlap` row can still
-  help make up the code or the state standard: use the pieces found in step 2 to fill its `split_with`
-  and `merge_with` (section 8).
-- **The state standard is inside the code** (the code has more) → step 6, part A.
-- **The code is inside the state standard** (the state standard has more) → step 6, part B.
+| Comparison | Label |
+|---|---|
+| each is inside the other | `exact` |
+| neither is inside the other | `overlap` (it can still help make up a whole; fill `split_with` and `merge_with` from step 2, section 8) |
+| the state standard is inside the code | step 6A |
+| the code is inside the state standard | step 6B |
 
-For how these labels combine across rows (e.g. an `overlap` piece completing a `split`), see the
-common patterns in section 5.
+Section 5's common patterns show how labels combine across rows.
 
 ### Step 6. Do the pieces make up the whole?
 
-**Part A: the state standard is inside the code.** Look at **all** the code's pieces (every state
-standard that covers part of it, found in step 2, including `overlap` rows), and ask:
+**A. The state standard is inside the code.** Of all the state standards that cover part of the code
+(step 2, including `overlap` rows), which together make up all of it?
 
-> **Which standards, together, make up the full CCSS code: all of its parts?**
-
-| Situation | Label on this row |
+| This row's state standard is… | Label |
 |---|---|
-| This row's state standard is one of the state standards that together cover all of the code's parts | `split` |
-| This row's state standard covers a part that another state standard already covers more fully (typically an earlier, narrower pass: smaller numbers, fewer cases, an earlier grade) | `state_subset`: this row's state standard contributes to learning the code, but the full code is made up without it |
-| The same parts are covered by more than one set of standards (e.g. in grade 3 and again, more fully, in grade 4) | `split` for the set with the fuller scope, usually at or nearest the code's grade; `state_subset` for the others |
-| No combination of the state's standards covers all of the code's parts | `state_subset` |
-| Another state standard covers the full code by itself | `state_subset` |
+| needed: with the others, it covers all of the code's parts | `split` |
+| not needed: another standard already covers its part more fully (e.g. an earlier, narrower grade), one standard covers the whole code, or no combination covers all of the code | `state_subset` |
 
-Within a split, a part may be covered with somewhat narrower bounds than the code (e.g. time intervals
-in quarter hours rather than minutes); note it in the rationale. What decides `split` is that the
-standard is needed to cover one of the code's parts. **When unsure** whether this row's state
-standard is needed to make up the code, choose `state_subset`, and mark the row `low` confidence.
+If two sets of standards each make up the code (e.g. in grade 3 and again, more fully, in grade 4),
+only the set with the fuller scope, usually nearest the code's grade, is `split`. A part covered with
+somewhat narrower bounds (e.g. quarter hours rather than minutes) still counts; note it in the
+rationale. **When unsure** whether this row's state standard is needed, choose `state_subset` and mark
+the row `low` confidence. Examples: E12, E16.
 
-**Example: CCSS 4.NBT.2** (grade 4, whole numbers up to 1,000,000): "Read and write multi-digit whole
-numbers using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based
-on meanings of the digits in each place, using >, =, and < symbols to record the results of
-comparisons." It has two parts: read and write numbers, and compare numbers.
+**B. The code is inside the state standard.** Of all the codes that cover part of the state standard
+(the rows from steps 2–4, including `overlap` rows), which together make up all of it?
 
-| Georgia standard | Covers | Needed to make up 4.NBT.2? | Label |
-|---|---|---|---|
-| 4.NR.1.1 (grade 4): "Read and write multi-digit whole numbers to the hundred-thousands place using base-ten numerals and expanded form." | read and write, grade-4 numbers | Yes | `split` |
-| 4.NR.1.3 (grade 4): "Use place value reasoning to represent, compare, and order multi-digit numbers, using >, =, and < symbols to record the results of comparisons." | compare, grade-4 numbers | Yes | `split` |
-| 3.NR.1.1 (grade 3): "Read and write multi-digit whole numbers up to 10,000 to the thousands using base-ten numerals and expanded form." | read and write, only up to 10,000 | No: 4.NR.1.1 already covers this part more fully | `state_subset` |
-| 3.NR.1.2 (grade 3): "Use place value reasoning to compare multi-digit numbers up to 10,000, using >, =, and < symbols to record the results of comparisons." | compare, only up to 10,000 | No: 4.NR.1.3 already covers this part more fully | `state_subset` |
-
-The two grade-4 standards together make up 4.NBT.2, so they are `split`. The grade-3 standards teach
-the same parts earlier, with smaller numbers; the full code is made up without them, so each is a
-`state_subset` of 4.NBT.2, not a split partner. (Note: the adjudicated Georgia mapping currently labels
-all four `split`; it is to be re-adjudicated under this rule.)
-
-**Contrast: CCSS 4.G.1** (grade 4): "Draw points, lines, line segments, rays, angles (right, acute,
-obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures." A single
-Georgia standard, 4.GSR.8.1, covers all of it, so it is `exact`. Georgia 3.GSR.6.1 (grade 3: "Identify
-perpendicular line segments, parallel line segments, and right angles, identify these in polygons, and
-solve problems involving…" them) covers only identifying, for fewer figures, and adds solving problems,
-a separate objective (Test C): neither is inside the other, so it is `overlap`.
-
-See also E12 (a two-standard split).
-
-**Part B: the code is inside the state standard.** Look at **all** the CCSS codes that cover parts of
-the state standard (the rows from steps 2–4, including `overlap` rows), and ask:
-
-> **Which CCSS codes, together, make up the full state standard: all of its parts?**
-
-| Situation | Label on this row |
+| This row's code is… | Label |
 |---|---|
-| This row's code is one of the CCSS codes that together cover all of the state standard's parts | `merge` |
-| This row's code covers a part of the state standard that another CCSS code already covers more fully (e.g. an earlier-grade, narrower code) | `state_superset`: the full state standard is made up without this row's code |
-| No combination of CCSS codes covers all of the state standard's parts: some part is covered by no CCSS code, and it is a separate objective or wider bounds (Tests C and D) | `state_superset` |
+| needed: with the others, it covers all of the state standard's parts | `merge` |
+| not needed (another code already covers its part more fully), or some part of the state standard, a separate objective or wider bounds (Tests C, D), is covered by no code | `state_superset` |
 
-A `merge` needs at least two pieces. A code covered a bit narrowly (e.g. without a demand attached to
-its task) still counts as inside: note it in the rationale.
-
-| Georgia standard | Pieces | Left over | Rows |
-|---|---|---|---|
-| K.NR.2.1: "Count forward to 100 by tens and ones and backward from 20 by ones." | K.CC.1 (count to 100 by ones and tens) | Counting backward: a separate objective no CCSS code requires | K.CC.1 `state_superset` |
-| 3.GSR.7.1: "Investigate area by covering the space of rectangles … using multiple copies of the same unit, with no gaps or overlaps, and determine the total area…" | 3.MD.5b (a figure covered without gaps or overlaps by n unit squares has area n), 3.MD.6 (measure areas by counting unit squares) | None; 3.MD.5a is only a definition (Test B) | both `merge` |
-| 3.NR.4.4: "Recognize and generate simple equivalent fractions." | 3.NF.3a (fractions as equivalent when the same size or the same point on a number line, as Georgia's guidance interprets "equivalent"), 3.NF.3b (recognize and generate simple equivalent fractions) | None; 3.NF.3b's "Explain why the fractions are equivalent" is an attached demand (Test C): noted in the rationale | both `merge` |
+A `merge` needs at least two pieces. A code missing only an attached demand (e.g. "explain why") still
+counts as inside; note it in the rationale. Examples: E3, E9, E11.
 
 ---
 
 ## 7. Worked examples
 
-All from the adjudicated Georgia mapping. Each gives the state text, the CCSS text, the label and
-what decided it.
+From the Georgia mapping. Each gives the state text, the CCSS text, the label and what decided it.
+E16 and E17 follow this guideline where the adjudicated mapping currently differs (noted in each).
 
 | Label | Examples |
 |---|---|
 | `exact` | E1, E2, E7 |
 | `state_superset` | E3, E4, E8 |
-| `state_subset` | E5, E6 |
-| `overlap` | 3.GSR.6.1 (step 6), patterns 6–8 in section 5 |
+| `state_subset` | E5, E6, E16 |
+| `overlap` | E17; patterns 6–8 in section 5 |
 | `merge` | E9, E10, E11 |
-| `split` | E12 |
+| `split` | E12, E16 |
 | `none` | E13, E14, E15 |
 
 **E1. `exact`: wording differs, requirement is the same.**
@@ -469,7 +420,7 @@ what decided it.
 - **Decided by:** step 6A. Telling time and solving elapsed-time problems are separate objectives of
   3.MD.1; each Georgia standard covers one, and together they make up the code. Each is `split`,
   naming the other. (For an earlier, narrower standard that is `state_subset` rather than a split
-  partner, see the 4.NBT.2 table in step 6.)
+  partner, see E16.)
 
 **E13. `none`: shared topic, different action.**
 - **Georgia K.NR.1.4:** "Identify pennies, nickels, and dimes and know their name and value."
@@ -490,6 +441,34 @@ what decided it.
   general way of doing mathematics, rather than grade-specific content, corresponds to a CCSS code only
   if it states that code's specific requirement. This Georgia standard resembles the Standards for Mathematical
   Practice more than any grade's content standard.
+
+**E16. `split` and `state_subset`: one code, four state standards.**
+- **CCSS 4.NBT.2** (grade 4, whole numbers up to 1,000,000): "Read and write multi-digit whole numbers
+  using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based on
+  meanings of the digits in each place, using >, =, and < symbols to record the results of
+  comparisons." Two parts: read and write, and compare.
+
+| Georgia standard | Covers | Needed to make up 4.NBT.2? | Label |
+|---|---|---|---|
+| 4.NR.1.1 (grade 4): "Read and write multi-digit whole numbers to the hundred-thousands place using base-ten numerals and expanded form." | read and write, grade-4 numbers | Yes | `split` |
+| 4.NR.1.3 (grade 4): "Use place value reasoning to represent, compare, and order multi-digit numbers, using >, =, and < symbols to record the results of comparisons." | compare, grade-4 numbers | Yes | `split` |
+| 3.NR.1.1 (grade 3): "Read and write multi-digit whole numbers up to 10,000 to the thousands using base-ten numerals and expanded form." | read and write, only up to 10,000 | No: 4.NR.1.1 already covers this part more fully | `state_subset` |
+| 3.NR.1.2 (grade 3): "Use place value reasoning to compare multi-digit numbers up to 10,000, using >, =, and < symbols to record the results of comparisons." | compare, only up to 10,000 | No: 4.NR.1.3 already covers this part more fully | `state_subset` |
+
+- **Decided by:** step 6A. The two grade-4 standards together make up 4.NBT.2; the grade-3 standards
+  teach the same parts earlier, with smaller numbers, and the full code is made up without them. (The
+  adjudicated Georgia mapping currently labels all four `split`; it is to be re-adjudicated.)
+
+**E17. `overlap`: each has something the other lacks.**
+- **Georgia 3.GSR.6.1 (grade 3):** "Identify perpendicular line segments, parallel line segments, and
+  right angles, identify these in polygons, and solve problems involving parallel line segments,
+  perpendicular line segments, and right angles."
+- **CCSS 4.G.1 (grade 4):** "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and
+  perpendicular and parallel lines. Identify these in two-dimensional figures."
+- **Decided by:** step 5 and Test C. They share identifying these figures; the Georgia standard adds
+  solving problems (a separate objective), and 4.G.1 adds drawing and more figures. Neither is inside
+  the other. (Another Georgia standard, 4.GSR.8.1, covers all of 4.G.1. The adjudicated Georgia
+  mapping currently labels 3.GSR.6.1 `state_subset`.)
 
 ---
 

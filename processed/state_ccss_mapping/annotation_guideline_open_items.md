@@ -78,7 +78,7 @@ side. A row-by-row pass over the gold's 23 merges and all split, subset and supe
 | 34 | 3.GSR.7.3 | `merge` | depends on item 7 | If 3.MD.7c stays cited, the standard lacks its distributive property and it is `overlap` at most. |
 | 35 | 1.GSR.4.1 → 1.G.1 | `state_subset` | `overlap` | The standard adds identifying, sorting and classifying 2-D and 3-D shapes; 1.G.1 adds distinguishing defining from non-defining attributes. |
 | 36 | 3.MDR.5.5 → 3.MD.2 | `state_subset` | `overlap` | The standard uses customary units and includes lengths; 3.MD.2 uses metric units (g, kg, l) for masses and volumes (Test D both ways). |
-| 37 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` | The standard adds "solve problems involving" the figures (a separate objective, Test C); 4.G.1 adds drawing. Now the guideline's `overlap` contrast example. |
+| 37 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` | The standard adds "solve problems involving" the figures (a separate objective, Test C); 4.G.1 adds drawing. Now worked example E17. |
 | 38 | 3.GSR.6.2 → 4.G.2 | `state_subset` | `overlap` | The standard adds analyzing 3-D figures for quadrilateral faces; 4.G.2 adds right triangles. |
 | 39 | 4.GSR.8.3 → 4.MD.3 | `state_subset` | `overlap`; consider also citing 3.MD.7d | The standard adds composite rectangles, which is CCSS 3.MD.7d ("Find areas of rectilinear figures by decomposing them into non-overlapping rectangles…"), cited nowhere in the gold. |
 | 40 | 5.NR.2.2 → 5.NBT.6 | `state_subset` | `overlap` (R2 adopted) | The standard says "fluently divide"; 5.NBT.6 does not ask for fluency. |
@@ -129,11 +129,11 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 
 ## 6. Pending edits to the guideline
 
-- **Step 6A, contrast example (4.G.1):** depends on item 4. If 4.GSR.8.1 becomes a `merge`, replace
+- **E17 (section 7, 4.G.1):** depends on item 4. If 4.GSR.8.1 becomes a `merge`, reword
   the example or reword it.
 - ~~**Contrast example (3.GSR.6.1):** described as covering "only identifying".~~ Done: under the
   `overlap` rule the example now says it also adds solving problems and is `overlap` (item 37).
-- **Step 6A, 4.NBT.2 example:** remove the note on the Georgia mapping once item 1 is re-adjudicated.
+- **E16 (section 7, 4.NBT.2):** remove the note on the Georgia mapping once item 1 is re-adjudicated.
 - ~~**Step 6B examples table and section 7, 3.NR.4.4:** say why the standard states 3.NF.3a's requirement.~~
   Done in version 1.2: E9 and the step 6B examples table now cite Georgia's guidance ("the same size or on
   the same location on a number line").
@@ -151,7 +151,7 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 - **Test B, "comparable level":** vague. A pointer to the CCSS Progressions would help, but the annotation instructions
   limit annotators to the provided materials; either add the Progressions to those materials or
   define "comparable level" in the guideline.
-- **Step 6A, 4.NBT.2 example:** say that 4.NR.1.1 lacks 4.NBT.2's "number names" on purpose
+- **E16 (section 7, 4.NBT.2):** say that 4.NR.1.1 lacks 4.NBT.2's "number names" on purpose
   (Georgia's guidance: "Students are not expected to write numbers in word form"), and that this is
   allowed within a split.
 - **Section 8 vs. the gold:** the guideline now has `split_with` and `merge_with` columns (needed
@@ -162,7 +162,7 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 
 - **3.NR.1.1:** our files (`raw/standards/ga/georgia_math_3.json`, `states/ga/ga_input.json`, the gold)
   read "up to 10,000 **to the thousands** using base-ten numerals…"; the official standards PDF (p. 36)
-  has no "to the thousands". The quote in step 6A (the 4.NBT.2 table) inherits it. Fix the source files, then the quote.
+  has no "to the thousands". The quote in E16 (the 4.NBT.2 table) inherits it. Fix the source files, then the quote.
 - **3.NR.1.3:** our files read "round whole numbers **within** up to 1000"; the PDF reads "up to 1000".
 - Known transcription artifacts, already noted: K.NR.4.1 "0- 20" (official "0-20"); 5.MDR.7.2 missing its
   final period.
