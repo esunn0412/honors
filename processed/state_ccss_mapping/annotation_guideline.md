@@ -8,22 +8,21 @@ jointly adjudicating a complete mapping of Georgia's K–5 standards, and it is 
 state. Every rule is meant to be applied the same way by different annotators working alone; where a
 judgment could go either way, the guideline states which way to go.
 
-**How to use it.** Read sections 1–9 once before starting. While annotating, work from the
-**quick reference** (section 10) and look up cases in **Find your case** below. Each rule is stated in
+**How to use it.** Read sections 1–8 once before starting. While annotating, work from the
+**quick reference** (section 9) and look up cases in **Find your case** below. Each rule is stated in
 full in one place; other sections point to it.
 
 ## Contents
 
 1. [The task](#1-the-task)
-2. [How to work](#2-how-to-work): calibration, independence, questions
-3. [Units](#3-units): which state and CCSS units to annotate and cite
-4. [Reading a standard](#4-reading-a-standard): what one standard requires
-5. [Comparing standards: the four tests](#5-comparing-standards-the-four-tests): whether two standards share a requirement, and which is inside which
-6. [Relationship types](#6-relationship-types): what the seven labels mean, per row
-7. [Decision procedure](#7-decision-procedure): finding the codes and labeling each row; step 5 which is inside which, step 6 split, subset, merge or superset
-8. [Worked examples](#8-worked-examples): E1–E15
-9. [What to record](#9-what-to-record)
-10. [Quick reference](#10-quick-reference)
+2. [Units](#2-units): which state and CCSS units to annotate and cite
+3. [Reading a standard](#3-reading-a-standard): what one standard requires
+4. [Comparing standards: the four tests](#4-comparing-standards-the-four-tests): whether two standards share a requirement, and which is inside which
+5. [Relationship types](#5-relationship-types): what the seven labels mean, per row
+6. [Decision procedure](#6-decision-procedure): finding the codes and labeling each row; step 5 which is inside which, step 6 split, subset, merge or superset
+7. [Worked examples](#7-worked-examples): E1–E15
+8. [What to record](#8-what-to-record)
+9. [Quick reference](#9-quick-reference)
 
 ## Find your case
 
@@ -39,17 +38,17 @@ full in one place; other sections point to it.
 | the number range, number type or place value differs | Test D (bounds): always matters | E5 |
 | the only matching CCSS code is at another grade | grade alone never matters: `exact` if otherwise the same | E7, E8 |
 | a CCSS code is a prerequisite or only a definition (e.g. 3.MD.5a) | Test B (not a match): don't cite it | E11 |
-| the state standard matches a CCSS parent's general statement | Section 3: cite all its lettered parts | E10 |
-| the state's guidance adds something the text doesn't say | Section 4.1: guidance interprets, never adds | — |
+| the state standard matches a CCSS parent's general statement | Section 2: cite all its lettered parts | E10 |
+| the state's guidance adds something the text doesn't say | Section 3.1: guidance interprets, never adds | — |
 | the state standard matches one code and has an extra part | Step 3: look for a code that requires the extra part; none → `state_superset` (step 6B) | E3, E4 |
 | several codes each cover part of the state standard | Step 6B: together they make up all of it → `merge`; something left over → `state_superset` | E9, E10, E11 |
 | the state standard covers only part of a code, and no other standard covers the rest | Step 6A → `state_subset` | E6 |
-| the two share some requirements, and each also has one the other lacks | Step 5 → `overlap`; it still counts as a piece | patterns 6–8 in section 6 |
+| the two share some requirements, and each also has one the other lacks | Step 5 → `overlap`; it still counts as a piece | patterns 6–8 in section 5 |
 | two or more state standards each cover a different part of one code | Step 6A → `split` | E12 |
 | an earlier or narrower state standard covers part of a code another standard covers more fully | Step 6A → `state_subset` | 4.NBT.2 table in step 6 |
-| you already marked a CCSS code `exact` and find a second state standard like it | Section 6, `exact` row: re-examine both | — |
+| you already marked a CCSS code `exact` and find a second state standard like it | Section 5, `exact` row: re-examine both | — |
 | the state standard both adds and lacks something | Step 5 → `overlap` | 3.GSR.6.1 in step 6 |
-| you are still unsure | Use the "when unsure" default in section 5.2 or step 6A; mark `low` confidence | — |
+| you are still unsure | Use the "when unsure" default in section 4.2 or step 6A; mark `low` confidence | — |
 
 ---
 
@@ -59,38 +58,20 @@ For each state standard, record:
 
 1. **which CCSS codes it corresponds to** (zero, one or more), and
 2. **how it relates to each**: one of seven relationship types per (state standard, CCSS code) pair
-   (section 6).
+   (section 5).
 
 A "correspondence" means the two standards require the same learning of students. It does not mean
 they are on the same topic.
 
 ---
 
-## 2. How to work
-
-The annotations are used to measure agreement between annotators, so they must be independent.
-
-- **Calibrate first.** Before annotating, map the short practice set of standards from the adjudicated
-  Georgia mapping and compare your answers with the adjudicated ones. Discuss differences only in terms
-  of this guideline. Practice items are not part of the agreement measurement.
-- **Work alone.** Do not discuss standards, decisions or difficult cases with the other annotators
-  until the annotation is finished.
-- **Use only the provided materials:** the state standards (with the state's own context and guidance
-  where provided), the CCSS K–5 list (with domains, clusters and parent standards), and this guideline.
-- **Do not consult other mappings or crosswalks** of this state to CCSS (published, commercial or
-  automatic), or any model's output.
-- **Questions go to the shared question log**, not to other annotators. Answers are sent to all
-  annotators in writing, so everyone works from the same guideline.
-
----
-
-## 3. Units
+## 2. Units
 
 **State side.** Annotate each state standard at its **lowest level**: the smallest unit the state
 itself numbers or letters (e.g. Georgia `K.NR.1.1`; a lettered part of a Virginia standard, `3.MG.2 a)`).
 Sub-points under that unit (e.g. Roman numerals i, ii under a lettered part) belong to it and are not
 annotated separately. Each unit gets one row per CCSS code it corresponds to, or one row with no code
-(section 9).
+(section 8).
 
 **CCSS side.** Cite **leaf codes**: a CCSS standard's lettered parts where it has them (e.g. `3.MD.7a`,
 `3.MD.7b`), otherwise the standard itself (e.g. `3.MD.6`). Never cite a parent standard that has
@@ -101,11 +82,11 @@ lettered parts (e.g. `3.MD.7`).
 
 ---
 
-## 4. Reading a standard
+## 3. Reading a standard
 
-This section is about one standard at a time: what it requires. Section 5 compares two.
+This section is about one standard at a time: what it requires. Section 4 compares two.
 
-### 4.1 The standard's own text sets the requirement
+### 3.1 The standard's own text sets the requirement
 
 What a standard requires is what its own text says. The surrounding context (domain, cluster, parent
 standard) and the state's guidance (examples, strategies, limits) are used only to **interpret** that
@@ -120,7 +101,7 @@ grade. Context and guidance never **add** a requirement the text doesn't state.
 to state. Reading the requirement from the text keeps annotators consistent and makes mappings of
 different states comparable. It is not a judgment that the guidance matters less for teaching.
 
-### 4.2 Describe the core requirement
+### 3.2 Describe the core requirement
 
 Describe each standard (the state standard and each candidate CCSS code) by:
 
@@ -136,17 +117,17 @@ line plot"). List each separately.
 
 ---
 
-## 5. Comparing standards: the four tests
+## 4. Comparing standards: the four tests
 
 Comparing a state standard with a CCSS code comes down to two questions. The four tests answer them;
-the decision procedure (section 7) applies them, and they are referred to by letter throughout.
+the decision procedure (section 6) applies them, and they are referred to by letter throughout.
 
 | Question | Tests | What the answer decides |
 |---|---|---|
 | 1. Do the two standards share a requirement? | A (requirement), B (not a match) | yes → the pair gets a row; no → no row (step 3) |
-| 2. Which is inside which? | C (separate objective), D (bounds) | which differences matter; a difference that matters means the standard that has it is not inside the other (the one without it may still be inside). That gives the label's first column in section 6: each inside the other, one inside the other, or neither (step 5) |
+| 2. Which is inside which? | C (separate objective), D (bounds) | which differences matter; a difference that matters means the standard that has it is not inside the other (the one without it may still be inside). That gives the label's first column in section 5: each inside the other, one inside the other, or neither (step 5) |
 
-### 5.1 Do the two standards share a requirement? (Tests A and B)
+### 4.1 Do the two standards share a requirement? (Tests A and B)
 
 #### Test A (requirement): shared requirement, not shared topic
 
@@ -171,15 +152,15 @@ Do not cite a CCSS code that is:
   teach some content earlier or later than CCSS), but a code two or more grades away must require the
   same action on the same content at a comparable level.
 
-### 5.2 Which is inside which? (Tests C and D)
+### 4.2 Which is inside which? (Tests C and D)
 
 When one standard has something the other doesn't, the difference either **matters** (the standard
 that has it is not inside the other) or is **ignored**. For example, if a code has a part the state
 standard lacks, the code is not inside the state standard, but the state standard can still be inside
 the code (`split` or `state_subset`, with other standards covering the rest). Test C decides for differences in what students
 do; Test D for differences in bounds. Grade never matters: the same requirement at another grade is
-`exact` (section 6). **When unsure** whether a difference matters, treat it as ignored, and mark the
-row `low` confidence (section 9).
+`exact` (section 5). **When unsure** whether a difference matters, treat it as ignored, and mark the
+row `low` confidence (section 8).
 
 #### Test C (separate objective): does a difference in what students do matter?
 
@@ -229,11 +210,11 @@ range of a fluency expectation is a bound too: fluently within 10 is inside flue
 
 ---
 
-## 6. Relationship types
+## 5. Relationship types
 
 Each row of the annotation is one **(state standard, CCSS code) pair**, and each row gets one of seven
-labels describing **that pair** (section 9). A state standard with several codes has several rows,
-and they may carry different labels. This section says what each label means; section 7 says how to
+labels describing **that pair** (section 8). A state standard with several codes has several rows,
+and they may carry different labels. This section says what each label means; section 6 says how to
 choose one.
 
 The labels rest on one question: **which standard is inside which?** One standard is inside another
@@ -280,18 +261,18 @@ CCSS code requires.
 | 7 | An overlap piece completing a merge | X = x1 + x2; S = all of X; T = all of A + x1 | S–X `exact`; T–X `overlap` (T has A, which X lacks; X has x2, which T lacks); T–A `merge` (A and the overlap piece X make up T). X has different labels on different rows. |
 | 8 | Overlap that isn't needed | V = all of A; S = a1 + y | V–A `exact`; S–A `overlap` (S has y, which A lacks; A has a2, which S lacks) |
 
-Section 7 applies these rules to Georgia standards (steps 5–6), and section 8 has worked examples.
+Section 6 applies these rules to Georgia standards (steps 5–6), and section 7 has worked examples.
 
 ---
 
-## 7. Decision procedure
+## 6. Decision procedure
 
 Steps 1–4 find the codes, one row each; steps 5–6 label each row. Record the step at which you decided
 in the row's rationale.
 
 ### Step 1. Describe
 
-Describe the state standard's core requirement: action, content, bounds (section 4.2).
+Describe the state standard's core requirement: action, content, bounds (section 3.2).
 
 ### Step 2. Search
 
@@ -329,7 +310,7 @@ For each row, compare the state standard with the code (Tests C and D; grade doe
 - **The code is inside the state standard** (the state standard has more) → step 6, part B.
 
 For how these labels combine across rows (e.g. an `overlap` piece completing a `split`), see the
-common patterns in section 6.
+common patterns in section 5.
 
 ### Step 6. Do the pieces make up the whole?
 
@@ -399,7 +380,7 @@ its task) still counts as inside: note it in the rationale.
 
 ---
 
-## 8. Worked examples
+## 7. Worked examples
 
 All from the adjudicated Georgia mapping. Each gives the state text, the CCSS text, the label and
 what decided it.
@@ -409,7 +390,7 @@ what decided it.
 | `exact` | E1, E2, E7 |
 | `state_superset` | E3, E4, E8 |
 | `state_subset` | E5, E6 |
-| `overlap` | 3.GSR.6.1 (step 6), patterns 6–8 in section 6 |
+| `overlap` | 3.GSR.6.1 (step 6), patterns 6–8 in section 5 |
 | `merge` | E9, E10, E11 |
 | `split` | E12 |
 | `none` | E13, E14, E15 |
@@ -477,7 +458,7 @@ what decided it.
 **E9. `merge`: two codes, one missing only an attached demand.**
 - **Georgia 3.NR.4.4:** "Recognize and generate simple equivalent fractions."
 - **CCSS 3.NF.3a and 3.NF.3b.**
-- **Decided by:** section 4.1 and step 6B. The text states 3.NF.3b's core ("recognize and generate
+- **Decided by:** section 3.1 and step 6B. The text states 3.NF.3b's core ("recognize and generate
   simple equivalent fractions"), and Georgia's guidance interprets "equivalent" as 3.NF.3a does: "two
   fractions are equal when they are the same size or on the same location on a number line". It does
   not state 3.NF.3b's "explain why", but that is an attached demand (Test C), so both codes are inside
@@ -488,7 +469,7 @@ what decided it.
 - **Georgia 1.NR.1.2:** "Explain that the two digits of a 2-digit number represent the amounts of tens
   and ones."
 - **CCSS 1.NBT.2a, 1.NBT.2b, 1.NBT.2c.**
-- **Decided by:** section 3. It matches the general statement of 1.NBT.2 (a parent), so all three
+- **Decided by:** section 2. It matches the general statement of 1.NBT.2 (a parent), so all three
   lettered parts are cited.
 
 **E11. `merge` with an excluded definition.**
@@ -531,7 +512,7 @@ what decided it.
 
 ---
 
-## 9. What to record
+## 8. What to record
 
 **One row per (state standard, CCSS code) pair**, the same layout as the adjudicated Georgia mapping
 (`states/ga/gold.csv`). A state standard with several codes gets one row per code; a CCSS code shared
@@ -541,15 +522,15 @@ by several state standards appears on each of their rows; a `none` standard gets
 |---|---|
 | `state_code` | The state standard's code |
 | `ccss_code` | One CCSS leaf code; empty for `none` |
-| `relationship` | One of the seven types, for this pair (section 6) |
+| `relationship` | One of the seven types, for this pair (section 5) |
 | `split_with` | On a `split` row, and on an `overlap` row that helps make up this row's code: the other state standards that, together with this row's state standard, make up this row's code. Otherwise empty. |
 | `merge_with` | On a `merge` row, and on an `overlap` row that helps make up this row's state standard: the other CCSS codes that, together with this row's code, make up this row's state standard. Otherwise empty. |
-| `confidence` | `high`: the guideline decides it clearly; `medium`: a judgment within a clear rule; `low`: you used a "when unsure" default (section 5.2 or step 6A) |
+| `confidence` | `high`: the guideline decides it clearly; `medium`: a judgment within a clear rule; `low`: you used a "when unsure" default (section 4.2 or step 6A) |
 | `rationale` | One or two sentences: the requirement matched, the decisive difference (if any), and the test or step that decided it (e.g. "Step 6, Test D: rounds to hundredths only, CCSS to any place"). |
 
 A standard's rows may carry different labels, because each describes one pair. `split_with` and
 `merge_with` record which rows belong together, including the `overlap` rows that help make up a whole.
-An `overlap` row that helps on neither side (pattern 8 in section 6) leaves both empty; one that helps
+An `overlap` row that helps on neither side (pattern 8 in section 5) leaves both empty; one that helps
 on both sides fills both.
 
 | Example | `state_code` | `ccss_code` | `relationship` | `split_with` | `merge_with` |
@@ -560,11 +541,11 @@ on both sides fills both.
 | | 3.MDR.5.3 | 3.MD.1 | `split` | 3.MDR.5.2 | |
 | Georgia superset | K.NR.2.1 | K.CC.1 | `state_superset` | | |
 | Georgia none | K.NR.1.4 | | `none` | | |
-| Pattern 6 (section 6): S is part of two splits, one per row | S | A | `overlap` | T | B |
+| Pattern 6 (section 5): S is part of two splits, one per row | S | A | `overlap` | T | B |
 | | S | B | `overlap` | U | A |
 | | T | A | `split` | S | |
 | | U | B | `split` | S | |
-| Pattern 7 (section 6): an overlap piece completing a merge | S | X | `exact` | | |
+| Pattern 7 (section 5): an overlap piece completing a merge | S | X | `exact` | | |
 | | T | X | `overlap` | | A |
 | | T | A | `merge` | | X |
 
@@ -579,14 +560,14 @@ on both sides fills both.
 
 ---
 
-## 10. Quick reference
+## 9. Quick reference
 
 *A one-page summary; the full rules are in the sections named.*
 
-**Units** (section 3). State standard at its lowest level. CCSS leaf codes only; if the state standard
+**Units** (section 2). State standard at its lowest level. CCSS leaf codes only; if the state standard
 matches a parent's general statement, cite all its lettered parts.
 
-**Tests** (section 5). Question 1, a shared requirement: A, B. Question 2, which is inside which: C, D.
+**Tests** (section 4). Question 1, a shared requirement: A, B. Question 2, which is inside which: C, D.
 - **A (requirement):** the same action on the same content, not a shared topic; bounds may differ.
 - **B (not a match):** don't cite prerequisites, assumed definitions, same-topic codes with a different
   action, or distant-grade topic matches.
@@ -594,7 +575,7 @@ matches a parent's general statement, cite all its lettered parts.
   wording, examples, recording/justifying, receptive vs. productive form, or ordinary components.
 - **D (bounds):** different bounds always matter (range, number type, place value, cases, steps).
 
-**Steps** (section 7).
+**Steps** (section 6).
 1. **Describe** the requirement: action, content, bounds.
 2. **Search** all grades and domains.
 3. **Keep** codes that share a requirement, whole or a part (A, B); check siblings; look for a code for
