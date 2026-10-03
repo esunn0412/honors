@@ -315,7 +315,7 @@ counts as inside; note it in the rationale. Examples: E3, E9, E11.
 ## 7. Worked examples
 
 From the Georgia mapping. Each gives the state text, the CCSS text, the label and what decided it.
-E16 and E17 follow this guideline where the adjudicated mapping currently differs (noted in each).
+E7, E16 and E17 follow this guideline where the adjudicated mapping currently differs (noted in each).
 
 | Label | Examples |
 |---|---|
@@ -377,7 +377,8 @@ E16 and E17 follow this guideline where the adjudicated mapping currently differ
 - **CCSS 3.NF.3d (grade 3):** essentially the same text, plus "Record the results of comparisons with
   the symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
 - **Decided by:** Test C and step 5. Recording with symbols and justifying are demands attached to the
-  same task, so each is inside the other: `exact`, although the grades differ.
+  same task, so each is inside the other: `exact`, although the grades differ. (The adjudicated Georgia
+  mapping labels it `different_grade`, a label this guideline no longer uses.)
 
 **E8. `state_superset` across grades: scope wins over grade.**
 - **Georgia 3.PAR.3.4 (grade 3):** "Use the meaning of the equal sign to determine whether expressions

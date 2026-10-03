@@ -158,6 +158,16 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
   because an `overlap` row may or may not help make up a split or merge); `gold.csv` has neither. Add
   them when the gold is re-adjudicated.
 
+- **Section 7, worked examples to add once their items are re-adjudicated.** The guideline's newer
+  rules have few or no real Georgia examples yet. Add each in the usual format and update the label
+  index at the top of section 7:
+  - 3.MDR.5.5 → 3.MD.2, a clear `overlap` (item 36);
+  - 1.MDR.6.1, `state_superset` alongside an `overlap` row (item 22);
+  - 4.MDR.6.1, `merge` completed by an `overlap` piece (item 30);
+  - 3.PAR.3.2 → 3.OA.7, fluency as a difference that matters (item 44);
+  - a replacement for E15, depending on item 16.
+  Then drop the "currently differs" notes from E7, E16 and E17 once the gold matches them.
+
 ## 7. Source-text errors (in our Georgia files, not in the guideline)
 
 - **3.NR.1.1:** our files (`raw/standards/ga/georgia_math_3.json`, `states/ga/ga_input.json`, the gold)
