@@ -42,8 +42,8 @@ rules in part 5.
 | # | Georgia standard(s) | Gold | Educator reading implies | Why |
 |---|---|---|---|---|
 | 16 | K.MDR.7.3, 1.MDR.6.4, 2.MDR.5.4, 3.MDR.5.1, 4.MDR.6.2, 5.MDR.7.2 ("Ask questions and answer them based on gathered information, observations, and appropriate graphical displays…") | `none` (also worked example E15) | at least grades 1–3: `state_subset` of the grade's data code (1.MD.4, 2.MD.10, 3.MD.3); K, 4 and 5 to be checked | These are Georgia's data standards (domain MDR), not general practices; Georgia has separate practice standards (K.MP.1–8 etc.). The Progressions describe 1.MD.4 in nearly Georgia's words: students "ask and answer questions about categorical data based on a representation of the data". 1.MDR.6.4's "compare and order whole numbers" matches 1.MD.4's "how many more or less". 1.MD.4, 2.MD.10 and 3.MD.3 are cited nowhere in the gold, so the mapping implies Georgia has no data standards in grades 1–3. **Strongest item from this review.** |
-| 17 | 4.NR.2.1 → 4.NBT.4 | `exact` | `state_subset` (under R1) | 4.NBT.4 requires "using the standard algorithm"; 4.NR.2.1 instead says "using place value understanding, properties of operations, and relationships between operations". The standard algorithm is a required method, not an "e.g."; teachers treat it as its own objective, and Georgia's omission of it is deliberate. |
-| 18 | 5.NR.2.1 → 5.NBT.5 | `state_subset` | label unchanged; add the reason | Its text also lacks "using the standard algorithm"; Georgia's guidance makes it optional ("Students may also use a standard algorithm…"). This adds to the narrower bounds already noted. |
+| 17 | 4.NR.2.1 → 4.NBT.4 | `exact` | ~~`state_subset` (under R1)~~ settled: stays `exact` (R1 declined) | 4.NBT.4 requires "using the standard algorithm"; 4.NR.2.1 instead says "using place value understanding, properties of operations, and relationships between operations". The standard algorithm is a required method, not an "e.g."; teachers treat it as its own objective, and Georgia's omission of it is deliberate. |
+| 18 | 5.NR.2.1 → 5.NBT.5 | `state_subset` | settled: unchanged (R1 declined) | Its text also lacks "using the standard algorithm"; Georgia's guidance makes it optional ("Students may also use a standard algorithm…"). This adds to the narrower bounds already noted. |
 | 19 | 1.NR.2.4 → 1.OA.6 | `exact` | `state_subset`, or `split` with 1.NR.2.2 (under R2) | 1.OA.6 requires adding and subtracting within 20 with strategies, and fluency within 10. 1.NR.2.4 covers fluency within 10 only (Test D); 1.NR.2.2 (strategies within 20) may cover the rest. Related to item 2. |
 | 20 | K.NR.4.1 → K.CC.3 (worked example E2) | `exact` | contested: possibly `state_subset` | Kindergarten teachers treat writing numerals as its own skill (a fine-motor demand; often reported separately), and "Write numbers from 0 to 20" is its own sentence in K.CC.3. The current rule (receptive vs. productive form, Test C) is clear; the question is whether educators accept it. Classroom judgment, not a source finding. |
 | 21 | 3.GSR.7.1 → 3.MD.5b + 3.MD.6 (worked example E11) | `merge` | contested: possibly add 3.MD.5a | 3.MD.5a and 3.MD.5b are both phrased as definitions ("is said to have"), and 3.GSR.7.1's "multiple copies of the same unit" arguably states 5a's unit. Either add 5a or explain in Test B why 5a is a definition and 5b is not. |
@@ -81,30 +81,35 @@ side. A row-by-row pass over the gold's 23 merges and all split, subset and supe
 | 37 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` | The standard adds "solve problems involving" the figures (a separate objective, Test C); 4.G.1 adds drawing. Now the guideline's `overlap` contrast example. |
 | 38 | 3.GSR.6.2 → 4.G.2 | `state_subset` | `overlap` | The standard adds analyzing 3-D figures for quadrilateral faces; 4.G.2 adds right triangles. |
 | 39 | 4.GSR.8.3 → 4.MD.3 | `state_subset` | `overlap`; consider also citing 3.MD.7d | The standard adds composite rectangles, which is CCSS 3.MD.7d ("Find areas of rectilinear figures by decomposing them into non-overlapping rectangles…"), cited nowhere in the gold. |
-| 40 | 5.NR.2.2 → 5.NBT.6 | `state_subset` | `overlap` if fluency counts (R2), else `state_subset` | The standard says "fluently divide"; 5.NBT.6 does not ask for fluency. |
+| 40 | 5.NR.2.2 → 5.NBT.6 | `state_subset` | `overlap` (R2 adopted) | The standard says "fluently divide"; 5.NBT.6 does not ask for fluency. |
 | 41 | 1.NR.2.2 → 1.OA.1 | `split` | `overlap` | "Develop strategies … by exploring strings of related problems" is not in 1.OA.1. See item 2. |
 | 42 | 3.MDR.5.2 → 3.MD.1 | `split` | `split`, or `overlap` if estimating to the quarter hour is a separate objective | Also changes worked example E12 if `overlap`. |
 | 43 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; worked example E7 already updated. |
+| 44 | 3.PAR.3.2 → 3.OA.7 | `exact` | `state_subset` | 3.OA.7 asks students to "Fluently multiply and divide within 100" and to "know from memory all products of two one-digit numbers"; 3.PAR.3.2 asks them to represent the facts with strategies and explain the relationship between multiplication and division, not fluency (R2). No other grade-3 Georgia standard covers the fluency. |
 
 ## 5. Proposed rules (drafts for the annotators to approve)
 
 Not in the guideline yet. Each gives the draft wording, where it goes, and the gold items it affects.
 
-**R1. Required methods.** *Test C, add to the "Matters" list:*
-> A specific procedure the standard requires, not as an example (e.g. "using the standard algorithm"
-> in 4.NBT.4 and 5.NBT.5).
+**R1. Required methods.** **Declined Oct 3, 2026:** a specific procedure such as "using the standard
+algorithm" is in Test C's "Ignored" list, as in the gold (neither document defines it as a separate
+expectation the way both define fluency). Items 17 and 18 stand as in the gold: 4.NR.2.1 → 4.NBT.4
+stays `exact`, and 5.NR.2.1 → 5.NBT.5 stays `state_subset` for its bounds alone.
 
-*And to the "Ignored" item on methods, add:* "Broad families of methods ('strategies based on place
-value, properties of operations, and/or the relationship between addition and subtraction') are not a
-specific procedure." Without that limit, R1 would also affect standards such as 3.PAR.2.1 → 3.NBT.2,
-whose CCSS text lists broad methods. Affects items 17 and 18.
+**R2. Fluency.** ~~Draft.~~ **Adopted Oct 3, 2026:** fluency is in Test C's "Matters" list, and the range of
+a fluency expectation is a bound (Test D). Basis: both documents define fluency as its own expectation
+(CCSS: "fast and accurate"; Georgia: choosing "flexibly among methods and strategies … accurately and
+efficiently", "not … timed tests or speed"); "fluently" on both sides counts as the same expectation.
+Other how-to qualifiers ("mentally", "using the standard algorithm") are explicitly ignored. The gold did not treat fluency as mattering (3.PAR.3.2 →
+3.OA.7 is `exact` although only the CCSS code asks for fluency). Re-check of every gold row that
+mentions fluency:
 
-**R2. Fluency.** *Test C, add to the "Matters" list:*
-> Fluency ("fluently", "demonstrating fluency") as well as, or instead of, computing with strategies.
-
-*And to Test D:* "The range of a fluency expectation is a bound (fluently within 10 vs. within 20)."
-Affects item 19; the other fluency standards in the gold (K.NR.5.4, 2.NR.2.1, 2.NR.2.4, 3.PAR.2.1,
-4.NR.2.1, 5.NR.2.1, 5.NR.2.2) should be re-checked against it.
+- **Unchanged:** K.NR.5.4, 2.NR.2.1, 2.NR.2.4, 3.PAR.2.1, 5.NR.2.1 (fluency on both sides; 5.NR.2.1 is
+  already `state_subset` for its bounds). 4.NR.2.1 is unchanged by R2 (see item 17 for the standard
+  algorithm).
+- **1.NR.2.4 → 1.OA.6:** item 19 (`state_subset`, or `split` with 1.NR.2.2).
+- **5.NR.2.2 → 5.NBT.6:** item 40 becomes `overlap` (Georgia adds fluency; 5.NBT.6 has divisors above 25).
+- **3.PAR.3.2 → 3.OA.7:** item 44.
 
 **R3. Practice standards.** *Section 3, state side, new paragraph:*
 > Annotate content standards only. A state's own practice standards (e.g. Georgia K.MP.1–8 at each

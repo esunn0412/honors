@@ -188,11 +188,19 @@ teach and assess as its own goal.
 
 - a different product or skill: making a line plot, drawing figures, solving word problems, a second
   operation, counting backward as well as forward, measuring elapsed time;
+- fluency ("fluently", "demonstrating fluency", including CCSS's "know from memory") as well as, or
+  instead of, computing with strategies. Both documents define fluency as its own expectation: CCSS
+  uses "fluent" to mean "fast and accurate" (CCSS Progressions), and Georgia defines it as being able
+  to "choose flexibly among methods and strategies to solve mathematical problems accurately and
+  efficiently" (Georgia's Terminology notes). When both standards ask for fluency, treat it as the same
+  expectation, even though the two definitions differ;
 - a different or wider number range, number type, place value or set of cases (Test D).
 
 **Ignored:**
 
-- wording, phrasing, emphasis;
+- wording, phrasing, emphasis (but not "fluently", above);
+- other words about how the action is done, such as "mentally" or a specific procedure ("using the
+  standard algorithm"): unlike fluency, neither document defines these as a separate expectation;
 - methods, tools or representations given as examples ("e.g.", "such as", "for example", "using
   objects or drawings");
 - a demand attached to the same task: recording the result with symbols, justifying or explaining the
@@ -214,7 +222,8 @@ They are still worth recording: note a missing "explain" or "justify" in the rat
 A different number range (to 20 vs. to 100), number type (whole numbers vs. fractions vs. decimals),
 place value (to hundredths vs. to any place), denominators, number of digits, number of steps, or set
 of cases. The standard with the narrower bounds is inside the other (e.g. rounding to hundredths is
-inside rounding to any place); if each is wider in a different way, neither is inside the other.
+inside rounding to any place); if each is wider in a different way, neither is inside the other. The
+range of a fluency expectation is a bound too: fluently within 10 is inside fluently within 20.
 
 ---
 
