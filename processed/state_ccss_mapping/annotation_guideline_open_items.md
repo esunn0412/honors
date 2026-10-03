@@ -1,6 +1,6 @@
 # Open items: conflicts for re-adjudication and pending edits
 
-*Companion to [`annotation_guideline.md`](annotation_guideline.md), version 1.2 (Sep 30, 2026). For the adjudication meeting only: it discusses specific answers in the adjudicated Georgia mapping, so don't give it to annotators or use it in calibration (guideline section 10). "Section" numbers below refer to the guideline.*
+*Companion to [`annotation_guideline.md`](annotation_guideline.md), version 1.2 (Sep 30, 2026). For the adjudication meeting only: it discusses specific answers in the adjudicated Georgia mapping, so don't give it to annotators or use it in calibration (guideline section 2). "Section" numbers below refer to the guideline.*
 
 A check of the guideline against the adjudicated Georgia mapping (`states/ga/gold.json`) found the
 cases below, where applying the guideline gives a different answer from the gold. The gold has **not**

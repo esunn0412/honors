@@ -9,13 +9,13 @@ state. Every rule is meant to be applied the same way by different annotators wo
 judgment could go either way, the guideline states which way to go.
 
 **How to use it.** Read sections 1–9 once before starting. While annotating, work from the
-**quick reference** (section 11) and look up cases in **Find your case** below. Each rule is stated in
+**quick reference** (section 10) and look up cases in **Find your case** below. Each rule is stated in
 full in one place; other sections point to it.
 
 ## Contents
 
 1. [The task](#1-the-task)
-2. [Independence](#2-independence)
+2. [How to work](#2-how-to-work): calibration, independence, questions
 3. [Units](#3-units): which state and CCSS units to annotate and cite
 4. [Reading a standard](#4-reading-a-standard): what one standard requires
 5. [Comparing standards: the four tests](#5-comparing-standards-the-four-tests): whether two standards share a requirement, and which is inside which
@@ -23,8 +23,7 @@ full in one place; other sections point to it.
 7. [Decision procedure](#7-decision-procedure): finding the codes and labeling each row; step 5 which is inside which, step 6 split, subset, merge or superset
 8. [Worked examples](#8-worked-examples): E1–E15
 9. [What to record](#9-what-to-record)
-10. [Process](#10-process)
-11. [Quick reference](#11-quick-reference)
+10. [Quick reference](#10-quick-reference)
 
 ## Find your case
 
@@ -67,17 +66,20 @@ they are on the same topic.
 
 ---
 
-## 2. Independence
+## 2. How to work
 
 The annotations are used to measure agreement between annotators, so they must be independent.
 
+- **Calibrate first.** Before annotating, map the short practice set of standards from the adjudicated
+  Georgia mapping and compare your answers with the adjudicated ones. Discuss differences only in terms
+  of this guideline. Practice items are not part of the agreement measurement.
 - **Work alone.** Do not discuss standards, decisions or difficult cases with the other annotators
   until the annotation is finished.
 - **Use only the provided materials:** the state standards (with the state's own context and guidance
   where provided), the CCSS K–5 list (with domains, clusters and parent standards), and this guideline.
 - **Do not consult other mappings or crosswalks** of this state to CCSS (published, commercial or
   automatic), or any model's output.
-- **Questions go to the question log** (section 10), not to other annotators. Answers are sent to all
+- **Questions go to the shared question log**, not to other annotators. Answers are sent to all
   annotators in writing, so everyone works from the same guideline.
 
 ---
@@ -577,26 +579,7 @@ on both sides fills both.
 
 ---
 
-## 10. Process
-
-1. **Calibration.** Before annotating, each annotator maps a short practice set of standards from the
-   adjudicated Georgia mapping (not from the state being annotated) and compares their answers with the
-   adjudicated answers. Differences are discussed only in terms of this guideline. Practice items are not
-   part of the agreement measurement.
-2. **Independent annotation.** Each annotator annotates their assigned standards alone (section 2), in
-   any order, without revising the guideline.
-3. **Question log.** Questions about the guideline go to a shared log. They are answered in writing by
-   the guideline owner, without reference to specific annotators' answers, and every answer is sent to
-   all annotators. Clarifications are added to the guideline's next version.
-4. **Agreement.** Each standard is annotated by two annotators; agreement is measured per annotator pair
-   with Cohen's kappa (0.60 acceptable, 0.70 usable, 0.80 or above strong).
-5. **Adjudication.** After agreement is measured, all annotators meet to resolve disagreements by the
-   guideline; the result is the gold mapping. Any guideline change made during adjudication is recorded
-   with its reason.
-
----
-
-## 11. Quick reference
+## 10. Quick reference
 
 *A one-page summary; the full rules are in the sections named.*
 
