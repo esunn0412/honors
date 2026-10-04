@@ -17,6 +17,7 @@
 | E11, 3.MD.5a (item 21) | **Keep**, justified by Test A, not a new rule: cite the codes whose content the text states | E11's "Decided by" rewritten | 3.GSR.7.1 stays 3.MD.5b + 3.MD.6 `merge` |
 | Distant-grade matches | **Replaced** the vague "at a comparable level" with a concrete rule: a code two or more grades **above** the state standard is not cited when the state standard covers it only with narrower bounds (an introductory pass). Deleting the rule outright would have created rows such as 1.MDR.6.2 → 3.MD.1, 1.PAR.3.2 → 4.OA.5 and 2.GSR.7.2 → 4.G.3 | Test B, step 3 and the quick reference | none: no gold row cites a code two or more grades above its state standard. Keeps E4, E14 and the K–2 pattern `none` rows |
 
+| Codes that aren't needed | **Not cited**: cite only the codes the state standard needs; a code whose shared part another kept code already covers relates to other standards (prerequisite or earlier/later pass) | Step 3; `state_superset` and step 6B lose their "not needed" case; pattern 4 now shows the code as not cited | 4.MDR.6.1 does not cite 3.MD.1 or 5.MD.1; the 3.MDR.5.5 candidates (4.MD.1, 2.MD.1, 2.MD.3) are cited only if no kept code covers their part |
 Earlier the same day: R1 declined (standard algorithm ignored), R2 adopted (fluency matters), per-row labels with `overlap`, `different_grade` removed.
 
 ## Relabels to confirm with the annotators (from the worked-example review)
@@ -41,6 +42,8 @@ the other annotators before changing `gold.json` / `gold.csv`.
 | 11 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` (both columns empty) | adds solving problems; 4.G.1 adds drawing; 4.GSR.8.1 alone makes up 4.G.1 | 37 |
 | — (not an example) | 3.MDR.5.5 → 3.MD.2 | `state_subset` | `overlap` | customary vs. metric units (Test D both ways); Georgia adds lengths and relative sizes of units | 36 |
 | — (not an example) | 3.MDR.5.5 → 4.MD.1, 2.MD.1, 2.MD.3 (new rows?) | not cited | likely `overlap` each | step 2 finds them: relative sizes of units (4.MD.1); measuring and estimating lengths (2.MD.1, 2.MD.3). **Decide whether to add** | 36 |
+| — (not an example) | 4.MDR.6.1 → 4.MD.1 | `merge` | `merge` (merge_with 4.MD.2) | converting within a system (both directions) is 4.MD.1's skill | 30 |
+| — (not an example) | 4.MDR.6.1 → 4.MD.2 | `merge` | `overlap` (merge_with 4.MD.1) | 4.MD.2 adds money and decimals (Test D); the standard's main action, solving problems with the four operations, is 4.MD.2's | 30 |
 
 Examples 1 (K.NR.1.2 → K.CC.4b `exact`) and 2 (K.NR.4.1 → K.CC.3 `exact`) and the 3.NR.4.2 → 3.NF.3d
 `state_subset` row in example 3 match the gold.

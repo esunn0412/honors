@@ -206,8 +206,8 @@ neither does grade.
 | `exact` | same standard, at any grade | each inside the other | a state standard has at most one `exact` row, and a CCSS code is `exact` with at most one state standard. If a second state standard seems `exact` with the same code, re-examine both: usually each covers a separate part of it (`split`), or one of them differs in scope |
 | `split` | the state standard is a piece of the code | the state standard is inside the code | the state standards that cover parts of the code together make up all of the code, and this row's state standard is needed for that |
 | `state_subset` | the state asks for less | the state standard is inside the code | the state standards that cover parts of the code do not make up all of the code; or they do, but this row's state standard is not needed for that |
-| `merge` | the code is a piece of the state standard | the code is inside the state standard | the CCSS codes that cover parts of the state standard together make up all of the state standard, and this row's code is needed for that |
-| `state_superset` | the state asks for more | the code is inside the state standard | the CCSS codes that cover parts of the state standard do not make up all of the state standard (some part of the state standard is covered by no CCSS code); or they do, but this row's code is not needed for that |
+| `merge` | the code is a piece of the state standard | the code is inside the state standard | the CCSS codes that cover parts of the state standard together make up all of the state standard |
+| `state_superset` | the state asks for more | the code is inside the state standard | the CCSS codes that cover parts of the state standard do not make up all of the state standard: some part of it (a separate objective or wider bounds) is covered by no CCSS code |
 | `overlap` | they share some requirements, and each also has a requirement the other lacks | neither | the row still counts as a piece on both sides: it helps the state standards that cover parts of the code make up the code, and the CCSS codes that cover parts of the state standard make up the state standard |
 | `none` | no CCSS counterpart | — | no CCSS K–5 code shares any of the state standard's requirements; one row, with no code |
 
@@ -234,7 +234,7 @@ CCSS code requires.
 | 1 | Split | A = a1 + a2; S = a1; T = a2 | S–A `split`, T–A `split`: S and T together make up A |
 | 2 | Split plus an earlier, narrower pass | as in 1, plus R = a smaller-number version of a1 | S–A `split`, T–A `split`, R–A `state_subset`: A is made up without R |
 | 3 | Merge | S = all of A + all of B | S–A `merge`, S–B `merge`: A and B together make up S |
-| 4 | Merge plus a code that isn't needed | S = all of B + all of C; A is inside S, but B already covers A's part more fully | S–B `merge`, S–C `merge`, S–A `state_superset`: S is made up without A |
+| 4 | A code that isn't needed | S = all of B + all of C; A is inside S, but B already covers A's part more fully | S–B `merge`, S–C `merge`; A is **not cited** (step 3): B and C make up S without it |
 | 5 | Superset | S = all of A + y | S–A `state_superset`: y is covered by no code |
 | 6 | Overlap pieces completing two splits | A = a1 + a2; B = b1 + b2; S = a1 + b1; T = a2; U = b2 | S–A `overlap`, S–B `overlap` (S has something each code lacks, and each code has something S lacks); T–A `split` (T and the overlap piece S make up A); U–B `split` (U and S make up B) |
 | 7 | An overlap piece completing a merge | X = x1 + x2; S = all of X; T = all of A + x1 | S–X `exact`; T–X `overlap` (T has A, which X lacks; X has x2, which T lacks); T–A `merge` (A and the overlap piece X make up T). X has different labels on different rows. |
@@ -270,6 +270,10 @@ Measurement and Data). Search in both directions:
 Keep a candidate code only if the state standard states one of its requirements, whole or a part
 (Test A); a shared detail, example or topic is not enough. Drop prerequisites, definitions, same-topic
 codes with a different action, and later codes the standard only introduces (Test B).
+
+Cite only the codes the state standard **needs**: a code whose shared part another kept code already
+covers is not cited. That code relates to other standards, as a prerequisite or an earlier or later
+pass. When two codes cover the same part, keep the one that covers it more fully.
 
 ### Step 4. Count
 
@@ -307,10 +311,10 @@ the row `low` confidence. Examples: E12, E16.
 **B. The code is inside the state standard.** Of all the codes that cover part of the state standard
 (the rows from steps 2–4, including `overlap` rows), which together make up all of it?
 
-| This row's code is… | Label |
+| The cited codes… | Label on each row whose code is inside the state standard |
 |---|---|
-| needed: with the others, it covers all of the state standard's parts | `merge` |
-| not needed (another code already covers its part more fully), or some part of the state standard, a separate objective or wider bounds (Tests C, D), is covered by no code | `state_superset` |
+| together cover all of the state standard's parts | `merge` |
+| leave some part uncovered: a separate objective or wider bounds (Tests C, D) that no code requires | `state_superset` |
 
 A `merge` needs at least two pieces. A code missing only an attached demand (e.g. "explain why") still
 counts as inside; note it in the rationale. Examples: E3, E9, E11.
@@ -558,7 +562,7 @@ matches a parent's general statement, cite all its lettered parts.
      overlaps) make up all of the code, and this row's state standard is needed → `split`; otherwise
      `state_subset`.
    - B (code inside the state standard): the CCSS codes covering parts of the state standard (incl.
-     overlaps) make up all of the state standard, and this row's code is needed → `merge`; otherwise
+     overlaps) make up all of the state standard → `merge`; otherwise
      `state_superset`.
 
 **Always.**
