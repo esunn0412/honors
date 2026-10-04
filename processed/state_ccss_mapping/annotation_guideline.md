@@ -271,9 +271,10 @@ Keep a candidate code only if the state standard states one of its requirements,
 (Test A); a shared detail, example or topic is not enough. Drop prerequisites, definitions, same-topic
 codes with a different action, and later codes the standard only introduces (Test B).
 
-Cite only the codes the state standard **needs**: a code whose shared part another kept code already
-covers is not cited. That code relates to other standards, as a prerequisite or an earlier or later
-pass. When two codes cover the same part, keep the one that covers it more fully.
+For each part of the state standard, cite the code that matches it **most closely**. A code is cited
+whenever it is the closest match for some part, even if it doesn't help make up a whole (e.g. an
+`overlap` or `state_subset` row). A code whose shared part another code matches more closely is not
+cited: it relates to other standards, as a prerequisite or an earlier or later pass.
 
 ### Step 4. Count
 
