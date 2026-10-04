@@ -20,7 +20,7 @@ it.
 4. [Comparing standards: the four tests](#4-comparing-standards-the-four-tests): whether two standards share a requirement, and which is inside which
 5. [Relationship types](#5-relationship-types): what the seven labels mean, per row
 6. [Decision procedure](#6-decision-procedure): finding the codes and labeling each row; step 5 which is inside which, step 6 split, subset, merge or superset
-7. [Worked examples](#7-worked-examples): E1–E15
+7. [Worked examples](#7-worked-examples): E1–E20
 8. [What to record](#8-what-to-record)
 9. [Quick reference](#9-quick-reference)
 
@@ -53,7 +53,7 @@ Mathematical Practice, which are not in the K–5 content list.
 `3.MD.7b`), otherwise the standard itself (e.g. `3.MD.6`). Never cite a parent standard that has
 lettered parts (e.g. `3.MD.7`).
 
-- The state standard matches the parent's general statement → cite **all** its lettered parts (E10).
+- The state standard matches the parent's general statement → cite **all** its lettered parts (E11).
 - It matches only some parts → cite **those**.
 
 ---
@@ -307,7 +307,7 @@ If two sets of standards each make up the code (e.g. in grade 3 and again, more 
 only the set with the fuller scope, usually nearest the code's grade, is `split`. A part covered with
 somewhat narrower bounds (e.g. quarter hours rather than minutes) still counts; note it in the
 rationale. **When unsure** whether this row's state standard is needed, choose `state_subset` and mark
-the row `low` confidence. Examples: E12, E16.
+the row `low` confidence. Examples: E15, E16, E17.
 
 **B. The code is inside the state standard.** Of all the codes that cover part of the state standard
 (the rows from steps 2–4, including `overlap` rows), which together make up all of it?
@@ -318,172 +318,393 @@ the row `low` confidence. Examples: E12, E16.
 | leave some part uncovered: a separate objective or wider bounds (Tests C, D) that no code requires | `state_superset` |
 
 A `merge` needs at least two pieces. A code missing only an attached demand (e.g. "explain why") still
-counts as inside; note it in the rationale. Examples: E3, E9, E11.
+counts as inside; note it in the rationale. Examples: E5, E10, E12, E13, E14.
 
 ---
 
 ## 7. Worked examples
 
-From the Georgia mapping. Each gives the state text, the CCSS text, the label and what decided it.
-E7, E16 and E17 follow this guideline where the adjudicated mapping currently differs (noted in each).
+From the Georgia mapping. Each gives the texts, the rows to record (section 8), what decided them and
+what the example shows. Where the adjudicated Georgia mapping currently differs, the example says so;
+those rows are being re-adjudicated.
 
 | Label | Examples |
 |---|---|
-| `exact` | E1, E2, E7 |
-| `state_superset` | E3, E4, E8 |
-| `state_subset` | E5, E6, E16 |
-| `overlap` | E17; patterns 6–8 in section 5 |
-| `merge` | E9, E10, E11 |
-| `split` | E12, E16 |
-| `none` | E13, E14, E15 |
+| `exact` | E1, E2, E3, E4, E14 |
+| `state_superset` | E5, E6, E7 |
+| `state_subset` | E3, E8, E9, E16 |
+| `merge` | E10, E11, E12, E13, E14 |
+| `split` | E15, E16, E17 |
+| `overlap` | E13, E14, E18 |
+| `none` | E19, E20 |
 
-**E1. `exact`: wording differs, requirement is the same.**
+**E1. `exact`: different wording, same requirement.**
 - **Georgia K.NR.1.2:** "When counting objects, explain that the last number counted represents the
   total quantity in a set (cardinality), regardless of the arrangement and order."
 - **CCSS K.CC.4b:** "Understand that the last number name said tells the number of objects counted.
   The number of objects is the same regardless of their arrangement or the order in which they were
   counted."
-- **Decided by:** Test C. "Explain" and "understand" name the same conceptual requirement; content and
-  bounds match.
 
-**E2. `exact`: receptive vs. productive form of the same skill.**
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| K.NR.1.2 | K.CC.4b | `exact` | | | high |
+
+- **Decided by:** step 5, Test C. "Explain" and "understand" are each their standard's whole task, so
+  they are compared as main actions, and they name the same conceptual requirement. Content and bounds
+  match.
+- **Shows:** the most common `exact`: the wording differs, the learning doesn't.
+
+**E2. `exact`: receptive and productive forms of the same skill.**
 - **Georgia K.NR.4.1:** "Identify written numerals 0-20 and represent a number of objects with a
   written numeral 0-20 (with 0 representing a count of no objects)."
 - **CCSS K.CC.3:** "Write numbers from 0 to 20. Represent a number of objects with a written numeral
   0-20 (with 0 representing a count of no objects)."
-- **Decided by:** Test C. Identifying vs. writing the same numerals is not a separate objective here;
-  the core requirement, representing quantities 0–20 with numerals, is identical.
 
-**E3. `state_superset`: an added separate objective no CCSS code requires.**
-- **Georgia K.NR.2.1:** "Count forward to 100 by tens and ones and backward from 20 by ones."
-- **CCSS K.CC.1:** "Count to 100 by ones and by tens."
-- **Decided by:** Test C and step 6B. K.CC.1 is inside it; counting backward is a separate
-  objective that no CCSS code requires, so it is left over.
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| K.NR.4.1 | K.CC.3 | `exact` | | | medium |
 
-**E4. `state_superset`: an added separate objective.**
-- **Georgia 1.MDR.6.2:** "Tell and write time in hours and half-hours using analog and digital clocks,
-  and measure elapsed time to the hour on the hour using a predetermined number line."
-- **CCSS 1.MD.3:** "Tell and write time in hours and half-hours using analog and digital clocks."
-- **Decided by:** Test C. Elapsed time is a separate objective.
+- **Decided by:** step 5, Test C. The second sentence is identical. Identifying vs. writing numerals
+  are receptive and productive forms of the same skill (Ignored). Rationale notes "identifies rather
+  than writes numerals".
+- **Shows:** a difference that looks like an action but is ignored; medium confidence for a judgment
+  within a clear rule.
 
-**E5. `state_subset`: narrower bounds.**
-- **Georgia 5.NR.4.3:** "Use place value understanding to round decimal numbers to the hundredths
-  place."
-- **CCSS 5.NBT.4:** "Use place value understanding to round decimals to any place."
-- **Decided by:** Test D. Hundredths only, vs. any place.
-
-**E6. `state_subset`: a missing separate objective no other standard covers.**
-- **Georgia 3.MDR.5.4:** "Use rulers to measure lengths in halves and fourths (quarters) of an inch
-  and a whole inch."
-- **CCSS 3.MD.4:** "Generate measurement data by measuring lengths using rulers marked with halves and
-  fourths of an inch. Show the data by making a line plot…"
-- **Decided by:** Test C and step 6A. Making a line plot is a separate objective, and no other Georgia
-  grade-3 standard covers it.
-
-**E7. `exact` across grades: same requirement; attached demands are ignored.**
+**E3. `exact` across grades, with an earlier `state_subset`.**
 - **Georgia 4.NR.4.2 (grade 4):** "Compare two fractions with the same numerator or the same
   denominator by reasoning about their size and recognize that comparisons are valid only when the two
   fractions refer to the same whole."
-- **CCSS 3.NF.3d (grade 3):** essentially the same text, plus "Record the results of comparisons with
-  the symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model."
-- **Decided by:** Test C and step 5. Recording with symbols and justifying are demands attached to the
-  same task, so each is inside the other: `exact`, although the grades differ. (The adjudicated Georgia
-  mapping labels it `different_grade`, a label this guideline no longer uses.)
+- **Georgia 3.NR.4.2 (grade 3):** "Compare two unit fractions by flexibly using a variety of tools and
+  strategies."
+- **CCSS 3.NF.3d (grade 3):** "Compare two fractions with the same numerator or the same denominator by
+  reasoning about their size. Recognize that comparisons are valid only when the two fractions refer to
+  the same whole. Record the results of comparisons with the symbols >, =, or <, and justify the
+  conclusions, e.g., by using a visual fraction model."
 
-**E8. `state_superset` across grades: scope wins over grade.**
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 4.NR.4.2 | 3.NF.3d | `exact` | | | high |
+| 3.NR.4.2 | 3.NF.3d | `state_subset` | | | high |
+
+- **Decided by:** 4.NR.4.2, step 5, Test C: recording with symbols and justifying are demands attached
+  to the same task (Ignored), so each is inside the other, a grade apart. 3.NR.4.2, steps 5 and 6A,
+  Test D: unit fractions only, so it is inside 3.NF.3d; 4.NR.4.2 already covers the whole code, so it
+  is not needed.
+- **Shows:** `exact` at a different grade; attached demands ignored; a narrower standard is not needed
+  when another covers the whole code. (The adjudicated mapping labels 4.NR.4.2 `different_grade`, a
+  label this guideline no longer uses.)
+
+**E4. `exact` through R4: "solve problems" is "solve word problems".**
+- **Georgia 1.NR.2.1:** "Use a variety of strategies to solve addition and subtraction problems within
+  20."
+- **CCSS 1.OA.1:** "Use addition and subtraction within 20 to solve word problems involving situations
+  of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all
+  positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to
+  represent the problem."
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 1.NR.2.1 | 1.OA.1 | `exact` | | | medium |
+
+- **Decided by:** step 5, Test C. Solving problems is the standard's main action, so it corresponds to
+  "solve word problems" (general setting entry). "A variety of strategies" and the CCSS "e.g." methods
+  are hows. The situation types and unknown positions come from Georgia's guidance ("a variety of
+  problem types within 20"), which interprets "problems" (section 3); hence medium confidence.
+- **Shows:** "solve problems" as a main action; guidance interpreting the text without adding a
+  requirement. (The adjudicated mapping labels it `split` with 1.NR.2.2; see E17.)
+
+**E5. `state_superset`: an added part no CCSS code requires.**
+- **Georgia K.NR.2.1:** "Count forward to 100 by tens and ones and backward from 20 by ones."
+- **CCSS K.CC.1:** "Count to 100 by ones and by tens."
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| K.NR.2.1 | K.CC.1 | `state_superset` | | | high |
+
+- **Decided by:** step 2 finds no code for counting backward (K.CC.2 counts forward); step 5: K.CC.1 is
+  inside, and counting backward is a separate objective (Matters); step 6B: the cited code leaves it
+  uncovered.
+- **Shows:** the plain superset (pattern 5), and why step 2 searches every part before step 6B.
+
+**E6. `state_superset`: a much later code is not cited.**
+- **Georgia 1.MDR.6.2 (grade 1):** "Tell and write time in hours and half-hours using analog and digital
+  clocks, and measure elapsed time to the hour on the hour using a predetermined number line."
+- **CCSS 1.MD.3 (grade 1):** "Tell and write time in hours and half-hours using analog and digital
+  clocks."
+- **Not cited, CCSS 3.MD.1 (grade 3):** "Tell and write time to the nearest minute and measure time
+  intervals in minutes. Solve word problems involving addition and subtraction of time intervals in
+  minutes, e.g., by representing the problem on a number line diagram."
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 1.MDR.6.2 | 1.MD.3 | `state_superset` | | | high |
+
+- **Decided by:** step 3, Test B: 3.MD.1 is two grades above and is covered only with narrower bounds
+  (to the hour, not minutes), an early, simpler version of later content, so it is not cited. Step 5:
+  1.MD.3 is inside; elapsed time is a separate objective (Matters). Step 6B: left uncovered.
+- **Shows:** not citing a code (Test B) is different from ignoring a difference (Test C): elapsed time
+  still matters.
+
+**E7. `state_superset` across grades: wider content, not grade.**
 - **Georgia 3.PAR.3.4 (grade 3):** "Use the meaning of the equal sign to determine whether expressions
   involving addition, subtraction, and multiplication are equivalent."
 - **CCSS 1.OA.7 (grade 1):** "Understand the meaning of the equal sign, and determine if equations
   involving addition and subtraction are true or false."
-- **Decided by:** Test D and step 6B. 1.OA.7 is inside the state standard; multiplication widens the
-  content, so it is `state_superset`. The grade difference plays no part.
 
-**E9. `merge`: two codes, one missing only an attached demand.**
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 3.PAR.3.4 | 1.OA.7 | `state_superset` | | | high |
+
+- **Decided by:** steps 5 and 6B, Test D. 1.OA.7 is inside; multiplication widens the content, and no
+  code requires it with the equal sign.
+- **Shows:** a state standard later and wider than its code; the grade gap plays no part.
+
+**E8. `state_subset`: narrower bounds.**
+- **Georgia 5.NR.4.3:** "Use place value understanding to round decimal numbers to the hundredths
+  place."
+- **CCSS 5.NBT.4:** "Use place value understanding to round decimals to any place."
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 5.NR.4.3 | 5.NBT.4 | `state_subset` | | | high |
+
+- **Decided by:** steps 5 and 6A, Test D. Hundredths only, vs. any place; no other Georgia standard
+  covers the rest.
+- **Shows:** a subset caused by bounds.
+
+**E9. `state_subset`: a missing separate objective.**
+- **Georgia 3.MDR.5.4:** "Use rulers to measure lengths in halves and fourths (quarters) of an inch and
+  a whole inch."
+- **CCSS 3.MD.4:** "Generate measurement data by measuring lengths using rulers marked with halves and
+  fourths of an inch. Show the data by making a line plot…"
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 3.MDR.5.4 | 3.MD.4 | `state_subset` | | | high |
+
+- **Decided by:** steps 5 and 6A, Test C. Making a line plot is a separate objective (Matters), and no
+  other Georgia grade-3 standard covers it.
+- **Shows:** a subset caused by a missing objective, not bounds.
+
+**E10. `merge`: a code missing only an attached demand.**
 - **Georgia 3.NR.4.4:** "Recognize and generate simple equivalent fractions."
-- **CCSS 3.NF.3a and 3.NF.3b.**
-- **Decided by:** section 3.1 and step 6B. The text states 3.NF.3b's core ("recognize and generate
-  simple equivalent fractions"), and Georgia's guidance interprets "equivalent" as 3.NF.3a does: "two
-  fractions are equal when they are the same size or on the same location on a number line". It does
-  not state 3.NF.3b's "explain why", but that is an attached demand (Test C), so both codes are inside
-  it, and together they make up all of it: both rows are `merge`, with the missing part noted in
-  the rationale.
+- **CCSS 3.NF.3a:** "Understand two fractions as equivalent (equal) if they are the same size, or the
+  same point on a number line."
+- **CCSS 3.NF.3b:** "Recognize and generate simple equivalent fractions, e.g., 1/2 = 2/4, 4/6 = 2/3.
+  Explain why the fractions are equivalent, e.g., by using a visual fraction model."
 
-**E10. `merge`: the parent's general statement.**
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 3.NR.4.4 | 3.NF.3a | `merge` | | 3.NF.3b | high |
+| 3.NR.4.4 | 3.NF.3b | `merge` | | 3.NF.3a | high |
+
+- **Decided by:** section 3 and step 6B. The text states 3.NF.3b's core; Georgia's guidance interprets
+  "equivalent" as 3.NF.3a does ("two fractions are equal when they are the same size or on the same
+  location on a number line"). 3.NF.3b's "explain why" is an attached demand, so both codes are inside,
+  and together they make up the standard.
+- **Shows:** a plain merge; guidance interpreting a term; an attached demand noted in the rationale.
+
+**E11. `merge`: the parent's general statement.**
 - **Georgia 1.NR.1.2:** "Explain that the two digits of a 2-digit number represent the amounts of tens
   and ones."
-- **CCSS 1.NBT.2a, 1.NBT.2b, 1.NBT.2c.**
-- **Decided by:** section 2. It matches the general statement of 1.NBT.2 (a parent), so all three
-  lettered parts are cited.
+- **CCSS 1.NBT.2a, 1.NBT.2b, 1.NBT.2c**, whose parent standard reads "Understand that the two digits of a
+  two-digit number represent amounts of tens and ones. Understand the following as special cases:".
 
-**E11. `merge`: cite the codes whose content the text states.**
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 1.NR.1.2 | 1.NBT.2a | `merge` | | 1.NBT.2b, 1.NBT.2c | high |
+| 1.NR.1.2 | 1.NBT.2b | `merge` | | 1.NBT.2a, 1.NBT.2c | high |
+| 1.NR.1.2 | 1.NBT.2c | `merge` | | 1.NBT.2a, 1.NBT.2b | high |
+
+- **Decided by:** section 2. It matches the parent's general statement, so all three lettered parts are
+  cited, never the parent.
+- **Shows:** citing lettered parts for a parent-level match.
+
+**E12. `merge`: cite the codes whose content the text states.**
 - **Georgia 3.GSR.7.1:** "Investigate area by covering the space of rectangles … using multiple copies
   of the same unit, with no gaps or overlaps, and determine the total area…"
-- **CCSS 3.MD.5b and 3.MD.6, not 3.MD.5a.**
-- **Decided by:** Test A, comparing what each text states. 3.MD.5b says a figure "covered without gaps
-  or overlaps by n unit squares" has an area of n square units, which the state text states almost word
-  for word ("covering … with no gaps or overlaps … total number of units"). 3.MD.5a says what a unit
-  square is ("a square with side length 1 unit"), which the state text never states: it uses "the same
-  unit" without defining it. Both codes are worded as definitions; what decides is which content the
-  state text states.
+- **CCSS 3.MD.5b:** "A plane figure which can be covered without gaps or overlaps by n unit squares is
+  said to have an area of n square units."
+- **CCSS 3.MD.6:** "Measure areas by counting unit squares (square cm, square m, square in, square ft, and
+  improvised units)."
+- **Not cited, CCSS 3.MD.5a:** "A square with side length 1 unit, called 'a unit square,' is said to
+  have 'one square unit' of area, and can be used to measure area."
 
-**E12. `split`: two standards, each covering a separate objective of one code.**
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 3.GSR.7.1 | 3.MD.5b | `merge` | | 3.MD.6 | high |
+| 3.GSR.7.1 | 3.MD.6 | `merge` | | 3.MD.5b | high |
+
+- **Decided by:** Test A. The state text states 3.MD.5b's content almost word for word (covering with no
+  gaps or overlaps; area as the number of units) and 3.MD.6's (counting units). It never states 3.MD.5a's
+  content, what a unit square is: it uses "the same unit" without defining it. Both 3.MD.5a and 3.MD.5b
+  are worded as definitions; what decides is which content the state text states.
+- **Shows:** deciding by content, not by how a code is worded.
+
+**E13. `merge` completed by an `overlap` piece; fluency matters.**
+- **Georgia 3.PAR.3.2:** "Represent single digit multiplication and division facts using a variety of
+  strategies. Explain the relationship between multiplication and division."
+- **CCSS 3.OA.6:** "Understand division as an unknown-factor problem. For example, find 32 / 8 by finding
+  the number that makes 32 when multiplied by 8."
+- **CCSS 3.OA.7:** "Fluently multiply and divide within 100, using strategies such as the relationship
+  between multiplication and division (e.g., knowing that 8 x 5 = 40, one knows 40 / 5 = 8) or
+  properties of operations. By the end of Grade 3, know from memory all products of two one-digit
+  numbers."
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 3.PAR.3.2 | 3.OA.6 | `merge` | | 3.OA.7 | medium |
+| 3.PAR.3.2 | 3.OA.7 | `overlap` | | 3.OA.6 | medium |
+
+- **Decided by:** "Explain the relationship…" is the second sentence's whole task, so it is compared as
+  a main action, and it matches 3.OA.6's understanding (as in E1). 3.OA.7 is `overlap`: it requires
+  fluency and "know from memory" (Matters), and the standard's relationship work is in 3.OA.7 only as a
+  strategy example. Step 6B: 3.OA.6 and the overlap piece 3.OA.7 make up the standard. No Georgia
+  grade-3 standard requires the fluency, so 3.OA.7's `split_with` is empty.
+- **Shows:** fluency as a difference that matters; the whole-task clause; an overlap piece completing a
+  merge (pattern 7). (The adjudicated mapping labels 3.PAR.3.2 → 3.OA.7 `exact` and does not cite
+  3.OA.6.)
+
+**E14. Two state standards that each cover all of one code: `exact` and `merge`.**
+- **Georgia 3.PAR.3.6:** "Solve practical, relevant problems involving multiplication and division
+  within 100 using part-whole strategies, visual representations, and/or concrete models."
+- **Georgia 3.PAR.3.7:** "Use multiplication and division to solve problems involving whole numbers to
+  100. Represent these problems using equations with a letter standing for the unknown quantity.
+  Justify solutions."
+- **CCSS 3.OA.3:** "Use multiplication and division within 100 to solve word problems in situations
+  involving equal groups, arrays, and measurement quantities, e.g., by using drawings and equations with
+  a symbol for the unknown number to represent the problem."
+- **CCSS 3.OA.8:** "Solve two-step word problems using the four operations. Represent these problems
+  using equations with a letter standing for the unknown quantity…"
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 3.PAR.3.6 | 3.OA.3 | `exact` | | | high |
+| 3.PAR.3.7 | 3.OA.3 | `merge` | | 3.OA.8 | medium |
+| 3.PAR.3.7 | 3.OA.8 | `overlap` | | 3.OA.3 | medium |
+
+- **Decided by:** 3.PAR.3.6: "practical, relevant problems" is its main action ("solve word
+  problems"); strategies, representations and models are hows, so it is `exact`. 3.PAR.3.7: it covers
+  3.OA.3 too, and requires equations with a letter for the unknown, which 3.OA.3 has only as an "e.g."
+  but 3.OA.8 requires. 3.OA.3 is inside it (and can't be a second `exact`); 3.OA.8 is `overlap` (it adds
+  two-step, four-operation problems); together they make up 3.PAR.3.7. "Justify solutions" is an
+  attached demand.
+- **Shows:** why `split` needs different parts (both standards cover the whole code); a CCSS "e.g." is
+  not a requirement, but the same thing required in a state standard can match another code. (The
+  adjudicated mapping labels both `split`.)
+
+**E15. `split`: two standards, each covering a separate objective of one code.**
 - **Georgia 3.MDR.5.2:** "Tell and write time to the nearest minute and estimate time to the nearest
-  fifteen minutes…"
-- **Georgia 3.MDR.5.3:** "Solve meaningful problems involving elapsed time…"
-- **CCSS 3.MD.1 (both):** "Tell and write time to the nearest minute and measure time intervals in
-  minutes. Solve word problems involving addition and subtraction of time intervals in minutes…"
-- **Decided by:** step 6A. Telling time and solving elapsed-time problems are separate objectives of
-  3.MD.1; each Georgia standard covers one, and together they make up the code. Each is `split`,
-  naming the other. (For an earlier, narrower standard that is `state_subset` rather than a split
-  partner, see E16.)
+  fifteen minutes (quarter hour) from the analysis of an analog clock."
+- **Georgia 3.MDR.5.3:** "Solve meaningful problems involving elapsed time, including intervals of time to
+  the hour, half hour, and quarter hour where the times presented are only on the hour, half hour, or
+  quarter hour within a.m. or p.m. only."
+- **CCSS 3.MD.1:** "Tell and write time to the nearest minute and measure time intervals in minutes.
+  Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by
+  representing the problem on a number line diagram."
 
-**E13. `none`: shared topic, different action.**
-- **Georgia K.NR.1.4:** "Identify pennies, nickels, and dimes and know their name and value."
-- **Decided by:** Test A. The only CCSS money standard, 2.MD.8, asks students to solve word problems
-  with money: same topic, different action.
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 3.MDR.5.2 | 3.MD.1 | `split` | 3.MDR.5.3 | | high |
+| 3.MDR.5.3 | 3.MD.1 | `split` | 3.MDR.5.2 | | high |
 
-**E14. `none`: no CCSS standard with the requirement at any grade.**
-- **Georgia 1.PAR.3.2:** "Identify, describe, and create growing, shrinking, and repeating patterns
-  based on the repeated addition or subtraction of 1s, 2s, 5s, and 10s."
-- **Decided by:** Test A. CCSS pattern standards begin in grade 3 and ask for different work (e.g.
-  identifying arithmetic patterns and explaining them with properties of operations), so none shares
-  this requirement.
-
-**E15. `none`: a recurring general practice.**
-- **Georgia (every grade K–5):** "Ask questions and answer them based on gathered information,
-  observations, and appropriate graphical displays to solve problems relevant to everyday life."
-- **Decided by:** Test A. A state standard that repeats in nearly the same words across grades as a
-  general way of doing mathematics, rather than grade-specific content, corresponds to a CCSS code only
-  if it states that code's specific requirement. This Georgia standard resembles the Standards for Mathematical
-  Practice more than any grade's content standard.
+- **Decided by:** step 6A. 3.MDR.5.2 covers telling time; its estimating is attached to telling time
+  (Ignored). 3.MDR.5.3 covers the elapsed-time problems, with narrower bounds (quarter hours, not
+  minutes), which still counts within a split; note it in the rationale. Together they make up 3.MD.1.
+- **Shows:** the plain split; an attached estimate; narrower bounds inside a split.
 
 **E16. `split` and `state_subset`: one code, four state standards.**
-- **CCSS 4.NBT.2** (grade 4, whole numbers up to 1,000,000): "Read and write multi-digit whole numbers
-  using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based on
-  meanings of the digits in each place, using >, =, and < symbols to record the results of
-  comparisons." Two parts: read and write, and compare.
+- **CCSS 4.NBT.2 (grade 4):** "Read and write multi-digit whole numbers using base-ten numerals, number
+  names, and expanded form. Compare two multi-digit numbers based on meanings of the digits in each
+  place, using >, =, and < symbols to record the results of comparisons." Two parts: read and write,
+  and compare.
+- **Georgia 4.NR.1.1 (grade 4):** "Read and write multi-digit whole numbers to the hundred-thousands
+  place using base-ten numerals and expanded form."
+- **Georgia 4.NR.1.3 (grade 4):** "Use place value reasoning to represent, compare, and order
+  multi-digit numbers, using >, =, and < symbols to record the results of comparisons."
+- **Georgia 3.NR.1.1 (grade 3):** "Read and write multi-digit whole numbers up to 10,000 … using
+  base-ten numerals and expanded form."
+- **Georgia 3.NR.1.2 (grade 3):** "Use place value reasoning to compare multi-digit numbers up to 10,000,
+  using >, =, and < symbols to record the results of comparisons."
 
-| Georgia standard | Covers | Needed to make up 4.NBT.2? | Label |
-|---|---|---|---|
-| 4.NR.1.1 (grade 4): "Read and write multi-digit whole numbers to the hundred-thousands place using base-ten numerals and expanded form." | read and write, grade-4 numbers | Yes | `split` |
-| 4.NR.1.3 (grade 4): "Use place value reasoning to represent, compare, and order multi-digit numbers, using >, =, and < symbols to record the results of comparisons." | compare, grade-4 numbers | Yes | `split` |
-| 3.NR.1.1 (grade 3): "Read and write multi-digit whole numbers up to 10,000 to the thousands using base-ten numerals and expanded form." | read and write, only up to 10,000 | No: 4.NR.1.1 already covers this part more fully | `state_subset` |
-| 3.NR.1.2 (grade 3): "Use place value reasoning to compare multi-digit numbers up to 10,000, using >, =, and < symbols to record the results of comparisons." | compare, only up to 10,000 | No: 4.NR.1.3 already covers this part more fully | `state_subset` |
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 4.NR.1.1 | 4.NBT.2 | `split` | 4.NR.1.3 | | high |
+| 4.NR.1.3 | 4.NBT.2 | `split` | 4.NR.1.1 | | high |
+| 3.NR.1.1 | 4.NBT.2 | `state_subset` | | | high |
+| 3.NR.1.2 | 4.NBT.2 | `state_subset` | | | high |
 
-- **Decided by:** step 6A. The two grade-4 standards together make up 4.NBT.2; the grade-3 standards
-  teach the same parts earlier, with smaller numbers, and the full code is made up without them. (The
-  adjudicated Georgia mapping currently labels all four `split`; it is to be re-adjudicated.)
+- **Decided by:** step 6A. All four are inside 4.NBT.2 ("order" is part of comparing; ordinary
+  components). The grade-4 pair makes up the code; 4.NR.1.1 lacks "number names" (Georgia's guidance:
+  "Students are not expected to write numbers in word form"), narrower bounds within a split, noted in
+  the rationale. The grade-3 pair covers the same parts only up to 10,000 (Test D), so the full code is
+  made up without it.
+- **Shows:** the "two sets of standards" rule; ordering ignored. (The adjudicated mapping labels all
+  four `split`.)
 
-**E17. `overlap`: each has something the other lacks.**
+**E17. `split` whose pieces are strategies and fluency.**
+- **Georgia 1.NR.2.2:** "Use pictures, drawings, and equations to develop strategies for addition and
+  subtraction within 20 by exploring strings of related problems."
+- **Georgia 1.NR.2.4:** "Fluently add and subtract within 10 using a variety of strategies."
+- **CCSS 1.OA.6:** "Add and subtract within 20, demonstrating fluency for addition and subtraction within
+  10. Use strategies such as counting on; making ten…" Two parts: adding and subtracting within 20 with
+  strategies, and fluency within 10.
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 1.NR.2.2 | 1.OA.6 | `split` | 1.NR.2.4 | | medium |
+| 1.NR.2.4 | 1.OA.6 | `split` | 1.NR.2.2 | | high |
+
+- **Decided by:** step 6A, Tests C and D. 1.NR.2.2 covers strategies within 20 (pictures, drawings,
+  equations and strings of problems are hows); 1.NR.2.4 covers fluency within 10, a narrower range (Test
+  D). Together they make up 1.OA.6. Not cited: 1.NR.2.2 → 1.OA.1 (its action is developing strategies,
+  not solving word problems, Test A).
+- **Shows:** fluency as a bound; split pieces that differ in kind, not topic. (The adjudicated mapping
+  labels 1.NR.2.4 → 1.OA.6 `exact` and 1.NR.2.2 → 1.OA.1 `split`.)
+
+**E18. `overlap` that helps on neither side.**
 - **Georgia 3.GSR.6.1 (grade 3):** "Identify perpendicular line segments, parallel line segments, and
   right angles, identify these in polygons, and solve problems involving parallel line segments,
   perpendicular line segments, and right angles."
 - **CCSS 4.G.1 (grade 4):** "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and
   perpendicular and parallel lines. Identify these in two-dimensional figures."
-- **Decided by:** step 5 and Test C. They share identifying these figures; the Georgia standard adds
-  solving problems (a separate objective), and 4.G.1 adds drawing and more figures. Neither is inside
-  the other. (Another Georgia standard, 4.GSR.8.1, covers all of 4.G.1. The adjudicated Georgia
-  mapping currently labels 3.GSR.6.1 `state_subset`.)
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 3.GSR.6.1 | 4.G.1 | `overlap` | | | high |
+
+- **Decided by:** step 5, Test C. They share identifying these figures. The state standard adds solving
+  problems (a separate objective); 4.G.1 adds drawing and more figures. Both columns stay empty: Georgia
+  4.GSR.8.1 alone makes up 4.G.1, and no code covers the state standard's problem solving.
+- **Shows:** `overlap` with an extra on each side; an overlap that is still cited because it is the
+  closest match for part of the state standard (pattern 8). (The adjudicated mapping labels it
+  `state_subset`.)
+
+**E19. `none`: shared topic, different action.**
+- **Georgia K.NR.1.4:** "Identify pennies, nickels, and dimes and know their name and value."
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| K.NR.1.4 | | `none` | | | high |
+
+- **Decided by:** Test A. The only CCSS money standard, 2.MD.8, asks students to "Solve word problems
+  involving dollar bills, quarters, dimes, nickels, and pennies": same topic, different action.
+- **Shows:** a shared topic is not a shared requirement.
+
+**E20. `none`: no code except a much later, broader one.**
+- **Georgia 1.PAR.3.2 (grade 1):** "Identify, describe, and create growing, shrinking, and repeating
+  patterns based on the repeated addition or subtraction of 1s, 2s, 5s, and 10s."
+
+| state_code | ccss_code | relationship | split_with | merge_with | confidence |
+|---|---|---|---|---|---|
+| 1.PAR.3.2 | | `none` | | | high |
+
+- **Decided by:** Tests A and B. CCSS has no K–2 pattern standards. 3.OA.9 ("Identify arithmetic
+  patterns … and explain them using properties of operations") asks for different work. 4.OA.5
+  ("Generate a number or shape pattern that follows a given rule") shares creating a pattern from a
+  rule, but it is three grades above and the state standard covers it only with narrower bounds
+  (adding 1s, 2s, 5s or 10s), an early, simpler version, so it is not cited.
+- **Shows:** `none` decided partly by the introductory-pass rule (Test B).
 
 ---
 

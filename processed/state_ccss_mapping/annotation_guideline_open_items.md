@@ -9,13 +9,13 @@
 | Ruling | Decision | Guideline text | Rows it settles (to confirm) |
 |---|---|---|---|
 | Ordering (item 26) | **Ignored**: ordering numbers is part of comparing them | Test C, Ignored: "ordinary components of the task (… ordering numbers as part of comparing them)" | 1.NR.1.3 stays `exact`; 2.NR.1.3 stays `merge` (item 24); 4.NR.1.3 stays `split` (E16 holds); 5.NR.3.2 → 4.NF.2 `state_subset` (it lacks "recognize that comparisons are valid only when the two fractions refer to the same whole", and 4.NR.4.3 is already `exact`); 5.NR.4.2 → 5.NBT.3b `exact` unless "represent" counts as an extra |
-| Estimating (item 42) | **Ignored when attached** to measuring or telling time; a standard whose whole task is estimating is compared as its main action | Test C, Ignored: "a demand attached to the same task: … estimating alongside measuring or telling time. When such an action is a standard's whole task (e.g. CCSS 2.MD.3 …), consider it as that standard's main action" | 3.MDR.5.2 stays `split` (E12 holds); 1.MDR.6.1 → 1.MD.2 `merge`, 1.MD.1 `overlap` (item 22) |
+| Estimating (item 42) | **Ignored when attached** to measuring or telling time; a standard whose whole task is estimating is compared as its main action | Test C, Ignored: "a demand attached to the same task: … estimating alongside measuring or telling time. When such an action is a standard's whole task (e.g. CCSS 2.MD.3 …), consider it as that standard's main action" | 3.MDR.5.2 stays `split` (E15 holds); 1.MDR.6.1 → 1.MD.2 `merge`, 1.MD.1 `overlap` (item 22) |
 | 3.OA.3 (item 3) | **No split**: the equations are an "e.g." in 3.OA.3, and neither standard names the situations | none needed (existing rules) | 3.PAR.3.6 → 3.OA.3 `exact`; 3.PAR.3.7 → 3.OA.3 `merge`, plus 3.PAR.3.7 → 3.OA.8 `overlap` (its required "equations with a letter standing for the unknown quantity") |
 | R4, "solve problems" (items 2, 6) | **Adopted** | Test C, Ignored: the "general setting" entry now carries R4's wording | 1.NR.2.1 → 1.OA.1 `exact`; 1.NR.2.2 and 1.NR.2.4 → 1.OA.6 `split` (strategies within 20 + fluency within 10; settles items 2, 19, 41); 2.NR.2.3 gets a 2.OA.1 row (item 6, 28) |
 | R3, practice standards | **Adopted**: content standards only | Section 2: "Annotate content standards only: a state's own practice standards … are not annotated" | none (the gold already skips them) |
 | E2, identify vs. write numerals (item 20) | **Keep the rule**: receptive and productive forms are ignored | unchanged | K.NR.4.1 → K.CC.3 stays `exact`; note the difference in the rationale |
-| E11, 3.MD.5a (item 21) | **Keep**, justified by Test A, not a new rule: cite the codes whose content the text states | E11's "Decided by" rewritten | 3.GSR.7.1 stays 3.MD.5b + 3.MD.6 `merge` |
-| Distant-grade matches | **Replaced** the vague "at a comparable level" with a concrete rule: a code two or more grades **above** the state standard is not cited when the state standard covers it only with narrower bounds (an introductory pass). Deleting the rule outright would have created rows such as 1.MDR.6.2 → 3.MD.1, 1.PAR.3.2 → 4.OA.5 and 2.GSR.7.2 → 4.G.3 | Test B, step 3 and the quick reference | none: no gold row cites a code two or more grades above its state standard. Keeps E4, E14 and the K–2 pattern `none` rows |
+| E12, 3.MD.5a (item 21) | **Keep**, justified by Test A, not a new rule: cite the codes whose content the text states | E12's "Decided by" rewritten | 3.GSR.7.1 stays 3.MD.5b + 3.MD.6 `merge` |
+| Distant-grade matches | **Replaced** the vague "at a comparable level" with a concrete rule: a code two or more grades **above** the state standard is not cited when the state standard covers it only with narrower bounds (an introductory pass). Deleting the rule outright would have created rows such as 1.MDR.6.2 → 3.MD.1, 1.PAR.3.2 → 4.OA.5 and 2.GSR.7.2 → 4.G.3 | Test B, step 3 and the quick reference | none: no gold row cites a code two or more grades above its state standard. Keeps E6, E20 and the K–2 pattern `none` rows |
 
 | Closest match per part | **Cite the closest match for each part** of the state standard, even if it doesn't help make up a whole; a code whose shared part another code matches more closely is not cited (it relates to other standards: prerequisite or earlier/later pass) | Step 3; `state_superset` and step 6B lose their "not needed" case; pattern 4 now shows the code as not cited | 4.MDR.6.1 does not cite 3.MD.1 or 5.MD.1; the 3.MDR.5.5 candidates (4.MD.1, 2.MD.1, 2.MD.3) are cited only if no kept code covers their part |
 Earlier the same day: R1 declined (standard algorithm ignored), R2 adopted (fluency matters), per-row labels with `overlap`, `different_grade` removed.
@@ -27,26 +27,26 @@ the other annotators before changing `gold.json` / `gold.csv`.
 
 | Example | Georgia standard → CCSS | Gold now | Agreed label | Why | Item |
 |---|---|---|---|---|---|
-| 3 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; same requirement at another grade is `exact` | 43 |
-| 4 | 1.NR.2.1 → 1.OA.1 | `split` (with 1.NR.2.2) | `exact` | R4: "solve problems" is its main action = "solve word problems"; strategies are a how; problem types come from the guidance | 2, 41 |
-| 7 | 3.PAR.3.2 → 3.OA.7 | `exact` | `overlap` (merge_with 3.OA.6) | 3.OA.7 requires fluency and "know from memory" (R2), which 3.PAR.3.2 lacks; 3.PAR.3.2's "Explain the relationship between multiplication and division" is not in 3.OA.7 (there only a strategy example) | 44 (revised) |
-| 7 | 3.PAR.3.2 → 3.OA.6 (new row) | not cited | `merge` (merge_with 3.OA.7) | "Explain the relationship…" = 3.OA.6 "Understand division as an unknown-factor problem"; with the overlap piece 3.OA.7 it makes up 3.PAR.3.2 | 44 (revised) |
-| 8 | 3.PAR.3.6 → 3.OA.3 | `split` | `exact` | R4; strategies, representations and models are hows | 3 |
-| 8 | 3.PAR.3.7 → 3.OA.3 | `split` | `merge` (merge_with 3.OA.8) | 3.OA.3 is inside it; it also requires equations with a letter for the unknown | 3 |
-| 8 | 3.PAR.3.7 → 3.OA.8 (new row) | not cited | `overlap` (merge_with 3.OA.3) | shares the letter-for-the-unknown equations; 3.OA.8 adds two-step, four-operation problems | 3 |
-| 9 | 3.NR.1.1 → 4.NBT.2 | `split` | `state_subset` | grade-4 pair (4.NR.1.1, 4.NR.1.3) makes up 4.NBT.2; the grade-3 pair covers the same parts only to 10,000 | 1 |
-| 9 | 3.NR.1.2 → 4.NBT.2 | `split` | `state_subset` | as above | 1 |
-| 10 | 1.NR.2.4 → 1.OA.6 | `exact` | `split` (split_with 1.NR.2.2) | covers fluency within 10 only; 1.NR.2.2 covers strategies within 20 | 19 |
-| 10 | 1.NR.2.2 → 1.OA.6 (new row) | not cited | `split` (split_with 1.NR.2.4) | develops strategies within 20 (pictures, strings of problems are hows) | 2, 41 |
-| 10 | 1.NR.2.2 → 1.OA.1 | `split` | drop the row | its action is developing strategies, not solving word problems (Test A) | 2, 41 |
-| 11 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` (both columns empty) | adds solving problems; 4.G.1 adds drawing; 4.GSR.8.1 alone makes up 4.G.1 | 37 |
+| E3 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; same requirement at another grade is `exact` | 43 |
+| E4 | 1.NR.2.1 → 1.OA.1 | `split` (with 1.NR.2.2) | `exact` | R4: "solve problems" is its main action = "solve word problems"; strategies are a how; problem types come from the guidance | 2, 41 |
+| E13 | 3.PAR.3.2 → 3.OA.7 | `exact` | `overlap` (merge_with 3.OA.6) | 3.OA.7 requires fluency and "know from memory" (R2), which 3.PAR.3.2 lacks; 3.PAR.3.2's "Explain the relationship between multiplication and division" is not in 3.OA.7 (there only a strategy example) | 44 (revised) |
+| E13 | 3.PAR.3.2 → 3.OA.6 (new row) | not cited | `merge` (merge_with 3.OA.7) | "Explain the relationship…" = 3.OA.6 "Understand division as an unknown-factor problem"; with the overlap piece 3.OA.7 it makes up 3.PAR.3.2 | 44 (revised) |
+| E14 | 3.PAR.3.6 → 3.OA.3 | `split` | `exact` | R4; strategies, representations and models are hows | 3 |
+| E14 | 3.PAR.3.7 → 3.OA.3 | `split` | `merge` (merge_with 3.OA.8) | 3.OA.3 is inside it; it also requires equations with a letter for the unknown | 3 |
+| E14 | 3.PAR.3.7 → 3.OA.8 (new row) | not cited | `overlap` (merge_with 3.OA.3) | shares the letter-for-the-unknown equations; 3.OA.8 adds two-step, four-operation problems | 3 |
+| E16 | 3.NR.1.1 → 4.NBT.2 | `split` | `state_subset` | grade-4 pair (4.NR.1.1, 4.NR.1.3) makes up 4.NBT.2; the grade-3 pair covers the same parts only to 10,000 | 1 |
+| E16 | 3.NR.1.2 → 4.NBT.2 | `split` | `state_subset` | as above | 1 |
+| E17 | 1.NR.2.4 → 1.OA.6 | `exact` | `split` (split_with 1.NR.2.2) | covers fluency within 10 only; 1.NR.2.2 covers strategies within 20 | 19 |
+| E17 | 1.NR.2.2 → 1.OA.6 (new row) | not cited | `split` (split_with 1.NR.2.4) | develops strategies within 20 (pictures, strings of problems are hows) | 2, 41 |
+| E17 | 1.NR.2.2 → 1.OA.1 | `split` | drop the row | its action is developing strategies, not solving word problems (Test A) | 2, 41 |
+| E18 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` (both columns empty) | adds solving problems; 4.G.1 adds drawing; 4.GSR.8.1 alone makes up 4.G.1 | 37 |
 | — (not an example) | 3.MDR.5.5 → 3.MD.2 | `state_subset` | `overlap` | customary vs. metric units (Test D both ways); Georgia adds lengths and relative sizes of units | 36 |
 | — (not an example) | 3.MDR.5.5 → 4.MD.1, 2.MD.1, 2.MD.3 (new rows?) | not cited | likely `overlap` each | step 2 finds them: relative sizes of units (4.MD.1); measuring and estimating lengths (2.MD.1, 2.MD.3). **Decide whether to add** | 36 |
 | — (not an example) | 4.MDR.6.1 → 4.MD.1 | `merge` | `merge` (merge_with 4.MD.2) | converting within a system (both directions) is 4.MD.1's skill | 30 |
 | — (not an example) | 4.MDR.6.1 → 4.MD.2 | `merge` | `overlap` (merge_with 4.MD.1) | 4.MD.2 adds money and decimals (Test D); the standard's main action, solving problems with the four operations, is 4.MD.2's | 30 |
 
-Examples 1 (K.NR.1.2 → K.CC.4b `exact`) and 2 (K.NR.4.1 → K.CC.3 `exact`) and the 3.NR.4.2 → 3.NF.3d
-`state_subset` row in example 3 match the gold.
+E1 (K.NR.1.2 → K.CC.4b `exact`), E2 (K.NR.4.1 → K.CC.3 `exact`) and the 3.NR.4.2 → 3.NF.3d `state_subset`
+row of E3 match the gold, as do E5–E12, E15, E19 and E20.
 
 A check of the guideline against the adjudicated Georgia mapping (`states/ga/gold.json`) found the
 cases below, where applying the guideline gives a different answer from the gold. The gold has **not**
@@ -87,12 +87,12 @@ rules in part 5.
 
 | # | Georgia standard(s) | Gold | Educator reading implies | Why |
 |---|---|---|---|---|
-| 16 | K.MDR.7.3, 1.MDR.6.4, 2.MDR.5.4, 3.MDR.5.1, 4.MDR.6.2, 5.MDR.7.2 ("Ask questions and answer them based on gathered information, observations, and appropriate graphical displays…") | `none` (also worked example E15) | at least grades 1–3: `state_subset` of the grade's data code (1.MD.4, 2.MD.10, 3.MD.3); K, 4 and 5 to be checked | These are Georgia's data standards (domain MDR), not general practices; Georgia has separate practice standards (K.MP.1–8 etc.). The Progressions describe 1.MD.4 in nearly Georgia's words: students "ask and answer questions about categorical data based on a representation of the data". 1.MDR.6.4's "compare and order whole numbers" matches 1.MD.4's "how many more or less". 1.MD.4, 2.MD.10 and 3.MD.3 are cited nowhere in the gold, so the mapping implies Georgia has no data standards in grades 1–3. **Strongest item from this review.** |
+| 16 | K.MDR.7.3, 1.MDR.6.4, 2.MDR.5.4, 3.MDR.5.1, 4.MDR.6.2, 5.MDR.7.2 ("Ask questions and answer them based on gathered information, observations, and appropriate graphical displays…") | `none` (also a former worked example, removed from section 7 pending this item) | at least grades 1–3: `state_subset` of the grade's data code (1.MD.4, 2.MD.10, 3.MD.3); K, 4 and 5 to be checked | These are Georgia's data standards (domain MDR), not general practices; Georgia has separate practice standards (K.MP.1–8 etc.). The Progressions describe 1.MD.4 in nearly Georgia's words: students "ask and answer questions about categorical data based on a representation of the data". 1.MDR.6.4's "compare and order whole numbers" matches 1.MD.4's "how many more or less". 1.MD.4, 2.MD.10 and 3.MD.3 are cited nowhere in the gold, so the mapping implies Georgia has no data standards in grades 1–3. **Strongest item from this review.** |
 | 17 | 4.NR.2.1 → 4.NBT.4 | `exact` | ~~`state_subset` (under R1)~~ settled: stays `exact` (R1 declined) | 4.NBT.4 requires "using the standard algorithm"; 4.NR.2.1 instead says "using place value understanding, properties of operations, and relationships between operations". The standard algorithm is a required method, not an "e.g."; teachers treat it as its own objective, and Georgia's omission of it is deliberate. |
 | 18 | 5.NR.2.1 → 5.NBT.5 | `state_subset` | settled: unchanged (R1 declined) | Its text also lacks "using the standard algorithm"; Georgia's guidance makes it optional ("Students may also use a standard algorithm…"). This adds to the narrower bounds already noted. |
 | 19 | 1.NR.2.4 → 1.OA.6 | `exact` | `state_subset`, or `split` with 1.NR.2.2 (under R2) | 1.OA.6 requires adding and subtracting within 20 with strategies, and fluency within 10. 1.NR.2.4 covers fluency within 10 only (Test D); 1.NR.2.2 (strategies within 20) may cover the rest. Related to item 2. |
 | 20 | K.NR.4.1 → K.CC.3 (worked example E2) | `exact` | settled: stays `exact` (rule kept) | Kindergarten teachers treat writing numerals as its own skill (a fine-motor demand; often reported separately), and "Write numbers from 0 to 20" is its own sentence in K.CC.3. The current rule (receptive vs. productive form, Test C) is clear; the question is whether educators accept it. Classroom judgment, not a source finding. |
-| 21 | 3.GSR.7.1 → 3.MD.5b + 3.MD.6 (worked example E11) | `merge` | settled: unchanged (Test A justification) | 3.MD.5a and 3.MD.5b are both phrased as definitions ("is said to have"), and 3.GSR.7.1's "multiple copies of the same unit" arguably states 5a's unit. Either add 5a or explain in Test B why 5a is a definition and 5b is not. |
+| 21 | 3.GSR.7.1 → 3.MD.5b + 3.MD.6 (worked example E12) | `merge` | settled: unchanged (Test A justification) | 3.MD.5a and 3.MD.5b are both phrased as definitions ("is said to have"), and 3.GSR.7.1's "multiple copies of the same unit" arguably states 5a's unit. Either add 5a or explain in Test B why 5a is a definition and 5b is not. |
 
 ## 4. From the per-row and `overlap` rules (Oct 3, 2026)
 
@@ -124,13 +124,13 @@ side. A row-by-row pass over the gold's 23 merges and all split, subset and supe
 | 34 | 3.GSR.7.3 | `merge` | depends on item 7 | If 3.MD.7c stays cited, the standard lacks its distributive property and it is `overlap` at most. |
 | 35 | 1.GSR.4.1 → 1.G.1 | `state_subset` | `overlap` | The standard adds identifying, sorting and classifying 2-D and 3-D shapes; 1.G.1 adds distinguishing defining from non-defining attributes. |
 | 36 | 3.MDR.5.5 → 3.MD.2 | `state_subset` | `overlap` | The standard uses customary units and includes lengths; 3.MD.2 uses metric units (g, kg, l) for masses and volumes (Test D both ways). |
-| 37 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` | The standard adds "solve problems involving" the figures (a separate objective, Test C); 4.G.1 adds drawing. Now worked example E17. |
+| 37 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` | The standard adds "solve problems involving" the figures (a separate objective, Test C); 4.G.1 adds drawing. Now worked example E18. |
 | 38 | 3.GSR.6.2 → 4.G.2 | `state_subset` | `overlap` | The standard adds analyzing 3-D figures for quadrilateral faces; 4.G.2 adds right triangles. |
 | 39 | 4.GSR.8.3 → 4.MD.3 | `state_subset` | `overlap`; consider also citing 3.MD.7d | The standard adds composite rectangles, which is CCSS 3.MD.7d ("Find areas of rectilinear figures by decomposing them into non-overlapping rectangles…"), cited nowhere in the gold. |
 | 40 | 5.NR.2.2 → 5.NBT.6 | `state_subset` | `overlap` (R2 adopted) | The standard says "fluently divide"; 5.NBT.6 does not ask for fluency. |
 | 41 | 1.NR.2.2 → 1.OA.1 | `split` | `overlap` | "Develop strategies … by exploring strings of related problems" is not in 1.OA.1. See item 2. |
-| 42 | 3.MDR.5.2 → 3.MD.1 | `split` | `split`, or `overlap` if estimating to the quarter hour is a separate objective | Also changes worked example E12 if `overlap`. |
-| 43 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; worked example E7 already updated. |
+| 42 | 3.MDR.5.2 → 3.MD.1 | `split` | `split`, or `overlap` if estimating to the quarter hour is a separate objective | Also changes worked example E15 if `overlap`. |
+| 43 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; worked example E3 already updated. |
 | 44 | 3.PAR.3.2 → 3.OA.7 | `exact` | `state_subset` | 3.OA.7 asks students to "Fluently multiply and divide within 100" and to "know from memory all products of two one-digit numbers"; 3.PAR.3.2 asks them to represent the facts with strategies and explain the relationship between multiplication and division, not fluency (R2). No other grade-3 Georgia standard covers the fluency. |
 
 ## 5. Proposed rules (drafts for the annotators to approve)
@@ -175,19 +175,18 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
 
 ## 6. Pending edits to the guideline
 
-- **E17 (section 7, 4.G.1):** depends on item 4. If 4.GSR.8.1 becomes a `merge`, reword
+- **E18 (section 7, 4.G.1):** depends on item 4. If 4.GSR.8.1 becomes a `merge`, reword
   the example or reword it.
 - ~~**Contrast example (3.GSR.6.1):** described as covering "only identifying".~~ Done: under the
   `overlap` rule the example now says it also adds solving problems and is `overlap` (item 37).
 - **E16 (section 7, 4.NBT.2):** remove the note on the Georgia mapping once item 1 is re-adjudicated.
 - ~~**Step 6B examples table and section 7, 3.NR.4.4:** say why the standard states 3.NF.3a's requirement.~~
-  Done in version 1.2: E9 and the step 6B examples table now cite Georgia's guidance ("the same size or on
+  Done in version 1.2: E10 and the step 6B examples table now cite Georgia's guidance ("the same size or on
   the same location on a number line").
-- **Section 7, E15 ("Ask questions…"):** depends on item 16. If those standards are remapped, replace
-  E15 (the "general practice" rationale no longer holds). If
-  they stay `none`, fix the wording: grade 1 (1.MDR.6.4) ends "…to compare and order whole numbers", so
-  "at every grade K–5" needs "(grade 1 with a different ending)".
-- **Section 7, E2 and E11:** depend on items 20 and 21.
+- ~~**Section 7, "Ask questions…" example:**~~ Done: removed from section 7 pending item 16. If those
+  standards stay `none`, it can return, with "at every grade K–5" fixed (grade 1, 1.MDR.6.4, ends
+  "…to compare and order whole numbers").
+- **Section 7, E2 and E12:** depend on items 20 and 21.
 - **Test C "Why" note on explaining and justifying:** acknowledge that CCSS weights justification
   heavily ("One hallmark of mathematical understanding is the ability to justify… why a particular
   mathematical statement is true", CCSS Introduction, "Understanding mathematics"), and
@@ -202,15 +201,10 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
   because an `overlap` row may or may not help make up a split or merge); `gold.csv` has neither. Add
   them when the gold is re-adjudicated.
 
-- **Section 7, worked examples to add once their items are re-adjudicated.** The guideline's newer
-  rules have few or no real Georgia examples yet. Add each in the usual format and update the label
-  index at the top of section 7:
-  - 3.MDR.5.5 → 3.MD.2, a clear `overlap` (item 36);
-  - 1.MDR.6.1, `state_superset` alongside an `overlap` row (item 22);
-  - 4.MDR.6.1, `merge` completed by an `overlap` piece (item 30);
-  - 3.PAR.3.2 → 3.OA.7, fluency as a difference that matters (item 44);
-  - a replacement for E15, depending on item 16.
-  Then drop the "currently differs" notes from E7, E16 and E17 once the gold matches them.
+- **Section 7, worked examples:** rewritten Oct 3, 2026 as E1–E20 after a one-by-one review. Still to do:
+  - once the gold matches, drop the "adjudicated mapping … differs" notes from E3, E4, E13, E14, E16,
+    E17 and E18;
+  - after item 16, add an example for the "Ask questions…" standards (a data-standard match, or `none`).
 
 ## 7. Source-text errors (in our Georgia files, not in the guideline)
 
