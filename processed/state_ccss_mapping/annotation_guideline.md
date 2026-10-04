@@ -124,10 +124,8 @@ Do not cite a CCSS code that is:
   standard that uses the concept matches the CCSS code that uses it (e.g. 3.MD.5b, 3.MD.6), not the
   definition;
 - **a same-topic code that asks for a different action** (Test A);
-- **a code two or more grades above the state standard that the state standard covers only with
-  narrower bounds** (Test D): an earlier, simpler pass at that later content, which is a foundation for
-  the code, like a prerequisite. (A state standard at or above the code's grade, or one covering the
-  code's own bounds, is not affected: a match can be at any K–5 grade.)
+- **a code two or more grades above the state standard, covered only with narrower bounds** (Test D):
+  an early, simpler version of later content.
 
 ### 4.2 Which is inside which? (Tests C and D)
 
