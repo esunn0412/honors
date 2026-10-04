@@ -19,6 +19,19 @@
 
 Earlier the same day: R1 declined (standard algorithm ignored), R2 adopted (fluency matters), per-row labels with `overlap`, `different_grade` removed.
 
+## Relabels to confirm with the annotators (from the worked-example review)
+
+Gold rows that the agreed worked examples relabel. Each is the guideline owner's verdict; confirm with
+the other annotators before changing `gold.json` / `gold.csv`.
+
+| Example | Georgia standard → CCSS | Gold now | Agreed label | Why | Item |
+|---|---|---|---|---|---|
+| 3 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; same requirement at another grade is `exact` | 43 |
+| 4 | 1.NR.2.1 → 1.OA.1 | `split` (with 1.NR.2.2) | `exact` | R4: "solve problems" is its main action = "solve word problems"; strategies are a how; problem types come from the guidance | 2, 41 |
+
+Examples 1 (K.NR.1.2 → K.CC.4b `exact`) and 2 (K.NR.4.1 → K.CC.3 `exact`) and the 3.NR.4.2 → 3.NF.3d
+`state_subset` row in example 3 match the gold.
+
 A check of the guideline against the adjudicated Georgia mapping (`states/ga/gold.json`) found the
 cases below, where applying the guideline gives a different answer from the gold. The gold has **not**
 been changed; each case is to be re-adjudicated, and either the gold or the guideline updated.
