@@ -133,7 +133,7 @@ The labels are determined on one question: which standard is inside which? One s
 | 1 | Split | A = a1 + a2; S = a1; T = a2 | S-A split, T-A split: S and T together make up A |
 | 2 | Split and a standard that isn’t needed | #1 plus R = smaller number version of a1 | S-A split, T-A split, R-A state_subset: A is whole without R |
 | 3 | Merge | S = all of A + all of B | S-A merge, S-B merge: A and B together make up S |
-| 4 | Merge and a code that isn’t needed | S = all of B + all of C; A is inside S, but B already covers A's part more fully. A + C does not cover S fully. | S-B merge, S-C merge, S-A state_superset: S is made up without A. |
+| 4 | Merge and a code that isn’t needed | S = all of B + all of C; A is inside S, and S is the state standard that matches A most closely, but B already covers A's part more fully. A + C does not cover S fully. | S-B merge, S-C merge, S-A state_superset: S is made up without A. |
 | 5 | Superset | S = all of A + y | S-A state_superset: y is covered by no code |
 | 6 | Overlap pieces completing two splits | A = a1 + a2; B = b1 + b2; S = a1 + b1; T = a2; U = b2 | S-A overlap, S-B overlap (S has another part each code lacks and each code has another part S lacks); T-A split (T and the overlap piece make up A); U-B split (U and S overlap make up B) |
 | 7 | An overlap piece completing a merge | X = x1 + x2; S = all of X; T = all of A + x1 | S-X exact; T-X overlap (T has A, which X lacks; X has x2, which T lacks); T-A merge (A and the overlap piece X make up T). X has different labels on different rows. |
@@ -156,9 +156,7 @@ Search the whole CCSS list of all domains and grades starting at the state stand
 
 ### Step 3. Keep the codes that share a requirement
 
-Keep a candidate code only if the state standard states one of its requirements, whole or a part (Test A). A shared detail, example or topic is not enough. Drop prerequisites, assumed definitions, same-topic codes with a different action, and later codes the standard only introduces (Test B).
-
-For each part of the state standard, cite the code that matches it most closely. A code is cited whenever it is the closest match for some part, even if it doesn't help make up a whole (e.g. an overlap or state_subset row).
+Keep a code only if the state standard states one of its requirements, whole or in part (Test A), and it isn't a prerequisite, an assumed definition, a same-topic code with a different action, or a later code the standard only introduces (Test B). Of those, cite a code only if it is the closest match in either direction; the code that best matches some part of the state standard, or a code for which this state standard is the best match among the state's standards.
 
 ### Step 4. Count the codes kept
 
@@ -247,7 +245,7 @@ Of all the codes that cover part of the state standard, including overlap rows, 
 
 **Decided by:** For 4.NR.4.2: Step 5, Test C (recording with symbols and justifying are demands attached to the main task and thus ignored; each is inside the other, a grade apart). For 3.NR.4.2: Steps 5 and 6A, Test D (covers unit fractions only, placing it inside 3.NF.3d; since 4.NR.4.2 already covers the whole code, 3.NR.4.2 is not needed).
 
-### E4. exact Through R4: "Solve Problems" Equivalent to "Solve Word Problems"
+### E4. exact :"Solve Problems" Equivalent to "Solve Word Problems"
 
 - Georgia 1.NR.2.1: "Use a variety of strategies to solve addition and subtraction problems within 20."
 - CCSS 1.OA.1: "Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem."
