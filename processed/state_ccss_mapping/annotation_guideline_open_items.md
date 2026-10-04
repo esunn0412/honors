@@ -28,6 +28,19 @@ the other annotators before changing `gold.json` / `gold.csv`.
 |---|---|---|---|---|---|
 | 3 | 4.NR.4.2 → 3.NF.3d | `different_grade` | `exact` | `different_grade` was removed; same requirement at another grade is `exact` | 43 |
 | 4 | 1.NR.2.1 → 1.OA.1 | `split` (with 1.NR.2.2) | `exact` | R4: "solve problems" is its main action = "solve word problems"; strategies are a how; problem types come from the guidance | 2, 41 |
+| 7 | 3.PAR.3.2 → 3.OA.7 | `exact` | `overlap` (merge_with 3.OA.6) | 3.OA.7 requires fluency and "know from memory" (R2), which 3.PAR.3.2 lacks; 3.PAR.3.2's "Explain the relationship between multiplication and division" is not in 3.OA.7 (there only a strategy example) | 44 (revised) |
+| 7 | 3.PAR.3.2 → 3.OA.6 (new row) | not cited | `merge` (merge_with 3.OA.7) | "Explain the relationship…" = 3.OA.6 "Understand division as an unknown-factor problem"; with the overlap piece 3.OA.7 it makes up 3.PAR.3.2 | 44 (revised) |
+| 8 | 3.PAR.3.6 → 3.OA.3 | `split` | `exact` | R4; strategies, representations and models are hows | 3 |
+| 8 | 3.PAR.3.7 → 3.OA.3 | `split` | `merge` (merge_with 3.OA.8) | 3.OA.3 is inside it; it also requires equations with a letter for the unknown | 3 |
+| 8 | 3.PAR.3.7 → 3.OA.8 (new row) | not cited | `overlap` (merge_with 3.OA.3) | shares the letter-for-the-unknown equations; 3.OA.8 adds two-step, four-operation problems | 3 |
+| 9 | 3.NR.1.1 → 4.NBT.2 | `split` | `state_subset` | grade-4 pair (4.NR.1.1, 4.NR.1.3) makes up 4.NBT.2; the grade-3 pair covers the same parts only to 10,000 | 1 |
+| 9 | 3.NR.1.2 → 4.NBT.2 | `split` | `state_subset` | as above | 1 |
+| 10 | 1.NR.2.4 → 1.OA.6 | `exact` | `split` (split_with 1.NR.2.2) | covers fluency within 10 only; 1.NR.2.2 covers strategies within 20 | 19 |
+| 10 | 1.NR.2.2 → 1.OA.6 (new row) | not cited | `split` (split_with 1.NR.2.4) | develops strategies within 20 (pictures, strings of problems are hows) | 2, 41 |
+| 10 | 1.NR.2.2 → 1.OA.1 | `split` | drop the row | its action is developing strategies, not solving word problems (Test A) | 2, 41 |
+| 11 | 3.GSR.6.1 → 4.G.1 | `state_subset` | `overlap` (both columns empty) | adds solving problems; 4.G.1 adds drawing; 4.GSR.8.1 alone makes up 4.G.1 | 37 |
+| — (not an example) | 3.MDR.5.5 → 3.MD.2 | `state_subset` | `overlap` | customary vs. metric units (Test D both ways); Georgia adds lengths and relative sizes of units | 36 |
+| — (not an example) | 3.MDR.5.5 → 4.MD.1, 2.MD.1, 2.MD.3 (new rows?) | not cited | likely `overlap` each | step 2 finds them: relative sizes of units (4.MD.1); measuring and estimating lengths (2.MD.1, 2.MD.3). **Decide whether to add** | 36 |
 
 Examples 1 (K.NR.1.2 → K.CC.4b `exact`) and 2 (K.NR.4.1 → K.CC.3 `exact`) and the 3.NR.4.2 → 3.NF.3d
 `state_subset` row in example 3 match the gold.
