@@ -45,7 +45,9 @@ they are on the same topic.
 itself numbers or letters (e.g. Georgia `K.NR.1.1`; a lettered part of a Virginia standard, `3.MG.2 a)`).
 Sub-points under that unit (e.g. Roman numerals i, ii under a lettered part) belong to it and are not
 annotated separately. Each unit gets one row per CCSS code it corresponds to, or one row with no code
-(section 8).
+(section 8). Annotate **content standards only**: a state's own practice standards (e.g. Georgia
+`K.MP.1`–`K.MP.8` at each grade) are not annotated, because they correspond to the CCSS Standards for
+Mathematical Practice, which are not in the K–5 content list.
 
 **CCSS side.** Cite **leaf codes**: a CCSS standard's lettered parts where it has them (e.g. `3.MD.7a`,
 `3.MD.7b`), otherwise the standard itself (e.g. `3.MD.6`). Never cite a parent standard that has
@@ -121,10 +123,7 @@ Do not cite a CCSS code that is:
   side length 1 unit, called 'a unit square,' is said to have 'one square unit' of area…"). A state
   standard that uses the concept matches the CCSS code that uses it (e.g. 3.MD.5b, 3.MD.6), not the
   definition;
-- **a same-topic code that asks for a different action** (Test A);
-- **a code from a distant grade that only shares the topic.** A match can be at any K–5 grade (states
-  teach some content earlier or later than CCSS), but a code two or more grades away must require the
-  same action on the same content at a comparable level.
+- **a same-topic code that asks for a different action** (Test A).
 
 ### 4.2 Which is inside which? (Tests C and D)
 
@@ -268,7 +267,7 @@ Measurement and Data). Search in both directions:
 
 Keep a candidate code only if the state standard states one of its requirements, whole or a part
 (Test A); a shared detail, example or topic is not enough. Drop prerequisites, definitions, same-topic
-codes with a different action, and distant-grade topic matches (Test B).
+codes with a different action (Test B).
 
 ### Step 4. Count
 
@@ -409,12 +408,16 @@ E7, E16 and E17 follow this guideline where the adjudicated mapping currently di
 - **Decided by:** section 2. It matches the general statement of 1.NBT.2 (a parent), so all three
   lettered parts are cited.
 
-**E11. `merge` with an excluded definition.**
+**E11. `merge`: cite the codes whose content the text states.**
 - **Georgia 3.GSR.7.1:** "Investigate area by covering the space of rectangles … using multiple copies
   of the same unit, with no gaps or overlaps, and determine the total area…"
 - **CCSS 3.MD.5b and 3.MD.6, not 3.MD.5a.**
-- **Decided by:** Test B. 3.MD.5a only defines a unit square; the state standard uses the concept
-  without stating the definition.
+- **Decided by:** Test A, comparing what each text states. 3.MD.5b says a figure "covered without gaps
+  or overlaps by n unit squares" has an area of n square units, which the state text states almost word
+  for word ("covering … with no gaps or overlaps … total number of units"). 3.MD.5a says what a unit
+  square is ("a square with side length 1 unit"), which the state text never states: it uses "the same
+  unit" without defining it. Both codes are worded as definitions; what decides is which content the
+  state text states.
 
 **E12. `split`: two standards, each covering a separate objective of one code.**
 - **Georgia 3.MDR.5.2:** "Tell and write time to the nearest minute and estimate time to the nearest
@@ -535,7 +538,7 @@ matches a parent's general statement, cite all its lettered parts.
 **Tests** (section 4). Question 1, a shared requirement: A, B. Question 2, which is inside which: C, D.
 - **A (requirement):** the same action on the same content, not a shared topic; bounds may differ.
 - **B (not a match):** don't cite prerequisites, assumed definitions, same-topic codes with a different
-  action, or distant-grade topic matches.
+  action.
 - **C (separate objective):** a difference matters only if it is a separate learning objective, not
   wording, examples, recording/justifying, receptive vs. productive form, or ordinary components.
 - **D (bounds):** different bounds always matter (range, number type, place value, cases, steps).

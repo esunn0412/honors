@@ -12,6 +12,10 @@
 | Estimating (item 42) | **Ignored when attached** to measuring or telling time; a standard whose whole task is estimating is compared as its main action | Test C, Ignored: "a demand attached to the same task: … estimating alongside measuring or telling time. When such an action is a standard's whole task (e.g. CCSS 2.MD.3 …), consider it as that standard's main action" | 3.MDR.5.2 stays `split` (E12 holds); 1.MDR.6.1 → 1.MD.2 `merge`, 1.MD.1 `overlap` (item 22) |
 | 3.OA.3 (item 3) | **No split**: the equations are an "e.g." in 3.OA.3, and neither standard names the situations | none needed (existing rules) | 3.PAR.3.6 → 3.OA.3 `exact`; 3.PAR.3.7 → 3.OA.3 `merge`, plus 3.PAR.3.7 → 3.OA.8 `overlap` (its required "equations with a letter standing for the unknown quantity") |
 | R4, "solve problems" (items 2, 6) | **Adopted** | Test C, Ignored: the "general setting" entry now carries R4's wording | 1.NR.2.1 → 1.OA.1 `exact`; 1.NR.2.2 and 1.NR.2.4 → 1.OA.6 `split` (strategies within 20 + fluency within 10; settles items 2, 19, 41); 2.NR.2.3 gets a 2.OA.1 row (item 6, 28) |
+| R3, practice standards | **Adopted**: content standards only | Section 2: "Annotate content standards only: a state's own practice standards … are not annotated" | none (the gold already skips them) |
+| E2, identify vs. write numerals (item 20) | **Keep the rule**: receptive and productive forms are ignored | unchanged | K.NR.4.1 → K.CC.3 stays `exact`; note the difference in the rationale |
+| E11, 3.MD.5a (item 21) | **Keep**, justified by Test A, not a new rule: cite the codes whose content the text states | E11's "Decided by" rewritten | 3.GSR.7.1 stays 3.MD.5b + 3.MD.6 `merge` |
+| Distant-grade matches | **Deleted** Test B's "a code from a distant grade that only shares the topic … at a comparable level": curricula differ, Test A already rejects topic-only matches, and grade never matters | Test B, step 3 and the quick reference no longer mention it | none |
 
 Earlier the same day: R1 declined (standard algorithm ignored), R2 adopted (fluency matters), per-row labels with `overlap`, `different_grade` removed.
 
@@ -58,8 +62,8 @@ rules in part 5.
 | 17 | 4.NR.2.1 → 4.NBT.4 | `exact` | ~~`state_subset` (under R1)~~ settled: stays `exact` (R1 declined) | 4.NBT.4 requires "using the standard algorithm"; 4.NR.2.1 instead says "using place value understanding, properties of operations, and relationships between operations". The standard algorithm is a required method, not an "e.g."; teachers treat it as its own objective, and Georgia's omission of it is deliberate. |
 | 18 | 5.NR.2.1 → 5.NBT.5 | `state_subset` | settled: unchanged (R1 declined) | Its text also lacks "using the standard algorithm"; Georgia's guidance makes it optional ("Students may also use a standard algorithm…"). This adds to the narrower bounds already noted. |
 | 19 | 1.NR.2.4 → 1.OA.6 | `exact` | `state_subset`, or `split` with 1.NR.2.2 (under R2) | 1.OA.6 requires adding and subtracting within 20 with strategies, and fluency within 10. 1.NR.2.4 covers fluency within 10 only (Test D); 1.NR.2.2 (strategies within 20) may cover the rest. Related to item 2. |
-| 20 | K.NR.4.1 → K.CC.3 (worked example E2) | `exact` | contested: possibly `state_subset` | Kindergarten teachers treat writing numerals as its own skill (a fine-motor demand; often reported separately), and "Write numbers from 0 to 20" is its own sentence in K.CC.3. The current rule (receptive vs. productive form, Test C) is clear; the question is whether educators accept it. Classroom judgment, not a source finding. |
-| 21 | 3.GSR.7.1 → 3.MD.5b + 3.MD.6 (worked example E11) | `merge` | contested: possibly add 3.MD.5a | 3.MD.5a and 3.MD.5b are both phrased as definitions ("is said to have"), and 3.GSR.7.1's "multiple copies of the same unit" arguably states 5a's unit. Either add 5a or explain in Test B why 5a is a definition and 5b is not. |
+| 20 | K.NR.4.1 → K.CC.3 (worked example E2) | `exact` | settled: stays `exact` (rule kept) | Kindergarten teachers treat writing numerals as its own skill (a fine-motor demand; often reported separately), and "Write numbers from 0 to 20" is its own sentence in K.CC.3. The current rule (receptive vs. productive form, Test C) is clear; the question is whether educators accept it. Classroom judgment, not a source finding. |
+| 21 | 3.GSR.7.1 → 3.MD.5b + 3.MD.6 (worked example E11) | `merge` | settled: unchanged (Test A justification) | 3.MD.5a and 3.MD.5b are both phrased as definitions ("is said to have"), and 3.GSR.7.1's "multiple copies of the same unit" arguably states 5a's unit. Either add 5a or explain in Test B why 5a is a definition and 5b is not. |
 
 ## 4. From the per-row and `overlap` rules (Oct 3, 2026)
 
@@ -124,7 +128,7 @@ mentions fluency:
 - **5.NR.2.2 → 5.NBT.6:** item 40 becomes `overlap` (Georgia adds fluency; 5.NBT.6 has divisors above 25).
 - **3.PAR.3.2 → 3.OA.7:** item 44.
 
-**R3. Practice standards.** *Section 2, state side, new paragraph:*
+**R3. Practice standards.** **Adopted Oct 3, 2026** (see the rulings log). *Section 2, state side, new paragraph:*
 > Annotate content standards only. A state's own practice standards (e.g. Georgia K.MP.1–8 at each
 > grade) are not annotated: they correspond to the CCSS Standards for Mathematical Practice, which are
 > not in the K–5 content list.
@@ -161,9 +165,7 @@ Affects items 2 and 6 (1.OA.1, 2.OA.1).
   say the rule is kept for agreement, with the difference recorded in the rationale.
 - **Section 8, `rationale`:** for any match at another grade (`exact` now covers these, since
   `different_grade` was removed), say whether the state teaches the content earlier or later than CCSS. Teachers care about the direction.
-- **Test B, "comparable level":** vague. A pointer to the CCSS Progressions would help, but the annotation instructions
-  limit annotators to the provided materials; either add the Progressions to those materials or
-  define "comparable level" in the guideline.
+- ~~**Test B, "comparable level":** vague.~~ Settled: the distant-grade bullet was deleted (rulings log).
 - **E16 (section 7, 4.NBT.2):** say that 4.NR.1.1 lacks 4.NBT.2's "number names" on purpose
   (Georgia's guidance: "Students are not expected to write numbers in word form"), and that this is
   allowed within a split.
