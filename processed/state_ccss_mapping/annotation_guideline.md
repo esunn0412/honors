@@ -161,13 +161,17 @@ teach and assess as its own goal.
 - methods, tools or representations given as examples ("e.g.", "such as", "for example", "using
   objects or drawings");
 - a demand attached to the same task: recording the result with symbols, justifying or explaining the
-  result, using a model to show it;
+  result, using a model to show it, estimating alongside measuring or telling time. When such an action
+  is a standard's whole task (e.g. CCSS 2.MD.3, "Estimate lengths using units of inches, feet,
+  centimeters, and meters"), consider it as that standard's main action;
 - receptive and productive forms of the same skill on the same content (identifying written numerals
   vs. writing them, when both standards require representing quantities with numerals);
 - ordinary components of the task (finding the value of a group of coins as part of solving money
-  problems);
-- a general setting ("in authentic problems", "in real-world contexts"), unless the other standard's
-  requirement is specifically problem solving.
+  problems; ordering numbers as part of comparing them);
+- a general setting ("in authentic problems", "to solve problems", "in real-world contexts") when
+  problems are only the setting for another action (e.g. "fluently add and subtract within 1000 to
+  solve problems": the action is fluent computation). When solving problems is the standard's main
+  action, "solve problems" corresponds to CCSS "solve word problems".
 
 *Why explaining and justifying are ignored:* the question is whether two standards target the same
 learning, not how that learning is shown. Explaining and justifying are expected across all standards

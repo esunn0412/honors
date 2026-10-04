@@ -2,6 +2,19 @@
 
 *Companion to [`annotation_guideline.md`](annotation_guideline.md), version 1.2 (Sep 30, 2026). For the adjudication meeting only: it discusses specific answers in the adjudicated Georgia mapping, so don't give it to annotators or use it in calibration (see the annotation process). "Section" numbers below refer to the guideline.*
 
+## Rulings log
+
+**Oct 3, 2026** (decided by the guideline owner; for the annotators to confirm the resulting rows):
+
+| Ruling | Decision | Guideline text | Rows it settles (to confirm) |
+|---|---|---|---|
+| Ordering (item 26) | **Ignored**: ordering numbers is part of comparing them | Test C, Ignored: "ordinary components of the task (… ordering numbers as part of comparing them)" | 1.NR.1.3 stays `exact`; 2.NR.1.3 stays `merge` (item 24); 4.NR.1.3 stays `split` (E16 holds); 5.NR.3.2 → 4.NF.2 `state_subset` (it lacks "recognize that comparisons are valid only when the two fractions refer to the same whole", and 4.NR.4.3 is already `exact`); 5.NR.4.2 → 5.NBT.3b `exact` unless "represent" counts as an extra |
+| Estimating (item 42) | **Ignored when attached** to measuring or telling time; a standard whose whole task is estimating is compared as its main action | Test C, Ignored: "a demand attached to the same task: … estimating alongside measuring or telling time. When such an action is a standard's whole task (e.g. CCSS 2.MD.3 …), consider it as that standard's main action" | 3.MDR.5.2 stays `split` (E12 holds); 1.MDR.6.1 → 1.MD.2 `merge`, 1.MD.1 `overlap` (item 22) |
+| 3.OA.3 (item 3) | **No split**: the equations are an "e.g." in 3.OA.3, and neither standard names the situations | none needed (existing rules) | 3.PAR.3.6 → 3.OA.3 `exact`; 3.PAR.3.7 → 3.OA.3 `merge`, plus 3.PAR.3.7 → 3.OA.8 `overlap` (its required "equations with a letter standing for the unknown quantity") |
+| R4, "solve problems" (items 2, 6) | **Adopted** | Test C, Ignored: the "general setting" entry now carries R4's wording | 1.NR.2.1 → 1.OA.1 `exact`; 1.NR.2.2 and 1.NR.2.4 → 1.OA.6 `split` (strategies within 20 + fluency within 10; settles items 2, 19, 41); 2.NR.2.3 gets a 2.OA.1 row (item 6, 28) |
+
+Earlier the same day: R1 declined (standard algorithm ignored), R2 adopted (fluency matters), per-row labels with `overlap`, `different_grade` removed.
+
 A check of the guideline against the adjudicated Georgia mapping (`states/ga/gold.json`) found the
 cases below, where applying the guideline gives a different answer from the gold. The gold has **not**
 been changed; each case is to be re-adjudicated, and either the gold or the guideline updated.
@@ -118,7 +131,7 @@ mentions fluency:
 
 The gold already does this (150 content standards, no MP standards); the guideline doesn't say so.
 
-**R4. "Solve problems" vs. "solve word problems".** *Test C, replace the "general setting" item in the "Ignored" list
+**R4. "Solve problems" vs. "solve word problems".** **Adopted Oct 3, 2026** (see the rulings log). *Test C, replace the "general setting" item in the "Ignored" list
 with:*
 > A general setting ("in authentic problems", "to solve problems", "in real-world contexts") when
 > problems are only the setting for another action (e.g. "fluently add and subtract within 1000 to
