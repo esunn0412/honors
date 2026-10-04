@@ -123,7 +123,11 @@ Do not cite a CCSS code that is:
   side length 1 unit, called 'a unit square,' is said to have 'one square unit' of area…"). A state
   standard that uses the concept matches the CCSS code that uses it (e.g. 3.MD.5b, 3.MD.6), not the
   definition;
-- **a same-topic code that asks for a different action** (Test A).
+- **a same-topic code that asks for a different action** (Test A);
+- **a code two or more grades above the state standard that the state standard covers only with
+  narrower bounds** (Test D): an earlier, simpler pass at that later content, which is a foundation for
+  the code, like a prerequisite. (A state standard at or above the code's grade, or one covering the
+  code's own bounds, is not affected: a match can be at any K–5 grade.)
 
 ### 4.2 Which is inside which? (Tests C and D)
 
@@ -267,7 +271,7 @@ Measurement and Data). Search in both directions:
 
 Keep a candidate code only if the state standard states one of its requirements, whole or a part
 (Test A); a shared detail, example or topic is not enough. Drop prerequisites, definitions, same-topic
-codes with a different action (Test B).
+codes with a different action, and later codes the standard only introduces (Test B).
 
 ### Step 4. Count
 
@@ -538,7 +542,7 @@ matches a parent's general statement, cite all its lettered parts.
 **Tests** (section 4). Question 1, a shared requirement: A, B. Question 2, which is inside which: C, D.
 - **A (requirement):** the same action on the same content, not a shared topic; bounds may differ.
 - **B (not a match):** don't cite prerequisites, assumed definitions, same-topic codes with a different
-  action.
+  action, or a code 2+ grades above that the standard covers only with narrower bounds.
 - **C (separate objective):** a difference matters only if it is a separate learning objective, not
   wording, examples, recording/justifying, receptive vs. productive form, or ordinary components.
 - **D (bounds):** different bounds always matter (range, number type, place value, cases, steps).

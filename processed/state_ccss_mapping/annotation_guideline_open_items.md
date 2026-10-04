@@ -15,7 +15,7 @@
 | R3, practice standards | **Adopted**: content standards only | Section 2: "Annotate content standards only: a state's own practice standards … are not annotated" | none (the gold already skips them) |
 | E2, identify vs. write numerals (item 20) | **Keep the rule**: receptive and productive forms are ignored | unchanged | K.NR.4.1 → K.CC.3 stays `exact`; note the difference in the rationale |
 | E11, 3.MD.5a (item 21) | **Keep**, justified by Test A, not a new rule: cite the codes whose content the text states | E11's "Decided by" rewritten | 3.GSR.7.1 stays 3.MD.5b + 3.MD.6 `merge` |
-| Distant-grade matches | **Deleted** Test B's "a code from a distant grade that only shares the topic … at a comparable level": curricula differ, Test A already rejects topic-only matches, and grade never matters | Test B, step 3 and the quick reference no longer mention it | none |
+| Distant-grade matches | **Replaced** the vague "at a comparable level" with a concrete rule: a code two or more grades **above** the state standard is not cited when the state standard covers it only with narrower bounds (an introductory pass). Deleting the rule outright would have created rows such as 1.MDR.6.2 → 3.MD.1, 1.PAR.3.2 → 4.OA.5 and 2.GSR.7.2 → 4.G.3 | Test B, step 3 and the quick reference | none: no gold row cites a code two or more grades above its state standard. Keeps E4, E14 and the K–2 pattern `none` rows |
 
 Earlier the same day: R1 declined (standard algorithm ignored), R2 adopted (fluency matters), per-row labels with `overlap`, `different_grade` removed.
 
